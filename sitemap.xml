@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://iso-tc204.github.io/iso24315p1/</loc>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>
+            https://iso-tc204.github.io/iso24315p1/metr_overview.html
+        </loc>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>
+            https://iso-tc204.github.io/iso24315p1/glossary.html
+        </loc>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>
+            https://iso-tc204.github.io/iso24315p1/workshop_overview.html
+        </loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>
+            https://iso-tc204.github.io/iso24315p1/metrvision.pdf
+        </loc>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>
+            https://iso-tc204.github.io/iso24315p1/metroverview.pdf
+        </loc>
+        <changefreq>yearly</changefreq>
+    </url>
+</urlset>
