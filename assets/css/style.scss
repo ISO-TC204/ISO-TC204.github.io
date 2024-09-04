@@ -4,6 +4,10 @@
 @import "{{ site.theme }}";
 
 .page-header {
-  background-image: url("assets/img/connected.jpg");
+  background-image: url("https://www.trevilon.com/images/connected.jpg");
   background-repeat: no-repeat;
+  background-position: center top;
+  background-color: #000;
+  width: 100%;
+  height: 160px;
  }

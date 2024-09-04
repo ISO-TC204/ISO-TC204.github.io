@@ -4,7 +4,7 @@ Welcome to the ISO TC 204 Github Website. Please see the following specific link
 
 [Overview of ISO/TC 204](tc204.md)
 
-[ITS Architecture](its-architure.md)
+[ITS Architecture](its-architecture.md)
 
 ISO 5345 [ITS — Identifiers](https://iso-tc204.github.io/iso5345/)
 
