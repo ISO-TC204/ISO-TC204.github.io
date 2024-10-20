@@ -1,6 +1,10 @@
-<!-- "About Us" page - renamed from start.md -->
+<!-- "About Us" page - perhaps to be renamed from start.md -->
 <!-- PERHAPS INSERT BANNER IMAGE HERE? -->
-<!-- -->
+
+> [!Important]
+> 🚧 Site under construction 🚧
+ 
+ 
 ## About ISO/TC204 Intelligent Transport Systems
 ### Overview
 Since our establishment in 1992, TC204 has developed and maintained a suite of standards and other artefacts for the Intelligent Transport Systems (ITS) environment that generally exists OUTSIDE a vehicle, and interfaces to the ITS environment INSIDE a vehicle. 
@@ -11,68 +15,73 @@ Our 340\+ active documents collectively describe:
 	* Reference ITS Architecture 
 	* ITS Services 
 	* Terminology and Definitions
-	* Data Concepts (\[\[CIDCR\]\])
-	* Registries of ITS Information (RITSI)
+	* Data Concepts and a [Central ITS Data Concepts Register (CIDCR)]() 🚧Correct link to be added
+	* A [Registry of ITS Information (RITSI)](https://iso-tc204.github.io/iso5345/)
 * many specialised deliverables that describe and define various components that help deliver ITS Services and solutions. 
 
-TC204 and our work exists within a much broader operating context requiring collaboration with other developers of related standards, both _within ISO_ (such as [TC22 Road Vehicles](https://www.iso.org/committee/46706.html) and [TC344 Innovative Logisitics](https://www.iso.org/committee/9824329.html)) _and beyond_ (such as [CEN/TC278 ITS Standards](https://www.itsstandards.eu/) and [ISO/IEC/JTC 1/WG 11 Smart cities](https://jtc1info.org/sd-2-history/jtc1-working-groups/wg-11/)). Our current liaisons are shown below, with links available [here.](https://www.iso.org/committee/54706.html#liaisons)
-![TC204 Liaisons](https://github.com/user-attachments/assets/920af728-247f-4f8b-ad5e-318ff33c9d60)
+TC204 and our work exists within a much broader operating context requiring collaboration with other developers of related standards, both **_within ISO_** (such as [TC22 Road Vehicles](https://www.iso.org/committee/46706.html) and [TC344 Innovative Logisitics](https://www.iso.org/committee/9824329.html)) **_and beyond_** (such as [CEN/TC278 ITS Standards](https://www.itsstandards.eu/) and [ISO/IEC/JTC 1/WG 11 Smart cities](https://jtc1info.org/sd-2-history/jtc1-working-groups/wg-11/)). Our current liaisons are illustrated below, with links available [here.](https://www.iso.org/committee/54706.html#liaisons)
 
-
+>🚧 Diagram to be updated to match Strategic Bus.Plan (SBP) ![TC204 Liaisons](https://github.com/user-attachments/assets/920af728-247f-4f8b-ad5e-318ff33c9d60)
+ 
 ### TC204 Committee Structure
-TC204 delivers its [work programme](https://www.iso.org/contents/data/committee/05/47/54706/x/catalogue/p/0/u/1/w/0/d/0) through a broad range of groups consisting of:
+TC204 delivers its [official work programme](https://www.iso.org/contents/data/committee/05/47/54706/x/catalogue/p/0/u/1/w/0/d/0) through a broad range of groups consisting of:
 * **WG** - Working Groups within TC204
 * **AG** - Advisory Groups (typically special projects / initiatives)
 * **JWG** - Joint Working Groups to formally collaborate with experts outside of TC204 (such as other ISO/TCs or other SDOs). 
 
 Our structure is shown below together with our Participating and Observing members. All of [TC204’s groups and convenors](https://www.iso.org/committee/54706.html#structure) may be approached via the [TC204 Secretariat.](https://www.iso.org/committee/54706.html#secretariat)
 
-![TC204 Structure](https://github.com/user-attachments/assets/7bca0f53-07c8-481f-85b4-36140e2bc079)
+>🚧 Diagram to be updated to match SPB ![TC204 Structure](https://github.com/user-attachments/assets/7bca0f53-07c8-481f-85b4-36140e2bc079)
 
 ### Scope of TC204 Working Groups
-Current Working Groups within TC204 and their purposes
+TC204's current active groups and their purposes are outlined below.
 
-<!-- Need to resolve formatting for twisties -->
-<!-- Text subject to change to match final SBP -->
-#### Joint Working Group 1 City data model transportation planning
-The purpose of JWG1 is to develop transportation-related data models that inherit from the ISO/IEC 5087 series. This includes any data model that is intended for use in a ‘smart city’ concept, where the data in question is shared beyond the transportation domain.
+>🚧 Could link to WG subpages if these are created
+><!-- Need to resolve formatting for twisties -->
+><!-- Text below subject to change to match SBP -->
 
-<ins>JWG1 activities include:</ins>
-* Identifying transportation data defined in TC204 that might be relevant outside the transportation domain
-* Defining transportation data of external interest in a format conforming to the patterns established in ISO/IEC 5087-1, 5087-2
+<details>
+  <summary>Joint Working Group 1 City data model transportation planning</summary>
 
+>The purpose of JWG1 is to develop transportation-related data models that inherit from the ISO/IEC 5087 series. This includes any data model that is intended for use in a ‘smart city’ concept, where the data in question is shared beyond the transportation domain.
+>
+><ins>JWG1 activities include:</ins>
+>* Identifying transportation data defined in TC204 that might be relevant outside the transportation domain
+>* Defining transportation data of external interest in a format conforming to the patterns established in ISO/IEC 5087-1, 5087-2
+</details>
+ 
+<details>
+  <summary>Working Group 1 Architecture</summary>
 
-- <kbd>[Joint Working Group 1 City data model transportation planning]
-The purpose of WG1 is to develop transportation-related data models that inherit from the
-ISO/IEC 5087 series. This includes any data model that is intended for use in a ‘smart city’
-concept, where the data in question is shared beyond the transportation domain.
-JWG1 activities include:
-•	Identifying transportation data defined in TC204 that might be relevant outside the transportation domain
-•	Defining transportation data of external interest in a format conforming to the patterns established in ISO/IEC 5087-1, 5087-2
-</kdb>
+>The purpose of WG1 is to promote consistency across ISO/TC 204 standards by encouraging adherence to a consistent ITS architecture (including consistent user services and data concepts) and documentation approach (including consistent technical approaches, documentation formats, and terminology) across working groups.
+>
+><ins>WG1 activities include:</ins>
+>* Defining shared terminology to be used throughout ISO/TC 204 standards
+>* Promoting common ITS architecture for ITS services across WGs by working with regional ITS architecture efforts
+>* Identifying gaps and overlaps within the architecture for ITS services to be addressed through standards
+>* Promoting common methods for documenting ISO/TC 204 standards and data concepts
+>* Investigating how to develop a common data model across ITS
+>* Providing guidance on the application of ICT-related technologies within ITS
+</details>
+ 
+<details>
+  <summary>Working Group 3 ITS geographic data</summary>
 
-#### Working Group 1 Architecture
-The purpose of WG1 is to promote consistency across ISO/TC 204 standards by encouraging adherence to a consistent ITS architecture (including consistent user services and data concepts) and documentation approach (including consistent technical approaches, documentation formats, and terminology) across working groups.
-
-<ins>WG1 activities include:</ins>
-* Defining shared terminology to be used throughout ISO/TC 204 standards
-* Promoting common ITS architecture for ITS services across WGs by working with regional ITS architecture efforts
-* Identifying gaps and overlaps within the architecture for ITS services to be addressed through standards
-* Promoting common methods for documenting ISO/TC 204 standards and data concepts
-* Investigating how to develop a common data model across ITS
-* Providing guidance on the application of ICT-related technologies within ITS
-
-Working Group 3 ITS geographic data
-Regarding geographic data used in ITS, the purpose of WG3 is to specify features, attributes, and relationships of static and dynamic data.
-WG3 activities include developing standards for:
-•	Architecture for geographic data.
-•	Conceptual data model for geographic data.
-•	Logical data model for geographic data.
-•	Exchange format between map data providers.
-•	Location referencing methodology.
-•	Application programming interface for geographic databases.
-•	Framework for shareable geospatial databases.
-•	Application programming interface for centre-to-map updates.
+>Regarding geographic data used in ITS, the purpose of WG3 is to specify features, attributes, and relationships of static and dynamic data. >
+>
+><ins>WG3 activities include developing standards for:</ins>
+>* Architecture for geographic data.
+>* Conceptual data model for geographic data.
+>* Logical data model for geographic data.
+>* Exchange format between map data providers.
+>* Location referencing methodology.
+>* Application programming interface for geographic databases.
+>* Framework for shareable geospatial databases.
+>* Application programming interface for centre-to-map updates.
+</details>
+ 
+ 
+>🚧 Remainder of Group purpose and activities to match SBP
 
 Working Group 5 Fee and toll collection
 
