@@ -1,17 +1,17 @@
 <!-- Document Naming.md -->
+<!-- Provides overview in naming convention of TC204 deliverables - particularly documents -->
 
+> [!Important]
+> 🚧 Under construction 🚧
+ 
 ### Naming Convention for TC204 Deliverables 
-While our document titles may seem a little daunting, they typically use a multi-level naming structure, for example:
-
+Our document titles may seem a little daunting, however they typically use the multi-level naming structure:
+<kbd> <Publishing SDO(s)> /  Type of Deliverable <Number[-Part]>: Year of Publication (language) <Title 1> - <Title 2> [ - <Title 3>]</kbd>
+ 
+The example below is described more fully in the following table:
 <kbd>ISO/TS 14813-1:2015(en) Intelligent transport systems — Reference model architecture(s) for the ITS sector - Part 1: ITS service domains, service groups and services</kdb>
-
-> [!TIP]
-> You may wish to look at a sample of the above technical standard [here](https://www.iso.org/obp/ui/en/#iso:std:iso:14813:-1:ed-2:v1:en)
-<br>
-While our naming structures have changed over time, new deliverables typically follow the structure as described in the table below...
-
-<!-- Need to resolve the table formating -->
-`<Publishing SDO/s>/<Deliverable Type> <Number[-Part]>:<Year of Publication>(<language>) <Title 1> - <Title 2> [ - <Title 3>]`
+ 
+> 🚧 Need to resolve the table formatting below
 
 |Name Component|Example|Description|
 |<Publishing SDO/s>|**ISO**|The Standards Development Organisation/s (SDO) that will publish the deliverable|
