@@ -4,6 +4,7 @@ Each TC204 WG focuses on a specific domain of interest, comprising of multiple k
 TC204 standards are grouped by the first 2 levels of the titles of Current / Active standards as follows:
 
 | 1st Level Grouping | 2nd Level Grouping |
+| -- | --|
 | Automatic vehicle and equipment identification (AV & EI) | Electronic registration identification (ERI) for vehicles |
 | Electronic Fee Collection (EFC) | AID for Autonomous Systems |
 | | AID for DSRC  |
@@ -11,6 +12,11 @@ TC204 standards are grouped by the first 2 levels of the titles of Current / Act
 | | Eval Conformity to ISO 17575  |
 | | Eval Conformity to ISO 12813  |
 | | Eval Conformity to ISO 13141 |
+| | Other |
+| Intelligent Transport Systems (ITS) | APS |
+| | Architecture |
+
+
 
 # ITS Foundational Documents
 Documents from various working groups define [TC204's foundational documents](tc204-standards-main-page.md) upon which the remainder of concepts are built.
