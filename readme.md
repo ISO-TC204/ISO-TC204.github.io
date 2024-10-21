@@ -1,5 +1,7 @@
 Welcome to the ISO TC 204 Github Website. Please see the following specific links:
 
+[TC204 Welcome Page](tc204.md)
+
 [Start here](start.md)
 
 [Overview of ISO/TC 204](tc204.md)
