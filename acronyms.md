@@ -5,9 +5,7 @@
 
 The following acronyms are commonly used throughout this site.
 
-> 🚧 Format table
-*** Table of Acronyms
-| Acronym | Full Title |
+| Acronym | Full Text |
 | ---- | ---- |
 | AID | Application IDentifier |
 | ARC-IT | Architecture Reference for Cooperative and Intelligent Transportation |
