@@ -5,7 +5,11 @@
 
 # ISO
 
-## ISO Technical Committees that may be more closely related to your interest
+## [TC204 Foundational Standards](tc204-standards-main-page.md)
+> This is where you'll find [our foundational standards](tc204-standards-main-page.md) upon which all other standards in TC204 are (or should be) built. These should be part of every practitioner's library.  And see below for some links to [purchase packages of standards](https://github.com/ISO-TC204/ISO-TC204.github.io/edit/overview/resources.md#purchase-packages-of-standards).
+<br>
+
+## Other ISO Technical Committees that may be of more interest to you
 <details>
   <summary>Show me</summary>
   
@@ -43,7 +47,6 @@
 </details>
 <br>
 
-
 # Collaborations (Joint Working Groups)
 <details>
   <summary>Show me</summary>
@@ -60,23 +63,28 @@
 </details>
 <br>
 
-
 # Other Referenced ITS Architectures
 <details>
   <summary>Show me</summary>
+  
 >TC204 leverages the following two international ITS architectures as the basis for its own ITS Architecture...  
 >* [ARC-IT - Architecture Reference for Cooperative and Intelligent Transportation](https://www.arc-it.net/index.html)
 >* [FRAME - The European FRAMEwork Architecture](https://frame-online.eu/)
 </details>
   <br>
 
-# Purchase Packages of Standards
+# Other Useful Resources
 <details>
   <summary>Show me</summary>
   
 ### [EU-ICIP GUIDE to Intelligent Transport Systems Standards](www.mobilityits.eu)
 >This site is a rich source of information about ITS Communications and Information Protocols together with foundational concepts such as “About ITS”, “ITS Architecture” and definitions of commonly-used terminology. The site is developed and maintained by CEN/TC278.
+</details>
 <br>
+
+# Purchase Packages of Standards
+<details>
+  <summary>Show me</summary>
 
 ### [StandardLand (Czech Republic)](https://www.standardland.cz/)
 >Use your browser to translate from Czech to your language
@@ -90,6 +98,5 @@
 <br>
 <br>
 
-# Other Useful Resources
-🚧 Placeholder text
+
 
