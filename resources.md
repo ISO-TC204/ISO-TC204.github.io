@@ -107,7 +107,36 @@
   
 ### [EU-ICIP GUIDE to Intelligent Transport Systems Standards](www.mobilityits.eu)
 >This site is a rich source of information about ITS Communications and Information Protocols together with foundational concepts such as “About ITS”, “ITS Architecture” and definitions of commonly-used terminology. The site is developed and maintained by CEN/TC278.
+<br>
+### [EN ISO 14816 Register](https://www.itsstandards.eu/registries/)
+>This is the official information page of the Central Registration Authority for **_EN ISO 14816 Road transport and traffic telematics - Automatic vehicle and equipment identification - Numbering and data structures_**.
+>This website serves two purposes:
+>
+>It contains the official Central Registers:
+> 1. The Register of Manufacturers (CS2)
+>
+>     i. The Register of National Registration Administrators for Issuers (NRA/I) (CS1)
+>
+>    ii. The Register of National Registration Administrators for Tax Authorities (NRA/T) (CS8)
+>
+> 2. It offers guidance to organisations wishing to register.
+
 </details>
+
+<br>
+
+### [EN ISO 14816 Register](https://www.itsstandards.eu/registries/)
+>This is the official information page of the Central Registration Authority for **_EN ISO 14816 Road transport and traffic telematics - Automatic vehicle and equipment identification - Numbering and data structures_**.
+>This website serves two purposes:
+>
+>It contains the official Central Registers:
+> 1. The Register of Manufacturers (CS2)
+>
+>     i. The Register of National Registration Administrators for Issuers (NRA/I) (CS1)
+>
+>    ii. The Register of National Registration Administrators for Tax Authorities (NRA/T) (CS8)
+>
+> 2. It offers guidance to organisations wishing to register.
 <br>
 
 # Purchase Packages of Standards
