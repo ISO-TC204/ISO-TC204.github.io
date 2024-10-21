@@ -10,6 +10,8 @@ Welcome to the ISO TC 204 Github Website. Please see the following specific link
 
 [For Editors only...!](editors-landing-page.md)
 
+[FAQ's](faqs.md)
+
 ISO 5345 [ITS — Identifiers](https://iso-tc204.github.io/iso5345/)
 
 ISO 14812 [ITS — Vocabulary](https://iso-tc204.github.io/iso14812/)
