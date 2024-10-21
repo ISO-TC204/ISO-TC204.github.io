@@ -108,6 +108,7 @@
 ### [EU-ICIP GUIDE to Intelligent Transport Systems Standards](www.mobilityits.eu)
 >This site is a rich source of information about ITS Communications and Information Protocols together with foundational concepts such as “About ITS”, “ITS Architecture” and definitions of commonly-used terminology. The site is developed and maintained by CEN/TC278.
 <br>
+
 ### [EN ISO 14816 Register](https://www.itsstandards.eu/registries/)
 >This is the official information page of the Central Registration Authority for **_EN ISO 14816 Road transport and traffic telematics - Automatic vehicle and equipment identification - Numbering and data structures_**.
 >This website serves two purposes:
