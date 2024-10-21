@@ -105,7 +105,7 @@
 <details>
   <summary>Show me</summary>
   
-### [EU-ICIP GUIDE to Intelligent Transport Systems Standards](www.mobilityits.eu)
+### [EU-ICIP GUIDE to Intelligent Transport Systems Standards](https://www.mobilityits.eu/)
 >This site is a rich source of information about ITS Communications and Information Protocols together with foundational concepts such as “About ITS”, “ITS Architecture” and definitions of commonly-used terminology. The site is developed and maintained by CEN/TC278.
 <br>
 
