@@ -1,25 +1,20 @@
 # Domains of Interest
 Each TC204 WG focuses on a specific domain of interest, comprising of multiple key concepts
 
+TC204 standards are grouped by the first 2 levels of the titles of Current / Active standards as follows:
+
+| 1st Level Grouping | 2nd Level Grouping |
+| Automatic vehicle and equipment identification (AV & EI) | Electronic registration identification (ERI) for vehicles |
+| Electronic Fee Collection (EFC) | AID for Autonomous Systems |
+| | AID for DSRC  |
+| | Architecture |
+| | Eval Conformity to ISO 17575  |
+| | Eval Conformity to ISO 12813  |
+| | Eval Conformity to ISO 13141 |
+
 # ITS Foundational Documents
 Documents from various working groups define [TC204's foundational documents](tc204-standards-main-page.md) upon which the remainder of concepts are built.
  
-TC204 standards are grouped by the first 2 levels of the titles of Current / 
-Active standards as follows:
-
-1st Level Grouping 2nd Level Grouping
-Automatic vehicle and equipment 
-identification (AV & EI)
-Electronic registration identification (ERI) for vehicles
-Electronic Fee Collection (EFC) AID for Autonomous Systems
-AID for DSRC
-Architecture
-Eval Conformity to ISO 17575
-Eval Conformity to ISO 12813
-Eval Conformity to ISO 13141
-
-
-
 # ARC-IT Foundational Service Packages
 🚧 Among many other things, ARC-IT presents a multitude of [service packages](https://www.arc-it.net/html/servicepackages/servicepackages-areaspsort.html) (akin to solution patterns) that describe information flows by in terms of "triples" (an information flow between two functional objects). Each of these triples is defined in terms of the ITS station, and by digging a little deeper **the specific standards that describe aspects of each component** in context of certain geographic locations. 
 <br> 
