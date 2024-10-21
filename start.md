@@ -67,7 +67,7 @@ TC204's current active groups and their purposes are outlined below.
 <details>
   <summary>Working Group 3 ITS geographic data</summary>
 
->Regarding geographic data used in ITS, the purpose of WG3 is to specify features, attributes, and relationships of static and dynamic data. >
+>Regarding geographic data used in ITS, the purpose of WG3 is to specify features, attributes, and relationships of static and dynamic data. 
 >
 ><ins>WG3 activities include developing standards for:</ins>
 >* Architecture for geographic data.
