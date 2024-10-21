@@ -4,6 +4,8 @@
 > 🚧 Site under construction 🚧
 
 # ISO
+<details>
+  <summary>Show me</summary>
 
 ## [TC204 Foundational Standards](tc204-standards-main-page.md)
 > This is where you'll find [our foundational standards](tc204-standards-main-page.md) upon which all other standards in TC204 are (or should be) built. These should be part of every practitioner's library.  And see below for some links to [purchase packages of standards](https://github.com/ISO-TC204/ISO-TC204.github.io/edit/overview/resources.md#purchase-packages-of-standards).
@@ -44,6 +46,32 @@
 
 ### ISO Deliverables
 >A description of the types of ISO deliverables are found [here](http://www.iso.org/iso/home/standards_development/deliverables-all.htm)
+</details>
+</details>
+<br>
+
+# Other SDOs (Standards Development Organisations)
+<details>
+  <summary>Show me</summary>
+
+### [European Committee for Standardization (CEN)](https://www.cencenelec.eu/)
+>CEN is an association that brings together the National Standardization Bodies of 34 European countries and provides a platform for the development of **European Standards and other technical documents** in relation to various kinds of products, materials, services and processes.<br>
+
+>It is one of three European Standardization Organizations (together with CENELEC and ETSI) that have been officially recognized by the European Union and by the European Free Trade Association (EFTA) as being responsible for developing and defining voluntary standards at European level.
+
+### [European Electrotechnical Committee for Standardization (CENELEC)](https://www.cencenelec.eu/)
+>CENELEC is an association that brings together the National Electrotechnical Committees of 34 European countries to prepare **voluntary standards** in the electrotechnical field.<br>
+
+>It is one of three European Standardization Organizations (together with CEN and ETSI) that have been officially recognized by the European Union and by the European Free Trade Association (EFTA) as being responsible for developing and defining voluntary standards at European level.
+
+### [European Telecommunications Standards Institute (ETSI)](https://www.etsi.org/)
+>ETSI provides members with an open, inclusive and collaborative environment that supports the timely development, ratification and testing of globally applicable standards for ICT-enabled systems, applications and services.<br>
+
+>It is one of three European Standardization Organizations (together with CEN and CENELEC) that have been officially recognized by the European Union and by the European Free Trade Association (EFTA) as being responsible for developing and defining voluntary standards at European level.
+### [Institute of Electrical and Electronics Engineers (IEEE)](https://www.ieee.org/)
+
+### [Society of Automotive Engineers International (SAE)](https://www.sae.org/)
+
 </details>
 <br>
 
