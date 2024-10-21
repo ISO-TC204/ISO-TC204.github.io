@@ -4,9 +4,19 @@
 > 🚧 Under construction 🚧
 
 ## TC204 Foundational Standards
-### Architectural Framework
->The following standards effectively establish the foundation upon which most other TC204 standards are (or should be) built.
->
+The following standards effectively establish the foundation upon which most other TC204 standards are (or should be) built. It is highly recommended that all practitioners (and standards authors) obtain a copy of the following standards: 
+1. **✅ Architectural Framework** standards _on this page_
+2. **✅ Other foundational** standards _on this page_ relating to your specific area of interest 
+
+Each section below also contains links (to _other pages_) for standards more specifically focussed on your respective area of interest.
+
+We have also identified a number of sites that offer **_packages of standards_** from ISO and other SDO's for purchase.
+<br>
+<br>
+
+### ✅ 1. Architectural Framework
+>The following standards effectively establish the foundation upon which most other TC204 standards are (or should be) built. It is highly recommended that all practitioners (and standards authors) obtain a copy of these standards as a minimum, in addition to:
+>* **✅ Other foundational** standards _on this page_ relating to your specific area of interest 
 <details>
   <summary><ins>Expand</ins></summary>
 
@@ -49,9 +59,14 @@
 >>* [Part 3: Object identifier assignments for ITS data concepts](https://www.iso.org/standard/65669.html)  <kbd>[(view sample)](https://www.iso.org/obp/ui/en/#iso:std:iso:14817:-3:ed-1:v1:en)</kbd>
 </details>
 </details>
+<br>
+<br>
 
-### Integrated Transport Information, Management and Control 
->The following standards effectively establish the foundation for Integrated Transport Information, Management and Control (commonly referred to as C-ITS Stations and Modules).
+> 🚧 Should Section 2 standards be considered as Architecture Framework, applicable to all (or most) WGs?
+### ✅ 2. Integrated Transport Information, Management and Control 
+>The following standards effectively establish the foundation for Integrated Transport Information, Management and Control (commonly referred to as C-ITS Stations and Modules). It is highly recommended that all practitioners (and standards authors) obtain a copy of these standards as a minimum, in addition to:
+>1. other **foundational** standards _on this page_ relating to their specific area of interest, and 
+>2. **other** standards _on other pages_ via links as identified in the respective sections below.
 <details>
   <summary><ins>Expand</ins></summary>
 
@@ -86,5 +101,47 @@
   <summary><ins>Interface protocol and message set definition between traffic signal controllers and detectors</ins></summary>
 
 >> ISO 10711
+</details>
+</details>
+<br>
+
+
+### 🚧 3. THEME or WGxx Foundational Standards
+>The following standards effectively establish the foundation upon which **_THEME_** standards are (or should be) built.
+>
+<details>
+  <summary><ins>Expand</ins></summary>
+
+<details>
+  <summary><ins>🚧THEME </ins></summary>
+ 
+>>#### ISO xxxxx Intelligent transport systems — THEME
+>>* [Part 1: Title](https://www.iso.org/standard/85840.html)
+>>* >>
+>>* [Part 2: Title](https://www.iso.org/standard/73746.html)
+>>
+>>* [Part 6: Title](https://www.iso.org/standard/69109.html)
+>>
+</details>
+</details>
+<br>
+<br>
+
+### 🚧 4. THEME or WGxx Foundational Standards
+>The following standards effectively establish the foundation upon which **_THEME_** standards are (or should be) built.
+>
+<details>
+  <summary><ins>Expand</ins></summary>
+
+<details>
+  <summary><ins>🚧THEME </ins></summary>
+ 
+>>#### ISO xxxxx Intelligent transport systems — THEME
+>>* [Part 1: Title](https://www.iso.org/standard/85840.html)
+>>* >>
+>>* [Part 2: Title](https://www.iso.org/standard/73746.html)
+>>
+>>* [Part 6: Title](https://www.iso.org/standard/69109.html)
+>>
 </details>
 </details>
