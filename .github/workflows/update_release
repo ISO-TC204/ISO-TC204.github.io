@@ -1,0 +1,37 @@
+name: Deploy MkDocs site to GitHub Pages with Release Number
+
+on:
+  workflow_dispatch:
+  release:
+    types: [created]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the code
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Fetch full history for git-revision-date-localized-plugin
+
+      # Step 2: Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      # Step 3: Run the glossary processing script
+      - name: Generate glossary annex
+        run: |
+          python process_glossary.py
+
+      # Step 4: Build the site (this will generate the PDF if EXPORT_PDF is set)
+      - name: Build the site
+        run: mkdocs build
+    
+      # Step 5: Deploy the site to GitHub Pages (gh-pages branch)
+      - name: Deploy to GitHub Pages
+        run: |
+          mkdocs gh-deploy --force --verbose
