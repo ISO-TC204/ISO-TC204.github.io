@@ -21,7 +21,7 @@ Other meta-data that puts standard in context
 
 e.g., Normative references and comm stack references
 
-[How to get involved](contact.md)
+[How to get involved](../contact.md)
 
 ## Reference architecture
 

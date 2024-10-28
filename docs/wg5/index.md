@@ -8,7 +8,7 @@
 
 ### Overview
 
-**Document:** [ISO Document number and status](Link)
+**Document:** [ISO Document number and status](index.md)
 **Title:** Intelligent transport systems — 
 **Status:** 
 **Abstract:** 
@@ -21,4 +21,4 @@ Other meta-data that puts standard in context
 
 e.g., Normative references and comm stack references
 
-[How to get involved](contact.md)
+[How to get involved](../contact.md)

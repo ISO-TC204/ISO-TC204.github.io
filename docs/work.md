@@ -19,7 +19,7 @@ TC204 standards are grouped by the first 2 levels of the titles of Current / Act
 
 
 # ITS Foundational Documents
-Documents from various working groups define [TC204's foundational documents](tc204-standards-main-page.md) upon which the remainder of concepts are built.
+Documents from various working groups define [TC204's foundational documents](foundational.md) upon which the remainder of concepts are built.
  
 # ARC-IT Foundational Service Packages
 🚧 Among many other things, ARC-IT presents a multitude of [service packages](https://www.arc-it.net/html/servicepackages/servicepackages-areaspsort.html) (akin to solution patterns) that describe information flows by in terms of "triples" (an information flow between two functional objects). Each of these triples is defined in terms of the ITS station, and by digging a little deeper **the specific standards that describe aspects of each component** in context of certain geographic locations. 

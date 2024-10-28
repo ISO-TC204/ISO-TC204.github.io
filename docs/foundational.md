@@ -8,13 +8,11 @@ The following standards effectively establish the foundation upon which most oth
 1. **✅ Architectural Framework** standards _on this page_
 2. **✅ Other foundational** standards _on this page_ relating to your specific area of interest 
 
-Each section below also contains links (to _other pages_) for standards more specifically focussed on your respective area of interest. Alternately you may prefer to browse directly in your [domain of interest](its-architecture.md).
+Each section below also contains links (to _other pages_) for standards more specifically focussed on your respective area of interest. Alternately you may prefer to browse directly in your [domain of interest](wg1/index.md).
 
 We have also identified a number of sites that offer **_packages of standards_** from ISO and other SDO's for purchase.
 
-You may also find it helpful to refer to our table of [common acronyms](acronyms.md).
-<br>
-<br>
+You may also find it helpful to refer to our table of [common terms and acronyms](vocab.md).
 
 ### ✅ 1. Architectural Framework
 >The following standards effectively establish the foundation upon which most other TC204 standards are (or should be) built. It is highly recommended that all practitioners (and standards authors) obtain a copy of these standards as a minimum, in addition to:
