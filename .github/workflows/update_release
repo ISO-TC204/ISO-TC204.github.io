@@ -22,16 +22,21 @@ jobs:
         with:
           python-version: '3.x'
 
-      # Step 3: Run the glossary processing script
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: |
+          pip install mkdocs-material
+
+      # Step 4: Run the glossary processing script
       - name: Generate glossary annex
         run: |
           python process_glossary.py
 
-      # Step 4: Build the site (this will generate the PDF if EXPORT_PDF is set)
+      # Step 5: Build the site (this will generate the PDF if EXPORT_PDF is set)
       - name: Build the site
         run: mkdocs build
     
-      # Step 5: Deploy the site to GitHub Pages (gh-pages branch)
+      # Step 6: Deploy the site to GitHub Pages (gh-pages branch)
       - name: Deploy to GitHub Pages
         run: |
           mkdocs gh-deploy --force --verbose
