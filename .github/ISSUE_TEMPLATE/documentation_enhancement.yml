@@ -1,0 +1,32 @@
+name: "Documentation Enhancement or Improvement"
+description: "Suggest improvements to the project documentation."
+title: "[Enhancement] Briefly describe the improvement"
+labels: [enhancement, documentation]
+body:
+  - type: markdown
+    attributes:
+      value: "## Description\nDescribe the enhancement or improvement to the documentation."
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: "Describe the enhancement you are suggesting."
+
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: "Provide a link or section reference where this enhancement should be made (e.g., URL, section, page number, heading)."
+
+  - type: textarea
+    id: suggested-improvement
+    attributes:
+      label: Suggested Improvement
+      description: "Provide your suggested improvement."
+
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: Additional Notes
+      description: "Include any additional context or information."

@@ -1,0 +1,32 @@
+name: "Documentation Bug"
+description: "Report an issue or inaccuracy in the documentation."
+title: "[BUG] Describe the issue briefly"
+labels: [bug, documentation]
+body:
+  - type: markdown
+    attributes:
+      value: "## Description\nDescribe the issue with the documentation. What is incorrect or unclear?"
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: "Provide as many details as possible."
+
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: "Provide a link or section reference where the issue occurs (e.g., URL, section, page number, heading)."
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Documentation
+      description: "What should the documentation say or explain?"
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: "Is there anything else that might help us understand the issue?"

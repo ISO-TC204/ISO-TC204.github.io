@@ -1,12 +1,9 @@
-<!-- "About Us" page - perhaps to be renamed from start.md -->
-<!-- PERHAPS INSERT BANNER IMAGE HERE? -->
+🚧 Site under construction 🚧
 
-> [!Important]
-> 🚧 Site under construction 🚧
- 
- 
-## About ISO/TC204 Intelligent Transport Systems
-### Overview
+# About ISO/TC204 Intelligent Transport Systems
+
+## Overview
+
 Since our establishment in 1992, TC204 has developed and maintained a suite of standards and other artefacts for the Intelligent Transport Systems (ITS) environment that generally exists OUTSIDE a vehicle, and interfaces to the ITS environment INSIDE a vehicle. 
 <!-- I think it would be helpful to include an image that helps illustrate this -->
 

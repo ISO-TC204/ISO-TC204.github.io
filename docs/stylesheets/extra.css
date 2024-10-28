@@ -1,0 +1,8 @@
+/* extra.css */
+body {
+    background-image: url("../img/banner.jpg") !important;
+    background-size: cover !important;     /* Adjusts the image to cover the entire header */
+    background-position: center !important; /* Centers the image */
+    color: #fff !important;                /* Optional: Ensures the text is visible on the image */
+    z-index: 99 !important;
+}

@@ -1,0 +1,8 @@
+{
+  "MD033": {
+    "allowed_elements": ["style", "div"]
+  },
+  "MD024": false,
+  "MD041": false,
+  "MD046": false
+}
