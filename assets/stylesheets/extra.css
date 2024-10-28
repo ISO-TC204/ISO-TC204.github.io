@@ -1,0 +1,43 @@
+/* Main header styling with total height of 270px */
+.md-header {
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-image: url("../img/banner.jpg");
+    background-size: cover;
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;   /* Prevents the image from repeating */
+    height: 220px;
+    color: #fff;
+}
+
+/* Align tab items and move search and GitHub to the right side */
+.md-tabs {
+    margin-top: auto; /* Forces tabs to sit at the bottom of the header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Apply the same blue background color behind the header elements */
+.md-header__inner {
+    width: 100%;
+    height: 50px;
+    background-color: var(--md-primary-fg-color, #1976d2); /* Use the primary theme color */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1; /* Ensures it sits on top of other elements */
+}
+
+/* Ensure consistency with tab colors if using a specific color */
+.md-header__source, .md-search {
+    background-color: inherit;
+}
+
+/* Style adjustments for spacing */
+.md-search {
+    margin-right: 0px;
+}
