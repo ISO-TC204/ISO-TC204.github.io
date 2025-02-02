@@ -1,6 +1,6 @@
 # Introduction to ITS Cybersecurity Guidance
 
-Welcome to this ITS Cybersecurity Guidance. This resource serves as a guide to cybersecurity in Intelligent Transportation Systems (ITS). It outlines the importance of tailored security mechanisms and the role of international standards. 
+Welcome. This resource serves as a guide to Intelligent Transportation Systems (ITS) cybersecurity. It outlines the importance of ITS-tailored security mechanisms, the role of cybersecurity standards, and recommendations for selecting optimal cybersecurity standards for ITS implementations. 
 
 ---
 
@@ -12,28 +12,28 @@ Start with this introductory guide to understand why custom ITS security mechani
 ## Key Topics in ITS Cybersecurity
 
 ### 1. [ITS Security Architectures](its-security-architectures.md)
-ITS Cybersecurity architectures include devices, vehicles, communications, and backend systems. 
+ITS cybersecurity architectures include the systems and processes used to secure devices, vehicles, communications networks, and backend systems. This section describes how these components interact to ensure secure data exchanges, establish trust between entities, and support interoperability across regions and jurisdictions.
 
 ### 2. [Security Standards and Their Roles](security-standards.md)
-Explore key international standards for ITS security, such as ISO 21177 and IEEE 1609.2. Understand the appropriate contexts for their use and learn how to select the right standard for specific applications.
+This section explains key international standards for ITS security, including ISO 21177, IEEE 1609.2, and European standards such as ETSI TS 102 940 and ETSI TS 103 097. It describes the contexts in which these standards apply and provides guidance on selecting the right standard for specific ITS applications.
 
 ### 3. [Trust Bridges](trust-bridges.md)
- 
+Trust bridges are mechanisms that enable the secure sharing of information between two independent domains. They can allow sharing of information between domains that may operate under differing security and operating policies and may also support bridging between domains that use different frameworks, such as X.509 and IEEE 1609.2. 
 
 ### 4. [System-Specific Security](system-specific-security.md)
-Secure messaging, certificate management, entitlements and more.   
+System-specific security focuses on unique requirements for securing distinct ITS systems. This includes mechanisms for secure messaging, certificate management, and entitlements, as well as other measures to protect specific systems and devices such as Onboard Units (OBUs), Roadside Units (RSUs), and backend infrastructure services.
 
 ### 5. [Stakeholder-Specific Guidance](stakeholder-guidance.md)
-Tailored recommendations for ITS stakeholders:
+This section provides guidance tailored to different stakeholder perspectives, helping decision-makers, standards developers, and implementers identify optimal policies, standards, and practices for secure and effective ITS deployments:
 
-- **Decision-makers**: Policy priorities and investment strategies.
-- **Standards developers**: Ensuring international alignment and interoperability.
-- **Implementers**: Overcoming practical challenges in deployment.
+- **Decision-makers**: Focus on policy priorities and investment strategies.
+- **Standards developers**: Ensure international alignment and interoperability.
+- **Implementers**: Address practical challenges in deployment.
 
 ### 6. [Security Policies and Governance](security-policies.md)
-Best practices for drafting ITS-specific security policies. 
+This section covers creating security policies and governance frameworks for ITS systems, including defining roles, managing certificates, establishing trust frameworks, and aligning with regional and international standards.
 
 ### 7. [Specialized Use Cases](specialized-use-cases.md)
-Real-world examples of ITS cybersecurity incidents and architectures. 
+This section provides examples of how ITS cybersecurity applies to different scenarios, from securing specific message types, such as TIM and probe messages, to broader applications like vehicle-to-infrastructure communications and interoperability across domains.
 
 ---

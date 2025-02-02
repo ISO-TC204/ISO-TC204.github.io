@@ -92,11 +92,17 @@ IEEE 1609.2 is specifically designed for V2X environments, addressing the unique
 ### Decision Matrix for Choosing Between X.509 and IEEE 1609.2
 | Requirement                      | X.509                  | IEEE 1609.2            |
 |----------------------------------|------------------------|------------------------|
-| Real-time Communication          | ✘                      | ✔                      |
+| Bandwidth-constrained, low latency real-time communication          | ✘                      | ✔                      |
 | Privacy and Anonymity            | ✘                      | ✔                      |
 | Backend Compatibility            | ✔                      | ✘                      |
 | Mobility                         | ✘                      | ✔                      |
+| Network V2X-based Applications (e.g., TIMs, probes) | ✘           | ✔                      | 
 
+
+### Messaging examples
+
+TIMs
+ 
 ---
 
 
