@@ -10,7 +10,7 @@ The concept of a trust bridge is to enable secure sharing of information across 
 ## What a Trust Bridge Can Support
 
 1. **Bridges Security Frameworks**  
-   Trust bridges allow secure communication between domains that rely on disparate security frameworks.  
+   Trust bridges allow secure communication between trust domains that rely on disparate security frameworks.  
    - *Example:* An ITS Station configured with an X.509 certificate may need to communicate with a vehicle configured with IEEE Std. 1609.2 certificates.  
    - A trust bridge can validate message content using one framework and re-sign the content using a different framework.
 
