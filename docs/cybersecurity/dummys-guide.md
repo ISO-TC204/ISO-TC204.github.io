@@ -8,7 +8,7 @@ The SCMS is an instance of a Public Key Infrastructure (PKI) that issues and man
 ## IEEE 1609.2
 IEEE Std. 1609.2 is defined as a family of standards for certificates used to authenticate, integrity protect, and optionally encrypt V2X messaging. The certificate format is designed with ITS-specific fields such as application identifiers, service-specific permissions, organization identifies, and Geolocation. The IEEE 1609.2 standard is optimized for low-latency messaging in real-time, safety-critical operations.
 
-## PSID/SSP
+## ITS-AID/SSP
 Provider Service Identifiers (PSIDs) allow for the identification of specific ITS applications and services. Service-Specific Permissions (SSPs) define granular permissions and roles for each PSID. These IEEE Std. 1609.2 certificate fields allow for the use of fine-grained access controls in V2X applications. For example, PSIDs may be used to differentiate vehicles that are authorized to assert signal priority vs. vehicles that are not.
 
 ## Misbehavior Detection
