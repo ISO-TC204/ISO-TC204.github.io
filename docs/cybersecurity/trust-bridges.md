@@ -1,15 +1,18 @@
 # Trust Bridges: Secure Information Sharing Across Independent Domains
 
 ## Introduction to Trust Bridges  
-Trust bridges are mechanisms that enable the secure sharing of information between two independent domains. They can facilitate sharing between domains with differing security and operating policies, and support bridging between domains that rely on different frameworks, such as X.509 and IEEE 1609.2.
+Trust bridges are mechanisms that enable the secure sharing of information between two independent trust domains. They can facilitate sharing between trust domains with differing security and operating policies, and support bridging between trust domains that rely on different frameworks, such as X.509 and IEEE 1609.2.
 
-The concept of a trust bridge is to enable secure sharing of information across independent domains. A trust bridge ensures that data integrity, confidentiality, and authenticity are preserved throughout the transfer, even when bridging involves proprietary systems.
+The concept of a trust bridge is to enable secure sharing of information across independent trust domains. A trust bridge ensures that data integrity, confidentiality, and authenticity are preserved throughout the transfer, even when bridging involves proprietary systems.
 
 ---
 
 ## What a Trust Bridge Can Support
 
-1. Bridges Security Frameworks: Trust bridges allow secure communication between domains that rely on disparate security frameworks. For Example, an ITS Station configured with an X.509 certificate may need to communicate with a vehicle configured with IEEE Std. 1609.2 certificates. A trust bridge can also be configured to validate message content using one framework and re-sign the content using a different framework.
+1. **Bridges Security Frameworks**  
+   Trust bridges allow secure communication between trust domains that rely on disparate security frameworks.  
+   - *Example:* An ITS Station configured with an X.509 certificate may need to communicate with a vehicle configured with IEEE Std. 1609.2 certificates.  
+   - A trust bridge can validate message content using one framework and re-sign the content using a different framework.
 
 2. Facilitate Secure Interoperability: Trust bridges can act as intermediaries between different policy domains, ensuring secure and consistent communication.  
 
