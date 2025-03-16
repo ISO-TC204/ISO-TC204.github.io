@@ -23,23 +23,7 @@ A risk-based approach enables cybersecurity policies and solutions to mitigate s
 
 ---
 
-## **2. Investment Strategies for Security Infrastructure**
-Cybersecurity investments should be prioritized based on risk assessments, regulatory requirements, and technological advancements.
-
-### **Investment Priorities**
-- Public Key Infrastructure (PKI) for secure certificate management (e.g., IEEE 1609.2, X.509).
-- Resilient V2X security architectures to protect communications between vehicles, RSUs, and backend services.
-- Misbehavior Detection and Response tools for ITS networks to identify potential cyber threats in real-time.
-
-
-### **Key Actions**
-- Prioritize cybersecurity funding for critical ITS assets.
-- Develop public-private partnerships to leverage industry expertise in security investments.
-- Allocate funds for ongoing cybersecurity training for ITS operators.
-
----
-
-## **3. Balancing Security with Usability and Operational Continuity**
+## **2. Balancing Security with Usability and Operational Continuity**
 Cybersecurity measures must not compromise the usability, efficiency, or reliability of transportation systems.
 
 ### **Challenges**

@@ -18,22 +18,22 @@ ITS cybersecurity architectures include the systems and processes used to secure
 This section explains key international standards for ITS security, including ISO 21177, IEEE 1609.2, and European standards such as ETSI TS 102 940 and ETSI TS 103 097. It describes the contexts in which these standards apply and provides guidance on selecting the right standard for specific ITS applications.
 
 ### 3. [Trust Bridges](trust-bridges.md)
-Trust bridges are mechanisms that enable the secure sharing of information between two independent domains. They can allow sharing of information between domains that may operate under differing security and operating policies and may also support bridging between domains that use different frameworks, such as X.509 and IEEE 1609.2. 
+Trust bridges are mechanisms that enable the secure sharing of information between two independent domains. They can allow sharing of information between domains that may operate under differing security and operating policies and may also support bridging between domains that use different cybersecurity frameworks, such as X.509 and IEEE 1609.2. 
 
-### 4. [System-Specific Security](system-specific-security.md)
-System-specific security focuses on unique requirements for securing distinct ITS systems. This includes mechanisms for secure messaging, certificate management, and entitlements, as well as other measures to protect specific systems and devices such as Onboard Units (OBUs), Roadside Units (RSUs), and backend infrastructure services.
+### 4. [Cybersecurity Systems and Components](system-specific-security.md)
+Cybersecurity systems and components provide the building blocks that can be used to create a cybersecurity architecture for individual ITS systems. These systems and components include mechanisms for secure messaging, managing certificates, managing entitlements, identifying and responding to misbehaviors and threats, as well as  measures to protect specific ITS devices such as Onboard Units (OBUs), Roadside Units (RSUs), and backend infrastructure services.
 
 ### 5. [Stakeholder-Specific Guidance](stakeholder-guidance.md)
-This section provides guidance tailored to different stakeholder perspectives, helping decision-makers, standards developers, and implementers identify optimal policies, standards, and practices for secure and effective ITS deployments:
+This section provides guidance tailored to different stakeholder perspectives, helping decision-makers, standards developers, and implementers identify policies, standards, and practices to secure ITS deployments. Guidance is included for: 
 
-- **Decision-makers**: Focus on policy priorities and investment strategies.
-- **Standards developers**: Ensure international alignment and interoperability.
-- **Implementers**: Address practical challenges in deployment.
+- **Decision-makers** who may focus on defining and monitoring progress against strategic objectives. 
+- **Standards developers** who need to ensure alignment with international standards to ensure interoperability. 
+- **Implementers** who need to address practical challenges and considerations during deployment. 
 
 ### 6. [Security Policies and Governance](security-policies.md)
-This section covers creating security policies and governance frameworks for ITS systems, including defining roles, managing certificates, establishing trust frameworks, and aligning with regional and international standards.
+This section discusses ITS security policies and governance frameworks that support device cybersecurity lifecycle management. This includes for example, certificate enrollment and management, cross-jurisdictional interoperability, compliance with privacy regulations, and alignment with regional, national and international standards. 
 
 ### 7. [Specialized Use Cases](specialized-use-cases.md)
-This section provides examples of how ITS cybersecurity applies to different scenarios, from securing specific message types, such as TIM and probe messages, to broader applications like vehicle-to-infrastructure communications and interoperability across domains.
+This section provides use case examples of cybersecurity applied to specific scenarios. For example, how cybersecurity applies to specific systems (e.g., cooperative driving automation (CDA), mobile edge computing (MEC), as well as specific message types such as Traveller Information Messages (TIM), Probe messages and Basic Safety Messages (BSM).  
 
 ---

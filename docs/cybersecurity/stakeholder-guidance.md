@@ -7,16 +7,12 @@ Government officials, regulatory agencies, and executives shaping ITS strategies
 **Key cybersecurity concerns:**
 - Establishing national and regional cybersecurity policies for ITS.
 
-- Allocating funding for cybersecurity in transportation projects.
-
 - Defining compliance requirements for ITS cybersecurity frameworks.
 
 - Ensuring alignment with international cybersecurity standards (ISO, IEEE, ETSI, etc.).
 
 **Guidance provided:**  
 - Risk-based approaches to cybersecurity policy development.
-
-- Investment strategies for security infrastructure.
 
 - Balancing security with usability and operational continuity.
 
