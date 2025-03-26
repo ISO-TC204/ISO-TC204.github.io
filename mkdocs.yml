@@ -44,6 +44,7 @@ theme:
   features:
     - content.code.copy
     - content.tooltips
+    - header.auto_hide
     - navigation.path
     - navigation.top
     - navigation.tabs
