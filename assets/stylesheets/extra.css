@@ -10,6 +10,8 @@
     background-repeat: no-repeat;   /* Prevents the image from repeating */
     height: 220px;
     color: #fff;
+    position: relative; /* Ensures the header scrolls with content */
+    z-index: auto; /* Remove stacking to prevent it from sticking */
 }
 
 /* Align tab items and move search and GitHub to the right side */
@@ -40,4 +42,18 @@
 /* Style adjustments for spacing */
 .md-search {
     margin-right: 0px;
+}
+
+/* Adjust left navigation bar */
+.md-sidebar--primary {
+    position: sticky !important;; /* Makes the sidebar stick after scrolling */
+    top: 50px !important;; /* Distance from the top before sticking */
+    z-index: 10; /* Ensures it appears above other elements if needed */
+}
+
+/* Adjust right navigation bar (table of contents) */
+.md-sidebar--secondary {
+    position:sticky !important;; /* Makes the sidebar stick after scrolling */
+    top: 50px !important;; /* Distance from the top before sticking */
+    z-index: 10; /* Ensures it appears above other elements if needed */
 }
