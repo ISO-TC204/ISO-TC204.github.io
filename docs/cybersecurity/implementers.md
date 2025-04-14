@@ -1,44 +1,47 @@
 # **Implementer Guidance**  
 
-ITS implementers include engineers, system integrators, and security professionals responsible for deploying, configuring, and maintaining secure ITS infrastructure. Implementers must ensure that security mechanisms are correctly applied while maintaining system performance and operational reliability.  
+ITS implementers include engineers, system integrators, and field technicians responsible for deploying and maintaining secure infrastructure components. This page provides practical guidance for ensuring that key cybersecurity requirements are met during deployment and operation
 
 This section provides guidance on security implementation strategies for both European (EU) and North American ITS environments.  
 ---
 
-## **1. Secure Deployment and Configuration**  
+## **1. Configure and Maintain a Secure Environment**  
 
-Proper security configuration is important to protect ITS systems from cyber threats. There are resources available to support implementers in this area. This includes tools such as the Federal Highway Administration's [Mobile ITS Security Application](https://github.com/usdot-fhwa-OPS/ITS-Secure-Prototype-Backend) and the [ITS Cybersecurity Framework Profile](https://rosap.ntl.bts.gov/view/dot/72769).  
+Devices such as OBUs and RSUs must be correctly set up before they can securely communicate within a certificate-based trust system. This setup includes installing issued certificates, enabling secure message protocols, and protecting private keys using secure storage.
 
-In addition, in order to be enrolled within PKI systems such as the SCMS, subscribers (e.g., OBUs and RSUs) must demonstrate that they have met the enrollment requirements levied by the PKI provider. These can be found in policy documentation provided by the PKI provider. Testing services can also be procured, such as those provided by OmniAir or other vendors.  
+### Key Actions:  
+- Install valid certificates issued by the appropriate PKI authority (e.g., SCMS, CCMS) using approved enrollment processes.
 
-### **Key Implementation Steps Include**  
-- Configure **PKI-based authentication** for vehicles, RSUs, and backend systems, making use of either CCMS or SCMS provided IEEE Std. 1609.2 certificates.   
+- Enable secure communication protocols, such as IEEE 1609.2 for signed V2X messages, and TLS for infrastructure and back-office connections.
+- Apply secure defaults to networked devices: disable unused interfaces, require mutual authentication, and configure firewall rules.
+- Support certificate lifecycle processes, including revocation and renewal, in accordance with policy from the PKI provider.
 
-- Implement **secure messaging protocols** such as TLS and IEEE 1609.2 for V2X communication.  
+Tools like the [Mobile ITS Security Application](https://github.com/usdot-fhwa-OPS/ITS-Secure-Prototype-Backend) and the [ITS Cybersecurity Framework Profile](https://rosap.ntl.bts.gov/view/dot/72769) provide deployment checklists and configuration templates.
 
-- Establish processes for **certificate lifecycle management**, including revocation and renewal processes.
-
-- Alignment with Standards: Comply with standards such as Common Criteria (e.g., EAL4+ for HSMs) and ETSI TS 102 941 / IEEE Std. 1609.2 for secure V2X communications.
 ---
 
-## **2** Deploy hardened ITS equipment. 
-Implementing hardened ITS equipment ensures resilience against cyber threats. Protection Profiles (PPs) like the V2X HSM PP and SAFERtec modules define security requirements for components such as Onboard Units (OBUs) and Roadside Units (RSUs). These profiles emphasize robust cryptographic operations, secure storage for cryptographic keys, and protection against physical and logical attacks.
+## **2** Deploy Hardened Devices
+ITS hardware must include safeguards against both physical and logical attacks. This includes protection of cryptographic keys and enforcement of secure startup and update processes.
 
-### Key implementation steps include:
+### Key Actions
 
-Tamper Resistance: Deploy hardware with tamper-proof designs and secure elements (e.g., HSMs) to safeguard critical operations.
-Secure Boot and Updates: Ensure all devices support secure boot mechanisms and cryptographically verified over-the-air updates.
-Access Control and Monitoring: Implement strict access control (e.g., role-based access) and continuous monitoring for anomalies.
+- Use tamper-resistant hardware: OBUs and RSUs should include secure elements or hardware security modules (HSMs) for key protection.
+- Support secure boot: Devices must verify firmware signatures during startup.
+- Enforce signed software updates: Over-the-air (OTA) updates should include cryptographic verification and rollback protection.
+- Apply role-based access control (RBAC): Limit administrative interfaces to authenticated and authorized users only.
+- Enable system logging and monitoring: Support detection of unauthorized changes or unexpected behavior.
+
+Security requirements can be guided by Protection Profiles such as the [C2C-CC V2X HSM PP](https://www.car-2-car.org/fileadmin/documents/Basic_System_Profile/Release_1.3.0/C2CCC_PP_2056_HSM.pdf) or national regulatory frameworks such as UNECE R155.
 
 
-## **3. Manage Secure Software and Firmware Updates**  
+## 3. Secure Software and Firmware Updates  
 
-ITS devices must run trusted and up-to-date software to prevent exploitation.  
+Unpatched systems are a common attack vector. Implementers should verify that every device supports a secure update mechanism and that procedures are in place for scheduled updates.
 
-### **Key Implementation Steps Include**  
-- Use **secure boot** and **code signing** to verify software authenticity.  
-- Implement **secure over-the-air (OTA) updates** with integrity verification.  
-- Apply **access control** to restrict unauthorized software modifications.  
+### Key Actions
+- Verify authenticity of all updates before installation (e.g., digital signature checks).
+- Apply secure OTA updates using approved channels and tools.
+- Restrict update privileges to trusted administrators using authentication and access control.
 
 
 ---

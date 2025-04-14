@@ -1,68 +1,51 @@
 ## **Stakeholder Groups and Their Cybersecurity Focus Areas**
 
+ITS Cybersecurity requires collaboration across international bodies, national policymakers, standards developers, and deployment implementers. Because ITS systems involve mobile, decentralized, and real-time communication between vehicles, infrastructure, and backend systems, a shared approach to cybersecurity is essential. This page introduces guidance for three key stakeholder groups: decision-makers, standards developers, and implementers—each of whom plays a unique role in shaping and sustaining cybersecurity for ITS deployments.
+
+To understand how different responsibilities and policy frameworks interact, it's important to recognize the multi-tiered governance structure that supports secure and interoperable ITS systems:
+
+![Standards and Policies](./images/standards and policies.jpg)
+
+This layered model shows how global interoperability frameworks provide the foundation for secure cross-border ITS operations. These are supported by global standards developed by international organizations like ISO, ETSI, IEEE, SAE, and IETF. Finally, national and local policies tailor these standards for regional needs and legal contexts. Each stakeholder group contributes to the development or implementation of one or more of these layers.
+
 ### [**1. Decision-Makers**](decision-makers.md)
-**Who they are:**  
-Government officials, regulatory agencies, and executives shaping ITS strategies.
 
-**Key cybersecurity concerns:**
-- Establishing national and regional cybersecurity policies for ITS.
+Who they are: Government officials, regulatory agencies, and executives shaping ITS strategies and prioritizing security investment and procurements.
 
-- Defining compliance requirements for ITS cybersecurity frameworks.
+**ITS Cybersecurity responsibilities:**
 
-- Ensuring alignment with international cybersecurity standards (ISO, IEEE, ETSI, etc.).
-
-**Guidance provided:**  
-- Risk-based approaches to cybersecurity policy development.
-
-- Balancing security with usability and operational continuity.
+- Establishing national / regional ITS cybersecurity policies and governance models. 
+- Aligning legislation with global interoperability requirements. 
+- Mandating compliance with international standards (ISO, IEEE, ETSI, etc)
 
 [Click here for more details](decision-makers.md)
 
 ### **2. Standards Developers**
-**Who they are:**  
-Organizations, industry consortia, and research institutions responsible for defining ITS security standards.
+Who they are: Organizations, industry consortia, and research institutions that define technical ITS cybersecurity standards. 
 
-**Key cybersecurity concerns:**
-- Ensuring ITS security standards are globally interoperable.
+ITS Cybersecurity responsibilities: 
+- Ensuring global interoperability and alignment across regional systems  
 
-- Harmonizing regional and international security policies.
+- Harmonizing regional and international security standards and technologies
 
-- Addressing emerging threats and adapting to evolving cybersecurity risks.
-
-- Ensuring cryptographic agility and secure lifecycle management.
-
-**Guidance provided:**  
-- Best practices for standardizing ITS security mechanisms.
-
-- Ensuring alignment with ISO, IEEE 1609.2, ETSI TS 103 097, and other frameworks.
+- Maintaining and advancing standards like IEEE 1609.2 and ETSI TS 103 097  
+- Addressing evolving threat models, cryptographic agility, and system lifecycles
 
 - Developing security controls for future ITS applications. 
 
 [Click here for more details](standards-developers.md)
----
 
 ### **3. [Implementers](implementers.md)**
-**Who they are:**  
-Vehicle manufacturers, infrastructure operators, ITS service providers, and technology vendors.
+Who they are: Vehicle OEMs, infrastructure operators, service providers, and ITS vendors.
 
-**Key cybersecurity concerns:**
-- Securing the configuration of ITS devices such as Onboard Units (OBUs), Roadside Units (RSUs), and backend infrastructure.
+ITS Cybersecurity Requirements: 
+- Securing ITS components such as OBUs and RSUs, and ensuring compatability with the security of the backend infrastructure, operations centers, and field devices. Interests also include how to incorporate new data sources from outside of transportation and thus leveraging the emerging IoT opportunities.  
 
-- Managing digital certificates and cryptographic keys (IEEE 1609.2, X.509).
-
-- Preventing cyber threats such as spoofing, denial-of-service (DoS), and unauthorized access.
-
-- Ensuring compliance with cybersecurity policies in real-world deployments.
-
-**Guidance provided:**  
-
-- Implementation strategies for secure ITS deployments.
-
-- Threat modeling and risk management approaches for V2X communications.
-
-- Security best practices for device management and lifecycle security.
+- Deploying certificates and keys based on IEEE 1609.2 or X.509 formats  
+- Implementing countermeasures for spoofing, DoS, and unauthorized access  
+- Ensuring conformance with deployment policies and trust frameworks
+- Leverage ARC-IT to identify applicable security classifications, select relevant NIST-aligned controls, and reference standardized security profiles tailored to ITS subsystems and communications interfaces.
 
 [Click here for more details](implementers.md)
----
 
-Although we have provided guidance for specific stakeholders, ITS cybersecurity is a shared responsibility. All stakeholders should align towards a comprehensive cybersecurity strategy and architectural approach. 
+Note: While the pages above are tailored to each group, effective ITS cybersecurity requires shared responsibility. Stakeholders must align on architecture, policies, and operational practices to ensure safety, privacy, and trust at every level of the transportation system.

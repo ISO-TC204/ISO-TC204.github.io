@@ -1,17 +1,12 @@
-# Decision-Maker Guidance
+# Decision-Makers
 
-## **Introduction**
-ITS decision makers include government officials, regulatory bodies, transportation agencies, and executives responsible for setting cybersecurity policies and investment priorities.  Ensuring secure and resilient ITS deployments requires a risk-based approach, strategic investment in security infrastructure, and a balance between security, usability, and operational continuity.
+## Understanding the Role of Decision-Makers in ITS Cybersecurity
+Decision makers are often influenced by national policy, funding priorities and legal frameworks. They are responsible for ensuring public safety, mitigating risk, enabling secure cross-border interoperability, and maintaining public trust in connected mobility.
 
-This section provides guidance on cybersecurity policy that can be tailored to both European (EU) and North American regulatory environments.
+## Strategic Priorities for Decision Makers
 
----
-
-## **1. Risk-Based Approaches to Cybersecurity Policy Development**
-A risk-based approach enables cybersecurity policies and solutions to mitigate specific and relevant ITS threats. Risk management involves: 
-- Identifying and decomposing critical assets such as vehicles (OBUs), ITS equipment (RSUs, DMS, CCTV, etc), and TMCs (backend infrastructure). 
-- Identifying and assessing threats and vulnerabilities specific to the identified assets within the transportation system, including potential for attacks against communications (e.g., V2X). 
-- Implementing risk mitigation strategies aligned with international standards.
+## 1. Adopt a Risk-Based Policy Framework
+Cybersecurity policy should be driven by a clear understanding of risk. Vehicles, roadside infrastructure, and backend systems are all potential targets for cyberattacks that could result in harm. A risk-based approach enables policies to address the most critical threats to an ITS system. ITS executives should ensure that risk assessments are performed regularly, international standards are adopted with a focus on interoperability, and tailored mitigation strategies are put in place to safeguard their specific ITS deployments. 
 
 ### **Regional Considerations**
 - European Union: Policies should align with **tbd**
@@ -33,7 +28,7 @@ Cybersecurity measures must not compromise the usability, efficiency, or reliabi
 
 ### **Regional Considerations**
 - EU: The General Data Protection Regulation (GDPR) imposes strict privacy requirements on data collection and storage.
-- North America: The Cybersecurity and Infrastructure Security Agency (CISA) promotes best practices for secure and resilient ITS deployments.
+- North America: tbd
 
 ### **Key Actions**
 - Implement privacy-preserving security mechanisms, such as pseudonym certificates.

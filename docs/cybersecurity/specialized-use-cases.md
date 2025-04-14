@@ -1,26 +1,40 @@
+# Specialized Use Cases
 
-## ITS Station-to-ITS Station Communication
+Certain ITS applications involve heightened cybersecurity risks due to their safety-critical nature, sensitivity of data, or exposure to external networks. This section highlights examples of such use cases and outlines associated risks and considerations for implementers.
 
-ITS Stations, including Roadside Units (RSUs) and backend systems, communicate to exchange data such as Signal Phase and Timing (SPaT) data and Traveler Information Messages (TIM). These stations may use IEEE Std. 1609.2 and, if relevant, ETSI TS 103 097** certificates and formats. Secure communication between ITS Stations ensures that only trusted entities can participate in data exchanges.
+## Cooperative Driving Automation (CDA)
 
-### Security Services That May Be Employed
+Cooperative Driving Automation allows vehicles to coordinate actions such as lane merging, platooning, and emergency response through direct communication. These interactions are highly time-sensitive and safety-critical. Key risks:
 
-- **ISO 21177 – Secure Session Establishment and Authentication**  
-  Ensures authentication and secure session management for ITS data exchanges.
-
-## Backend Infrastructure to RSU
-
-Backend infrastructure components may be provisioned with **X.509 certificates**, which enable secure communication using protocols such as **Transport Layer Security (TLS)**.
+- Spoofed messages triggering incorrect maneuvers
+- Unauthorized devices attempting to participate
+- Injection of false trajectory or intent data
 
 
-## Inter-Domain Interoperability
 
-Secure interoperability between ITS domains is necessary to facilitate communication between different networks, security policies, and administrative domains.
+## Probe Data Collection
 
-## Use Cases
+Probe data applications collect information such as vehicle speed, heading, or environmental conditions to support traffic analysis and planning. Key risks:
 
-- **Road Use Charging with IEEE 1609.2 and TLS**  
-  Road use charging systems may leverage IEEE 1609.2 certificates for authentication, combined with TLS for secure data transmission.  
+- Unauthorized access to collected data
+- Leakage of personally identifiable or vehicle-identifiable information
+- Injection of fabricated probe reports
 
-- **Probe Data Collection**  
-  Secure probe data collection requires authentication, privacy-preserving mechanisms, and encryption to protect the integrity and confidentiality of collected vehicle data.
+## Road Use Charging (RUC)
+
+Road Use Charging systems rely on trusted reporting of mileage, location, or toll zone entry to calculate fees. Key risks:
+
+- Manipulation of reported travel data to reduce fees
+- Credential sharing or spoofing to mask vehicle identity
+- Unauthorized software modification to disable location tracking
+
+
+
+## Mobile Edge Computing (MEC) 
+
+MEC allows data processing closer to the field, such as at RSUs or in-vehicle systems, reducing latency for time-sensitive applications. Key risks:
+
+- Unauthorized access to locally processed data
+- Deployment of unvetted software at edge nodes
+- Disruption of V2X applications through edge-layer compromise
+
