@@ -6,3 +6,33 @@ body {
     color: #fff !important;                /* Optional: Ensures the text is visible on the image */
     z-index: 99 !important;
 }
+
+/* Style for figure captions */
+figcaption {
+  font-style: italic;          /* Italicize the caption text */
+  font-size: 0.9em;           /* Slightly smaller font size */
+  color: #666;                /* Subtle gray color for contrast */
+  text-align: center;         /* Center the caption */
+  margin-top: 8px;            /* Space between image and caption */
+  margin-bottom: 16px;        /* Space below caption */
+  max-width: 100%;            /* Ensure caption doesn't overflow image */
+  line-height: 1.4;           /* Improve readability */
+}
+
+/* Ensure figure container is centered and responsive */
+figure {
+  display: block;
+  margin: 1em auto;           /* Center figure with vertical spacing */
+  text-align: center;         /* Center inline content */
+}
+
+/* Style for images with the .figure class */
+img.figure {
+  max-width: 100%;            /* Responsive images */
+  height: auto;               /* Maintain aspect ratio */
+  border: 1px solid #ddd;     /* Subtle border */
+  border-radius: 4px;         /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow */
+  display: block;             /* Ensure image is block-level */
+  margin: 0 auto;             /* Center image */
+}
