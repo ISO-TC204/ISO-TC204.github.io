@@ -17,16 +17,20 @@ nav:
     - Foundational concepts: foundational.md
     - Architecture (WG 1): wg1/index.md
     - Big data and AI (WG 20): wg20/index.md
-    - ITS geographic data (WG 3): wg3/index.md
-    - "City data model: Transport (JWG 1)": jwg1/index.md
+    - City data model - Transport (JWG 1): jwg1/index.md
     - Communications (WG 16): wg16/index.md
     - Cooperative systems (WG 18): wg18/index.md
+    - Coordination (AG 4): ag4/index.md
     - Driving automation and safety (WG 16): wg16/index.md
     - Fee and toll collection (WG 5): wg5/index.md
     - Fleet management (WG 7): wg7/index.md
+    - Geographic data (WG 3): wg3/index.md
+    - Identifiers (AG 2): ag2/index.md
     - Mobility integration (WG 19): wg19/index.md
     - Nomadic devices in ITS (WG 17): wg17/index.md
+    - Operational improvement (AG 3): ag3/index.md
     - Public transport/emergency (WG 8): wg8/index.md
+    - Publication and marketing (AG 5): ag5/index.md
     - Registry for ITS Identifiers (AG 2): ag2/index.md
     - Transport mgmt and control (WG 9): wg9/index.md
     - Traveller information (WG 10): wg10/index.md
@@ -54,6 +58,7 @@ plugins:
   - search
   - git-revision-date-localized:
       type: date
+  - include-markdown
 markdown_extensions:
   - abbr
   - admonition
@@ -66,7 +71,7 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.snippets:
       auto_append:
-        - /glossary/glossary.md
+        - resources/glossary.md
   - pymdownx.superfences
   - toc:
       permalink: true
