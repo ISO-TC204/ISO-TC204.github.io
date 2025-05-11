@@ -2,22 +2,7 @@
 
 ## Domain of interest
 
-The purpose of WG1 is to promote consistency across ISO/TC 204 standards by
-encouraging adherence to a consistent ITS architecture (including consistent
-user services and data concepts) and documentation approach (including
-consistent technical approaches, documentation formats, and terminology)
-across working groups.
-
-WG1 activities include:
-
-- Defining [shared terminology](#vocabulary) to be used throughout ISO/TC 204 standards
-- Promoting a common [ITS reference architecture](#reference-its-architecture)
-for ITS services across WGs by working with regional ITS architecture efforts
-- Identifying [gaps and overlaps](https://isotc.iso.org/livelink/livelink/Open/22166135)
-within the architecture for ITS services to be addressed through standards
-- Promoting common methods for [documenting ISO/TC 204 standards](#documentation-in-tc-204-standards) and data concepts
-- Investigating how to develop a [common data model](#common-data-model) across ITS
-- Providing guidance on the [application of ICT-related technologies](#application-of-technologies) within ITS
+{% include "ag4/wg1doi.html" %}
 
 ## News and highlights
 

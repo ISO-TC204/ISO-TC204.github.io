@@ -1,8 +1,6 @@
-# Communications (ISO TC 204 WG 16)
+#Operational improvement group (ISO TC 204 AG 3)
 
 ## Domain of interest
-
-{% include "ag4/wg16doi.html" %}
 
 ## News and highlights (optional) 
 
@@ -11,7 +9,7 @@
 ### Overview
 
 **Document:** [ISO Document number and status](index.md)
-**Title:** Intelligent transport systems — 
+**Title:** Intelligent transport systems —
 **Status:** 
 **Abstract:** 
 
