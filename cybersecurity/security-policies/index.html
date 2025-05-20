@@ -20,7 +20,7 @@
     
     
       
-        <title>Security policies - ISO TC 204 Information</title>
+        <title>Security Governance - ISO TC 204 Information</title>
       
     
     
@@ -63,6 +63,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#security-governance" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -95,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Security policies
+              Security Governance
             
           </span>
         </div>
@@ -1304,6 +1309,106 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#trust-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trust Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trust Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scms-trust-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      SCMS Trust Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ccms-trust-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      CCMS Trust Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entitlement-enrollment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entitlement Enrollment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entitlement Enrollment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples-scms-entitlement-enrollment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples - SCMS Entitlement Enrollment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-ccms-entitlements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: CCMS Entitlements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#certificate-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Certificate Lifecycle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Certificate Lifecycle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-scms-certificate-lifecyle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example - SCMS Certificate Lifecyle
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1322,9 +1427,61 @@
   
 
 
-  <h1>Security policies</h1>
-
-
+<h1 id="security-governance">Security Governance<a class="headerlink" href="#security-governance" title="Permanent link">&para;</a></h1>
+<p><abbr title="Intelligent Transport Systems">ITS</abbr> certificate management is governed by policy that ensures secure enrollment, use, and revocation of digital certificates.  Most PKI systems perform similar functions: trust management, entitlement enrollment, certificate lifecycle management, and misbehavior response. </p>
+<h2 id="trust-management">Trust Management<a class="headerlink" href="#trust-management" title="Permanent link">&para;</a></h2>
+<p>Trust anchor management defines how Root Certificate Authorities (RCAs) are authorized and monitored. This process includes approving new trust anchors, auditing existing ones, and distributing updated trust lists to relying parties.  A  distributed trust model may involve Electors who are trusted entitles that vote to approve or revoke RCAs. RCAs then certify intermediate authorities (e.g., Enrollment or Pseudonym CAs). </p>
+<p>In the European model, a central policy authority defines certificate policies and oversees Root CA conformance. A designated TLM maintains the trust list, which is distributed to participating entities. Root CA inclusion or removal is based on defined policy and audit compliance. Example roles that may play a part in the overall governance for trust anchor management may include: </p>
+<table>
+<thead>
+<tr>
+<th>Example Role</th>
+<th>Role Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Root CA</td>
+<td>Serves as the top-level trust anchor, issuing certificates to subordinate CAs and enforcing strict policies to ensure the security and integrity of the entire certificate chain.</td>
+</tr>
+<tr>
+<td>TLM</td>
+<td>Responsible for maintaining and updating the list of trusted root certificates, ensuring that only valid and compliant Root Certification Authorities are recognized by relying parties.</td>
+</tr>
+<tr>
+<td>CPA</td>
+<td>Responsible for establishing and maintaining the overarching policies and standards that govern certificate issuance, usage, and management throughout the system.</td>
+</tr>
+<tr>
+<td>CPOC</td>
+<td>Acts a the technical interface to a TLM, validates certificate submissions and ensures compliance with operational policies.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scms-trust-management">SCMS Trust Management<a class="headerlink" href="#scms-trust-management" title="Permanent link">&para;</a></h3>
+<p>In the SCMS model, trust anchor management is handled by a distributed group of entities known as Electors. Electors collectively maintain the CTL, which identifies the Root CAs trusted by the system. Changes to the CTL, such as adding or removing a Root CA require approval through an Elector voting process. A quorum of Electors must digitally sign the CTL update before it is accepted by relying components. This mechanism ensures that no single authority can unilaterally alter the trust anchor set.</p>
+<h3 id="ccms-trust-management">CCMS Trust Management<a class="headerlink" href="#ccms-trust-management" title="Permanent link">&para;</a></h3>
+<p>In the CCMS model, trust anchor management is coordinated by a centralized governance structure. The CPA defines certificate policies and evaluates Root CAs for inclusion in the ECTL. Following a positive audit or policy evaluation, the CPA transmits its endorsement to the C-POC, which acts as the technical liaison. The C-POC validates submitted Root CA certificates and forwards them to the TLM, a designated entity responsible for maintaining and distributing the signed ECTL. Updates to the ECTL are based exclusively on CPA directives and are digitally signed to ensure authenticity. Devices use the signed ECTL to determine which Root CAs are trusted for secure communication.</p>
+<h2 id="entitlement-enrollment">Entitlement Enrollment<a class="headerlink" href="#entitlement-enrollment" title="Permanent link">&para;</a></h2>
+<p>Entitlement enrollment refers to the policy-governed process of assigning specific permissions to end entities. These permissions define what V2X services a device is authorized to access and what actions it may perform. Common mechanisms for expressing entitlements include the use of PSID and SSP.  Governance frameworks define how these entitlements are granted and validated. </p>
+<h3 id="examples-scms-entitlement-enrollment">Examples - SCMS Entitlement Enrollment<a class="headerlink" href="#examples-scms-entitlement-enrollment" title="Permanent link">&para;</a></h3>
+<p>In the SCMS model, entitlement enrollment begins with identifying the type and intended function of the device (e.g., safety messaging for an OBU). The system assigns appropriate PSIDs and SSPs in accordance with defined policy. These values are included in the Certificate Signing Request (CSR), which is validated by the Registration Authority (RA) prior to certificate issuance. Entitlements are not managed directly by certificate authorities. They are governed by operational policies that define authorized roles and service access.</p>
+<h3 id="example-ccms-entitlements">Example: CCMS Entitlements<a class="headerlink" href="#example-ccms-entitlements" title="Permanent link">&para;</a></h3>
+<p>In the CCMS model, entitlement information is reviewed and enforced by subordinate CAs operating under a Root CA listed in the ECTL. The CPA that defines entitlement policy and ensures consistency across jurisdictions. </p>
+<h2 id="certificate-lifecycle">Certificate Lifecycle<a class="headerlink" href="#certificate-lifecycle" title="Permanent link">&para;</a></h2>
+<p>The certificate lifecycle defines processes through which certificates are issued, renewed, and revoked.  Enrollment establishes initial device trust , followed by the issuance of role-specific operational certificates. Governance frameworks must define eligibility criteria and certificate lifecycle requirements. </p>
+<h4 id="example-scms-certificate-lifecyle">Example - SCMS Certificate Lifecyle<a class="headerlink" href="#example-scms-certificate-lifecyle" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Enrollment: Devices are provisioned with an Enrollment Certificate , which authorizes them to participate in SCMS-managed services. A CSR is generated and validated by the Registration Authority (RA). The Enrollment Certificate Authority (ECA) issues the certificate, which serves as a bootstrap credential for requesting role-specific certificates. </p>
+</li>
+<li>
+<p>Issuance: Operational certificates (e.g., pseudonym certificates) are issued based on defined policy. Devices submit requests containing their assigned PSID/SSP entitlements. The issuing CA validates these requests and issues the corresponding certificates based on an approved CP. </p>
+</li>
+<li>
+<p>Revocation: Revocation policies support the removal of certificates due to misbehavior, compromise, or expiration. Pseudonym certificate revocation is managed through CRLs. Root CA revocations require Elector approval and result in CTL updates. </p>
+</li>
+</ul>
 
 
 
@@ -1345,7 +1502,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 21, 2025 03:25:45">January 21, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 14, 2025 13:03:22">April 14, 2025</span>
   </span>
 
     

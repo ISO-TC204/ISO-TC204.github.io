@@ -20,7 +20,7 @@
     
     
       
-        <title>System-Specific Security - ISO TC 204 Information</title>
+        <title>ITS Cybersecurity Mechanisms and Building Blocks - ISO TC 204 Information</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#system-specific-security" class="md-skip">
+        <a href="#its-cybersecurity-mechanisms-and-building-blocks" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              System-Specific Security
+              ITS Cybersecurity Mechanisms and Building Blocks
             
           </span>
         </div>
@@ -1319,61 +1319,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#cybersecurity-building-blocks" class="md-nav__link">
+  <a href="#digital-certificates" class="md-nav__link">
     <span class="md-ellipsis">
-      Cybersecurity Building Blocks
+      Digital Certificates
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Cybersecurity Building Blocks">
+    <nav class="md-nav" aria-label="Digital Certificates">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#public-key-infrastructure-pki-certificates" class="md-nav__link">
+  <a href="#certificate-types-and-purposes" class="md-nav__link">
     <span class="md-ellipsis">
-      Public Key Infrastructure (PKI) Certificates
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Public Key Infrastructure (PKI) Certificates">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#regional-variations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Regional Variations
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#misbehavior-detection-systems" class="md-nav__link">
-    <span class="md-ellipsis">
-      Misbehavior Detection Systems
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#secure-messaging-protocols-and-capabilities" class="md-nav__link">
-    <span class="md-ellipsis">
-      Secure Messaging Protocols and Capabilities
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cross-domain-trust" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cross Domain Trust
+      Certificate Types and Purposes
     </span>
   </a>
   
@@ -1385,11 +1343,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#learn-more" class="md-nav__link">
+  <a href="#misbehavior-detection-systems" class="md-nav__link">
     <span class="md-ellipsis">
-      Learn More
+      Misbehavior Detection Systems
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Misbehavior Detection Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#local-misbehavior-detection-and-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Misbehavior Detection and Reporting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backend-processing-and-certificate-revocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backend Processing and Certificate Revocation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1412,37 +1394,67 @@
   
 
 
-<h1 id="system-specific-security">System-Specific Security<a class="headerlink" href="#system-specific-security" title="Permanent link">&para;</a></h1>
-<p>Different <abbr title="Intelligent Transport Systems">ITS</abbr> systems require unique security solutions. This include mechanisms and approaches for secure messaging, platform security (e.g, OBU/RSU), key and certificate management, privilege management (e.g., entitlements), and various other measures that protect backend TMCs and roadside infrastructure.  This section provides building blocks that can be used to choose specific security features and capabilities needed to protect the confidentiality, integrity and availability of <abbr title="Intelligent Transport Systems">ITS</abbr> systems. </p>
-<h2 id="cybersecurity-building-blocks">Cybersecurity Building Blocks<a class="headerlink" href="#cybersecurity-building-blocks" title="Permanent link">&para;</a></h2>
-<h3 id="public-key-infrastructure-pki-certificates">Public Key Infrastructure (PKI) Certificates<a class="headerlink" href="#public-key-infrastructure-pki-certificates" title="Permanent link">&para;</a></h3>
-<p>PKI is a fundamental component of an <abbr title="Intelligent Transport Systems">ITS</abbr> security architecture, enabling trusted communication between vehicles, roadside infrastructure, and backend systems. A PKI ensures that messages exchanged within an <abbr title="Intelligent Transport Systems">ITS</abbr> environment are authentic and protected from tampering.</p>
-<p>PKI's issue digital certificates, which are used to authenticate the identity of subscribers. Within an <abbr title="Intelligent Transport Systems">ITS</abbr> system, subscribers may include vehicle OBUs, RSUs, and any other equipment or service that must implement authenticated, integrity protected or confidential communication. Certificates are issued by a trusted infrastrucutre, ending at a Root Certificate Authority (Root CA), and potentially including multiple subordinate CAs. </p>
-<p>PKI also enables encryption, ensuring that sensitive information remains private, and digital signatures, which verify that messages have not been altered. In the <abbr title="Intelligent Transport Systems">ITS</abbr> domain, PKI systems such as the Security Credential Management System (SCMS) and the Cooperative Credential Management System (CCMS) are also capable of enforcing privilege management, by including specific permissions that a subscriber is authorized to assert, directly within the certificate. Permissions are included in certificate fields such as the Provider Service Identity / Service Specific Permissions (PSIDSSP) fields of an IEEE 1609.2 certificate. These capabilities help maintain trust across <abbr title="Intelligent Transport Systems">ITS</abbr> networks, supporting applications such as traffic signal priority, collision warnings, and secure data exchanges between transportation systems.</p>
-<p>IEEE Std. 1609.2 certificates also provide anonymity protection through the use of short-lived pseudonym certificates that prevent long-term tracking of any particular vehicle.</p>
-<h4 id="regional-variations">Regional Variations<a class="headerlink" href="#regional-variations" title="Permanent link">&para;</a></h4>
-<ul>
-<li>
-<p><strong>European Union (EU)</strong><br />
-  The European Telecommunications Standards Institute (ETSI) standards, such as ETSI TS 103 097, complement IEEE Std. 1609.2 by specifying additional certificate formats for V2X communication. In the EU, the PKI is known as the Cooperative Credential Management System (CCMS). </p>
-</li>
-<li>
-<p><strong>North America</strong><br />
-  The Security Credential Management System (SCMS) issues and manages IEEE 1609.2 certificates for OBUs, RSUs, and other <abbr title="Intelligent Transport Systems">ITS</abbr> Stations.</p>
-</li>
-</ul>
-<h3 id="misbehavior-detection-systems">Misbehavior Detection Systems<a class="headerlink" href="#misbehavior-detection-systems" title="Permanent link">&para;</a></h3>
-<p>Misbehavior detection systems help identify and respond to security threats in <abbr title="Intelligent Transport Systems">ITS</abbr> networks by monitoring for unusual or suspicious activity. A misbehavior detection system may be integrated directly into a PKI service, such as the SCMS. Misbehavior detection profiles are defined for specific message types (for example, Basic Safety Messages), in order to identify unexpected behavior from a device. When a receiving device detects unusual behavior, the device can flag that behavior by transmiting a misbehavior report to the PKI for review. The PKI can then determine the most appropriate course of action, to include revoking the offending device's certificates, suspending its certifictes, or other approaches. </p>
-<h3 id="secure-messaging-protocols-and-capabilities">Secure Messaging Protocols and Capabilities<a class="headerlink" href="#secure-messaging-protocols-and-capabilities" title="Permanent link">&para;</a></h3>
-<p>Information exchanged between vehicles, roadside units, Traffic Management Centers (TMCs) and other entities must be authenticated and integrity protected. PKI systems such as the SCMS and CCMS provide the underlying certificates that are used to acheive these security objectives. Security protocols must also be used, along with these certificates. In <abbr title="Intelligent Transport Systems">ITS</abbr> systems, Transport Layer Security (TLS) is a widely used protocol that provides encryption and secure communication over networks, safeguarding data from eavesdropping and tampering. In the context of <abbr title="Intelligent Transport Systems">ITS</abbr>, ISO 21177 specifies security services for <abbr title="Intelligent Transport Systems">ITS</abbr> stations, including secure session establishment and authentication between trusted devices, utilizing protocols like TLS to ensure the authenticity and integrity of information exchanged. </p>
-<h3 id="cross-domain-trust">Cross Domain Trust<a class="headerlink" href="#cross-domain-trust" title="Permanent link">&para;</a></h3>
-<p>Cross-domain trust is essential for seamless interoperability within <abbr title="Intelligent Transport Systems">ITS</abbr> systems in order to ensure secure and reliable communication across different jurisdictions and administrative domains. In the U.S., the IEEE 1609.2.2 standard addresses multi-jurisdictional interoperability by defining mechanisms that enable trust between devices using digital certificates issued under different policy domains. A key component of this approach uses the Certificate Trust List (CTL) with entries for trust permissions associated with each trusted Root CA or SCMS. This allows SCMS Managers to granularly establish and manage trust relationships across multiple trusted domains. </p>
-<p>In Europe, the Cooperative Intelligent Transport Systems (C-<abbr title="Intelligent Transport Systems">ITS</abbr>) employs the European C-<abbr title="Intelligent Transport Systems">ITS</abbr> Security Credential Management System (EU CCMS) to manage cross-domain trust. This is acheived using the C-<abbr title="Intelligent Transport Systems">ITS</abbr> Point of Contact (CPOC) protocol, which facilitates the collection of Root CA certificates and their placement onto the European Certificate Trust List (ECTL). The Trust List Manager (TLM) is responsible for issuing the ECTL, ensuring that all participating entities adhere to a unified trust model. </p>
-<h2 id="learn-more">Learn More<a class="headerlink" href="#learn-more" title="Permanent link">&para;</a></h2>
-<p><a href="https://cpoc.jrc.ec.europa.eu/data/documents/EU_CCMS_CPOC_Protocol_Release_1_2.pdf">SCMS</a>
-<a href="https://cpoc.jrc.ec.europa.eu/data/documents/EU_CCMS_CPOC_Protocol_Release_1_2.pdf">CPOC</a>
-<a href="https://www.iso.org/standard/87225.html">ISO 21177</a>
-<a href="https://datatracker.ietf.org/doc/html/rfc8446">TLS</a></p>
+<h1 id="its-cybersecurity-mechanisms-and-building-blocks"><abbr title="Intelligent Transport Systems">ITS</abbr> Cybersecurity Mechanisms and Building Blocks<a class="headerlink" href="#its-cybersecurity-mechanisms-and-building-blocks" title="Permanent link">&para;</a></h1>
+<p><abbr title="Intelligent Transport Systems">ITS</abbr> cybersecurity architectures are composed of modular security mechanisms that collectively protect communications, devices, and operational processes. This section identifies key building blocks used with an <abbr title="Intelligent Transport Systems">ITS</abbr> cybersecurity architecture, including cryptographic tools, secure communications protocols and misbehavior detection mechanisms. </p>
+<h2 id="digital-certificates">Digital Certificates<a class="headerlink" href="#digital-certificates" title="Permanent link">&para;</a></h2>
+<p>Digital certificates bind a public key to a set of attributes and permissions, enabling authentication, access control, and trust establishment.  Certificates are defined by international standards such as IEEE 1609.2 (predominantly used in North America) and ETSI TS 103 097 (used in Europe). </p>
+<h3 id="certificate-types-and-purposes">Certificate Types and Purposes<a class="headerlink" href="#certificate-types-and-purposes" title="Permanent link">&para;</a></h3>
+<p>In Europe, ETSI defines a suite of certificates such as Authorization Tickets (ATs) and Enrolment Credentials (ECs) used within the CCMS. In North America, the SCMS uses similar certificate types but with implementation-specific differences.</p>
+<table>
+<thead>
+<tr>
+<th>Certificate Type</th>
+<th>Purpose</th>
+<th>Description</th>
+<th>Region</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Root CA Certificate</strong></td>
+<td>Root of trust</td>
+<td>Trust anchor for verifying other certificates; manually installed in devices</td>
+<td>Global</td>
+</tr>
+<tr>
+<td><strong>Intermediate CA</strong></td>
+<td>Delegation of signing authority</td>
+<td>Issues certificates to Enrollment and Authorization Authorities</td>
+<td>Global</td>
+</tr>
+<tr>
+<td><strong>Enrolment Credential (EC)</strong></td>
+<td>Device identity proof</td>
+<td>Long-term credential proving a device's legitimacy; used to request operational certificates</td>
+<td>Europe</td>
+</tr>
+<tr>
+<td><strong>Authorization Ticket (AT)</strong></td>
+<td>Application-level message signing</td>
+<td>Short-lived pseudonym certificate used to sign V2X messages (e.g., CAM, DENM, BSM)</td>
+<td>Europe (ETSI)</td>
+</tr>
+<tr>
+<td><strong>Pseudonym Certificate</strong></td>
+<td>Equivalent to AT in SCMS</td>
+<td>Privacy-preserving certificate for real-time message signing</td>
+<td>North America</td>
+</tr>
+<tr>
+<td><strong>Trust List Manager Cert</strong></td>
+<td>Management of trusted authorities</td>
+<td>Used to sign and distribute Certificate Trust Lists (CTLs or ECTLs)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Each certificate includes varying fields depending on its type and role. For example, Authorization Tickets (in ETSI) and pseudonym certificates (in SCMS) include permissions that define which messages a device may sign, and the region in which the certificate is valid. A certificate can be explicit, meaning it includes the full public key, or implicit, where only a reconstruction value is stored and the recipient computes the public key. Implicit certificates are smaller. </p>
+<h2 id="misbehavior-detection-systems">Misbehavior Detection Systems<a class="headerlink" href="#misbehavior-detection-systems" title="Permanent link">&para;</a></h2>
+<p>Misbehavior detection systems evlauate messages for plausibility, consistency, and alignment with expected behavior. Misbehavior detection operates both locally, within vehicles and roadside units, and centrally, through backend authorities that assess incoming reports and take appropriate action. In North America, the SCMS includes a dedicated Misbehavior Detection and Reporting System designed to identify and manage malicious or faulty behavior in V2X communications. </p>
+<h4 id="local-misbehavior-detection-and-reporting">Local Misbehavior Detection and Reporting<a class="headerlink" href="#local-misbehavior-detection-and-reporting" title="Permanent link">&para;</a></h4>
+<p>Each <abbr title="Intelligent Transport Systems">ITS</abbr> Station (<abbr title="Intelligent Transport Systems">ITS</abbr>-S) integrates a Local Misbehavior Detection Service. This service evaluates incoming V2X messages against a set of detectors to identify inconsistencies or anomalies. When suspicious behavior is detected, it is categorized and forwarded to a Misbehavior Authority (MA). </p>
+<h4 id="backend-processing-and-certificate-revocation">Backend Processing and Certificate Revocation<a class="headerlink" href="#backend-processing-and-certificate-revocation" title="Permanent link">&para;</a></h4>
+<p>Once received, misbehavior reports are processed by the MA. This entity assesses whether the reported behavior warrants certificate revocation, suspension, or other remediation actions. </p>
 
 
 
@@ -1463,7 +1475,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 2, 2025 21:11:47">February 2, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 14, 2025 13:03:22">April 14, 2025</span>
   </span>
 
     

@@ -20,7 +20,7 @@
     
     
       
-        <title>Specialized use cases - ISO TC 204 Information</title>
+        <title>Specialized Use Cases - ISO TC 204 Information</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#its-station-to-its-station-communication" class="md-skip">
+        <a href="#specialized-use-cases" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Specialized use cases
+              Specialized Use Cases
             
           </span>
         </div>
@@ -1309,6 +1309,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1317,51 +1319,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#its-station-to-its-station-communication" class="md-nav__link">
+  <a href="#cooperative-driving-automation-cda" class="md-nav__link">
     <span class="md-ellipsis">
-      ITS Station-to-ITS Station Communication
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="ITS Station-to-ITS Station Communication">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#security-services-that-may-be-employed" class="md-nav__link">
-    <span class="md-ellipsis">
-      Security Services That May Be Employed
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#backend-infrastructure-to-rsu" class="md-nav__link">
-    <span class="md-ellipsis">
-      Backend Infrastructure to RSU
+      Cooperative Driving Automation (CDA)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#inter-domain-interoperability" class="md-nav__link">
+  <a href="#probe-data-collection" class="md-nav__link">
     <span class="md-ellipsis">
-      Inter-Domain Interoperability
+      Probe Data Collection
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#use-cases" class="md-nav__link">
+  <a href="#road-use-charging-ruc" class="md-nav__link">
     <span class="md-ellipsis">
-      Use Cases
+      Road Use Charging (RUC)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-edge-computing-mec" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mobile Edge Computing (MEC)
     </span>
   </a>
   
@@ -1386,29 +1373,35 @@
   
 
 
-  <h1>Specialized use cases</h1>
-
-<h2 id="its-station-to-its-station-communication"><abbr title="Intelligent Transport Systems">ITS</abbr> Station-to-<abbr title="Intelligent Transport Systems">ITS</abbr> Station Communication<a class="headerlink" href="#its-station-to-its-station-communication" title="Permanent link">&para;</a></h2>
-<p><abbr title="Intelligent Transport Systems">ITS</abbr> Stations, including Roadside Units (RSUs) and backend systems, communicate to exchange data such as Signal Phase and Timing (SPaT) data and Traveler Information Messages (TIM). These stations may use IEEE Std. 1609.2 and, if relevant, ETSI TS 103 097** certificates and formats. Secure communication between <abbr title="Intelligent Transport Systems">ITS</abbr> Stations ensures that only trusted entities can participate in data exchanges.</p>
-<h3 id="security-services-that-may-be-employed">Security Services That May Be Employed<a class="headerlink" href="#security-services-that-may-be-employed" title="Permanent link">&para;</a></h3>
+<h1 id="specialized-use-cases">Specialized Use Cases<a class="headerlink" href="#specialized-use-cases" title="Permanent link">&para;</a></h1>
+<p>Certain <abbr title="Intelligent Transport Systems">ITS</abbr> applications involve heightened cybersecurity risks due to their safety-critical nature, sensitivity of data, or exposure to external networks. This section highlights examples of such use cases and outlines associated risks and considerations for implementers.</p>
+<h2 id="cooperative-driving-automation-cda">Cooperative Driving Automation (CDA)<a class="headerlink" href="#cooperative-driving-automation-cda" title="Permanent link">&para;</a></h2>
+<p>Cooperative Driving Automation allows vehicles to coordinate actions such as lane merging, platooning, and emergency response through direct communication. These interactions are highly time-sensitive and safety-critical. Key risks:</p>
 <ul>
-<li><strong>ISO 21177 – Secure Session Establishment and Authentication</strong><br />
-  Ensures authentication and secure session management for <abbr title="Intelligent Transport Systems">ITS</abbr> data exchanges.</li>
+<li>Spoofed messages triggering incorrect maneuvers</li>
+<li>Unauthorized devices attempting to participate</li>
+<li>Injection of false trajectory or intent data</li>
 </ul>
-<h2 id="backend-infrastructure-to-rsu">Backend Infrastructure to RSU<a class="headerlink" href="#backend-infrastructure-to-rsu" title="Permanent link">&para;</a></h2>
-<p>Backend infrastructure components may be provisioned with <strong>X.509 certificates</strong>, which enable secure communication using protocols such as <strong>Transport Layer Security (TLS)</strong>.</p>
-<h2 id="inter-domain-interoperability">Inter-Domain Interoperability<a class="headerlink" href="#inter-domain-interoperability" title="Permanent link">&para;</a></h2>
-<p>Secure interoperability between <abbr title="Intelligent Transport Systems">ITS</abbr> domains is necessary to facilitate communication between different networks, security policies, and administrative domains.</p>
-<h2 id="use-cases">Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">&para;</a></h2>
+<h2 id="probe-data-collection">Probe Data Collection<a class="headerlink" href="#probe-data-collection" title="Permanent link">&para;</a></h2>
+<p>Probe data applications collect information such as vehicle speed, heading, or environmental conditions to support traffic analysis and planning. Key risks:</p>
 <ul>
-<li>
-<p><strong>Road Use Charging with IEEE 1609.2 and TLS</strong><br />
-  Road use charging systems may leverage IEEE 1609.2 certificates for authentication, combined with TLS for secure data transmission.  </p>
-</li>
-<li>
-<p><strong>Probe Data Collection</strong><br />
-  Secure probe data collection requires authentication, privacy-preserving mechanisms, and encryption to protect the integrity and confidentiality of collected vehicle data.</p>
-</li>
+<li>Unauthorized access to collected data</li>
+<li>Leakage of personally identifiable or vehicle-identifiable information</li>
+<li>Injection of fabricated probe reports</li>
+</ul>
+<h2 id="road-use-charging-ruc">Road Use Charging (RUC)<a class="headerlink" href="#road-use-charging-ruc" title="Permanent link">&para;</a></h2>
+<p>Road Use Charging systems rely on trusted reporting of mileage, location, or toll zone entry to calculate fees. Key risks:</p>
+<ul>
+<li>Manipulation of reported travel data to reduce fees</li>
+<li>Credential sharing or spoofing to mask vehicle identity</li>
+<li>Unauthorized software modification to disable location tracking</li>
+</ul>
+<h2 id="mobile-edge-computing-mec">Mobile Edge Computing (MEC)<a class="headerlink" href="#mobile-edge-computing-mec" title="Permanent link">&para;</a></h2>
+<p>MEC allows data processing closer to the field, such as at RSUs or in-vehicle systems, reducing latency for time-sensitive applications. Key risks:</p>
+<ul>
+<li>Unauthorized access to locally processed data</li>
+<li>Deployment of unvetted software at edge nodes</li>
+<li>Disruption of V2X applications through edge-layer compromise</li>
 </ul>
 
 
@@ -1430,7 +1423,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 2, 2025 21:11:47">February 2, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 14, 2025 13:03:22">April 14, 2025</span>
   </span>
 
     

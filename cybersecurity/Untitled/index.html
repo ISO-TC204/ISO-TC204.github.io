@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://isotc204.org/cybersecurity/layers-of-security/">
+        <link rel="canonical" href="https://isotc204.org/cybersecurity/Untitled/">
       
       
       
@@ -20,7 +20,7 @@
     
     
       
-        <title>Overview of ITS Security Architecture - ISO TC 204 Information</title>
+        <title>Untitled - ISO TC 204 Information</title>
       
     
     
@@ -63,11 +63,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#overview-of-its-security-architecture" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -100,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview of ITS Security Architecture
+              Untitled
             
           </span>
         </div>
@@ -1309,43 +1304,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#layers-of-its-security" class="md-nav__link">
-    <span class="md-ellipsis">
-      Layers of ITS Security
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-role-of-standards-in-its-security" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Role of Standards in ITS Security
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#infrastructures-supporting-its-security" class="md-nav__link">
-    <span class="md-ellipsis">
-      Infrastructures Supporting ITS Security
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1364,57 +1322,9 @@
   
 
 
-<h1 id="overview-of-its-security-architecture">Overview of <abbr title="Intelligent Transport Systems">ITS</abbr> Security Architecture<a class="headerlink" href="#overview-of-its-security-architecture" title="Permanent link">&para;</a></h1>
-<p><abbr title="Intelligent Transport Systems">ITS</abbr> security architecture is designed to protect the integrity, confidentiality, and availability of communications, data, and devices. An <abbr title="Intelligent Transport Systems">ITS</abbr> security architecture introduces multiple layers of security, incorporates global and regional standards, and relies on specialized infrastructures to enable secure and interoperable operations.</p>
-<hr />
-<h2 id="layers-of-its-security">Layers of <abbr title="Intelligent Transport Systems">ITS</abbr> Security<a class="headerlink" href="#layers-of-its-security" title="Permanent link">&para;</a></h2>
-<p>An <abbr title="Intelligent Transport Systems">ITS</abbr> security architecture is composed of several interrelated layers, each addressing specific security requirements:</p>
-<ol>
-<li>
-<p><strong>Device Security</strong><br />
-   Devices such as On-Board Units (OBUs) and Roadside Units (RSUs) enable communication within an <abbr title="Intelligent Transport Systems">ITS</abbr>. These devices require protection against tampering, malware, and unauthorized access to ensure their reliable operation. Techniques such as secure boot processes, firmware integrity checks, and hardware-based cryptographic modules are commonly used to achieve this. Standards such as ISO/SAE 21434 provide guidance that can be followed by OEMs and their supply chain to develop secure devices. </p>
-</li>
-<li>
-<p><strong>Communication Security</strong><br />
-   <abbr title="Intelligent Transport Systems">ITS</abbr> relies on Vehicle-to-Everything (V2X) communication to enable real-time data exchange between vehicles, infrastructure, and backend systems. Communication security ensures that data in transit is protected from interception, replay attacks, or tampering. Standards such as IEEE 1609.2 provide encryption, signing, and verification mechanisms tailored to the unique requirements of <abbr title="Intelligent Transport Systems">ITS</abbr>.</p>
-</li>
-<li>
-<p><strong>Backend System Security</strong><br />
-   Backend systems, including Traffic Management Centers (TMCs) and cloud-based platforms, store and process large volumes of <abbr title="Intelligent Transport Systems">ITS</abbr> data. Security measures such as access control, data encryption, and redundancy are critical to maintaining the availability and reliability of these systems.</p>
-</li>
-</ol>
-<hr />
-<h2 id="the-role-of-standards-in-its-security">The Role of Standards in <abbr title="Intelligent Transport Systems">ITS</abbr> Security<a class="headerlink" href="#the-role-of-standards-in-its-security" title="Permanent link">&para;</a></h2>
-<p>Global <abbr title="Intelligent Transport Systems">ITS</abbr> security standards define protocols, messaging and requirements for secure system design and operation. Key standards include:</p>
-<ul>
-<li><strong>IEEE 1609.2</strong>: Focused on securing V2X communications, this standard defines message authentication, integrity protection, and optional encryption while addressing anonymity requirements through pseudonym certificates.</li>
-<li><strong>X.509</strong>: A widely used certificate format for securing backend systems and traditional IT infrastructures. While not tailored for <abbr title="Intelligent Transport Systems">ITS</abbr>, X.509 is commonly used in backend communication where real-time constraints are less critical.</li>
-<li><strong>ISO 21177</strong>: Defines security requirements for cooperative <abbr title="Intelligent Transport Systems">ITS</abbr>, covering data integrity, confidentiality, and availability.</li>
-<li><strong>ISO/SAE 21434</strong>: Provides a framework for managing cybersecurity across the lifecycle of <abbr title="Intelligent Transport Systems">ITS</abbr> devices, particularly vehicles and their components.</li>
-</ul>
-<hr />
-<h2 id="infrastructures-supporting-its-security">Infrastructures Supporting <abbr title="Intelligent Transport Systems">ITS</abbr> Security<a class="headerlink" href="#infrastructures-supporting-its-security" title="Permanent link">&para;</a></h2>
-<p><abbr title="Intelligent Transport Systems">ITS</abbr> security architectures depend on specialized infrastructures to manage certificates, trust relationships, and secure communications. A critical infrastructure is the system that implements Public Key Infrastructure (PKI), using IEEE 1609.2 certificates. </p>
-<ol>
-<li>
-<p><strong>Cooperative <abbr title="Intelligent Transport Systems">ITS</abbr> Credential Management System (CCMS)</strong>  </p>
-</li>
-<li>
-<p><strong>Certificate Issuance</strong>: Issues digital certificates to vehicles, RSUs, and other <abbr title="Intelligent Transport Systems">ITS</abbr> devices to enable secure messaging.</p>
-</li>
-<li><strong>Pseudonym Certificates</strong>: Enhances privacy by allowing vehicles to use temporary, anonymized certificates during communication.</li>
-<li><strong>Certificate Revocation</strong>: Supports misbehavior detection and the removal of compromised entities from the ecosystem.</li>
-<li>
-<p><strong>Trust Management</strong>: Supports the ability to extend trust across jurisdictions using mechanisms such as the </p>
-</li>
-<li>
-<p><strong>Security Credential Management System (SCMS)</strong><br />
-   The SCMS is a public key infrastructure (PKI) similar to the CCMS, used operationally in the United States and Canada. It provides the following capabilities:</p>
-</li>
-<li><strong>Certificate Issuance</strong>: Issues digital certificates to vehicles, RSUs, and other <abbr title="Intelligent Transport Systems">ITS</abbr> devices to enable secure messaging.</li>
-<li><strong>Pseudonym Certificates</strong>: Enhances privacy by allowing vehicles to use temporary, anonymized certificates during communication.</li>
-<li><strong>Certificate Revocation</strong>: Supports misbehavior detection and the removal of compromised entities from the ecosystem.</li>
-</ol>
+  <h1>Untitled</h1>
+
+
 
 
 
@@ -1435,7 +1345,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 21, 2025 03:25:45">January 21, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 14, 2025 13:03:22">April 14, 2025</span>
   </span>
 
     
