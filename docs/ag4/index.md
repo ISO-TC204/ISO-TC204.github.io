@@ -1,8 +1,8 @@
-# Communications (ISO TC 204 WG 16)
+# Identifiers (ISO TC 204 AG 2)
 
 ## Domain of interest
 
-{% include "ag4/wg16doi.html" %}
+AG4 is responsible for coordinating the work among working groups, including the management of the scope of the TC and the domain of interest statements of the TC 204 working groups.
 
 ## News and highlights (optional) 
 
@@ -11,7 +11,7 @@
 ### Overview
 
 **Document:** [ISO Document number and status](index.md)
-**Title:** Intelligent transport systems — 
+**Title:** Intelligent transport systems —
 **Status:** 
 **Abstract:** 
 

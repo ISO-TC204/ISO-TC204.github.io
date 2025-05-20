@@ -16,4 +16,3 @@ The following acronyms are commonly used throughout this site.
 | TC | Technical Committee |
 | WG | Working Group |
 |  |  |
-

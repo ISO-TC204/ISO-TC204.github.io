@@ -2,6 +2,8 @@
 
 ## Domain of interest
 
+{% include "ag4/wg10doi.html" %}
+
 ## News and highlights (optional) 
 
 ## [Standard subject area]
