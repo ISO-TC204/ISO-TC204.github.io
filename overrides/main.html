@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% macro render_breadcrumbs(nav, page, ancestors=page.ancestors|list) %}
+  {% for nav_item in nav %}
+    {% if nav_item in ancestors or nav_item.is_active %}
+      <a href="{{ nav_item.url | url }}" style="color: var(--md-primary-fg-color); text-decoration: none;">{{ nav_item.title }}</a> &gt;
+      {% if nav_item.children %}
+        {{ render_breadcrumbs(nav_item.children, page, ancestors) }}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endmacro %}
+
+{% block content %}
+  {% if nav %}
+    <nav class="md-breadcrumb" aria-label="Breadcrumbs" style="margin: 1rem 0; font-size: 0.75rem; color: slategray;">
+      {{ render_breadcrumbs(nav, page) }}
+      <span>{{ page.title }}</span>
+    </nav>
+  {% endif %}
+  {{ super() }}
+{% endblock %}

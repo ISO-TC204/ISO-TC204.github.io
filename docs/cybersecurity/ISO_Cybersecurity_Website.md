@@ -210,7 +210,7 @@ The scale of ITS networks includes millions of vehicles, RSUs, and other devices
 
 Now that we've established what makes ITS cybersecurity unique, it's useful to introduce the key mechanisms that have been developed to meet those needs. These mechanisms include secure certificate formats tailored for mobile use, frameworks for distributing and managing credentials across millions of devices, and systems for detecting and responding to misbehavior in the network. While specific implementations vary by region—for example, between North America’s SCMS and Europe’s CCMS—the core building blocks share common goals and are aligned with international standards.
 
-The following section provides a high-level overview of these mechanisms, written for non-experts. More technical readers are encouraged to explore the [ITS Cybersecurity Mechanisms and Building Blocks](system-specific-security) section for deeper background. 
+The following section provides a high-level overview of these mechanisms, written for non-experts. More technical readers are encouraged to explore the [ITS Cybersecurity Mechanisms and Building Blocks](system-specific-security.md) section for deeper background.
 
 ### Credential Management Systems
 
@@ -518,7 +518,7 @@ Once validated, confirmed misbehavior can trigger a range of responses, includin
 
 # Security Standards and Their Roles
 
-Intelligent Transportation Systems (ITS) operate as a system-of-systems linking vehicles, roadside infrastructure, central management systems, and users. Securing this complex system requires a layered architecture that addresses threats and manages trust. This is enabled through global and regional cybersecurity standards published by ISO, IEEE, ETSI, SAE, and NIST. These standards define common requirements for protecting data integrity, authenticity, privacy, and system resiliency in an interoperable manner. They are organized here according to key layers of the [ITS security architecture:](its-security-architectures) 
+Intelligent Transportation Systems (ITS) operate as a system-of-systems linking vehicles, roadside infrastructure, central management systems, and users. Securing this complex system requires a layered architecture that addresses threats and manages trust. This is enabled through global and regional cybersecurity standards published by ISO, IEEE, ETSI, SAE, and NIST. These standards define common requirements for protecting data integrity, authenticity, privacy, and system resiliency in an interoperable manner. They are organized here according to key layers of the [ITS security architecture:](its-security-architectures.md)
 
 - Physical Layer
 - Network/Transport Layer

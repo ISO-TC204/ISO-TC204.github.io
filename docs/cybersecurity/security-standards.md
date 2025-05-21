@@ -1,6 +1,6 @@
 # Security Standards and Their Roles
 
-Intelligent Transportation Systems (ITS) operate as a system-of-systems linking vehicles, roadside infrastructure, central management systems, and users. Securing this complex system requires a layered architecture that addresses threats and manages trust. This is enabled through global and regional cybersecurity standards published by ISO, IEEE, ETSI, SAE, and NIST. These standards define common requirements for protecting data integrity, authenticity, privacy, and system resiliency in an interoperable manner. They are organized here according to key layers of the [ITS security architecture:](its-security-architectures) 
+Intelligent Transportation Systems (ITS) operate as a system-of-systems linking vehicles, roadside infrastructure, central management systems, and users. Securing this complex system requires a layered architecture that addresses threats and manages trust. This is enabled through global and regional cybersecurity standards published by ISO, IEEE, ETSI, SAE, and NIST. These standards define common requirements for protecting data integrity, authenticity, privacy, and system resiliency in an interoperable manner. They are organized here according to key layers of the [ITS security architecture:](its-security-architectures.md)
 
 - Physical Layer
 - Network/Transport Layer
