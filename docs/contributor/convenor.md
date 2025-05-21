@@ -3,8 +3,8 @@
 
 > [!Important]
 > 🚧 Under construction 🚧
- 
-### Naming Convention for TC204 Deliverables 
+
+### Naming Convention for TC204 Deliverables
 
 Our document titles may seem a little daunting, however they typically use the multi-level naming structure:
 
@@ -12,7 +12,7 @@ Our document titles may seem a little daunting, however they typically use the m
 
 !!! example
     ISO/TS 14813-1:2015(en) Intelligent transport systems — Reference model architecture(s) for the ITS sector - Part 1: ITS service domains, service groups and services
- 
+
 |Name Component      |Example|Description|
 |:------------------:|:-----:|:-----------------------------------------------------|
 |Publishing SDO(s)   |ISO    |The Standards Development Organisation(s) that will publish the deliverable      |
@@ -123,7 +123,6 @@ Many resolutions within ISO/TC 204 are proposed by WG convenors in order to laun
     |---------------------|--------------------|
     | `<document number>` | `<document title>` |
 
-
 ## Other resolutions
 
 !!! example "Establish a liaison officer"
@@ -147,4 +146,3 @@ Many resolutions within ISO/TC 204 are proposed by WG convenors in order to laun
     | Individual        | NSB             |Group             |
     |-------------------|-----------------|------------------|
     | `<convenor name>` | `<member body>` | WG `<WG number>` |
-

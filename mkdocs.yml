@@ -7,7 +7,21 @@ nav:
     - Overview: overview.md
     - About us: about.md
     - Intro to ITS: intro.md
-    - Cybersecurity: cybersecurity/index.md
+    - Cybersecurity: 
+      - Overview: cybersecurity/index.md
+      - Introduction: cybersecurity/dummys-guide.md
+      - Regional considerations: cybersecurity/Regional-considerations.md
+      - Security Architectires: cybersecurity/its-security-architectures.md
+      - Security standards: cybersecurity/security-standards.md
+      - Interoperability Strategies: cybersecurity/trust-bridges.md
+      - Cybersecurity mechanisms: cybersecurity/system-specific-security.md
+      - Stakeholder guidance: 
+        - Overview: cybersecurity/stakeholder-guidance.md
+        - Implementers: cybersecurity/implementers.md
+        - Decision makers: cybersecurity/decision-makers.md
+        - Standards developers: cybersecurity/standards-developers.md
+      - Cybersecurity governance: cybersecurity/security-policies.md
+      - Specialized use cases: cybersecurity/specialized-use-cases.md
     - TC 204 planning: planning.md
     - Contact us: contact.md
     - Resources: resources.md
@@ -22,7 +36,8 @@ nav:
     - Communications (WG 16): wg16/index.md
     - Cooperative systems (WG 18): wg18/index.md
     - Coordination (AG 4): ag4/index.md
-    - Driving automation and safety (WG 16): wg16/index.md
+    - Cybersecurity (AHG 2): ahg2/index.md
+    - Driving automation and safety (WG 14): wg14/index.md
     - Fee and toll collection (WG 5): wg5/index.md
     - Fleet management (WG 7): wg7/index.md
     - Geographic data (WG 3): wg3/index.md
@@ -36,15 +51,17 @@ nav:
     - Transport mgmt and control (WG 9): wg9/index.md
     - Traveller information (WG 10): wg10/index.md
   - Contributions:
+    - Overview: contributor/index.md
     - Commenter guidelines: contributor/commenter.md
     - Editor guidelines: contributor/editor.md
     - Convenor guidelines: contributor/convenor.md
   - News: news.md
   - FAQs: faq.md
-site_url: https://isotc204.org
+site_url: https://iso-tc204.github.io
 copyright: CC BY 4.0
 theme:
   name: material
+  custom_dir: overrides
   features:
     - content.code.copy
     - content.tooltips
