@@ -1,3 +1,7 @@
+<!-- about.md -->
+
+![Draft for review only](assets/img/draft_for_review.svg)
+
 # About ISO/TC204 Intelligent Transport Systems
 
 ## Overview
@@ -19,22 +23,24 @@ TC204 and our work exists within a much broader operating context requiring coll
 
 ![TC204 Liaisons](assets/img/liaisons.png){.figure}
 
-*TC 204 Liaisons*{:.figcaption}
- 
+_TC 204 Liaisons_ {:.figcaption}
+
 ### TC204 Committee Structure
+
 TC204 delivers its [official work programme](https://www.iso.org/contents/data/committee/05/47/54706/x/catalogue/p/0/u/1/w/0/d/0) through a broad range of groups consisting of:
 
-* **WG** - Working Groups within TC204
-* **AG** - Advisory Groups (typically special projects / initiatives)
-* **JWG** - Joint Working Groups to formally collaborate with experts outside of TC204 (such as other ISO/TCs or other SDOs). 
+- **AG** - Advisory Groups (typically special projects / initiatives)
+- **WG** - Working Groups within TC204
+- **JWG** - Joint Working Groups to formally collaborate with experts outside of TC204 (such as other ISO/TCs or other SDOs).
 
-Our structure is shown below together with our Participating and Observing members. All of [TC204’s groups and convenors](https://www.iso.org/committee/54706.html#structure) may be approached via the [TC204 Secretariat.](https://www.iso.org/committee/54706.html#secretariat)
+Our structure is shown below together with our Participating and Observing members. All of [TC204’s groups and convenors](https://www.iso.org/en/contents/data/committee/05/47/54706.html#structure) may be approached via the [TC204 Secretariat.](https://www.iso.org/en/contents/data/committee/05/47/54706.html#secretariat)
 
 ![TC204 Structure](assets/img/TC204Structure.png){.figure}
 
-*TC 204 Structure*{.figcaption}
+_TC 204 Structure_{.figcaption}
 
 ### Scope of TC204 Working Groups
+
 TC204's current active groups and their purposes are outlined below.
 
 - [AG 2](ag2/index.md): Identifiers
