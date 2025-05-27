@@ -1,11 +1,13 @@
 <!-- resources.md -->
 
+![Draft for review only](assets/img/draft_for_review.svg)
+
 This page identifies numerous key resources for the ITS industry. You can click on any item to show additional details.
 
 ??? info "ISO"
-    [ISO/TC 204](https://www.iso.org/committee/54706.html) is a technical committee of the [Organization of International Standardization (ISO)](https://www.iso.org/home.html) Documents produced by ISO/TC 204 can be [purchased in several ways](#purchase-packages-of-standards).
+    [ISO/TC 204](https://www.iso.org/en/contents/data/committee/05/47/54706.html) is a technical committee of the [Organization of International Standardization (ISO)](https://www.iso.org/home.html). Documents produced by ISO/TC 204 can be [purchased in several ways](https://iso-tc204.github.io/resources/#purchase-packages-of-standards).
 
-    Other ISO Technical Committees that may be of more interest to you:
+    Other ISO Technical Committees that may be of interest to you:
 
     ??? info "Road Vehicles"
         [ISO/TC 22 Road vehicles](https://www.iso.org/committee/46706.html) is responsible for the
@@ -30,7 +32,7 @@ This page identifies numerous key resources for the ITS industry. You can click 
 
 ??? info "ISO Tools"
     ??? info "ISO Online Browsing Platform"
-        The [ISO Online Browsing Platform](https://www.iso.org/obp/ui/en/) provides 
+        The [ISO Online Browsing Platform](https://www.iso.org/obp/ui/en/) provides
         a summary of the most up to date content in ISO standards, graphical symbols, codes or terms and definitions. Preview content before you buy, search within documents and easily navigate between standards
 
     ??? info "ISO Deliverables"
@@ -65,10 +67,13 @@ This page identifies numerous key resources for the ITS industry. You can click 
     Administered by ISO/TC 204
     ??? info "City data model"
         [ISO/IEC JTC1 Information Technology](https://jtc1info.org/)
-        Joint ISO/TC 204 - ISO/IEC JTC1 [WG11: City data model transportation planning](https://www.iso.org/committee/45020.html)
+        Joint ISO/TC 204 - ISO/IEC JTC1 [WG11: City data model transportation planning](https://jtc1info.org/sd-2-history/jtc1-working-groups/wg-11/)
 
     Administered by others
-    ??? info "GIS-ITS" 
+    ??? info "Governance" 
+        ISO/TC 22/JWG 2 - Joint ISO/TC 22 - ISO/TC 204: Governance
+
+    ??? info "GIS-ITS"
         Joint ISO/TC 211 - ISO/TC 204 WG: GIS-ITS
 
 ??? info "Reference Architectures for ITS"
@@ -79,12 +84,11 @@ This page identifies numerous key resources for the ITS industry. You can click 
 
 ??? info "Other Useful Resources"
     ??? info "EU-ICIP"
-        [EU-ICIP GUIDE to Intelligent Transport Systems Standards](https://www.mobilityits.eu/)
-        provides a rich source of information about ITS Communications and Information Protocols together with foundational concepts such as “About ITS”, “ITS Architecture” and definitions of commonly-used terminology. The site is developed and maintained by CEN/TC278.
+        The [EU-ICIP GUIDE to Intelligent Transport Systems Standards](https://www.mobilityits.eu/) provides a rich source of information about ITS Communications and Information Protocols together with foundational concepts such as “About ITS”, “ITS Architecture” and definitions of commonly-used terminology. The site is developed and maintained by [CEN/TC278 Intelligent Transport Systems](https://www.cencenelec.eu/areas-of-work/cen-sectors/transport-and-packaging-cen/intelligent-transport-systems/).
 
     ??? info "EN ISO 14816 Register"
         The [EN ISO 14816 Register](https://www.itsstandards.eu/registries/)
-        is the official information page of the Central Registration Authority for **_EN ISO 14816 Road transport and traffic telematics - Automatic vehicle and equipment identification - Numbering and data structures_**.
+        is the official information page of the Central Registration Authority for **_EN ISO 14816 Road transport and traffic telematics - Automatic vehicle and equipment identification - Numbering and data structures_**. The site is developed and maintained by [CEN/TC278 Intelligent Transport Systems](https://www.cencenelec.eu/areas-of-work/cen-sectors/transport-and-packaging-cen/intelligent-transport-systems/).
 
         This website serves two purposes:
 
