@@ -8,7 +8,7 @@ To understand how different responsibilities and policy frameworks interact, it'
 
 This layered model shows how global interoperability frameworks provide the foundation for secure cross-border ITS operations. These are supported by global standards developed by international organizations like ISO, ETSI, IEEE, SAE, and IETF. Finally, national and local policies tailor these standards for regional needs and legal contexts. Each stakeholder group contributes to the development or implementation of one or more of these layers.
 
-### [**1. Decision-Makers**](decision-makers.md)
+### [**1. Policy Makers**](decision-makers.md)
 
 Who they are: Government officials, regulatory agencies, and executives shaping ITS strategies and prioritizing security investment and procurements.
 
