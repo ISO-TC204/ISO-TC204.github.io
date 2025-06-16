@@ -36,3 +36,16 @@ img.figure {
   display: block;             /* Ensure image is block-level */
   margin: 0 auto;             /* Center image */
 }
+
+.md-breadcrumb {
+  margin: 1rem 0;
+  font-size: 0.75rem;
+  color: slategray;
+}
+.md-breadcrumb a {
+  color: var(--md-primary-fg-color);
+  text-decoration: none;
+}
+.md-breadcrumb a:hover {
+  text-decoration: underline;
+}

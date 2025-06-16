@@ -1,4 +1,4 @@
-# A Beginner's Guide to Intelligent Transportation System (ITS) Cybersecurity 
+# A Beginner's Guide to Intelligent Transportation System (ITS) Cybersecurity
 
 ## An Introduction to ITS and ITS Cybersecurity
 
@@ -28,7 +28,7 @@ Modern ITS environments face a broad and evolving threat landscape. Communicatio
 
 ![ITS Ecosystem Threats](./images/its_threats.jpg)
 
-Unlike traditional internet-based systems, ITS cybersecurity must function in highly mobile, latency-sensitive environments where anonymity of participants is often important. Vehicles must trust messages from other vehicles or roadside systems they have never encountered before—often with no direct internet connection or central authority available at the time of interaction. As a result, ITS requires specialized cybersecurity tools and protocols that go beyond traditional cybersecurity tools such as Transport Layer Security (TLS) and X.509 certificates. The sections that follow introduce the unique characteristics of ITS cybersecurity, explain why general-purpose cybersecurity tools are insufficient, and describe the standards and trust frameworks that support secure ITS deployments. 
+Unlike traditional internet-based systems, ITS cybersecurity must function in highly mobile, latency-sensitive environments where anonymity of participants is often important. Vehicles must trust messages from other vehicles or roadside systems they have never encountered before—often with no direct internet connection or central authority available at the time of interaction. As a result, ITS requires specialized cybersecurity tools and protocols that go beyond traditional cybersecurity tools such as Transport Layer Security (TLS) and X.509 certificates. The sections that follow introduce the unique characteristics of ITS cybersecurity, explain why general-purpose cybersecurity tools are insufficient, and describe the standards and trust frameworks that support secure ITS deployments.
 
 ## Why ITS Cybersecurity is Unique
 
@@ -41,7 +41,7 @@ ITS relies on the use of Public Key Infrastructure (PKI) which provides proven b
 <table>
   <tr>
     <td style="width: 170px; vertical-align: middle; text-align: center;">
-      <img src="./images/icon_low_latency.jpg" alt="Low Latency Icon" height="150">
+      <img src="../images/icon_low_latency.jpg" alt="Low Latency Icon" height="150">
     </td>
     <td>
       <strong>Real-Time, Safety-Critical Operations</strong><br>
@@ -50,15 +50,12 @@ ITS relies on the use of Public Key Infrastructure (PKI) which provides proven b
   </tr>
 </table>
 
-
-
-
 ## 2. Mobility Requirements
 
 <table>
   <tr>
     <td style="width: 170px; vertical-align: middle; text-align: center;">
-      <img src="./images/icon_mobile.jpg" alt="Mobility Icon" height="150">
+      <img src="../images/icon_mobile.jpg" alt="Mobility Icon" height="150">
     </td>
     <td>
       <strong>Mobility Requirements</strong><br>
@@ -72,7 +69,7 @@ ITS relies on the use of Public Key Infrastructure (PKI) which provides proven b
 <table>
   <tr>
     <td style="width: 170px; vertical-align: middle; text-align: center;">
-      <img src="./images/icon_privacy.jpg" alt="Privacy Icon" height="150">
+      <img src="../images/icon_privacy.jpg" alt="Privacy Icon" height="150">
     </td>
     <td>
       <strong>Anonymity Requirements</strong><br>
@@ -87,22 +84,21 @@ ITS relies on the use of Public Key Infrastructure (PKI) which provides proven b
 <table>
   <tr>
     <td style="width: 170px; vertical-align: middle; text-align: center;">
-      <img src="./images/icon_multijurisdictional.jpg" alt="Multi Jurisdictional Icon" height="150">
+      <img src="../images/icon_multijurisdictional.jpg" alt="Multi Jurisdictional Icon" height="150">
     </td>
     <td>
       <strong>Multi-Entity Trust Management</strong><br>
-ITS environments involve a wide range of stakeholders, including vehicles from multiple Original Equipment Manufacturers (OEMs), infrastructure owned by various jurisdictions, and multiple communication providers. Establishing trust across these entities requires specialized structures, such as the Certificate Trust List (CTL) in North America or the European Certificate Trust List (ECTL). These mechanisms enable the extension of trust to differing policy domains and support the dynamic operation of vehicles with infrastructures owned and managed by differing entities. Generic systems like X.509 lack these built-in cross-trust mechanisms and require substantial planning and processes for trust extension, making them less suited for managing complex ITS trust requirements. 
+ITS environments involve a wide range of stakeholders, including vehicles from multiple Original Equipment Manufacturers (OEMs), infrastructure owned by various jurisdictions, and multiple communication providers. Establishing trust across these entities requires specialized structures, such as the Certificate Trust List (CTL) in North America or the European Certificate Trust List (ECTL). These mechanisms enable the extension of trust to differing policy domains and support the dynamic operation of vehicles with infrastructures owned and managed by differing entities. Generic systems like X.509 lack these built-in cross-trust mechanisms and require substantial planning and processes for trust extension, making them less suited for managing complex ITS trust requirements.
     </td>
   </tr>
 </table>
-
 
 ## 5. Finer-Grained Authorization Control
 
 <table>
   <tr>
     <td style="width: 170px; vertical-align: middle; text-align: center;">
-      <img src="./images/icon_appsandroles.jpg" alt="Applications and Roles Icon" height="150">
+      <img src="../images/icon_appsandroles.jpg" alt="Applications and Roles Icon" height="150">
     </td>
     <td>
       <strong>Fine-Grained Authorization Control</strong><br>
@@ -111,14 +107,12 @@ ITS applications often require more granular access control than X.509 structure
   </tr>
 </table>
 
-
-
 ## 6. Continuous Adaptation to Evolving Threats in Dynamic Environment
 
 <table>
   <tr>
     <td style="width: 170px; vertical-align: middle; text-align: center;">
-      <img src="./images/icon_safety_critical.jpg" alt="Safety Critical Icon" height="150">
+      <img src="../images/icon_safety_critical.jpg" alt="Safety Critical Icon" height="150">
     </td>
     <td>
       <strong>Dynamic Threats in Highly Mobile Environment</strong><br>
@@ -134,7 +128,7 @@ ITS applications often require more granular access control than X.509 structure
 <table>
   <tr>
     <td style="width: 170px; vertical-align: middle; text-align: center;">
-      <img src="./images/icon_massive_scale.jpg" alt="Scale Icon" height="150">
+      <img src="../images/icon_massive_scale.jpg" alt="Scale Icon" height="150">
     </td>
     <td>
       <strong> Psuedonimity at Scale</strong><br>
@@ -143,14 +137,11 @@ The scalability and certificate management challenge in V2X ITS comes from the e
   </tr>
 </table>
 
-
-
-
 ## ITS Cybersecurity Building Blocks
 
 Now that we've established what makes ITS cybersecurity unique, it's useful to introduce the key mechanisms that have been developed to meet those needs. These mechanisms include secure certificate formats tailored for mobile use, frameworks for distributing and managing credentials across millions of devices, and systems for detecting and responding to misbehavior in the network. While specific implementations vary by region—for example, between North America’s SCMS and Europe’s CCMS—the core building blocks share common goals and are aligned with international standards.
 
-The following section provides a high-level overview of these mechanisms, written for non-experts. More technical readers are encouraged to explore the [ITS Cybersecurity Mechanisms and Building Blocks](system-specific-security) section for deeper background. 
+The following section provides a high-level overview of these mechanisms, written for non-experts. More technical readers are encouraged to explore the [ITS Cybersecurity Mechanisms and Building Blocks](system-specific-security.md) section for deeper background.
 
 ### Credential Management Systems
 
@@ -161,11 +152,13 @@ A Credential Management System (SCMS or CCMS) is a specialized type of public ke
 These systems include processes for certificate issuance, renewal, revocation, and trust distribution. They also support cross-jurisdictional trust, using structures like Certificate Trust Lists (CTLs) or European Certificate Trust Lists (ECTLs) to allow vehicles and devices from different organizations or countries to interoperate securely.
 
 ### ITS Certificate Standards
-ITS uses certificate formats specifically tailored for the real-time, decentralized, and mobile nature of V2X communications. Two major standards are used globally: IEEE 1609.2, which is primarily deployed in North America, and ETSI TS 103 097, which is used in Europe. While developed in parallel, both standards share key features that address the specific challenges of ITS. They support privacy-preserving pseudonymity, allowing vehicles to authenticate messages without revealing long-term identities. They also include geolocation constraints and flexible permission structures that enable fine-grained control over what actions a device is authorized to perform. The image below depicts the fields of an IEEE Std. 1609.2 format certificate. 
+
+ITS uses certificate formats specifically tailored for the real-time, decentralized, and mobile nature of V2X communications. Two major standards are used globally: IEEE 1609.2, which is primarily deployed in North America, and ETSI TS 103 097, which is used in Europe. While developed in parallel, both standards share key features that address the specific challenges of ITS. They support privacy-preserving pseudonymity, allowing vehicles to authenticate messages without revealing long-term identities. They also include geolocation constraints and flexible permission structures that enable fine-grained control over what actions a device is authorized to perform. 
 
 <img src="Images\1609.2Format.jpg" alt="1609.2Format" style="zoom:67%;" />
 
 ### Entitlements
+
 ITS certificates can carry embedded entitlements—policy assertions that define what a device is authorized to do in the context of specific ITS applications. These entitlements are expressed using certificate fields such as the Provider Service Identifier (PSID) and Service-Specific Permissions (SSP) in IEEE deployments, or the ITS Application Identifier (ITS-AID) and corresponding permissions in ETSI-based systems. The image below shows the appPermissions field of an IEEE 1609.2 certificate. AppPermissions carries a sequence of authorized PSID and SSP entries, representing the applications and roles that the device possessing the certificate is authorized to participate in. 
 
 ![1609.2AppPermissions](Images\1609.2AppPermissions.jpg)
@@ -177,13 +170,14 @@ For example, a certificate may include an entitlement that authorizes a vehicle 
 By supporting fine-grained entitlements, ITS certificates enable strong access control mechanisms that align with specific use cases, user roles, or organizational policies.
 
 ### Misbehavior Detection
+
 Even in a well-secured system, trusted devices can malfunction or behave maliciously. In ITS, where safety depends on the accuracy and integrity of real-time data, it is important to continuously evaluate whether participants are acting in accordance with expected behaviors. Misbehavior detection systems are designed to identify faulty or deceptive behavior, for example  inconsistent vehicle position updates, spoofed GPS signals, or invalid safety alerts, and initiate a response that preserves trust in the network. These systems operate at both the edge and the backend. Local detection capabilities onboard vehicles or infrastructure can flag suspicious messages, while backend authorities analyze reported incidents, corroborate evidence, and determine whether a device's credentials should be suspended or revoked. The figure below illustrates a simplified view of how misbehavior is detected, validated, and responded to in a credential-based ITS environment.
 
 ![MisbehaviorLifecycle](./images/MisbehaviorLifecycle.jpg)
 
 ---
 
-# Comparing the Internet Cybersecurity Stack and the ITS Cybersecurity Stack 
+## Internet vs. ITS Cybersecurity
 
 Digital security architectures are typically built as layered stacks, with each layer addressing different types of threats and trust requirements. The traditional internet stack, built around protocols such as TLS and certificate formats like X.509, is well-suited for securing static web services, enterprise systems, and client-server communications. ITS involves mobile actors, ephemeral trust relationships, and real-time decision-making in safety-critical contexts. These differences have led to the development of an ITS-specific cybersecurity stack, designed for decentralized communication, scalability, privacy, and performance in dynamic environments. 
 
@@ -207,4 +201,3 @@ The following comparison outlines where each stack is typically applied. It is i
 | Will the deployment integrate with traditional IT infrastructure (e.g., TMC servers, cloud APIs)? | ✔                  | ✘                                         |
 
 X.509 certificates are still a valid and widely used option for securing communications in backend systems, including data exchanges between traffic management centers, cloud platforms, and enterprise services. However, for on-road communication, safety-critical applications, and mobility-centric environments, X.509 lacks the necessary support for short-lived credentials, anonymity, decentralized trust, and application-specific permissions.
-

@@ -1,6 +1,6 @@
 # Security Standards and Guidance Documents
 
-ITS systems of systems rely on a layered cybersecurity architecture to ensure safe and trusted operation across vehicles, infrastructure, and backend systems. Each layer of this architecture is supported by internationally recognized standards that help protect against cyber threats and maintain system integrity, confidentiality, availability, and trust. The standards shown below are organized according to the key layers of the ITS security architecture:
+Intelligent Transportation Systems (ITS) rely on a layered cybersecurity architecture to ensure safe and trusted operation across vehicles, roadside infrastructure, central management systems, and users. Each layer of this architecture is supported by internationally recognized standards that help protect against cyber threats and maintain system integrity, confidentiality, availability, and trust. The standards shown below are organized according to the key layers of the ITS security architecture:
 
 - Physical Layer
 - Access Layer

@@ -4,7 +4,7 @@ Welcome to the ISO Guide to cybersecurity for Intelligent Transportation Systems
 
 <img src="./images/site_map.jpg" alt="Site Map" style="zoom:67%;" />
 
-This site includes: 
+This site includes:
 
 - Guidance on cybersecurity standards relevant to ITS, such as [ISO 21177](https://www.iso.org/standard/87225.html), [IEEE 1609.2](https://standards.ieee.org/ieee/1609.2/10258/), [ETSI TS 102 940](https://www.etsi.org/deliver/etsi_ts/102900_102999/102940/02.01.01_60/ts_102940v020101p.pdf), and [ETSI TS 103 097](https://www.etsi.org/deliver/etsi_ts/103000_103099/103097/02.01.01_60/ts_103097v020101p.pdf)
 - Regional cybersecurity systems such as the [Security Credential Management System](https://www.scmsmanager.org/) in North America and the Cooperative ITS Trust Model (C-ITS) in Europe. 
@@ -17,6 +17,7 @@ This site is intended for public agencies, standards bodies, system integrators,
 ---
 
 ## Start Here: [Introduction to ITS Cybersecurity – A Beginner's Guide](dummys-guide.md)
+
 Begin with this introductory guide to understand why ITS-specific security mechanisms—such as IEEE 1609.2—are designed to meet the unique requirements of vehicular networks, and why conventional internet security frameworks like X.509 may not be sufficient.
 
 ## Regional Considerations: [Understand regional differences in regulation and approach](Regional-considerations.md) 
@@ -28,6 +29,7 @@ While ITS cybersecurity standards aim for global interoperability, implementatio
 ## Key Topics in ITS Cybersecurity
 
 ### 1. [ITS Security Architectures](its-security-architectures.md)
+
 ITS cybersecurity architectures define how security protections are applied across devices, vehicles, communications networks, and backend systems. These architectures provide a structured approach to managing digital trust, securing data exchanges, and protecting infrastructure components. They incorporate regional models, such as the SCMS used in North America and the C-ITS Trust Model adopted in Europe, each of which applies different governance structures and cryptographic processes. Standards such as IEEE 1609.2, ISO 21177, and ETSI TS 103 097 form the foundation for securing V2X messaging and managing certificate-based trust. This section outlines how these components and standards are integrated to enable secure and interoperable ITS deployments.  A key focus is the use of public key infrastructures to support secure messaging. 
 
 ### 2. [Security Standards and Their Roles](security-standards.md)
