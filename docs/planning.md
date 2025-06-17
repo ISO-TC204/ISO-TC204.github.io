@@ -1,5 +1,7 @@
+<!-- planning.md -->
+
 # ISO TC 204 Planning
 
 🚧 Page under construction 🚧
 
-Links to strategic business plan, gap analyses, etc.
+Add links to strategic business plan, gap analyses, etc as they become available.
