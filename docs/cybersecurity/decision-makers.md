@@ -5,7 +5,7 @@ Policy Makers such as transportation authorities, regulatory agencies, and publi
 ## Strategic Priorities for Policy Makers
 
 ### Adopt a Risk-Based Policy Framework
-Cybersecurity policy should be driven by a clear understanding of risk: vehicles, roadside infrastructure, and backend systems are all potential targets for cyberattacks that could result in harm. A risk-based approach enables policies to address the most critical threats, such as spoofed messages, denial-of-service attacks on traffic management centers, or the misuse of digital certificates. Policy Makers should ensure that risk assessments are performed regularly, international standards are adopted with a focus on interoperability, and tailored mitigation strategies are put in place to safeguard their specific ITS deployments. 
+Cybersecurity policy should be driven by a clear understanding of risk: vehicles, roadside infrastructure communication frameworks, and backend systems are all potential targets for cyberattacks that could result in harm. A risk-based approach enables policies to address the most critical threats, such as spoofed messages, denial-of-service attacks on traffic management centers, or the misuse of digital certificates. Policy Makers should ensure that risk assessments are performed regularly, international standards are adopted with a focus on interoperability, and tailored mitigation strategies are put in place to safeguard their specific ITS deployments. 
 
 #### **Regional Considerations**
 
@@ -20,7 +20,7 @@ Cybersecurity policy should be driven by a clear understanding of risk: vehicles
 ---
 
 ## Balancing Security with Usability and Operational Continuity
-Cybersecurity measures should have limited impact on the usability, efficiency, and reliability of transportation systems. This is often difficult and requires balancing security with usability. Key challenges include: 
+Cybersecurity measures should have limited impact on the usability, efficiency, and reliability of transportation systems. This is a complex, multifaceted challenge that requires requires balancing security with usability. Key challenges include: 
 
 - Security controls that slow down V2X message exchanges may introduce unacceptable latency issues.
 - Security processes must balance driver privacy.
