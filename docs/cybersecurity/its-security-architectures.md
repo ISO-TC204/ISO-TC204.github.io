@@ -1,12 +1,12 @@
 # ITS Security Architectures
 
-This section describes a multi-layered ITS cybersecurity architecture aligned to the ITS-S reference model. Each layer supports specific security capabilities that address risks across applications, communication, and device infrastructure. The architecture below illustrates how these layers combine to support secure and trusted ITS operations.
+This section describes a multi-layered ITS cybersecurity architecture aligned to the ITS-S reference model as described by ISO 21217. Each layer supports specific security capabilities that address risks across applications, communication, and device infrastructure. The architecture below illustrates how these layers combine to support secure and trusted ITS operations.
 
 ![Architectural Layers](./images/architecture_layers.jpg)
 
 ## Application Layer
 
-The Application Layer is responsible for enabling defined transportation functions, such as signal priority, lane coordination or incident warning. Applications are standardized, certificate-bound services identified by globally or regionally assigned IDs (AAID or PSID) implemented according to strict message structures and access policies. Applications exchange information with other ITS components using standardized message types from standards like SAE J2735 and ETSI EN 302 637-x, and are identified and authorized via Provider Service Identifiers (PSIDs) and Service-Specific Permissions (SSPs). For example, a transit vehicle’s Onboard Unit (OBU) may have a certificate that includes the PSID for the Signal Request Message (SRM) application and an SSP indicating it is authorized to request transit signal priority at intersections. Permissions should be enforced by both transmitting and receiving ITS-S components. Applications should only initiate communication for services they are explicitly authorized for, and roadside infrastructure (e.g., RSUs) must validate both PSID and SSP on incoming messages.
+The Application Layer is responsible for enabling defined transportation functions, such as signal priority, lane coordination or incident warning. Applications are standardized, certificate-bound services identified by globally or regionally assigned IDs (AAID or PSID) implemented according to strict message structures and access policies. Applications exchange information with other ITS components using standardized message types from standards like SAE J2735 and ETSI EN 302 637-x, and are identified and authorized via Provider Service Identifiers (PSIDs)  /ITS-AIDs and Service-Specific Permissions (SSPs). For example, a transit vehicle’s Onboard Unit (OBU) may have a certificate that includes the PSID for the Signal Request Message (SRM) application and an SSP indicating it is authorized to request transit signal priority at intersections. Permissions should be enforced by both transmitting and receiving ITS-S components. Applications should only initiate communication for services they are explicitly authorized for, and roadside infrastructure (e.g., RSUs) must validate both PSID and SSP on incoming messages.
 
 In addition to certificate-based permissions, many ITS applications operate under local or regional policies configured by ITS Station Operators (SO) that define where, when, and by whom an application may be used. These rules complement certificate-bound permissions and are defined through deployment policy frameworks implemented by jurisdictions, infrastructure owners, or certificate authorities. Polices may be enforced at multiple points in a system and may be implemented through mechanisms such as geofencing, SSP-encoding, infrastructure logic, and credential life-cycle controls. These mechanisms ensure that applications are not only cryptographically authorized, but also contextually constrained to operate within their intended scope.
 
@@ -67,7 +67,7 @@ Standards such as IEEE 1609.3 define network and transport protocols for Wireles
 
 All V2X messages must be digitally signed to ensure authenticity and integrity. Secure message headers defined by IEEE 1609.2.1 and ETSI TS 103 097 include fields for certificate linkage, timestamps, and replay protection. Devices that cannot validate message signatures must discard the message and may report verification failures to backend systems for further analysis.
 
-While most V2X safety messages are signed but not encrypted, some sensitive data exchanges, such as traveler information or backend configuration files do require encryption. In these cases, protocols such as TLS 1.3 are used to secure communications and ensure confidentiality. 
+While most V2X safety messages are signed but not encrypted, some sensitive data exchanges, such as traveler personalized information or backend configuration files do require encryption. In these cases, protocols such as TLS 1.3 are used to secure communications and ensure confidentiality. 
 
 Pseudonymity protections are also enforced at this layer to prevent persistent tracking of vehicles and infrastructure. Rather than transmitting static identities, devices are issued short-term, unlinkable pseudonym certificates that are rotated regularly. This prevents passive observers from correlating message patterns or locations to reconstruct vehicle trajectories, profile driver behavior, or infer organizational operations. Without effective pseudonym rotation, even properly signed messages could expose operational privacy risks.
 
@@ -198,7 +198,6 @@ The following objectives describe the intended cybersecurity outcomes for this l
 - Prevent unauthorized physical access to devices and infrastructure
 - Protect cryptographic materials (e.g., private keys, firmware signatures) from extraction or tampering
 - Ensure authenticity and integrity of firmware and hardware configurations
-- Deter and detect tampering or sabotage
 - Support traceability and accountability through access logging and auditability
 - Provide secure boundaries to ensure devices operate only in authorized physical and network contexts (e.g., school bus OBU must only be installed in a school bus)
 

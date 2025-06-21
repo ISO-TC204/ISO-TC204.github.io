@@ -39,12 +39,12 @@ ITS Cybersecurity responsibilities:
 Who they are: Vehicle OEMs, infrastructure operators, service providers, and ITS vendors.
 
 ITS Cybersecurity Requirements: 
-- Securing ITS components such as OBUs and RSUs, and ensuring compatability with the security of the backend infrastructure, operations centers, and field devices. Interests also include how to incorporate new data sources from outside of transportation and thus leveraging the emerging IoT opportunities.  
+- Securing ITS components such as OBUs and RSUs, and ensuring compatibility with the security of the backend infrastructure, operations centers, and field devices. Interests also include how to incorporate new data sources from outside of transportation and thus leveraging the emerging IoT opportunities.  
 
 - Deploying certificates and keys based on IEEE 1609.2 or X.509 formats  
 - Implementing countermeasures for spoofing, DoS, and unauthorized access  
 - Ensuring conformance with deployment policies and trust frameworks
-- Leverage ARC-IT to identify applicable security classifications, select relevant NIST-aligned controls, and reference standardized security profiles tailored to ITS subsystems and communications interfaces.
+- Leveraging standards and other widely available material that describes aspects of the ITS architecture (such as ARC-IT) to identify identify applicable security classifications, select relevant NIST-aligned controls, and reference standardized security profiles tailored to ITS subsystems and communications interfaces.
 
 [Click here for more details](implementers.md)
 
