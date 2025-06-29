@@ -20,7 +20,7 @@ Confidentiality ensures that data is protected from unauthorized access, preserv
 
 ### ITS Cybersecurity
 
-ITS cybersecurity ensures the integrity, confidentiality, and availability of data exchanged across an ITS system of systems. It protects against cyber threats that could disrupt traffic management, compromise vehicle behavior, or manipulate digital traffic controls. This includes securing communication between vehicles and infrastructure, ensuring that only trusted devices participate in ITS applications, and protecting sensitive data from misuse or exposure. In the context of V2X, although confidentiality is not always required, data integrity and availability remain critical requirements at all times. This is due to the latency-sensitive nature of V2X messages such as Basic Safety Messages (BSMs), where encryption processing and messaging overhead may reduce the ability to receive information in a timely manner. 
+ITS cybersecurity ensures the integrity, confidentiality, and availability of data exchanged across an ITS system. It protects against cyber threats that could disrupt traffic management, compromise vehicle behavior, or manipulate digital traffic controls. This includes securing communication between vehicles and infrastructure, ensuring that only trusted devices participate in ITS applications, and protecting sensitive data from misuse or exposure. In the context of V2X, although confidentiality is not always required, data integrity and availability remain critical requirements at all times. This is due to the latency-sensitive nature of V2X messages such as Basic Safety Messages (BSMs), where encryption processing and messaging overhead may reduce the ability to receive information in a timely manner. 
 
 <img src="Images\vehicle_v2x.jpg" alt="vehicle_v2x" style="zoom:67%;" />
 
@@ -47,10 +47,11 @@ ITS relies on the use of Public Key Infrastructure (PKI) which provides proven b
     </td>
     <td>
       <strong>Real-Time, Safety-Critical Operations</strong><br>
-      ITS involve real-time interactions that directly affect safety. For example, vehicle-to-Road Side Unit (RSU) communication requires minimal latency so that vehicles can immediately process messages. Any delays that would be introduced through traditional internet security protocols, which are often optimized for less time-sensitive applications, could lead to safety hazards. ITS-specific mechanisms, such as IEEE Std. 1609.2 certificates, are designed to prioritize low-latency communication while maintaining security, making them better suited to the unique considerations associated with ITS real-time operations. 
+      ITS involve real-time interactions that directly affect safety. For example, vehicle-to-roadside unit (RSU) communication requires minimal latency so that vehicles can immediately process messages. Any delays that would be introduced through traditional internet security protocols, which are often optimized for less time-sensitive applications, could lead to safety hazards. ITS-specific mechanisms, such as IEEE Std. 1609.2 certificates, are designed to prioritize low-latency communication while maintaining security, making them better suited to the unique considerations associated with ITS real-time operations. 
     </td>
   </tr>
 </table>
+
 
 
 ## 2. Mobility Requirements
@@ -99,7 +100,7 @@ ITS environments involve a wide range of stakeholders, including vehicles from m
 </table>
 
 
-## 5. Finer-Grained Authorization Control
+## 5. Embedded Permissions within Certificates
 
 <table>
   <tr>
@@ -107,8 +108,8 @@ ITS environments involve a wide range of stakeholders, including vehicles from m
       <img src="./images/icon_appsandroles.jpg" alt="Applications and Roles Icon" height="150">
     </td>
     <td>
-      <strong>Fine-Grained Authorization Control</strong><br>
-ITS applications often require more granular access control than traditional network security alone can provide. Simply allowing a device to connect to an ITS-aware channel does not grant it any specific rights or privileges beyond network access. Instead, each participant must present valid cryptographic credentials that specify exactly what actions they are authorized to perform.  For example, IEEE Std. 1609.2 certificates use Provider Service Identifiers (PSID) and Service Specific Permissions (SSP) to define which applications a device may use and what roles it may play within the system. This ensures that only authorized vehicles can request signal priority or send safety-critical messages, even if many devices share the same network infrastructure.
+      <strong>Embedded Permissions within Certificates</strong><br>
+Traditional network security controls who can join a system and provides fine-grained access through user accounts and roles. In ITS, however, devices often share the same network infrastructure, so connecting alone does not grant any special rights. Instead, each device must present a cryptographic certificate that embeds explicit permissions, defining exactly which applications and roles it is allowed to use. For example, IEEE Std. 1609.2 certificates contain Intelligent Transport System Application Identifiers (ITS-AID), Provider Service Identifiers (PSID), and Service Specific Permissions (SSP) that control which messages a participant may send and what actions it may request. This ensures that only properly authorized vehicles can request signal priority or transmit safety-critical data, even on a shared network.
 
 
 
@@ -158,7 +159,7 @@ A Credential Management System (SCMS or CCMS) is a specialized type of public ke
 
 ![Public Key Infrastructure](./images/pki.jpg)
 
-PKI's include processes for certificate issuance, renewal, revocation, and trust distribution. They also support cross-jurisdictional trust, using structures like Certificate Trust Lists (CTLs) or European Certificate Trust Lists (ECTLs) to allow vehicles and devices from different organizations or countries to interoperate securely.
+The credential management system shown here includes key roles that work together to provide trusted V2X communication. Electors approve or revoke Root Certificate Authorities (CAs) and maintain the Certificate Trust List (CTL). The PKI Manager oversees policy enforcement and trust anchor updates. The Root CA is a top-level trust anchor, while Subordinate CAs handle certificate issuance for specific purposes or regions. Registration Authorities (RAs) process enrollment requests from end entities like OBUs and RSUs. The Distribution Center (DC) provides an API for devices to download current trust lists and revocation lists. The Misbehavior Authority (MA) collects reports about suspected misbehavior and coordinates with the PKI Manager to revoke trust when necessary. This structure ensures vehicles and infrastructure can authenticate each other’s messages while preserving privacy through short-lived certificates.
 
 ### ITS Certificate Standards
 
@@ -168,9 +169,9 @@ ITS uses certificate formats specifically tailored for the real-time, decentrali
 
 ### Entitlements
 
-ITS certificates can carry embedded entitlements—policy assertions that define what a device is authorized to do in the context of specific ITS applications. These entitlements are expressed using certificate fields such as the Provider Service Identifier (PSID) and Service-Specific Permissions (SSP) in IEEE deployments, or the ITS Application Identifier (ITS-AID) and corresponding permissions in ETSI-based systems. For example, in an IEEE 1609.2 certificate, AppPermissions carries a sequence of authorized PSID and SSP entries, representing the applications and roles that the device possessing the certificate is authorized to participate in. 
+ITS certificates can carry embedded entitlements—policy assertions that define what a device is authorized to do in the context of specific ITS applications. These entitlements are expressed using certificate fields such as the ITS-AID/PSID and Service-Specific Permissions (SSP) in IEEE deployments, or the ITS Application Identifier (ITS-AID) and corresponding permissions in ETSI-based systems. For example, in an IEEE 1609.2 certificate, AppPermissions carries a sequence of authorized ITS-AID/PSID and SSP entries, representing the applications and roles that the device possessing the certificate is authorized to participate in. 
 
-For example, a certificate may include an entitlement that authorizes a vehicle to request signal priority, while restricting that capability from others. A sending device, for example an OBU transmits a message as a signed secure protocol data unit (SPDU), and the receiving device validates message authenticity, followed by a check against the PSID and SSP permissions asserted in the message. These permissions are checked against the sending devices' certificates, using the appPermissions field. 
+For example, a certificate may include an entitlement that authorizes a vehicle to request signal priority, while restricting that capability from others. A sending device, for example an OBU transmits a message as a signed secure protocol data unit (SPDU), and the receiving device validates message authenticity, followed by a check against the ITS-AID/PSID and SSP permissions asserted in the message. These permissions are checked against the sending devices' certificates, using the appPermissions field. 
 
 <img src="Images\appPermissionMessaging.jpg" alt="appPermissionMessaging" style="zoom:67%;" />
 
@@ -181,6 +182,8 @@ By supporting fine-grained entitlements, ITS certificates enable strong access c
 Even in a well-secured system, trusted devices can malfunction or behave maliciously. In ITS, where safety depends on the accuracy and integrity of real-time data, it is important to continuously evaluate whether participants are acting in accordance with expected behaviors. Misbehavior detection systems are designed to identify faulty or deceptive behavior; for example  inconsistent vehicle position updates, spoofed GPS signals, or invalid safety alerts, and initiate a response that preserves trust in the network. These systems operate at both the edge and the backend. Local detection capabilities onboard vehicles or infrastructure can flag suspicious messages, while backend authorities analyze reported incidents, corroborate evidence, and determine whether a device's credentials should be suspended or revoked. The figure below illustrates a simplified view of how misbehavior is detected, validated, and responded to in a credential-based ITS environment.
 
 ![MisbehaviorLifecycle](./images/MisbehaviorLifecycle.jpg)
+
+This diagram shows how misbehavior reports (MBRs) flow through an ITS security environment. An OBU detects an anomaly in a received Basic Safety Message (BSM) and generates an MBR. This report can be sent directly to the Public Key Infrastructure (PKI) or passed through a RSU. RSUs themselves may detect misbehavior and send reports directly to a Traffic Management Center (TMC) or the PKI. The PKI analyzes reports, and decides whether revocation or suspension is necessary, then update revocation lists or takes other action as necessary. 
 
 ---
 

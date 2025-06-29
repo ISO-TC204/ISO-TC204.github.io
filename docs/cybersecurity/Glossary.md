@@ -1,4 +1,4 @@
-ITS Cybersecurity Glossary
+# ITS Cybersecurity Glossary
 
 ### Authorization Authority (AA)
 
@@ -31,6 +31,10 @@ A long-term certificate proving that a device is approved to request operational
 ### Hardware Security Module (HSM)
 
 A dedicated hardware component used to securely generate, store, and use cryptographic keys; provides strong protection against key theft or tampering.
+
+### Intelligent Transport System Application Identifier (ITS-AID)
+
+Used to uniquely identify ITS application objects. 
 
 ### Trusted Platform Module (TPM)
 
