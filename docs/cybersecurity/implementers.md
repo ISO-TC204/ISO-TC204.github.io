@@ -1,61 +1,58 @@
-# **Implementer Guidance** 
+As an ITS implementer, you are challenged to deploy secure, resilient systems that operate in compliance with standardized trust models. That means installing, configuring, and maintaining devices and software that support multiple security services, including cryptographic validation, secure networking, and reliable logging. This page provides recommended actions on that can assist with installing and maintaining a secure ITS deployment.
 
-ITS implementers include engineers, system integrators, and field technicians responsible for deploying and maintaining secure infrastructure components. This page provides practical guidance for ensuring that key cybersecurity requirements are met during deployment and operation.  
+## Provision Devices with Valid Credentials
 
-## Configure and Maintain a Secure Environment
+Every device must have a digital identity. Start by enrolling RSUs, OBUs, signal controllers, and back-office systems with the chosen PKI (SCMS or CCMS). Devices must store private keys securely and use certificates issued by trusted Certificate Authorities.
 
-Devices such as OBUs and RSUs must be correctly set up before they can securely communicate within a certificate-based trust system. This setup includes installing issued certificates, enabling secure message protocols, and protecting private keys using secure storage.
+- Use the approved enrollment and certificate request workflows from your PKI provider.
+- Confirm that each device includes secure hardware for private key protection (e.g., HSM or secure element).
+- Validate that all issued certificates include correct identifiers, permissions (e.g., PSID/SSP), and expiration periods.
+- Configure devices and services to reject untrusted or expired certificates.
 
-### Recommended Actions
-- Install valid certificates issued by the appropriate PKI authority (e.g., SCMS, CCMS) using approved enrollment processes.
+## Configure Secure Communications
 
-- Enable secure communication protocols, such as IEEE 1609.2 for signed V2X messages, and TLS for infrastructure and back-office connections.
-- Apply secure defaults to networked devices: disable unused interfaces, require mutual authentication, and configure firewall rules.
-- Support certificate lifecycle processes, including revocation and renewal, in accordance with policy from the PKI provider.
+Configure communication security across the ITS. 
 
-Tools like the [Mobile ITS Security Application](https://github.com/usdot-fhwa-OPS/ITS-Secure-Prototype-Backend) and the [ITS Cybersecurity Framework Profile](https://rosap.ntl.bts.gov/view/dot/72769) provide deployment checklists and configuration templates.
+- Enable IEEE 1609.2 signing on V2X components.
+- Enforce TLS or DTLS for backend and management interfaces.
+- Disable unused ports and services. Only expose the interfaces needed for operation.
+- Require mutual authentication where applicable (e.g., RSU ↔ TMC).
 
----
+## Support Certificate Lifecycle Operations
 
-## Establish Processes to Procure Secure Equipment
+Devices must be able to replace expiring certificates and process revocation information.
 
- A secure ITS environment begins with what you acquire. Before deploying any hardware, software, or service, implement a robust secure procurement strategy.  Integrate cybersecurity considerations into the procurement process from the very beginning, not as an afterthought. Clearly specify cybersecurity requirements for ITS components and services in your Requests for Proposals (RFPs) and contracts. Rigorously assess potential vendors based on their cybersecurity capabilities, transparency into their supply chain, security certifications, and incident response maturity. This reduces the risk of deploying ITS components with known vulnerabilities or insecure defaults and minimizes supply chain risks that could compromise infrastructure, or data. 
+- Automate certificate renewal processes to avoid lapses in coverage.
+- Install and establish processes for regular updates of Certificate Trust Lists (CTLs). 
+- Configure devices to download and process Certificate Revocation Lists (CRLs). 
+- Confirm device behavior when encountering revoked or unknown certificates.
 
-## Deploy Hardened Devices
+## Deploy Only Hardened Devices
 
-ITS hardware must include safeguards against both physical and logical attacks. This includes protection of cryptographic keys and enforcement of secure startup and update processes.
+Never deploy a device with insecure firmware, open debug ports, or default credentials. Verify that hardware and software meet modern cybersecurity expectations.
 
-### Recommended Actions
+- Require secure boot with cryptographic firmware validation.
+- Enforce cryptographically signed software and OTA updates.
+- Lock down administrative interfaces. Use role-based access control (RBAC) and secure authentication.
+- Log all access and configuration changes, and store logs in a tamper-evident way.
 
-- Integrate the ITS service operations into the organization's ISMS (information security management system) that may be based on ISO27001 or another baseline or standard.
-- se tamper-resistant hardware: OBUs and RSUs should include secure elements or hardware security modules (HSMs) for key protection.
-- Support secure boot: Devices must verify firmware signatures during startup.
-- Enforce signed software updates: Over-the-air (OTA) updates should include cryptographic verification and rollback protection.
-- Apply role-based access control (RBAC): Limit administrative interfaces to authenticated and authorized users only.
-- Enable system logging and monitoring: Support detection of unauthorized changes or unexpected behavior.
+## Embed Cybersecurity in Procurement
 
-Security requirements can be guided by Protection Profiles such as the (EU) [C2C-CC V2X HSM PP](https://www.car-2-car.org/fileadmin/documents/Basic_System_Profile/Release_1.3.0/C2CCC_PP_2056_HSM.pdf) or national regulatory frameworks such as UNECE R155.
+Don’t wait until installation to care about security. Ensure every ITS component you acquire includes cybersecurity functionality, documentation, and vendor support.
 
+- Include cybersecurity requirements in all RFIs and RFPs.
+- Evaluate vendor supply chains for transparency and security certifications.
+- Require proof of secure software development and incident response readiness.
+- Validate that vendor equipment complies with standards such as IEEE 1609.2 or ETSI TS 103 097
 
-## Secure Software and Firmware Updates  
+## Maintain a Field-Ready Update Process
 
-Unpatched systems are a common attack vector. Implementers should verify that every device supports a secure update mechanism and that procedures are in place for scheduled updates.
+Outdated software introduces unacceptable risk. Make sure your operational teams can deploy secure updates regularly.
 
-### Recommended Actions
-- Verify authenticity of all updates before installation (e.g., digital signature checks).
-- Apply secure OTA updates using approved channels and tools.
-- Restrict update privileges to trusted administrators using authentication and access control.
+- Require all updates to be digitally signed and verified before installation.
+- Maintain tooling to deploy updates over-the-air 
+- Track update histories across all devices. Maintain audit logs for review.
 
+## Use Available Tools
 
----
-
-## **Learn More**  
-- [IEEE 1609.2](https://standards.ieee.org/standard/1609_2-2016.html)  
-
-- [ETSI TS 102 941](https://www.etsi.org/deliver/etsi_ts/102900_102999/102941/)  
-
-- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)  
-
-- [Mobile ITS Security Application](https://github.com/usdot-fhwa-OPS/ITS-Secure-Prototype-Backend)
-
-- [ITS Cybersecurity Framework Profile](https://rosap.ntl.bts.gov/view/dot/72769).  
+Tools like the [Mobile ITS Security Application](https://github.com/usdot-fhwa-OPS/ITS-Secure-Prototype-Backend) and the [ITS Cybersecurity Framework Profile](https://rosap.ntl.bts.gov/view/dot/72769) offer pre-built deployment workflows, configuration checklists, and compliance mappings to guide secure deployments.

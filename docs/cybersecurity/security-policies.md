@@ -1,15 +1,15 @@
-# Security Governance
+# Security Policies
 
-This section explains the role of PKI certificate policy in the context of ITS security governance. Trust within a PKI is fundamentally established and maintained through policy documents that include Certificate Policy (CP) and Certificate Practices Statements (CPS). These documents define the rules, responsibilities, and requirements for all stakeholders involved in PKI operations. CP and CPS documents detail processes and policies associated with lifecycle management activities such as certificate enrollment, management, and revocation processes, along with mechanisms to ensure cross-jurisdictional interoperability and adherence to privacy regulations. 
+ITS operators must define and enforce cybersecurity policies that govern how devices, credentials, software, and security operations are managed. These policies ensure that protections are implemented consistently across stakeholders, architectures, and deployment environments. The sections below define policy expectations aligned with core ITS security functions.
 
-Most PKI systems perform similar functions: trust management, entitlement enrollment, certificate lifecycle management, and misbehavior response. Each PKI Root Certificate Authority is required to define and enforce specific policies that affect the security and management of OBUs, RSUs and other equipment within an ITS environment. These policies are far reaching and impact enrollment processes, device technical security controls, certificate management processes, incident handling processes and overall audit and evaluation processes associated with both the PKI system and the devices being provisioned certificates by the PKI system.  The graphic below illustrates the many policy considerations that must be documented for secure certificate management. 
+## Trust Management 
 
-![pkiPolicies](Images\pkiPolicies.jpg)
+Operators must establish how Root Certificate Authorities (RCAs) are authorized, audited, and removed. Define approval criteria, governance procedures, and enforcement mechanisms to manage trust relationships over time. Trust model design varies by region:
 
-## Trust Management
-Trust anchor management defines how Root Certificate Authorities  are authorized and monitored. This process includes approving new trust anchors, auditing existing ones, and distributing updated trust lists to relying parties.  A  distributed trust model may involve Electors who are trusted entitles that vote to approve or revoke RCAs. RCAs then certify intermediate authorities (e.g., Enrollment or Pseudonym CAs). 
+- SCMS (typical in North America): a quorum of Electors manages the CTL. 
+- CCMS (typical in Europe): a central Certificate Policy Authority (CPA) defines trust rules and governs the ECTL. 
 
-In the European model, a central policy authority defines certificate policies and oversees Root CA conformance. A designated TLM maintains the trust list, which is distributed to participating entities. Root CA inclusion or removal is based on defined policy and audit compliance. Example roles that may play a part in the overall governance for trust anchor management may include: 
+The table below describes some of the key roles related to Trust Management. 
 
 | Example Role | Role Description                                             |
 | ------------ | ------------------------------------------------------------ |
@@ -19,41 +19,74 @@ In the European model, a central policy authority defines certificate policies a
 | CPOC         | Acts a the technical interface to a TLM, validates certificate submissions and ensures compliance with operational policies. |
 | ECTL         | Provides the encoded and signed electronic trust list used by relying parties to verify which Root Certificate Authorities are trusted at a given time. |
 
-### SCMS Trust Management
+An ITS's Trust Management policies should specify: 
 
-In the SCMS model, trust anchor management is handled by a distributed group of entities known as Electors. Electors collectively maintain the CTL, which identifies the Root CAs trusted by the system. Changes to the CTL, such as adding or removing a Root CA require approval through an Elector voting process. A quorum of Electors must digitally sign the CTL update before it is accepted by relying components. This mechanism ensures that no single authority can unilaterally alter the trust anchor set.
+- Evaluation criteria for new Root CAs (e.g., audits, conformance testing).
+- Procedures for removing compromised or non-compliant CAs.
+- Methods for distributing updated CTLs/ECTLs to field devices.
+- Methods for versioning CTLs/ECTLs on field devices. 
+- Requirements that ITS devices must reject unsigned or unrecognized trust anchors.
 
-### CCMS Trust Management
+## Certificate Policies (CP) and Certificate Practice Statements (CPS)
 
-In the CCMS model, trust anchor management is coordinated by a centralized governance structure. The CPA defines certificate policies and evaluates Root CAs for inclusion in the ECTL. Following a positive audit or policy evaluation, the CPA transmits its endorsement to the C-POC, which acts as the technical liaison. The C-POC validates submitted Root CA certificates and forwards them to the TLM, a designated entity responsible for maintaining and distributing the signed ECTL. Updates to the ECTL are based exclusively on CPA directives and are digitally signed to ensure authenticity. Devices use the signed ECTL to determine which Root CAs are trusted for secure communication.
+Every PKI must be governed by a Certificate Policy (CP) that defines acceptable certificate uses, validation rules, and interoperability expectations. Certificate Practice Statements (CPS) from PKI operators must align with these policies and outline the implementation details of:
 
-## Entitlement Enrollment
+- Enrollment processes (e.g., validation, RA functions).
+- Operational certificate issuance (e.g., constraints, PSID/SSP inclusion).
+- Revocation mechanisms (e.g., CRL use, expiration policies).
 
-Entitlement enrollment refers to the policy-governed process of assigning specific permissions to end entities. These permissions define what V2X services a device is authorized to access and what actions it may perform. Common mechanisms for expressing entitlements include the use of PSID and SSP.  Governance frameworks define how these entitlements are granted and validated. 
+Audits and compliance checks ensure CPS adherence and allow agencies to verify that PKI participants meet security and policy obligations. Certificate lifecycle requirements are defined in these documents.  A strong lifecycle policy ensures that certificates are only issued to eligible devices, are used for authorized roles, and can be revoked if necessary.
 
-### Examples - SCMS Entitlement Enrollment 
+In an SCMS, devices request an Enrollment Certificate, validated by the Registration Authority (RA) and issued by the Enrollment Certificate Authority (ECA). Operational certificates (e.g., pseudonym certs) are requested using entitlements like PSIDs/SSPs and issued by the Authorization Authority. Revocation is managed through CRLs. 
 
-In the SCMS model, entitlement enrollment begins with identifying the type and intended function of the device (e.g., safety messaging for an OBU). The system assigns appropriate PSIDs and SSPs in accordance with defined policy. These values are included in the Certificate Signing Request (CSR), which is validated by the Registration Authority (RA) prior to certificate issuance. Entitlements are not managed directly by certificate authorities. They are governed by operational policies that define authorized roles and service access.
+In a CCMS, devices obtain long-lived Enrollment Authorization (EA) certificates from the Enrollment Authority. Short-lived Authorization Tickets (ATs) are requested from the Authorization Authority and used for day-to-day signing. The short lifetime of the certificates negates the need for revocation processes. 
 
-### Example: CCMS Entitlements
+A PKI's CP and CPS Documents should specify:
 
-In the CCMS model, entitlement information is reviewed and enforced by subordinate CAs operating under centralized public/ private governance model under the responsibility of the EC. The CPA that defines entitlement policy and ensures consistency across jurisdictions. 
+- Eligibility criteria for certificate enrollment.
+- Validation rules for certificate requests.
+- Certificate expiration schedules.
+- Revocation workflows and enforcement.
 
-## Certificate Lifecycle
-The certificate lifecycle defines processes through which certificates are issued, renewed, and revoked.  Enrollment establishes initial device trust , followed by the issuance of role-specific operational certificates. Governance frameworks must define eligibility criteria and certificate lifecycle requirements. 
+## Entitlement Management
 
-#### Example - SCMS Certificate Lifecyle
+Entitlement policies define what services a device is allowed to access, expressed in terms of PSIDs, SSPs, or ITS-AIDs. In an SCMS, PSID/SSP values are assigned based on device roles and validated during CSR submission. The RA ensures entitlements comply with operational policies. In a CCMS, entitlements are coordinated by the CPA and enforced by subordinate CAs to ensure consistency. 
 
-- Enrollment: Devices are provisioned with an Enrollment Certificate , which authorizes them to participate in SCMS-managed services. A CSR is generated and validated by the Registration Authority (RA). The Enrollment Certificate Authority (ECA) issues the certificate, which serves as a bootstrap credential for requesting role-specific certificates. 
+Entitlement policies should specify: 
 
-- Issuance: Operational certificates (e.g., pseudonym certificates) are issued based on defined policy. Devices submit requests containing their assigned PSID/SSP entitlements. The issuing CA validates these requests and issues the corresponding certificates based on an approved CP. 
+- Who is authorized to assign entitlements (e.g., registration authority, policy authority).
+- Acceptable combinations of service permissions.
+- Requirements for auditing of entitlements privileging processing during issuance. 
 
-- Revocation: Revocation policies support the removal of certificates due to misbehavior, compromise, or expiration. Pseudonym certificate revocation is managed through CRLs. Root CA revocations require Elector approval and result in CTL updates. 
+## Secure Software and Firmware Policy
 
-#### Example - CCMS Certificate Lifecycle
+Software is a frequent target for attack. Policies must dictate how software and firmware are developed, signed, distributed, and verified before and during use.
 
-- Enrollment: ITS stations obtain an Enrollment Authorization (EA) certificate, which grants permission to request operational certificates. This enrollment process is managed by the Enrollment Authority and typically involves a one-time provisioning with long-lived credentials tied to the station’s identity and roles.
+Secure Software and Firmware policies should include: 
 
-- Issuance: Operational certificates, including Authorization Tickets (equivalent to pseudonym certificates), are requested from the Authorization Authority (AA). These requests are policy-bound and may include service-specific identifiers. The AA issues short-lived certificates used for day-to-day V2X communications.
-- Revocation: The CCMS model does not use Certificate Revocation Lists (CRLs) for ITS stations. Instead, certificates are designed with short validity periods and expire naturally. Removal from the trust framework is handled through expiration and non-renewal, rather than active revocation mechanisms.
+- Require ITS devices to verify firmware integrity at boot using trusted signatures.
+- Mandate code signing for any distributed firmware updates, using cryptographic identities tied to trusted developers.
+- Define who can issue updates, how those updates are verified, and how rollback or recovery is handled.
+- Require procedures to respond to known vulnerabilities in software components, including patch timelines and risk assessments.
 
+
+
+## Incident Response and Misbehavior Reporting Policy
+
+Security incidents must be detected, reported, and mitigated. Policies define the roles and responsibilities during a security incident and provide the structure for auditing and recovery.
+
+Policies Related to Incident Response should include: 
+
+- What constitutes a reportable anomaly (e.g., invalid messages, location spoofing, traffic flooding).
+- The need to use standardized message formats (e.g., SCMS MBR ASN.1) and reporting workflows.
+- How misbehavior reports are validated and who can take action (e.g., revoke certificates).
+- How cybersecurity incidents are escalated and shared across jurisdictions. 
+
+## Audit, Evaluation, and Oversight
+
+A strong governance framework should include roles for continuous evaluation and auditing of all entities. 
+
+Policies Related to Audit, Evaluation and Oversight should include:  
+
+- What audit data must be logged (e.g., certificate usage, trust list updates, firmware installs).
+- The need for periodic review of PKI authority adherence to published CP and CPS documentation.
