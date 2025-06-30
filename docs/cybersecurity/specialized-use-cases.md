@@ -22,7 +22,7 @@ Probe data applications collect information such as vehicle speed, heading, or e
 
 ## Road Use Charging (RUC)
 
-Road Use Charging systems rely on trusted reporting of mileage, location, or toll zone entry to calculate fees. Key risks:
+Road Use Charging systems rely on trusted reporting of mileage, location, or toll zone entry to calculate fees. RUC systems track mileage or toll zone entry to calculate user fees. Accuracy and fairness depend on trusted location reporting. Key risks:
 
 - Manipulation of reported travel data to reduce fees
 - Credential sharing or spoofing to mask vehicle identity
@@ -38,3 +38,10 @@ MEC allows data processing closer to the field, such as at RSUs or in-vehicle sy
 - Deployment of unvetted software at edge nodes
 - Disruption of V2X applications through edge-layer compromise
 
+## Cooperative Awareness Message (CAM) 
+
+Cooperative Awareness Messages are used by vehicles and roadside units to broadcast information such as position, speed, and heading at frequent intervals. This basic safety message helps surrounding road users build situational awareness and react appropriately. Key risks:
+
+- Manipulation of CAM content to hide or fake a vehicle’s presence
+- Unauthorized transmission of CAMs by rogue devices
+- Privacy concerns if CAMs are linked to a permanent vehicle identity

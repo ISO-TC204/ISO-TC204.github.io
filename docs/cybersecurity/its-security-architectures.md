@@ -1,207 +1,145 @@
-# ITS Security Architectures
+# ITS Security Architecture
 
-This section describes a multi-layered ITS cybersecurity architecture aligned to the ITS-S reference model as described by ISO 21217. Each layer supports specific security capabilities that address risks across applications, communication, and device infrastructure. The architecture below illustrates how these layers combine to support secure and trusted ITS operations.
+## The Purpose of an ITS Cybersecurity Architecture
+
+ITS environments are highly distributed and composed of independently managed systems that must collaborate in real time across jurisdictional and policy boundaries. This reference ITS cybersecurity architecture is layered into groupings that map to stakeholder roles, and a set of high level cybersecurity requirements. After reviewing a layer's requirements, navigate to [cybersecurity controls](its-cybersecurity-controls) for guidance on specific implementation recommendations and [standards](security-standards) for pointers to the relevant standards that can be used to implement those controls. Each layer in this reference cybersecurity architecture identifies a set of high level requirements that stakeholders should consider implementing within their ITS deployment. 
+
+## ITS as a System of Systems
+
+ITS should be treated as a system of systems (SoS). Many devices and services will likely be developed, operated, and maintained independently, often within different jurisdictions. This decentralization introduces specific cybersecurity challenges. Expect each device or service to follow its own software lifecycle, potentially rely on distinct certificate authorities, and operate under separate governance and compliance models. To achieve secure interoperability, focus not only on securing each individual system, but also on managing trust relationships and aligning policies across the broader environment.
+
+An ITS cybersecurity architecture should be designed to support flexible trust models, account for asynchronous software and certificate lifecycles, and clearly define how security responsibilities are distributed. Keep in mind that network access alone does not imply trust. Instead, enforce explicit permissions, validate credentials, and apply security policies to ensure each device is authorized to perform its intended functions securely.
+
+## Core Security Principles for an ITS
+
+Use the following principles to guide the development of a resilient, scalable, and standards-aligned ITS architecture
+
+**Defense in Depth**: An ITS must be secured at multiple layers. Relying on a single type of control, such as perimeter firewalls or certificate validation alone, is insufficient. Layered protections ensure that failures or compromises in one area do not expose the entire system.
+
+**Minimum Trust by Default**:  ITS participants should not be granted default privileges solely by virtue of connecting to the network. Instead, authorization is explicitly granted through mechanisms like certificate-based permissions, policy-driven entitlements, and controlled onboarding processes.
+
+**Federated Trust Management**: Because ITS involves many independently managed systems, trust must be managed across organizational and jurisdictional boundaries. This is achieved through coordinated certificate policies, cross-certification mechanisms, and service entitlements that define what certificates are accepted and under what conditions.
+
+**Scalability and Flexibility**:  The architecture must scale to accommodate millions of devices and evolving services. It should be modular, standards-aligned, and capable of integrating with new applications, certificate authorities, or regional deployments without requiring a full redesign.
+
+**Anonymity Protection**:  Anonymity and privacy are important in ITS communications, particularly for users and vehicles transmitting location or user data. Architectures should support mechanisms such as pseudonym certificates, regular certificate rotation, and data minimization techniques. 
+
+**Resilience and Recovery**:  The architecture must be resilient to both accidental failures and malicious attacks. It should support detection of misbehavior, revocation of compromised certificates, and defined processes for auditing PKI systems. 
+
+## Roles and Responsibilities in the ITS Cybersecurity Ecosystem
+
+ITS cybersecurity relies on the coordinated actions of diverse stakeholders, each responsible for securing a portion of the broader system. A clear understanding of these roles ensures accountability, facilitates coordination, and supports end-to-end trust and resilience.
+
+**Standards Development Organizations (SDOs)**: Organizations such as ISO, IEEE, and ETSI define the technical frameworks and specifications that guide secure communication, certificate formats, permissions models, and interoperability. Their work enables regional and global consistency while allowing for tailored implementation.
+
+**Certificate Management Authorities**: PKI Providers of systems such as the SCMS and CCMS manage the lifecycle of digital certificates. Their responsibilities include issuing, renewing, and revoking credentials, maintaining CTL'S, and enforcing policy constraints.
+
+**Infrastructure Owners and Operators**: Public agencies, departments of transportation, and infrastructure providers are responsible for securing roadside units, traffic controllers, and other field equipment. This includes enforcing hardware protections, managing software updates, and coordinating with certificate authorities to onboard or revoke devices as needed.
+
+**Vehicle Manufacturers and OEMs**: Automakers and equipment vendors play a key role in integrating security capabilities within OBUs. They ensure secure certificate storage, implement local misbehavior detection logic, and align with applicable standards and trust frameworks.
+
+**Application and Service Providers**: Organizations that provide V2X-enabled applications or services, such as navigation, traffic signal priority, or fleet management must validate their services against authorization policies, obtain appropriate credentials, and ensure responsible data use and protection.
+
+**Cybersecurity Oversight and Policy Bodies**: Governance authorities, including national cybersecurity agencies and regional coordinating groups, develop cybersecurity policies, perform audits, and establish incident response processes. These bodies help ensure that security implementations align with risk management goals and regulatory expectations.
+
+**End Users and Deployers**: Those deploying and maintaining ITS components, whether technicians, engineers, or integrators, must follow best practices, enforce operational policies, and ensure device integrity during installation and lifecycle transitions.
+
+## Architectural Layer of an ITS Cybersecurity Architecture
+
+[ISO 21217](https://www.iso.org/standard/80257.html) describes an ITS-S reference model that can be used as a framework for developing and deploying secure ITS communication systems. The ISO 21217 reference model has been extended below to identify and allocate specific cybersecurity functions and capabilities to discrete areas within the model. This page discusses the cybersecurity controls that should be considered by both developers and implementers of an ITS. For more detailed discussion of the threats associated with each of these architectural layers, visit the [ITS Threat Analysis](its-threat-analysis) page. For more detailed descriptions of each of the individual building blocks within the security architecture, see the [ITS Cybersecurity Controls](its-cybersecurity-controls) page. 
+
+## Reference Cybersecurity Architecture
+
+The reference architecture illustrated below maps directly to the ISO 21217 ITS-S reference model, in order to maintain consistency with existing well-known ITS concepts. The architecture is broken out into:
+
+- **Management functions**: The core cybersecurity processes and services that govern trust, monitoring, response, and coordination across an ITS deployment. This includes managing certificate lifecycles, enforcing interoperability rules, auditing systems, handling incidents, and supporting misbehavior adjudication.
+- **Application functions:** Define how applications enforce secure behaviors, such as message authentication, service-specific authorization, and secure configuration practices, to maintain system integrity and protect sensitive functions.
+- **Facilities functions:** Focuses on privacy protection, trust evaluation, and event-level security. Supports pseudonymity, localized misbehavior detection, anomaly logging, and enforcement of interoperability policies across message exchanges.
+- **Network and Transport functions:** Provides the mechanisms to secure data in transit using authenticated, optionally encrypted communications. Ensures transport protocols are resistant to network-layer threats and aligned with trust and policy requirements.
+- **Access functions:** Manages how devices establish secure sessions, validate software authenticity, and authenticate themselves to peers or networks. Supports session security, secure boot, and credential-based access enforcement.
+- **Physical functions:** Covers the protection of hardware, cryptographic material, and interfaces from physical compromise. Includes secure storage, physical access controls, tamper detection, and secure key generation practices.
 
 ![Architectural Layers](./images/architecture_layers.jpg)
 
 ## Application Layer
 
-The Application Layer is responsible for enabling defined transportation functions, such as signal priority, lane coordination or incident warning. Applications are standardized, certificate-bound services identified by globally or regionally assigned IDs (AAID or PSID) implemented according to strict message structures and access policies. Applications exchange information with other ITS components using standardized message types from standards like SAE J2735 and ETSI EN 302 637-x, and are identified and authorized via Provider Service Identifiers (PSIDs)  /ITS-AIDs and Service-Specific Permissions (SSPs). For example, a transit vehicle’s Onboard Unit (OBU) may have a certificate that includes the PSID for the Signal Request Message (SRM) application and an SSP indicating it is authorized to request transit signal priority at intersections. Permissions should be enforced by both transmitting and receiving ITS-S components. Applications should only initiate communication for services they are explicitly authorized for, and roadside infrastructure (e.g., RSUs) must validate both PSID and SSP on incoming messages.
+ISO 21217 positions the Application Layer at the top of the ITS Station (ITS-S) architecture, responsible for invoking and managing the communication flows that support ITS services. This layer defines the behavior and security policies of each ITS application and determines how they interact with the rest of the system. In a cybersecurity context, the Application Layer must ensure that data flows are authorized, authenticated, and protected according to both global and local policies.
 
-In addition to certificate-based permissions, many ITS applications operate under local or regional policies configured by ITS Station Operators (SO) that define where, when, and by whom an application may be used. These rules complement certificate-bound permissions and are defined through deployment policy frameworks implemented by jurisdictions, infrastructure owners, or certificate authorities. Polices may be enforced at multiple points in a system and may be implemented through mechanisms such as geofencing, SSP-encoding, infrastructure logic, and credential life-cycle controls. These mechanisms ensure that applications are not only cryptographically authorized, but also contextually constrained to operate within their intended scope.
+ITS applications are standardized, certificate-bound services identified by globally or regionally assigned identifiers—known as ITS Application Identifiers (ITS-AIDs) or Provider Service Identifiers (PSIDs). These identifiers are embedded in digital certificates and define the types of messages an application may transmit or process. Additional constraints are expressed through SSPs, which enable fine-grained role definitions. For example, a public transit vehicle’s OBU may be authorized to send a Signal Request Message (SRM) to request priority at intersections, but only if its certificate contains the correct PSID and SSP combination.
 
-### Threats to the Application Layer
+These permissions are enforced on both ends of the transaction: a sender must possess a valid certificate with the necessary authorizations, and the recipient must verify the certificate’s attributes before acting on the message. This model ensures that simply joining an ITS-aware network does not grant implicit trust or functionality. Instead, application behavior is tightly scoped to what has been explicitly authorized.
 
-The table below outlines example threats relevant to this layer.
+In addition to certificate-bound constraints, ITS applications are subject to deployment-specific policies managed by Station Operators or infrastructure owners. These policies define who may run an application, under what conditions, and in which geographic or operational context. Enforcement can occur through mechanisms such as geofencing, jurisdiction-specific logic in infrastructure, SSP-based filters, or lifecycle controls that determine when and where credentials may be used.
 
-| Threat Example                              | Security Objectives                                          |
-| ------------------------------------------- | ------------------------------------------------------------ |
-| Unauthorized access to service functions    | Ensure only authenticated and authorized applications are executed |
-| Malicious or unauthorized application code  | Enforce code integrity and secure update processes           |
-| Cross-application data leakage              | Isolate applications and enforce secure inter-process communication |
-| Exposure of user or operational data        | Apply privacy rules and enforce user consent                 |
-| Unauthorized message injection              | A non-authorized OBU transmits Signal Request Messages (SRMs) to manipulate traffic signals. |
-| Role escalation                             | A vehicle with general-use permissions reuses or fabricates SSP fields to impersonate an emergency responder. |
-| Tampered application logic                  | Malware or modified code causes an ITS device to transmit false warnings or suppress valid messages. |
-| Improper deployment (jurisdictions)         | A certified application is installed outside its permitted geographic zone or agency scope. |
-| Unauthorized third-party software execution | A device runs unapproved or unsigned applications due to weak software controls or side-loading. |
+Applications typically use standardized message formats such as SAE J2735 or ETSI EN 302 637-x. These formats define not only the structure of the data but also the associated security requirements for signing, encryption, and validation. Adherence to these standards ensures interoperability and reduces risk from malformed or unauthorized messages.
 
-### Cybersecurity Objectives
+Implementers should ensure that the following cybersecurity objectives are met at the Application Layer:
 
-The following objectives describe the intended cybersecurity outcomes for this layer and support the mitigation of the threats identified above.
-
-- Restrict application use to authorized roles, based on device certificates and SSP constraints
-
-- Prevent unauthorized message injection or misuse of safety-critical applications
-- Ensure software integrity through code signing and runtime validation
-- Protect applications from unauthorized modification or execution of unapproved third-party code
-- Enforce deployment-specific constraints such as geofencing, jurisdictional scope, and time-based usage
+- **ITS_APP_1: Enforce permission-based access to ITS services.** All application actions must be tied to valid digital certificates issued through a recognized SCMS or CCMS. Certificates must include the correct PSID/ITS-AID and SSP fields for the intended function.
+- **ITS_APP_2: Prevent unauthorized message injection.** All outgoing application messages must be signed, and all incoming messages must be validated against trusted certificate authorities. Message rejection should occur if permissions do not match the expected application profile.
+- **ITS_APP_3: Apply policy-aware access rules.** Local rules regarding geographic, jurisdictional, and temporal use of applications should be encoded and enforced through certificate attributes or infrastructure logic. Deployment-specific policies define who may operate devices, under what conditions, and within which jurisdiction. These policies are enforced through mechanisms such as geofencing, time-of-day restrictions, certificate constraints, and service-specific permissions. 
 
 ## Facilities Layer
 
-The Facilities layer provides support services for message handling, data management, and inter-application coordination. Security measures here focus on privacy and controlled exposure of message content and services.
+In a cybersecurity context, this layer enables ITS devices to detect misbehavior, log anomalous events, maintain privacy through pseudonymity, and operate securely across jurisdictional boundaries. Facilities functions help ensure that data received from other ITS participants is plausible. This includes real-time plausibility checks, such as verifying that vehicle locations are within valid map bounds or that reported speeds are physically possible, and local misbehavior detection based on defined rules.
 
-### Threats to the Facilities Layer
+To preserve privacy, the Facilities Layer manages pseudonym certificate use. Messages are signed using short-lived, unlinkable identifiers, which prevent long-term tracking of a vehicle or device across sessions.
 
-The table below outlines example threats relevant to this layer.
+Facilities components also support structured anomaly logging and reporting. Devices record abnormal or policy-violating behavior and forward relevant information to backend systems for further analysis and adjudication. This process enables scalable misbehavior response while minimizing bandwidth and processing overhead at the edge. When deployed across jurisdictions, ITS devices must interoperate securely. The Facilities Layer contributes to this by ensuring that locally detected anomalies, pseudonym management routines, and trust validation behaviors conform to overarching interoperability policies and system expectations.
 
-| Threat Example | Security Objectives                                          |
-| -------------- | ------------------------------------------------------------ |
-| Message replay | Replay attacks shift time context to mislead behavior        |
-| API misuse     | Untrusted entities exploit facility-layer APIs to access or influence protected data |
-| Tracking       | Overcollection or linking of contextual data enables re-identification of pseudonymous users |
+Implementers should ensure the following security outcomes at the Facilities Layer:
 
-#### Cybersecurity Objectives
-
-The following objectives describe the intended cybersecurity outcomes for this layer and support the mitigation of the threats identified above.
-
-- Preserve user anonymity and reduce data traceability
-- Validate message origin, freshness, and plausibility
-- Provide access-controlled APIs for data exchange
+- **ITS_FAC_1: Maintain user anonymity and protect privacy** through regular pseudonym certificate rotation and suppression of unnecessary identifying information.
+- **ITS_FAC_2: Perform local misbehavior detection** by evaluating incoming message data for policy violations or implausible claims.
+- **ITS_FAC_3: Log and report anomalous behavior** for further review and potential action by backend misbehavior authorities.
+- **ITS_FAC_4: Support secure interoperability** by ensuring facilities-layer logic accommodates regional or jurisdictional trust settings.
 
 ### Network and Transport
 
-The Network and Transport Layer secures the communication channels that carry ITS and V2X data across both wireless and wired infrastructures. This includes direct V2X communications between vehicles and RSUs, as well as data exchanged between field devices and backend systems. The primary cybersecurity function of this layer is to ensure that data in transit is protected against tampering, interception, and unauthorized injection, while also enforcing device authentication and maintaining service availability under a variety of environmental and adversarial conditions.
+The Network and Transport Layer in the ISO 21217 ITS-S reference model is responsible for securing communication flows between ITS devices. It ensures that data exchanges are protected against tampering, spoofing, and unauthorized access. This layer enables both transport security, which protects individual message flows, and network security, which protects the communication infrastructure as a whole. Secure session establishment and message validation are core responsibilities, helping to preserve message integrity, authenticate sources, and prevent misuse. 
 
-Standards such as IEEE 1609.3 define network and transport protocols for Wireless Access in Vehicular Environments (WAVE), while IEEE 1609.2, IEEE 1609.2.1, and ETSI TS 103 097 provide cryptographic protections, including digital signatures and encryption for V2X messages. Backend communications are typically secured using TLS 1.3 with mutual authentication to protect sensitive data flows between RSUs, TMCs, and service providers.
+Standards such as IEEE 1609.3 define network and transport protocols used in vehicular communications, while ISO 21177 provides the mechanism for secure session management between ITS Stations. When backend or control system traffic is exchanged over TCP/IP networks, TLS 1.3 with mutual authentication should be used. DTLS is appropriate when UDP transport is required, such as for latency-sensitive data.
 
-All V2X messages must be digitally signed to ensure authenticity and integrity. Secure message headers defined by IEEE 1609.2.1 and ETSI TS 103 097 include fields for certificate linkage, timestamps, and replay protection. Devices that cannot validate message signatures must discard the message and may report verification failures to backend systems for further analysis.
+All messages must be verified for structural integrity, origin, and freshness. Anti-replay protections such as timestamps should be enforced to ensure that messages cannot be reused to trigger unintended behaviors.
 
-While most V2X safety messages are signed but not encrypted, some sensitive data exchanges, such as traveler personalized information or backend configuration files do require encryption. In these cases, protocols such as TLS 1.3 are used to secure communications and ensure confidentiality. 
+Implementers should ensure the following cybersecurity outcomes at the Network and Transport Layer:
 
-Pseudonymity protections are also enforced at this layer to prevent persistent tracking of vehicles and infrastructure. Rather than transmitting static identities, devices are issued short-term, unlinkable pseudonym certificates that are rotated regularly. This prevents passive observers from correlating message patterns or locations to reconstruct vehicle trajectories, profile driver behavior, or infer organizational operations. Without effective pseudonym rotation, even properly signed messages could expose operational privacy risks.
-
-### Threats to Network and Transport Layer
-
-The table below outlines example threats relevant to this layer.
-
-| Threat Example                        | Security Objectives                                          |
-| ------------------------------------- | ------------------------------------------------------------ |
-| Message interception or modification  | Authenticate and encrypt transmitted data                    |
-| Replay of valid but outdated messages | Enforce message expiration and sequence validation           |
-| Geographic misuse of services         | Apply geographic scope controls to message origin and forwarding |
-| Flooding or DoS attacks               | Implement rate limiting, prioritization, and load protections |
-| Message injection                     | Attackers send spoofed or malformed messages.                |
-| Eavesdropping                         | Passive attackers intercept V2X or backend messages to obtain sensitive information or gain situational awareness. |
-| Man-in-the-middle (MITM)              | An attacker inserts themselves between devices to relay or modify communications while impersonating trusted parties. |
-| Denial-of-Service (DoS)               | Flooding of wireless or wired interfaces disrupts availability of critical ITS messages. |
-| Certificate spoofing                  | Attackers present forged credentials or reuse compromised certificates to authenticate malicious devices. |
-| Vehicle tracking                      | Passive observers collect and correlate V2X messages (e.g., BSMs) to track vehicles over time or infer personal behaviors. |
-
-### Cybersecurity Objectives
-
-The following objectives describe the intended cybersecurity outcomes for this layer and support the mitigation of the threats identified above.
-
-- Assure message integrity and authenticity using cryptographic signatures
-- Protect confidentiality of sensitive data in transit (e.g., Basic Safety Message (BSMs), certificate requests)
-- Authenticate devices and services to prevent spoofing or impersonation
-- Prevent unauthorized message injection or modification
-- Maintain availability of communication channels
+- **ITS_NET_1: Establish authenticated sessions using ISO 21177.** Use ISO 21177 to negotiate, establish, and manage secure sessions between ITS devices, including session key exchange and validity checks.
+- **ITS_NET_2: Implement TLS 1.3 or DTLS with mutual authentication.** Use certificate-based authentication to secure all backend or infrastructure-facing sessions.
+- **ITS_NET_3: Validate message integrity and authenticity.** All messages should be checked for proper digital signature and expected structure before use.
+- **ITS_NET_4: Reject replayed or expired messages.** Timestamp inspection and session freshness checks should be used to prevent replay attacks.
+- **ITS_NET_5: Preserve communication reliability during stress.** Use congestion control, prioritization, and network hardening techniques to maintain service availability during high load or attack conditions.
 
 ## Access Layer
 
-The Access Layer encompasses the physical and logical interfaces that support communication between ITS devices and external networks. This includes radio interfaces such as V2X as well as wired interfaces such as Ethernet. This layer serves as the point of ingress and egress for V2X messages and operational data, and plays an important role in enforcing message timing, interface-level authentication, and protection against unauthorized access.
+Cybersecurity functions at this layer focus on enforcing local policy rules, verifying the authenticity of installed software, and confirming the permissions of connected ITS devices, using local policy checks. For example, an ITS Station may be configured to validate OpOrgIds embedded within a message against a list of authorized OpOrgIds within the locally configured policy. 
 
-Security at the Access Layer is concerned with ensuring that messages originate from trusted hardware components, that unauthorized interfaces are not used to inject or modify data, and that time synchronization is accurate and protected from spoofing or degradation. Compromise at this layer may undermine higher-layer security controls by allowing adversaries to manipulate traffic before cryptographic protections are applied. 
+Implementers should ensure the following cybersecurity outcomes are met at the Access Layer:
 
-### Threats to the Access Layer
-
-The table below outlines example threats relevant to this layer.
-
-| Threat Example                     | Security Objectives                                          |
-| ---------------------------------- | ------------------------------------------------------------ |
-| Interface spoofing or hijacking    | Bind device identity to specific hardware interfaces         |
-| Degraded timing or synchronization | Validate time source integrity and enforce bounds            |
-| Link-layer injection or jamming    | Protect wireless protocols and use hardened media access control |
-
-#### Cybersecurity Objectives
-
-The following objectives describe the intended cybersecurity outcomes for this layer and support the mitigation of the threats identified above.
-
-- Authenticate hardware interfaces and prevent spoofing
-- Protect link-layer integrity and timing synchronization
-- Prevent unauthorized wireless or physical interface use
-
-
+- **ITS_ACC_1: Define and enforce local access policies.** Configure each device to restrict interface use, data access, or operational behavior based on predefined local rules. These policies may be informed by certificate-based entitlements.
+- **ITS_ACC_2: Authenticate software before execution.** Ensure that only software with verified provenance is installed and permitted to run. Use digital signatures or other mechanisms to detect unauthorized changes or tampering.
+- **ITS_ACC_3: Verify device identity.** Implement controls that authenticate devices before allowing them to initiate communication or participate in ITS operations. This ensures that only authorized hardware can access or influence the system.
 
 ## Management Layer
 
-The Management Layer provides the foundation for trust, governance, and policy enforcement across all layers of an ITS security architecture. It encompasses the systems, policies, and controls that establish and maintain trust relationships between devices, infrastructure, and backend services. This layer is responsible for managing cryptographic credentials, coordinating enrollment and authorization processes, and enabling consistent decision-making across administrative domains.
+The Management Layer defines cybersecurity functions that operate across the ITS architecture to maintain trust, enforce policies, and support operational oversight. It supports secure onboarding, continuous oversight, and system-wide interoperability through centralized and distributed security services. Management functions govern how devices are credentialed, monitored, and maintained within the ITS environment. They ensure that all participants adhere to defined security policies and that the system can adapt to changes, respond to incidents, and preserve trust over time. These functions span multiple domains and jurisdictions, enabling ITS deployments to interoperate securely even under varying operational policies.
 
-This layer also supports real-time detection and response mechanisms that identify and remediate malicious or anomalous behavior. These include mechanisms for evaluating message content, tracking behavioral consistency, and executing revocation or suspension workflows. 
+Cybersecurity functions that should be implemented at the Management Layer include:
 
-Key cybersecurity objectives for this layer include establishing a root of trust, controlling enrollment into certificate management systems, enforcing lifecycle rules for certificate issuance and revocation, validating compliance with technical standards, supporting scalable governance structures such as Electors or CPAs, and enabling real-time misbehavior detection and response. These objectives are addressed through a combination of policy-based enforcement, cryptographic controls, behavioral analytics, and coordinated trust administration.
-
-In distributed systems like SCMS, trust is managed by Electors. They sign a multi-party Certificate Trust List (CTL) to prevent unilateral changes. In CCMS, trust is coordinated by a central policy authority and published through the European C-ITS Trust List (ECTL). Before devices can operate, they must be enrolled. Enrollment policies verify security capabilities like key protection, firmware integrity, and standards compliance. Once approved, devices receive an enrollment certificate. This allows them to request operational credentials, such as pseudonym or authorization certificates. Certificate lifecycle controls define how credentials are issued, rotated, and revoked. These processes are governed by system-specific certificate policies and practice statements. Pseudonym certificates are rotated frequently to support privacy. Longer-term credentials like ECs or Root CAs follow stricter auditing and renewal schedules.
-
-The Management Layer also monitors behavior. Devices and infrastructure evaluate message content for consistency and plausibility. If suspicious activity is detected, a Misbehavior Report (MBR) is generated. It includes supporting evidence like signed data, timestamps, and location history. Reports follow standardized formats to support interoperability. They are reviewed by a Misbehavior Authority for validation. Confirmed misbehavior can trigger certificate revocation or temporary suspension. This ensures only trustworthy devices remain active in the ecosystem.
-
-### Threats to the Management Layer
-
-The table below outlines example threats relevant to this layer.
-
-| Threat Example                      | Security Objectives                                          |
-| ----------------------------------- | ------------------------------------------------------------ |
-| Invalid or unverified certificates  | Verify authenticity and policy conformance of credentials    |
-| Inadequate revocation response      | Support timely revocation and trust list updates             |
-| Poor misbehavior detection coverage | Enable multi-source reporting and evidence-based evaluation  |
-| Unauthorized enrollment             | A device is enrolled into a certificate management system without meeting security or compliance requirements. |
-| Key compromise                      | The private key associated with a trusted certificate is extracted or duplicated, allowing impersonation of a legitimate device. |
-| Improper trust anchor update        | A CTL update is manipulated and distributed without proper signatures. |
-| Stale or missing revocation data    | Devices fail to download updated CRLs or CTLs and continue to trust revoked or expired entities. |
-| Enrollment policy evasion           | An attacker submits a non-compliant device for enrollment.   |
-| Role escalation using certificate   | A certificate is issued with overly broad SSPs, granting the device capabilities beyond its operational role. |
-| Falsified BSMs                      | A vehicle transmits location data inconsistent with plausible movement, affecting other vehicles' path planning. |
-| Unauthorized signal requests        | A device sends SRMs without entitlement or in implausible patterns. |
-| Replay attacks                      | A recorded V2X message is retransmitted to mislead infrastructure or vehicles. |
-
-#### Cybersecurity Objectives
-
-The following objectives describe the intended cybersecurity outcomes for this layer and support the mitigation of the threats identified above.
-
-- Establish a root of trust for all participants in the ITS environment.
-- Control enrollment into certificate management systems through device validation. 
-- Manage certificate issuance and revocation according to strict lifecycle rules.
-- Ensure compliance with technical standards and operational policies. 
-- Enable governance structures (e.g., Electors) to manage trust at scale.
-- Support secure multi-jurisdictional interoperability. 
-- Detect falsified or anomalous message content in real-time to identify compromised or malfunctioning devices.
-- Validate behavioral consistency across space and time, such as physical plausibility of location, speed, and trajectory data.
-- Enable revocation or remediation workflows tied to validated misbehavior events. 
+- **ITS_MGT_1: Certificate Lifecycle Management.** Devices must be enrolled using secure procedures and issued credentials appropriate to their role. Credential issuance, renewal, revocation, and rotation must be governed by strict lifecycle policies.
+- **ITS_MGT_2: Audit and Logging.** Security events must be logged in a tamper-resistant, time-synchronized format to support compliance validation and forensic investigation.
+- **ITS_MGT_3: Interoperability Enforcement.** Devices must verify that remote systems adhere to policy constraints and CTLs, especially in cross-domain or cross-jurisdiction scenarios.
+- **ITS_MGT_4: Secure Time Coordination.** All time-sensitive functions, including certificate validation and anomaly detection, rely on synchronized secure time sources.
+- **ITS_MGT_5: Incident Management.** Devices and infrastructure must support structured detection, classification, and remediation of cybersecurity incidents.
+- **ITS_MGT_6: Misbehavior Processing and Adjudication.** Anomalous behavior must be detected and reported via structured formats. A Misbehavior Authority evaluates such reports and takes appropriate actions such as revocation or suspension.
 
 ## Physical Layer
 
-The Physical Layer provides protections for field-deployed and centralized ITS assets. It addresses threats arising from direct physical access, such as device manipulation, cryptographic key theft, and sabotage. Components like RSUs, OBUs, signal controllers, and cabinet-based systems often operate in exposed environments and must be physically secured to prevent tampering. Devices should be enclosed in tamper-resistant housings with sealed entry points, monitored access controls, and environmental sensors. Access must be logged and managed under formal procedures. Backend infrastructure such as TMCs requires similar safeguards, including badge-controlled entry, monitored access points, and facility intrusion detection.
+The Physical Layer includes protections that prevent unauthorized access to or manipulation of ITS hardware. These safeguards apply to both field-deployed devices and centralized systems (e.g., data centers, TMCs). Cybersecurity functions at this layer include securing storage, enforcing physical access controls, implementing tamper detection and response mechanisms, and protecting cryptographic key generation. These controls reduce the risk of physical tampering, unauthorized data extraction, hardware modification, or insertion of malicious components.
 
-Cryptographic material must be protected using secure hardware such as secure elements, TPMs, or HSMs that perform operations in isolated environments. Keys must be non-exportable and protected by tamper-response mechanisms that erase sensitive material upon physical compromise. All firmware must be cryptographically signed, with secure boot enabled and unauthorized interfaces disabled before deployment. Updates must be authenticated, signed, and version-controlled, including over-the-air update workflows.
+To align with the architecture, implementers should focus on the following cybersecurity outcomes:
 
-ITS devices should also be hardened and validated against environmental and signal manipulation. Shielding, anomaly detection, and redundant communications can help ensure operational resilience in harsh or adversarial environments.
-
-The table below outlines example threats relevant to this layer.
-
-| Threat Example                    | Security Objectives                                          |
-| --------------------------------- | ------------------------------------------------------------ |
-| Hardware tampering or replacement | Detect physical intrusion and validate firmware state        |
-| Unauthorized physical port access | Enforce access control at all service interfaces             |
-| Extraction of cryptographic keys  | Store keys in tamper-resistant secure elements               |
-| Unauthorized cabinet access       | Attackers gain access to RSU or controller enclosures to manipulate configurations, install rogue devices, or extract sensitive data. |
-| Cryptographic key extraction      | Attackers extract private keys from unsecured OBUs or RSUs using exposed memory or interfaces. |
-| Device cloning or hardware swaps  | Physical removal of trusted units and replacement with malicious devices impersonating the original identity. |
-| Unauthorized firmware upload      | Use of USB, serial, or debug ports to install unsigned or malicious firmware. |
-| Sensor spoofing or blinding       | Attackers interfere with radar, video, or Global Positioning System (GPS) sensors using external signals. |
-| Sabotage                          | RSUs or cabinets are damaged or degraded through vandalism or non-adversarial means. |
-
-#### Cybersecurity Objectives
-
-The following objectives describe the intended cybersecurity outcomes for this layer and support the mitigation of the threats identified above.
-
-- Prevent unauthorized physical access to devices and infrastructure
-- Protect cryptographic materials (e.g., private keys, firmware signatures) from extraction or tampering
-- Ensure authenticity and integrity of firmware and hardware configurations
-- Support traceability and accountability through access logging and auditability
-- Provide secure boundaries to ensure devices operate only in authorized physical and network contexts (e.g., school bus OBU must only be installed in a school bus)
-
-
-
-
-
+- **ITS_PHY_1: Secure Storage.** Use tamper-resistant hardware modules such as TPMs, secure elements, or HSMs to protect cryptographic keys and sensitive data. Ensure these components support secure erase and integrity verification functions.
+- **ITS_PHY_2: Physical Access Controls.** Restrict access to devices and facilities using strong physical controls such as locking enclosures, badge-based entry, and authorized maintenance procedures.
+- **ITS_PHY_3: Tamper Detection and Response.** Employ mechanisms that detect physical intrusion or component replacement. Devices should log tampering events and trigger protective actions, such as key erasure or device lockdown.
+- **ITS_PHY_4: Cryptographic Key Generation.** Keys must be generated using hardware-based entropy sources that meet recognized standards. Generation should occur in secure environments to prevent key exposure or duplication.
