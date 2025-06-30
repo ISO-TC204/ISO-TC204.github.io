@@ -4,14 +4,14 @@ As an ITS implementer, you are challenged to deploy secure, resilient systems th
 
 Every device must have a digital identity. Start by enrolling RSUs, OBUs, signal controllers, and back-office systems with the chosen PKI (SCMS or CCMS). Devices must store private keys securely and use certificates issued by trusted Certificate Authorities.
 
-- Use the approved enrollment and certificate request workflows from your PKI provider.
+- Use the approved enrolment and certificate request workflows from your PKI provider.
 - Confirm that each device includes secure hardware for private key protection (e.g., HSM or secure element).
 - Validate that all issued certificates include correct identifiers, permissions (e.g., PSID/SSP), and expiration periods.
 - Configure devices and services to reject untrusted or expired certificates.
 
 ## Configure Secure Communications
 
-Configure communication security across the ITS. 
+Configure communication security across the ITS.
 
 - Enable IEEE 1609.2 signing on V2X components.
 - Enforce TLS or DTLS for backend and management interfaces.
@@ -23,9 +23,9 @@ Configure communication security across the ITS.
 Devices must be able to replace expiring certificates and process revocation information.
 
 - Automate certificate renewal processes to avoid lapses in coverage.
-- Install and establish processes for regular updates of Certificate Trust Lists (CTLs). 
-- Configure devices to download and process Certificate Revocation Lists (CRLs). 
-- Confirm device behavior when encountering revoked or unknown certificates.
+- Install and establish processes for regular updates of Certificate Trust Lists (CTLs).
+- Configure devices to download and process Certificate Revocation Lists (CRLs).
+- Confirm device behaviour when encountering revoked or unknown certificates.
 
 ## Deploy Only Hardened Devices
 
@@ -50,7 +50,7 @@ Don’t wait until installation to care about security. Ensure every ITS compone
 Outdated software introduces unacceptable risk. Make sure your operational teams can deploy secure updates regularly.
 
 - Require all updates to be digitally signed and verified before installation.
-- Maintain tooling to deploy updates over-the-air 
+- Maintain tooling to deploy updates over-the-air
 - Track update histories across all devices. Maintain audit logs for review.
 
 ## Use Available Tools

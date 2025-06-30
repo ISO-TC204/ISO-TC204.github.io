@@ -4,16 +4,16 @@
 
 {% include "ag4/wg10doi.html" %}
 
-## News and highlights (optional) 
+## News and highlights (optional)
 
 ## [Standard subject area]
 
 ### Overview
 
 **Document:** [ISO Document number and status](index.md)
-**Title:** Intelligent transport systems — 
-**Status:** 
-**Abstract:** 
+**Title:** Intelligent transport systems —
+**Status:**
+**Abstract:**
 
 ### Description
 

@@ -1,8 +1,8 @@
 # Security Standards and Guidance Documents
 
-This page identifies standards that support implementation of cybersecurity functions aligned with the [ITS Security Architecture](its-security-architectures) and [ITS Cybersecurity Controls](its-cybersecurity-controls). Use this page to identify standards that support implementation of cybersecurity controls. 
+This page identifies standards that support implementation of cybersecurity functions aligned with the [ITS Security Architecture](its-security-architectures.md) and [ITS Cybersecurity Controls](its-cybersecurity-controls.md). Use this page to identify standards that support implementation of cybersecurity controls.
 
-## Secure Hardware and Physical Protection 
+## Secure Hardware and Physical Protection
 
 Use these standards to select, evaluate, or require hardware that supports key storage, secure boot, tamper detection, and cryptographic processing. This supports trusted execution and resilience at the component level.
 
@@ -18,8 +18,6 @@ Use these standards to select, evaluate, or require hardware that supports key s
 | Vehicle C-ITS station profile                    | Guidance      | Technical and operational requirements for C-ITS vehicle stations in  Europe. | Physical Layer         | Vehicle Manufacturers and OEMs      |
 | UNECE R155                                       | Standard      | Regulation that mandates cybersecurity management systems for vehicle  manufacturers, including hardware risk mitigation. | Physical Layer         | Vehicle Manufacturers and OEMs      |
 
-
-
 ### Network and Transport Security
 
 Apply these standards to enforce confidentiality, integrity, and authentication of data in transit. They define secure sessions for V2X, center-to-field, and backend communications using IP and non-IP protocols.
@@ -34,7 +32,7 @@ Apply these standards to enforce confidentiality, integrity, and authentication 
 | ETSI TS 102 940    | Standard      | Specifies high-level C-ITS security architecture.            | Network Layer       | Credential Management Authorities   |
 | ISO 21186-3        | Standard      | Secure data exchange guidelines in C-ITS.                    | Network Layer       | Application and Service Providers   |
 
-### Secure Access 
+### Secure Access
 
 Use these standards to control access across radio, wired, and management interfaces. They help ensure only authorized devices and users can connect to ITS infrastructure and services.
 
@@ -51,8 +49,6 @@ Use these standards to control access across radio, wired, and management interf
 | Protection Profile V2X Hardware Security  Module             | Guidance      | Requirements for HSMs with secure key lifecycle and physical attack  resistance. | Physical Layer              | Credential Management Authorities,  Application and Service Providers |
 | SAE J2945/1 On-Board System Requirement  for V2V Safety Communications | Standard      | Security requirements for V2V including key provisioning and secure  storage. | Physical Layer              | Application and Service Providers                            |
 
-
-
 ### Authenticated Messaging and Data Exchange
 
 These standards define how ITS messages are structured, signed, and validated. They enable cross-vendor and cross-jurisdiction interoperability and ensure message trustworthiness during exchange.
@@ -60,7 +56,7 @@ These standards define how ITS messages are structured, signed, and validated. T
 | Standard                             | Document Type | Description                                                  | Architectural Layer | Primary Role(s)                                              |
 | ------------------------------------ | ------------- | ------------------------------------------------------------ | ------------------- | ------------------------------------------------------------ |
 | SAE J2735                            | Standard      | Defines message formats like BSM, SPaT, MAP.                 | Facilities Layer    | Application and Service Providers                            |
-| SAE J2945/x series                   | Standard      | Profiles for message behavior and signing for V2X.           | Application Layer   | Application and Service Providers                            |
+| SAE J2945/x series                   | Standard      | Profiles for message behaviour and signing for V2X.           | Application Layer   | Application and Service Providers                            |
 | ETSI EN 302 637-2 / -3               | Standard      | Defines CAM and DENM message formats.                        | Facilities Layer    | Application and Service Providers                            |
 | ISO 16460                            | Standard      | Harmonized framework for V2X messages.                       | Facilities Layer    | Standards Development Organizations                          |
 | ETSI TS 102 894-2                    | Standard      | Common ITS data dictionary.                                  | Facilities Layer    | Application and Service Providers                            |
@@ -92,22 +88,20 @@ Implement these standards to issue, validate, and revoke certificates and to man
 | ETSI TS 103 248                          | Standard      | Pseudonym management and privacy protection in C-ITS. | Network and Transport Layer | Credential Management Authorities,  Application and Service Providers |
 |                                          |               |                                                       |                             |                                                              |
 
+### Misbehaviour Detection and Revocation
 
-
-### Misbehavior Detection and Revocation
-
-Use these standards to structure misbehavior reports, share them across SCMS entities, and apply adjudication processes. They support coordinated response to compromised or malicious actors in the ecosystem.
+Use these standards to structure misbehaviour reports, share them across SCMS entities, and apply adjudication processes. They support coordinated response to compromised or malicious actors in the ecosystem.
 
 | Standard                                                     | Document Type | Description                                     | Architectural Layer | Primary Role(s)                                              |
 | ------------------------------------------------------------ | ------------- | ----------------------------------------------- | ------------------- | ------------------------------------------------------------ |
-| SAE J3287                                                    | Standard      | Standard for V2X misbehavior reports.           | Management Layer    | Credential Management Authorities                            |
-| ETSI TS 102 941-2                                            | Standard      | European misbehavior reporting procedures.      | Management Layer    | Credential Management Authorities                            |
-| ETSI TS 103 759                                              | Standard      | Standardized misbehavior message format.        | Management Layer    | Credential Management Authorities                            |
-| SCMS ASN.1 Misbehavior Reports                               | Standard      | Misbehavior report encoding for SCMS.           | Management Layer    | Credential Management Authorities                            |
-| SCMS Misbehavior Application Spec                            | Standard      | SCMS adjudication and report format.            | Management Layer    | Credential Management Authorities                            |
-| SCMS Manager: ASN.1  Specification for Misbehavior Reports   | Standard      | Defines interoperable ASN.1 encoding for  MBRs. | Management Layer    | Credential  Management Authorities, Infrastructure Owner Operators |
-| SCMS Manager: Misbehavior Report and  Application Specification | Standard      | MBR data format and adjudication rules.         | Management Layer    | Credential Management Authorities,  Infrastructure Owner Operators |
-| ETSI TR 103 460                                              | Standard      | Survey of misbehavior detection techniques.     | Management Layer    | Cybersecurity  Oversight and Policy Bodies, Credential Management Authorities |
+| SAE J3287                                                    | Standard      | Standard for V2X misbehaviour reports.           | Management Layer    | Credential Management Authorities                            |
+| ETSI TS 102 941-2                                            | Standard      | European misbehaviour reporting procedures.      | Management Layer    | Credential Management Authorities                            |
+| ETSI TS 103 759                                              | Standard      | Standardized misbehaviour message format.        | Management Layer    | Credential Management Authorities                            |
+| SCMS ASN.1 Misbehaviour Reports                               | Standard      | Misbehaviour report encoding for SCMS.           | Management Layer    | Credential Management Authorities                            |
+| SCMS Misbehaviour Application Spec                            | Standard      | SCMS adjudication and report format.            | Management Layer    | Credential Management Authorities                            |
+| SCMS Manager: ASN.1  Specification for Misbehaviour Reports   | Standard      | Defines interoperable ASN.1 encoding for  MBRs. | Management Layer    | Credential  Management Authorities, Infrastructure Owner Operators |
+| SCMS Manager: Misbehaviour Report and  Application Specification | Standard      | MBR data format and adjudication rules.         | Management Layer    | Credential Management Authorities,  Infrastructure Owner Operators |
+| ETSI TR 103 460                                              | Standard      | Survey of misbehaviour detection techniques.     | Management Layer    | Cybersecurity  Oversight and Policy Bodies, Credential Management Authorities |
 
 ### Software Integrity and Update Security
 
@@ -123,9 +117,7 @@ Apply these standards to verify firmware and software authenticity, support secu
 | ISO/TR 23786                  | Standard      | Security and risk methods for remote access to vehicle systems. | Application Layer   | Infrastructure Owner Operators,  Application and Service Providers |
 |                               |               |                                                              |                     |                                                              |
 
-
-
-### Incident Management and Operational Oversight 
+### Incident Management and Operational Oversight
 
 These standards guide incident coordination, event logging, and audit practices. Use them to establish oversight processes that detect, document, and respond to cybersecurity events across stakeholders.
 
@@ -135,12 +127,3 @@ These standards guide incident coordination, event logging, and audit practices.
 | SAE J3061 / ISO/SAE 21434        | Standard      | Cybersecurity lifecycle and incident response. | Management Layer    | Vehicle Manufacturers and OEMs      |
 | NTCIP Secure Profiles (TLS, SSH) | Guidance      | Secure management for center-to-field devices. | Network Layer       | Infrastructure Owners and Operators |
 |                                  |               |                                                |                     |                                     |
-
-
-
-
-
-
-
-
-

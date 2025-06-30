@@ -9,20 +9,20 @@ nav:
     - Intro to ITS: intro.md
     - Cybersecurity: 
       - Overview: cybersecurity/index.md
-      - Introduction: cybersecurity/dummys-guide.md
-      - Regional considerations: cybersecurity/Regional-considerations.md
-      - Security Architectires: cybersecurity/its-security-architectures.md
+      - Introduction: cybersecurity/beginners-guide.md
+      - Security architectures: cybersecurity/its-security-architectures.md
       - Security standards: cybersecurity/security-standards.md
-      - ITS Threat Analysis: cybersecurity/ITS-Threat-Analysis.md
-      - Interoperability Strategies: cybersecurity/trust-bridges.md
-      - Cybersecurity mechanisms: cybersecurity/system-specific-security.md
+      - ITS Threat analysis: cybersecurity/ITS-Threat-Analysis.md
+      - Interoperability strategies: cybersecurity/interoperability-strategies.md
+      - Cybersecurity controls: cybersecurity/its-cybersecurity-controls.md
       - Stakeholder guidance: 
         - Overview: cybersecurity/stakeholder-guidance.md
-        - Implementers: cybersecurity/implementers.md
-        - Decision makers: cybersecurity/decision-makers.md
         - Standards developers: cybersecurity/standards-developers.md
-      - Cybersecurity governance: cybersecurity/security-policies.md
+        - Decision makers: cybersecurity/policy-makers.md
+        - Implementers: cybersecurity/implementers.md
+      - Cybersecurity policies: cybersecurity/security-policies.md
       - Specialized use cases: cybersecurity/specialized-use-cases.md
+      - Glossary: cybersecurity/Glossary.md
     - TC 204 planning: planning.md
     - Contact us: contact.md
     - Resources: resources.md

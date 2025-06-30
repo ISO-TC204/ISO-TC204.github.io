@@ -58,7 +58,7 @@ This page identifies numerous key resources for the ITS industry. You can click 
         It is one of three European Standardization Organizations (together with CEN and CENELEC) that have been officially recognized by the European Union and by the European Free Trade Association (EFTA) as being responsible for developing and defining voluntary standards at European level.
 
     ??? info "Institute of Electrical and Electronics Engineers (IEEE)"
-        The [Institute of Electrical and Electronics Engineers (IEEE)](https://www.ieee.org/) develops standards for a wide range of electronics and communications, including some of the foundational standards for ITS, including IEEE 1609.2, which defines the security certifcates used for C-ITS.
+        The [Institute of Electrical and Electronics Engineers (IEEE)](https://www.ieee.org/) develops standards for a wide range of electronics and communications, including some of the foundational standards for ITS, including IEEE 1609.2, which defines the security certificates used for C-ITS.
 
     ??? info "Society of Automotive Engineers International (SAE)"
         The [Society of Automotive Engineers International (SAE)](https://www.sae.org/) develops standards for vehicles and has been the source of several ISO efforts, particularly in the field of Automated Driving Systems and connected vehicles.
@@ -105,7 +105,7 @@ This page identifies numerous key resources for the ITS industry. You can click 
 ??? info "Purchase Packages of Standards"
     ## Purchase packages of standards
     ??? info "StandardLand (Czech Republic)"
-        [StandardLand (Czech Republic)](https://www.standardland.cz/) is a useful resource to summarize the content of standards and to idenfify logical packages of standards. You can use your browser to translate from Czech to your language.
+        [StandardLand (Czech Republic)](https://www.standardland.cz/) is a useful resource to summarize the content of standards and to identify logical packages of standards. You can use your browser to translate from Czech to your language.
 
     ??? info "iTeh Standards - European, American and International Standards online"
         [iTeh Standards - European, American and International Standards online](https://standards.iteh.ai/)

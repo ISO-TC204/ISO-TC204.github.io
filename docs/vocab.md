@@ -17,4 +17,3 @@ The following acronyms are commonly used throughout this site.
 | RITSI | Register of Intelligent Transport Systems Identifiers |
 | TC | Technical Committee |
 | WG | Working Group |
-|  |  |
