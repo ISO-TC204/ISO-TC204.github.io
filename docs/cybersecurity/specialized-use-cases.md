@@ -6,11 +6,9 @@ Certain ITS applications involve heightened cybersecurity risks due to their saf
 
 Cooperative Driving Automation allows vehicles to coordinate actions such as lane merging, platooning, and emergency response through direct communication. These interactions are highly time-sensitive and safety-critical. Key risks:
 
-- Spoofed messages triggering incorrect maneuvers
+- Spoofed messages triggering incorrect manoeuvres
 - Unauthorized devices attempting to participate
 - Injection of false trajectory or intent data
-
-
 
 ## Probe Data Collection
 
@@ -28,9 +26,7 @@ Road Use Charging systems rely on trusted reporting of mileage, location, or tol
 - Credential sharing or spoofing to mask vehicle identity
 - Unauthorized software modification to disable location tracking
 
-
-
-## Mobile Edge Computing (MEC) 
+## Mobile Edge Computing (MEC)
 
 MEC allows data processing closer to the field, such as at RSUs or in-vehicle systems, reducing latency for time-sensitive applications. Key risks:
 
@@ -38,7 +34,7 @@ MEC allows data processing closer to the field, such as at RSUs or in-vehicle sy
 - Deployment of unvetted software at edge nodes
 - Disruption of V2X applications through edge-layer compromise
 
-## Cooperative Awareness Message (CAM) 
+## Cooperative Awareness Message (CAM)
 
 Cooperative Awareness Messages are used by vehicles and roadside units to broadcast information such as position, speed, and heading at frequent intervals. This basic safety message helps surrounding road users build situational awareness and react appropriately. Key risks:
 

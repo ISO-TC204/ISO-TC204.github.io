@@ -3,7 +3,7 @@
     "indent": 4    
   },
   "MD033": {
-    "allowed_elements": ["style", "div", "blockquote", "table", "tr", "td", "img"]
+    "allowed_elements": ["style", "div", "blockquote", "table", "tr", "td", "img", "br"]
   },
   "MD013": false,
   "MD024": false,

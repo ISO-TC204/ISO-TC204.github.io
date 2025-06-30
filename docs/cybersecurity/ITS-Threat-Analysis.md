@@ -1,17 +1,17 @@
 # Performing an ITS Threat Analysis
 
-ITS operators should conduct threat analysis by evaluating how adversaries could compromise specific functions across the system. Begin by identifying each system component and  for each, assess the types of data it handles, the services it provides, and the interfaces it exposes. Use that information to define the threat surface and determine which attack scenarios are most relevant. Map each identified threat to a [cybersecurity control](its-cybersecurity-controls.md) that can be implemented at the appropriate layer of the [ITS cybersecurity reference architecture](its-cybersecurity-architectures.md). As the system evolves, repeat the threat analysis to validate that protections remain effective and aligned to real-world risks.
+ITS operators should conduct threat analysis by evaluating how adversaries could compromise specific functions across the system. Begin by identifying each system component and  for each, assess the types of data it handles, the services it provides, and the interfaces it exposes. Use that information to define the threat surface and determine which attack scenarios are most relevant. Map each identified threat to a [cybersecurity control](its-cybersecurity-controls.md) that can be implemented at the appropriate layer of the [ITS cybersecurity reference architecture](its-security-architectures.md). As the system evolves, repeat the threat analysis to validate that protections remain effective and aligned to real-world risks.
 
 ## High-Level Process for Conducting an ITS Threat Analysis
 
 While specific methodologies may vary, most ITS threat analysis efforts follow a common structure. The following high-level steps apply broadly across both European and North American contexts:
 
 1. **Define Scope and Boundaries**
-    Identify which ITS devices are within scope for the threat analysis. This should include field devices, communications links, backend systems, cloud applications applications, etc). Document external interfaces. 
+    Identify which ITS devices are within scope for the threat analysis. This should include field devices, communications links, backend systems, cloud applications applications, etc). Document external interfaces.
 2. **Identify Assets, Data Flows and Security Objectives** Determine what needs protection within the system. This would include for example cryptographic keys, GNSS data, video feeds, V2X messages, etc. For each asset, define the associated data flows to other assets and for each data flow define security objectives such as ensuring integrity, availability, confidentiality, or non-repudiation.
 3. **Identify Threats**  Once assets and data flows are known, consider how they could be targeted. Threats may include unauthorized access, spoofing, message manipulation, denial-of-service, physical tampering, among others. Leverage tools such as the MITRE ATT&CK Framework for a better understanding of attack types, and understand that attacks are often strung together in order to achieve greater effect.  
 4. **Evaluate Risk**:  Assess the likelihood and potential impact of each threat materializing, taking into account the environment in which the system operates. This assessment may be qualitative or quantitative. It helps prioritize which risks require mitigation and which may be accepted based on  operational context.
-5. **Select and Align Controls**:  For threats requiring mitigation, identify suitable security controls which may be technical, procedural, or administrative. These may include for example message authentication, physical protections, redundancy, or personnel training. Control selection should reflect both the risk profile and the system’s functional requirements. Review the [ITS Cybersecurity Controls](its-cybersecurity-controls.md) page for more information on possible control selection. 
+5. **Select and Align Controls**:  For threats requiring mitigation, identify suitable security controls which may be technical, procedural, or administrative. These may include for example message authentication, physical protections, redundancy, or personnel training. Control selection should reflect both the risk profile and the system’s functional requirements. Review the [ITS Cybersecurity Controls](its-cybersecurity-controls.md) page for more information on possible control selection.
 6. **Document and Reassess**:  Maintain records of the analysis, including identified threats, rationale for control selection, and residual risks. Threat analysis should be revisited periodically or when significant changes are made to system architecture, configuration, or usage patterns.
 
 ### European Threat Analysis Guidance
@@ -31,7 +31,7 @@ In North America, threat analysis activities are often embedded within more gene
 
 ## ITS Threat Catalogue
 
-The following threats may be applicable to an ITS. You may use these threats as references when developing your system-specific threat analysis and risk profile. See the Recommended Cybersecurity Controls column to identify controls that can be used to mitigate these threats in part or in whole. 
+The following threats may be applicable to an ITS. You may use these threats as references when developing your system-specific threat analysis and risk profile. See the Recommended Cybersecurity Controls column to identify controls that can be used to mitigate these threats in part or in whole.
 
 | Threat ID | Threat Example                                               | [Recommended Cybersecurity Controls](its-cybersecurity-controls.md) |
 | --------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -53,20 +53,19 @@ The following threats may be applicable to an ITS. You may use these threats as 
 | T_0016    | Link-layer injection or jamming                              | Transport Security; Network Security                         |
 | T_0017    | Invalid or expired certificates used to attempt to gain access | Certificate Lifecycle Management                             |
 | T_0018    | Inadequate revocation response                               | Certificate Lifecycle Management                             |
-| T_0019    | Poor misbehavior detection coverage                          | Misbehavior Detection; Misbehavior Reporting; Misbehavior Processing and Adjudication |
+| T_0019    | Poor misbehaviour detection coverage                          | Misbehaviour Detection; Misbehaviour Reporting; Misbehaviour Processing and Adjudication |
 | T_0020    | ITS devices with revoked certificates are still trusted within the ITS. | Certificate Lifecycle Management                             |
-| T_0021    | Misbehaviors go undetected within the ITS                    | Misbehavior Detection; Misbehavior Reporting                 |
+| T_0021    | Misbehaviours go undetected within the ITS                    | Misbehaviour Detection; Misbehaviour Reporting                 |
 | T_0022    | An ITS device is enrolled into a certificate management system without meeting security or compliance requirements. | Certificate Lifecycle Management                             |
 | T_0023    | The private key associated with a trusted certificate is extracted or duplicated, allowing impersonation of a legitimate device. | Cryptographic Key Generation                                 |
 | T_0024    | A CTL update is manipulated and distributed without proper signatures. | Interoperability; Certificate Lifecycle Management           |
 | T_0025    | Devices fail to download updated CRLs or CTLs and continue to trust revoked or expired entities. | Secure Device Configuration; Certificate Lifecycle Management |
-| T_0026    | An attacker submits a non-compliant device for enrollment.   | Certificate Lifecycle Management                             |
+| T_0026    | An attacker submits a non-compliant device for enrolment.   | Certificate Lifecycle Management                             |
 | T_0027    | A certificate is issued with overly broad SSPs, granting the device capabilities beyond its operational role. | Service Authorization; Certificate Lifecycle Management      |
-| T_0028    | A vehicle transmits location data inconsistent with plausible movement, affecting other vehicles' path planning | Misbehavior Detection; Misbehavior Reporting; Misbehavior Processing and Adjudication |
-| T_0029    | A device sends SRMs without entitlement or in implausible patterns. | Service Authorization; Misbehavior Detection; Misbehavior Reporting; Misbehavior Processing and Adjudication |
+| T_0028    | A vehicle transmits location data inconsistent with plausible movement, affecting other vehicles' path planning | Misbehaviour Detection; Misbehaviour Reporting; Misbehaviour Processing and Adjudication |
+| T_0029    | A device sends SRMs without entitlement or in implausible patterns. | Service Authorization; Misbehaviour Detection; Misbehaviour Reporting; Misbehaviour Processing and Adjudication |
 | T_0030    | A recorded V2X message is retransmitted to mislead infrastructure or vehicles. | Network Security; Transport Security; Session Security       |
 | T_0031    | An ITS device is tampered with.                              | Physical Access Controls; Tamper Detection and Response      |
 | T_0032    | An attacker gains unauthorized physical port access.         | Physical Access Controls; Tamper Detection and Response      |
 | T_0033    | Attackers gain access to RSU or controller enclosures to manipulate configurations, install rogue devices, or extract sensitive data. | Physical Access Controls; Tamper Detection and Response      |
 | T_0034    | Use of USB, serial, or debug ports to install unsigned or malicious firmware. | Authenticated Software                                       |
-
