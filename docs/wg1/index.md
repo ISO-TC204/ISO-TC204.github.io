@@ -6,13 +6,13 @@
 
 ## News and highlights
 
-- [ISO/TS 14812:2025 (edition 2) _ITS Vocabulary_](https://www.iso.org/standard/85041.html) is now published.The new version includes over 70 new terms.
+- [ISO/TS 14812:2025 (edition 2) _ITS Vocabulary_](https://www.iso.org/obp/ui#iso:std:iso:ts:14812) is now published.The new version includes over 70 new terms.
 - ISO/PWI 25965 _ITS Ontologies - Model management_ was approved as a preliminary work item at the May TC 204 plenary meeting. This document will define how to define data for ITS uses and define how projects can register their data into a central registry to gain broader recognition.
 - Based on systematic review results, WG 1 plans to update ISO 14813-5 _Requirements for architecture description in ITS standards_ to better reflect lessons learned.
 
 ## Vocabulary
 
-??? note "[ISO/TS 14812:2025](https://www.iso.org/standard/85041.html) _Intelligent transport systems — Vocabulary_"
+??? note "[ISO/TS 14812:2025](https://www.iso.org/obp/ui#iso:std:iso:ts:14812) _Intelligent transport systems — Vocabulary_"
 
     **Status:** Approved
 
@@ -20,7 +20,7 @@
 
     ### Description
 
-    The definition of terms are available for free via [ISO's online browsing preview](https://www.iso.org/obp/ui/en/#iso:std:iso:ts:14812:ed-2:v1:en), [ISO's online browsing platform search engine](https://www.iso.org/obp/ui/en/#home), or the [Geolexica website](https://isotc204.geolexica.org). The standard itself
+    The definition of terms are available for free via [ISO's online browsing preview](https://www.iso.org/obp/ui#iso:std:iso:ts:14812), [ISO's online browsing platform search engine](https://www.iso.org/obp/ui/en/#home), or the [Geolexica website](https://isotc204.geolexica.org). The standard itself
     includes an annex that provides the complete concept model that graphically depicts the relationships among the terms defined in the standard.
 
     Edition 2 adds terms for:
@@ -41,7 +41,7 @@
 
 ## Reference ITS architecture
 
-??? note "[ISO 14813-1:2024](https://www.iso.org/standard/85840.html) _Intelligent transport systems — Reference model architecture(s) for the ITS sector — Part 1: ITS service domains, service groups and services_"
+??? note "[ISO 14813-1:2024](https://www.iso.org/obp/ui#iso:std:iso:14813:-1) _Intelligent transport systems — Reference model architecture(s) for the ITS sector — Part 1: ITS service domains, service groups and services_"
 
     **Status:** Approved
 
@@ -87,7 +87,7 @@
 
 ## Documentation in TC 204 Standards
 
-??? note "[ISO 14813-5:2020](https://www.iso.org/standard/73746.html) *Intelligent transport systems — Reference model architecture(s) for the ITS sector — Part 5: Requirements for architecture description in ITS standards*"
+??? note "[ISO 14813-5:2020](https://www.iso.org/obp/ui#iso:std:iso:14813:-5) *Intelligent transport systems — Reference model architecture(s) for the ITS sector — Part 5: Requirements for architecture description in ITS standards*"
 
     **Status:** Approved **(under revision)**{style="color: red;"}
 
@@ -99,7 +99,7 @@
     2. terminology to be used when documenting or referencing aspects of the
     ITS reference architecture.
 
-??? note "[ISO 14813-6:2017](https://www.iso.org/standard/69109.html) *Intelligent transport systems — Reference model architecture(s) for the ITS sector — Part 6: Use of ASN.1*"
+??? note "[ISO 14813-6:2017](https://www.iso.org/obp/ui#iso:std:iso:14813:-6) _Intelligent transport systems — Reference model architecture(s) for the ITS sector — Part 6: Use of ASN.1_"
 
     **Status:** Approved
 
@@ -114,7 +114,7 @@
 
 ## Common Data Model
 
-??? note "[ISO 14817-1:2015](https://www.iso.org/standard/65668.html) Intelligent transport systems — ITS central data dictionaries — Part 1: Requirements for ITS data definitions"
+??? note "[ISO 14817-1:2015](https://www.iso.org/obp/ui#iso:std:iso:14817:-1) Intelligent transport systems — ITS central data dictionaries — Part 1: Requirements for ITS data definitions"
     **Status:** Approved
 
     **Abstract:** This document specifies the logical structure (framework) and
@@ -131,7 +131,7 @@
     - a set of preferred data concepts within the ITS domain;
     - data modelling method for defining ITS data concepts, when used.
 
-??? note "[ISO 14817-2:2015](https://www.iso.org/standard/65669.html) Intelligent transport systems — ITS central data dictionaries — Part 2: Governance of the Central ITS Data Concept Registry"
+??? note "[ISO 14817-2:2015](https://www.iso.org/obp/ui#iso:std:iso:14817:-2) Intelligent transport systems — ITS central data dictionaries — Part 2: Governance of the Central ITS Data Concept Registry"
     **Status:** Approved
 
     **Abstract:** ISO 14817-2:2015 specifies the registration process to enter
@@ -143,7 +143,7 @@
     International, Regional or National System Architecture methodologies or
     techniques.
 
-??? note "[ISO 14817-3:2017](https://www.iso.org/standard/67416.html) Intelligent transport systems — ITS data dictionaries — Part 3: Object identifier assignments for ITS data concepts"
+??? note "[ISO 14817-3:2017](https://www.iso.org/obp/ui#iso:std:iso:14817:-3) Intelligent transport systems — ITS data dictionaries — Part 3: Object identifier assignments for ITS data concepts"
     **Status:** Approved
 
     **Abstract:** ISO 14817-3:2017 specifies how to assign an object identifier
@@ -152,7 +152,7 @@
 
 ## Application of Technologies
 
-??? note "[ISO/TR 23255](https://www.iso.org/standard/75090.html) Intelligent transport systems — Architecture — Applicability of data distribution technologies within ITS"
+??? note "[ISO/TR 23255](https://www.iso.org/obp/ui#iso:std:iso:tr:23255) Intelligent transport systems — Architecture — Applicability of data distribution technologies within ITS"
     **Status:** Approved
 
     **Abstract:** A variety of general-purpose data distribution technologies
