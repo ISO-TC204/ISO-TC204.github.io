@@ -6,47 +6,42 @@
 
 ## News and highlights
 
-Edition 2 of ISO/TS 14812 (ITS Vocabulary) is expected to be approved in 2025.
-The new version is expected to add over 70 new terms.
+- [ISO/TS 14812:2025 (edition 2) _ITS Vocabulary_](https://www.iso.org/standard/85041.html) is now published.The new version includes over 70 new terms.
+- ISO/PWI 25965 _ITS Ontologies - Model management_ was approved as a preliminary work item at the May TC 204 plenary meeting. This document will define how to define data for ITS uses and define how projects can register their data into a central registry to gain broader recognition.
+- Based on systematic review results, WG 1 plans to update ISO 14813-5 _Requirements for architecture description in ITS standards_ to better reflect lessons learned.
 
+## Vocabulary
 
-## Vocabulary 
+??? note "[ISO/TS 14812:2025](https://www.iso.org/standard/85041.html) _Intelligent transport systems — Vocabulary_"
 
-??? note "[ISO/TS 14812:2022](https://www.iso.org/standard/79779.html) *Intelligent transport systems — Vocabulary*"
+    **Status:** Approved
 
-    **Status:** Approved **(under revision)**{style="color: red;"}
-
-    **Abstract:** This document defines terms relating to intelligent transport
-    systems (ITS).
+    **Abstract:** This document defines terms relating to intelligent transport systems (ITS).
 
     ### Description
 
-    The definition of terms are available for free online via the [preview
-    function](https://www.iso.org/obp/ui/en/#iso:std:iso:ts:14812:ed-1:v1:en),
-    [ISO's online browsing platform](https://www.iso.org/obp/ui/en/#home), or
-    the [Geolexica website](https://isotc204.geolexica.org). The standard itself
-    inlcudes an ennex that provides the complete concept model that graphically
-    depicts the relationships among the terms defined in the standard.
+    The definition of terms are available for free via [ISO's online browsing preview](https://www.iso.org/obp/ui/en/#iso:std:iso:ts:14812:ed-2:v1:en), [ISO's online browsing platform search engine](https://www.iso.org/obp/ui/en/#home), or the [Geolexica website](https://isotc204.geolexica.org). The standard itself
+    includes an annex that provides the complete concept model that graphically depicts the relationships among the terms defined in the standard.
 
-    Edition 2 is expected to add terms for:
+    Edition 2 adds terms for:
 
-    - information security terms (e.g., authentication)
-    - concept realization terms (e.g., implementation)
-    - device component terms (e.g., sensor)
-    - additional alternate mode terms (e.g., shared-space)
-    - additional road network terms (e.g., alley)
-    - facility terms (e.g., bridge)
-    - kerbside usage terms (e.g., loading area)
-    - road equipment terms (e.g., traffic control device)
-    - additional location terms (e.g., geographic feature)
-    - jurisdictional terms (e.g., campus)
-    - additional traveller terms (e.g., vulnerable road user)
-    - additional vehicle attribute terms (e.g., vehicle fuel type)
+    - information security (e.g., authentication)
+    - concept realization (e.g., implementation)
+    - device components (e.g., sensor)
+    - additional alternate modes (e.g., shared-space)
+    - additional road concepts (e.g., alley)
+    - facilities (e.g., bridge)
+    - kerbside usage (e.g., loading area)
+    - additional road equipment (e.g., traffic control device)
+    - additional location concepts (e.g., geographic feature)
+    - jurisdictional concepts (e.g., campus)
+    - additional travellers (e.g., vulnerable road user)
+    - additional vehicle attributes (e.g., vehicle fuel type)
     - financial terms (e.g., payment mode)
 
 ## Reference ITS architecture
 
-??? note "[ISO 14813-1:2024](https://www.iso.org/standard/85840.html) *Intelligent transport systems — Reference model architecture(s) for the ITS sector — Part 1: ITS service domains, service groups and services*"
+??? note "[ISO 14813-1:2024](https://www.iso.org/standard/85840.html) _Intelligent transport systems — Reference model architecture(s) for the ITS sector — Part 1: ITS service domains, service groups and services_"
 
     **Status:** Approved
 
@@ -94,7 +89,7 @@ The new version is expected to add over 70 new terms.
 
 ??? note "[ISO 14813-5:2020](https://www.iso.org/standard/73746.html) *Intelligent transport systems — Reference model architecture(s) for the ITS sector — Part 5: Requirements for architecture description in ITS standards*"
 
-    **Status:** Approved
+    **Status:** Approved **(under revision)**{style="color: red;"}
 
     **Abstract:** This document defines documentation rules for standards that
     define interfaces between or among system elements of an ITS reference
