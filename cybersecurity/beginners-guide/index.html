@@ -1,0 +1,2541 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Information about ISO TC 204 standardization efforts">
+      
+      
+      
+        <link rel="canonical" href="https://iso-tc204.github.io/cybersecurity/beginners-guide/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../its-security-architectures/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Introduction - ISO TC 204 Information</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#a-beginners-guide-to-intelligent-transportation-system-its-cybersecurity" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ISO TC 204 Information" class="md-header__button md-logo" aria-label="ISO TC 204 Information" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ISO TC 204 Information
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ISO-TC204/ISO-TC204.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../work/" class="md-tabs__link">
+          
+  
+  
+  Our work
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../contributor/" class="md-tabs__link">
+          
+  
+  
+  Contributions
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../news/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  News
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../faq/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQs
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ISO TC 204 Information" class="md-nav__button md-logo" aria-label="ISO TC 204 Information" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ISO TC 204 Information
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ISO-TC204/ISO-TC204.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About us
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Intro to ITS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cybersecurity
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Cybersecurity
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#an-introduction-to-its-and-its-cybersecurity" class="md-nav__link">
+    <span class="md-ellipsis">
+      An Introduction to ITS and ITS Cybersecurity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="An Introduction to ITS and ITS Cybersecurity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#its-systems-of-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      ITS Systems of Systems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#introduction-to-cybersecurity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction to Cybersecurity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#its-cybersecurity" class="md-nav__link">
+    <span class="md-ellipsis">
+      ITS Cybersecurity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-its-cybersecurity-is-unique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why ITS Cybersecurity is Unique
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-real-time-safety-critical-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Real-Time, Safety-Critical Operations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-mobility-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Mobility Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-anonymity-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Anonymity Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-multi-entity-trust-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Multi-Entity Trust Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-embedded-permissions-within-certificates" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Embedded Permissions within Certificates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-continuous-adaptation-to-evolving-threats-in-dynamic-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Continuous Adaptation to Evolving Threats in Dynamic Environment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-velocity-of-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Velocity of Change
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#its-cybersecurity-building-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      ITS Cybersecurity Building Blocks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ITS Cybersecurity Building Blocks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#credential-management-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credential Management Systems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#its-certificate-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      ITS Certificate Standards
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entitlements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entitlements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#misbehaviour-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Misbehaviour Detection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internet-vs-its-cybersecurity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internet vs. ITS Cybersecurity
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../its-security-architectures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security architectures
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security-standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security standards
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ITS-Threat-Analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ITS Threat analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interoperability-strategies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Interoperability strategies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../its-cybersecurity-controls/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cybersecurity controls
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5_8" id="__nav_1_5_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Stakeholder guidance
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5_8">
+            <span class="md-nav__icon md-icon"></span>
+            Stakeholder guidance
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stakeholder-guidance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../standards-developers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Standards developers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policy-makers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Decision makers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Implementers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security-policies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cybersecurity policies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specialized-use-cases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Specialized use cases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TC 204 planning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contact us
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vocab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vocabulary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../acknowledgements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Acknowledgements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Our work
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Our work
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundational/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Foundational concepts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wg1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecture (WG 1)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wg20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Big data and AI (WG 20)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jwg1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    City data model - Transport (JWG 1)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wg16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Communications (WG 16)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wg18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cooperative systems (WG 18)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ag4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Coordination (AG 4)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ahg2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cybersecurity (AHG 2)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wg14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Driving automation and safety (WG 14)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wg5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fee and toll collection (WG 5)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wg7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fleet management (WG 7)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wg3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Geographic data (WG 3)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ag2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Identifiers (AG 2)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wg19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mobility integration (WG 19)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wg17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nomadic devices in ITS (WG 17)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ag3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operational improvement (AG 3)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wg8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Public transport/emergency (WG 8)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ag5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Publication and marketing (AG 5)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ag2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Identifiers (AG 2)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wg9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Transport mgmt and control (WG 9)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wg10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Traveller information (WG 10)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Contributions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Contributions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributor/commenter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commenter guidelines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributor/editor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Editor guidelines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributor/convenor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Convenor guidelines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    News
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#an-introduction-to-its-and-its-cybersecurity" class="md-nav__link">
+    <span class="md-ellipsis">
+      An Introduction to ITS and ITS Cybersecurity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="An Introduction to ITS and ITS Cybersecurity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#its-systems-of-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      ITS Systems of Systems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#introduction-to-cybersecurity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction to Cybersecurity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#its-cybersecurity" class="md-nav__link">
+    <span class="md-ellipsis">
+      ITS Cybersecurity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-its-cybersecurity-is-unique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why ITS Cybersecurity is Unique
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-real-time-safety-critical-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Real-Time, Safety-Critical Operations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-mobility-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Mobility Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-anonymity-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Anonymity Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-multi-entity-trust-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Multi-Entity Trust Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-embedded-permissions-within-certificates" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Embedded Permissions within Certificates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-continuous-adaptation-to-evolving-threats-in-dynamic-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Continuous Adaptation to Evolving Threats in Dynamic Environment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-velocity-of-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Velocity of Change
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#its-cybersecurity-building-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      ITS Cybersecurity Building Blocks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ITS Cybersecurity Building Blocks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#credential-management-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credential Management Systems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#its-certificate-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      ITS Certificate Standards
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entitlements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entitlements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#misbehaviour-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Misbehaviour Detection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internet-vs-its-cybersecurity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internet vs. ITS Cybersecurity
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+  
+    <nav class="md-breadcrumb" aria-label="Breadcrumbs" style="margin: 1rem 0; font-size: 0.75rem; color: slategray;">
+      
+  
+    
+      <a href="../.." style="color: var(--md-primary-fg-color); text-decoration: none;">Home</a> &gt;
+      
+        
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <a href="../.." style="color: var(--md-primary-fg-color); text-decoration: none;">Cybersecurity</a> &gt;
+      
+        
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+      <span>Introduction</span>
+    </nav>
+  
+  
+                  
+
+
+  
+  
+
+
+<h1 id="a-beginners-guide-to-intelligent-transportation-system-its-cybersecurity">A Beginner's Guide to Intelligent Transportation System (<abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr>) Cybersecurity<a class="headerlink" href="#a-beginners-guide-to-intelligent-transportation-system-its-cybersecurity" title="Permanent link">&para;</a></h1>
+<h2 id="an-introduction-to-its-and-its-cybersecurity">An Introduction to <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> and <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Cybersecurity<a class="headerlink" href="#an-introduction-to-its-and-its-cybersecurity" title="Permanent link">&para;</a></h2>
+<h3 id="its-systems-of-systems"><abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Systems of Systems<a class="headerlink" href="#its-systems-of-systems" title="Permanent link">&para;</a></h3>
+<p>Intelligent Transportation Systems (<abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr>) enhance mobility, safety and efficiency through <abbr title="characteristic of a material entity that is equipped with enabled (i.e. on) and operational electronic communication technologies to support ITS services , including the means to send and receive data to and from other connected entities">connected</abbr> and automated technologies. <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> systems rely on near real-time data exchange between vehicles, infrastructure, and cloud services to optimize traffic flow and improve vehicular safety as well as the safety of the integrated transportation <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr> more broadly.. Connected vehicles use <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr>-to-everything (V2X) communication to help prevent collisions, while <abbr title="portion of the road reservation excluding all roadway and driving space(s)">roadside</abbr> units (RSUs) relay information such as signal phase changes, work zone alerts, and dynamic <abbr title="rate of change of a material entity's position with respect to a frame of reference">speed</abbr> limits. The figure below illustrates the key components of a typical <abbr title="installation capable of performing one or more ITS applications">ITS deployment</abbr> and how they interact as a <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr> of systems.</p>
+<p><img alt="ITS Environment" src="../images/its_generic.jpg" /></p>
+<p>The complexity and interconnectedness of these systems create new operational benefits but also introduce new types of risk. Because vehicles and infrastructure often interact dynamically and at high speeds, reliability, precision, and trust in communications are important.</p>
+<h3 id="introduction-to-cybersecurity">Introduction to Cybersecurity<a class="headerlink" href="#introduction-to-cybersecurity" title="Permanent link">&para;</a></h3>
+<p>Cybersecurity is the protection of digital systems, communications, and data from unauthorized access, manipulation, or disruption. In critical infrastructure sectors such as transportation, controls enabled through cybersecurity directly affect directly affect physical safety. A cybersecurity failure could disrupt traffic signals, disable <abbr title="portion of the road reservation excluding all roadway and driving space(s)">roadside</abbr> infrastructure, or compromise the information provided to a <abbr title="vehicle that is connected using one or more communication media">connected vehicle</abbr> which could impact <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> operator decision making. Cybersecurity principles include confidentiality, integrity, and availability.</p>
+<p><img src="images/CIA.png" alt="CIA" style="zoom:60%;" /></p>
+<p>Confidentiality ensures that data is protected from unauthorized access, preserving privacy and preventing misuse. Integrity guarantees that data and messages remain accurate and unaltered during transmission or storage. Sender authentication ensures that whomever transmits a <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> was authorized by a trusted <abbr title="concrete or abstract thing that exists, did exist, or can possibly exist, including associations among these things">entity</abbr> to send the information. Availability ensures that systems and services remain operational and accessible when needed. In transportation, these principles apply to traffic control commands, <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> messaging, digital <abbr title="curvilinear length of roadway that shares the same road identifier">road</abbr> signage, and other systems. In systems where timing is important, accuracy, and authentication of source or destination entities are critical.</p>
+<h3 id="its-cybersecurity"><abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Cybersecurity<a class="headerlink" href="#its-cybersecurity" title="Permanent link">&para;</a></h3>
+<p><abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> cybersecurity ensures the integrity, confidentiality, and availability of data exchanged across an <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr>. It protects against cyber threats that could disrupt traffic management, compromise <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> behaviour, or manipulate digital traffic controls. This includes securing communication between vehicles and infrastructure, ensuring that only trusted devices participate in <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> applications, and protecting sensitive data from misuse or exposure. In the context of V2X, although confidentiality is not always required, data integrity and availability remain critical requirements at all times. This is due to the latency-sensitive nature of V2X messages such as Basic Safety Messages (BSMs), where encryption processing and messaging overhead may reduce the ability to receive information in a timely manner.</p>
+<p><img src="images/vehicle_v2x.jpg" alt="vehicle_v2x" style="zoom:67%;" /></p>
+<p>Modern <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> environments face a broad and evolving threat landscape. Communications between vehicles and infrastructure—known as Vehicle-to-Everything (V2X)—must be protected from interception, manipulation, and unauthorized injection of false data. Network infrastructure is vulnerable to denial-of-service (DoS) and malware-based attacks, which can disable <abbr title="portion of the road reservation excluding all roadway and driving space(s)">roadside</abbr> systems or overwhelm traffic management centers. IoT devices such as smart traffic signals, cameras, and sensors may be physically or remotely exploited due to weak default configurations or unpatched software. Location-based services can be compromised through GPS spoofing and jamming, causing vehicles to misreport their positions or lose navigation capability. As cyber-physical systems, <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> deployments must defend not just against digital exploits, but against threats that have direct safety consequences in the physical world—from manipulating emergency <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> priority to triggering unsafe driving conditions. The following diagram provides a simplified view of the types of threats that can affect different components of the <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> environment.</p>
+<p><img alt="ITS Ecosystem Threats" src="../images/its_threats.jpg" /></p>
+<p>Unlike traditional internet-based systems, <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> cybersecurity must function in highly mobile, latency-sensitive environments where anonymity of participants is often important. Vehicles must trust messages from other vehicles or <abbr title="portion of the road reservation excluding all roadway and driving space(s)">roadside</abbr> systems they have never encountered before—often with no direct internet connection or central authority available at the time of interaction. As a result, <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> requires specialized cybersecurity tools and protocols that go beyond traditional cybersecurity tools such as Transport Layer Security (TLS) and X.509 certificates.</p>
+<p>In the sections that follow we will further explore these challenges. First, we will introduce the unique characteristics of <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> cybersecurity. Next, we will explain why general-purpose cybersecurity tools are insufficient. Finally, we will describe the unique characteristics of <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> cybersecurity, explain why general-purpose cybersecurity tools are insufficient, and describe the standards and trust frameworks that support secure <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> deployments.</p>
+<h2 id="why-its-cybersecurity-is-unique">Why <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Cybersecurity is Unique<a class="headerlink" href="#why-its-cybersecurity-is-unique" title="Permanent link">&para;</a></h2>
+<p>Transportation systems integrate real-time cyber-physical operations with direct safety implications. Unlike traditional IT systems, which can often tolerate centralized trust models, identity-bound certificates, and latency, <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> requires decentralized, privacy-preserving, and low latency security models that operate across jurisdictions. These systems support millions of highly mobile vehicles and infrastructure components that must be able to securely interact often without continuous connectivity.</p>
+<p><abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> relies on the use of Public Key Infrastructure (PKI) which provides proven best practices including scalability and affordability. <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr>-specific certificate structures have been introduced to overcome specific challenges associated with <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> operations, for example IEEE 1609.2 and ETSI TS 103 09. The characteristics below highlight specific <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> characteristics.</p>
+<h2 id="1-real-time-safety-critical-operations">1. Real-Time, Safety-Critical Operations<a class="headerlink" href="#1-real-time-safety-critical-operations" title="Permanent link">&para;</a></h2>
+<table>
+  <tr>
+    <td style="width: 170px; vertical-align: middle; text-align: center;">
+      <img src="images/icon_low_latency.jpg" alt="Low Latency Icon" height="150">
+    </td>
+    <td>
+      **Real-Time, Safety-Critical Operations**<br>
+      ITS involve real-time interactions that directly affect safety. For example, vehicle-to-roadside unit (RSU) communication requires minimal latency so that vehicles can immediately process messages. Any delays that would be introduced through traditional internet security protocols, which are often optimized for less time-sensitive applications, could lead to safety hazards. ITS-specific mechanisms, such as IEEE Std. 1609.2 certificates, are designed to prioritize low-latency communication while maintaining security, making them better suited to the unique considerations associated with ITS real-time operations.
+    </td>
+  </tr>
+</table>
+
+<h2 id="2-mobility-requirements">2. Mobility Requirements<a class="headerlink" href="#2-mobility-requirements" title="Permanent link">&para;</a></h2>
+<table>
+  <tr>
+    <td style="width: 170px; vertical-align: middle; text-align: center;">
+      <img src="images/icon_mobile.jpg" alt="Mobility Icon" height="150">
+    </td>
+    <td>
+      **Mobility Requirements**<br>
+      Unlike stationary internet systems, transportation systems operate in highly dynamic environments where devices (e.g., vehicles, pedestrians, RSUs) continuously join and leave networks. IEEE Std. 1609.2 certificates are optimized for use in these dynamic environments, with support for example for short duration lifetimes. Traditional X.509 systems are less equipped to handle frequent certificate updates and revocations required for mobile, decentralized networks.
+    </td>
+  </tr>
+</table>
+
+<h2 id="3-anonymity-requirements">3. Anonymity Requirements<a class="headerlink" href="#3-anonymity-requirements" title="Permanent link">&para;</a></h2>
+<table>
+  <tr>
+    <td style="width: 170px; vertical-align: middle; text-align: center;">
+      <img src="images/icon_privacy.jpg" alt="Privacy Icon" height="150">
+    </td>
+    <td>
+      **Anonymity Requirements**<br>
+  PKI systems such as the Cooperative Intelligent Transportation Systems Credential Management System (CCMS) and Security Credential Management System (SCMS) issue pseudonym certificates to vehicle OBUs, enabling trusted communication while preserving subscriber anonymity. X.509 certificates have no mechanism for preserving subscriber anonymity.
+    </td>
+  </tr>
+</table>
+
+<h2 id="4-multi-entity-trust-management">4. Multi-Entity Trust Management<a class="headerlink" href="#4-multi-entity-trust-management" title="Permanent link">&para;</a></h2>
+<table>
+  <tr>
+    <td style="width: 170px; vertical-align: middle; text-align: center;">
+      <img src="images/icon_multijurisdictional.jpg" alt="Multi Jurisdictional Icon" height="150">
+    </td>
+    <td>
+      **Multi-Entity Trust Management**<br>
+ITS environments involve a wide range of stakeholders, including vehicles from multiple Original Equipment Manufacturers (OEMs), infrastructure owned by various jurisdictions, and multiple communication providers. Establishing trust across these entities requires specialized structures, such as the Certificate Trust List (CTL) in North America or the European Certificate Trust List (ECTL). These mechanisms enable the extension of trust to differing policy domains and support the dynamic operation of vehicles with infrastructures owned and managed by differing entities. Generic systems like X.509 lack these built-in cross-trust mechanisms and require substantial planning and processes for trust extension, making them less suited for managing complex ITS trust requirements.
+    </td>
+  </tr>
+</table>
+
+<h2 id="5-embedded-permissions-within-certificates">5. Embedded Permissions within Certificates<a class="headerlink" href="#5-embedded-permissions-within-certificates" title="Permanent link">&para;</a></h2>
+<table>
+  <tr>
+    <td style="width: 170px; vertical-align: middle; text-align: center;">
+      <img src="images/icon_appsandroles.jpg" alt="Applications and Roles Icon" height="150">
+    </td>
+    <td>
+      **Embedded Permissions within Certificates**<br>
+Traditional network security controls who can join a system and provides fine-grained access through user accounts and roles. In ITS, however, devices often share the same network infrastructure, so connecting alone does not grant any special rights. Instead, each device must present a cryptographic certificate that embeds explicit permissions, defining exactly which applications and roles it is allowed to use. For example, IEEE Std. 1609.2 certificates contain Intelligent Transport System Application Identifiers (ITS-AID), Provider Service Identifiers (PSID), and Service Specific Permissions (SSP) that control which messages a participant may send and what actions it may request. This ensures that only properly authorized vehicles can request signal priority or transmit safety-critical data, even on a shared network.</td>
+    </tr>
+</table>
+
+<h2 id="6-continuous-adaptation-to-evolving-threats-in-dynamic-environment">6. Continuous Adaptation to Evolving Threats in Dynamic Environment<a class="headerlink" href="#6-continuous-adaptation-to-evolving-threats-in-dynamic-environment" title="Permanent link">&para;</a></h2>
+<table>
+  <tr>
+    <td style="width: 170px; vertical-align: middle; text-align: center;">
+      <img src="images/icon_safety_critical.jpg" alt="Safety Critical Icon" height="150">
+    </td>
+    <td>
+        **Dynamic Threats in Highly Mobile Environment**<br>
+        ITS cybersecurity requires a continuous risk assessment process that adapts to the evolving technologies and attacker capabilities within this large-scale, dynamic, and safety-critical domain. The vast scale increases the attack surface (millions of vehicles/devices) and means that a widespread attack could have massive impact. Managing trust and detecting anomalies across so many entities is challenging especially given the dynamic environment where network topologies change rapidly and communication is characterized by intermittent connectivity and high mobility. This make establishment of persistent trust relationships and the identification of malicious nodes more difficult.</td>
+    </tr>
+</table>
+
+<h2 id="7-velocity-of-change">7. Velocity of Change<a class="headerlink" href="#7-velocity-of-change" title="Permanent link">&para;</a></h2>
+<table>
+  <tr>
+    <td style="width: 170px; vertical-align: middle; text-align: center;">
+      <img src="images/icon_massive_scale.jpg" alt="Scale Icon" height="150">
+    </td>
+    <td>
+      **Pseudonymity at Scale**<br>
+The scalability and certificate management challenge in V2X ITS comes from the extremely high frequency of change and sheer volume of short-lived pseudonym certificates required for privacy.  The velocity of change in V2X pseudonymity (e.g., a vehicle might use dozens of certificates per week or even per day of driving) creates unique operational loads on the SCMS for issuance, and on vehicles for storage and selection. In addition, ITS devices are expected to encounter previously unknown ITS devices regularly, requiring that ITS certificates be shared regularly.
+    </td>
+  </tr>
+</table>
+
+<h2 id="its-cybersecurity-building-blocks"><abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Cybersecurity Building Blocks<a class="headerlink" href="#its-cybersecurity-building-blocks" title="Permanent link">&para;</a></h2>
+<p>Now that we've established what makes <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> cybersecurity unique, it's useful to introduce the key mechanisms that have been developed to meet those needs. These mechanisms include secure certificate formats tailored for mobile use, frameworks for distributing and managing credentials across millions of devices, and systems for detecting and responding to misbehaviour in the network. While specific implementations vary by region—for example, between North America’s <abbr title="security credential management system">SCMS</abbr> and Europe’s <abbr title="Cooperative Credential Management System: support system that enables trusted communications among ITS components and protects data from unauthorized access">CCMS</abbr>—the core building blocks share common goals and are aligned with international standards.</p>
+<p>The following section provides a high-level overview of these mechanisms, written for non-experts. More technical readers are encouraged to explore the <a href="../its-cybersecurity-controls/"><abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Cybersecurity Mechanisms and Building Blocks</a> section for deeper background.</p>
+<h3 id="credential-management-systems">Credential Management Systems<a class="headerlink" href="#credential-management-systems" title="Permanent link">&para;</a></h3>
+<p>A Credential Management System (<abbr title="security credential management system">SCMS</abbr> or <abbr title="Cooperative Credential Management System: support system that enables trusted communications among ITS components and protects data from unauthorized access">CCMS</abbr>) is a specialized type of public key infrastructure (PKI) designed for <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr>. It provides the foundation of trust for communications between vehicles, infrastructure, and backend systems. Unlike traditional PKI systems that issue long-term identity certificates, <abbr title="security credential management system">SCMS</abbr> and <abbr title="Cooperative Credential Management System: support system that enables trusted communications among ITS components and protects data from unauthorized access">CCMS</abbr> issue short-lived pseudonym certificates that protect user privacy while still enabling strong authentication and authorization. The diagram below introduces the core components of a credential management <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr> used to enable trusted communication in <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr>, based on an <abbr title="security credential management system">SCMS</abbr> <abbr title="fundamental concepts or properties of a system in its environment embodied in its elements , relationships and in the principles of its design and evolution">architecture</abbr>.</p>
+<p><img alt="Public Key Infrastructure" src="../images/pki.jpg" /></p>
+<p>The credential management <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr> shown here includes key roles that work together to provide trusted V2X communication. Electors approve or revoke Root Certificate Authorities (CAs) and maintain the <abbr title="A list of trusted Root Certificate Authorities and security authorities used to verify which certificates a system accepts.">Certificate Trust List</abbr> (<abbr title="Certificate Trust List">CTL</abbr>). The PKI Manager oversees policy enforcement and trust anchor updates. The Root <abbr title="certificate authority">CA</abbr> is a top-level trust anchor, while Subordinate CAs handle certificate issuance for specific purposes or regions. Registration Authorities (RAs) process enrolment requests from end entities like OBUs and RSUs. The Distribution Center (DC) provides an API for devices to download current trust lists and revocation lists. The Misbehaviour Authority (MA) collects reports about suspected misbehaviour and coordinates with the PKI Manager to revoke trust when necessary. This structure ensures vehicles and infrastructure can authenticate each other’s messages while preserving privacy through short-lived certificates.</p>
+<h3 id="its-certificate-standards"><abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Certificate Standards<a class="headerlink" href="#its-certificate-standards" title="Permanent link">&para;</a></h3>
+<p><abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> uses certificate formats specifically tailored for the real-time, decentralized, and mobile nature of V2X communications. Two major standards are used globally: IEEE 1609.2, which is primarily deployed in North America, and ETSI TS 103 097, which is used in Europe. While developed in parallel, both standards share key features that address the specific challenges of <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr>. They support privacy-preserving pseudonymity, allowing vehicles to authenticate messages without revealing long-term <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> or personal identities. They also include <abbr title="well defined geographic place described by one coordinate tuple">geolocation</abbr> constraints and flexible permission structures that enable fine-grained control over what actions a device is authorized to perform.</p>
+<p><img src="images\1609.2Format.jpg" alt="1609.2Format" style="zoom:67%;" /></p>
+<h3 id="entitlements">Entitlements<a class="headerlink" href="#entitlements" title="Permanent link">&para;</a></h3>
+<p><abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> certificates can carry embedded entitlements—policy assertions that define what a device is authorized to do in the context of specific <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> applications. These entitlements are expressed using certificate fields such as the <abbr title="ITS Application Identifier">ITS-AID</abbr>/<abbr title="provider service identifier">PSID</abbr> and Service-Specific Permissions (<abbr title="service specific permission">SSP</abbr>) in IEEE deployments, or the <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Application Identifier (<abbr title="ITS Application Identifier">ITS-AID</abbr>) and corresponding permissions in ETSI-based systems. For example, in an IEEE 1609.2 certificate, AppPermissions carries a sequence of authorized <abbr title="ITS Application Identifier">ITS-AID</abbr>/<abbr title="provider service identifier">PSID</abbr> and <abbr title="service specific permission">SSP</abbr> entries, representing the applications and roles that the device possessing the certificate is authorized to participate in.</p>
+<p>For example, a certificate may include an entitlement that authorizes a <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> to request signal priority, while restricting that capability from others. A sending device, for example an <abbr title="onboard unit">OBU</abbr> transmits a <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> as a signed secure protocol data unit (SPDU), and the receiving device validates <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> authenticity, followed by a check against the <abbr title="ITS Application Identifier">ITS-AID</abbr>/<abbr title="provider service identifier">PSID</abbr> and <abbr title="service specific permission">SSP</abbr> permissions asserted in the <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr>. These permissions are checked against the sending devices' certificates, using the appPermissions field.</p>
+<p><img src="images\appPermissionMessaging.jpg" alt="appPermissionMessaging" style="zoom:67%;" /></p>
+<p>By supporting fine-grained entitlements, <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> certificates enable strong access control mechanisms that align with specific use cases, user roles, or organizational policies.</p>
+<h3 id="misbehaviour-detection">Misbehaviour Detection<a class="headerlink" href="#misbehaviour-detection" title="Permanent link">&para;</a></h3>
+<p>Even in a well-secured <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr>, trusted devices can malfunction or behave maliciously. In <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr>, where safety depends on the accuracy and integrity of real-time data, it is important to continuously evaluate whether participants are acting in accordance with expected behaviours. Misbehaviour detection systems are designed to identify faulty or deceptive behaviour; for example  inconsistent <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> position updates, spoofed GPS signals, or invalid safety alerts, and initiate a response that preserves trust in the network. These systems operate at both the edge and the backend. Local detection capabilities onboard vehicles or infrastructure can flag suspicious messages, while backend authorities analyze reported incidents, corroborate evidence, and determine whether a device's credentials should be suspended or revoked. The figure below illustrates a simplified view of how misbehaviour is detected, validated, and responded to in a credential-based <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> environment.</p>
+<p><img alt="MisbehaviourLifecycle" src="../images/MisbehaviorLifecycle.jpg" /></p>
+<p>This diagram shows how misbehaviour reports (<abbr title="Misbehavior Reports">MBRs</abbr>) flow through an <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> security environment. An <abbr title="onboard unit">OBU</abbr> detects an anomaly in a received Basic Safety Message (BSM) and generates an <abbr title="Misbehavior Report">MBR</abbr>. This report can be sent directly to the Public Key Infrastructure (PKI) or passed through a <abbr title="roadside unit">RSU</abbr>. RSUs themselves may detect misbehaviour and send reports directly to a Traffic Management Center (TMC) or the PKI. The PKI analyses reports, and decides whether revocation or suspension is necessary, then update revocation lists or takes other action as necessary.</p>
+<hr />
+<h2 id="internet-vs-its-cybersecurity">Internet vs. <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Cybersecurity<a class="headerlink" href="#internet-vs-its-cybersecurity" title="Permanent link">&para;</a></h2>
+<p>Digital security architectures are typically built as layered stacks, with each layer addressing different types of threats and trust requirements. The traditional internet stack, built around protocols such as TLS and certificate formats like X.509, is well-suited for securing static web services, enterprise systems, and client-server communications. <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> involves mobile actors, short-lived trust relationships, and real-time decision-making in safety-critical contexts. These differences have led to the development of an <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr>-specific cybersecurity stack, designed for decentralized communication, scalability, privacy, and performance in dynamic environments.</p>
+<p>It's crucial to recognize that these certificate types are not mutually exclusive; X.509 and IEEE 1609.2 certificates can and often do co-exist on a single <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> device (e.g., a <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> or <abbr title="roadside unit">RSU</abbr>). A <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> might use an IEEE 1609.2 certificate for broadcasting its position via BSMs, while simultaneously using an X.509 certificate to establish a secure TLS session with a backend service <abbr title="entity that delivers one or more transport services">provider</abbr> for a non-safety application (e.g., infotainment update, diagnostics upload).</p>
+<ul>
+<li>
+<p>X.509 Certificates for Conventional IT/Enterprise Communications: X.509 certificates, the backbone of web security (SSL/TLS), are typically used in <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> for securing Backend Communications:  Connections between <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> centers (e.g., METR Regulation System, METR Distribution Centre, <abbr title="security credential management system">SCMS</abbr> components) and Secure Device Provisioning/Management: Potentially for initial bootstrapping or secure software updates to <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> stations (vehicles, RSUs) where a traditional client-server secure channel is appropriate.</p>
+</li>
+<li>
+<p>IEEE 1609.2 Certificates for V2X Communications:  IEEE 1609.2 standard defines certificates and security services specifically tailored for Vehicle-to-Everything (V2X) direct communications. This includes: (a) Securing Safety Messages e.g BSMs, CAMs, (b) Enabling Pseudonymity: Using short-lived, frequently changing pseudonym certificates to protect <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> <abbr title="particular place or position">location</abbr> privacy.</p>
+</li>
+</ul>
+<p>The following comparison outlines where each stack is typically applied. It is intended as a decision tool. It identifies common deployment considerations and helps clarify which certificate format is better suited to address each one. Readers should evaluate each row in the context of their deployment environment and <abbr title="description of the behavioural requirements of a system and its interaction with a user">use case</abbr>. A key takeaway is that in <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> there is a <abbr title="specified responsibilities">role</abbr> for X.509 certs next to 1609.2 certs as they cover different operational requirements.</p>
+<table>
+<thead>
+<tr>
+<th>Deployment Consideration</th>
+<th>X.509 Certificates</th>
+<th><abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Certificates (IEEE 1609.2/TS 103 097)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is the environment latency-sensitive or safety-critical? For example, does the <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr> require real-time processing of messages.</td>
+<td>✘</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Are devices mobile and frequently entering/leaving networks?</td>
+<td>✘</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Is user anonymity or pseudonymity required? For example, does the deployment <abbr title="user need to transport one or more material entities to a different location">need</abbr> to preserve privacy while still verifying <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> authenticity?</td>
+<td>✘</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Is fine-grained access control required? For example, do you <abbr title="user need to transport one or more material entities to a different location">need</abbr> to define what specific actions a device can take within a given application (e.g., request signal priority)?</td>
+<td>✘</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Are devices expected to send messages without a connection to a server?</td>
+<td>✘</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Is the environment bandwidth-constrained or using wireless links?</td>
+<td>✘</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Is the deployment centralized and session-based?</td>
+<td>✔</td>
+<td>✘</td>
+</tr>
+<tr>
+<td>Will the deployment integrate with traditional IT infrastructure (e.g., TMC servers, cloud APIs)?</td>
+<td>✔</td>
+<td>✘</td>
+</tr>
+</tbody>
+</table>
+<p>X.509 certificates are still a valid and widely used option for securing communications in backend systems, including data exchanges between traffic management centers, cloud platforms, and enterprise services. However, for on-<abbr title="curvilinear length of roadway that shares the same road identifier">road</abbr> communication, safety-critical applications, and mobility-centric environments, X.509 lacks the necessary support for short-lived credentials, anonymity, decentralized trust, and application-specific permissions.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 24, 2025 01:38:03 UTC">July 24, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      CC BY 4.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.tooltips", "header.auto_hide", "navigation.path", "navigation.top", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -16,11 +16,11 @@
         <link rel="prev" href="../security-policies/">
       
       
-        <link rel="next" href="../../planning/">
+        <link rel="next" href="../Glossary/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
@@ -539,7 +539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dummys-guide/" class="md-nav__link">
+      <a href="../beginners-guide/" class="md-nav__link">
         
   
   
@@ -562,35 +562,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../Regional-considerations/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Regional considerations
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../its-security-architectures/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Security Architectires
+    Security architectures
     
   </span>
   
@@ -631,12 +608,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../trust-bridges/" class="md-nav__link">
+      <a href="../ITS-Threat-Analysis/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Interoperability Strategies
+    ITS Threat analysis
     
   </span>
   
@@ -654,12 +631,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../system-specific-security/" class="md-nav__link">
+      <a href="../interoperability-strategies/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Cybersecurity mechanisms
+    Interoperability strategies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../its-cybersecurity-controls/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cybersecurity controls
     
   </span>
   
@@ -741,12 +741,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../implementers/" class="md-nav__link">
+      <a href="../standards-developers/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Implementers
+    Standards developers
     
   </span>
   
@@ -764,7 +764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../decision-makers/" class="md-nav__link">
+      <a href="../policy-makers/" class="md-nav__link">
         
   
   
@@ -787,12 +787,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../standards-developers/" class="md-nav__link">
+      <a href="../implementers/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Standards developers
+    Implementers
     
   </span>
   
@@ -823,7 +823,7 @@
   
   
   <span class="md-ellipsis">
-    Cybersecurity governance
+    Cybersecurity policies
     
   </span>
   
@@ -926,10 +926,42 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#cooperative-awareness-message-cam" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cooperative Awareness Message (CAM)
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1865,6 +1897,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#cooperative-awareness-message-cam" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cooperative Awareness Message (CAM)
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1898,6 +1939,8 @@
       <a href="../.." style="color: var(--md-primary-fg-color); text-decoration: none;">Cybersecurity</a> &gt;
       
         
+  
+    
   
     
   
@@ -1958,34 +2001,41 @@
 
 
 <h1 id="specialized-use-cases">Specialized Use Cases<a class="headerlink" href="#specialized-use-cases" title="Permanent link">&para;</a></h1>
-<p>Certain <abbr title="Intelligent Transport Systems">ITS</abbr> applications involve heightened cybersecurity risks due to their safety-critical nature, sensitivity of data, or exposure to external networks. This section highlights examples of such use cases and outlines associated risks and considerations for implementers.</p>
+<p>Certain <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> applications involve heightened cybersecurity risks due to their safety-critical nature, sensitivity of data, or exposure to external networks. This section highlights examples of such use cases and outlines associated risks and considerations for implementers.</p>
 <h2 id="cooperative-driving-automation-cda">Cooperative Driving Automation (CDA)<a class="headerlink" href="#cooperative-driving-automation-cda" title="Permanent link">&para;</a></h2>
-<p>Cooperative Driving Automation allows vehicles to coordinate actions such as lane merging, platooning, and emergency response through direct communication. These interactions are highly time-sensitive and safety-critical. Key risks:</p>
+<p>Cooperative Driving Automation allows vehicles to coordinate actions such as <abbr title="portion of carriageway designed to accommodate a single line of moving road vehicles">lane</abbr> merging, platooning, and emergency response through direct communication. These interactions are highly time-sensitive and safety-critical. Key risks:</p>
 <ul>
-<li>Spoofed messages triggering incorrect maneuvers</li>
+<li>Spoofed messages triggering incorrect manoeuvres</li>
 <li>Unauthorized devices attempting to participate</li>
 <li>Injection of false trajectory or intent data</li>
 </ul>
 <h2 id="probe-data-collection">Probe Data Collection<a class="headerlink" href="#probe-data-collection" title="Permanent link">&para;</a></h2>
-<p>Probe data applications collect information such as vehicle speed, heading, or environmental conditions to support traffic analysis and planning. Key risks:</p>
+<p>Probe data applications collect information such as <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> <abbr title="rate of change of a material entity's position with respect to a frame of reference">speed</abbr>, heading, or environmental conditions to support traffic analysis and planning. Key risks:</p>
 <ul>
 <li>Unauthorized access to collected data</li>
-<li>Leakage of personally identifiable or vehicle-identifiable information</li>
+<li>Leakage of personally identifiable or <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr>-identifiable information</li>
 <li>Injection of fabricated probe reports</li>
 </ul>
 <h2 id="road-use-charging-ruc">Road Use Charging (RUC)<a class="headerlink" href="#road-use-charging-ruc" title="Permanent link">&para;</a></h2>
-<p>Road Use Charging systems rely on trusted reporting of mileage, location, or toll zone entry to calculate fees. Key risks:</p>
+<p>Road Use Charging systems rely on trusted reporting of mileage, <abbr title="particular place or position">location</abbr>, or toll zone entry to calculate fees. RUC systems track mileage or toll zone entry to calculate user fees. Accuracy and fairness depend on trusted <abbr title="particular place or position">location</abbr> reporting. Key risks:</p>
 <ul>
 <li>Manipulation of reported travel data to reduce fees</li>
-<li>Credential sharing or spoofing to mask vehicle identity</li>
-<li>Unauthorized software modification to disable location tracking</li>
+<li>Credential sharing or spoofing to mask <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> identity</li>
+<li>Unauthorized software modification to disable <abbr title="particular place or position">location</abbr> tracking</li>
 </ul>
 <h2 id="mobile-edge-computing-mec">Mobile Edge Computing (MEC)<a class="headerlink" href="#mobile-edge-computing-mec" title="Permanent link">&para;</a></h2>
-<p>MEC allows data processing closer to the field, such as at RSUs or in-vehicle systems, reducing latency for time-sensitive applications. Key risks:</p>
+<p>MEC allows data processing closer to the field, such as at RSUs or in-<abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> systems, reducing latency for time-sensitive applications. Key risks:</p>
 <ul>
 <li>Unauthorized access to locally processed data</li>
 <li>Deployment of unvetted software at edge nodes</li>
 <li>Disruption of V2X applications through edge-layer compromise</li>
+</ul>
+<h2 id="cooperative-awareness-message-cam">Cooperative Awareness Message (CAM)<a class="headerlink" href="#cooperative-awareness-message-cam" title="Permanent link">&para;</a></h2>
+<p>Cooperative Awareness Messages are used by vehicles and <abbr title="portion of the road reservation excluding all roadway and driving space(s)">roadside</abbr> units to broadcast information such as position, <abbr title="rate of change of a material entity's position with respect to a frame of reference">speed</abbr>, and heading at frequent intervals. This basic safety <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> helps surrounding <abbr title="curvilinear length of roadway that shares the same road identifier">road</abbr> users build situational awareness and react appropriately. Key risks:</p>
+<ul>
+<li>Manipulation of CAM content to hide or fake a <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr>’s presence</li>
+<li>Unauthorized transmission of CAMs by rogue devices</li>
+<li>Privacy concerns if CAMs are linked to a permanent <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> identity</li>
 </ul>
 
 
@@ -2007,7 +2057,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 14, 2025 13:03:22 UTC">April 14, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 30, 2025 19:45:47 UTC">June 30, 2025</span>
   </span>
 
     
@@ -2070,7 +2120,7 @@
       <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.tooltips", "header.auto_hide", "navigation.path", "navigation.top", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
   </body>
