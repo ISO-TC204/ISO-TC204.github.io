@@ -6,7 +6,9 @@
 *[ADS]: Automated Driving System: driving automation system that is able to perform the entire DDT on a sustained basis
 *[AID]: Application Identifier
 *[alley]: road that has buildings, walls or fences on each side
+*[ALPR]: automatic license plate recognition
 *[anonymized vehicle reference]: reference for a vehicle derived from vehicle properties such as registration number but encoded so that it does not allow a human to identify the vehicle directly from the encoded value
+*[ANPR]: automatic number plate recognition
 *[application entity]: part of the ITS station reference architecture that is responsible for providing ITS-related functionality
 *[application template]: defined annotated outline for an ITS application specification
 *[ARC-IT]: Architecture Reference for Cooperative and Intelligent Transportation
@@ -19,6 +21,7 @@
 *[architecture]: fundamental concepts or properties of a system in its environment embodied in its elements , relationships and in the principles of its design and evolution
 *[area destination]: area location, which is the destination of a defined route or itinerary
 *[area location]: spatial location enclosed within a two-dimensional boundary or boundaries across a defined surface
+*[ASN.1]: Abstract Syntax Notation One, an interface description language for defining data structures that can be serialized and deserialized in a standard, cross-platform way
 *[at-grade intersection]: junction without any grade separated manoeuvres
 *[Authorization Authority]: In European C-ITS, the component that issues short-term Authorization Tickets to ITS stations for signing messages.
 *[Authorization Ticket]: A short-lived certificate in the European CCMS used to sign V2X messages while protecting sender privacy.
@@ -43,6 +46,7 @@
 *[CCMS]: Cooperative Credential Management System: support system that enables trusted communications among ITS components and protects data from unauthorized access
 *[central reservation]: part of the road reservation between carriageways designed for travel safety purposes
 *[central system]: ITS component that provides application, management, and/or administrative functions from a centralized location (i.e. not at the roadside)
+*[CEN]: European Committee for Standardization
 *[Certificate Trust List]: A list of trusted Root Certificate Authorities and security authorities used to verify which certificates a system accepts.
 *[CIDCR]: Central ITS Data Concepts Register
 *[CISA]: Cybersecurity and Infrastructure Security Agency
@@ -96,6 +100,7 @@
 *[driving automation fallback]: response by a person to perform the DDT or by an ADS to achieve a minimal risk condition when the response is triggered upon violation of the defined operational design domain constraints or in response to a DDT performance-relevant driving automation system failure
 *[driving automation system]: hardware and software system that is able to perform part or all of the DDT on a sustained basis
 *[driving space]: area above the roadway that is primarily designed for the movement of vehicles
+*[DSRC]: dedicated short range communication
 *[dual carriageway ]: having exactly two carriageways
 *[duration]: time between two instants
 *[dynamic driving task]: all real-time operational and tactical functions required to operate a vehicle in on-road traffic
@@ -106,6 +111,7 @@
 *[EA]: Enrolment Authority
 *[EC]: Enrolment Credential
 *[ECTL]: European Certificate Trust List
+*[EFC]: electronic fee collection
 *[egress lane]: traffic lane designed for exiting a junction
 *[egress link]: all egress lanes on a road link
 *[european certificate trust list]: The signed electronic version of a trust list used in European deployments to distribute trusted root and authority information to devices.
@@ -152,6 +158,7 @@
 *[geographic identifier]: spatial reference in the form of a label or code that identifies a location
 *[geographic point location]: well defined geographic place described by one coordinate tuple
 *[geolocation]: well defined geographic place described by one coordinate tuple
+*[GNSS]: global navigation satellite system
 *[government customer model]: contractual model where the user is a governmental entity
 *[grade junction]: junction without any grade separated manoeuvres
 *[grade separated manoeuvre]: manoeuvre that is vertically separated from one or more manoeuvres that cross its two-dimensional path
@@ -168,6 +175,9 @@
 *[high vehicle speed]: speed of a vehicle that exceeds free flow motorway speeds by a factor of two or more
 *[high-speed vehicle]: vehicle with a design speed in the range of high vehicle speeds
 *[HSM]: hardware security module
+*[IAP]: interoperability application profile
+*[ICC]: integrated circuit card
+*[ICT]: information and communications technologies
 *[immaterial entity]: entity that does not occupy three-dimensional space
 *[in-vehicle driver]: driver that performs the dynamic driving task using the vehicle's built-in input devices to control the longitudinal and lateral movement of the vehicle
 *[information flow triple]: information flow from a physical object acting as an information provider and sent to another physical object acting as an information consumer
@@ -188,6 +198,7 @@
 *[intersection that allows travellers to change roads ]: traffic lane designed for entering a junction
 *[intersection]: space where two or more roads meet or cross
 *[interstate highway]: road with separate carriageways for each direction, with limited access that prevents cross traffic on the same level, and for the exclusive use of certain classes of motor vehicles
+*[ISO]: International Organization for Standardization
 *[ITS-AID]: ITS application identifier
 *[ITS application identifier]: unique identifier assigned by the Registry for ITS Identifiers to identify an ITS application object
 *[ITS application role]: ITS-S user need expressed as a formal set of interoperability requirements that need to be fulfilled to satisfy a portion of functionality of an ITS application
@@ -323,6 +334,7 @@
 *[motorway]: road with separate carriageways for each direction, with limited access that prevents cross traffic on the same level, and for the exclusive use of certain classes of motor vehicles
 *[movable bridge ]: bridge with a deck that can be moved in a way that disrupts the continuous travel path
 *[moving walkway]: footpath consisting of a conveyor belt for pedestrians
+*[MRF]: machine-readable file
 *[multiple carriageway ]: having more than one carriageway
 *[navigation app]: mobility app that assists a transport user to determine the best route to a destination
 *[need]: desired results of a user within a specified context of use
@@ -405,6 +417,7 @@
 *[ridesourced service]: commercial , peer-to-peer shared transport service that transports passengers
 *[ridesourcing app]: P2P mobility sharing app for acquiring a ridesourced service
 *[ridesplit service]: ridesourced service that serves passengers concurrently
+*[RLAN]: radio local area network
 *[road cycle]: vehicle meeting the legal requirements to operate in cycle lanes and cycleways
 *[road equipment]: component of transport infrastructure along the roadway intended to contribute to the safety, operations, management, awareness, and comfort of movements of the road users
 *[road furniture]: component of transport infrastructure along the roadway intended to contribute to the safety, operations, management, awareness, and comfort of movements of the road users
@@ -485,6 +498,8 @@
 *[traveller]: person who is headed to a destination
 *[trip aggregator app]: mobility app that assists a transport user in planning trips that may span multiple vehicle modes or transport providers
 *[trusted platform module]: A secure hardware chip embedded in a device that stores keys and measurements used for secure boot and attestation; similar in purpose to an HSM but typically built-in.
+*[TSP]: toll service provider
+*[TTCN]: Testing and Test Control Notation
 *[ultra-low vehicle speed]: speed of a vehicle that does not greatly exceed typical pedestrian speeds
 *[ultra-low-speed vehicle]: vehicle with a design speed that does not exceed ultra-low vehicle speeds
 *[unconnected]: characteristic of a material entity that is equipped with communications equipment that is not active or is otherwise unable to send data to or receive data from connected entities
