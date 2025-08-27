@@ -1,6 +1,6 @@
 # Performing an ITS Threat Analysis
 
-ITS operators should conduct threat analysis by evaluating how adversaries could compromise specific functions across the system. Begin by identifying each system component and  for each, assess the types of data it handles, the services it provides, and the interfaces it exposes. Use that information to define the threat surface and determine which attack scenarios are most relevant. Map each identified threat to a [cybersecurity control](its-cybersecurity-controls.md) that can be implemented at the appropriate layer of the [ITS cybersecurity reference architecture](its-security-architectures.md). As the system evolves, repeat the threat analysis to validate that protections remain effective and aligned to real-world risks.
+ITS operators should conduct threat analysis by evaluating how adversaries could compromise specific functions across the system. Begin by identifying each system component and  for each, assess the types of data it handles, the services it provides, and the interfaces it exposes. Use that information to define the threat surface and determine which attack scenarios are most relevant. Map each identified threat to an [ITS Cybersecurity Pattern](its-security-patterns.md). As the system evolves, repeat the threat analysis to validate that protections remain effective and aligned to real-world risks.
 
 ## High-Level Process for Conducting an ITS Threat Analysis
 
@@ -33,7 +33,7 @@ In North America, threat analysis activities are often embedded within more gene
 
 The following threats may be applicable to an ITS. You may use these threats as references when developing your system-specific threat analysis and risk profile. See the Recommended Cybersecurity Controls column to identify controls that can be used to mitigate these threats in part or in whole.
 
-| Threat ID | Threat Example                                               | [Recommended Cybersecurity Controls](its-cybersecurity-controls.md) |
+| Threat ID | Threat Example                                               | [Recommended Cybersecurity Controls](its-security-patterns.md) |
 | --------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | T_0001    | Unauthorized ITS device or application access.               | Secure Device Configuration                                  |
 | T_0002    | Malware or modified code causes an ITS device to transmit false warnings or suppress valid messages. | Authenticated Software                                       |
@@ -53,14 +53,14 @@ The following threats may be applicable to an ITS. You may use these threats as 
 | T_0016    | Link-layer injection or jamming                              | Transport Security; Network Security                         |
 | T_0017    | Invalid or expired certificates used to attempt to gain access | Certificate Lifecycle Management                             |
 | T_0018    | Inadequate revocation response                               | Certificate Lifecycle Management                             |
-| T_0019    | Poor misbehaviour detection coverage                          | Misbehaviour Detection; Misbehaviour Reporting; Misbehaviour Processing and Adjudication |
+| T_0019    | Poor misbehaviour detection coverage                         | Misbehaviour Detection; Misbehaviour Reporting; Misbehaviour Processing and Adjudication |
 | T_0020    | ITS devices with revoked certificates are still trusted within the ITS. | Certificate Lifecycle Management                             |
-| T_0021    | Misbehaviours go undetected within the ITS                    | Misbehaviour Detection; Misbehaviour Reporting                 |
+| T_0021    | Misbehaviours go undetected within the ITS                   | Misbehaviour Detection; Misbehaviour Reporting               |
 | T_0022    | An ITS device is enrolled into a certificate management system without meeting security or compliance requirements. | Certificate Lifecycle Management                             |
 | T_0023    | The private key associated with a trusted certificate is extracted or duplicated, allowing impersonation of a legitimate device. | Cryptographic Key Generation                                 |
 | T_0024    | A CTL update is manipulated and distributed without proper signatures. | Interoperability; Certificate Lifecycle Management           |
 | T_0025    | Devices fail to download updated CRLs or CTLs and continue to trust revoked or expired entities. | Secure Device Configuration; Certificate Lifecycle Management |
-| T_0026    | An attacker submits a non-compliant device for enrolment.   | Certificate Lifecycle Management                             |
+| T_0026    | An attacker submits a non-compliant device for enrolment.    | Certificate Lifecycle Management                             |
 | T_0027    | A certificate is issued with overly broad SSPs, granting the device capabilities beyond its operational role. | Service Authorization; Certificate Lifecycle Management      |
 | T_0028    | A vehicle transmits location data inconsistent with plausible movement, affecting other vehicles' path planning | Misbehaviour Detection; Misbehaviour Reporting; Misbehaviour Processing and Adjudication |
 | T_0029    | A device sends SRMs without entitlement or in implausible patterns. | Service Authorization; Misbehaviour Detection; Misbehaviour Reporting; Misbehaviour Processing and Adjudication |

@@ -1,6 +1,6 @@
 # Security Standards and Guidance Documents
 
-This page identifies standards that support implementation of cybersecurity functions aligned with the [ITS Security Architecture](its-security-architectures.md) and [ITS Cybersecurity Controls](its-cybersecurity-controls.md). Use this page to identify standards that support implementation of cybersecurity controls.
+Use this page to identify standards that support implementation of cybersecurity controls.
 
 ## Secure Hardware and Physical Protection
 

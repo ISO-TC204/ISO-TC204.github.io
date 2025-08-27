@@ -10,9 +10,14 @@ nav:
     - Cybersecurity: 
     - Introduction: cybersecurity/beginners-guide.md      
     - Overview: cybersecurity/index.md
-      - Security Architectures: cybersecurity/its-security-architectures.md
+      - ITS Cybersecurity Patterns: cybersecurity/its-security-patterns.md
+         -Management Security Patterns: cybersecurity/patterns-management.md
+         -Application Security Patterns: cybersecurity/patterns-application.md
+         -Edge Device Security Patterns: cybersecurity/patterns-edge.md
+         -Network and Transport Security Patterns: cybersecurity/patterns-network.md
+         -Deployment and Integration Security Patterns: cybersecurity/patterns-deployment.md
       - Security Standards: cybersecurity/security-standards.md
-      - ITS Threat analysis: cybersecurity/ITS-Threat-Analysis.md
+      - ITS Threat analysis: cybersecurity/its-threat-analysis.md
       - Interoperability strategies: cybersecurity/interoperability-strategies.md
       - Cybersecurity controls: cybersecurity/its-cybersecurity-controls.md
       - Stakeholder guidance: 
@@ -21,8 +26,8 @@ nav:
         - Decision makers: cybersecurity/policy-makers.md
         - Implementers: cybersecurity/implementers.md
       - Cybersecurity policies: cybersecurity/security-policies.md
-        - CCMS Policies: cybersecurity/CCMS-Security-Policies.md
-        - SCMS Policies: cybersecurity/SCMS-Manager-Policies.md
+        - CCMS Policies: cybersecurity/ccms-security-policies.md
+        - SCMS Policies: cybersecurity/scms-security-policies.md
       - Specialized use cases: cybersecurity/specialized-use-cases.md
       - Glossary: cybersecurity/Glossary.md
     - TC 204 planning: planning.md

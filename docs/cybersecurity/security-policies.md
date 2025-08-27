@@ -57,8 +57,8 @@ ITS ecosystems depend on PKI-based trust services. These policies define how tru
 
 Operators must establish how Root Certificate Authorities (RCAs) are authorized, audited, and removed. Define approval criteria, governance procedures, and enforcement mechanisms to manage trust relationships over time. Trust model design varies by region:
 
-- SCMS (typical in North America): a quorum of Electors manages the CTL.  You can learn more about [SCMS Manager Policies.](SCMS-Manager-Policies.md)  
-- CCMS (typical in Europe): a central Certificate Policy Authority (CPA) defines trust rules and governs the ECTL.  You can learn more about [CCMS Security Policy](CCMS-Security-Policies.md). 
+- SCMS (typical in North America): a quorum of Electors manages the CTL.  You can learn more about [SCMS Manager Policies.](scms-security-policies.md)  
+- CCMS (typical in Europe): a central Certificate Policy Authority (CPA) defines trust rules and governs the ECTL.  You can learn more about [CCMS Security Policy](ccms-security-policies.md). 
 
 The table below describes some of the key roles related to Trust Management. 
 
