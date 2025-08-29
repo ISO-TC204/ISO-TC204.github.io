@@ -1,21 +1,20 @@
-# Policy Makers
+# Cybersecurity Oversight and Policy Authorities
 
-Policy makers define the regulatory and governance environment for ITS cybersecurity. They are responsible for setting cybersecurity priorities, enabling secure interoperability, and ensuring national and regional resilience across ITS deployments.
+Cybersecurity Oversight and Policy Authorities are responsible for establishing the governance structures that ensure ITS cybersecurity is consistent, enforceable, and aligned with societal risk management objectives. These authorities operate at national, regional, or international levels and provide the regulatory, auditing, and coordination functions that give confidence in the trustworthiness of ITS deployments.
 
-## Responsibilities
+## Policy Development and Governance
 
-- Define and enforce cybersecurity regulations for ITS operators, ensuring alignment with international standards such as ISO 31000, NIST SP 800-30, and EU CCMS requirements.
-- Mandate the use of risk-based security frameworks that assess threats to vehicles, infrastructure, and backend systems and prioritize mitigation of the most critical risks (e.g., spoofed messages, DoS attacks, certificate misuse).
-- Require implementation of security management systems, as established in frameworks like the EU NIS2 Directive and CCMS policy, to support ongoing cybersecurity governance for all ITS stakeholders.
-- Promote secure interoperability between jurisdictions, particularly in cross-border environments, by encouraging common trust models and the adoption of standards that support certificate and identity validation.
-- Ensure privacy requirements (such as GDPR in the EU) are embedded in ITS cybersecurity programs and balanced with public safety and operational needs.
+Authorities develop cybersecurity policies and regulations that set binding requirements for manufacturers, operators, and certificate management providers. These policies may incorporate global standards such as ISO/SAE 21434, ISO/IEC 27001, IEEE 1609.2, or ETSI TS 102 941, and translate them into enforceable obligations within a jurisdiction.
 
-## Actions
+## Oversight and Audit Functions
 
-- Require all ITS deployments to conduct regular threat modelling and risk assessments, following frameworks such as NIST SP 800-30 (U.S.) and the CCMS security policy (EU).
-- Enforce cybersecurity event reporting obligations to improve shared visibility and response coordination across agencies and operators.
-- Apply the Cyber Resilience Act (CRA) and equivalent regulations to ensure that all ICT and ITS systems meet baseline security requirements before deployment.
-- Ensure that privacy-preserving techniques such as pseudonym certificates are used to protect driver identity while maintaining system traceability for authorized investigations.
-- Ensure that security controls are designed to avoid introducing unacceptable delays into V2X communications, especially for time-sensitive safety messages.
-- Require that all cybersecurity mechanisms, including authentication, incident response, and key management, are designed to preserve system availability and limit service disruptions during a cyberattack.
-- Adopt CISA and other national guidance (e.g., Transport Canada cybersecurity strategies) to promote a culture of resilience and continuous improvement in ITS cybersecurity policy.
+Authorities must verify that policies and regulations are implemented effectively. This includes auditing certificate management authorities for compliance with CP and CPS requirements, reviewing OEM Cybersecurity Management Systems (CSMS) for conformance with ISO/SAE 21434 or UNECE requirements, and conducting inspections of Infrastructure Owner-Operators (IOOs) to confirm that device security controls are applied consistently. Audits provide assurance that obligations are properly enforced in practice.
+
+## Incident Response Coordination
+
+Policy authorities are also responsible for establishing and coordinating incident response processes. This includes developing national or regional Computer Security Incident Response Teams (CSIRTs) with the capability to handle ITS-specific incidents, defining reporting obligations for manufacturers and operators, and ensuring that incident information is shared across stakeholders. 
+
+## International and Regional Cooperation
+
+ITS deployments often span national borders, requiring cooperation among oversight bodies. Authorities participate in regional coordinating groups to harmonize trust frameworks, misbehavior reporting, and certificate policies. 
+

@@ -1,4 +1,4 @@
-# Management Patterns (M) 
+# Secure ITS Management Patterns (M) 
 
 ## Pattern M1: Certificate Lifecycle Management 
 
@@ -6,7 +6,7 @@ ITS Station Operators and Infrastructure Owners (IOOs) depend on Public Key Infr
 
 The PKI ecosystem includes multiple interrelated functions: certificate issuance, revocation, entitlement authorization, misbehavior management, and trust list governance. As shown in the below diagram, these elements interact to support secure, policy-aligned credential management across jurisdictions.
 
-![PKI Functions](C:/Users/bruss/OneDrive - TrustThink, LLC/Projects - TrustThink, LLC/ITS JPO/ISO/ISO Cybersecurity Website/Development/ISO-TC204.github.io/docs/cybersecurity/images/PKI_Functions.jpg)
+![PKI Functions](images/PKI_Functions.jpg)
 
 ##### Implementation Context
 
@@ -206,7 +206,9 @@ Incident management applies to any ITS deployment where cybersecurity events may
 
 ## Pattern M5: Misbehavior Detection and Reporting 
 
-Operators must actively monitor for misbehavior within their ITS networks and support reporting, adjudication, and remediation. Misbehavior refers to message-level or behavioral anomalies—either malicious or accidental—that degrade system trust or operational safety. A full misbehavior lifecycle includes detection (local or backend), secure reporting, verification by an adjudicating authority, and proportional remediation (e.g., revocation, certificate issuance pause, or software update)
+Operators must actively monitor for misbehavior within their ITS networks and support reporting, adjudication, and remediation. Misbehavior refers to message-level or behavioral anomalies—either malicious or accidental—that degrade system trust or operational safety. A full misbehavior lifecycle includes detection (local or backend), secure reporting, verification by an adjudicating authority, and proportional remediation (e.g., revocation, certificate issuance pause, or software update). 
+
+![Misbehavior Detection](images/Local-Misbehavior-Detection.png)
 
 ##### Implementation Context
 
@@ -252,3 +254,58 @@ Operators must actively monitor for misbehavior within their ITS networks and su
 | IEEE 1609.2.1   | Interfaces for end-entity certificate and misbehavior management |
 | ETSI TS 103 759 | Misbehavior Reporting service (EU)                           |
 
+
+
+## Pattern M6: Secure Remote Management 
+
+Secure Remote Management ensures that ITS devices deployed in the field (e.g., RSUs, traffic signal controllers, or roadside sensors) can be administered without exposing them to unauthorized access, tampering, or disruption. Remote access introduces risks of credential theft, privilege escalation, or data interception; this pattern provides controls for secure communication, authentication, authorization, monitoring, and update processes.
+
+##### **Implementation Context**
+
+This pattern applies to Infrastructure Owners and Operators (IOOs), device vendors, and system integrators who deploy and maintain ITS devices that require remote administration.
+
+| **Applies To**   | IOOs, device vendors, integrators                            |
+| ---------------- | ------------------------------------------------------------ |
+| **Used For**     | Secure device administration, field maintenance, remote monitoring and updates |
+| **Dependencies** | Public Key Infrastructure (PKI), secure communication protocols (TLS/DTLS, IPsec), centralized identity and access management |
+
+##### **Key Components**
+
+| **Component**                  | **Description**                                              |
+| ------------------------------ | ------------------------------------------------------------ |
+| Encrypted Communications       | All remote sessions must use strong encryption (e.g., TLS 1.3, DTLS, or IPsec) to protect confidentiality and integrity. |
+| Strong Authentication          | Require mutual authentication with device certificates; avoid password-only access. |
+| Privileged Access Control      | Enforce role-based or attribute-based access to limit privileges to the minimum necessary. |
+| Secure Session Management      | Apply timeouts, session logging, and replay protection.      |
+| Update & Configuration Control | Ensure that configuration changes and updates are cryptographically signed and verified before application. |
+| Monitoring & Audit Logs        | Maintain complete logs of remote access sessions and monitor for anomalies or misbehavior. |
+| Multi-Factor Access            | Require multi-factor authentication for administrators where technically feasible. |
+
+##### **Implementation Details**
+
+- Access Channels: Use dedicated, secure management channels; avoid exposing management interfaces directly to public networks.
+- Identity & Credential Management: Issue and revoke digital certificates through a trusted credential management system; rotate keys regularly.
+- Privilege Enforcement: Implement least-privilege principles with clearly defined roles (e.g., operator, maintainer, auditor).
+- Change Authorization: Require dual approval or cryptographic confirmation for critical changes (e.g., firmware upgrades, certificate replacement).
+- Integrity & Availability: Ensure remote commands are signed, validated, and do not disrupt service availability.
+- Continuous Monitoring: Correlate logs across devices and central systems to detect unauthorized access attempts or anomalous behavior.
+- Emergency Access Procedures: Define fallback processes for safe access if normal channels are unavailable, without bypassing core protections.
+
+
+
+##### **Example Use Cases**
+
+| **Scenario**                    | **Behavior Enforced**                                        |
+| ------------------------------- | ------------------------------------------------------------ |
+| Remote RSU Software Update      | IOO sends signed firmware update over TLS 1.3; RSU validates signature before applying. |
+| Unauthorized Login Attempt      | Device rejects session due to untrusted certificate and logs event for central monitoring. |
+| Privilege Escalation Prevention | Maintenance staff limited to diagnostic commands, with administrative commands restricted to authorized personnel only. |
+
+##### **Related Standards**
+
+| **Standard**   | **Purpose**                                                  |
+| -------------- | ------------------------------------------------------------ |
+| ISO/SAE 21434  | Defines requirements for cybersecurity in E/E systems, including secure communication and access control. |
+| ISO 21177      | Specifies ITS station security services for secure session establishment. |
+| IEEE 1609.2    | Defines security services for V2X communications, including authentication and signing. |
+| NIST SP 800-53 | Provides access control and secure communication controls relevant to remote management. |

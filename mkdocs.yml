@@ -8,28 +8,32 @@ nav:
     - About us: about.md
     - Intro to ITS: intro.md
     - Cybersecurity: 
-    - Introduction: cybersecurity/beginners-guide.md      
-    - Overview: cybersecurity/index.md
+    - Beginners Guide to ITS Cybersecurity: cybersecurity/beginners-guide.md 
+    - Introduction to ITS Cybersecurity Guidance: cybersecurity/index.md
       - ITS Cybersecurity Patterns: cybersecurity/its-security-patterns.md
-         -Management Security Patterns: cybersecurity/patterns-management.md
+         -Secure ITS Management Patterns: cybersecurity/patterns-management.md
          -Application Security Patterns: cybersecurity/patterns-application.md
          -Edge Device Security Patterns: cybersecurity/patterns-edge.md
          -Network and Transport Security Patterns: cybersecurity/patterns-network.md
          -Deployment and Integration Security Patterns: cybersecurity/patterns-deployment.md
-      - Security Standards: cybersecurity/security-standards.md
+      - ITS Security Regulations and Standards: cybersecurity/its-security-standards.md
+         -Certificate Policy (CP): cybersecurity/policies-cp.md
+         -SCMS Policy: cybersecurity/policies-scms.md
+         -CCMS Policy: cybersecurity/policies-ccms.md
+         -Device Security Policy Configurations: cybersecurity/policies-device.md
       - ITS Threat analysis: cybersecurity/its-threat-analysis.md
-      - Interoperability strategies: cybersecurity/interoperability-strategies.md
-      - Cybersecurity controls: cybersecurity/its-cybersecurity-controls.md
+      - Interoperability strategies: cybersecurity/its-interoperability-strategies.md
+      - ITS Cybersecurity Patterns: cybersecurity/its-security-patterns.md
       - Stakeholder guidance: 
-        - Overview: cybersecurity/stakeholder-guidance.md
-        - Standards developers: cybersecurity/standards-developers.md
-        - Decision makers: cybersecurity/policy-makers.md
-        - Implementers: cybersecurity/implementers.md
-      - Cybersecurity policies: cybersecurity/security-policies.md
-        - CCMS Policies: cybersecurity/ccms-security-policies.md
-        - SCMS Policies: cybersecurity/scms-security-policies.md
-      - Specialized use cases: cybersecurity/specialized-use-cases.md
-      - Glossary: cybersecurity/Glossary.md
+        - Overview: cybersecurity/its-stakeholder-guidance.md
+            - Standards developers: cybersecurity/stakeholder-standards-developer.md
+            - Cybersecurity Oversight and Policy Authorities: cybersecurity/stakeholder-policy-maker.md
+            - Infrastructure Owner Operators (IOOs): cybersecurity/stakeholder-ioo.md
+            - ITS Application Developers: cybersecurity/stakeholder-appdev.md
+            - Cerificate Management Authorities: cybersecurity/certmgmt.md
+            - Original Equipment Manufacturers (OEMs): cybersecurity/stakeholder-oem.md
+      - Misuse Cases: cybersecurity/its-misuse-cases.md
+      - Glossary: cybersecurity/glossary.md
     - TC 204 planning: planning.md
     - Contact us: contact.md
     - Resources: resources.md

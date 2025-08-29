@@ -1,6 +1,6 @@
 
 
-# Edge Device Security Functions
+# Edge (E) Device Security Patterns
 
 ## Pattern E1: Cryptographic Key Generation 
 
@@ -8,7 +8,7 @@ Ensures that ITS devices generate and store private/public key pairs securely on
 
 ITS devices are configured to generate and store cryptographic key pairs used for digital signatures. These keys enable message receivers to validate the identity of the sender and confirm the integrity of the message content. Key generation should occur on the device to reduce the risk of key exposure. Each key pair includes a private key, which must be kept secure, and a public key, which can be shared freely.
 
-![Crypto Keys](C:\Users\bruss\OneDrive - TrustThink, LLC\Projects - TrustThink, LLC\ITS JPO\ISO\ISO Cybersecurity Website\Development\ISO-TC204.github.io\docs\cybersecurity\images\cryptoKeys.jpg)
+![Crypto Keys](images\cryptoKeys.jpg)
 
 Do not allow the private key to be exported from the device. If compromised, it can be used to impersonate the device in any V2X transaction. The public key, in contrast, is designed for distribution and is shared through digital certificates issued by a Public Key Infrastructure (PKI). Other devices and services use the public key to authenticate signed messages or encrypt data sent to the device.
 
@@ -66,7 +66,7 @@ Used during manufacturing, onboarding, and field installation of devices such as
 | Component                         | Description                                                  |
 | --------------------------------- | ------------------------------------------------------------ |
 | Baseline Hardening                | Disable all unused network ports, wireless radios, services, and physical interfaces. Only enable what is necessary for the device’s operational role. |
-| Credential Replacement            | Replace default usernames and passwords. Require strong, unique credentials for each device. |
+| Credential Update                 | Replace default usernames and passwords. Require strong, unique credentials for each device. |
 | Administrative Access Controls    | Implement role-based access control (RBAC) for device management interfaces. Enforce least privilege. |
 | Multi-Factor Authentication (MFA) | Where supported, require MFA for administrative access to critical systems. |
 | Secure Boot Enforcement           | Devices must validate firmware signatures before execution to prevent unauthorized code execution. |
@@ -78,7 +78,7 @@ Used during manufacturing, onboarding, and field installation of devices such as
 
 - Configuration templates should be defined per device class and reviewed as part of the cybersecurity risk management process.
 - Device vendors should provide verifiable documentation of supported hardening controls.
-- Operators should validate configuration status prior to device activation using tools or procedures compatible with the deployment model (e.g., CLI, RESTCONF, NETCONF, vendor interface).
+- Operators should validate configuration status prior to device activation using tools or procedures compatible with the deployment model (e.g., CLI, SNMPv3, RESTCONF, NETCONF, vendor interface).
 - Devices should support secure remote management using mutually authenticated sessions (e.g., TLS 1.3 with client certificates).
 - Secure boot status and configuration integrity should be remotely verifiable where possible.
 
@@ -146,6 +146,8 @@ Applies to all field-deployed ITS components, including OBUs, RSUs, and controll
 This pattern defines how ITS Station Operators configure and enforce local policies that determine which messages, devices, and applications are permitted to interact with an ITS Station. Access control is implemented through policy-based filtering of message attributes, certificate fields, and interface traffic to ensure only authorized services can be invoked.
 
 By evaluating each connection or message against locally defined rules, including PSIDs/ ITS-AIDs, SSPs, and certificate validity, this pattern prevents unauthorized or malformed data from reaching higher-layer functions. Access controls may also block or limit device interactions based on network origin, time of day, or operational roles.
+
+![image-20250827141125454](images\ITS-Station-Access-Control.png)
 
 ##### Implementation Context
 

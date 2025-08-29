@@ -1,8 +1,10 @@
-# Network and Transport Related Functions
+# Network (N) and Transport Security Patterns
 
 ## Pattern N1: Secure Backend Communications
 
 Secures communication between ITS field devices (e.g., RSUs, OBUs) and backend services (e.g., TMCs, certificate servers, monitoring platforms) using strong encryption and mutual authentication. Depending on the underlying protocol, Transport Layer Security (TLS) or Datagram Transport Layer Security (DTLS) is applied to protect data in transit. TLS 1.3 should be used for TCP-based interfaces (e.g., configuration commands, certificate provisioning), while DTLS is suited for UDP-based traffic such as low-latency telemetry or event reporting. All sessions must use certificates issued by a recognized PKI, and mutual authentication should be enforced to ensure trust on both ends of the connection. 
+
+![Transport Security](images/Transport-Security.png)
 
 This pattern ensures confidentiality, integrity, and authenticity of data flows across the ITS environment, and mitigates risk associated with spoofing, tampering, and unauthorized control of devices.
 
@@ -38,6 +40,8 @@ This pattern ensures confidentiality, integrity, and authenticity of data flows 
 ITS stations frequently require persistent, authenticated communication sessions across trusted links. These sessions must be established in a standards-compliant manner to ensure confidentiality, authenticity, and resilience. **ISO 21177** provides the formal specification for initiating, negotiating, and managing secure sessions between ITS stations. It defines how to authenticate peers using X.509 certificates, manage session lifetimes, and recover from abnormal session conditions.
 
 During session establishment, each station must present a certificate issued by a trusted CA, validated against local policy and Certificate Trust Lists (CTLs). Sessions should be terminated or rejected if certificate validation fails (e.g., expired, revoked, untrusted root). The standard also defines session renegotiation procedures, enabling secure re-authentication when session conditions change.
+
+![ISO 21177 Session Security](images/Session-Security.png)
 
 ITS operators must ensure all deployed devices that support station-to-station communications implement ISO 21177, and procurement specifications should include support for the standard. 
 

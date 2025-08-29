@@ -53,6 +53,5 @@ IOOs play a critical role in ensuring that the devices and systems they procure 
 
 Key Actions:
 
-- Require suppliers to demonstrate compliance with applicable Certificate Policies and Certificate Practice Statements (CP/CPS), including proper certificate formatting and secure key storage (e.g., secure element or HSM use).
 - Validate that vendors implement required hardware protections such as tamper-resistance, firmware integrity verification, and secure boot.
 - Incorporate security requirements into procurement specifications and verify conformance through documentation, audits, or third-party testing.

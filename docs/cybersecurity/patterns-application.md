@@ -1,4 +1,4 @@
-# Application Patterns (A) 
+# Application (A) Security Patterns 
 
 ## Pattern A1: Authenticated Messaging
 

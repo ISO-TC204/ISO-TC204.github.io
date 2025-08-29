@@ -1,6 +1,6 @@
-# Deployment and Integration Functions
+# Deployment and Integration (I) Security Patterns
 
-## Pattern D1: 1609.2.2 Multi Jurisdictional Interoperability 
+## Pattern I1: 1609.2.2 Multi Jurisdictional Interoperability 
 
 Ensures that ITS devices only trust messages and services from explicitly authorized sources. This pattern defines how devices determine which certificates to trust, which SCMS Managers or Root CAs are allowed, and what entitlements (e.g., PSIDs or SSPs) are considered valid. Trust decisions are guided by signed, policy-based structures such as Certificate Trust Lists (CTLs), with device behavior scoped to specific operational contexts. By implementing structured interoperability policies, this pattern supports secure collaboration across jurisdictions, vendors, and SCMS domains, while preventing unauthorized use of ITS applications or services.
 

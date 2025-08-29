@@ -26,7 +26,7 @@ Each pattern in this section presents a reusable cybersecurity approach that can
 - Support alignment with regional standards and trust frameworks.
 - Promote consistency across devices, services, and jurisdictions.
 
-Patterns are grouped by functional area (e.g., Application, Network, Management) but may span multiple areas depending on system design. You can browse by area, or start with patterns that align to specific risk concerns, such as certificate misuse, message spoofing, or unauthorized device access.
+Patterns are grouped by functional area (e.g., Application, Network, Management, etc) but may span multiple areas depending on system design. You can browse by area, or start with patterns that align to specific [risk concerns](its-threat-analysis), such as certificate misuse, message spoofing, or unauthorized device access.
 
 ## Trusted ITS Principles
 
@@ -45,44 +45,54 @@ The ITS cybersecurity patterns are informed by a core set of principles that pro
 
 The security patterns are grouped by the types of system components or stakeholder roles responsible for implementing them. This organization helps engineers, deployers, and designers quickly identify the patterns that apply to their problem space. 
 
-[Management Patterns:](patterns-management) For IOOs, TMC operators, and policy authorities responsible for certificate lifecycle operations, audits, misbehavior workflows, and policy enforcement.
+[Management Patterns:](patterns-management.md) For IOOs, TMC operators, and policy authorities responsible for certificate lifecycle operations, audits, misbehavior workflows, and policy enforcement.
 
 | Pattern Name                                                 | How to Use                                                   |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [M1 IEEE Std 1609.2 Certificate Lifecycle Management](patterns-management#certificate-lifecycle-management ) | Select and oversee a trusted PKI provider; ensure CRL/CTL use, revocation response, and auditability. |
-| [M2 1609.2 Certificate-Based Device Enrollment](patterns-management#pattern-m2:-certificate-based-device-enrollment ) | Onboard devices securely with approved credentials and trust anchors. |
-| [M3: ITS Cybersecurity Audit and Compliance Checks](patterns-management#pattern-m3:-its-cybersecurity-audit-and-compliance-checks) | Monitor and verify that deployed systems meet policy, versioning, and configuration expectations. |
-| [M4: Incident Management and Response](patterns-management#pattern-m4:-incident=management-and-response) | Establish detection and containment processes for compromised systems or credentials. |
-| [M5: Misbehavior Detection and Reporting](patterns-management#pattern-m5:-misbehavior-detection-and-reporting) | Implement full lifecycle for misbehavior report processing, adjudication, and policy response. |
+| [M1 IEEE Std 1609.2 Certificate Lifecycle Management](patterns-management.md#pattern-m1-certificate-lifecycle-management ) | Select and oversee a trusted PKI provider; ensure CRL/CTL use, revocation response, and auditability. |
+| [M2 1609.2 Certificate-Based Device Enrollment](patterns-management.md#pattern-m2-certificate-based-device-enrollment ) | Onboard devices securely with approved credentials and trust anchors. |
+| [M3: ITS Cybersecurity Audit and Compliance Checks](patterns-management.md#pattern-m3-its-cybersecurity-audit-and-compliance-checks) | Monitor and verify that deployed systems meet policy, versioning, and configuration expectations. |
+| [M4: Incident Management and Response](patterns-management.md#pattern-m4-incident=management-and-response) | Establish detection and containment processes for compromised systems or credentials. |
+| [M5: Misbehavior Detection and Reporting](patterns-management.md#pattern-m5-misbehavior-detection-and-reporting) | Implement full lifecycle for misbehavior report processing, adjudication, and policy response. |
+| [M6: Secure Remote Management](patterns-management.md#pattern-m6:-secure-remote-management) | Establish encrypted channels, mutual authentication, and privilege-based access controls for remote administration of ITS devices. |
 
-[Application Functions](patterns-application): For developers and system integrators building or deploying ITS applications that rely on message exchange, certificate validation, and role-based access.
-
-| Pattern Name                                                 | How to Use                                                   |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [A1: Authenticated Messaging](patterns-application#pattern-a1:-authenticated-messaging) | Ensure messages are signed by valid senders before transmission. |
-| [A2: Authenticated Message Validation](patterns-application#pattern-a2:-authenticated-message-validation) | Reject unauthenticated or malformed messages to prevent abuse or spoofing. |
-| [A3: Certificate-bound application authorization](patterns-application#pattern-a3:-certificate-bound-application-authorization) | Use PSID/SSP permissions to scope application actions to their authorized roles. |
-
-[Edge Device Security Functions](patterns-edge): For IOOs and field deployers responsible for maintaining the security posture of OBUs, RSUs, and other ITS field devices.
+[Application Functions](patterns-application.md): For developers and system integrators building or deploying ITS applications that rely on message exchange, certificate validation, and role-based access.
 
 | Pattern Name                                                 | How to Use                                                   |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [E1: Cryptographic Key Generation](patterns-edge#pattern-e1:-cryptographic-key-generation) | Require secure, in-device key generation for identity and signing. |
-| [E2: Secure Device Configuration](patterns-edge#pattern-e2:-secure-device-configuration) | Apply secure defaults and restrict unused ports and protocols during provisioning. |
-| [E3: Tamper Detection and Response](patterns-edge#pattern-e3:-tamper-detection-and-response) | Deploy tamper-resistant hardware and enable protective responses to physical compromise. |
-| [E4: ITS Station Access Control](patterns-edge#pattern-e4:-its-station-access-control) | Enforce local rules to reject unauthorized devices and limit exposed interfaces. |
-| [E5: Anomaly Detection and Logging](patterns-edge#pattern-e5:-anomaly-detection-and-logging) | Log abnormal behavior and push alerts to backend systems for monitoring and response. |
+| [A1: Authenticated Messaging](patterns-application.md#pattern-a1:-authenticated-messaging) | Ensure messages are signed by valid senders before transmission. |
+| [A2: Authenticated Message Validation](patterns-application.md#pattern-a2:-authenticated-message-validation) | Reject unauthenticated or malformed messages to prevent abuse or spoofing. |
+| [A3: Certificate-bound application authorization](patterns-application.md#pattern-a3:-certificate-bound-application-authorization) | Use PSID/SSP permissions to scope application actions to their authorized roles. |
 
-[Network and Transport Functions](patterns-network):  For ITS network architects and implementers securing communication channels between ITS devices and backend services.
+[Edge Device Security Functions](patterns-edge.md): For IOOs and field deployers responsible for maintaining the security posture of OBUs, RSUs, and other ITS field devices.
 
 | Pattern Name                                                 | How to Use                                                   |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [N1: Secure Backend Communications](patterns-network#pattern-n1:-secure-backend-communications) | Use TLS/DTLS with mutual authentication to protect traffic to backend systems. |
-| [N2 Secure Session Establishment Using ISO 21177](patterns-network#pattern-n2:-secure-session-establishment-using-iso-21177) | Establish secure peer-to-peer sessions with standard-based certificate exchange and validation. |
+| [E1: Cryptographic Key Generation](patterns-edge.md#pattern-e1:-cryptographic-key-generation) | Require secure, in-device key generation for identity and signing. |
+| [E2: Secure Device Configuration](patterns-edge.md#pattern-e2:-secure-device-configuration) | Apply secure defaults and restrict unused ports and protocols during provisioning. |
+| [E3: Tamper Detection and Response](patterns-edge.md#pattern-e3:-tamper-detection-and-response) | Deploy tamper-resistant hardware and enable protective responses to physical compromise. |
+| [E4: ITS Station Access Control](patterns-edge.md#pattern-e4:-its-station-access-control) | Enforce local rules to reject unauthorized devices and limit exposed interfaces. |
+| [E5: Anomaly Detection and Logging](patterns-edge.md#pattern-e5:-anomaly-detection-and-logging) | Log abnormal behavior and push alerts to backend systems for monitoring and response. |
 
-[Deployment and Integration Functions](patterns-deployment):  For system integrators ensuring trust and interoperability across administrative or jurisdictional boundaries.
+[Network and Transport Functions](patterns-network.md):  For ITS network architects and implementers securing communication channels between ITS devices and backend services.
 
 | Pattern Name                                                 | How to Use                                                   |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [D1: 1609.2.2 Multi Jurisdictional Interoperability](patterns-deployment#pattern-d1:-160922-multi-jurisdictional-interoperability) | Define and enforce trust permissions across regions and SCMS domains using CTLs. |
+| [N1: Secure Backend Communications](patterns-network.md#pattern-n1:-secure-backend-communications) | Use TLS/DTLS with mutual authentication to protect traffic to backend systems. |
+| [N2 Secure Session Establishment Using ISO 21177](patterns-network.md#pattern-n2:-secure-session-establishment-using-iso-21177) | Establish secure peer-to-peer sessions with standard-based certificate exchange and validation. |
+
+[Deployment and Integration Security Patterns](patterns-deployment.md):  For system integrators ensuring trust and interoperability across administrative or jurisdictional boundaries.
+
+| Pattern Name                                                 | How to Use                                                   |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [I1: 1609.2.2 Multi Jurisdictional Interoperability](patterns-deployment.md#pattern-d1:-160922-multi-jurisdictional-interoperability) | Define and enforce trust permissions across regions and SCMS domains using CTLs. |
+
+[Secure Manufacturing and Development Patterns:](patterns-developer.md) For ITS device and application developers that need to establish secure development processes and track and mitigate product vulnerabilities. 
+
+| Pattern Name                                                 | How to Use                                                   |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [D1: Vulnerability Management Program](patterns-developer.md#pattern-d1:-vulnerability-management-program) | Follow this pattern to establish a documented process for detecting, assessing, and addressing software and firmware vulnerabilities, including researcher and customer reporting channels. |
+| [D2: Secure Product Development Lifecycle](patterns-developer.md#pattern-d2:-secure-product-development-lifecycle) | Use this pattern to integrate security into each phase of product development through structured SDL practices, secure coding, and automated testing. |
+| [D3: Software Bill of Materials](patterns-developer.md#pattern-d3:-software-bill-of-materials) | Apply this pattern to generate and manage a list of software components used in your products to support vulnerability tracking and patch planning. |
+| [D4: Supply Chain Security](patterns-developer.md#pattern-d4:-supply-chain-security) | Require suppliers and integrators to demonstrate cybersecurity capability, sign Cybersecurity Interface Agreements, and maintain vulnerability handling across the product lifecycle in accordance with ISO/SAE 21434. |
 
