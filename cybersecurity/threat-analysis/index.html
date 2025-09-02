@@ -1,0 +1,2675 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Information about ISO TC 204 standardization efforts">
+      
+      
+      
+        <link rel="canonical" href="https://iso-tc204.github.io/cybersecurity/threat-analysis/">
+      
+      
+        <link rel="prev" href="../policies-device/">
+      
+      
+        <link rel="next" href="../its-interoperability-strategies/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>ITS Threat analysis - ISO TC 204 Information</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#performing-an-its-threat-analysis" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ISO TC 204 Information" class="md-header__button md-logo" aria-label="ISO TC 204 Information" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ISO TC 204 Information
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ITS Threat analysis
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ISO-TC204/ISO-TC204.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../work/" class="md-tabs__link">
+          
+  
+  
+  Our work
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../contributor/" class="md-tabs__link">
+          
+  
+  
+  Contributions
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../news/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  News
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../faq/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQs
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ISO TC 204 Information" class="md-nav__button md-logo" aria-label="ISO TC 204 Information" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ISO TC 204 Information
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ISO-TC204/ISO-TC204.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About us
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Intro to ITS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cybersecurity
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Cybersecurity
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../beginners-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Beginners Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5_3" id="__nav_1_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ITS Cybersecurity Patterns
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            ITS Cybersecurity Patterns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../its-security-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patterns-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Secure ITS Management Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patterns-application/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Application Security Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patterns-edge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Edge Device Security Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patterns-network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Network and Transport Security Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patterns-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deployment and Integration Security Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patterns-developer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Developer Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5_4" id="__nav_1_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ITS Security Regulations and Standards
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            ITS Security Regulations and Standards
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../its-security-standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policies-cp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Certificate Policy (CP)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policies-scms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SCMS Policy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policies-ccms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CCMS Policy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policies-device/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Device Security Policy Configurations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    ITS Threat analysis
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    ITS Threat analysis
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#high-level-process-for-conducting-an-its-threat-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      High-Level Process for Conducting an ITS Threat Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="High-Level Process for Conducting an ITS Threat Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#european-threat-analysis-guidance" class="md-nav__link">
+    <span class="md-ellipsis">
+      European Threat Analysis Guidance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#north-american-threat-analysis-guidance" class="md-nav__link">
+    <span class="md-ellipsis">
+      North American Threat Analysis Guidance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#its-threat-catalogue" class="md-nav__link">
+    <span class="md-ellipsis">
+      ITS Threat Catalogue
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../its-interoperability-strategies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Interoperability strategies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5_7" id="__nav_1_5_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Stakeholder guidance
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5_7">
+            <span class="md-nav__icon md-icon"></span>
+            Stakeholder guidance
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../its-stakeholder-guidance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stakeholder-standards-developer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Standards developers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stakeholder-policy-maker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cybersecurity Oversight and Policy Authorities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stakeholder-ioo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Infrastructure Owner Operators (IOOs)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stakeholder-appdev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ITS Application Developers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stakeholder-certmgmt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Certificate Management Authorities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stakeholder-oem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Original Equipment Manufacturers (OEMs)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../its-misuse-cases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Misuse Cases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patterns-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Secure ITS Management Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cybersecurity-glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TC 204 planning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contact us
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vocab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vocabulary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../acknowledgements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Acknowledgements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Our work
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Our work
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundational/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Foundational concepts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wg1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecture (WG 1)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wg20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Big data and AI (WG 20)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jwg1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    City data model - Transport (JWG 1)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wg16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Communications (WG 16)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wg18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cooperative systems (WG 18)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ag4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Coordination (AG 4)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ahg2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cybersecurity (AHG 2)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wg14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Driving automation and safety (WG 14)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wg5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fee and toll collection (WG 5)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wg7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fleet management (WG 7)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wg3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Geographic data (WG 3)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ag2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Identifiers (AG 2)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wg19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mobility integration (WG 19)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wg17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nomadic devices in ITS (WG 17)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ag3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operational improvement (AG 3)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wg8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Public transport/emergency (WG 8)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ag5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Publication and marketing (AG 5)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ag2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Identifiers (AG 2)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wg9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Transport mgmt and control (WG 9)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wg10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Traveller information (WG 10)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Contributions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Contributions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributor/commenter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commenter guidelines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributor/editor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Editor guidelines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributor/convenor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Convenor guidelines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    News
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#high-level-process-for-conducting-an-its-threat-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      High-Level Process for Conducting an ITS Threat Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="High-Level Process for Conducting an ITS Threat Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#european-threat-analysis-guidance" class="md-nav__link">
+    <span class="md-ellipsis">
+      European Threat Analysis Guidance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#north-american-threat-analysis-guidance" class="md-nav__link">
+    <span class="md-ellipsis">
+      North American Threat Analysis Guidance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#its-threat-catalogue" class="md-nav__link">
+    <span class="md-ellipsis">
+      ITS Threat Catalogue
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+  
+    <nav class="md-breadcrumb" aria-label="Breadcrumbs" style="margin: 1rem 0; font-size: 0.75rem; color: slategray;">
+      
+  
+    
+      <a href="../.." style="color: var(--md-primary-fg-color); text-decoration: none;">Home</a> &gt;
+      
+        
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <a href="../.." style="color: var(--md-primary-fg-color); text-decoration: none;">Cybersecurity</a> &gt;
+      
+        
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+      <span>ITS Threat analysis</span>
+    </nav>
+  
+  
+                  
+
+
+  
+  
+
+
+<h1 id="performing-an-its-threat-analysis">Performing an <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Threat Analysis<a class="headerlink" href="#performing-an-its-threat-analysis" title="Permanent link">&para;</a></h1>
+<p><abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> operators should conduct threat analysis by evaluating how adversaries could compromise specific functions across the <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr>. Begin by identifying each <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr> component and  for each, assess the types of data it handles, the services it provides, and the interfaces it exposes. Use that information to define the threat surface and determine which attack scenarios are most relevant. Map each identified threat to an <a href="../its-security-patterns/"><abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Cybersecurity Pattern</a>. As the <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr> evolves, repeat the threat analysis to validate that protections remain effective and aligned to real-world risks.</p>
+<h2 id="high-level-process-for-conducting-an-its-threat-analysis">High-Level Process for Conducting an <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Threat Analysis<a class="headerlink" href="#high-level-process-for-conducting-an-its-threat-analysis" title="Permanent link">&para;</a></h2>
+<p>While specific methodologies may vary, most <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> threat analysis efforts follow a common structure. The following high-level steps apply broadly across both European and North American contexts:</p>
+<ol>
+<li><strong>Define Scope and Boundaries</strong>
+    Identify which <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> devices are within scope for the threat analysis. This should include field devices, communications links, backend systems, cloud applications applications, etc). Document external interfaces.</li>
+<li><strong>Identify Assets, Data Flows and Security Objectives</strong> Determine what needs protection within the <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr>. This would include for example cryptographic keys, <abbr title="global navigation satellite system">GNSS</abbr> data, video feeds, V2X messages, etc. For each asset, define the associated data flows to other assets and for each <abbr title="representation of data flowing between two processes or between a process and a terminator">data flow</abbr> define security objectives such as ensuring integrity, availability, confidentiality, or non-repudiation.</li>
+<li><strong>Identify Threats</strong>  Once assets and data flows are known, consider how they could be targeted. Threats may include unauthorized access, spoofing, <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> manipulation, denial-of-service, physical tampering, among others. Leverage tools such as the MITRE ATT&amp;CK Framework for a better understanding of attack types, and understand that attacks are often strung together in order to achieve greater effect.  </li>
+<li><strong>Evaluate Risk</strong>:  Assess the likelihood and potential impact of each threat materializing, taking into account the environment in which the <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr> operates. This assessment may be qualitative or quantitative. It helps prioritize which risks require mitigation and which may be accepted based on  operational context.</li>
+<li><strong>Select and Align Controls</strong>:  For threats requiring mitigation, identify suitable security controls which may be technical, procedural, or administrative. These may include for example <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> authentication, physical protections, redundancy, or personnel training. Control selection should reflect both the risk profile and the <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr>’s functional requirements. Review the <a href="../its-security-patterns/"><abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Cybersecurity Patterns</a> page for more information on possible control selection.</li>
+<li><strong>Document and Reassess</strong>:  Maintain records of the analysis, including identified threats, rationale for control selection, and residual risks. Threat analysis should be revisited periodically or when significant changes are made to <abbr title="fundamental concepts or properties of a system in its environment embodied in its elements , relationships and in the principles of its design and evolution">system architecture</abbr>, configuration, or usage patterns.</li>
+</ol>
+<h3 id="european-threat-analysis-guidance">European Threat Analysis Guidance<a class="headerlink" href="#european-threat-analysis-guidance" title="Permanent link">&para;</a></h3>
+<p>In European Cooperative <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> deployments, threat analysis practices are well-established through a combination of technical reports and policy mandates:</p>
+<ul>
+<li>ETSI TR 102 893 outlines a Threat, Vulnerability, and Risk Analysis (TVRA) methodology tailored to <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> environments. It provides a structured approach for identifying assets, categorizing threats, and evaluating risk based on likelihood and impact.</li>
+<li>The <abbr title="Cooperative Credential Management System: support system that enables trusted communications among ITS components and protects data from unauthorized access">CCMS</abbr> Security Policy requires station operators and manufacturers to conduct and maintain operational risk analyses. These are typically carried out using <abbr title="International Organization for Standardization">ISO</abbr>/IEC 27005, which offers a repeatable process for risk management and ties directly to broader information security standards.</li>
+</ul>
+<h3 id="north-american-threat-analysis-guidance">North American Threat Analysis Guidance<a class="headerlink" href="#north-american-threat-analysis-guidance" title="Permanent link">&para;</a></h3>
+<p>In North America, threat analysis activities are often embedded within more general cybersecurity and risk management frameworks:</p>
+<ul>
+<li>The NIST Cybersecurity Framework (CSF) is widely adopted across critical infrastructure sectors, including transportation. It provides a functional model for cybersecurity organized around the lifecycle of identify, protect, detect, respond, and recover.</li>
+<li>The <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Cybersecurity Profile adapts the NIST CSF for transportation environments, offering detailed guidance tailored to <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> deployments. It outlines cybersecurity activities for stakeholders managing devices like Dynamic Message Signs, Closed-Circuit Television cameras, and Roadside Units.</li>
+<li>Additional resources from the U.S. Department of Transportation, including procedural guidance and control set templates, support risk-informed decision-making for public agencies and infrastructure operators.</li>
+</ul>
+<h2 id="its-threat-catalogue"><abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Threat Catalogue<a class="headerlink" href="#its-threat-catalogue" title="Permanent link">&para;</a></h2>
+<p>The following threats may be applicable to an <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr>. You may use these threats as references when developing your <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr>-specific threat analysis and risk profile. See the Recommended Cybersecurity Controls column to identify controls that can be used to mitigate these threats in part or in whole.</p>
+<table>
+<thead>
+<tr>
+<th>Threat ID</th>
+<th>Threat Example</th>
+<th><a href="../its-security-patterns/">Recommended Cybersecurity Patterns</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T_0001</td>
+<td>Unauthorized <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> device or application access.</td>
+<td><a href="../patterns-edge/#pattern-e2-secure-device-configuration">E2: Secure Device Configuration</a></td>
+</tr>
+<tr>
+<td>T_0002</td>
+<td>Malware or modified code causes an <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> device to transmit false warnings or suppress valid messages.</td>
+<td><a href="../patterns-edge/#pattern-e6-software-integrity-verification-and-secure-boot">E6: Software Integrity Verification and Secure Boot</a></td>
+</tr>
+<tr>
+<td>T_0003</td>
+<td>Exposure of <abbr title="person that is currently responsible for the dynamic driving task for the vehicle">driver</abbr> identity information.</td>
+<td>Pseudonymity</td>
+</tr>
+<tr>
+<td>T_0004</td>
+<td>Unauthorized <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> injection</td>
+<td><a href="../patterns-application/#pattern-a1-authenticated-messaging">A1: Authenticated Messaging</a></td>
+</tr>
+<tr>
+<td>T_0005</td>
+<td>A <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> with general-use permissions reuses or fabricates <abbr title="service specific permission">SSP</abbr> fields to impersonate an emergency responder.</td>
+<td><a href="../patterns-application/#pattern-a3-certificate-bound-application-authorization">A3: Certificate-bound application authorization</a></td>
+</tr>
+<tr>
+<td>T_0006</td>
+<td>A device runs unapproved or unsigned applications due to weak software controls or side-loading.</td>
+<td><a href="../patterns-edge/#pattern-e2-secure-device-configuration">E2: Secure Device Configuration</a></td>
+</tr>
+<tr>
+<td>T_0007</td>
+<td>Replay attacks re-use messages to impersonate legitimate messaging.</td>
+<td><a href="../patterns-network/#pattern-n2-secure-session-establishment-using-iso-21177">N2 Secure Session Establishment Using <abbr title="International Organization for Standardization">ISO</abbr> 21177</a></td>
+</tr>
+<tr>
+<td>T_0008</td>
+<td>Overcollection or linking of contextual data enables re-identification of pseudonymous users</td>
+<td>Pseudonymity</td>
+</tr>
+<tr>
+<td>T_0009</td>
+<td>Message interception or modification</td>
+<td><a href="../patterns-application/#pattern-a1-authenticated-messaging">A1: Authenticated Messaging</a></td>
+</tr>
+<tr>
+<td>T_0010</td>
+<td>Geographic misuse of services</td>
+<td><a href="../patterns-application/#pattern-a3-certificate-bound-application-authorization">A3: Certificate-bound application authorization</a>; <a href="../patterns-edge/#pattern-e4-its-station-access-control">E4: <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Station Access Control</a></td>
+</tr>
+<tr>
+<td>T_0011</td>
+<td>Attackers send spoofed or malformed messages.</td>
+<td><a href="../patterns-network/#pattern-n1-secure-backend-communications">N1: Secure Backend Communications</a> <a href="../patterns-network/#pattern-n2-secure-session-establishment-using-iso-21177">N2 Secure Session Establishment Using <abbr title="International Organization for Standardization">ISO</abbr> 21177</a></td>
+</tr>
+<tr>
+<td>T_0012</td>
+<td>Passive attackers intercept V2X or backend messages to obtain sensitive information or gain situational awareness.</td>
+<td><a href="../patterns-network/#pattern-n1-secure-backend-communications">N1: Secure Backend Communications</a> <a href="../patterns-network/#pattern-n2-secure-session-establishment-using-iso-21177">N2 Secure Session Establishment Using <abbr title="International Organization for Standardization">ISO</abbr> 21177</a></td>
+</tr>
+<tr>
+<td>T_0013</td>
+<td>An attacker inserts themselves between devices (man-in-the-middle) to relay or modify communications while impersonating trusted parties.</td>
+<td><a href="../patterns-network/#pattern-n1-secure-backend-communications">N1: Secure Backend Communications</a> <a href="../patterns-network/#pattern-n2-secure-session-establishment-using-iso-21177">N2 Secure Session Establishment Using <abbr title="International Organization for Standardization">ISO</abbr> 21177</a></td>
+</tr>
+<tr>
+<td>T_0014</td>
+<td>Attackers present forged credentials or reuse compromised certificates to authenticate malicious devices.</td>
+<td><a href="../patterns-management/#pattern-m1-certificate-lifecycle-management">M1: IEEE Std 1609.2 Certificate Lifecycle Management</a></td>
+</tr>
+<tr>
+<td>T_0015</td>
+<td>Timing or synchronization failures due to misconfigured or denied Network Time Protocol</td>
+<td>Secure Time</td>
+</tr>
+<tr>
+<td>T_0016</td>
+<td>Link-layer injection or jamming</td>
+<td><a href="../patterns-network/#pattern-n1-secure-backend-communications">N1: Secure Backend Communications</a> <a href="../patterns-network/#pattern-n2-secure-session-establishment-using-iso-21177">N2: Secure Session Establishment Using <abbr title="International Organization for Standardization">ISO</abbr> 21177</a></td>
+</tr>
+<tr>
+<td>T_0017</td>
+<td>Invalid or expired certificates used to attempt to gain access</td>
+<td><a href="../patterns-management/#pattern-m1-certificate-lifecycle-management">M1: IEEE Std 1609.2 Certificate Lifecycle Management</a></td>
+</tr>
+<tr>
+<td>T_0018</td>
+<td>Inadequate revocation response</td>
+<td><a href="../patterns-management/#pattern-m1-certificate-lifecycle-management">M1: IEEE Std 1609.2 Certificate Lifecycle Management</a></td>
+</tr>
+<tr>
+<td>T_0019</td>
+<td>Poor <abbr title="A set of processes and services that identify and respond to devices that send invalid or malicious messages.">misbehaviour detection</abbr> coverage</td>
+<td><a href="../patterns-management/#pattern-m5-misbehaviour-detection-and-reporting">M5: misbehaviour Detection and Reporting</a></td>
+</tr>
+<tr>
+<td>T_0020</td>
+<td><abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> devices with revoked certificates are still trusted within the <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr>.</td>
+<td><a href="../patterns-management/#pattern-m1-certificate-lifecycle-management">M1: IEEE Std 1609.2 Certificate Lifecycle Management</a></td>
+</tr>
+<tr>
+<td>T_0021</td>
+<td>Misbehaviours go undetected within the <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr></td>
+<td><a href="../patterns-management/#pattern-m5-misbehaviour-detection-and-reporting">M5: misbehaviour Detection and Reporting</a></td>
+</tr>
+<tr>
+<td>T_0022</td>
+<td>An <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> device is enrolled into a certificate management <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr> without meeting security or compliance requirements.</td>
+<td><a href="../patterns-management/#pattern-m1-certificate-lifecycle-management">M1: IEEE Std 1609.2 Certificate Lifecycle Management</a></td>
+</tr>
+<tr>
+<td>T_0023</td>
+<td>The private key associated with a trusted certificate is extracted or duplicated, allowing impersonation of a legitimate device.</td>
+<td><a href="../patterns-edge/#pattern-e1-cryptographic-key-generation">E1: Cryptographic Key Generation</a></td>
+</tr>
+<tr>
+<td>T_0024</td>
+<td>A <abbr title="Certificate Trust List">CTL</abbr> update is manipulated and distributed without proper signatures.</td>
+<td><a href="../patterns-deployment/#pattern-i1-160922-multi-jurisdictional-interoperability">D1: 1609.2.2 Multi Jurisdictional Interoperability</a>; <a href="../patterns-management/#pattern-m1-certificate-lifecycle-management">M1: IEEE Std 1609.2 Certificate Lifecycle Management</a></td>
+</tr>
+<tr>
+<td>T_0025</td>
+<td>Devices fail to download updated CRLs or CTLs and continue to trust revoked or expired entities.</td>
+<td><a href="../patterns-management/#pattern-m1-certificate-lifecycle-management">M1: IEEE Std 1609.2 Certificate Lifecycle Management</a>; <a href="../patterns-edge/#pattern-e2-secure-device-configuration">E2: Secure Device Configuration</a></td>
+</tr>
+<tr>
+<td>T_0026</td>
+<td>An attacker submits a non-compliant device for enrolment.</td>
+<td><a href="../patterns-management/#pattern-m1-certificate-lifecycle-management">M1: IEEE Std 1609.2 Certificate Lifecycle Management</a>;</td>
+</tr>
+<tr>
+<td>T_0027</td>
+<td>A certificate is issued with overly broad SSPs, granting the device capabilities beyond its operational <abbr title="specified responsibilities">role</abbr>.</td>
+<td><a href="../patterns-management/#pattern-m1-certificate-lifecycle-management">M1: IEEE Std 1609.2 Certificate Lifecycle Management</a>; <a href="../patterns-application/#pattern-a3-certificate-bound-application-authorization">A3: Certificate-bound application authorization</a></td>
+</tr>
+<tr>
+<td>T_0028</td>
+<td>A <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> transmits <abbr title="particular place or position">location</abbr> data inconsistent with plausible movement, affecting other vehicles' path planning</td>
+<td><a href="../patterns-management/#pattern-m5-misbehaviour-detection-and-reporting">M5: misbehaviour Detection and Reporting</a></td>
+</tr>
+<tr>
+<td>T_0029</td>
+<td>A device sends SRMs without entitlement or in implausible patterns.</td>
+<td><a href="../patterns-management/#pattern-m5-misbehaviour-detection-and-reporting">M5: misbehaviour Detection and Reporting</a>; <a href="../patterns-application/#pattern-a3-certificate-bound-application-authorization">A3: Certificate-bound application authorization</a></td>
+</tr>
+<tr>
+<td>T_0030</td>
+<td>A recorded V2X <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> is retransmitted to mislead infrastructure or vehicles.</td>
+<td><a href="../patterns-network/#pattern-n1-secure-backend-communications">N1: Secure Backend Communications</a>; <a href="../patterns-network/#pattern-n2-secure-session-establishment-using-iso-21177">N2 Secure Session Establishment Using <abbr title="International Organization for Standardization">ISO</abbr> 21177</a></td>
+</tr>
+<tr>
+<td>T_0031</td>
+<td>An <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> device is tampered with.</td>
+<td>Physical Access Controls; <a href="../patterns-edge/#pattern-e3-tamper-detection-and-response">E3: Tamper Detection and Response</a></td>
+</tr>
+<tr>
+<td>T_0032</td>
+<td>An attacker gains unauthorized physical port access.</td>
+<td>Physical Access Controls; <a href="../patterns-edge/#pattern-e3-tamper-detection-and-response">E3: Tamper Detection and Response</a></td>
+</tr>
+<tr>
+<td>T_0033</td>
+<td>Attackers gain access to <abbr title="roadside unit">RSU</abbr> or controller enclosures to manipulate configurations, install rogue devices, or extract sensitive data.</td>
+<td>Physical Access Controls; <a href="../patterns-edge/#pattern-e3-tamper-detection-and-response">E3: Tamper Detection and Response</a></td>
+</tr>
+<tr>
+<td>T_0034</td>
+<td>Use of USB, serial, or debug ports to install unsigned or malicious firmware.</td>
+<td><a href="../patterns-edge/#pattern-e6-software-integrity-verification-and-secure-boot">E6: Software Integrity Verification and Secure Boot</a></td>
+</tr>
+<tr>
+<td>T_0035</td>
+<td>Social Engineering of <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> personnel leading to credential compromise</td>
+<td></td>
+</tr>
+<tr>
+<td>T_0036</td>
+<td>Attacker moves laterally from IT to OT network</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 2, 2025 18:06:11 UTC">September 2, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      CC BY 4.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.tooltips", "header.auto_hide", "navigation.path", "navigation.top", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
