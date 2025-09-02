@@ -4,11 +4,11 @@ Certificate Management Authorities (CMAs) are responsible for operating and gove
 
 ## Governance and Policy Alignment
 
-Every PKI operates under a [Certificate Policy (CP)](certificate-policy) that defines the acceptable uses, validation rules, and lifecycle requirements for certificates. A corresponding CPS documents how the Provider implements these rules in practice. The CP and CPS must align with applicable global standards (e.g., IEEE 1609.2, ETSI TS 102 941) and regional trust frameworks (e.g., [SCMS](scms-security-policies) or [CCMS](ccms-security-policies)) to ensure interoperability.
+Every PKI operates under a [Certificate Policy (CP)](policies-cp.md) that defines the acceptable uses, validation rules, and lifecycle requirements for certificates. A corresponding CPS documents how the Provider implements these rules in practice. The CP and CPS must align with applicable global standards (e.g., IEEE 1609.2, ETSI TS 102 941) and regional trust frameworks (e.g., [SCMS](policies-scms.md) or [CCMS](policies-ccms.md)) to ensure interoperability.
 
 PKI Providers are responsible for:
 
-- Establishing and enforcing eligibility criteria for certificate enrollment.
+- Establishing and enforcing eligibility criteria for certificate enrolment.
 - Maintaining auditable procedures for Root CA approval, suspension, and removal.
 - Coordinating with other PKI Providers and policy authorities to support cross-jurisdiction trust where require
 
@@ -17,13 +17,13 @@ PKI Providers are responsible for:
 In addition to governance, Providers perform day-to-day trust management tasks that ensure the smooth functioning of the ITS PKI ecosystem:
 
 - Trust List Management: Updating and publishing trust lists that identify valid Root CAs. These lists must be encoded, signed, and distributed reliably to relying parties.
-- Certificate Validation: Ensuring that certificate requests are properly validated, including enrollment and operational certificate types.
+- Certificate Validation: Ensuring that certificate requests are properly validated, including enrolment and operational certificate types.
 - Revocation Management: Publishing Certificate Revocation Lists (CRLs) or applying equivalent revocation mechanisms, and ensuring timely propagation of revocation information.
 - Audit and Compliance: Supporting external audits of compliance with CP and CPS requirements, and maintaining evidence of operational integrity.
 
 ## Roles in Certificate Trust Management
 
-The table below outlines key roles that may exist within a PKI Provider 
+The table below outlines key roles that may exist within a PKI Provider:
 
 | Example Role | Role Description                                             |
 | ------------ | ------------------------------------------------------------ |

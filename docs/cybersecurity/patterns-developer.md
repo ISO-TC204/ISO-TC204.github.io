@@ -1,10 +1,10 @@
-# Secure Manufacturing and Development (D) Patterns 
+# Secure Manufacturing and Development (D) Patterns
 
 ## Pattern D1: Vulnerability Management Program
 
-Establishes a structured, repeatable process for identifying, classifying, and remediating vulnerabilities in ITS applications and systems. This pattern ensures developers and maintainers implement a documented vulnerability management program that includes scanning, triage, patching, secure communications with researchers, and user notification. 
+Establishes a structured, repeatable process for identifying, classifying, and remediating vulnerabilities in ITS applications and systems. This pattern ensures developers and maintainers implement a documented vulnerability management program that includes scanning, triage, patching, secure communications with researchers, and user notification.
 
-##### Implementation Context
+### Implementation Context
 
 This pattern applies to any organization that develops or maintains ITS applications, onboard systems (OBUs), infrastructure software (e.g., RSUs), or backend services. Vulnerability management is critical to reduce exploitable attack surfaces, meet regulatory expectations, and demonstrate due diligence.
 
@@ -13,7 +13,7 @@ This pattern applies to any organization that develops or maintains ITS applicat
 | **Used For**     | Vulnerability scanning, verification, patching, and disclosure |
 | **Dependencies** | SBOMs, secure update mechanism, vulnerability tracking and classification tools, contact management |
 
-##### Key Components
+### Key Components
 
 | Component                    | Description                                                  |
 | ---------------------------- | ------------------------------------------------------------ |
@@ -25,24 +25,24 @@ This pattern applies to any organization that develops or maintains ITS applicat
 | Remediation Timelines        | Defines maximum time allowed based on severity class.        |
 | Security Patch Verification  | Ensures vulnerability is fully remediated and patch integrity is validated. |
 
-##### **Implementation Details**
+### Implementation Details
 
 - Scanning & Detection: Integrate automated vulnerability scanning tools into the development lifecycle. Scan third-party libraries, firmware components, and platform dependencies as part of build or pre-release processes. Schedule full system scans (static/dynamic) prior to major releases.
-- Verification & Classification: Review each vulnerability for actual exploitability in the deployed environment. Categorize findings using industry standard metrics (e.g., CVSS). Distinguish false positives, document conditions for exploit, and flag high-risk vectors for immediate action.
+- Verification & Classification: Review each vulnerability for its potential to be exploited in the deployed environment. Categorize findings using industry standard metrics (e.g., CVSS). Distinguish false positives, document conditions for exploit, and flag high-risk vectors for immediate action.
 - Contact Point for Disclosure: Provide a security contact (e.g., `security@yourdomain.com`) and response policy. Monitor submissions from researchers or users and acknowledge reports within a defined SLA. Track inbound reports through a structured intake workflow.
 - Remediation Planning: Assign verified vulnerabilities to development teams for remediation. Define a severity-based patch timeline (e.g., critical: 7 days; high: 30 days). Use version control tagging and commit-level traceability for all fixes.
 - Patch Testing & Release: Build and test security patches using defined QA workflows. Include regression testing, backward compatibility checks, and validation of the fix. Use digitally signed binaries and validated update packages for delivery.
 - User Notification & Disclosure: When a vulnerability fix is deployed, publish release notes with a CVE or internal identifier, affected versions, and remediation instructions. Coordinate responsible disclosure with affected partners or integrators.
 - Audit & Traceability: Maintain a log of all vulnerability reports, resolution actions, test outcomes, patch deployments, and communications. Ensure traceability between discovery, fix, and disclosure. Use this log for internal audits or third-party assessments.
 
-##### Example Use Cases
+### Example Use Cases
 
-| Scenario                    | Behavior Enforced                                            |
+| Scenario                    | Behaviour Enforced                                            |
 | --------------------------- | ------------------------------------------------------------ |
 | Researcher Disclosure       | A third-party security researcher identifies a buffer overflow in an RSU API and emails the listed security contact. A ticket is opened, the vulnerability is verified, and a patch is scheduled. |
 | CVE Scan in Web Application | A scanner detects outdated TLS libraries in a traffic app backend. Triage confirms risk, updates the library, and informs customers. |
 
-##### Related Standards
+### Related Standards
 
 | Standard / Guide      | Purpose                              |
 | --------------------- | ------------------------------------ |
@@ -51,13 +51,11 @@ This pattern applies to any organization that develops or maintains ITS applicat
 | ISO/IEC 29147         | Vulnerability disclosure             |
 | ISO/IEC 30111         | Vulnerability handling processes     |
 
-
-
 ## Pattern D2: Secure Product Development Lifecycle
 
-Establishes a structured, security-aware development lifecycle that incorporates cybersecurity risk management into each stage of ITS product design, implementation, and delivery. This pattern helps ensure that both software and hardware products meet minimum cybersecurity expectations, resist common attack vectors, and can be maintained securely over time. A formal Secure Development Lifecycle (SDL) incorporates security engineering, threat modeling, secure coding, vulnerability testing, and traceable quality controls into the product development process.
+Establishes a structured, security-aware development lifecycle that incorporates cybersecurity risk management into each stage of ITS product design, implementation, and delivery. This pattern helps ensure that both software and hardware products meet minimum cybersecurity expectations, resist common attack vectors, and can be maintained securely over time. A formal Secure Development Lifecycle (SDL) incorporates security engineering, threat modelling, secure coding, vulnerability testing, and traceable quality controls into the product development process.
 
-##### **Implementation Context**
+### Implementation Context
 
 Secure development practices ensure cybersecurity is addressed from the beginning and maintained through release and post-market support.
 
@@ -66,18 +64,18 @@ Secure development practices ensure cybersecurity is addressed from the beginnin
 | **Used For**     | Secure development of OBUs, RSUs, backend services, and V2X applications |
 | **Dependencies** | Developer training, secure coding standards, testing frameworks, version control policies |
 
-##### **Key Components**
+### Key Components
 
 | **Component**                | **Description**                                              |
 | ---------------------------- | ------------------------------------------------------------ |
 | Secure Development Lifecycle | A formalized development process that includes security checkpoints at each phase |
-| Threat Modeling              | Identify potential attack vectors, misuse cases, and trust boundaries early in design |
-| Static/Dynamic/Fuzz Testing  | Use automated tools to uncover vulnerabilities in source code and runtime behavior |
+| Threat Modelling              | Identify potential attack vectors, misuse cases, and trust boundaries early in design |
+| Static/Dynamic/Fuzz Testing  | Use automated tools to uncover vulnerabilities in source code and runtime behaviour |
 | Secure Coding Standards      | Apply consistent rules (e.g., MISRA, SEI CERT) to prevent implementation-level flaws |
 | Quality Control System       | Track defect rates, code quality metrics, and security regression results through CI/CD |
 | Developer Training           | Ensure engineers understand secure development principles and product-specific risks |
 
-##### **Implementation Details**
+### Implementation Details
 
 - Requirements & Design: Begin by performing a security-focused review of product architecture. Identify trust boundaries, data sensitivity, and critical services. Develop threat models to anticipate misuse or compromise scenarios. Apply architectural controls early (e.g., privilege separation, secure boot).
 - Coding & Build Phase: Enforce secure coding standards and require code reviews with security checklists. Integrate static analysis tools and dynamic analysis tools into the CI/CD pipeline. Use fuzz testing for inputs like V2X messages, web APIs, or firmware update channels.
@@ -86,14 +84,14 @@ Secure development practices ensure cybersecurity is addressed from the beginnin
 - Release & Deployment: Digitally sign release artifacts and maintain integrity verification workflows. Validate that installation or update procedures include checks for compatibility, authentication, and rollback safety.
 - Maintenance & Support: Track reported vulnerabilities through a vulnerability management program. Reassess threats periodically and update the SDL based on evolving threat landscape or standards updates.
 
-##### **Example Use Cases**
+### Example Use Cases
 
-| **Scenario**             | **Behavior Enforced**                                        |
+| **Scenario**             | **Behaviour Enforced**                                        |
 | ------------------------ | ------------------------------------------------------------ |
 | RSU Firmware Development | A vendor implements a secure firmware update flow and tracks defects through a secure CI/CD pipeline. |
-| V2X Application Rollout  | A fleet management app is built using SDL. Threat modeling identifies risk of spoofed messages; mitigation is added, and regression tests validate correctness. |
+| V2X Application Rollout  | A fleet management app is built using SDL. Threat modelling identifies risk of spoofed messages; mitigation is added, and regression tests validate correctness. |
 
-##### **Related Standards and References**
+### Related Standards and References
 
 | **Reference**   | **Purpose**                                                  |
 | --------------- | ------------------------------------------------------------ |
@@ -108,7 +106,7 @@ Secure development practices ensure cybersecurity is addressed from the beginnin
 
 A Software Bill of Materials (SBOM) provides a structured inventory of the software components and dependencies used in a device, service, or application. This pattern ensures that vendors and developers can identify vulnerable components, track software provenance, and respond effectively to security advisories or regulatory inquiries. SBOMs support transparency and accountability across the ITS supply chain and enable Infrastructure Owners and Operators (IOOs) to assess supply chain risk during procurement and deployment.
 
-##### **Implementation Context**
+### Implementation Context
 
 This pattern applies to ITS vendors, OEMs, software developers, and system integrators that produce or manage software components embedded in field devices, backend services, or V2X applications.
 
@@ -117,7 +115,7 @@ This pattern applies to ITS vendors, OEMs, software developers, and system integ
 | **Used For**     | Component tracking, vulnerability management, procurement support |
 | **Dependencies** | Secure development practices, tooling for SBOM generation, CVE/CPE mapping |
 
-##### **Key Components**
+### Key Components
 
 | **Component**             | **Description**                                              |
 | ------------------------- | ------------------------------------------------------------ |
@@ -127,7 +125,7 @@ This pattern applies to ITS vendors, OEMs, software developers, and system integ
 | Vulnerability References  | Link components to known vulnerabilities via CVE or CPE identifiers where possible. |
 | Update and Maintenance    | Define how and when the SBOM is updated (e.g., on each software release or patch cycle). |
 
-##### **Implementation Details**
+### Implementation Details
 
 - Tool Integration: Use automated tools integrated into CI/CD pipelines to generate SBOMs during the build process. Validate that the SBOM reflects the final deployed image or firmware.
 - Format Selection: Choose a recognized standard such as SPDX  or CycloneDX , and ensure output is machine-readable (e.g., JSON or XML).
@@ -136,14 +134,14 @@ This pattern applies to ITS vendors, OEMs, software developers, and system integ
 - Distribution: Provide SBOMs to customers or regulators upon request, and include them as part of security documentation or procurement packages.
 - Security Alignment: Link SBOMs to vulnerability databases (e.g., NVD) and maintain an internal process to identify and act on component vulnerabilities.
 
-##### **Example Use Cases**
+### Example Use Cases
 
-| **Scenario**                     | **Behavior Enforced**                                        |
+| **Scenario**                     | **Behaviour Enforced**                                        |
 | -------------------------------- | ------------------------------------------------------------ |
 | Field Device Procurement         | IOO requests an SBOM during procurement to assess supply chain risk and vulnerability exposure. |
 | Patch Planning and Risk Analysis | A newly disclosed CVE affects an open-source library. The developer uses the SBOM to identify affected products and issue a patch. |
 
-##### **Related Standards**
+### Related Standards
 
 | **Standard**               | **Purpose**                                                  |
 | -------------------------- | ------------------------------------------------------------ |
@@ -155,7 +153,7 @@ This pattern applies to ITS vendors, OEMs, software developers, and system integ
 
 Supply Chain Security ensures that cybersecurity requirements are consistently applied across all suppliers and partners involved in the design, development, production, and operation of ITS devices and services. The pattern provides a framework for verifying supplier capability, setting contractual requirements, and ensuring that vulnerabilities or compromises in one part of the supply chain do not propagate through the system. This aligns with ISO/SAE 21434 provisions on distributed development and supplier management.
 
-##### **Implementation Context**
+### Implementation Context
 
 This pattern applies to OEMs, Tiered suppliers, system integrators, and Infrastructure Owners and Operators (IOOs) who procure, deliver, or maintain ITS components and services.
 
@@ -164,7 +162,7 @@ This pattern applies to OEMs, Tiered suppliers, system integrators, and Infrastr
 | **Used For**     | Supplier assurance, procurement, lifecycle risk management   |
 | **Dependencies** | Cybersecurity governance, secure development lifecycle, incident response processes |
 
-##### **Key Components**
+### Key Components
 
 | **Component**                           | **Description**                                              |
 | --------------------------------------- | ------------------------------------------------------------ |
@@ -175,13 +173,13 @@ This pattern applies to OEMs, Tiered suppliers, system integrators, and Infrastr
 | Secure Production & Delivery            | Apply controls to prevent unauthorized modifications during manufacturing and logistics. |
 | Incident Response & Updates             | Ensure suppliers provide secure update mechanisms and participate in coordinated response. |
 
-##### **Example Use Cases**
+### Example Use Cases
 
-| **Scenario**              | **Behavior Enforced**                                        |
+| **Scenario**              | **Behaviour Enforced**                                        |
 | ------------------------- | ------------------------------------------------------------ |
 | Procurement of ITS Device | IOO requests evidence of ISO/SAE 21434 conformity and complete a cybersecurity interface agreement (CIA) before purchase. |
 
-##### **Related Standards**
+### Related Standards
 
 | **Standard**       | **Purpose**                                                  |
 | ------------------ | ------------------------------------------------------------ |

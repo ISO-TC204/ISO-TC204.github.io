@@ -2,13 +2,13 @@
 
 ## Pattern N1: Secure Backend Communications
 
-Secures communication between ITS field devices (e.g., RSUs, OBUs) and backend services (e.g., TMCs, certificate servers, monitoring platforms) using strong encryption and mutual authentication. Depending on the underlying protocol, Transport Layer Security (TLS) or Datagram Transport Layer Security (DTLS) is applied to protect data in transit. TLS 1.3 should be used for TCP-based interfaces (e.g., configuration commands, certificate provisioning), while DTLS is suited for UDP-based traffic such as low-latency telemetry or event reporting. All sessions must use certificates issued by a recognized PKI, and mutual authentication should be enforced to ensure trust on both ends of the connection. 
+Secures communication between ITS field devices (e.g., RSUs, OBUs) and backend services (e.g., TMCs, certificate servers, monitoring platforms) using strong encryption and mutual authentication. Depending on the underlying protocol, Transport Layer Security (TLS) or Datagram Transport Layer Security (DTLS) is applied to protect data in transit. TLS 1.3 should be used for TCP-based interfaces (e.g., configuration commands, certificate provisioning), while DTLS is suited for UDP-based traffic such as low-latency telemetry or event reporting. All sessions must use certificates issued by a recognized PKI, and mutual authentication should be enforced to ensure trust on both ends of the connection.
 
 ![Transport Security](images/Transport-Security.png)
 
 This pattern ensures confidentiality, integrity, and authenticity of data flows across the ITS environment, and mitigates risk associated with spoofing, tampering, and unauthorized control of devices.
 
-##### **Key Components**
+### Key Components
 
 | **Component**                       | **Role**                                                     |
 | ----------------------------------- | ------------------------------------------------------------ |
@@ -18,15 +18,15 @@ This pattern ensures confidentiality, integrity, and authenticity of data flows 
 | Cipher Suite Configuration          | Enforces strong algorithms and disables outdated or insecure ciphers |
 | Certificate Revocation Lists (CRLs) | Ensures devices reject expired or revoked certificates       |
 
-##### **Example Use Cases**
+### Example Use Cases
 
-| **Scenario**                           | **Behavior Enforced**                                        |
+| **Scenario**                           | **Behaviour Enforced**                                        |
 | -------------------------------------- | ------------------------------------------------------------ |
 | RSU sends telemetry over DTLS          | RSU establishes secure DTLS session with backend, encrypts payload, and authenticates server |
 | Backend server configures field device | Server initiates TLS 1.3 session with RSU, both authenticate using device certificates |
-| OBU uploads misbehavior report         | OBU uses DTLS to send a signed and encrypted report to backend with validated identity |
+| OBU uploads misbehaviour report         | OBU uses DTLS to send a signed and encrypted report to backend with validated identity |
 
-##### **Related Standards and NIST Controls**
+### Related Standards and NIST Controls
 
 | **Standard / Control** | **Purpose**                                                  |
 | ---------------------- | ------------------------------------------------------------ |
@@ -43,16 +43,16 @@ During session establishment, each station must present a certificate issued by 
 
 ![ISO 21177 Session Security](images/Session-Security.png)
 
-ITS operators must ensure all deployed devices that support station-to-station communications implement ISO 21177, and procurement specifications should include support for the standard. 
+ITS operators must ensure all deployed devices that support station-to-station communications implement ISO 21177, and procurement specifications should include support for the standard.
 
-##### Implementation Context
+### Implementation Context
 
 | **Applies To**   | OBUs, RSUs, Roadside and Central Systems using session-based communication |
 | ---------------- | ------------------------------------------------------------ |
 | **Used For**     | Establishing and managing secure, persistent sessions over TCP/IP. |
 | **Dependencies** | Valid X.509 certificates, CTL availability, PKI integration, ISO 21177 compliance |
 
-##### Key Components
+### Key Components
 
 | **Component**              | **Role**                                                     |
 | -------------------------- | ------------------------------------------------------------ |
@@ -61,30 +61,18 @@ ITS operators must ensure all deployed devices that support station-to-station c
 | Certificate Trust List     | Local list of trusted Root and Intermediate CAs for validating peers |
 | Session Renegotiation      | Re-establishes trust and session keys periodically or upon failure |
 
-##### Example Use Cases
+### Example Use Cases
 
-| **Scenario**                      | **Behavior Enforced**                                        |
+| **Scenario**                      | **Behaviour Enforced**                                        |
 | --------------------------------- | ------------------------------------------------------------ |
 | RSU-OBU Secure Session            | An RSU validates an OBU’s certificate and initiates a secure ISO 21177 session |
 | Session Expiry Handling           | An RSU terminates and renegotiates a session when a certificate expires or is revoked |
 | Backend-Controlled Session Policy | A backend management system sets session duration and requires periodic renegotiation |
 
-##### Related Standards
+### Related Standards
 
 | **Standard** | **Purpose**                                                  |
 | ------------ | ------------------------------------------------------------ |
 | ISO 21177    | Defines secure session negotiation and management for ITS stations |
 | IEEE 1609.2  | Provides certificate structure and signing requirements      |
 | ISO 21217    | Reference architecture for ITS station communication functions |
-
-
-
-
-
-
-
-
-
-
-
-- 

@@ -32,8 +32,8 @@ This misuse case maps to existing threats in the ITS Threat Catalogue:
 
 | Security Pattern                                             | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [D5: Secure Remote Management](patterns-developer.md#pattern-d5:-secure-remote-management) | Require encrypted communications, mutual authentication, and privilege-based access controls for remote sessions between IT and OT systems. |
-| [E2: Secure Device Configuration](pattern-edge.md#pattern-e2:-secure-device-configuration) | Harden roadside devices with secure configuration, password management, and audit logging to resist unauthorized shutdown. |
+| [D5: Secure Remote Management](patterns-management.md#pattern-m6-secure-remote-management) | Require encrypted communications, mutual authentication, and privilege-based access controls for remote sessions between IT and OT systems. |
+| [E2: Secure Device Configuration](patterns-edge.md#pattern-e2-secure-device-configuration) | Harden roadside devices with secure configuration, password management, and audit logging to resist unauthorized shutdown. |
 
 ## Misuse Case 2: Compromise of Remote Software Update Process
 
@@ -58,8 +58,8 @@ An attacker compromises the update process used to deliver software or firmware 
 
 | Security Pattern                                             | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [Secure Software Integrity and Boot](patterns-edge.md#pattern-e6:-software-integrity-verification-and-secure-boot) | Require cryptographic signing and verification of all updates before installation. |
-| [D5: Secure Remote Management](patterns-developer.md#pattern-d5:-secure-remote-management) | Ensure update channels use encrypted, authenticated sessions. |
-| [Supply Chain Security](patterns-developer.md#pattern-d4:-supply-chain-security) | Verify supplier update processes and components are protected. |
+| [E6: Secure Software Integrity and Boot](patterns-edge.md#pattern-e6-software-integrity-verification-and-secure-boot) | Require cryptographic signing and verification of all updates before installation. |
+| [D5: Secure Remote Management](patterns-management.md#pattern-m6-secure-remote-management) | Ensure update channels use encrypted, authenticated sessions. |
+| [D4: Supply Chain Security](patterns-developer.md#pattern-d4-supply-chain-security) | Verify supplier update processes and components are protected. |
 
-## Pattern E6: Software Integrity Verification and Secure Boot 
+## Pattern E6: Software Integrity Verification and Secure Boot

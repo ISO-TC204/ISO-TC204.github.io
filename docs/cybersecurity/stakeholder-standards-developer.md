@@ -4,7 +4,7 @@ Standards development Organizations (SDOs) and Standards Developers are responsi
 
 A Standards Developer should work to ensure that cybersecurity capabilities (e.g., trust management, authenticated messaging, secure transport) are consistently defined and supported across the ITS vendor community.
 
-### Responsibilities
+## Responsibilities
 
 To meet the needs of implementers and policy bodies, you must:
 
@@ -15,10 +15,9 @@ To meet the needs of implementers and policy bodies, you must:
 - Define and maintain cryptographic agility to support migration to post-quantum algorithms, strong key lifecycles, and forward secrecy where appropriate.
 - Enable testability and certification by including test vectors, profile constraints, and unambiguous processing rules.
 
-### Recommended Actions
+## Recommended Actions
 
 - Coordinate through cross-SDO working groups to align message structures, certificate formats, and protocol flows (e.g., IEEE/SAE with ETSI/ISO).
 - Profile existing protocols using constrained and well-defined parameter sets appropriate for ITS resource limits and latency constraints.
 - Ensure all security-relevant objects have validated encoding and validation logic, including edge cases and malformed inputs.
 - Document threat models and show how your specifications mitigate or assume responsibility for threats (e.g., replay, spoofing, denial of service).
-

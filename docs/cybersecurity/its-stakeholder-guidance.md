@@ -10,13 +10,8 @@ Each layer of the ITS cybersecurity model depends on the actions of specific sta
 
 **[Infrastructure Owners and Operators](stakeholder-ioo.md)**: Public agencies, departments of transportation, and infrastructure providers are responsible for securing roadside units, traffic controllers, and other field equipment. This includes enforcing hardware protections, managing software updates, and coordinating with certificate authorities to onboard or revoke devices as needed.
 
-**[Original Equipment Manufacturers (OEMs)](stakeholder-oem.md) **: Vehicle manufacturers. These stakeholders must meet requirements defined in vehicle cybersecurity standards such as ISO/SAE 21434. 
+**[Original Equipment Manufacturers (OEMs)](stakeholder-oem.md)**: Vehicle manufacturers. These stakeholders must meet requirements defined in vehicle cybersecurity standards such as ISO/SAE 21434.
 
-[**ITS Application Developers**](stakeholder-appdev.md): Manufacturers of OBUs, RSUs, and related equipment, along with developers of ITS applications and services, are responsible for implementing core security functions and ensuring compliance with certificate policies and interoperability standards. These stakeholders must support secure key storage, enable local misbehavior detection, validate permissions (e.g., PSIDs/SSPs), and ensure their applications operate within defined authorization scopes. 
+[**ITS Application Developers**](stakeholder-appdev.md): Manufacturers of OBUs, RSUs, and related equipment, along with developers of ITS applications and services, are responsible for implementing core security functions and ensuring compliance with certificate policies and interoperability standards. These stakeholders must support secure key storage, enable local misbehaviour detection, validate permissions (e.g., PSIDs/SSPs), and ensure their applications operate within defined authorization scopes.
 
 **[Cybersecurity Oversight and Policy Authorities](stakeholder-policy-maker.md)**: Governance authorities, including national cybersecurity agencies and regional coordinating groups, develop cybersecurity policies, perform audits, and establish incident response processes. These bodies help ensure that security implementations align with risk management goals and regulatory expectations.
-
-
-
-
-

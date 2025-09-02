@@ -2,9 +2,7 @@
 
 Cybersecurity for Intelligent Transport Systems (ITS) is governed by a combination of interoperability frameworks, global standards, and national or local policies. These layers correspond to the model shown in the diagram above and provide the foundation on which ITS-specific technical standards are implemented.
 
-![Standards and Policies](./images/standards and policies.jpg)
-
-
+![Standards and Policies](images/standards-and-policies.jpg)
 
 ## Global Interoperability Frameworks
 
@@ -29,7 +27,7 @@ Global standards provide a structured methodology for managing cybersecurity ris
 
 The NIST Cybersecurity Framework is widely adopted in North America as a risk-based approach to organizing cybersecurity activities. It is structured around six functions: Govern, Identify, Protect, Detect, Respond, and Recover. The CSF guides organizations in setting cybersecurity expectations, performing risk assessments, and aligning operational practices such as patching, monitoring, and incident response. For ITS deployments, state departments of transportation, municipalities, and traffic management centers often use the CSF to structure their security programs and demonstrate alignment with national policy guidance. While the CSF provides a strong governance structure, it does not define technical requirements for ITS protocols or devices, which must be derived from sector-specific standards.
 
-![NIST Functions](images\nist_functions.jpg)
+![NIST Functions](images/nist_functions.jpg)
 
 ### ISO/IEC 27001
 
@@ -43,26 +41,24 @@ In the United States, federal and state agencies frequently use the NIST Cyberse
 
 In the European Union, IOOs and manufacturers may adopt ISO/IEC 27001 to structure their organizational security programs while also demonstrating compliance with the EU Cyber Resilience Act (CRA). National conformity assessments serve as the mechanism for verifying that products meet CRA obligations before entering the market.
 
-
-
 ### Certificate Policy (CP) and Certificate Practices Statements (CPS)
 
-While organizational frameworks such as ISO/IEC 27001, the NIST Cybersecurity Framework, or the EU Cyber Resilience Act provide general requirements for governance and risk management, CP and CPS documents translate those high-level obligations into PKI-specific trust rules. They ensure that certificate authorities, enrollment authorities, and authorization services operate within an auditable and enforceable policy structure.
+While organizational frameworks such as ISO/IEC 27001, the NIST Cybersecurity Framework, or the EU Cyber Resilience Act provide general requirements for governance and risk management, CP and CPS documents translate those high-level obligations into PKI-specific trust rules. They ensure that certificate authorities, enrolment authorities, and authorization services operate within an auditable and enforceable policy structure.
 
-A [Certificate Policy (CP)](certificate-policy.md) defines the conditions under which certificates are issued, managed, and revoked within an ITS Public Key Infrastructure (PKI). Certificate Practice Statements (CPS) provide the operator-specific implementation details that must align with the CP. Together, these documents establish the governance, approval criteria, and enforcement mechanisms that ensure certificates are only issued to eligible devices and entities, are used for authorized purposes, and can be revoked when necessary.
+A [Certificate Policy (CP)](policies-cp.md) defines the conditions under which certificates are issued, managed, and revoked within an ITS Public Key Infrastructure (PKI). Certificate Practice Statements (CPS) provide the operator-specific implementation details that must align with the CP. Together, these documents establish the governance, approval criteria, and enforcement mechanisms that ensure certificates are only issued to eligible devices and entities, are used for authorized purposes, and can be revoked when necessary.
 
-PKI operators must also define how trust anchors, such as Root Certificate Authorities (Root CAs), are authorized, audited, and removed. The structure of trust management can vary by region. In North America, for example, [SCMS deployments](scms-security-policies.md) use a quorum of Electors to manage the Certificate Trust List (CTL). In Europe, [CCMS implementations](ccms-security-policies.md) designate a central Certificate Policy Authority (CPA) to govern the European Certificate Trust List (ECTL). Both models rely on CP and CPS documents to define trust lifecycle rules and to provide assurance through audit and compliance.
+PKI operators must also define how trust anchors, such as Root Certificate Authorities (Root CAs), are authorized, audited, and removed. The structure of trust management can vary by region. In North America, for example, [SCMS deployments](policies-scms.md) use a quorum of Electors to manage the Certificate Trust List (CTL). In Europe, [CCMS implementations](policies-ccms.md) designate a central Certificate Policy Authority (CPA) to govern the European Certificate Trust List (ECTL). Both models rely on CP and CPS documents to define trust lifecycle rules and to provide assurance through audit and compliance.
 
 ### Technical Standards
 
-Organizational frameworks and policy documents define the governance structure for cybersecurity in ITS. Technical standards implement these requirements at the protocol, device, and system level, ensuring that the policies described in frameworks, regulations, and certificate policies are realized in practice. These standards provide the specific technical controls needed for secure communications, device hardening, certificate management, and misbehavior detection.
+Organizational frameworks and policy documents define the governance structure for cybersecurity in ITS. Technical standards implement these requirements at the protocol, device, and system level, ensuring that the policies described in frameworks, regulations, and certificate policies are realized in practice. These standards provide the specific technical controls needed for secure communications, device hardening, certificate management, and misbehaviour detection.
 
 The following categories group ITS security standards according to their primary function:
 
 - Edge Device Security Standards – define requirements for hardware security, secure boot, tamper detection, and cryptographic modules in OBUs, RSUs, and other ITS equipment.
 - Network and Transport Security Standards – specify protocols for protecting confidentiality, integrity, and authentication of ITS data in transit.
 - Application Security Standards – govern how ITS messages are formatted, signed, and validated to ensure interoperability and trust across jurisdictions.
-- Security Management Standards – establish rules for security management and monitoring, certificate issuance, validation, revocation, misbehavior reporting, and overall PKI operations.
+- Security Management Standards – establish rules for security management and monitoring, certificate issuance, validation, revocation, misbehaviour reporting, and overall PKI operations.
 
 #### Edge Device Security Standards
 
@@ -131,7 +127,7 @@ These standards define how ITS messages are structured, signed, and validated. T
 
 #### Security Management Standards
 
-Implement these standards to perform secure management of edge devices, and to issue, validate, and revoke certificates and to manage permissions. 
+Implement these standards to perform secure management of edge devices, and to issue, validate, and revoke certificates and to manage permissions.
 
 | Standard                                                     | Document Type | Description                                                  | Primary Role(s)                                              |
 | ------------------------------------------------------------ | ------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -156,4 +152,3 @@ Implement these standards to perform secure management of edge devices, and to i
 | SCMS Manager: Misbehaviour Report and  Application Specification | Standard      | MBR data format and adjudication rules.                      | Credential Management Authorities,  Infrastructure Owner Operators |
 | ETSI TR 103 460                                              | Standard      | Survey of misbehaviour detection techniques.                 | Cybersecurity  Oversight and Policy Bodies, Credential Management Authorities |
 | NTCIP / SNMPv3 (RFC 3410)                                    | Standard      | Management protocols with authentication and encryption for ITS field  device communications. | [Infrastructure Owners and Operators](stakeholder-ioo.md)    |
-

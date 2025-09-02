@@ -1,17 +1,17 @@
-# Application (A) Security Patterns 
+# Application (A) Security Patterns
 
 ## Pattern A1: Authenticated Messaging
 
-All outbound messages in an ITS system must be cryptographically signed using certificates that encode authorized behaviors. This ensures message integrity, origin authenticity, and accountability. Depending on the communication context, authentication may occur at the message level (e.g., signed BSMs over broadcast) or via mutually authenticated sessions (e.g., secure TCP-based control exchanges using ISO 21177). This pattern enforces trust relationships, supports interoperability, and provides a basis for misbehavior detection and privacy-preserving identity models. Authenticated messaging requires a valid certificate, trusted anchors, and policy-aware enforcement. In privacy-sensitive applications, pseudonym certificates should be used and rotated regularly.
+All outbound messages in an ITS system must be cryptographically signed using certificates that encode authorized behaviours. This ensures message integrity, origin authenticity, and accountability. Depending on the communication context, authentication may occur at the message level (e.g., signed BSMs over broadcast) or via mutually authenticated sessions (e.g., secure TCP-based control exchanges using ISO 21177). This pattern enforces trust relationships, supports interoperability, and provides a basis for misbehaviour detection and privacy-preserving identity models. Authenticated messaging requires a valid certificate, trusted anchors, and policy-aware enforcement. In privacy-sensitive applications, pseudonym certificates should be used and rotated regularly.
 
-##### Implementation Context
+### Implementation Context
 
 | **Applies To**   | OBUs, RSUs, backend services, cloud-hosted ITS components    |
 | ---------------- | ------------------------------------------------------------ |
 | **Used For**     | Message signing, source authentication, session security     |
 | **Dependencies** | Certificate provisioning, CTL configuration, signing logic, session establishment (where applicable) |
 
-##### Key Components
+### Key Components
 
 | **Component**                | **Role**                                                     |
 | ---------------------------- | ------------------------------------------------------------ |
@@ -21,7 +21,7 @@ All outbound messages in an ITS system must be cryptographically signed using ce
 | Session Authentication       | For ISO 21177-based communications, mutual authentication and secure channel setup precede message exchange |
 | Application Binding Logic    | Checks that the message type matches the permissions encoded in the certificate used to sign it |
 
-##### Implementation Details
+### Implementation Details
 
 - Key Provisioning: Devices must generate or receive cryptographic keys securely. Certificates must be provisioned via a recognized PKI (e.g., SCMS, CCMS) with correct fields (e.g., PSID, SSP, ITS-AID).
 - Message Signing: Applications must sign outbound messages with a certificate that explicitly authorizes the message type or service (e.g., an SRM must be signed with a certificate that includes the relevant PSID and SSP).
@@ -31,14 +31,14 @@ All outbound messages in an ITS system must be cryptographically signed using ce
 - Trust Anchors: All devices must maintain an up-to-date CTL listing trusted Root CAs. Chains that do not resolve to a listed Root must be rejected.
 - Certificate Updates: Devices may support secure download of updated certificates or CTLs, either autonomously or during a maintenance cycle. Updates must be validated before use.
 
-##### Example Use Cases
+### Example Use Cases
 
-| **Scenario**                   | **Behavior Enforced**                                        |
+| **Scenario**                   | **Behaviour Enforced**                                        |
 | ------------------------------ | ------------------------------------------------------------ |
 | BSM Broadcast from OBU         | Signed with pseudonym certificate; recipient checks trust chain and message plausibility |
 | ISO 21177 Secure Session Setup | Mutual authentication using long-term certificates before data exchange |
 
-##### Related Standards
+### Related Standards
 
 | Standard        | Purpose                                                      |
 | --------------- | ------------------------------------------------------------ |
@@ -52,36 +52,32 @@ All outbound messages in an ITS system must be cryptographically signed using ce
 
 Ensures that ITS devices only accept messages that are digitally signed with certificates issued by trusted Certificate Authorities (CAs). Each device validates incoming messages by checking the sender's certificate and confirming that it chains to a known Root CA listed in its Certificate Trust List (CTL). This protects against unauthorized or spoofed messages and enforces compliance with trust policy across deployments.
 
-##### Implementation Context
+### Implementation Context
 
 | **Applies To** | OBUs, RSUs, application platforms, infrastructure systems    |
 | -------------- | ------------------------------------------------------------ |
 | Used For       | Validating the authenticity of signed messages, enforcing trust boundaries |
 | Dependencies   | Certificate Trust List (CTL), certificate parsing and signature verification logic, trusted Root CA management |
 
-
-
-##### Implementation Details
+### Implementation Details
 
 - Signature Validation: Each received message must be digitally signed. The receiving device extracts the certificate from the message and verifies the cryptographic signature.
-- Certificate Path Building: Devices build a trust path from the sender’s certificate through one or more intermediary certificates to a Root CA listed in the CTL.  See Diagram below. 
+- Certificate Path Building: Devices build a trust path from the sender’s certificate through one or more intermediary certificates to a Root CA listed in the CTL.  See Diagram below.
 
 - CTL Management: Devices must be provisioned with an up-to-date Certificate Trust List. Only certificates chaining to a listed Root CA are accepted.
 - Chain Validation Logic: Each certificate in the chain must be valid (not expired or revoked), and its issuer must be the subject of the next certificate in the chain.
 - Performance Considerations: Trust chain validation and signature checking must be efficient to support real-time message processing in latency-sensitive ITS environments.
 
-![Trust Chain](C:/Users/bruss/OneDrive - TrustThink, LLC/Projects - TrustThink, LLC/ITS JPO/ISO/ISO Cybersecurity Website/Development/ISO-TC204.github.io/docs/cybersecurity/images/trustChain.jpg)
+![Trust Chain](images/trustChain.jpg)
 
-##### Example Use Cases
+### Example Use Cases
 
-| Scenario                                      | Behavior Enforced                                            |
+| Scenario                                      | Behaviour Enforced                                            |
 | --------------------------------------------- | ------------------------------------------------------------ |
 | RSU validates Signal Request Message (SRM)    | RSU verifies that an SRM was signed by a certificate chaining to a trusted Root CA before granting signal priority. |
 | Field technician configures device onboarding | Installer confirms the OBU’s certificate chains to an accepted CA before the device is accepted into the deployment. |
 
-
-
-##### Related Standards
+### Related Standards
 
 | Standard          | Purpose                                                      |
 | ----------------- | ------------------------------------------------------------ |
@@ -92,16 +88,16 @@ Ensures that ITS devices only accept messages that are digitally signed with cer
 
 ## Pattern A3: Certificate-bound application authorization
 
-Restricts ITS application behavior to only those actions explicitly authorized through certificate entitlements. Applications are identified using Provider Service Identifiers (PSIDs) or ITS Application Identifiers (ITS-AIDs) with permissions further refined through Service-Specific Permissions (SSPs). These constraints are enforced by both senders and receivers to prevent unauthorized use of ITS messages or services. This pattern enforces least privilege and supports federated trust enforcement.  
+Restricts ITS application behaviour to only those actions explicitly authorized through certificate entitlements. Applications are identified using Provider Service Identifiers (PSIDs) or ITS Application Identifiers (ITS-AIDs) with permissions further refined through Service-Specific Permissions (SSPs). These constraints are enforced by both senders and receivers to prevent unauthorized use of ITS messages or services. This pattern enforces least privilege and supports federated trust enforcement.  
 
-##### Implementation Context
+### Implementation Context
 
 | **Applies To**   | OBUs, RSUs, application platforms, infrastructure systems    |
 | ---------------- | ------------------------------------------------------------ |
 | **Used For**     | Message-level authorization, application permission enforcement, service access control |
 | **Dependencies** | Certificate profiles including PSID/SSP fields, sender and receiver enforcement logic, deployment policies |
 
-##### Key Components
+### Key Components
 
 | **Component**                  | **Role**                                                     |
 | ------------------------------ | ------------------------------------------------------------ |
@@ -110,24 +106,24 @@ Restricts ITS application behavior to only those actions explicitly authorized t
 | Sender Enforcement Logic       | Restricts outbound messages to match permitted certificates and services |
 | Receiver Validation Logic      | Ensures incoming messages match expected application entitlements |
 
-##### Implementation Details
+### Implementation Details
 
 - Certificate Configuration: SCMS/CCMS must issue certificates with valid PSID and optional SSP values appropriate to the role of the device.
-- Sender Behavior: Devices must select certificates that match the intended application. This may require runtime certificate selection or predefined associations.
-- Receiver Behavior: RSUs or backend systems must inspect both PSID and SSP fields before processing messages. Rejected messages should be logged and discarded.
-- Local Policy Filters: RSUs or backend systems may apply operational policies to further constrain behavior (e.g., only vehicles from authorized agencies may request signal priority).
+- Sender Behaviour: Devices must select certificates that match the intended application. This may require runtime certificate selection or predefined associations.
+- Receiver Behaviour: RSUs or backend systems must inspect both PSID and SSP fields before processing messages. Rejected messages should be logged and discarded.
+- Local Policy Filters: RSUs or backend systems may apply operational policies to further constrain behaviour (e.g., only vehicles from authorized agencies may request signal priority).
 - Operational Context: Devices may carry multiple certificates, each with different entitlements. Runtime logic must select the appropriate credential based on the current application and role.
 
-##### Example Use Cases
+### Example Use Cases
 
-| Scenario                     | Behavior Enforced                                            |
+| Scenario                     | Behaviour Enforced                                            |
 | ---------------------------- | ------------------------------------------------------------ |
 | Public Transit SRMs          | Only transit vehicles with authorized certificates can request signal priority |
 | Emergency Hazard Warnings    | Only certified emergency services may broadcast hazard notifications |
 | Regional Access Restrictions | Certificates scoped by jurisdiction to restrict message validity to local areas |
 |                              |                                                              |
 
-##### Related Standards
+### Related Standards
 
 | Standard        | Purpose                                                      |
 | --------------- | ------------------------------------------------------------ |
@@ -135,4 +131,3 @@ Restricts ITS application behavior to only those actions explicitly authorized t
 | SAE J2735       | Application-layer message definitions (e.g., SRM, BSM, TIM)  |
 | ETSI TS 102 941 | Authorization framework for ITS applications (EU)            |
 | ETSI TS 103 097 | Certificate structure and permissions for V2X (EU)           |
-

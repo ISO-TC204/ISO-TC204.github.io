@@ -12,9 +12,8 @@ Authorities must verify that policies and regulations are implemented effectivel
 
 ## Incident Response Coordination
 
-Policy authorities are also responsible for establishing and coordinating incident response processes. This includes developing national or regional Computer Security Incident Response Teams (CSIRTs) with the capability to handle ITS-specific incidents, defining reporting obligations for manufacturers and operators, and ensuring that incident information is shared across stakeholders. 
+Policy authorities are also responsible for establishing and coordinating incident response processes. This includes developing national or regional Computer Security Incident Response Teams (CSIRTs) with the capability to handle ITS-specific incidents, defining reporting obligations for manufacturers and operators, and ensuring that incident information is shared across stakeholders.
 
 ## International and Regional Cooperation
 
-ITS deployments often span national borders, requiring cooperation among oversight bodies. Authorities participate in regional coordinating groups to harmonize trust frameworks, misbehavior reporting, and certificate policies. 
-
+ITS deployments often span national borders, requiring cooperation among oversight bodies. Authorities participate in regional coordinating groups to harmonize trust frameworks, misbehaviour reporting, and certificate policies.
