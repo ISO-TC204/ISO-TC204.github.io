@@ -1,8 +1,6 @@
-
-
 # Device and Application Security Policy Recommendations
 
-It is important that application developers and manufacturers understand the complexities related to the configuration options for various cybersecurity controls. The tables below provides examples of cybersecurity configuration options and in many cases recommendations for the optimal option.  Each of these policy item details has been taken from the FHWA ITS2P program recommendations. 
+It is important that application developers and manufacturers understand the complexities related to the configuration options for various cybersecurity controls. The tables below provides examples of cybersecurity configuration options and in many cases recommendations for the optimal option. Each of these policy item details has been taken from the FHWA ITS2P program recommendations.
 
 ## Password Policies
 
@@ -55,7 +53,7 @@ It is important that application developers and manufacturers understand the com
 | Allow Automatic Date and Time | Allow Date & Time to be automatically configured and readjusted according to time-zones and time changes. | True           |
 | Utilize Three Time Sources    | −Enables three synchronized time sources to maintain consistency in event log timestamps. | True           |
 
-## System File Restriction Policies			
+## System File Restriction Policies
 
 | Policy Item                 | Description                                                  | Recommendation |
 | --------------------------- | ------------------------------------------------------------ | -------------- |
@@ -63,7 +61,7 @@ It is important that application developers and manufacturers understand the com
 | Enable Integrity Protection | Identifies and reports changes to ITS device system files.   | True           |
 | Enable File Encryption      | Enable secure encryption of files on ITS devices.            | True           |
 
-## Secure Boot Load Policies		
+## Secure Boot Load Policies
 
 | Policy Item                                 | Description                                                  | Recommendation |
 | ------------------------------------------- | ------------------------------------------------------------ | -------------- |
@@ -71,17 +69,17 @@ It is important that application developers and manufacturers understand the com
 | Require Bootloader Password                 | Only allow sudo users to read/write boot parameters to prevent vulnerability exploitation by non-root users. | True           |
 | Require Authentication for Single User Mode | Require authentication when booting into single-user mode to prevent unauthorized users from gaining root access through repeated rebooting. | True           |
 
-### Encrypted Storage Policies		
+### Encrypted Storage Policies
 
 | Policy Item                         | Description                                                  | Recommendation |
 | ----------------------------------- | ------------------------------------------------------------ | -------------- |
-| Automounting                        | Allows any USB drive or disc to be attached to the system and have its contents transferred into the ITS device. | False          |
+| Auto-mounting                       | Allows any USB drive or disc to be attached to the system and have its contents transferred into the ITS device. | False          |
 | Routine Cloud-based Backups         | Periodically backup hard drive contents to cloud-based storage system in case of system failure. | 30 days        |
 | Routine Defragmentation             | Periodically defragment hard-drive in order to reorganize files and improve performance. | 30 days        |
 | Limit Hard Drive Storage Capacity   | Limit maximum storage capacity of hard drive to a specified percentage of actual capacity to minimize risk of data corruption and performance loss. | 80%            |
 | Generate Encryption Recovery Tokens | Generate fallback tokens in the case that encryption key credentials are lost. | True           |
 
-## Data At Rest Security Policies	
+## Data At Rest Security Policies
 
 | Policy Item                           | Description                                                  | Recommendation |
 | ------------------------------------- | ------------------------------------------------------------ | -------------- |
@@ -90,7 +88,7 @@ It is important that application developers and manufacturers understand the com
 | Routine Data Backup                   | Back up Data at rest routinely in the case of mishandled data transfers or power outages. | True           |
 | Data Tokenization                     | Substitute sensitive data with non-sensitive tokens that will not be able to be exploited if data is stolen or leaked. | True           |
 
-## Audit Management Policies		
+## Audit Management Policies
 
 | Policy Item                             | Description                                                  | Recommendation |
 | --------------------------------------- | ------------------------------------------------------------ | -------------- |
@@ -98,28 +96,28 @@ It is important that application developers and manufacturers understand the com
 | Enable auditd verification (Linux only) | Verify that auditd (daemon that records system events, provides information regarding unauthorized access instances) is installed. | True           |
 | Enable Automatic Log Deletion           | Delete audit logs if they have reached maximum file size capacity. | None           |
 
-## Integrity Protection Policies		
+## Integrity Protection Policies
 
 | Policy Item              | Description                                                  | Recommendation |
 | ------------------------ | ------------------------------------------------------------ | -------------- |
 | Enable AIDE (Linux only) | AIDE takes a snapshot of the current filesystem’s state noting register hashes, modification times, and other data defined by administrators. A database is then built based on this snapshot and is stored to use in future integrity checks against the system’s status. AIDE will automatically report any discrepancies between versions found during integrity checks to administrators. | True           |
 | Enable Version Control   | Allows for data recovery or rollback in case of breaches or data loss incidents. | True           |
 
-## Privilege Management Policies	
+## Privilege Management Policies
 
 | Policy Item                                                  | Description                                                  | Recommendation |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | -------------- |
 | Require re-authentication for Privilege Escalation (Linux only) | −Users will be required to reauthenticate to access higher-privilege resources or tasks. Prevent automated processes from being able to utilize elevated privileges. | True           |
 | sudo Authentication Timeout (Linux only)                     | −Establishes a timeout that reduces the window of opportunity for unauthorized privileged access by unauthorized users. | 15 minutes     |
 
-## Firmware and Software Update Policies		
+## Firmware and Software Update Policies
 
 | Policy Item                                | Description                                                  | Recommendation |
 | ------------------------------------------ | ------------------------------------------------------------ | -------------- |
 | Automated Software Patch Management        | Deploy automated software update tools in order to ensure that third-party software on all systems is running the most recent security updates. | True           |
 | Automate Operating System Patch Management | Ensure that operating systems are running the most recent security updates. | True           |
 
-## Firewall Settings Policies	
+## Firewall Settings Policies
 
 | Policy Item     | Description                                                  | Recommendation |
 | --------------- | ------------------------------------------------------------ | -------------- |
@@ -135,7 +133,7 @@ It is important that application developers and manufacturers understand the com
 | Multi Factor Authentication Key Access | Require multi-factor authentication to access keys. Important for keys that have high privilege such as admin. | True            |
 | Configure Key Size                     | −Larger keys offer longer protection at the cost of performance. Configuration is based on input passed in as an integer which determines the bit size of the key. | P-256 for ECDSA |
 
-## Remote Configuration Policies		
+## Remote Configuration Policies
 
 | Policy Item                                      | Description                                                  | Recommendation |
 | ------------------------------------------------ | ------------------------------------------------------------ | -------------- |
@@ -148,11 +146,10 @@ It is important that application developers and manufacturers understand the com
 | Assign Maximum Session                           | Disconnect users after an allotted time.                     | 60 minutes     |
 | Configure Encryption Parameters                  | −Permit or define VPN connections to the remote server.      | Yes            |
 
-## Data In Transit Policies		
+## Data In Transit Policies
 
 | Policy Item                     | Description                                                  | Recommendation |
 | ------------------------------- | ------------------------------------------------------------ | -------------- |
 | Enable End to End Encryption    | −Encrypt data before sending to destinations endpoints and only decrypt data using a public-private key pair. | True           |
 | Enable Authentication Endpoints | −Access to data endpoints should be configured to require authentication in order to further secure data transportation. | None           |
 | Enable Secure Protocols         | −Provide a secure protocol to perform encrypted communications. SSL, TLS, HTTPs. HTTPs are the most appropriate protocol to implement for this usage case, but other options can be selected based on administrator discretion. |                |
-

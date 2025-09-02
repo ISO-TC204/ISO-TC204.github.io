@@ -8,32 +8,35 @@ nav:
     - About us: about.md
     - Intro to ITS: intro.md
     - Cybersecurity: 
-    - Beginners Guide to ITS Cybersecurity: cybersecurity/beginners-guide.md 
-    - Introduction to ITS Cybersecurity Guidance: cybersecurity/index.md
-      - ITS Cybersecurity Patterns: cybersecurity/its-security-patterns.md
-         -Secure ITS Management Patterns: cybersecurity/patterns-management.md
-         -Application Security Patterns: cybersecurity/patterns-application.md
-         -Edge Device Security Patterns: cybersecurity/patterns-edge.md
-         -Network and Transport Security Patterns: cybersecurity/patterns-network.md
-         -Deployment and Integration Security Patterns: cybersecurity/patterns-deployment.md
-      - ITS Security Regulations and Standards: cybersecurity/its-security-standards.md
-         -Certificate Policy (CP): cybersecurity/policies-cp.md
-         -SCMS Policy: cybersecurity/policies-scms.md
-         -CCMS Policy: cybersecurity/policies-ccms.md
-         -Device Security Policy Configurations: cybersecurity/policies-device.md
-      - ITS Threat analysis: cybersecurity/its-threat-analysis.md
+      - Introduction: cybersecurity/index.md
+      - Beginners Guide: cybersecurity/beginners-guide.md 
+      - ITS Cybersecurity Patterns: 
+        - Overview: cybersecurity/its-security-patterns.md
+        - Secure ITS Management Patterns: cybersecurity/patterns-management.md
+        - Application Security Patterns: cybersecurity/patterns-application.md
+        - Edge Device Security Patterns: cybersecurity/patterns-edge.md
+        - Network and Transport Security Patterns: cybersecurity/patterns-network.md
+        - Deployment and Integration Security Patterns: cybersecurity/patterns-deployment.md
+        - Developer Patterns: cybersecurity/patterns-developer.md
+      - ITS Security Regulations and Standards: 
+        - Overview: cybersecurity/its-security-standards.md
+        - Certificate Policy (CP): cybersecurity/policies-cp.md
+        - SCMS Policy: cybersecurity/policies-scms.md
+        - CCMS Policy: cybersecurity/policies-ccms.md
+        - Device Security Policy Configurations: cybersecurity/policies-device.md
+      - ITS Threat analysis: cybersecurity/threat-analysis.md
       - Interoperability strategies: cybersecurity/its-interoperability-strategies.md
-      - ITS Cybersecurity Patterns: cybersecurity/its-security-patterns.md
       - Stakeholder guidance: 
         - Overview: cybersecurity/its-stakeholder-guidance.md
-            - Standards developers: cybersecurity/stakeholder-standards-developer.md
-            - Cybersecurity Oversight and Policy Authorities: cybersecurity/stakeholder-policy-maker.md
-            - Infrastructure Owner Operators (IOOs): cybersecurity/stakeholder-ioo.md
-            - ITS Application Developers: cybersecurity/stakeholder-appdev.md
-            - Cerificate Management Authorities: cybersecurity/certmgmt.md
-            - Original Equipment Manufacturers (OEMs): cybersecurity/stakeholder-oem.md
+        - Standards developers: cybersecurity/stakeholder-standards-developer.md
+        - Cybersecurity Oversight and Policy Authorities: cybersecurity/stakeholder-policy-maker.md
+        - Infrastructure Owner Operators (IOOs): cybersecurity/stakeholder-ioo.md
+        - ITS Application Developers: cybersecurity/stakeholder-appdev.md
+        - Certificate Management Authorities: cybersecurity/stakeholder-certmgmt.md
+        - Original Equipment Manufacturers (OEMs): cybersecurity/stakeholder-oem.md
       - Misuse Cases: cybersecurity/its-misuse-cases.md
-      - Glossary: cybersecurity/glossary.md
+      - Secure ITS Management Patterns: cybersecurity/patterns-management.md
+      - Glossary: cybersecurity/cybersecurity-glossary.md
     - TC 204 planning: planning.md
     - Contact us: contact.md
     - Resources: resources.md
@@ -93,6 +96,7 @@ markdown_extensions:
   - abbr
   - admonition
   - attr_list
+  - def_list
   - md_in_html
   - footnotes
   - pymdownx.details

@@ -14,7 +14,7 @@ The complexity and interconnectedness of these systems create new operational be
 
 Cybersecurity is the protection of digital systems, communications, and data from unauthorized access, manipulation, or disruption. In critical infrastructure sectors such as transportation, controls enabled through cybersecurity directly affect directly affect physical safety. A cybersecurity failure could disrupt traffic signals, disable roadside infrastructure, or compromise the information provided to a connected vehicle which could impact vehicle operator decision making. Cybersecurity principles include confidentiality, integrity, and availability.
 
-<img src="images/CIA.png" alt="CIA" style="zoom:60%;" />
+![CIA](images/CIA.png){ width="60%" }
 
 Confidentiality ensures that data is protected from unauthorized access, preserving privacy and preventing misuse. Integrity guarantees that data and messages remain accurate and unaltered during transmission or storage. Sender authentication ensures that whomever transmits a message was authorized by a trusted entity to send the information. Availability ensures that systems and services remain operational and accessible when needed. In transportation, these principles apply to traffic control commands, vehicle messaging, digital road signage, and other systems. In systems where timing is important, accuracy, and authentication of source or destination entities are critical.
 
@@ -22,7 +22,7 @@ Confidentiality ensures that data is protected from unauthorized access, preserv
 
 ITS cybersecurity ensures the integrity, confidentiality, and availability of data exchanged across an ITS system. It protects against cyber threats that could disrupt traffic management, compromise vehicle behaviour, or manipulate digital traffic controls. This includes securing communication between vehicles and infrastructure, ensuring that only trusted devices participate in ITS applications, and protecting sensitive data from misuse or exposure. In the context of V2X, although confidentiality is not always required, data integrity and availability remain critical requirements at all times. This is due to the latency-sensitive nature of V2X messages such as Basic Safety Messages (BSMs), where encryption processing and messaging overhead may reduce the ability to receive information in a timely manner.
 
-<img src="images/vehicle_v2x.jpg" alt="vehicle_v2x" style="zoom:67%;" />
+![vehicle_v2x](images/vehicle_v2x.jpg){ width="67%" }
 
 Modern ITS environments face a broad and evolving threat landscape. Communications between vehicles and infrastructure—known as Vehicle-to-Everything (V2X)—must be protected from interception, manipulation, and unauthorized injection of false data. Network infrastructure is vulnerable to denial-of-service (DoS) and malware-based attacks, which can disable roadside systems or overwhelm traffic management centers. IoT devices such as smart traffic signals, cameras, and sensors may be physically or remotely exploited due to weak default configurations or unpatched software. Location-based services can be compromised through GPS spoofing and jamming, causing vehicles to misreport their positions or lose navigation capability. As cyber-physical systems, ITS deployments must defend not just against digital exploits, but against threats that have direct safety consequences in the physical world—from manipulating emergency vehicle priority to triggering unsafe driving conditions. The following diagram provides a simplified view of the types of threats that can affect different components of the ITS environment.
 
@@ -43,7 +43,7 @@ ITS relies on the use of Public Key Infrastructure (PKI) which provides proven b
 <table>
   <tr>
     <td style="width: 170px; vertical-align: middle; text-align: center;">
-      <img src="images/icon_low_latency.jpg" alt="Low Latency Icon" height="150">
+      <img src="/cybersecurity/images/icon_low_latency.jpg" alt="Low Latency Icon" height="150">
     </td>
     <td>
       **Real-Time, Safety-Critical Operations**<br>
@@ -57,7 +57,7 @@ ITS relies on the use of Public Key Infrastructure (PKI) which provides proven b
 <table>
   <tr>
     <td style="width: 170px; vertical-align: middle; text-align: center;">
-      <img src="images/icon_mobile.jpg" alt="Mobility Icon" height="150">
+      <img src="/cybersecurity/images/icon_mobile.jpg" alt="Mobility Icon" height="150">
     </td>
     <td>
       **Mobility Requirements**<br>
@@ -71,7 +71,7 @@ ITS relies on the use of Public Key Infrastructure (PKI) which provides proven b
 <table>
   <tr>
     <td style="width: 170px; vertical-align: middle; text-align: center;">
-      <img src="images/icon_privacy.jpg" alt="Privacy Icon" height="150">
+      <img src="/cybersecurity/images/icon_privacy.jpg" alt="Privacy Icon" height="150">
     </td>
     <td>
       **Anonymity Requirements**<br>
@@ -85,7 +85,7 @@ ITS relies on the use of Public Key Infrastructure (PKI) which provides proven b
 <table>
   <tr>
     <td style="width: 170px; vertical-align: middle; text-align: center;">
-      <img src="images/icon_multijurisdictional.jpg" alt="Multi Jurisdictional Icon" height="150">
+      <img src="/cybersecurity/images/icon_multijurisdictional.jpg" alt="Multi Jurisdictional Icon" height="150">
     </td>
     <td>
       **Multi-Entity Trust Management**<br>
@@ -99,7 +99,7 @@ ITS environments involve a wide range of stakeholders, including vehicles from m
 <table>
   <tr>
     <td style="width: 170px; vertical-align: middle; text-align: center;">
-      <img src="images/icon_appsandroles.jpg" alt="Applications and Roles Icon" height="150">
+      <img src="/cybersecurity/images/icon_appsandroles.jpg" alt="Applications and Roles Icon" height="150">
     </td>
     <td>
       **Embedded Permissions within Certificates**<br>
@@ -112,7 +112,7 @@ Traditional network security controls who can join a system and provides fine-gr
 <table>
   <tr>
     <td style="width: 170px; vertical-align: middle; text-align: center;">
-      <img src="images/icon_safety_critical.jpg" alt="Safety Critical Icon" height="150">
+      <img src="/cybersecurity/images/icon_safety_critical.jpg" alt="Safety Critical Icon" height="150">
     </td>
     <td>
         **Dynamic Threats in Highly Mobile Environment**<br>
@@ -125,7 +125,7 @@ Traditional network security controls who can join a system and provides fine-gr
 <table>
   <tr>
     <td style="width: 170px; vertical-align: middle; text-align: center;">
-      <img src="images/icon_massive_scale.jpg" alt="Scale Icon" height="150">
+      <img src="/cybersecurity/images/icon_massive_scale.jpg" alt="Scale Icon" height="150">
     </td>
     <td>
       **Pseudonymity at Scale**<br>
@@ -138,13 +138,13 @@ The scalability and certificate management challenge in V2X ITS comes from the e
 
 Now that we've established what makes ITS cybersecurity unique, it's useful to introduce the key mechanisms that have been developed to meet those needs. These mechanisms include secure certificate formats tailored for mobile use, frameworks for distributing and managing credentials across millions of devices, and systems for detecting and responding to misbehaviour in the network. While specific implementations vary by region—for example, between North America’s SCMS and Europe’s CCMS—the core building blocks share common goals and are aligned with international standards.
 
-The following section provides a high-level overview of these mechanisms, written for non-experts. More technical readers are encouraged to explore the [ITS Cybersecurity Mechanisms and Building Blocks](its-cybersecurity-controls.md) section for deeper background.
+The following section provides a high-level overview of these mechanisms, written for non-experts. More technical readers are encouraged to explore the [ITS Cybersecurity Mechanisms and Building Blocks](its-security-patterns.md) section for deeper background.
 
 ### Credential Management Systems
 
 A Credential Management System (SCMS or CCMS) is a specialized type of public key infrastructure (PKI) designed for ITS. It provides the foundation of trust for communications between vehicles, infrastructure, and backend systems. Unlike traditional PKI systems that issue long-term identity certificates, SCMS and CCMS issue short-lived pseudonym certificates that protect user privacy while still enabling strong authentication and authorization. The diagram below introduces the core components of a credential management system used to enable trusted communication in ITS, based on an SCMS architecture.
 
-![Public Key Infrastructure](./images/pki.jpg)
+![Public Key Infrastructure](images/pki.jpg)
 
 The credential management system shown here includes key roles that work together to provide trusted V2X communication. Electors approve or revoke Root Certificate Authorities (CAs) and maintain the Certificate Trust List (CTL). The PKI Manager oversees policy enforcement and trust anchor updates. The Root CA is a top-level trust anchor, while Subordinate CAs handle certificate issuance for specific purposes or regions. Registration Authorities (RAs) process enrolment requests from end entities like OBUs and RSUs. The Distribution Center (DC) provides an API for devices to download current trust lists and revocation lists. The Misbehaviour Authority (MA) collects reports about suspected misbehaviour and coordinates with the PKI Manager to revoke trust when necessary. This structure ensures vehicles and infrastructure can authenticate each other’s messages while preserving privacy through short-lived certificates.
 
@@ -152,7 +152,7 @@ The credential management system shown here includes key roles that work togethe
 
 ITS uses certificate formats specifically tailored for the real-time, decentralized, and mobile nature of V2X communications. Two major standards are used globally: IEEE 1609.2, which is primarily deployed in North America, and ETSI TS 103 097, which is used in Europe. While developed in parallel, both standards share key features that address the specific challenges of ITS. They support privacy-preserving pseudonymity, allowing vehicles to authenticate messages without revealing long-term vehicle or personal identities. They also include geolocation constraints and flexible permission structures that enable fine-grained control over what actions a device is authorized to perform.
 
-<img src="images\1609.2Format.jpg" alt="1609.2Format" style="zoom:67%;" />
+![1609.2Format](images/1609.2Format.jpg){ width="67%" }
 
 ### Entitlements
 
@@ -160,7 +160,7 @@ ITS certificates can carry embedded entitlements—policy assertions that define
 
 For example, a certificate may include an entitlement that authorizes a vehicle to request signal priority, while restricting that capability from others. A sending device, for example an OBU transmits a message as a signed secure protocol data unit (SPDU), and the receiving device validates message authenticity, followed by a check against the ITS-AID/PSID and SSP permissions asserted in the message. These permissions are checked against the sending devices' certificates, using the appPermissions field.
 
-<img src="images\appPermissionMessaging.jpg" alt="appPermissionMessaging" style="zoom:67%;" />
+![appPermissionMessaging](images/appPermissionMessaging.jpg){ width="67%" }
 
 By supporting fine-grained entitlements, ITS certificates enable strong access control mechanisms that align with specific use cases, user roles, or organizational policies.
 
@@ -168,7 +168,7 @@ By supporting fine-grained entitlements, ITS certificates enable strong access c
 
 Even in a well-secured system, trusted devices can malfunction or behave maliciously. In ITS, where safety depends on the accuracy and integrity of real-time data, it is important to continuously evaluate whether participants are acting in accordance with expected behaviours. Misbehaviour detection systems are designed to identify faulty or deceptive behaviour; for example  inconsistent vehicle position updates, spoofed GPS signals, or invalid safety alerts, and initiate a response that preserves trust in the network. These systems operate at both the edge and the backend. Local detection capabilities onboard vehicles or infrastructure can flag suspicious messages, while backend authorities analyze reported incidents, corroborate evidence, and determine whether a device's credentials should be suspended or revoked. The figure below illustrates a simplified view of how misbehaviour is detected, validated, and responded to in a credential-based ITS environment.
 
-![MisbehaviourLifecycle](./images/MisbehaviorLifecycle.jpg)
+![MisbehaviourLifecycle](images/MisbehaviorLifecycle.jpg)
 
 This diagram shows how misbehaviour reports (MBRs) flow through an ITS security environment. An OBU detects an anomaly in a received Basic Safety Message (BSM) and generates an MBR. This report can be sent directly to the Public Key Infrastructure (PKI) or passed through a RSU. RSUs themselves may detect misbehaviour and send reports directly to a Traffic Management Center (TMC) or the PKI. The PKI analyses reports, and decides whether revocation or suspension is necessary, then update revocation lists or takes other action as necessary.
 
