@@ -2,6 +2,7 @@
     "cSpell.language": "en-GB",
     "cSpell.dictionaries": ["en-GB"],
     "cSpell.words": [
+        "appdev",
         "appsandroles",
         "auditd",
         "automakers",
@@ -9,6 +10,7 @@
         "Brainpool",
         "CCMS",
         "CENELEC",
+        "certmgmt",
         "CISA",
         "CPOC",
         "CSIRTs",
@@ -24,6 +26,7 @@
         "ICIP",
         "lifecycles",
         "METR",
+        "mgmt",
         "MISRA",
         "multifactor",
         "multijurisdictional",
@@ -32,6 +35,7 @@
         "Overcollection",
         "playbooks",
         "PSID",
+        "pymdownx",
         "RESTCONF",
         "ridesourced",
         "RITSI",
@@ -41,10 +45,13 @@
         "SIST",
         "SPDU",
         "SSDF",
+        "superfences",
         "TISAX",
         "TVRA",
+        "twemoji",
         "unlinkability",
         "unlinkable",
-        "unvetted"
+        "unvetted",
+        "vocab"
     ]
 }
