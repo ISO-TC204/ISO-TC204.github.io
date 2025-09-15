@@ -4,17 +4,17 @@ Cybersecurity threat analysis is a critical step in ensuring the security of Int
 
 ## What is a Threat Analysis?
 
-A cybersecurity threat analysis is a systematic process of identifying, analyzing, and evaluating the potential threats to a system. It is a foundational and beginning step in the process of defining ITS cybersecurity requirements and selecting the most appropriate ITS cybersecurity controls. This analysis informs the security requirements and the subsequent choice of countermeasures needed to protect the ITS assets.
+A cybersecurity threat analysis is a systematic process of identifying, analysing, and evaluating the potential threats to a system. It is a foundational and beginning step in the process of defining ITS cybersecurity requirements and selecting the most appropriate ITS cybersecurity controls. This analysis informs the security requirements and the subsequent choice of countermeasures needed to protect the ITS assets.
 
 A threat analysis should be an ongoing process, not a one-time event. It should be performed at all critical stages of the ITS lifecycle, including:
 
-  - **Design and Development Phase:** The goal of a threat analysis in this phase is to build security requirements into the system from the beginning of the ITS program.
+- **Design and Development Phase:** The goal of a threat analysis in this phase is to build security requirements into the system from the beginning of the ITS program.
 
-  - **Deployment Phase:** The analysis goal in this phase is to account for key attributes of the specific operational environment.
+- **Deployment Phase:** The analysis goal in this phase is to account for key attributes of the specific operational environment.
 
-  - **Major Upgrade Phases:** The analysis goal in this phase is to address new functionalities or technologies that have the potential to introduce new vulnerabilities.
+- **Major Upgrade Phases:** The analysis goal in this phase is to address new functionalities or technologies that have the potential to introduce new vulnerabilities.
 
-  - **After a Security Incident:** The analysis goal in this phase is to learn from the incident and prevent future occurrences.
+- **After a Security Incident:** The analysis goal in this phase is to learn from the incident and prevent future occurrences.
 
 ## High-Level Process for Conducting an ITS Threat Analysis
 
@@ -22,43 +22,43 @@ ITS stakeholders should conduct threat analysis by evaluating how adversaries co
 
 While specific methodologies may vary, most ITS threat analysis efforts follow a common structure. The following high-level steps apply broadly across both European and North American contexts:
 
-1.  **Define Scope and Boundaries**: Identify which ITS assets are within scope for the threat analysis. This should include field devices, communications links, backend systems, cloud applications, etc. Document external interfaces.
+1. **Define Scope and Boundaries**: Identify which ITS assets are within scope for the threat analysis. This should include field devices, communications links, backend systems, cloud applications, etc. Document external interfaces.
 
-2.  **Identify Assets, Data Flows and Security Objectives**:  Determine what needs protection within the system. For each asset, define the associated data flows to other assets. This would include for example cryptographic keys, GNSS data, video feeds, V2X messages, etc. Then for each data flow, define security objectives such as ensuring integrity, availability, confidentiality, or non-repudiation.
+2. **Identify Assets, Data Flows and Security Objectives**:  Determine what needs protection within the system. For each asset, define the associated data flows to other assets. This would include for example cryptographic keys, GNSS data, video feeds, V2X messages, etc. Then for each data flow, define security objectives such as ensuring integrity, availability, confidentiality, or non-repudiation.
 
-3.  **Identify Relevant Threats**: Once assets and data flows are known, consider how they could be targeted. Threats may include unauthorized access, spoofing, message manipulation, denial-of-service, physical tampering, etc. Leverage tools such as the [MITRE ATT\&CK Framework](https://attack.mitre.org/) for a better understanding of attack types. It is important to understand and anticipate that attacks are often strung together in order to achieve greater effect.
+3. **Identify Relevant Threats**: Once assets and data flows are known, consider how they could be targeted. Threats may include unauthorized access, spoofing, message manipulation, denial-of-service, physical tampering, etc. Leverage tools such as the [MITRE ATT\&CK Framework](https://attack.mitre.org/) for a better understanding of attack types. It is important to understand and anticipate that attacks are often strung together in order to achieve greater effect.
 
-4.  **Evaluate Risk**: Assess the likelihood and potential impact of each threat materializing in the specific operational environment in which the ITS operates. This assessment may be qualitative or quantitative. Risks should be prioritized based upon which risks require mitigation and which may be accepted based on operational context.
+4. **Evaluate Risk**: Assess the likelihood and potential impact of each threat materializing in the specific operational environment in which the ITS operates. This assessment may be qualitative or quantitative. Risks should be prioritized based upon which risks require mitigation and which may be accepted based on operational context.
 
-5.  **Select and Align Controls**: For threats requiring mitigation, identify suitable security controls which may be technical, procedural, or administrative. These may include for example message authentication, physical protections, redundancy, or personnel training. Control selection should reflect both the risk profile and the system’s functional requirements. Review the [ITS Cybersecurity Patterns](file:///docs/cybersecurity/its-security-patterns.md) page for more information on possible control selection.
+5. **Select and Align Controls**: For threats requiring mitigation, identify suitable security controls which may be technical, procedural, or administrative. These may include for example message authentication, physical protections, redundancy, or personnel training. Control selection should reflect both the risk profile and the system’s functional requirements. Review the [ITS Cybersecurity Patterns](file:///docs/cybersecurity/its-security-patterns.md) page for more information on possible control selection.
 
-6.  **Document and Reassess**: Maintain records of the analysis, including identified threats, rationale for control selection, and residual risks. Threat analysis should be revisited periodically or when significant changes are made to system architecture, configuration, or usage patterns.
+6. **Document and Reassess**: Maintain records of the analysis, including identified threats, rationale for control selection, and residual risks. Threat analysis should be revisited periodically or when significant changes are made to system architecture, configuration, or usage patterns.
 
-## Core Threat Analysis Reference Methodologies:
+## Core Threat Analysis Reference Methodologies
 
 There are several recognized methodologies for conducting a cybersecurity threat analysis, each with a slightly different focus. The two primary approaches for ITS are the European and North American models.
 
 ### European Approach (ETSI/ISO)
 
-The European Telecommunications Standards Institute (ETSI) provides a detailed, 10-step TVRA (Threat, Vulnerability, Risk Analysis) methodology for conducting a threat analysis of various systems. This method is cyclical and aims to provide a quantitative rationale for security design. The TVRA method, as detailed in [ETSI TS 102 165-1](https://www.etsi.org/deliver/etsi_ts/102100_102199/10216501/05.03.01_60/ts_10216501v050301p.pdf), provides a structured process that systematically identifies threats, analyzes vulnerabilities, and evaluates the resulting risks. This approach helps in understanding the relationship between threats, vulnerabilities, and their potential impact on the system. The 10 steps of the TVRA process can be summarized as follows:
+The European Telecommunications Standards Institute (ETSI) provides a detailed, 10-step TVRA (Threat, Vulnerability, Risk Analysis) methodology for conducting a threat analysis of various systems. This method is cyclical and aims to provide a quantitative rationale for security design. The TVRA method, as detailed in [ETSI TS 102 165-1](https://www.etsi.org/deliver/etsi_ts/102100_102199/10216501/05.03.01_60/ts_10216501v050301p.pdf), provides a structured process that systematically identifies threats, analyses vulnerabilities, and evaluates the resulting risks. This approach helps in understanding the relationship between threats, vulnerabilities, and their potential impact on the system. The 10 steps of the TVRA process can be summarized as follows:
 
-1.  **Identify the Target of Evaluation (TOE):** Define the ITS scope, assets, and environment.
+1. **Identify the Target of Evaluation (TOE):** Define the ITS scope, assets, and environment.
 
-2.  **Identify Objectives:** State the high-level security goals.
+2. **Identify Objectives:** State the high-level security goals.
 
-3.  **Identify Functional Security Requirements:** Derive specific requirements from the security objectives.
+3. **Identify Functional Security Requirements:** Derive specific requirements from the security objectives.
 
-4.  **Inventory Assets:** Detail all assets within the ITS.
+4. **Inventory Assets:** Detail all assets within the ITS.
 
-5.  **Identify Vulnerabilities and Threat Level:** Classify weaknesses and the threats that could exploit them.
+5. **Identify Vulnerabilities and Threat Level:** Classify weaknesses and the threats that could exploit them.
 
-6.  **Calculate Likelihood and Impact:** Quantify the probability and severity of a successful attack.
+6. **Calculate Likelihood and Impact:** Quantify the probability and severity of a successful attack.
 
-7.  **Establish Risks:** Determine risk as the product of likelihood and impact.
+7. **Establish Risks:** Determine risk as the product of likelihood and impact.
 
-8.  **Identify Countermeasures:** Propose conceptual security solutions to reduce risks.
+8. **Identify Countermeasures:** Propose conceptual security solutions to reduce risks.
 
-9.  **Conduct Cost-Benefit Analysis:** Evaluate the financial and operational trade-offs of the countermeasures.
+9. **Conduct Cost-Benefit Analysis:** Evaluate the financial and operational trade-offs of the countermeasures.
 
 10. **Specify Detailed Requirements:** Refine the security requirements and selected countermeasures for implementation.
 
@@ -68,13 +68,13 @@ In European Cooperative ITS deployments, threat analysis practices are well-esta
 
 In North American Cooperative ITS deployments, threat analysis practices are becoming established through policy mandates. The National Institute of Standards and Technology (NIST) provides a risk assessment framework in its [Special Publication 800-30](https://www.nist.gov/privacy-framework/nist-sp-800-30). This process is composed of four high-level steps that closely align with the ETSI TVRA methodology:
 
-1.  **Prepare for the Assessment:** Define the assessment’s purpose, scope, and identify assets and objectives. This aligns with the first four steps of the ETSI TVRA.
+1. **Prepare for the Assessment:** Define the assessment’s purpose, scope, and identify assets and objectives. This aligns with the first four steps of the ETSI TVRA.
 
-2.  **Conduct the Assessment:** Identify threats and vulnerabilities, and then analyze the likelihood and impact of threat events to determine the overall risk. This maps to steps 5, 6, and 7 of the ETSI TVRA.
+2. **Conduct the Assessment:** Identify threats and vulnerabilities, and then analyze the likelihood and impact of threat events to determine the overall risk. This maps to steps 5, 6, and 7 of the ETSI TVRA.
 
-3.  **Communicate Assessment Results:** The findings are presented to stakeholders, including recommendations for countermeasures. This corresponds to ETSI TVRA steps 8, 9, and 10.
+3. **Communicate Assessment Results:** The findings are presented to stakeholders, including recommendations for countermeasures. This corresponds to ETSI TVRA steps 8, 9, and 10.
 
-4.  **Maintain the Assessment:** This is a continuous process of monitoring risk factors and updating the assessment. The cyclical nature of the ETSI TVRA process inherently maps to this maintenance phase.
+4. **Maintain the Assessment:** This is a continuous process of monitoring risk factors and updating the assessment. The cyclical nature of the ETSI TVRA process inherently maps to this maintenance phase.
 
 North American threat analysis activities are also often embedded within other more general cybersecurity and risk management frameworks:
 
@@ -98,7 +98,9 @@ The following comparison table offers a summary comparison of the two continenta
 | **Core Principle**   | Cyclical process, requiring re-evaluation with any system changes | Continuous monitoring and maintenance of risk factors        |
 | **Output**           | A quantified measure of risks and detailed security requirements | Risk assessment report for decision-making                   |
 
-*Table 1. North American / European TVRA Standards Comparison Table*
+/// table-caption | <
+Table 1. North American / European TVRA Standards Comparison Table
+///
 
 ### Prioritizing Core Threats and Threat Sources
 
@@ -112,17 +114,18 @@ Threats to ITS are evolving as technology becomes more interconnected, particula
 | **Spoofing Attacks**                     | Malicious actors mimic legitimate ITS assets to send false data, such as fake location information or traffic warnings, to mislead drivers and autonomous systems. |
 | **Data Integrity and Message Tampering** | ITS asset messages, which may contain critical safety information like speed and position, can be intercepted and altered in transit. This can result in inaccurate or deceptive information being transmitted throughout the ITS environment. |
 
-*Table 2. Key ITS Threat Categories*
+/// table-caption | <
+Key ITS Threat Categories
+///
 
 These threat categories are described in detail in the ITS Threat Catalog, which can be used as a reference throughout the TVRA process.
 
-## How to Use the ITS Threat Catalog: 
+## How to Use the ITS Threat Catalog
 
-The ITS T**hreat Catalog** is a list of known or potential ITS threats. It is a resource to help identify potential threats that are a risk to a specific ITS environment. To utilize this resource effectively, users should first identify relevant ITS components (e.g., a vehicle's communication module, a roadside unit, or a central management server). For each of these components, you should select the relevant threats from the catalog and then proceed to a [detailed risk assessment](#Evaluating_Risk). Each threat in the catalog is categorized by its source (e.g., malicious insider, external hacker), its likelihood, and its impact rating. By mapping these threats to the system's architecture, you can methodically identify potential attack vectors and associated risk. Finally, use the Recommended Cybersecurity Controls column to identify controls that can be used to mitigate these threats in part or in whole.
+The ITS **Threat Catalog** is a list of known or potential ITS threats. It is a resource to help identify potential threats that are a risk to a specific ITS environment. To utilize this resource effectively, users should first identify relevant ITS components (e.g., a vehicle's communication module, a roadside unit, or a central management server). For each of these components, you should select the relevant threats from the catalog and then proceed to a [detailed risk assessment](#evaluating-risk). Each threat in the catalog is categorized by its source (e.g., malicious insider, external hacker), its likelihood, and its impact rating. By mapping these threats to the system's architecture, you can methodically identify potential attack vectors and associated risk. Finally, use the Recommended Cybersecurity Controls column to identify controls that can be used to mitigate these threats in part or in whole.
 
 ## ITS Threat Catalogue
 
-<<<<<<< HEAD:docs/cybersecurity/threat-analysis.md
 The following threats may be applicable to an ITS. You may use these threats as references when developing your system-specific threat analysis and risk profile. See the Recommended Cybersecurity Controls column to identify controls that can be used to mitigate these threats in part or in whole.
 
 | Threat ID | Threat Example                                               | [Recommended Cybersecurity Patterns](its-security-patterns.md) |
@@ -163,49 +166,10 @@ The following threats may be applicable to an ITS. You may use these threats as 
 | T_0034    | Use of USB, serial, or debug ports to install unsigned or malicious firmware. | [E6: Software Integrity Verification and Secure Boot](patterns-edge.md#pattern-e6-software-integrity-verification-and-secure-boot) |
 | T_0035    | Social Engineering of ITS personnel leading to credential compromise |                                                              |
 | T_0036    | Attacker moves laterally from IT to OT network               |                                                              |
-=======
-The following threats may be applicable to any specific ITS environment. You may use these threats as references when developing your system-specific threat analysis and risk profile.
 
-| **Threat ID** | **Threat Example**                                           | [**Recommended Cybersecurity Patterns**](file:///docs/cybersecurity/its-security-patterns.md) |
-| ------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| T\_0001       | Unauthorized ITS device or application access.               | [E2: Secure Device Configuration](file:///docs/cybersecurity/patterns-edge.md#pattern-e2:-secure-device-configuration) |
-| T\_0002       | Malware or modified code causes an ITS device to transmit false warnings or suppress valid messages. | [E6: Software Integrity Verification and Secure Boot](file:///docs/cybersecurity/patterns-edge.md#pattern-e6:-software-integrity-verification-and-secure-boot) |
-| T\_0003       | Exposure of driver identity information.                     | Pseudonymity                                                 |
-| T\_0004       | Unauthorized message injection                               | [A1: Authenticated Messaging](file:///docs/cybersecurity/patterns-application.md#pattern-a1:-authenticated-messaging) |
-| T\_0005       | A vehicle with general-use permissions reuses or fabricates SSP fields to impersonate an emergency responder. | [A3: Certificate-bound application authorization](file:///docs/cybersecurity/patterns-application.md#pattern-a3:-certificate-bound-application-authorization) |
-| T\_0006       | A device runs unapproved or unsigned applications due to weak software controls or side-loading. | [E2: Secure Device Configuration](file:///docs/cybersecurity/patterns-edge.md#pattern-e2:-secure-device-configuration) |
-| T\_0007       | Replay attacks re-use messages to impersonate legitimate messaging. | [N2 Secure Session Establishment Using ISO 21177](file:///docs/cybersecurity/patterns-network.md#pattern-n2:-secure-session-establishment-using-iso-21177) |
-| T\_0008       | Overcollection or linking of contextual data enables re-identification of pseudonymous users | Pseudonymity                                                 |
-| T\_0009       | Message interception or modification                         | [A1: Authenticated Messaging](file:///docs/cybersecurity/patterns-application.md#pattern-a1:-authenticated-messaging) |
-| T\_0010       | Geographic misuse of services                                | [A3: Certificate-bound application authorization](file:///docs/cybersecurity/patterns-application.md#pattern-a3:-certificate-bound-application-authorization); [E4: ITS Station Access Control](file:///docs/cybersecurity/patterns-edge.md#pattern-e4:-its-station-access-control) |
-| T\_0011       | Attackers send spoofed or malformed messages.                | [N1: Secure Backend Communications](file:///docs/cybersecurity/patterns-network.md#pattern-n1:-secure-backend-communications) [N2 Secure Session Establishment Using ISO 21177](file:///docs/cybersecurity/patterns-network.md#pattern-n2:-secure-session-establishment-using-iso-21177) |
-| T\_0012       | Passive attackers intercept V2X or backend messages to obtain sensitive information or gain situational awareness. | [N1: Secure Backend Communications](file:///docs/cybersecurity/patterns-network.md#pattern-n1:-secure-backend-communications) [N2 Secure Session Establishment Using ISO 21177](file:///docs/cybersecurity/patterns-network.md#pattern-n2:-secure-session-establishment-using-iso-21177) |
-| T\_0013       | An attacker inserts themselves between devices (man-in-the-middle) to relay or modify communications while impersonating trusted parties. | [N1: Secure Backend Communications](file:///docs/cybersecurity/patterns-network.md#pattern-n1:-secure-backend-communications) [N2 Secure Session Establishment Using ISO 21177](file:///docs/cybersecurity/patterns-network.md#pattern-n2:-secure-session-establishment-using-iso-21177) |
-| T\_0014       | Attackers present forged credentials or reuse compromised certificates to authenticate malicious devices. | [M1 IEEE Std 1609.2 Certificate Lifecycle Management](file:///docs/cybersecurity/patterns-management.md#certificate-lifecycle-management) |
-| T\_0015       | Timing or synchronization failures due to misconfigured or denied Network Time Protocol | Secure Time                                                  |
-| T\_0016       | Link-layer injection or jamming                              | [N1: Secure Backend Communications](file:///docs/cybersecurity/patterns-network.md#pattern-n1:-secure-backend-communications) [N2 Secure Session Establishment Using ISO 21177](file:///docs/cybersecurity/patterns-network.md#pattern-n2:-secure-session-establishment-using-iso-21177) |
-| T\_0017       | Invalid or expired certificates used to attempt to gain access | [M1 IEEE Std 1609.2 Certificate Lifecycle Management](file:///docs/cybersecurity/patterns-management.md#certificate-lifecycle-management) |
-| T\_0018       | Inadequate revocation response                               | [M1 IEEE Std 1609.2 Certificate Lifecycle Management](file:///docs/cybersecurity/patterns-management.md#certificate-lifecycle-management) |
-| T\_0019       | Poor misbehaviour detection coverage                         | [M5: Misbehavior Detection and Reporting](file:///docs/cybersecurity/patterns-management.md#pattern-m5:-misbehavior-detection-and-reporting) |
-| T\_0020       | ITS devices with revoked certificates are still trusted within the ITS. | [M1 IEEE Std 1609.2 Certificate Lifecycle Management](file:///docs/cybersecurity/patterns-management.md#certificate-lifecycle-management) |
-| T\_0021       | Misbehaviours go undetected within the ITS                   | [M5: Misbehavior Detection and Reporting](file:///docs/cybersecurity/patterns-management.md#pattern-m5:-misbehavior-detection-and-reporting) |
-| T\_0022       | An ITS device is enrolled into a certificate management system without meeting security or compliance requirements. | [M1 IEEE Std 1609.2 Certificate Lifecycle Management](file:///docs/cybersecurity/patterns-management.md#certificate-lifecycle-management) |
-| T\_0023       | The private key associated with a trusted certificate is extracted or duplicated, allowing impersonation of a legitimate device. | [E1: Cryptographic Key Generation](file:///docs/cybersecurity/patterns-edge.md#pattern-e1:-cryptographic-key-generation) |
-| T\_0024       | A CTL update is manipulated and distributed without proper signatures. | [D1: 1609.2.2 Multi Jurisdictional Interoperability](file:///docs/cybersecurity/patterns-deployment.md#pattern-d1:-160922-multi-jurisdictional-interoperability); [M1 IEEE Std 1609.2 Certificate Lifecycle Management](file:///docs/cybersecurity/patterns-management.md#certificate-lifecycle-management) |
-| T\_0025       | Devices fail to download updated CRLs or CTLs and continue to trust revoked or expired entities. | [M1 IEEE Std 1609.2 Certificate Lifecycle Management](file:///docs/cybersecurity/patterns-management.md#certificate-lifecycle-management); [E2: Secure Device Configuration](file:///docs/cybersecurity/patterns-edge.md#pattern-e2:-secure-device-configuration) |
-| T\_0026       | An attacker submits a non-compliant device for enrolment.    | [M1 IEEE Std 1609.2 Certificate Lifecycle Management](file:///docs/cybersecurity/patterns-management.md#certificate-lifecycle-management); |
-| T\_0027       | A certificate is issued with overly broad SSPs, granting the device capabilities beyond its operational role. | [M1 IEEE Std 1609.2 Certificate Lifecycle Management](file:///docs/cybersecurity/patterns-management.md#certificate-lifecycle-management); [A3: Certificate-bound application authorization](file:///docs/cybersecurity/patterns-application.md#pattern-a3:-certificate-bound-application-authorization) |
-| T\_0028       | A vehicle transmits location data inconsistent with plausible movement, affecting other vehicles' path planning | [M5: Misbehavior Detection and Reporting](file:///docs/cybersecurity/patterns-management#pattern-m5:-misbehavior-detection-and-reporting) |
-| T\_0029       | A device sends SRMs without entitlement or in implausible patterns. | [M5: Misbehavior Detection and Reporting](file:///docs/cybersecurity/patterns-management.md#pattern-m5:-misbehavior-detection-and-reporting); [A3: Certificate-bound application authorization](file:///docs/cybersecurity/patterns-application.md#pattern-a3:-certificate-bound-application-authorization) |
-| T\_0030       | A recorded V2X message is retransmitted to mislead infrastructure or vehicles. | [N1: Secure Backend Communications](file:///docs/cybersecurity/patterns-network.md#pattern-n1:-secure-backend-communications); [N2 Secure Session Establishment Using ISO 21177](file:///docs/cybersecurity/patterns-network.md#pattern-n2:-secure-session-establishment-using-iso-21177) |
-| T\_0031       | An ITS device is tampered with.                              | Physical Access Controls; [E3: Tamper Detection and Response](file:///docs/cybersecurity/patterns-edge.md#pattern-e3:-tamper-detection-and-response) |
-| T\_0032       | An attacker gains unauthorized physical port access.         | Physical Access Controls; [E3: Tamper Detection and Response](file:///docs/cybersecurity/patterns-edge.md#pattern-e3:-tamper-detection-and-response) |
-| T\_0033       | Attackers gain access to RSU or controller enclosures to manipulate configurations, install rogue devices, or extract sensitive data. | Physical Access Controls; [E3: Tamper Detection and Response](file:///docs/cybersecurity/patterns-edge.md#pattern-e3:-tamper-detection-and-response) |
-| T\_0034       | Use of USB, serial, or debug ports to install unsigned or malicious firmware. | [E6: Software Integrity Verification and Secure Boot](file:///docs/cybersecurity/patterns-edge.md#pattern-e6:-software-integrity-verification-and-secure-boot) |
-| T\_0035       | Social Engineering of ITS personnel leading to credential compromise |                                                              |
-| T\_0036       | Attacker moves laterally from IT to OT network               |                                                              |
-
-*Table 3. ITS Threat Catalog*
+/// table-caption | <
+ITS Threat Catalog
+///
 
 ## Evaluating Risk
 
@@ -221,7 +185,9 @@ To prioritize threats, you must first quantify them. This is typically done by e
 | Medium         | There are low technical barriers to the implementation of the threat and/or there are reasonable motivations for a threat actor. |
 | High           | There are low technical barriers to the implementation of the threat and/or there are high motivations for a threat actor. |
 
-*Table 4. ITS Threat Likelihood Scoring Table*
+/// table-caption | <
+ITS Threat Likelihood Scoring Table
+///
 
 The impact of a threat is determined by the consequences of a successful attack, such as the loss of confidentiality, integrity, or availability.
 
@@ -231,7 +197,9 @@ The impact of a threat is determined by the consequences of a successful attack,
 | Medium     | There is moderate degradation to ITS operations and/or moderate data integrity degradation/loss in the event of a security incident. |
 | High       | There is major degradation to ITS operations and/or major data integrity degradation/loss in the event of a security incident. |
 
-*Table 5. ITS Threat Impact Scoring Table*
+/// table-caption | <
+ITS Threat Impact Scoring Table
+///
 
 ## Determining Acceptable Risk
 
@@ -243,7 +211,9 @@ The decision to mitigate a threat or accept its risk is a core component of any 
 | **Medium Likelihood** | Low Risk       | Moderate Risk     | High Risk       |
 | **Low Likelihood**    | Very Low Risk  | Low Risk          | Moderate Risk   |
 
-*Table 6. Risk Scoring Matrix*
+/// table-caption | <
+Risk Scoring Matrix
+///
 
 The risk score helps to prioritize threats, creating a clear picture of which ones pose the greatest danger to the system's security, safety, and functionality. The following table provides examples of how the ITS Threat Catalog can be used to define and prioritize threat risk, in order to determine the overall acceptable risk of relevant ITS threats:
 
@@ -254,7 +224,9 @@ The risk score helps to prioritize threats, creating a clear picture of which on
 | 3            | T\_0003       | Driver Identity Exposure | Medium         | Medium     | Moderate       |
 | 4            | T\_0032       | Physical Port Access     | Low            | High       | Moderate       |
 
-*Table 7. Example TVRA Threat and Risk Analysis List*
+/// table-caption | <
+Example TVRA Threat and Risk Analysis List
+///
 
 ## The Decision-Making Process
 
@@ -272,17 +244,16 @@ By prioritizing threats by risk score in the TVRA threat and risk analysis list,
 
 ## List of References and Resources
 
-  - [ITS Cybersecurity Pattern](file:///docs/cybersecurity/its-security-patterns.md)
+- [ITS Cybersecurity Pattern](file:///docs/cybersecurity/its-security-patterns.md)
 
-  - [MITRE ATT\&CK Framework](https://attack.mitre.org/)
+- [MITRE ATT\&CK Framework](https://attack.mitre.org/)
 
-  - [ETSI TS 102 165-1](https://www.etsi.org/deliver/etsi_ts/102100_102199/10216501/05.03.01_60/ts_10216501v050301p.pdf)
+- [ETSI TS 102 165-1](https://www.etsi.org/deliver/etsi_ts/102100_102199/10216501/05.03.01_60/ts_10216501v050301p.pdf)
 
-  - [ETSI TR 102 893](https://www.etsi.org/deliver/etsi_tr/102800_102899/102893/01.02.01_60/tr_102893v010201p.pdf)
+- [ETSI TR 102 893](https://www.etsi.org/deliver/etsi_tr/102800_102899/102893/01.02.01_60/tr_102893v010201p.pdf)
 
-  - [NIST Special Publication 800-30](https://www.nist.gov/privacy-framework/nist-sp-800-30)
+- [NIST Special Publication 800-30](https://www.nist.gov/privacy-framework/nist-sp-800-30)
 
-  - [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
+- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
 
-  - [ARC-IT ITS CSF Profile](https://transportationops.org/publications/usdot-resource-intelligent-transportation-systems-its-cybersecurity-framework-0)
->>>>>>> 7ac835d (BF Updates to ITS-Threat-Analysis page content):docs/cybersecurity/ITS-Threat-Analysis.md
+- [ARC-IT ITS CSF Profile](https://transportationops.org/publications/usdot-resource-intelligent-transportation-systems-its-cybersecurity-framework-0)
