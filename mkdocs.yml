@@ -2,11 +2,23 @@ site_name: ISO TC 204 Information
 site_description: Information about ISO TC 204 standardization efforts
 repo_url: https://github.com/ISO-TC204/ISO-TC204.github.io
 nav:
-  - Home: 
-    - Welcome: index.md
-    - Overview: overview.md
+  - Home: index.md
+  - About:
     - About us: about.md
     - Intro to ITS: intro.md
+    - Business Plan: assets/pdf/business-plan-2008-04-06.pdf
+    - Contact us: contact.md
+    - Vocabulary: vocab.md
+    - Acknowledgements: acknowledgements.md
+  - Work: 
+    - Overview: work.md
+    - Foundational concepts: foundational.md
+    - Architecture (WG 1): wg1/index.md
+    - Big data and AI (WG 20): wg20/index.md
+    - City data model - Transport (JWG 1): jwg1/index.md
+    - Communications (WG 16): wg16/index.md
+    - Cooperative systems (WG 18): wg18/index.md
+    - Coordination (AG 4): ag4/index.md
     - Cybersecurity: 
       - Introduction: cybersecurity/index.md
       - Beginners Guide: cybersecurity/beginners-guide.md 
@@ -37,20 +49,6 @@ nav:
       - Misuse Cases: cybersecurity/its-misuse-cases.md
       - Secure ITS Management Patterns: cybersecurity/patterns-management.md
       - Glossary: cybersecurity/cybersecurity-glossary.md
-    - TC 204 planning: planning.md
-    - Contact us: contact.md
-    - Resources: resources.md
-    - Vocabulary: vocab.md
-    - Acknowledgements: acknowledgements.md
-  - Our work: 
-    - Overview: work.md
-    - Foundational concepts: foundational.md
-    - Architecture (WG 1): wg1/index.md
-    - Big data and AI (WG 20): wg20/index.md
-    - City data model - Transport (JWG 1): jwg1/index.md
-    - Communications (WG 16): wg16/index.md
-    - Cooperative systems (WG 18): wg18/index.md
-    - Coordination (AG 4): ag4/index.md
     - Cybersecurity (AHG 2): ahg2/index.md
     - Driving automation and safety (WG 14): wg14/index.md
     - Fee and toll collection (WG 5): wg5/index.md
@@ -65,12 +63,15 @@ nav:
     - Registry for ITS Identifiers (AG 2): ag2/index.md
     - Transport mgmt and control (WG 9): wg9/index.md
     - Traveller information (WG 10): wg10/index.md
-  - Contributions:
-    - Overview: contributor/index.md
-    - Commenter guidelines: contributor/commenter.md
-    - Editor guidelines: contributor/editor.md
-    - Convenor guidelines: contributor/convenor.md
-  - News: news.md
+  - Registries: 
+    - Overview: registries.md
+    - Registry for ITS Identifiers (RITSI): https://iso-tc204.github.io/iso5345/
+    - Registry for ITS Ontologies (RITSO): https://k-vaughn.github.io/ontologies/latest/
+  - Standards: 
+    - Overview: standards.md
+    - METR: https://iso-tc204.github.io/iso24315/
+  - Contributions: contributor.md
+  - Resources: resources.md
   - FAQs: faq.md
 site_url: https://iso-tc204.github.io
 copyright: CC BY 4.0
@@ -112,6 +113,9 @@ markdown_extensions:
       permalink: true
 extra_css:
   - assets/stylesheets/extra.css
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js
 extra:
   search:
     highlight: true

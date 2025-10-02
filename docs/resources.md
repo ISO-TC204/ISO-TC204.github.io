@@ -45,6 +45,9 @@ This page identifies numerous key resources for the ITS industry. You can click 
 
         It is one of three European Standardization Organizations (together with CENELEC and ETSI) that have been officially recognized by the European Union and by the European Free Trade Association (EFTA) as being responsible for developing and defining voluntary standards at European level.
 
+        ??? info "CEN TC 278 Intelligent transport systems"
+            [CEN TC 278](https://standards.cencenelec.eu/dyn/www/f?p=205:7:0::::FSP_ORG_ID:6259&cs=164A194F2D8EB9ACD98538F3DDE9CA11B) is the CEN equivalent of ISO TC 204. Whereas ISO TC 204 develops ITS standards within an international scope, CEN standards are primarily developed with a European scope. Some work items represent joint CEN/ISO work and closely involve experts from both committees.
+
     ??? info "European Electrotechnical Committee for Standardization (CENELEC)"
         The [European Electrotechnical Committee for Standardization (CENELEC)](https://www.cencenelec.eu/)
         is an association that brings together the National Electrotechnical Committees of 34 European countries to prepare **voluntary standards** in the electrotechnical field.<br>
@@ -57,11 +60,16 @@ This page identifies numerous key resources for the ITS industry. You can click 
 
         It is one of three European Standardization Organizations (together with CEN and CENELEC) that have been officially recognized by the European Union and by the European Free Trade Association (EFTA) as being responsible for developing and defining voluntary standards at European level.
 
+        Its [TC ITS](https://www.etsi.org/committee/its) is dedicated to handling the ITS-related work within ETSI.
+
     ??? info "Institute of Electrical and Electronics Engineers (IEEE)"
-        The [Institute of Electrical and Electronics Engineers (IEEE)](https://www.ieee.org/) develops standards for a wide range of electronics and communications, including some of the foundational standards for ITS, including IEEE 1609.2, which defines the security certificates used for C-ITS.
+        The [Institute of Electrical and Electronics Engineers (IEEE)](https://www.ieee.org/) develops standards for a wide range of electronics and communications, including some of the foundational standards for ITS, including IEEE 1609.2, which defines the security certificates used for C-ITS. The IEEE 1609 work is performed within the IEEE Vehicular Technology Society IEEE 1609 Working Group.
+
+    ??? info "National Transportation Communications for ITS Protocol (NTCIP)"
+        The [NTCIP](https://www.ntcip.org) standards define centre-to-field interfaces for ITS, such as signal controllers, message signs, and other ITS field equipment.
 
     ??? info "Society of Automotive Engineers International (SAE)"
-        The [Society of Automotive Engineers International (SAE)](https://www.sae.org/) develops standards for vehicles and has been the source of several ISO efforts, particularly in the field of Automated Driving Systems and connected vehicles.
+        The [Society of Automotive Engineers International (SAE)](https://www.sae.org/) develops standards for vehicles and has been the source of several ISO efforts, particularly in the field of Automated Driving Systems and connected vehicles. The SAE committees most closely related to ITS are those under the [V2X Communications Steering Committee](https://standardsworks.sae.org/standards-committees/v2x-communications-steering-committee)
 
 ??? info "Collaborations (Joint Working Groups)"
     Administered by ISO/TC 204
