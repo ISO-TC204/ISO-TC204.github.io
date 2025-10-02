@@ -87,7 +87,7 @@
 
 ## Documentation in TC 204 Standards
 
-??? note "[ISO 14813-5:2020](https://www.iso.org/obp/ui#iso:std:iso:14813:-5) *Intelligent transport systems — Reference model architecture(s) for the ITS sector — Part 5: Requirements for architecture description in ITS standards*"
+??? note "[ISO 14813-5:2020](https://www.iso.org/obp/ui#iso:std:iso:14813:-5) _Intelligent transport systems — Reference model architecture(s) for the ITS sector — Part 5: Requirements for architecture description in ITS standards_"
 
     **Status:** Approved **(under revision)**{style="color: red;"}
 
