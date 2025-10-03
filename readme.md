@@ -6,7 +6,7 @@ Welcome to the ISO TC 204 Github Website. Please see the following specific link
 
 [TC 204 Work](https://iso-tc204.github.io/work/)
 
-[ISO TC 204 Registries]([https://iso-tc204.github.io/work/](https://iso-tc204.github.io/registries/))
+[ISO TC 204 Registries](https://iso-tc204.github.io/work/](https://iso-tc204.github.io/registries/)
 
 [For Editors and convenors](https://github.com/ISO-TC204/ISO-TC204.github.io/wiki)
 
