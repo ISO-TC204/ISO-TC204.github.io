@@ -55,8 +55,8 @@ Click for a standard preview (which links to the Online Browsing Platform, which
 |                 | | ISO/TS 21719 OBE personalization [\[part1\]](https://www.iso.org/obp/ui/#iso:std:iso:ts:21719:-2) [\[part2\]](https://www.iso.org/obp/ui/#iso:std:iso:ts:21719:-3) |
 |                 | | [ISO 12813](https://www.iso.org/obp/ui/#iso:std:iso:12813) Compliance check communication (CCC) [\[ASN.1\]](https://standards.iso.org/iso/12813/) |
 |                 | | [ISO 13141](https://www.iso.org/obp/ui#iso:std:iso:13141) Localization augmentation communication (LAC) [\[ASN.1\]](https://standards.iso.org/iso/13141/) |
-|                 | [CEN/TS 17154](https://standards.cen.eu/dyn/www/f?p=204:105:0:::::) Tests against 16986 [[part1]](https://www.itsstandards.eu/standards/) | [ISO 14907-1](https://www.iso.org/obp/ui/#iso:std:iso:14907:-1) Test procedures for user and fixed equipment |
-| **Tests**       | | [ISO 14907-2](https://www.iso.org/obp/ui/#iso:std:iso:14907:-2) OBU tests against 14906  |
+| **Tests**       | [CEN/TS 17154](https://standards.cen.eu/dyn/www/f?p=204:105:0:::::) Tests against 16986 [[part1]](https://www.itsstandards.eu/standards/) | [ISO 14907-1](https://www.iso.org/obp/ui/#iso:std:iso:14907:-1) Test procedures for user and fixed equipment |
+|                 | | [ISO 14907-2](https://www.iso.org/obp/ui/#iso:std:iso:14907:-2) OBU tests against 14906  |
 |                 | | [EN 15876](https://standards.cen.eu/dyn/www/f?p=204:105:0:::::) Tests against 15509 |
 |                 | | [CEN/TS 18078](https://standards.cencenelec.eu/dyn/www/f?p=CEN:105::RESET::::) RLAN interferences to DSRC |
 |                 | | [ISO 13143](https://www.iso.org/obp/ui/#iso:std:iso:13143) Tests against 12813 |

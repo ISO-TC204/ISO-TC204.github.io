@@ -46,7 +46,7 @@
 *[CCMS]: Cooperative Credential Management System: support system that enables trusted communications among ITS components and protects data from unauthorized access
 *[central reservation]: part of the road reservation between carriageways designed for travel safety purposes
 *[central system]: ITS component that provides application, management, and/or administrative functions from a centralized location (i.e. not at the roadside)
-*[CEN]: European Committee for Standardization
+<!-- *[CEN]: European Committee for Standardization -->
 *[Certificate Trust List]: A list of trusted Root Certificate Authorities and security authorities used to verify which certificates a system accepts.
 *[CIDCR]: Central ITS Data Concepts Register
 *[CISA]: Cybersecurity and Infrastructure Security Agency
@@ -92,7 +92,7 @@
 *[dialog]: bi-directional communication sequence between two parties in accordance with predetermined protocols
 *[dialogue]: bi-directional communication sequence between two parties in accordance with predetermined protocols
 *[disconnected]: characteristic of a material entity that is or was equipped with communications equipment that is sufficiently physically disconnected such that the material entity is no longer able to send data to or receive data from connected entities
-*[document]: uniquely identified unit of information for human use
+<!-- *[document]: uniquely identified unit of information for human use -->
 *[driver assistance]: driver support system that provides either sustained lateral or sustained longitudinal vehicle motion control within a specific operational design domain with the expectation that a conventional driver completes the DDT
 *[driver support system]: driving automation system that is only able to perform part of the DDT
 *[driver]: person that is currently responsible for the dynamic driving task for the vehicle
@@ -198,7 +198,7 @@
 *[intersection that allows travellers to change roads ]: traffic lane designed for entering a junction
 *[intersection]: space where two or more roads meet or cross
 *[interstate highway]: road with separate carriageways for each direction, with limited access that prevents cross traffic on the same level, and for the exclusive use of certain classes of motor vehicles
-*[ISO]: International Organization for Standardization
+<!-- *[ISO]: International Organization for Standardization -->
 *[ITS-AID]: ITS application identifier
 *[ITS application identifier]: unique identifier assigned by the Registry for ITS Identifiers to identify an ITS application object
 *[ITS application role]: ITS-S user need expressed as a formal set of interoperability requirements that need to be fulfilled to satisfy a portion of functionality of an ITS application
@@ -429,9 +429,9 @@
 *[road reservation]: area legally reserved for road transport purposes and support
 *[road section]: aggregation of one or more road links that represents a contiguous length of a road that shares the same management and operational strategies
 *[road segment]: link that represents a contiguous length of a road link characterized by the same physical characteristics
-*[road user]: mobile material entity within the road reservation
+<!-- *[road user]: mobile material entity within the road reservation -->
 *[road vehicle]: vehicle meeting the requirements to operate within the driving space of a road
-*[road]: curvilinear length of roadway that shares the same road identifier
+<!-- *[road]: curvilinear length of roadway that shares the same road identifier -->
 *[roadside system]: infrastructure-based ITS component located outside of a data centre that is designed to provide local processing or routing services while stationary
 *[roadside unit]: part of connected roadside equipment that provides wireless connectivity to vehicle systems and/or personal systems
 *[roadside]: portion of the road reservation excluding all roadway and driving space(s)
@@ -472,7 +472,7 @@
 *[taxi hailing app]: mobility app that assists a transport user in electronically requesting a taxi
 *[taxi service]: commercial shared transport service that transports passengers sequentially
 *[taxi-share service]: commercial shared transport service that transports passengers concurrently
-*[TC]: Technical Committee
+<!-- *[TC]: Technical Committee -->
 *[terminator]: entity that is external to the ITS service implementation but with which the implementation communicates either to obtain inputs or to which it can send outputs
 *[TLM]: Trust List Manager
 *[top speed]: maximum speed at which a vehicle is intended to operate for a sustained period of time
@@ -522,5 +522,5 @@
 *[vehicle]: material entity designed to transport people or physical goods by changing its physical position
 *[verge]: unpaved part of the roadside designed for travel safety purposes
 *[vulnerable road user]: road user who is not protected by the body of a motor vehicle that meets local safety regulations
-*[WG]: Working Group
+<!-- *[WG]: Working Group -->
 *[wheel]: circular material entity that rotates about an axle to facilitate movement of the vehicle
