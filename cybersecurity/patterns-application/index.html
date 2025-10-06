@@ -2785,7 +2785,7 @@
 
 <h1 id="application-a-security-patterns">Application (A) Security Patterns<a class="headerlink" href="#application-a-security-patterns" title="Permanent link">&para;</a></h1>
 <h2 id="pattern-a1-authenticated-messaging">Pattern A1: Authenticated Messaging<a class="headerlink" href="#pattern-a1-authenticated-messaging" title="Permanent link">&para;</a></h2>
-<p>All outbound messages in an <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr> must be cryptographically signed using certificates that encode authorized behaviours. This ensures <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> integrity, origin authenticity, and accountability. Depending on the communication context, authentication may occur at the <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> level (e.g., signed BSMs over broadcast) or via mutually authenticated sessions (e.g., secure TCP-based control exchanges using <abbr title="International Organization for Standardization">ISO</abbr> 21177). This pattern enforces trust relationships, supports interoperability, and provides a basis for <abbr title="A set of processes and services that identify and respond to devices that send invalid or malicious messages.">misbehaviour detection</abbr> and privacy-preserving identity models. Authenticated messaging requires a valid certificate, trusted anchors, and policy-aware enforcement. In privacy-sensitive applications, pseudonym certificates should be used and rotated regularly.</p>
+<p>All outbound messages in an <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr> must be cryptographically signed using certificates that encode authorized behaviours. This ensures <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> integrity, origin authenticity, and accountability. Depending on the communication context, authentication may occur at the <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> level (e.g., signed BSMs over broadcast) or via mutually authenticated sessions (e.g., secure TCP-based control exchanges using ISO 21177). This pattern enforces trust relationships, supports interoperability, and provides a basis for <abbr title="A set of processes and services that identify and respond to devices that send invalid or malicious messages.">misbehaviour detection</abbr> and privacy-preserving identity models. Authenticated messaging requires a valid certificate, trusted anchors, and policy-aware enforcement. In privacy-sensitive applications, pseudonym certificates should be used and rotated regularly.</p>
 <h3 id="implementation-context">Implementation Context<a class="headerlink" href="#implementation-context" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -2828,7 +2828,7 @@
 </tr>
 <tr>
 <td>Session Authentication</td>
-<td>For <abbr title="International Organization for Standardization">ISO</abbr> 21177-based communications, mutual authentication and secure channel setup precede <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> exchange</td>
+<td>For ISO 21177-based communications, mutual authentication and secure channel setup precede <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> exchange</td>
 </tr>
 <tr>
 <td>Application Binding Logic</td>
@@ -2840,7 +2840,7 @@
 <ul>
 <li>Key Provisioning: Devices must generate or receive cryptographic keys securely. Certificates must be provisioned via a recognized PKI (e.g., <abbr title="security credential management system">SCMS</abbr>, <abbr title="Cooperative Credential Management System: support system that enables trusted communications among ITS components and protects data from unauthorized access">CCMS</abbr>) with correct fields (e.g., <abbr title="provider service identifier">PSID</abbr>, <abbr title="service specific permission">SSP</abbr>, <abbr title="ITS Application Identifier">ITS-AID</abbr>).</li>
 <li>Message Signing: Applications must sign outbound messages with a certificate that explicitly authorizes the <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> type or service (e.g., an SRM must be signed with a certificate that includes the relevant <abbr title="provider service identifier">PSID</abbr> and <abbr title="service specific permission">SSP</abbr>).</li>
-<li>Session Setup (<abbr title="International Organization for Standardization">ISO</abbr> 21177): For connection-based communications, devices should implement mutual authentication and secure session negotiation. Signed session setup messages form the basis for trust.</li>
+<li>Session Setup (ISO 21177): For connection-based communications, devices should implement mutual authentication and secure session negotiation. Signed session setup messages form the basis for trust.</li>
 <li>Policy Validation:  In addition to verifying the certificate’s signature chain, recipients must validate that the certificate includes the correct <abbr title="provider service identifier">PSID</abbr> or <abbr title="ITS Application Identifier">ITS-AID</abbr> for the incoming <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr>, and if applicable, that any <abbr title="service specific permission">SSP</abbr> constraints are met. Messages that do not meet these criteria must be dropped or logged.</li>
 <li>Pseudonym Use and Rotation: For privacy-sensitive messages, pseudonym certificates should be rotated frequently to prevent long-term tracking. Rotation policies should align with privacy requirements and backend validation capabilities.</li>
 <li>Trust Anchors: All devices must maintain an up-to-date <abbr title="Certificate Trust List">CTL</abbr> listing trusted Root CAs. Chains that do not resolve to a listed Root must be rejected.</li>
@@ -2860,7 +2860,7 @@
 <td>Signed with <abbr title="A short-lived certificate in the SCMS that allows vehicles to sign messages without exposing a permanent identity.">pseudonym certificate</abbr>; recipient checks trust chain and <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> plausibility</td>
 </tr>
 <tr>
-<td><abbr title="International Organization for Standardization">ISO</abbr> 21177 Secure Session Setup</td>
+<td>ISO 21177 Secure Session Setup</td>
 <td>Mutual authentication using long-term certificates before data exchange</td>
 </tr>
 </tbody>
@@ -2879,7 +2879,7 @@
 <td>Defines certificate format and digital signature processing</td>
 </tr>
 <tr>
-<td><abbr title="International Organization for Standardization">ISO</abbr> 21177</td>
+<td>ISO 21177</td>
 <td>Defines secure session establishment for <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> communications</td>
 </tr>
 <tr>
@@ -3086,6 +3086,13 @@
 </tr>
 </tbody>
 </table>
+<!-- *[CEN]: European Committee for Standardization -->
+<!-- *[document]: uniquely identified unit of information for human use -->
+<!-- *[ISO]: International Organization for Standardization -->
+<!-- *[road user]: mobile material entity within the road reservation -->
+<!-- *[road]: curvilinear length of roadway that shares the same road identifier -->
+<!-- *[TC]: Technical Committee -->
+<!-- *[WG]: Working Group -->
 
 
 

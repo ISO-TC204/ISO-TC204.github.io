@@ -2700,7 +2700,7 @@
 <td>Defines V2X networking and messaging protocols and certificate usage for <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr></td>
 </tr>
 <tr>
-<td><abbr title="International Organization for Standardization">ISO</abbr> 21177</td>
+<td>ISO 21177</td>
 <td>Secure session establishment between <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> stations</td>
 </tr>
 <tr>
@@ -2713,11 +2713,11 @@
 </tr>
 </tbody>
 </table>
-<h2 id="pattern-n2-secure-session-establishment-using-iso-21177">Pattern N2: Secure Session Establishment Using <abbr title="International Organization for Standardization">ISO</abbr> 21177<a class="headerlink" href="#pattern-n2-secure-session-establishment-using-iso-21177" title="Permanent link">&para;</a></h2>
-<p><abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> stations frequently require persistent, authenticated communication sessions across trusted links. These sessions must be established in a standards-compliant manner to ensure confidentiality, authenticity, and resilience. <strong><abbr title="International Organization for Standardization">ISO</abbr> 21177</strong> provides the formal specification for initiating, negotiating, and managing secure sessions between <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> stations. It defines how to authenticate peers using X.509 certificates, manage session lifetimes, and recover from abnormal session conditions.</p>
+<h2 id="pattern-n2-secure-session-establishment-using-iso-21177">Pattern N2: Secure Session Establishment Using ISO 21177<a class="headerlink" href="#pattern-n2-secure-session-establishment-using-iso-21177" title="Permanent link">&para;</a></h2>
+<p><abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> stations frequently require persistent, authenticated communication sessions across trusted links. These sessions must be established in a standards-compliant manner to ensure confidentiality, authenticity, and resilience. <strong>ISO 21177</strong> provides the formal specification for initiating, negotiating, and managing secure sessions between <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> stations. It defines how to authenticate peers using X.509 certificates, manage session lifetimes, and recover from abnormal session conditions.</p>
 <p>During session establishment, each station must present a certificate issued by a trusted <abbr title="certificate authority">CA</abbr>, validated against local policy and Certificate Trust Lists (CTLs). Sessions should be terminated or rejected if certificate validation fails (e.g., expired, revoked, untrusted root). The standard also defines session renegotiation procedures, enabling secure re-authentication when session conditions change.</p>
 <p><img alt="ISO 21177 Session Security" src="../images/Session-Security.png" /></p>
-<p><abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> operators must ensure all deployed devices that support station-to-station communications implement <abbr title="International Organization for Standardization">ISO</abbr> 21177, and procurement specifications should include support for the standard.</p>
+<p><abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> operators must ensure all deployed devices that support station-to-station communications implement ISO 21177, and procurement specifications should include support for the standard.</p>
 <h3 id="implementation-context">Implementation Context<a class="headerlink" href="#implementation-context" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -2733,7 +2733,7 @@
 </tr>
 <tr>
 <td><strong>Dependencies</strong></td>
-<td>Valid X.509 certificates, <abbr title="Certificate Trust List">CTL</abbr> availability, PKI integration, <abbr title="International Organization for Standardization">ISO</abbr> 21177 compliance</td>
+<td>Valid X.509 certificates, <abbr title="Certificate Trust List">CTL</abbr> availability, PKI integration, ISO 21177 compliance</td>
 </tr>
 </tbody>
 </table>
@@ -2747,7 +2747,7 @@
 </thead>
 <tbody>
 <tr>
-<td><abbr title="International Organization for Standardization">ISO</abbr> 21177 Session Protocol</td>
+<td>ISO 21177 Session Protocol</td>
 <td>Negotiates session keys and verifies peer identity using digital certificates</td>
 </tr>
 <tr>
@@ -2775,7 +2775,7 @@
 <tbody>
 <tr>
 <td><abbr title="roadside unit">RSU</abbr>-<abbr title="onboard unit">OBU</abbr> Secure Session</td>
-<td>An <abbr title="roadside unit">RSU</abbr> validates an <abbr title="onboard unit">OBU</abbr>’s certificate and initiates a secure <abbr title="International Organization for Standardization">ISO</abbr> 21177 session</td>
+<td>An <abbr title="roadside unit">RSU</abbr> validates an <abbr title="onboard unit">OBU</abbr>’s certificate and initiates a secure ISO 21177 session</td>
 </tr>
 <tr>
 <td>Session Expiry Handling</td>
@@ -2797,7 +2797,7 @@
 </thead>
 <tbody>
 <tr>
-<td><abbr title="International Organization for Standardization">ISO</abbr> 21177</td>
+<td>ISO 21177</td>
 <td>Defines secure session negotiation and management for <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> stations</td>
 </tr>
 <tr>
@@ -2805,11 +2805,18 @@
 <td>Provides certificate structure and signing requirements</td>
 </tr>
 <tr>
-<td><abbr title="International Organization for Standardization">ISO</abbr> 21217</td>
+<td>ISO 21217</td>
 <td>Reference <abbr title="fundamental concepts or properties of a system in its environment embodied in its elements , relationships and in the principles of its design and evolution">architecture</abbr> for <abbr title="bounded secured managed domain that is able to meet requirements of the ITS trust domain within which it is designed to participate">ITS station</abbr> communication functions</td>
 </tr>
 </tbody>
 </table>
+<!-- *[CEN]: European Committee for Standardization -->
+<!-- *[document]: uniquely identified unit of information for human use -->
+<!-- *[ISO]: International Organization for Standardization -->
+<!-- *[road user]: mobile material entity within the road reservation -->
+<!-- *[road]: curvilinear length of roadway that shares the same road identifier -->
+<!-- *[TC]: Technical Committee -->
+<!-- *[WG]: Working Group -->
 
 
 

@@ -2478,13 +2478,13 @@
 
 
 <h1 id="standards-developers">Standards Developers<a class="headerlink" href="#standards-developers" title="Permanent link">&para;</a></h1>
-<p>Standards development Organizations (SDOs) and Standards Developers are responsible for defining interoperable, secure, and reusable protocols that enable an interoperable <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> ecosystem. SDOs that develop <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> cybersecurity-related standards include <abbr title="International Organization for Standardization">ISO</abbr>, IEEE, ETSI, and SAE. These organizations define the technical specifications for secure communication protocols, certificate formats, identity and authorization models, and trust frameworks used in <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> environments.</p>
+<p>Standards development Organizations (SDOs) and Standards Developers are responsible for defining interoperable, secure, and reusable protocols that enable an interoperable <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> ecosystem. SDOs that develop <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> cybersecurity-related standards include ISO, IEEE, ETSI, and SAE. These organizations define the technical specifications for secure communication protocols, certificate formats, identity and authorization models, and trust frameworks used in <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> environments.</p>
 <p>A Standards Developer should work to ensure that cybersecurity capabilities (e.g., trust management, authenticated messaging, secure transport) are consistently defined and supported across the <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> vendor community.</p>
 <h2 id="responsibilities">Responsibilities<a class="headerlink" href="#responsibilities" title="Permanent link">&para;</a></h2>
 <p>To meet the needs of implementers and policy bodies, you must:</p>
 <ul>
 <li>Specify security protocols with implementation detail sufficient for conformance testing, certification, and cross-vendor interoperability.</li>
-<li>Align standards across international SDOs (e.g., IEEE, ETSI, <abbr title="International Organization for Standardization">ISO</abbr>, SAE) to support cross-jurisdictional trust models and certificate exchange.</li>
+<li>Align standards across international SDOs (e.g., IEEE, ETSI, ISO, SAE) to support cross-jurisdictional trust models and certificate exchange.</li>
 <li>Avoid redefining existing security mechanisms; instead, adopt and profile protocols (e.g., TLS, DTLS, IEEE 1609.2, X.509) from other mature standards bodies.</li>
 <li>Support layering and modularity so that capabilities can evolve independently and integrate with evolving architectures like MEC, ATC, and cloud-hosted services.</li>
 <li>Define and maintain cryptographic agility to support migration to post-quantum algorithms, strong key lifecycles, and forward secrecy where appropriate.</li>
@@ -2492,11 +2492,18 @@
 </ul>
 <h2 id="recommended-actions">Recommended Actions<a class="headerlink" href="#recommended-actions" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Coordinate through cross-SDO working groups to align <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> structures, certificate formats, and protocol flows (e.g., IEEE/SAE with ETSI/<abbr title="International Organization for Standardization">ISO</abbr>).</li>
+<li>Coordinate through cross-SDO working groups to align <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> structures, certificate formats, and protocol flows (e.g., IEEE/SAE with ETSI/ISO).</li>
 <li>Profile existing protocols using constrained and well-defined parameter sets appropriate for <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> resource limits and latency constraints.</li>
 <li>Ensure all security-relevant objects have validated encoding and validation logic, including edge cases and malformed inputs.</li>
 <li>Document threat models and show how your specifications mitigate or assume responsibility for threats (e.g., replay, spoofing, denial of service).</li>
 </ul>
+<!-- *[CEN]: European Committee for Standardization -->
+<!-- *[document]: uniquely identified unit of information for human use -->
+<!-- *[ISO]: International Organization for Standardization -->
+<!-- *[road user]: mobile material entity within the road reservation -->
+<!-- *[road]: curvilinear length of roadway that shares the same road identifier -->
+<!-- *[TC]: Technical Committee -->
+<!-- *[WG]: Working Group -->
 
 
 
