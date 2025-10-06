@@ -87,3 +87,28 @@ img.figure {
   display: block;             /* Ensure image is block-level */
   margin: 0 auto;             /* Center image */
 }
+
+/* Style for tables to add vertical borders between cells */
+.md-typeset table {
+    border-collapse: collapse; /* Ensure borders are drawn correctly */
+}
+
+/* Add vertical borders to table cells */
+.md-typeset th,
+.md-typeset td {
+    border-right: 1px solid #ddd; /* Vertical border between cells */
+    border-left: 1px solid #ddd; /* Ensure left border for consistency */
+    padding: 8px; /* Maintain padding for readability */
+}
+
+/* Remove right border from the last cell in each row */
+.md-typeset th:last-child,
+.md-typeset td:last-child {
+    border-right: none; /* Avoid extra border on the rightmost cell */
+}
+
+/* Remove left border from the first cell in each row */
+.md-typeset th:first-child,
+.md-typeset td:first-child {
+    border-left: none; /* Avoid extra border on the leftmost cell */
+}
