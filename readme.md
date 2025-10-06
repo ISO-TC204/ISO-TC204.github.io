@@ -1,16 +1,16 @@
 Welcome to the ISO TC 204 Github Website. Please see the following specific links:
 
-[TC204 Welcome Page](tc204.md)
+[TC204 Welcome Page](https://iso-tc204.github.io)
 
-[Start here](start.md)
+[About TC 204](https://iso-tc204.github.io/about/)
 
-[Overview of ISO/TC 204](tc204.md)
+[TC 204 Work](https://iso-tc204.github.io/work/)
 
-[ITS Architecture](its-architecture.md)
+[ISO TC 204 Registries](https://iso-tc204.github.io/registries/)
 
-[For Editors only...!](editors-landing-page.md)
+[For Editors and convenors](https://github.com/ISO-TC204/ISO-TC204.github.io/wiki)
 
-[FAQ's](faqs.md)
+[FAQ's](https://iso-tc204.github.io/faq/)
 
 ISO 5345 [ITS — Identifiers](https://iso-tc204.github.io/iso5345/)
 
