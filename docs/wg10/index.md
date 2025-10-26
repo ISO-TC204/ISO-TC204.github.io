@@ -4,23 +4,12 @@
 
 {% include "ag4/wg10doi.html" %}
 
-## News and highlights (optional)
+## Graphic Data Dictionary (ISO 14823)
 
-## [Standard subject area]
+The graphic data dictionary defines how to concisely convey traffic sign information in a language-independent format. All internationally-recognized symbols for road signs are assigned a unique identifier that allows local customization and extension as needed. In addition, additional information (e.g., time of validity) can also be provided to supplement the main sign.
 
-### Overview
+## Transport Protocols Expert Group (I and II)
 
-**Document:** [ISO Document number and status](index.md)
-**Title:** Intelligent transport systems —
-**Status:**
-**Abstract:**
-
-### Description
-
-Other meta-data that puts standard in context
-
-### Relationships to other standards
-
-e.g., Normative references and comm stack references
+In cooperation with the Traveller Information Services Association ([TISA](https://tisa.org)), ISO TC 204 WG10 develops and maintains the TPEG (ISO 18234) and TPEG II (ISO 21219) standard series, which define how to exchange traffic and travel information over various media.
 
 [How to get involved](../contact.md)
