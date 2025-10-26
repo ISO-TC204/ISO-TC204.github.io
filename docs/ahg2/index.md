@@ -2,23 +2,6 @@
 
 ## Domain of interest
 
-## News and highlights (optional) 
-
-## [Standard subject area]
-
-### Overview
-
-**Document:** [ISO Document number and status](index.md)
-**Title:** Intelligent transport systems —
-**Status:** 
-**Abstract:** 
-
-### Description
-
-Other meta-data that puts standard in context
-
-### Relationships to other standards
-
-e.g., Normative references and comm stack references
+AHG2 is a temporary group tasked with investigating the needs for cybersecurity standards and guidance for the ITS community. The group will make recommendations as to what actions the TC should take to address identified gaps.
 
 [How to get involved](../contact.md)

@@ -1,26 +1,7 @@
-# Identifiers (ISO TC 204 AG 2)
+# Program Coordination (ISO TC 204 AG 4)
 
 ## Domain of interest
 
-AG4 is responsible for coordinating the work among working groups, including the management of the scope of the TC and the domain of interest statements of the TC 204 working groups.
-
-## News and highlights (optional) 
-
-## [Standard subject area]
-
-### Overview
-
-**Document:** [ISO Document number and status](index.md)
-**Title:** Intelligent transport systems —
-**Status:** 
-**Abstract:** 
-
-### Description
-
-Other meta-data that puts standard in context
-
-### Relationships to other standards
-
-e.g., Normative references and comm stack references
+AG 4 is responsible for making recommendations to the TC on how to best coordinate the work of ISO TC 204 across its various working groups. This includes managing the domain of interest statements for each WG.
 
 [How to get involved](../contact.md)
