@@ -24,77 +24,77 @@ The ISO 24315 series on the management of electronic traffic regulations (METR) 
 
 <!-- Start web info for standard / document -->
 ??? note "[ISO/TS 24315-1:2025](https://www.iso.org/obp/ui#iso:std:iso:ts:24315:-1:ed-1:v1:en) _Intelligent transport systems — Management of electronic traffic regulations (METR) — Part 1: Vocabulary_"
-<!-- edit document reference information
-  retain: ??? note "[ : ]( ) _ _"
-  find publicly available ISO document URL & info here: iso.org/obp/ui
--->
-
-**Status:** Approved
-<!-- Copy relevant status line from the following list: 
-  Edition 1 **(under development)**{style="color: red;"}
-  Approved
-  Approved **(under revision)**{style="color: red;"} 
--->
-
-**Abstract:**
-
-This document defines terms specific to the ISO 24315 series on the management of electronic transport regulations.
-
-METR is designed to assist developers and manufacturers of driving automation systems (i.e., automation Levels 1-5) and driver information systems (including those at automation Level 0) to electronically obtain traffic rules to better enable:
-
-The scope of METR includes both rules that are relatively static (e.g. static speed limits) as well as those that are dynamic (e.g. variable speed limits, signalized intersections). Where appropriate, METR incorporates existing documents (e.g. ISO/TS 19091 for signalized intersections).
-
-### Relationships to other standards
-<!-- Relationships to other standards
-  e.g., list Normative references and comm stack references
-  *** PLEASE *** retain the link to "TC204 Foundational Standards" as the first relationship in the list below 
--->
-
-For additional terms relevant to the ITS domain, which can help in the understanding of this document, see ISO/TS 14812 and ISO/IEC/IEEE 24765.
-
-- [TC204 Foundation Standards](../foundational.md)
-- [ISO/IEC/IEEE 24765](https://www.iso.org/obp/ui#iso:std:iso-iec-ieee:24765:ed-2:v1:en) _Systems and software engineering — Vocabulary_
-
-#### Normative References
-
-There are no normative references in this document.
-<!-- End Standard -->
+    <!-- edit document reference information
+      retain: ??? note "[ : ]( ) _ _"
+      find publicly available ISO document URL & info here: iso.org/obp/ui
+    -->
+    
+    **Status:** Approved
+    <!-- Copy relevant status line from the following list: 
+      Edition 1 **(under development)**{style="color: red;"}
+      Approved
+      Approved **(under revision)**{style="color: red;"} 
+    -->
+    
+    **Abstract:**
+    
+    This document defines terms specific to the ISO 24315 series on the management of electronic transport regulations.
+    
+    METR is designed to assist developers and manufacturers of driving automation systems (i.e., automation Levels 1-5) and driver information systems (including those at automation Level 0) to electronically obtain traffic rules to better enable:
+    
+    The scope of METR includes both rules that are relatively static (e.g. static speed limits) as well as those that are dynamic (e.g. variable speed limits, signalized intersections). Where appropriate, METR incorporates existing documents (e.g. ISO/TS 19091 for signalized intersections).
+    
+    ### Relationships to other standards
+    <!-- Relationships to other standards
+      e.g., list Normative references and comm stack references
+      *** PLEASE *** retain the link to "TC204 Foundational Standards" as the first relationship in the list below 
+    -->
+    
+    For additional terms relevant to the ITS domain, which can help in the understanding of this document, see ISO/TS 14812 and ISO/IEC/IEEE 24765.
+    
+    - [TC204 Foundation Standards](../foundational.md)
+    - [ISO/IEC/IEEE 24765](https://www.iso.org/obp/ui#iso:std:iso-iec-ieee:24765:ed-2:v1:en) _Systems and software engineering — Vocabulary_
+    
+    #### Normative References
+    
+    There are no normative references in this document.
+    <!-- End Standard -->
 
 <!-- Start web info for standard / document -->
 ??? note "[ISO/TS 24315-2:2025](https://www.iso.org/obp/ui#iso:std:iso:tr:24315:-2:ed-1:v1:en) _Intelligent transport systems — Management of electronic traffic regulations (METR) — Part 2: Operational concepts (ConOps)_"
 
-**Status:** Approved
-<!-- Copy relevant status line from the following list: 
-  Edition 1 **(under development)**{style="color: red;"}
-  Approved
-  Approved **(under revision)**{style="color: red;"} 
--->
-
-**Abstract:**
-
-The purpose of this document is to describe the operational concept (ConOps) for METR. A ConOps is a user-oriented document that describes system characteristics for a proposed system from the users’ viewpoint. It includes a description of the key stakeholders along with the processes and data flows required to fulfil their responsibilities. It describes what the system will do (not how it will do it) and why (rationale). The ConOps is used to communicate overall quantitative and qualitative system characteristics to the acquirer, user, supplier, and other organizational elements (ISO/IEC/IEEE 29148). The ConOps is a critical tool in building consensus among stakeholders.
-
-### Description
-
-The scope of METR includes both rules that are relatively static (e.g. static speed limits) as well as those that are dynamic (e.g. variable speed limits, signalized intersections). Where appropriate, METR incorporates existing documents (e.g. ISO/TS 19091 for signalized intersections).
-
-### Relationships to other standards
-<!-- Relationships to other standards
-  e.g., list Normative references and comm stack references
-  *** PLEASE *** retain the link to "TC204 Foundational Standards" as the first relationship in the list below 
--->
-
-- [TC204 Foundation Standards](../foundational.md)
-
-#### Normative References
-
-The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.
-
-- [ISO/TS 14812](https://www.iso.org/obp/ui#iso:std:iso:ts:14812:ed-2:v1:en) _Intelligent transport systems — Vocabulary_
-- [ISO/TS 24315-1](https://www.iso.org/obp/ui#iso:std:iso:ts:24315:-1:ed-1:v1:en) _Intelligent transport systems — Management of electronic traffic regulations (METR) — Part 1: Vocabulary_
-- [ISO/IEC/IEEE 24765](https://www.iso.org/obp/ui#iso:std:iso-iec-ieee:24765:ed-2:v1:en) _Systems and software engineering — Vocabulary_
-
-<!-- End Standard -->
+    **Status:** Approved
+    <!-- Copy relevant status line from the following list: 
+      Edition 1 **(under development)**{style="color: red;"}
+      Approved
+      Approved **(under revision)**{style="color: red;"} 
+    -->
+    
+    **Abstract:**
+    
+    The purpose of this document is to describe the operational concept (ConOps) for METR. A ConOps is a user-oriented document that describes system characteristics for a proposed system from the users’ viewpoint. It includes a description of the key stakeholders along with the processes and data flows required to fulfil their responsibilities. It describes what the system will do (not how it will do it) and why (rationale). The ConOps is used to communicate overall quantitative and qualitative system characteristics to the acquirer, user, supplier, and other organizational elements (ISO/IEC/IEEE 29148). The ConOps is a critical tool in building consensus among stakeholders.
+    
+    ### Description
+    
+    The scope of METR includes both rules that are relatively static (e.g. static speed limits) as well as those that are dynamic (e.g. variable speed limits, signalized intersections). Where appropriate, METR incorporates existing documents (e.g. ISO/TS 19091 for signalized intersections).
+    
+    ### Relationships to other standards
+    <!-- Relationships to other standards
+      e.g., list Normative references and comm stack references
+      *** PLEASE *** retain the link to "TC204 Foundational Standards" as the first relationship in the list below 
+    -->
+    
+    - [TC204 Foundation Standards](../foundational.md)
+    
+    #### Normative References
+    
+    The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.
+    
+    - [ISO/TS 14812](https://www.iso.org/obp/ui#iso:std:iso:ts:14812:ed-2:v1:en) _Intelligent transport systems — Vocabulary_
+    - [ISO/TS 24315-1](https://www.iso.org/obp/ui#iso:std:iso:ts:24315:-1:ed-1:v1:en) _Intelligent transport systems — Management of electronic traffic regulations (METR) — Part 1: Vocabulary_
+    - [ISO/IEC/IEEE 24765](https://www.iso.org/obp/ui#iso:std:iso-iec-ieee:24765:ed-2:v1:en) _Systems and software engineering — Vocabulary_
+    
+    <!-- End Standard -->
 <!-- End subject area -->
 
 ## External References

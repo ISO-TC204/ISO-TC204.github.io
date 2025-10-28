@@ -1,4 +1,4 @@
-#Operational improvement group (ISO TC 204 AG 3)
+# Operational improvement group (ISO TC 204 AG 3)
 
 ## Domain of interest
 
