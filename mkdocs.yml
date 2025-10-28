@@ -10,6 +10,8 @@ nav:
     - Contact us: contact.md
     - Vocabulary: vocab.md
     - Acknowledgements: acknowledgements.md
+    - Contributions: contributor.md
+    - FAQs: faq.md
   - Work: 
     - Overview: work.md
     - Foundational concepts: foundational.md
@@ -19,36 +21,6 @@ nav:
     - Communications (WG 16): wg16/index.md
     - Cooperative systems (WG 18): wg18/index.md
     - Coordination (AG 4): ag4/index.md
-    - Cybersecurity: 
-      - Introduction: cybersecurity/index.md
-      - Beginners Guide: cybersecurity/beginners-guide.md 
-      - ITS Cybersecurity Patterns: 
-        - Overview: cybersecurity/its-security-patterns.md
-        - Secure ITS Management Patterns: cybersecurity/patterns-management.md
-        - Application Security Patterns: cybersecurity/patterns-application.md
-        - Edge Device Security Patterns: cybersecurity/patterns-edge.md
-        - Network and Transport Security Patterns: cybersecurity/patterns-network.md
-        - Deployment and Integration Security Patterns: cybersecurity/patterns-deployment.md
-        - Developer Patterns: cybersecurity/patterns-developer.md
-      - ITS Security Regulations and Standards: 
-        - Overview: cybersecurity/its-security-standards.md
-        - Certificate Policy (CP): cybersecurity/policies-cp.md
-        - SCMS Policy: cybersecurity/policies-scms.md
-        - CCMS Policy: cybersecurity/policies-ccms.md
-        - Device Security Policy Configurations: cybersecurity/policies-device.md
-      - ITS Threat analysis: cybersecurity/threat-analysis.md
-      - Interoperability strategies: cybersecurity/its-interoperability-strategies.md
-      - Stakeholder guidance: 
-        - Overview: cybersecurity/its-stakeholder-guidance.md
-        - Standards developers: cybersecurity/stakeholder-standards-developer.md
-        - Cybersecurity Oversight and Policy Authorities: cybersecurity/stakeholder-policy-maker.md
-        - Infrastructure Owner Operators (IOOs): cybersecurity/stakeholder-ioo.md
-        - ITS Application Developers: cybersecurity/stakeholder-appdev.md
-        - Certificate Management Authorities: cybersecurity/stakeholder-certmgmt.md
-        - Original Equipment Manufacturers (OEMs): cybersecurity/stakeholder-oem.md
-      - Misuse Cases: cybersecurity/its-misuse-cases.md
-      - Secure ITS Management Patterns: cybersecurity/patterns-management.md
-      - Glossary: cybersecurity/cybersecurity-glossary.md
     - Cybersecurity (AHG 2): ahg2/index.md
     - Driving automation and safety (WG 14): wg14/index.md
     - Fee and toll collection (WG 5): wg5/index.md
@@ -70,9 +42,37 @@ nav:
   - Standards: 
     - Overview: standards.md
     - METR: https://iso-tc204.github.io/iso24315/
-  - Contributions: contributor.md
+  - Cybersecurity: 
+    - Introduction: cybersecurity/index.md
+    - Beginners Guide: cybersecurity/beginners-guide.md 
+    - ITS Cybersecurity Patterns: 
+      - Overview: cybersecurity/its-security-patterns.md
+      - Secure ITS Management Patterns: cybersecurity/patterns-management.md
+      - Application Security Patterns: cybersecurity/patterns-application.md
+      - Edge Device Security Patterns: cybersecurity/patterns-edge.md
+      - Network and Transport Security Patterns: cybersecurity/patterns-network.md
+      - Deployment and Integration Security Patterns: cybersecurity/patterns-deployment.md
+      - Developer Patterns: cybersecurity/patterns-developer.md
+    - ITS Security Regulations and Standards: 
+      - Overview: cybersecurity/its-security-standards.md
+      - Certificate Policy (CP): cybersecurity/policies-cp.md
+      - SCMS Policy: cybersecurity/policies-scms.md
+      - CCMS Policy: cybersecurity/policies-ccms.md
+      - Device Security Policy Configurations: cybersecurity/policies-device.md
+    - ITS Threat analysis: cybersecurity/threat-analysis.md
+    - Interoperability strategies: cybersecurity/its-interoperability-strategies.md
+    - Stakeholder guidance: 
+      - Overview: cybersecurity/its-stakeholder-guidance.md
+      - Standards developers: cybersecurity/stakeholder-standards-developer.md
+      - Cybersecurity Oversight and Policy Authorities: cybersecurity/stakeholder-policy-maker.md
+      - Infrastructure Owner Operators (IOOs): cybersecurity/stakeholder-ioo.md
+      - ITS Application Developers: cybersecurity/stakeholder-appdev.md
+      - Certificate Management Authorities: cybersecurity/stakeholder-certmgmt.md
+      - Original Equipment Manufacturers (OEMs): cybersecurity/stakeholder-oem.md
+    - Misuse Cases: cybersecurity/its-misuse-cases.md
+    - Secure ITS Management Patterns: cybersecurity/patterns-management.md
+    - Glossary: cybersecurity/cybersecurity-glossary.md
   - Resources: resources.md
-  - FAQs: faq.md
 site_url: https://iso-tc204.github.io
 copyright: CC BY 4.0
 theme:
