@@ -1,16 +1,7 @@
 Welcome to the ISO TC 204 Github Website. Please see the following specific links:
 
-[TC204 Welcome Page](https://iso-tc204.github.io)
-
-[About TC 204](https://iso-tc204.github.io/about/)
-
-[TC 204 Work](https://iso-tc204.github.io/work/)
-
-[ISO TC 204 Registries](https://iso-tc204.github.io/registries/)
-
-[For Editors and convenors](https://github.com/ISO-TC204/ISO-TC204.github.io/wiki)
-
-[FAQ's](https://iso-tc204.github.io/faq/)
+- The [TC 204 Website](https://iso-tc204.github.io) provides information to ITS practitioners about ITS and ITS standards, inlcuding the importance of these standards to ITS deployments and the registries maintained by the TC.
+- The [TC 204 Wiki](https://iso-tc204.github.io/about/) provides information to TC 204 experts about the operation and policies of ISO TC 204, inlcuding guidance for TC 204 editors when developing a TC 204 document and guidance to convenors on submitting resolutions.
 
 ISO 5345 [ITS — Identifiers](https://iso-tc204.github.io/iso5345/)
 
