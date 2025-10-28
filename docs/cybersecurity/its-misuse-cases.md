@@ -60,6 +60,6 @@ An attacker compromises the update process used to deliver software or firmware 
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [E6: Secure Software Integrity and Boot](patterns-edge.md#pattern-e6-software-integrity-verification-and-secure-boot) | Require cryptographic signing and verification of all updates before installation. |
 | [D5: Secure Remote Management](patterns-management.md#pattern-m6-secure-remote-management) | Ensure update channels use encrypted, authenticated sessions. |
-| [D4: Supply Chain Security](patterns-developer.md#pattern-d4-supply-chain-security) | Verify supplier update processes and components are protected. |
+| [D4: Supply Chain Security](patterns-developer.md#pattern-d4-supply-chain-security) | Verify supplier update processes and components are protected |
+| E6: Software Integrity Verification and Secure Boot          |                                                              |
 
-## Pattern E6: Software Integrity Verification and Secure Boot

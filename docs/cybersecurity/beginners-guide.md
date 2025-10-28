@@ -4,149 +4,158 @@
 
 ### ITS Systems of Systems
 
-Intelligent Transportation Systems (ITS) enhance mobility, safety and efficiency through connected and automated technologies. ITS systems rely on near real-time data exchange between vehicles, infrastructure, and cloud services to optimize traffic flow and improve vehicular safety as well as the safety of the integrated transportation system more broadly.. Connected vehicles use vehicle-to-everything (V2X) communication to help prevent collisions, while roadside units (RSUs) relay information such as signal phase changes, work zone alerts, and dynamic speed limits. The figure below illustrates the key components of a typical ITS deployment and how they interact as a system of systems.
+Intelligent Transportation Systems (ITS) enhance mobility, safety and efficiency through connected and automated technologies. ITS systems rely on near real-time data exchange between vehicles, infrastructure, and often cloud services, to optimize traffic flow and improve safety. Connected vehicles (CV) use vehicle-to-everything (V2X) communication for many use cases, for example to aid in preventing collisions. A type of ITS device, called a Roadside unit (RSU) can relay information across the CV environment, for example signal changes, work zone alerts, and dynamic speed limit changes. The figure below illustrates components of a typical ITS deployment and how they interact as a system of systems.
 
 ![ITS Environment](images/its_generic.jpg)
 
-The complexity and interconnectedness of these systems create new operational benefits but also introduce new types of risk. Because vehicles and infrastructure often interact dynamically and at high speeds, reliability, precision, and trust in communications are important.
+The complexity and interconnectedness of these systems create new operational benefits but also introduce new types of risk. Because vehicles and infrastructure often interact dynamically and at high speeds, reliability, availability, and trust in communications are important.
 
 ### Introduction to Cybersecurity
 
-Cybersecurity is the protection of digital systems, communications, and data from unauthorized access, manipulation, or disruption. In critical infrastructure sectors such as transportation, controls enabled through cybersecurity directly affect directly affect physical safety. A cybersecurity failure could disrupt traffic signals, disable roadside infrastructure, or compromise the information provided to a connected vehicle which could impact vehicle operator decision making. Cybersecurity principles include confidentiality, integrity, and availability.
-
-![CIA](images/CIA.png){ width="60%" }
-
-Confidentiality ensures that data is protected from unauthorized access, preserving privacy and preventing misuse. Integrity guarantees that data and messages remain accurate and unaltered during transmission or storage. Sender authentication ensures that whomever transmits a message was authorized by a trusted entity to send the information. Availability ensures that systems and services remain operational and accessible when needed. In transportation, these principles apply to traffic control commands, vehicle messaging, digital road signage, and other systems. In systems where timing is important, accuracy, and authentication of source or destination entities are critical.
-
-### ITS Cybersecurity
-
-ITS cybersecurity ensures the integrity, confidentiality, and availability of data exchanged across an ITS system. It protects against cyber threats that could disrupt traffic management, compromise vehicle behaviour, or manipulate digital traffic controls. This includes securing communication between vehicles and infrastructure, ensuring that only trusted devices participate in ITS applications, and protecting sensitive data from misuse or exposure. In the context of V2X, although confidentiality is not always required, data integrity and availability remain critical requirements at all times. This is due to the latency-sensitive nature of V2X messages such as Basic Safety Messages (BSMs), where encryption processing and messaging overhead may reduce the ability to receive information in a timely manner.
+Cybersecurity involves the protection of digital systems and data from unauthorized access, manipulation, or disruption. In critical infrastructure sectors such as transportation, cybersecurity controls also impact the physical world, since exploitation of ITS devices or services could result in kinetic effects. Successful exploitation of system weaknesses and vulnerabilities could could disrupt traffic signals, disable roadside infrastructure, or compromise the CV data feeds, resulting in on-road collisions.  The cybersecurity principles of confidentiality, integrity, and availability are used within a secure system design to safeguard against these threats. 
 
 ![vehicle_v2x](images/vehicle_v2x.jpg){ width="67%" }
 
-Modern ITS environments face a broad and evolving threat landscape. Communications between vehicles and infrastructure—known as Vehicle-to-Everything (V2X)—must be protected from interception, manipulation, and unauthorized injection of false data. Network infrastructure is vulnerable to denial-of-service (DoS) and malware-based attacks, which can disable roadside systems or overwhelm traffic management centers. IoT devices such as smart traffic signals, cameras, and sensors may be physically or remotely exploited due to weak default configurations or unpatched software. Location-based services can be compromised through GPS spoofing and jamming, causing vehicles to misreport their positions or lose navigation capability. As cyber-physical systems, ITS deployments must defend not just against digital exploits, but against threats that have direct safety consequences in the physical world—from manipulating emergency vehicle priority to triggering unsafe driving conditions. The following diagram provides a simplified view of the types of threats that can affect different components of the ITS environment.
+Confidentiality requirements may be levied on an ITS to protect data from unauthorized access. For example, by encrypting information contained within digital messages, an attacker that has access to those messages will not be able to read them. The ITS domain is somewhat unique in that many ITS messages, for example V2V messages, do not require confidentiality protections because they contain information that is meant to be broadcast to surrounding vehicles. Confidentiality is enabled through encryption algorithms (for example, the Advanced Encryption Standard (AES)), key exchange algorithms (for example, Elliptic Curve Diffie Hellman (ECDH)), and by the protection of cryptographic keys used by these and other algorithms. 
+
+Maintaining the integrity of ITS messages is always important. Vehicles and ITS systems may perform actions based on the contents of a digital message.  Therefore, data integrity requirements are levied on an ITS to safeguard against the unauthorized modification of data whether in-transit or at-rest.  Data integrity can be enabled within an ITS through the use of approaches such as Message Authentication Codes (MACs), hashing algorithms, and /or digital signature algorithms. For example, an ITS developer may choose to append a keyed MAC to a message, whereby a tag is created by combining the message with a secret key, before running through a hashing algorithm. In this case, the secret key is shared between two parties. An alternative to this approach is to use digital certificates and asymmetric key pairs.  IEEE Std. 1609.2 defines certificates that can be used to validate both the integrity and authenticity of ITS messages. A sender may use a hashing algorithm, for example Secure Hash Algorithm (SHA) to hash message contents, and then apply a digital signature to the hash, using algorithms such as Elliptic Curve Digital Signature Algorithm (ECDSA). Receivers can then use the public key of the sender, contained within the IEEE 1609.2 certificate, to validate that the message was signed by a trusted entity, and that the contents of the message have not been tampered. 
+
+Authentication is also critical within  an ITS. As mentioned above, approaches such as IEEE 1609.2 can be used to authenticate that the sender of a message is (1) the actual sender of that message, and (2) is trusted by the receiver to send that message.  Note that this is different than validating that the sender of a message is authorized to send the message. Within an ITS, the ability to validate authorization is also important, and to do so, sender certificates may include one or more Provider Service Identifiers (PSIDs) and Service Specific Permissions (SSPs). These entitlements communicate to the receiver of a message, what specifically that the sender is authorized to request or perform.  
+
+The principle of availability within a cybersecurity design focuses on ensuring that ITS systems and services remain operational and accessible when needed. In transportation, these principles apply to traffic control commands, vehicle messaging, digital road signage, and other systems.
+
+### ITS Cybersecurity
+
+Modern ITS environments face a broad and evolving threat landscape. V2V/V2X communications must be protected from manipulation and unauthorized injection of false data. Network services may be vulnerable to denial-of-service (DoS) and malware-based attacks, which can potentially disable roadside systems or overwhelm Traffic Management Centers (TMCs). ITS devices, for example such as signal controllers, closed-circuit televisions (CCTV), dynamic message signs (DMS), and environmental sensors may be physically or remotely exploited due to weak default configurations, unpatched software, or other vulnerabilities. Location-based services can be compromised through GNSS spoofing or disabled through jamming, causing vehicles to misreport their positions or lose navigation capability. And, since an ITS is a cyber-physical system, an ITS operator must be aware of the physical safety risks associated with exploitation of digital systems. The diagram below provides a simplified view of the types of threats that can affect different components of an ITS. 
 
 ![ITS Ecosystem Threats](images/its_threats.jpg)
 
-Unlike traditional internet-based systems, ITS cybersecurity must function in highly mobile, latency-sensitive environments where anonymity of participants is often important. Vehicles must trust messages from other vehicles or roadside systems they have never encountered before—often with no direct internet connection or central authority available at the time of interaction. As a result, ITS requires specialized cybersecurity tools and protocols that go beyond traditional cybersecurity tools such as Transport Layer Security (TLS) and X.509 certificates.
+ITS cybersecurity designs must address highly mobile, latency-sensitive environments where anonymity of participants is important. Vehicles must trust messages from other vehicles or roadside systems they have never encountered before, often with no direct internet connection or central authority available at the time of interaction. As a result, ITS security often requires specialized cybersecurity protocols, tools and approaches that are specifically tailored to the unique needs of an ITS.  
 
-In the sections that follow we will further explore these challenges. First, we will introduce the unique characteristics of ITS cybersecurity. Next, we will explain why general-purpose cybersecurity tools are insufficient. Finally, we will describe the unique characteristics of ITS cybersecurity, explain why general-purpose cybersecurity tools are insufficient, and describe the standards and trust frameworks that support secure ITS deployments.
+In the sections that follow we will further explore these challenges. First, we will introduce the unique characteristics of ITS cybersecurity. Next, we will explain why general-purpose cybersecurity tools are insufficient. Finally, we will describe the unique characteristics of ITS cybersecurity, explain why general-purpose cybersecurity tools by themselves are insufficient, and describe the standards and trust frameworks that reduce risk associated with operating an ITS.  
 
 ## Why ITS Cybersecurity is Unique
 
-Transportation systems integrate real-time cyber-physical operations with direct safety implications. Unlike traditional IT systems, which can often tolerate centralized trust models, identity-bound certificates, and latency, ITS requires decentralized, privacy-preserving, and low latency security models that operate across jurisdictions. These systems support millions of highly mobile vehicles and infrastructure components that must be able to securely interact often without continuous connectivity.
+The Internet connects servers and clients. Servers are very often physically static, meaning they are not on-the-move devices. This client/server architecture is well suited to the use of a centralized trust model, often relied upon when using X.509 certificates, whereby a central trust authority issues identity certificates to a server, and the server then uses the certificate to enable authenticated, integrity protected and encrypted communications.  End-users install the trust authority's certificate into their trusted root store, and validate that the server's certificate "chains" to the root certificate loaded in the trusted root store. Sessions like this can be established using security protocols such as Transport Layer Security (TLS) Datagram TLS (DTLS), Internet Protocol Security (IPsec) and others. 
 
-ITS relies on the use of Public Key Infrastructure (PKI) which provides proven best practices including scalability and affordability. ITS-specific certificate structures have been introduced to overcome specific challenges associated with ITS operations, for example IEEE 1609.2 and ETSI TS 103 09. The characteristics below highlight specific ITS characteristics.
+An ITS integrates myriad devices and services, each of which may be provisioned certificates from different trust authorities. This requires a more decentralized trust model. In addition, it is important that vehicles cannot be tracked by surreptitious actors (including insiders). This means that way of asserting identities within X.509 certificates, is not acceptable. As well, the ability to assert authorizations for participating in different ITS services, is important, and that is not a built-in capability when using X.509 certificates. 
 
 ## 1. Real-Time, Safety-Critical Operations
 
 <table>
   <tr>
     <td style="width: 170px; vertical-align: middle; text-align: center;">
-      <img src="/cybersecurity/images/icon_low_latency.jpg" alt="Low Latency Icon" height="150">
+      <img src="images/icon_low_latency.jpg" alt="Low Latency Icon" height="150">
     </td>
     <td>
-      **Real-Time, Safety-Critical Operations**<br>
-      ITS involve real-time interactions that directly affect safety. For example, vehicle-to-roadside unit (RSU) communication requires minimal latency so that vehicles can immediately process messages. Any delays that would be introduced through traditional internet security protocols, which are often optimized for less time-sensitive applications, could lead to safety hazards. ITS-specific mechanisms, such as IEEE Std. 1609.2 certificates, are designed to prioritize low-latency communication while maintaining security, making them better suited to the unique considerations associated with ITS real-time operations.
+     <br>
+      ITS involve real-time interactions that directly affect safety. For example, vehicle-to-RSU messaging requires minimal latency so that vehicles can immediately process messages. Any delays that would be introduced through the use of traditional internet security protocols, which are often optimized for less time-sensitive applications, could lead to safety hazards. ITS-specific mechanisms, such as IEEE Std. 1609.2 certificates, are designed to prioritize low-latency communication while maintaining security, making them better suited to the unique considerations associated with ITS real-time operations.
     </td>
   </tr>
 </table>
+
 
 ## 2. Mobility Requirements
 
 <table>
   <tr>
     <td style="width: 170px; vertical-align: middle; text-align: center;">
-      <img src="/cybersecurity/images/icon_mobile.jpg" alt="Mobility Icon" height="150">
+      <img src="images/icon_mobile.jpg" alt="Mobility Icon" height="150">
     </td>
     <td>
-      **Mobility Requirements**<br>
-      Unlike stationary internet systems, transportation systems operate in highly dynamic environments where devices (e.g., vehicles, pedestrians, RSUs) continuously join and leave networks. IEEE Std. 1609.2 certificates are optimized for use in these dynamic environments, with support for example for short duration lifetimes. Traditional X.509 systems are less equipped to handle frequent certificate updates and revocations required for mobile, decentralized networks.
+  <br>
+      An ITS is a dynamic environment where devices (e.g., vehicles, pedestrians, RSUs) continuously join and leave networks. IEEE Std. 1609.2 certificates are optimized for use in these dynamic environments, with support for example for short duration lifetimes. Traditional X.509 systems are less equipped to handle frequent certificate updates and revocations required for mobile, decentralized networks.
     </td>
   </tr>
 </table>
+
 
 ## 3. Anonymity Requirements
 
 <table>
   <tr>
     <td style="width: 170px; vertical-align: middle; text-align: center;">
-      <img src="/cybersecurity/images/icon_privacy.jpg" alt="Privacy Icon" height="150">
+      <img src="images/icon_privacy.jpg" alt="Privacy Icon" height="150">
     </td>
     <td>
-      **Anonymity Requirements**<br>
-  PKI systems such as the Cooperative Intelligent Transportation Systems Credential Management System (CCMS) and Security Credential Management System (SCMS) issue pseudonym certificates to vehicle OBUs, enabling trusted communication while preserving subscriber anonymity. X.509 certificates have no mechanism for preserving subscriber anonymity.
+      <br>
+  Credential management systems such as the CCMS or SCMS issue pseudonym certificates to vehicle On Board Units (OBUs), enabling trusted communication while preserving subscriber anonymity. X.509 certificates have no mechanism for preserving subscriber anonymity.
     </td>
   </tr>
 </table>
+
 
 ## 4. Multi-Entity Trust Management
 
 <table>
   <tr>
     <td style="width: 170px; vertical-align: middle; text-align: center;">
-      <img src="/cybersecurity/images/icon_multijurisdictional.jpg" alt="Multi Jurisdictional Icon" height="150">
+      <img src="images/icon_multijurisdictional.jpg" alt="Multi Jurisdictional Icon" height="150">
     </td>
     <td>
-      **Multi-Entity Trust Management**<br>
-ITS environments involve a wide range of stakeholders, including vehicles from multiple Original Equipment Manufacturers (OEMs), infrastructure owned by various jurisdictions, and multiple communication providers. Establishing trust across these entities requires specialized structures, such as the Certificate Trust List (CTL) in North America or the European Certificate Trust List (ECTL). These mechanisms enable the extension of trust to differing policy domains and support the dynamic operation of vehicles with infrastructures owned and managed by differing entities. Generic systems like X.509 lack these built-in cross-trust mechanisms and require substantial planning and processes for trust extension, making them less suited for managing complex ITS trust requirements.
+     <br>
+ITS environments involve a wide range of stakeholders, including vehicles from multiple Original Equipment Manufacturers (OEMs), infrastructure owned by various jurisdictions, and multiple communication providers. Establishing trust across these entities requires specialized structures, such as the Certificate Trust List (CTL) in North America or the European Certificate Trust List (ECTL). These mechanisms enable the extension of trust to differing policy domains and support the dynamic operation of vehicles with infrastructures owned and managed by differing entities. X.509 lacks these built-in cross-trust mechanisms and require substantial planning and processes for trust extension, making them less suited for managing complex ITS trust requirements.
     </td>
   </tr>
 </table>
+
 
 ## 5. Embedded Permissions within Certificates
 
 <table>
   <tr>
     <td style="width: 170px; vertical-align: middle; text-align: center;">
-      <img src="/cybersecurity/images/icon_appsandroles.jpg" alt="Applications and Roles Icon" height="150">
+      <img src="images/icon_appsandroles.jpg" alt="Applications and Roles Icon" height="150">
     </td>
     <td>
-      **Embedded Permissions within Certificates**<br>
-Traditional network security controls who can join a system and provides fine-grained access through user accounts and roles. In ITS, however, devices often share the same network infrastructure, so connecting alone does not grant any special rights. Instead, each device must present a cryptographic certificate that embeds explicit permissions, defining exactly which applications and roles it is allowed to use. For example, IEEE Std. 1609.2 certificates contain Intelligent Transport System Application Identifiers (ITS-AID), Provider Service Identifiers (PSID), and Service Specific Permissions (SSP) that control which messages a participant may send and what actions it may request. This ensures that only properly authorized vehicles can request signal priority or transmit safety-critical data, even on a shared network.</td>
+     <br>
+Traditional network security approaches control who can join a system and provides fine-grained access through user accounts and roles. In ITS, however, devices often share the same network infrastructure, so connecting alone does not grant any special rights. Instead, each device must present a certificate that embeds explicit permissions, defining exactly which applications and roles it is allowed to use. For example, IEEE Std. 1609.2 certificates contain Intelligent Transport System Application Identifiers (ITS-AID), Provider Service Identifiers (PSID), and Service Specific Permissions (SSP) that control which messages a participant may send and what actions it may request. This ensures that only properly authorized vehicles can request signal priority or transmit safety-critical data, even on a shared network.</td>
     </tr>
 </table>
+
 
 ## 6. Continuous Adaptation to Evolving Threats in Dynamic Environment
 
 <table>
   <tr>
     <td style="width: 170px; vertical-align: middle; text-align: center;">
-      <img src="/cybersecurity/images/icon_safety_critical.jpg" alt="Safety Critical Icon" height="150">
+      <img src="images/icon_safety_critical.jpg" alt="Safety Critical Icon" height="150">
     </td>
     <td>
-        **Dynamic Threats in Highly Mobile Environment**<br>
+        <br>
         ITS cybersecurity requires a continuous risk assessment process that adapts to the evolving technologies and attacker capabilities within this large-scale, dynamic, and safety-critical domain. The vast scale increases the attack surface (millions of vehicles/devices) and means that a widespread attack could have massive impact. Managing trust and detecting anomalies across so many entities is challenging especially given the dynamic environment where network topologies change rapidly and communication is characterized by intermittent connectivity and high mobility. This make establishment of persistent trust relationships and the identification of malicious nodes more difficult.</td>
     </tr>
 </table>
+
 
 ## 7. Velocity of Change
 
 <table>
   <tr>
     <td style="width: 170px; vertical-align: middle; text-align: center;">
-      <img src="/cybersecurity/images/icon_massive_scale.jpg" alt="Scale Icon" height="150">
+      <img src="images/icon_massive_scale.jpg" alt="Scale Icon" height="150">
     </td>
     <td>
-      **Pseudonymity at Scale**<br>
+     <br>
 The scalability and certificate management challenge in V2X ITS comes from the extremely high frequency of change and sheer volume of short-lived pseudonym certificates required for privacy.  The velocity of change in V2X pseudonymity (e.g., a vehicle might use dozens of certificates per week or even per day of driving) creates unique operational loads on the SCMS for issuance, and on vehicles for storage and selection. In addition, ITS devices are expected to encounter previously unknown ITS devices regularly, requiring that ITS certificates be shared regularly.
     </td>
   </tr>
 </table>
 
+
 ## ITS Cybersecurity Building Blocks
 
-Now that we've established what makes ITS cybersecurity unique, it's useful to introduce the key mechanisms that have been developed to meet those needs. These mechanisms include secure certificate formats tailored for mobile use, frameworks for distributing and managing credentials across millions of devices, and systems for detecting and responding to misbehaviour in the network. While specific implementations vary by region—for example, between North America’s SCMS and Europe’s CCMS—the core building blocks share common goals and are aligned with international standards.
+There are many mechanisms that can be used to design a trusted and secure ITS. These mechanisms include fundamental standards such as IEEE Std. 1609.2, as well as frameworks for managing and distributing those certificates across ITS devices at scale. Misbehavior detection and response capabilities are also available.  Specific details and configurations may vary by region, for example in North America the framework for managing IEEE Std. 1609.2 certificates is the Security Credential Management System (SCMS) while in Europe it is the Cooperative Credential Management System (CCMS). The core building blocks (or patterns) for enabling a secure and trusted ITS however, share common goals and are aligned with international standards.
 
 The following section provides a high-level overview of these mechanisms, written for non-experts. More technical readers are encouraged to explore the [ITS Cybersecurity Mechanisms and Building Blocks](its-security-patterns.md) section for deeper background.
 
 ### Credential Management Systems
 
-A Credential Management System (SCMS or CCMS) is a specialized type of public key infrastructure (PKI) designed for ITS. It provides the foundation of trust for communications between vehicles, infrastructure, and backend systems. Unlike traditional PKI systems that issue long-term identity certificates, SCMS and CCMS issue short-lived pseudonym certificates that protect user privacy while still enabling strong authentication and authorization. The diagram below introduces the core components of a credential management system used to enable trusted communication in ITS, based on an SCMS architecture.
+A Credential Management System (SCMS or CCMS) is a specialized type of public key infrastructure (PKI) designed for ITS. It provides the foundation of trust for communications between vehicles, infrastructure, and backend systems.  An ITS credential management system issue and manages short duration pseudonym certificates that are designed to rotate, thereby preserving vehicle anonymity, while still providing authentication and authorization services. The diagram below introduces the core components of an ITS credential management system, based on an SCMS architecture.
 
 ![Public Key Infrastructure](images/pki.jpg)
 
-The credential management system shown here includes key roles that work together to provide trusted V2X communication. Electors approve or revoke Root Certificate Authorities (CAs) and maintain the Certificate Trust List (CTL). The PKI Manager oversees policy enforcement and trust anchor updates. The Root CA is a top-level trust anchor, while Subordinate CAs handle certificate issuance for specific purposes or regions. Registration Authorities (RAs) process enrolment requests from end entities like OBUs and RSUs. The Distribution Center (DC) provides an API for devices to download current trust lists and revocation lists. The Misbehaviour Authority (MA) collects reports about suspected misbehaviour and coordinates with the PKI Manager to revoke trust when necessary. This structure ensures vehicles and infrastructure can authenticate each other’s messages while preserving privacy through short-lived certificates.
+The credential management system shown here includes key roles that work together to provide trusted V2X communication. Electors approve or revoke Root Certificate Authorities (CAs) and maintain the Certificate Trust List (CTL). The PKI Manager oversees policy enforcement and trust anchor updates. The Root CA is a top-level trust anchor, while Subordinate CAs handle certificate issuance for specific purposes or regions. Registration Authorities (RAs) process enrolment requests from end entities like OBUs and RSUs. The Distribution Center (DC) provides an API for devices to download current trust lists and revocation lists. The Misbehavior Authority (MA) collects reports about suspected misbehavior and coordinates with the PKI Manager to revoke trust when necessary. This structure ensures vehicles and infrastructure can authenticate each other’s messages while preserving privacy through short-lived certificates.
 
 ### ITS Certificate Standards
 
@@ -164,9 +173,9 @@ For example, a certificate may include an entitlement that authorizes a vehicle 
 
 By supporting fine-grained entitlements, ITS certificates enable strong access control mechanisms that align with specific use cases, user roles, or organizational policies.
 
-### Misbehaviour Detection
+### Misbehavior Detection
 
-Even in a well-secured system, trusted devices can malfunction or behave maliciously. In ITS, where safety depends on the accuracy and integrity of real-time data, it is important to continuously evaluate whether participants are acting in accordance with expected behaviours. Misbehaviour detection systems are designed to identify faulty or deceptive behaviour; for example  inconsistent vehicle position updates, spoofed GPS signals, or invalid safety alerts, and initiate a response that preserves trust in the network. These systems operate at both the edge and the backend. Local detection capabilities onboard vehicles or infrastructure can flag suspicious messages, while backend authorities analyze reported incidents, corroborate evidence, and determine whether a device's credentials should be suspended or revoked. The figure below illustrates a simplified view of how misbehaviour is detected, validated, and responded to in a credential-based ITS environment.
+Even in a well-secured system, trusted devices can malfunction or behave maliciously. In ITS, where safety depends on the accuracy and integrity of real-time data, it is important to continuously evaluate whether participants are acting in accordance with expected behaviors. Misbehaviour detection systems are designed to identify faulty or deceptive behavior; for example  inconsistent vehicle position updates, spoofed GPS signals, or invalid safety alerts, and initiate a response that preserves trust in the network. These systems operate at both the edge and the backend. Local detection capabilities onboard vehicles or infrastructure can flag suspicious messages, while backend authorities analyze reported incidents, corroborate evidence, and determine whether a device's credentials should be suspended or revoked. The figure below illustrates a simplified view of how misbehaviour is detected, validated, and responded to in a credential-based ITS environment.
 
 ![MisbehaviourLifecycle](images/MisbehaviorLifecycle.jpg)
 
