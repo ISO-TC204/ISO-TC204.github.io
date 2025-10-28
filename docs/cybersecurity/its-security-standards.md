@@ -51,7 +51,7 @@ The CSF is often paired with [NIST SP 800-53](https://csrc.nist.gov/pubs/sp/800/
 
 ### ISO/IEC 27001
 
-[ISO/IEC 27001](ISO/IEC 27001 ) is an international standard for establishing an Information Security Management System (ISMS). It requires organizations to identify risks, implement controls, and continuously improve security posture through audits and reviews.  For IOOs, compliance with ISO/IEC 27001 provides assurance to regulators and partners that the organization is managing security in line with global best practices. Like the NIST CSF, it does not address ITS-specific requirements but it provides a foundation for mapping of ITS security standards to specific cybersecurity features and functions. Certification to ISO/IEC 27001 demonstrates that an organization has implemented structured governance over information security, including:
+[ISO/IEC 27001](https://www.iso.org/obp/ui/en/#iso:std:iso-iec:27001) is an international standard for establishing an Information Security Management System (ISMS). It requires organizations to identify risks, implement controls, and continuously improve security posture through audits and reviews.  For IOOs, compliance with ISO/IEC 27001 provides assurance to regulators and partners that the organization is managing security in line with global best practices. Like the NIST CSF, it does not address ITS-specific requirements but it provides a foundation for mapping of ITS security standards to specific cybersecurity features and functions. Certification to ISO/IEC 27001 demonstrates that an organization has implemented structured governance over information security, including:
 
 - Access control
 - Supplier and third-party management
@@ -60,7 +60,7 @@ The CSF is often paired with [NIST SP 800-53](https://csrc.nist.gov/pubs/sp/800/
 
 ### ISO/SAE 21434
 
-[ISO/SAE 21434](ISO/SAE 21434) establishes detailed engineering practices for automotive and ITS cybersecurity by defining lifecycle processes that begin with threat analysis and risk assessment and extend through secure design, development, and supplier coordination. The standard also emphasizes the importance of validation, post-production monitoring, and incident response, ensuring that security is treated as an ongoing responsibility rather than a one-time exercise. It is recognized globally as the engineering benchmark for demonstrating compliance with UNECE R155, providing manufacturers with a structured method to show that cybersecurity has been embedded into every stage of the vehicle and ITS product lifecycle.
+[ISO/SAE 21434](https://www.iso.org/obp/ui/en/#iso:std:iso-sae:21434) establishes detailed engineering practices for automotive and ITS cybersecurity by defining lifecycle processes that begin with threat analysis and risk assessment and extend through secure design, development, and supplier coordination. The standard also emphasizes the importance of validation, post-production monitoring, and incident response, ensuring that security is treated as an ongoing responsibility rather than a one-time exercise. It is recognized globally as the engineering benchmark for demonstrating compliance with UNECE R155, providing manufacturers with a structured method to show that cybersecurity has been embedded into every stage of the vehicle and ITS product lifecycle.
 
 ## National and Local Policies
 

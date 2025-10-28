@@ -8,40 +8,40 @@ The following sortable table lists the WGs and topic areas included within ISO T
 
 |Group            | Topic                          |
 |-----------------|--------------------------------|
-|[WG 14](/wg14)   | Active safety systems          |
-|[WG 1](/wg1)     | Architecture                   |
-|[WG 20](/wg20)   | Artificial intelligence        |
-|[WG 20](/wg20)   | Big data                       |
-|[JWG 1](/jwg1)   | City data model                |
-|[WG 7](/wg7)     | Commercial vehicles            |
-|[WG 16](/wg16)   | Communications                 |
-|[WG 18](/wg18)   | Cooperative systems            |
-|[AHG 2](/ahg2)   | Cybersecurity                  |
-|[WG 14](/wg14)   | Driving automation             |
-|[WG 5](/wg5)     | Electronic fee collection      |
-|[WG 19](/wg19)   | Electronic traffic regulations |
-|[WG 8](/wg8)     | Emergency management           |
-|[WG 5](/wg5)     | Fee collection                 |
-|[WG 7](/wg7)     | Fleet management               |
-|[WG 7](/wg7)     | Freight management             |
-|[JWG 11](/jwg11) | Geographic information systems |
-|[AG 2](/ag2)     | Identifier registry            |
-|[WG 9](/wg9)     | Integrated transport information, management and control|
-|[WG 3](/wg3)     | ITS geographic data            |
-|[AG 5](/ag5)     | Marketing review               |
-|[WG 19](/wg19)   | Mobility integration           |
-|[WG 17](/wg17)   | Nomadic devices                |
-|[WG 1](/wg1)     | Ontology                       |
-|[AG 3](/ag3)     | Operational improvement        |
-|[WG 19](/wg19)   | Parking                        |
-|[AG 4](/ag4)     | Program coordination           |
-|[WG 19](/wg19)   | Public area mobile robots      |
-|[WG 8](/wg8)     | Public transport               |
-|[JWG 1](/jwg1)   | Smart Cities                   |
-|[WG 5](/wg5)     | Toll collection                |
-|[WG 9](/wg9)     | Traffic management systems     |
-|[WG 10](/wg10)   | Traveller information systems  |
-|[WG 1](/wg1)     | Vocabulary                     |
+|[WG 14](wg14/index.md)   | Active safety systems          |
+|[WG 1](wg1/index.md)     | Architecture                   |
+|[WG 20](wg20/index.md)   | Artificial intelligence        |
+|[WG 20](wg20/index.md)   | Big data                       |
+|[JWG 1](jwg1/index.md)   | City data model                |
+|[WG 7](wg7/index.md)     | Commercial vehicles            |
+|[WG 16](wg16/index.md)   | Communications                 |
+|[WG 18](wg18/index.md)   | Cooperative systems            |
+|[AHG 2](ahg2/index.md)   | Cybersecurity                  |
+|[WG 14](wg14/index.md)   | Driving automation             |
+|[WG 5](wg5/index.md)     | Electronic fee collection      |
+|[WG 19](wg19/index.md)   | Electronic traffic regulations |
+|[WG 8](wg8/index.md)     | Emergency management           |
+|[WG 5](wg5/index.md)     | Fee collection                 |
+|[WG 7](wg7/index.md)     | Fleet management               |
+|[WG 7](wg7/index.md)     | Freight management             |
+|[JWG 11](tc211jwg11/index.md) | Geographic information systems |
+|[AG 2](ag2/index.md)     | Identifier registry            |
+|[WG 9](wg9/index.md)     | Integrated transport information, management and control|
+|[WG 3](wg3/index.md)     | ITS geographic data            |
+|[AG 5](ag5/index.md)     | Marketing review               |
+|[WG 19](wg19/index.md)   | Mobility integration           |
+|[WG 17](wg17/index.md)   | Nomadic devices                |
+|[WG 1](wg1/index.md)     | Ontology                       |
+|[AG 3](ag3/index.md)     | Operational improvement        |
+|[WG 19](wg19/index.md)   | Parking                        |
+|[AG 4](ag4/index.md)     | Program coordination           |
+|[WG 19](wg19/index.md)   | Public area mobile robots      |
+|[WG 8](wg8/index.md)     | Public transport               |
+|[JWG 1](jwg1/index.md)   | Smart Cities                   |
+|[WG 5](wg5/index.md)     | Toll collection                |
+|[WG 9](wg9/index.md)     | Traffic management systems     |
+|[WG 10](wg10/index.md)   | Traveller information systems  |
+|[WG 1](wg1/index.md)     | Vocabulary                     |
 
 ## Domains of Interest
 
