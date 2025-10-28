@@ -10,7 +10,7 @@
 -->
 
 <!-- === DESCRIPTIONS OF WG STANDARDS / DOCUMENTS ===
-    The content below is distilled from the respective WG section in "JSAE ITS Standardization Activities of ISO/TC204 - 2024" and iso.org/obp and is intended as an initial example only for future editing by the repsective WG.
+    The content below is distilled from the respective WG section in "JSAE ITS Standardization Activities of ISO/TC204 - 2024" and iso.org/obp and is intended as an initial example only for future editing by the respective WG.
 -->
 
 ## Standard / document subject area
@@ -22,48 +22,46 @@
 <!-- On a new line below, provide an overview of the subject area for the associated group of standards. -->
 
 <!-- Start web info for standard / document -->
-??? note "[ISO/AWI TS 23708](doc URL from iso.org/obp) _Intelligent transport systems — Bounded secured managed entity
-requirements (BSMER) (Station unit requirements)_"
-<!-- edit document reference information
-  retain: ??? note "[ : ]( ) _ _"
-  find publicly available ISO document URL & info here: iso.org/obp/ui
--->
+??? note "[ISO/AWI TS 23708](https://www.iso.org/standard/87558.html) _Intelligent transport systems — Station unit requirements (ITS-SUR)"
+    <!-- edit document reference information
+      retain: ??? note "[ : ]( ) _ _"
+      find publicly available ISO document URL & info here: iso.org/obp/ui
+    -->
 
-**Status:** Edition 1 **(under development)**{style="color: red;"}
-<!-- Copy relevant status line from the following list: 
-  Edition 1 **(under development)**{style="color: red;"}
-  Approved
-  Approved **(under revision)**{style="color: red;"} 
--->
+    **Status:** Edition 1 **(under development)**{style="color: red;"}
+    <!-- Copy relevant status line from the following list: 
+      Edition 1 **(under development)**{style="color: red;"}
+      Approved
+      Approved **(under revision)**{style="color: red;"} 
+    -->
+    
+    **Abstract:** This document defines requirements for ITS station units.
+    
+    ### Description
+    
+    This document defines requirements for ITS station units. The current edition focuses on the cybersecurity requirements within each bounded security managed entity (BSME) within the ITS-SU and includes other related requirements as needed.  
+    
+    A BSME includes an instantiation of an ITS station (ITS-S), which includes a subnetwork layer, a networking and transport layer, a facilities layer, a management entity, a security entity, and optionally an ITS applications entity per the ITS station reference architecture (ISO 21217) and represents an ITS-S node (ISO 21217:2020, §3.47).
+    
+    ### Relationships to other standards
+    <!-- Relationships to other standards
+      e.g., list Normative references and comm stack references
+      *** PLEASE *** retain the link to "TC204 Foundational Standards" as the first relationship in the list below 
+    -->
+    
+    - [TC204 Foundation Standards](../foundational.md)
+    
+    #### Normative References
+    
+    - [ISO 21217:2020](https://www.iso.org/obp/ui#iso:std:iso:21217:ed-3:v1:en) _Intelligent transport systems — Station and communication architecture_
+    - [ISO/TS 14812:2025](https://www.iso.org/obp/ui#iso:std:iso:ts:14812:ed-2:v1:en) _Intelligent transport systems — Vocabulary_
 
-**Abstract:** This document defines requirements for ITS station units.
-
-### Description
-
-An instantiation of a bounded security managed domain (BSMD) (ISO/TS 14812:2025, §3.2.7.1)
-
-A BSME that includes an instantiation of the subnetwork layer, the networking and transport layer, the
-management entity, and the security entity of the ITS station reference architecture is called an ITS-S node
-(ISO 21217:2020, §3.47)
-
-### Relationships to other standards
-<!-- Relationships to other standards
-  e.g., list Normative references and comm stack references
-  *** PLEASE *** retain the link to "TC204 Foundational Standards" as the first relationship in the list below 
--->
-
-- [TC204 Foundation Standards](../foundational.md)
-- [ISO 21217:2020](https://www.iso.org/obp/ui#iso:std:iso:21217:ed-3:v1:en) _Intelligent transport systems — Station and communication architecture_
-- [ISO/TS 14812:2025](https://www.iso.org/obp/ui#iso:std:iso:ts:14812:ed-2:v1:en) _Intelligent transport systems — Vocabulary_
-
-#### Normative References
-
-<!-- End Standard -->
+    <!-- End Standard -->
 
 <!-- End subject area -->
 
 ## External References
 
-The European Union- ITS Communications & Information Protocols ([EU-ICIP](https://www.mobilityits.eu)) is a signficant resource of ITS standards, and its [ITS Communications page](https://www.mobilityits.eu/its-communictions-2) is of particular relevance to this WG's work.
+The European Union- ITS Communications & Information Protocols ([EU-ICIP](https://www.mobilityits.eu)) is a significant resource of ITS standards, and its [ITS Communications page](https://www.mobilityits.eu/its-communictions-2) is of particular relevance to this WG's work.
 
 [How to get involved](../contact.md)

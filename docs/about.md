@@ -67,7 +67,7 @@ Our document titles may seem a little daunting, however they typically use the m
 |:------------------:|:-----:|:-----------------------------------------------------|
 |Publishing SDO(s)   |ISO    |The Standards Development Organisation(s) that will publish the deliverable      |
 |Deliverable Type    |TS     |The [type of deliverable](http://www.iso.org/iso/home/standards_development/deliverables-all.htm) |
-|Number[-Part]       |14813-1|Unique identifier of the deliverable, which can include an optional *Part* number to indicate they are focussed components detailing a specific aspect. This can also facilitate progressive development and publishing and use of a suite of documents over time. |
+|Number[-Part]       |14813-1|Unique identifier of the deliverable, which can include an optional _Part_ number to indicate they are focussed components detailing a specific aspect. This can also facilitate progressive development and publishing and use of a suite of documents over time. |
 |Year of Publication |2015   |Year that the deliverable is formally published and released for use             |
 |language            |en     |Used to distinguish between English and French editions of a document            |
 |Title 1  |Intelligent transport systems |Used for most TC204 deliverables                                     |
