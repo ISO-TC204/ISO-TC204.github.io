@@ -1,0 +1,221 @@
+Folder PATH listing for volume Data
+Volume serial number is 2E5F-9306
+D:.
+¦   .gitignore
+¦   .markdownlint.json
+¦   CODE_OF_CONDUCT.md
+¦   CONTRIBUTING.md
+¦   LICENSE.md
+¦   markdownlint-custom.js
+¦   mkdocs.yml
+¦   process_glossary.py
+¦   readme.md
+¦   SECURITY.md
+¦   tree.txt
+¦   tree_files.txt
+¦   
++---.github
+¦   ¦   CODEOWNERS
+¦   ¦   PULL_REQUEST_TEMPLATE.md
+¦   ¦   
+¦   +---ISSUE_TEMPLATE
+¦   ¦       documentation_bug.yml
+¦   ¦       documentation_enhancement.yml
+¦   ¦       
+¦   +---workflows
+¦           update_release.yml
+¦           
++---.vscode
+¦       settings.json
+¦       
++---assets
+¦   +---css
+¦   ¦       style.scss
+¦   ¦       
+¦   +---img
+¦           connected.jpg
+¦           
++---docs
+¦   ¦   about.md
+¦   ¦   acknowledgements.md
+¦   ¦   contact.md
+¦   ¦   contributor.md
+¦   ¦   faq.md
+¦   ¦   foundational.md
+¦   ¦   index.md
+¦   ¦   intro.md
+¦   ¦   news.md
+¦   ¦   planning.md
+¦   ¦   registries.md
+¦   ¦   resources.md
+¦   ¦   standards.md
+¦   ¦   vocab.md
+¦   ¦   work.md
+¦   ¦   
+¦   +---ag2
+¦   ¦       index.md
+¦   ¦       
+¦   +---ag3
+¦   ¦       index.md
+¦   ¦       
+¦   +---ag4
+¦   ¦       index.md
+¦   ¦       jwg1doi.html
+¦   ¦       scope.html
+¦   ¦       wg10doi.html
+¦   ¦       wg14doi.html
+¦   ¦       wg16doi.html
+¦   ¦       wg17doi.html
+¦   ¦       wg18doi.html
+¦   ¦       wg19doi.html
+¦   ¦       wg1doi.html
+¦   ¦       wg20doi.html
+¦   ¦       wg3doi.html
+¦   ¦       wg5doi.html
+¦   ¦       wg7doi.html
+¦   ¦       wg8doi.html
+¦   ¦       wg9doi.html
+¦   ¦       
+¦   +---ag5
+¦   ¦       index.md
+¦   ¦       
+¦   +---ahg2
+¦   ¦       index.md
+¦   ¦       
+¦   +---assets
+¦   ¦   +---img
+¦   ¦   ¦       2okA336NomOUStR7-generated_image.jpg
+¦   ¦   ¦       banner.jpg
+¦   ¦   ¦       banner2.jpg
+¦   ¦   ¦       banner3.jpg
+¦   ¦   ¦       connected.jpg
+¦   ¦   ¦       draft_for_review.svg
+¦   ¦   ¦       liaisons.png
+¦   ¦   ¦       TC204Structure.png
+¦   ¦   ¦       wg5benefits.png
+¦   ¦   ¦       wg5pics.png
+¦   ¦   ¦       
+¦   ¦   +---pdf
+¦   ¦   ¦       business-plan-2008-04-06.pdf
+¦   ¦   ¦       
+¦   ¦   +---stylesheets
+¦   ¦           extra.css
+¦   ¦           
+¦   +---contributor
+¦   ¦       convenor.md
+¦   ¦       editor.md
+¦   ¦       
+¦   +---cybersecurity
+¦   ¦   ¦   .project
+¦   ¦   ¦   beginners-guide.md
+¦   ¦   ¦   cybersecurity-glossary.md
+¦   ¦   ¦   index.md
+¦   ¦   ¦   its-interoperability-strategies.md
+¦   ¦   ¦   its-misuse-cases.md
+¦   ¦   ¦   its-security-patterns.md
+¦   ¦   ¦   its-security-standards.md
+¦   ¦   ¦   its-stakeholder-guidance.md
+¦   ¦   ¦   patterns-application.md
+¦   ¦   ¦   patterns-deployment.md
+¦   ¦   ¦   patterns-developer.md
+¦   ¦   ¦   patterns-edge.md
+¦   ¦   ¦   patterns-management.md
+¦   ¦   ¦   patterns-network.md
+¦   ¦   ¦   policies-ccms.md
+¦   ¦   ¦   policies-cp.md
+¦   ¦   ¦   policies-device.md
+¦   ¦   ¦   policies-scms.md
+¦   ¦   ¦   stakeholder-appdev.md
+¦   ¦   ¦   stakeholder-certmgmt.md
+¦   ¦   ¦   stakeholder-ioo.md
+¦   ¦   ¦   stakeholder-oem.md
+¦   ¦   ¦   stakeholder-policy-maker.md
+¦   ¦   ¦   stakeholder-standards-developer.md
+¦   ¦   ¦   threat-analysis.md
+¦   ¦   ¦   
+¦   ¦   +---images
+¦   ¦           1609.2AppPermissions.jpg
+¦   ¦           1609.2Format.jpg
+¦   ¦           appPermissionMessaging.jpg
+¦   ¦           architecture_layers.jpg
+¦   ¦           CIA.png
+¦   ¦           cp-categories.png
+¦   ¦           cryptoKeys.jpg
+¦   ¦           icon_appsandroles.jpg
+¦   ¦           icon_low_latency.jpg
+¦   ¦           icon_massive_scale.jpg
+¦   ¦           icon_mobile.jpg
+¦   ¦           icon_multijurisdictional.jpg
+¦   ¦           icon_privacy.jpg
+¦   ¦           icon_safety_critical.jpg
+¦   ¦           Interop1.jpg
+¦   ¦           ITS-Station-Access-Control.png
+¦   ¦           its_generic.jpg
+¦   ¦           its_threats.jpg
+¦   ¦           Local-Misbehavior-Detection.png
+¦   ¦           MisbehaviorLifecycle.jpg
+¦   ¦           nist_functions.jpg
+¦   ¦           pki.jpg
+¦   ¦           pkiPolicies.jpg
+¦   ¦           PKI_Functions.jpg
+¦   ¦           Session-Security.png
+¦   ¦           site_map.jpg
+¦   ¦           standards-and-policies.jpg
+¦   ¦           Transport-Security.png
+¦   ¦           trustChain.jpg
+¦   ¦           vehicle_v2x.jpg
+¦   ¦           
+¦   +---javascripts
+¦   ¦       tablesort.js
+¦   ¦       
+¦   +---jwg1
+¦   ¦       index.md
+¦   ¦       
+¦   +---stylesheets
+¦   ¦       extra.css
+¦   ¦       
+¦   +---wg1
+¦   ¦       index.md
+¦   ¦       
+¦   +---wg10
+¦   ¦       index.md
+¦   ¦       
+¦   +---wg14
+¦   ¦       index.md
+¦   ¦       
+¦   +---wg16
+¦   ¦       index.md
+¦   ¦       
+¦   +---wg17
+¦   ¦       index.md
+¦   ¦       
+¦   +---wg18
+¦   ¦       index.md
+¦   ¦       
+¦   +---wg19
+¦   ¦       index.md
+¦   ¦       
+¦   +---wg20
+¦   ¦       index.md
+¦   ¦       
+¦   +---wg3
+¦   ¦       index.md
+¦   ¦       
+¦   +---wg5
+¦   ¦       index.md
+¦   ¦       
+¦   +---wg7
+¦   ¦       index.md
+¦   ¦       
+¦   +---wg8
+¦   ¦       index.md
+¦   ¦       
+¦   +---wg9
+¦           index.md
+¦           
++---overrides
+¦       main.html
+¦       
++---resources
+        glossary.md
+        
