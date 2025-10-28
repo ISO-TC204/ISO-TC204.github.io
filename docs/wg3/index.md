@@ -7,7 +7,6 @@
 
 {% include "ag4/wg3doi.html" %}
 
-## News and highlights
 <!-- News and highlights (optional)
 	Refer docs\wg1\index.md for an example of how to include & format any desired WG news & highlights content. Add content AFTER inserting a new line below this comment. 
 -->

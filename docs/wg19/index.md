@@ -5,7 +5,6 @@
 
 {% include "ag4/wg19doi.html" %}
 
-## News and highlights
 <!-- ## News and highlights (optional)
     Refer docs\wg1\index.md for an example of how to include & format any desired WG news & highlights content. Add content AFTER inserting a new line below this comment. 
 -->
@@ -41,7 +40,7 @@ The ISO 24315 series on the management of electronic traffic regulations (METR) 
 
 This document defines terms specific to the ISO 24315 series on the management of electronic transport regulations.
 
-### Description
+METR is designed to assist developers and manufacturers of driving automation systems (i.e., automation Levels 1-5) and driver information systems (including those at automation Level 0) to electronically obtain traffic rules to better enable:
 
 The scope of METR includes both rules that are relatively static (e.g. static speed limits) as well as those that are dynamic (e.g. variable speed limits, signalized intersections). Where appropriate, METR incorporates existing documents (e.g. ISO/TS 19091 for signalized intersections).
 

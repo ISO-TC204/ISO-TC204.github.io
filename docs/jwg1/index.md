@@ -4,23 +4,8 @@
 
 {% include "ag4/jwg1doi.html" %}
 
-## News and highlights (optional) 
+## City Data Model - Transport
 
-## [Standard subject area]
-
-### Overview
-
-**Document:** [ISO Document number and status](index.md)
-**Title:** Intelligent transport systems — 
-**Status:** 
-**Abstract:** 
-
-### Description
-
-Other meta-data that puts standard in context
-
-### Relationships to other standards
-
-e.g., Normative references and comm stack references
+JWG1 is a joint working group between ISO TC 204 and JTC1 for the development of service-level concepts of the transport domain for the City Data Model, an ontology that defines key concepts used by smart cities.
 
 [How to get involved](../contact.md)
