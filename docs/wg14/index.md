@@ -31,7 +31,7 @@ The ISO 23792 series focuses on the system functionalities, under the assumption
     -->
 
     **Status:** Approved **(under revision)**{style="color: red;"}
-   <!-- Copy relevant status line from the following list: 
+    <!-- Copy relevant status line from the following list: 
       Edition 1 **(under development)**{style="color: red;"}
       Approved
       Approved **(under revision)**{style="color: red;"} 
@@ -57,20 +57,20 @@ The ISO 23792 series focuses on the system functionalities, under the assumption
     - ISO/SAE PAS 22736, Taxonomy and definitions for terms related to driving automation systems for on-road motor vehicles   
  
     **Relationships to other standards:**
-   <!-- Relationships to other standards
+    <!-- Relationships to other standards
       e.g., list Normative references and comm stack references
       *** PLEASE *** retain the link to "TC204 Foundational Standards" as the first relationship in the list below 
     -->
 
     - [TC204 Foundation Standards](../foundational.md)
 
-   <!-- End Standard -->
+    <!-- End Standard -->
 
 <!-- Start web info for standard / document -->
 ??? note "[ISO/DIS 23792-2](https://www.iso.org/obp/ui#iso:std:iso:ts:23792:-1:ed-1:v1:en) _Intelligent transport systems — Motorway chauffeur systems (MCS) — Part 2: Requirements and test procedures for discretionary lane change_"
 
     **Status:** Edition 1 **(under development)**{style="color: red;"}
-   <!-- Copy relevant status line from the following list: 
+    <!-- Copy relevant status line from the following list: 
       Edition 1 **(under development)**{style="color: red;"}
       Approved
       Approved **(under revision)**{style="color: red;"} 
@@ -83,17 +83,17 @@ The ISO 23792 series focuses on the system functionalities, under the assumption
     The DLC is an additional functionality that a MCS compliant to the general requirements specified in ISO 23792-1 can be equipped with. When conditions are satisfied, a DLC equipped MCS performs the entire DDT to change the current lane of travel even though it is still possible to continue operation within its current lane of travel. The system monitors the driving environment in the adjacent lanes and operates the SV by adjusting the speed and lateral position to move the SV to the intended lane. MCS may delay the manoeuvre until the conditions for initiating the lane change are satisfied or cancel the lane change when conditions are not satisfied. Activation of the DLC requires an engaged MCS performing in-lane driving. Means related to setting a destination and selecting a route to reach the destination are not in the scope of this document.
     
     This document applies to the system installed in light vehicles
-   <!-- End Standard -->
-
-   <!-- End subject area -->
+    <!-- End Standard -->
 
     **Relationships to other standards:**
-   <!-- Relationships to other standards
+    <!-- Relationships to other standards
       e.g., list Normative references and comm stack references
       *** PLEASE *** retain the link to "TC204 Foundational Standards" as the first relationship in the list below 
     -->
 
     - [TC204 Foundation Standards](../foundational.md)
+
+<!-- End subject area -->
 
 ## External References
 

@@ -27,7 +27,7 @@
     -->
 
     **Status:** Edition 1 **(under development)**{style="color: red;"}
-   <!-- Copy relevant status line from the following list: 
+    <!-- Copy relevant status line from the following list: 
       Edition 1 **(under development)**{style="color: red;"}
       Approved
       Approved **(under revision)**{style="color: red;"} 
@@ -36,20 +36,20 @@
     **Abstract:** Please check again soon
     
     **Description:**
-   <!-- Enter further information / meta-data that puts standard in context -->
+    <!-- Enter further information / meta-data that puts standard in context -->
     Please check again soon
 
-   <!--- **Normative References:** -->
+    <!--- **Normative References:** -->
 
     **Relationships to other standards:**
-   <!-- Relationships to other standards
+    <!-- Relationships to other standards
       e.g., list Normative references and comm stack references
       *** PLEASE *** retain the link to "TC204 Foundational Standards" as the first relationship in the list below 
     -->
 
     - [TC204 Foundation Standards](../foundational.md)
         
-   <!-- End Standard -->
+    <!-- End Standard -->
 <!-- End subject area -->
 
 <!-- Start subject area -->
@@ -65,7 +65,7 @@
 ??? note "[ISO/WD TS 22577](https://www.iso.org/standard/87220.html?browse=tc) _Intelligent transport systems — Nomadic and mobile devices — In-vehicle passenger monitoring and care services using deep learning technology_"
 
     **Status:** Edition 1 **(under development)**{style="color: red;"}
-  <!-- Copy relevant status line from the following list: 
+    <!-- Copy relevant status line from the following list: 
       Edition 1 **(under development)**{style="color: red;"}
       Approved
       Approved **(under revision)**{style="color: red;"} 
@@ -81,17 +81,17 @@
     
     This document defines the in-vehicle devices include nomadic device supported in-vehicle passengers monitoring and care services and specifies general information and use-cases for providing this service based on deep learning model. This system comprises a nomadic device, an in-vehicle autonomous device, a cloud-based server, and an emergency response center that leverages advanced deep-learning algorithms.
     
-   <!--- **Normative References:** -->
+    <!--- **Normative References:** -->
 
     **Relationships to other standards:**
-   <!-- Relationships to other standards
+    <!-- Relationships to other standards
       e.g., list Normative references and comm stack references
       *** PLEASE *** retain the link to "TC204 Foundational Standards" as the first relationship in the list below 
     -->
 
     - [TC204 Foundation Standards](../foundational.md)
 
-   <!-- End Standard -->
+    <!-- End Standard -->
 <!-- End subject area -->
 
 ## External References

@@ -85,7 +85,7 @@ GDF5.1 (the ISO 20524 series) is an evolution of GDF5.0 that introduces the conc
 
     - [TC204 Foundation Standards](../foundational.md)
 
-<!-- End Standard -->
+    <!-- End Standard -->
 <!-- End subject area -->
 
 ## Navigation Data Delivery and Structures and Protocols

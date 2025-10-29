@@ -30,7 +30,7 @@ The ISO 24315 series on the management of electronic traffic regulations (METR) 
     -->
 
     **Status:** Approved
-  <!-- Copy relevant status line from the following list: 
+    <!-- Copy relevant status line from the following list: 
       Edition 1 **(under development)**{style="color: red;"}
       Approved
       Approved **(under revision)**{style="color: red;"} 
@@ -49,7 +49,7 @@ The ISO 24315 series on the management of electronic traffic regulations (METR) 
     There are no normative references in this document.
 
     **Relationships to other standards:**
-   <!-- Relationships to other standards
+    <!-- Relationships to other standards
       e.g., list Normative references and comm stack references
       *** PLEASE *** retain the link to "TC204 Foundational Standards" as the first relationship in the list below 
     -->
@@ -59,13 +59,13 @@ The ISO 24315 series on the management of electronic traffic regulations (METR) 
     - [TC204 Foundation Standards](../foundational.md)
     - [ISO/IEC/IEEE 24765](https://www.iso.org/obp/ui#iso:std:iso-iec-ieee:24765:ed-2:v1:en) _Systems and software engineering — Vocabulary_
     
-   <!-- End Standard -->
+    <!-- End Standard -->
 
 <!-- Start web info for standard / document -->
 ??? note "[ISO/TS 24315-2:2025](https://www.iso.org/obp/ui#iso:std:iso:tr:24315:-2:ed-1:v1:en) _Intelligent transport systems — Management of electronic traffic regulations (METR) — Part 2: Operational concepts (ConOps)_"
 
     **Status:** Approved
-   <!-- Copy relevant status line from the following list: 
+    <!-- Copy relevant status line from the following list: 
       Edition 1 **(under development)**{style="color: red;"}
       Approved
       Approved **(under revision)**{style="color: red;"} 
@@ -88,7 +88,7 @@ The ISO 24315 series on the management of electronic traffic regulations (METR) 
     - [ISO/IEC/IEEE 24765](https://www.iso.org/obp/ui#iso:std:iso-iec-ieee:24765:ed-2:v1:en) _Systems and software engineering — Vocabulary_
 
     **Relationships to other standards:**
-   <!-- Relationships to other standards
+    <!-- Relationships to other standards
       e.g., list Normative references and comm stack references
       *** PLEASE *** retain the link to "TC204 Foundational Standards" as the first relationship in the list below 
     -->

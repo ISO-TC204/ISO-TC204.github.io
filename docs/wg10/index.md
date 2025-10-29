@@ -41,7 +41,7 @@ TPEG2 has been developed to be broadly (but not totally) backward compatible wit
     -->
 
     **Status:** Approved
-   <!-- Copy relevant status line from the following list: 
+    <!-- Copy relevant status line from the following list: 
       Edition 1 **(under development)**{style="color: red;"}
       Approved
       Approved **(under revision)**{style="color: red;"} 
@@ -60,20 +60,20 @@ TPEG2 has been developed to be broadly (but not totally) backward compatible wit
     There are no normative references in this document.
     
     **Relationships to other standards:**
-  <!-- Relationships to other standards
+    <!-- Relationships to other standards
       e.g., list Normative references and comm stack references
       *** PLEASE *** retain the link to "TC204 Foundational Standards" as the first relationship in the list below 
     -->
 
     - [TC204 Foundation Standards](../foundational.md)
     
-  <!-- End Standard -->
+    <!-- End Standard -->
 
 <!-- Start web info for standard / document -->
 ??? note "[ISO TS 21219-13:2025](https://www.iso.org/obp/ui#iso:std:iso:ts:21219:-13:ed-1:v1:en) _Intelligent transport systems — Traffic and travel information (TTI) via transport protocol experts group, generation 2 (TPEG2) — Part 13: Public transport information service (TPEG2-PTS)_"
 
     **Status:** Approved **(under review)**{style="color: red;"}
-  <!-- Copy relevant status line from the following list: 
+    <!-- Copy relevant status line from the following list: 
       Edition 1 **(under development)**{style="color: red;"}
       Approved
       Approved **(under revision)**{style="color: red;"} 
@@ -104,14 +104,14 @@ TPEG2 has been developed to be broadly (but not totally) backward compatible wit
     - ISO 21219-15, Intelligent transport systems — Traffic and travel information (TTI) via transport protocol experts group, generation 2 (TPEG2) — Part 15: Traffic event compact (TPEG2-TEC)   
  
     **Relationships to other standards:**
-  <!-- Relationships to other standards
+    <!-- Relationships to other standards
       e.g., list Normative references and comm stack references
       *** PLEASE *** retain the link to "TC204 Foundational Standards" as the first relationship in the list below 
     -->
 
     - [TC204 Foundation Standards](../foundational.md)
     
-  <!-- End Standard -->
+    <!-- End Standard -->
 
 <!-- End subject area -->
 
