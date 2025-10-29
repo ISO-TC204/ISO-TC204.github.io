@@ -9,7 +9,7 @@
 -->
 
 <!-- === DESCRIPTIONS OF WG STANDARDS / DOCUMENTS ===
-    The content below is distilled from the respective WG section in "JSAE ITS Standardization Activities of ISO/TC204 - 2024" and iso.org/obp and is intended as an initial example only for future editing by the repsective WG.
+    The content below is distilled from the respective WG section in "JSAE ITS Standardization Activities of ISO/TC204 - 2024" and iso.org/obp and is intended as an initial example only for future editing by the respective WG.
 -->
 
 ## Motorway chauffeur systems
@@ -97,7 +97,7 @@ The ISO 23792 series focuses on the system functionalities, under the assumption
 
 ## External References
 
-The European Union- ITS Communications & Information Protocols ([EU-ICIP](https://www.mobilityits.eu)) is a signficant resource of ITS standards, and its [Vehicle/Roadway Warning/Control page](https://www.mobilityits.eu/vehicle-roadway-warning-control) is of particular relevance to this WG's work.
+The European Union- ITS Communications & Information Protocols ([EU-ICIP](https://www.mobilityits.eu)) is a significant resource of ITS standards, and its [Vehicle/Roadway Warning/Control page](https://www.mobilityits.eu/vehicle-roadway-warning-control) is of particular relevance to this WG's work.
 
 - ISO/SAE PAS 22736, Taxonomy and definitions for terms related to driving automation systems for on-road motor vehicles
 - [International Organization of Motor Vehicle Manufacturers, Vehicle type definitions](https://oica.net/statistics-production/)
