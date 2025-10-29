@@ -30,14 +30,14 @@ The ISO 17739 standard series are related to improve the road safety among conne
     -->
 
     **Status:** Edition 1 **(under development - approval phase)**{style="color: red;"}
-   <!-- Copy relevant status line from the following list: 
+    <!-- Copy relevant status line from the following list: 
       Edition 1 **(under development)**{style="color: red;"}
       Approved
       Approved **(under revision)**{style="color: red;"} 
     -->
 
     **Abstract:** Check back soon
-   <!-- This document specifies general information and use-cases to provide the road safety enhancement services by sharing status and/or intent messages on nomadic devices between vulnerable road users (VRU) and vehicles including non-automated vehicle, automated vehicle and connected vehicle to be applicable in the specific urban localized area such as un-signalized intersection, T-intersection, roundabout, low speed zone, school zone, weaving area, and etc.
+    <!-- This document specifies general information and use-cases to provide the road safety enhancement services by sharing status and/or intent messages on nomadic devices between vulnerable road users (VRU) and vehicles including non-automated vehicle, automated vehicle and connected vehicle to be applicable in the specific urban localized area such as un-signalized intersection, T-intersection, roundabout, low speed zone, school zone, weaving area, and etc.
     
     **Description:**
     
@@ -45,17 +45,17 @@ The ISO 17739 standard series are related to improve the road safety among conne
     enhancement use cases focusing on VRUs with nomadic device on their hand as well as on-board unit on the urban connected automated mobility that provides connectivity with nomadic device. In addition, this document also delivers related standards required to provide the road safety support service to VRUs and vehicles including urban connected automated mobility, and non-automated mobility with intelligent transport systems (ITS) technologies.
     -->
 
-   <!-- **Normative References:** -->
+    <!-- **Normative References:** -->
 
     **Relationships to other standards:**
-   <!-- Relationships to other standards
+    <!-- Relationships to other standards
       e.g., list Normative references and comm stack references
       *** PLEASE *** retain the link to "TC204 Foundational Standards" as the first relationship in the list below 
     -->
 
     - [TC204 Foundation Standards](../foundational.md)
         
-   <!-- End Standard -->
+    <!-- End Standard -->
 
 <!-- Start web info for standard / document -->
 ??? note "[ISO/CD 17739-2](https://www.iso.org/standard/85904.html?browse=tc) _Intelligent transport systems — Roadside infrastructure supported location-based services on nomadic and mobile devices for urban connected automated mobility — Part 2: Data structure and message set definition_"
@@ -66,7 +66,7 @@ The ISO 17739 standard series are related to improve the road safety among conne
 
     **Status:** Edition 1 **(under development)**{style="color: red;"}
 
-  <!-- Copy relevant status line from the following list: 
+    <!-- Copy relevant status line from the following list: 
       Edition 1 **(under development)**{style="color: red;"}
       Approved
       Approved **(under revision)**{style="color: red;"} 
@@ -78,16 +78,16 @@ The ISO 17739 standard series are related to improve the road safety among conne
     
     The messages and its data structure refer to existing standardized V2X messages in SAE and ETSI ITS by gap analysis. This standard defines new messages and its data structure in case there is not appropriate message in existing standardized V2X message.
 
-   <!-- **Normative References:** -->
+    <!-- **Normative References:** -->
 
     **Relationships to other standards:**
-  <!-- Relationships to other standards
+    <!-- Relationships to other standards
       e.g., list Normative references and comm stack references
       *** PLEASE *** retain the link to "TC204 Foundational Standards" as the first relationship in the list below 
     -->
     - [TC204 Foundation Standards](../foundational.md)
 
-   <!-- End Standard -->
+    <!-- End Standard -->
 
 <!-- End subject area -->
 

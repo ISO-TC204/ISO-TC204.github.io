@@ -78,4 +78,4 @@ Want to know more or participate? Please contact us.
 
 - The European Union- ITS Communications & Information Protocols ([EU-ICIP](https://www.mobilityits.eu)) is a significant resource of ITS standards, and its [EFC Tolling page](https://www.mobilityits.eu/efc-tolling) is of particular relevance to this WG's work.
 - [Introduction to EFC standards](https://wpn.nen.nl/app/uploads/sites/14/2025/05/Introduction-to-EFC-stds-1.pdf)
-- [CO2-based tolling – Eurovignette Directive and EFC standards](https://wpn.nen.nl/app/uploads/sites/14/2025/05/CO2-based-tolling-Eurovignette-Directive-and-EFC-standards.pdf)
+- [CO2-based tolling – Eurovignette Directive and EFC standards](./CO2-based-tolling-2025-10-15.pdf)

@@ -29,7 +29,7 @@
     -->
 
     **Status:** Edition 1 **(under development)**{style="color: red;"}
-   <!-- Copy relevant status line from the following list: 
+    <!-- Copy relevant status line from the following list: 
       Edition 1 **(under development)**{style="color: red;"}
       Approved
       Approved **(under revision)**{style="color: red;"} 
@@ -39,7 +39,7 @@
     
     **Description:**
     
-   <!-- The current edition focuses on the cybersecurity requirements within each bounded security managed entity (BSME) within the ITS-SU and includes other related requirements as needed.  
+    <!-- The current edition focuses on the cybersecurity requirements within each bounded security managed entity (BSME) within the ITS-SU and includes other related requirements as needed.  
     
     A BSME includes an instantiation of an ITS station (ITS-S), which includes a subnetwork layer, a networking and transport layer, a facilities layer, a management entity, a security entity, and optionally an ITS applications entity per the ITS station reference architecture (ISO 21217) and represents an ITS-S node (ISO 21217:2020, §3.47).
   
@@ -50,14 +50,14 @@
     -->
 
     **Relationships to other standards:**
-   <!-- Relationships to other standards
+    <!-- Relationships to other standards
       e.g., list Normative references and comm stack references
       *** PLEASE *** retain the link to "TC204 Foundational Standards" as the first relationship in the list below 
     -->
 
     - [TC204 Foundation Standards](../foundational.md)
     
-  <!-- End Standard -->
+    <!-- End Standard -->
 
 <!-- End subject area -->
 

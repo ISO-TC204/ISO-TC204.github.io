@@ -30,7 +30,7 @@
     -->
 
     **Status:** Edition 1 **(under development)**{style="color: red;"}
-   <!-- Copy relevant status line from the following list: 
+    <!-- Copy relevant status line from the following list: 
       Edition 1 **(under development)**{style="color: red;"}
       Approved
       Approved **(under revision)**{style="color: red;"} 
@@ -42,17 +42,17 @@
     
     Please check again soon...
     
-   <!-- **Normative References:** -->
+    <!-- **Normative References:** -->
 
     **Relationships to other standards:**
-   <!-- Relationships to other standards
+    <!-- Relationships to other standards
       e.g., list Normative references and comm stack references
       *** PLEASE *** retain the link to "TC204 Foundational Standards" as the first relationship in the list below 
     -->
 
     - [TC204 Foundation Standards](../foundational.md)
         
-   <!-- End Standard -->
+    <!-- End Standard -->
 
 <!-- Start web info for standard / document -->
 ??? note "[ISO/AWI TS 24854-2](https://www.iso.org/standard/91033.html?browse=tc) _Intelligent transport systems — Facilities layer services — Part 2: Communication profile handler_"
@@ -62,7 +62,7 @@
     -->
 
     **Status:** Edition 1 **(under development)**{style="color: red;"}
-   <!-- Copy relevant status line from the following list: 
+    <!-- Copy relevant status line from the following list: 
       Edition 1 **(under development)**{style="color: red;"}
       Approved
       Approved **(under revision)**{style="color: red;"} 
@@ -74,17 +74,17 @@
     
     Please check again soon...
     
-   <!-- **Normative References:** -->
+    <!-- **Normative References:** -->
 
     **Relationships to other standards:**
-   <!-- Relationships to other standards
+    <!-- Relationships to other standards
       e.g., list Normative references and comm stack references
       *** PLEASE *** retain the link to "TC204 Foundational Standards" as the first relationship in the list below 
     -->
 
     - [TC204 Foundation Standards](../foundational.md)
 
-   <!-- End Standard -->
+    <!-- End Standard -->
 
 <!-- End subject area -->
 
