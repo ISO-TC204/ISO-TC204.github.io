@@ -25,11 +25,11 @@ The ISO 21734 series pertains to performance testing for the connectivity and sa
 
     **Abstract:** The overall purpose of this document is to provide technical standards at the international level to ensure the safety and connectivity of the Automated Driving Bus (ADB) operating as a public transport mode.
 
-    ### Description
+    **Description:**
 
     The objectives of this document include building a framework for operating ADBs in public transit networks, developing performance test methods and procedures in terms of safety and connectivity of ADBs that require communication with roadside infrastructure and with the monitoring and control centre, and providing the service framework and use cases as references for field applications.
 
-    ### Relationships to other standards
+    **Relationships to other standards:**
 
     There are no normative references in this document.
 
@@ -41,11 +41,11 @@ The ISO 21734 series pertains to performance testing for the connectivity and sa
 
     **Abstract:** Part 2 focuses on performance requirements for connectivity and safety functions that are required for ensuring reliable Public Transport services by automated driving bus.
 
-    ### Description
+    **Description:**
 
     This International Standard will address the role of Intelligent Transport Systems to assist Public Transport by applying automated driving bus. A performance test method and procedure are required to be developed as an International Standard in order to operate automated driving bus safely in Public Transport.
 
-    ### Relationships to other standards
+    **Relationships to other standards:**
 
     - [TC204 Foundation Standards](../foundational.md)
 

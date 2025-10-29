@@ -25,31 +25,31 @@
       retain: ??? note "[ : ]( ) _ _"
       find publicly available ISO document URL & info here: iso.org/obp/ui
     -->
-    
+
     **Status:** Edition 1 **(under development)**{style="color: red;"}
-    <!-- Copy relevant status line from the following list: 
+   <!-- Copy relevant status line from the following list: 
       Edition 1 **(under development)**{style="color: red;"}
       Approved
       Approved **(under revision)**{style="color: red;"} 
     -->
+
+    **Abstract:** Please check again soon
     
-    **Abstract:** enter abstract information here
-    
-    ### Description
-    
-    Enter further information / meta-data that puts standard in context
-    
-    ### Relationships to other standards
-    <!-- Relationships to other standards
+    **Description:**
+   <!-- Enter further information / meta-data that puts standard in context -->
+    Please check again soon
+
+   <!--- **Normative References:** -->
+
+    **Relationships to other standards:**
+   <!-- Relationships to other standards
       e.g., list Normative references and comm stack references
       *** PLEASE *** retain the link to "TC204 Foundational Standards" as the first relationship in the list below 
     -->
-    
+
     - [TC204 Foundation Standards](../foundational.md)
-    
-    <!--- #### Normative References -->
-    
-    <!-- End Standard -->
+        
+   <!-- End Standard -->
 <!-- End subject area -->
 
 <!-- Start subject area -->
@@ -62,18 +62,18 @@
 <!-- On a new line below, provide an overview of the subject area for the associated group of standards. -->
 
 <!-- Start web info for standard / document -->
-??? note "[ISO/WD TS 22577](https://www.iso.org/standard/84095.html?browse=tc) _Intelligent transport systems — Nomadic and mobile devices — In-vehicle passenger monitoring and care services using deep learning technology_"
+??? note "[ISO/WD TS 22577](https://www.iso.org/standard/87220.html?browse=tc) _Intelligent transport systems — Nomadic and mobile devices — In-vehicle passenger monitoring and care services using deep learning technology_"
 
     **Status:** Edition 1 **(under development)**{style="color: red;"}
-    <!-- Copy relevant status line from the following list: 
+  <!-- Copy relevant status line from the following list: 
       Edition 1 **(under development)**{style="color: red;"}
       Approved
       Approved **(under revision)**{style="color: red;"} 
     -->
-    
+
     **Abstract:** This document defines the in-vehicle devices include nomadic device supported in-vehicle passengers monitoring and care services and specifies general information and use-cases for providing this service based on deep learning model. This system comprises a nomadic device, an in-vehicle autonomous device, a cloud-based server, and an emergency response center that leverages advanced deep-learning algorithms.
     
-    ### Description
+    **Description:**
     
     This document contains algorithm for monitoring and supporting services, segregating them into urgent aid and convenience assistance categories. In addition, this document also delivers the detection and management of health-related emergencies and the observation of passenger well-being through automated recognition and communication of critical situations. Additionally, it facilitates the transmission of physiological distress and discomfort incidents to the emergency response center, followed by the coordinated deployment of safety personnel.
     
@@ -81,17 +81,17 @@
     
     This document defines the in-vehicle devices include nomadic device supported in-vehicle passengers monitoring and care services and specifies general information and use-cases for providing this service based on deep learning model. This system comprises a nomadic device, an in-vehicle autonomous device, a cloud-based server, and an emergency response center that leverages advanced deep-learning algorithms.
     
-    ### Relationships to other standards
-    <!-- Relationships to other standards
+   <!--- **Normative References:** -->
+
+    **Relationships to other standards:**
+   <!-- Relationships to other standards
       e.g., list Normative references and comm stack references
       *** PLEASE *** retain the link to "TC204 Foundational Standards" as the first relationship in the list below 
     -->
-    
+
     - [TC204 Foundation Standards](../foundational.md)
-    
-    <!--- #### Normative References -->
-    
-    <!-- End Standard -->
+
+   <!-- End Standard -->
 <!-- End subject area -->
 
 ## External References
