@@ -31,19 +31,19 @@ The scope of the ISO 26048 series does not define the logic used by the manageme
 
     **Abstract:** This document (ISO/TS 26048-1) introduces the ISO 26048 series, provides content that is normatively referenced in subsequent parts, and defines data that is applicable to the management of a wide range of field devices.
 
-    ### Description
+    **Description:**
 
-    **NOTE** Many of the concepts defined in this document were derived from NTCIP 1103 and NTCIP 1201, however, the design has been updated to better address security concerns. It is expected that future versions of NTCIP will migrate to the design defined in this document.
+    ⚠️ **NOTE** Many of the concepts defined in this document were derived from NTCIP 1103 and NTCIP 1201, however, the design has been updated to better address security concerns. It is expected that future versions of NTCIP will migrate to the design defined in this document.
 
-    ### Relationships to other standards
-    <!-- Relationships to other standards
+    **Relationships to other standards:**
+   <!-- Relationships to other standards
       e.g., list Normative references and comm stack references
       PLEASE retain the link to "TC204 Foundational Standards" as the first relationship in the list below 
     -->
 
     - [TC204 Foundation Standards](../foundational.md)
 
-    #### Normative References
+    **Normative References:**
 
     The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.
 
@@ -66,11 +66,11 @@ The scope of the ISO 26048 series does not define the logic used by the manageme
 
     **Abstract:** This document identifies basic user needs for the management of light-emitting diode (LED) matrix Variable and dynamic message signs(VDMSs) and traces these needs to interoperable designs. This includes the ability to identify the device, its capabilities, and its status.
 
-    ### Description
+    **Description:**
 
     Variable and dynamic message signs(VDMSs) are installed in areas where traffic managers identify a frequent need to convey information to the travelling public, such as upstream from interchanges to alert the public to downstream congestion in time for them to alter their routes. This allows traffic managers to improve the efficiency, safety, and quality of traveller journeys. In order to manage the operation of a VDMS and the messages displayed, information exchange between the management systems and the VDMS is needed.
 
-    ### Relationships to other standards
+    **Relationships to other standards:**
 
     - [TC204 Foundation Standards](../foundational.md)
 

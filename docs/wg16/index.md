@@ -29,34 +29,35 @@
     -->
 
     **Status:** Edition 1 **(under development)**{style="color: red;"}
-    <!-- Copy relevant status line from the following list: 
+   <!-- Copy relevant status line from the following list: 
       Edition 1 **(under development)**{style="color: red;"}
       Approved
       Approved **(under revision)**{style="color: red;"} 
     -->
-    
+
     **Abstract:** This document defines requirements for ITS station units.
     
-    ### Description
+    **Description:**
     
-    This document defines requirements for ITS station units. The current edition focuses on the cybersecurity requirements within each bounded security managed entity (BSME) within the ITS-SU and includes other related requirements as needed.  
+   <!-- The current edition focuses on the cybersecurity requirements within each bounded security managed entity (BSME) within the ITS-SU and includes other related requirements as needed.  
     
     A BSME includes an instantiation of an ITS station (ITS-S), which includes a subnetwork layer, a networking and transport layer, a facilities layer, a management entity, a security entity, and optionally an ITS applications entity per the ITS station reference architecture (ISO 21217) and represents an ITS-S node (ISO 21217:2020, §3.47).
-    
-    ### Relationships to other standards
-    <!-- Relationships to other standards
-      e.g., list Normative references and comm stack references
-      *** PLEASE *** retain the link to "TC204 Foundational Standards" as the first relationship in the list below 
-    -->
-    
-    - [TC204 Foundation Standards](../foundational.md)
-    
-    #### Normative References
+  
+    **Normative References:**
     
     - [ISO 21217:2020](https://www.iso.org/obp/ui#iso:std:iso:21217:ed-3:v1:en) _Intelligent transport systems — Station and communication architecture_
     - [ISO/TS 14812:2025](https://www.iso.org/obp/ui#iso:std:iso:ts:14812:ed-2:v1:en) _Intelligent transport systems — Vocabulary_
+    -->
 
-    <!-- End Standard -->
+    **Relationships to other standards:**
+   <!-- Relationships to other standards
+      e.g., list Normative references and comm stack references
+      *** PLEASE *** retain the link to "TC204 Foundational Standards" as the first relationship in the list below 
+    -->
+
+    - [TC204 Foundation Standards](../foundational.md)
+    
+  <!-- End Standard -->
 
 <!-- End subject area -->
 

@@ -18,7 +18,7 @@
 
     **Abstract:** This document defines terms relating to intelligent transport systems (ITS).
 
-    ### Description
+    **Description:**
 
     The definition of terms are available for free via [ISO's online browsing preview](https://www.iso.org/obp/ui#iso:std:iso:ts:14812), [ISO's online browsing platform search engine](https://www.iso.org/obp/ui/en/#home), or the [Geolexica website](https://isotc204.geolexica.org). The standard itself
     includes an annex that provides the complete concept model that graphically depicts the relationships among the terms defined in the standard.
@@ -53,7 +53,7 @@
     one of several service domains. Each service group contains one or more
     individual services, each of which is described.
 
-    ### Description
+    **Description:**
 
     This document is intended for use by at least two groups of people involved
     in the ITS sector:

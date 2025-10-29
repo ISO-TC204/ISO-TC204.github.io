@@ -34,7 +34,7 @@
 
     **Abstract:** This International Standard supports the automated identification, monitoring and exchange of emergency response information regarding dangerous goods carried on board road transport vehicles.
 
-    ### Description
+    **Description:**
 
     Such information may include the identification, quantity and current condition (such as pressure and temperature) of such goods, as well as any relevant emergency response information. Reporting this information may occur prior to or during transportation of the goods in a manner that allows all interested parties to access and interpret the information correctly. When equipped with appropriate electronics and communications capabilities, vehicles carrying dangerous goods may respond to queries regarding their status or self-initiate a message.
 
@@ -49,7 +49,7 @@
 
     It is intended that the information defined here be carried on board the transport vehicle and may then be transferred to interested roadside systems by whatever communications means are appropriate to that roadside system.
 
-    ### Relationships to other standards
+    **Relationships to other standards:**
 
     - [TC204 Foundation Standards](../foundational.md)
 
@@ -75,13 +75,13 @@
 
     **Abstract:** Seamless exchange of accurate, complete, and timely data at transportation hand-offs has always been important for efficiency and accountability. There is also an understanding of needs for security of transport information, and for transfer of information related to security against terrorism as well as theft and traditional contraband. It is imperative for standards development organizations to address and facilitate dealing with these needs.
 
-    ### Description
+    **Description:**
 
     ISO/TR 14813-2:2000, 7.4.1 identifies a commercial vehicle functional domain:
 
     - "These transactions maintain the TICS information about a shipment from the time of the order by the consignor to the reception of goods by the consignee. The key TICS transactions are to provide registers of service providers and to enable the goods to be tracked throughout intermodal journeys."
 
-    ### Relationships to other standards
+    **Relationships to other standards:**
 
     ⚠️ Note: This edition has been been replaced by (ISO/TS 24533-2:2022), which has been technically revised.
 
@@ -100,13 +100,13 @@
 
     **Abstract:** The seamless exchange of accurate, complete and timely data communication at transportation hand-offs has always been important for efficiency and accountability. Hand-offs with a universal method of exchange that allows data interoperability between all parties in the supply chain is critically important for maximizing efficiency and accountability. The efficient exchange of data also provides for security of transport information and for transfer of information related to security against terrorism as well as theft and traditional contraband. It is imperative for standards development organizations to address and facilitate the handling of these needs.
 
-    ### Description
+    **Description:**
 
     ISO/TR 14813-2:2000, 7.4.1 identifies a commercial vehicle functional domain:
 
     - "These transactions maintain the TICS information about a shipment from the time of the order by the consignor to the reception of goods by the consignee. The key TICS transactions are to provide registers of service providers and to enable the goods to be tracked throughout intermodal journeys."
 
-    ### Relationships to other standards
+    **Relationships to other standards:**
 
     - [TC204 Foundation Standards](../foundational.md)
 
