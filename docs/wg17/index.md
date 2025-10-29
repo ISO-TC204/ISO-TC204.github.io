@@ -10,7 +10,7 @@
 -->
 
 <!-- === DESCRIPTIONS OF WG STANDARDS / DOCUMENTS ===
-    The content below is distilled from the respective WG section in "JSAE ITS Standardization Activities of ISO/TC204 - 2024" and iso.org/obp and is intended as an initial example only for future editing by the repsective WG.
+    The content below is distilled from the respective WG section in "JSAE ITS Standardization Activities of ISO/TC204 - 2024" and iso.org/obp and is intended as an initial example only for future editing by the respective WG.
 -->
 
 ## Roadside infrastructure supported location-based services
@@ -93,6 +93,6 @@ The ISO 17739 standard series are related to improve the road safety among conne
 
 ## External References
 
-The European Union- ITS Communications & Information Protocols ([EU-ICIP](https://www.mobilityits.eu)) is a signficant resource of ITS standards, and its [Nomadic systems page](https://www.mobilityits.eu/nomadic-devices) is of particular relevance to this WG's work.
+The European Union- ITS Communications & Information Protocols ([EU-ICIP](https://www.mobilityits.eu)) is a significant resource of ITS standards, and its [Nomadic systems page](https://www.mobilityits.eu/nomadic-devices) is of particular relevance to this WG's work.
 
 [How to get involved](../contact.md)
