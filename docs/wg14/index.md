@@ -1,4 +1,4 @@
-# Driving automation and safety systems (ISO TC 204 WG 14)
+# Driving automation and active safety systems (ISO TC 204 WG 14)
 
 ## Domain of interest
 
