@@ -4,7 +4,8 @@ repo_url: https://github.com/ISO-TC204/ISO-TC204.github.io
 nav:
   - Home: index.md
   - About:
-    - About us: about.md
+    - About TC 204: about.md
+    - About ITS: about-its.md
     - Intro to ITS: intro.md
     - Business Plan: assets/pdf/business-plan-2008-04-06.pdf
     - Contact us: contact.md
