@@ -5,7 +5,7 @@ nav:
   - Home: index.md
   - About:
     - About TC 204: about.md
-    - About ITS: about-its.md
+    - About ISO Documents: about-docs.md
     - Intro to ITS: intro.md
     - Business Plan: assets/pdf/business-plan-2008-04-06.pdf
     - Contact us: contact.md
