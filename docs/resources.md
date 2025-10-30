@@ -90,25 +90,8 @@ This page identifies numerous key resources for the ITS industry. You can click 
     * [ARC-IT - Architecture Reference for Cooperative and Intelligent Transportation](https://www.arc-it.net/index.html)
     * [FRAME - The European FRAMEwork Architecture](https://frame-online.eu/)
 
-??? info "Other Useful Resources"
-    ??? info "EU-ICIP"
-        The [EU-ICIP GUIDE to Intelligent Transport Systems Standards](https://www.mobilityits.eu/) provides a rich source of information about ITS Communications and Information Protocols together with foundational concepts such as “About ITS”, “ITS Architecture” and definitions of commonly-used terminology. The site is developed and maintained by [CEN/TC278 Intelligent Transport Systems](https://www.cencenelec.eu/areas-of-work/cen-sectors/transport-and-packaging-cen/intelligent-transport-systems/).
-
-    ??? info "EN ISO 14816 Register"
-        The [EN ISO 14816 Register](https://www.itsstandards.eu/registries/)
-        is the official information page of the Central Registration Authority for **_EN ISO 14816 Road transport and traffic telematics - Automatic vehicle and equipment identification - Numbering and data structures_**. The site is developed and maintained by [CEN/TC278 Intelligent Transport Systems](https://www.cencenelec.eu/areas-of-work/cen-sectors/transport-and-packaging-cen/intelligent-transport-systems/).
-
-        This website serves two purposes:
-
-        1. It contains the official Central Registers:
-
-            a. The Register of Manufacturers (CS2)
-        
-            b. The Register of National Registration Administrators for Issuers (NRA/I) (CS1)
-        
-            c. The Register of National Registration Administrators for Tax Authorities (NRA/T) (CS8)
-        
-        2. It offers guidance to organisations wishing to register.
+??? info "A Guide to ITS: EU-ICIP"
+    The [EU-ICIP GUIDE to Intelligent Transport Systems Standards](https://www.mobilityits.eu/) provides a rich source of information about ITS Communications and Information Protocols together with foundational concepts such as “About ITS”, “ITS Architecture” and definitions of commonly-used terminology. The site is developed and maintained by [CEN/TC278 Intelligent Transport Systems](https://www.cencenelec.eu/areas-of-work/cen-sectors/transport-and-packaging-cen/intelligent-transport-systems/).
 
 ??? info "How to Purchase Standards"
     ## Purchasing individual standards
