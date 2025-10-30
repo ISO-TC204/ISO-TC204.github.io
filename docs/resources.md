@@ -78,7 +78,7 @@ This page identifies numerous key resources for the ITS industry. You can click 
         Joint ISO/TC 204 - ISO/IEC JTC1 [WG11: City data model transportation planning](https://jtc1info.org/sd-2-history/jtc1-working-groups/wg-11/)
 
     Administered by others
-    ??? info "Governance" 
+    ??? info "Coordination and Governance with TC 22" 
         ISO/TC 22/JWG 2 - Joint ISO/TC 22 - ISO/TC 204: Governance
 
     ??? info "GIS-ITS"
@@ -110,8 +110,19 @@ This page identifies numerous key resources for the ITS industry. You can click 
         
         2. It offers guidance to organisations wishing to register.
 
-??? info "Purchase Packages of Standards"
+??? info "How to Purchase Standards"
+    ## Purchasing individual standards
+
+    Individual ISO documents can be purchased:
+
+    - directly from ISO via the ISO website (e.g., [ISO 14812](https://www.iso.org/standard/85041.html))
+    - from many [national member bodies](https://www.iso.org/about/members) via their websites (e.g., [BSI](https://knowledge.bsigroup.com/products/intelligent-transport-systems-vocabulary-1) for the United Kingdom). 
+    - from various 3rd party providers 
+
     ## Purchase packages of standards
+
+    Some of the above entities also offer packages of standards, such as those listed below:
+
     ??? info "StandardLand (Czech Republic)"
         [StandardLand (Czech Republic)](https://www.standardland.cz/) is a useful resource to summarize the content of standards and to identify logical packages of standards. You can use your browser to translate from Czech to your language.
 
