@@ -1,18 +1,18 @@
 /* Main header styling with total height of 270px */
 .md-header {
-    height: 270px;
+    height: 90px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    background-image: url("../img/banner.jpg");
-    background-size: cover;
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat;   /* Prevents the image from repeating */
-    height: 220px;
-    color: #fff;
-    position: relative; /* Ensures the header scrolls with content */
-    z-index: auto; /* Remove stacking to prevent it from sticking */
-}
+/*    background-image: url("../img/banner.jpg"); */
+/*    background-size: cover;
+/*    background-position: center; /* Centers the image */
+/*    background-repeat: no-repeat;   /* Prevents the image from repeating */
+/*    height: 220px; */
+/*    color: #fff; */
+/*    position: relative; /* Ensures the header scrolls with content */
+/*    z-index: auto; /* Remove stacking to prevent it from sticking */
+} 
 
 /* Align tab items and move search and GitHub to the right side */
 .md-tabs {
