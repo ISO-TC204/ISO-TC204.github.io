@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/"
+     xml:base="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:adms="http://www.w3.org/ns/adms#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:Mereology="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/">
+    <owl:Ontology rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/">
+        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/1/GenericProperties.owl"/>
+        <ns:license>http://creativecommons.org/licenses/by/3.0/</ns:license>
+        <dc:creator>Megan Katsumi</dc:creator>
+        <dc:description>Ontology to capture concepts related to parthood.
+The Mereology Ontology extends beyond classical mereology to cover parthood, but also component-hood and containment.</dc:description>
+        <dc:title>Mereology Ontology</dc:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+    
+
+
+    <!-- http://www.w3.org/ns/adms#relatedDocumentation -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/adms#relatedDocumentation"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/based_near -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/based_near"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/MereologyOntologyProperty -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/MereologyOntologyProperty">
+        <dc:description>Created for organizational purposes, to identify properties defined in the Mereology ontology.</dc:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/componentOf -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/componentOf">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/properPartOf"/>
+        <owl:inverseOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/hasComponent"/>
+        <dc:description>Something may be a Component of some other thing
+More specifically, something may be a immediate component of something; in other words, if x is an immediate component of y, then there does not exist any other object that is a component of y and has x as a component.
+Component-of is transitive. Immediate component-of is not transitive.
+Immediate component-of is a subproperty of component-of.</dc:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/hasComponent -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/hasComponent">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/hasProperPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/hasProperPart -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/hasProperPart">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/MereologyOntologyProperty"/>
+        <owl:inverseOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/properPartOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/immediateComponentOf -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/immediateComponentOf">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/componentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/properPartOf -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/properPartOf">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/MereologyOntologyProperty"/>
+        <dc:description>Something may be a Proper Part of some other thing.
+An object cannot be a proper part of itself. Thus, any object must have more than one proper part.
+Proper Parthood is transitive.
+Proper parthood is dense and so there exist no immediate proper parts; in other words, given some object, whatever proper part, x, we choose, there exists some slightly larger proper part of the object that also has x as a proper part.</dc:description>
+    </owl:ObjectProperty>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

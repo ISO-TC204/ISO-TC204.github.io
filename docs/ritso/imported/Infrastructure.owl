@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Infrastructure/"
+     xml:base="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Infrastructure/"
+     xmlns:WV="http://www.wurvoc.org/vocabularies/WV/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:adms="http://www.w3.org/ns/adms#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:om-1="http://www.wurvoc.org/vocabularies/om-1.8/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:CityUnits="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/CityUnits/"
+     xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:Infrastructure="http://ontology.eil.utoronto.ca/5087/2/Infrastructure/">
+    <owl:Ontology rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Infrastructure/">
+        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/1/SpatialLoc.owl"/>
+        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/2/Contact.owl"/>
+        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/1/CityUnits.owl"/>
+        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Mereology.owl"/>
+        <dc:description>The Infrastructure pattern defines the concepts needed to capture various types of city infrastructure, such as buildings and roads. The Infrastructure pattern reuses the Spatial Location pattern (from ISO 5087-1) in order to capture the location of these infrastructure elements.</dc:description>
+        <dc:issued>May 3, 2021</dc:issued>
+        <dc:title>Infrastructure Pattern</dc:title>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
+        <adms:relatedDocumentation>Under development. Refer to latest draft of ISO 5087-2.</adms:relatedDocumentation>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+    
+
+
+    <!-- http://www.w3.org/ns/adms#relatedDocumentation -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/adms#relatedDocumentation"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/based_near -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/based_near"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Infrastructure//InfrastructureElement -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Infrastructure//InfrastructureElement">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Infrastructure//InfrastructureOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/5087/1/SpatialLoc/hasLocation"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/5087/1/SpatialLoc/Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/5087/2/Contact/hasAddress"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/5087/2/Contact/Address"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/ISO21972/iso21972#hasValue"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/CityUnits/MonetaryValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/hasProperPart"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Infrastructure//InfrastructureElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasDescription"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasIdentifier"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasName"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An Infrastructure Element is a generic representation of a city structure of interest. All infrastructure elements may have some defined location and must be associated with some location, where locations are spatial Features as defined in ISO 5087-1. The Mereology pattern (from ISO 5087-1) is also reused in order to support the possible representation of infrastructure parts (e.g. road segments) and their associated wholes (e.g. the entire road).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Infrastructure//InfrastructureOntologyThing -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Infrastructure//InfrastructureOntologyThing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

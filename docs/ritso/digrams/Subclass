@@ -1,0 +1,12 @@
+// Diagram for Footpath
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=10]
+	Mammal [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER"><B>Mammal</B></TD></TR></TABLE>> margin=0]
+	{
+		rank=max
+		Dog [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e"><B>Dog</B></TD></TR></TABLE>> margin=0]
+	}
+	Dog -> Mammal [arrowhead=onormal style=solid]
+}
