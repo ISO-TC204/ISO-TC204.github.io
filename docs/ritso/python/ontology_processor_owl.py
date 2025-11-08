@@ -4,7 +4,7 @@ import logging
 import traceback
 import re
 from rdflib import Graph, RDF, OWL, URIRef, Literal, XSD, RDFS
-from utils import get_qname, get_ontology_metadata, _norm_base, get_leaf_classes
+from utils import get_qname, get_ontology_metadata, _norm_base, get_leaf_classes, collect_oneOf, collect_list
 from rdflib.namespace import DC, DCTERMS
 
 log = logging.getLogger("owl2mkdocs")
@@ -322,6 +322,23 @@ def process_ontology(owl_path: str, errors: list, ontology_info) -> tuple:
                             if leaf_uri not in registry and leaf_uri not in new_concepts:
                                 new_concepts[leaf_uri] = {'type': 'class', 'description': ''}
                                 log.debug(f"Inferred external class from restriction target: {leaf_uri}")
+                    # Check if target is a oneOf enumeration
+                    oneOf_members = collect_oneOf(g, target)
+                    if oneOf_members:
+                        # Generate enum class name
+                        prop_local = get_qname(g, prop, ns, prefix_map).split(':')[-1]
+                        enum_name = f"{prop_local[0].upper()}{prop_local[1:]}Enum"
+                        enum_uri = ns + enum_name
+                        if enum_uri not in registry and enum_uri not in new_concepts:
+                            new_concepts[enum_uri] = {'type': 'class', 'description': 'Generated enumeration for property ' + get_qname(g, prop, ns, prefix_map)}
+                            log.debug(f"Added generated enum class: {enum_uri}")
+                        # Add individuals
+                        for member in oneOf_members:
+                            if isinstance(member, URIRef):
+                                mem_uri = str(member)
+                                if mem_uri not in registry and mem_uri not in new_concepts:
+                                    new_concepts[mem_uri] = {'type': 'individual', 'description': ''}
+                                    log.debug(f"Added enumeration individual: {mem_uri}")
                 elif card:
                     on_class = g.value(o, OWL.onClass)
                     on_data_range = g.value(o, OWL.onDataRange)

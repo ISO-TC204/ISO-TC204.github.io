@@ -4,7 +4,7 @@ import traceback
 from rdflib import Graph, RDF, RDFS, OWL, XSD, URIRef, BNode
 from graphviz import Digraph
 from collections import defaultdict
-from utils import get_qname, get_id, fmt_title, get_all_class_superclasses, is_refined_property, collect_list, get_class_expression_str, get_ontology_for_uri, insert_spaces, get_leaf_classes, get_property_info
+from utils import get_qname, get_id, fmt_title, get_all_class_superclasses, is_refined_property, collect_list, get_class_expression_str, get_ontology_for_uri, insert_spaces, get_leaf_classes, get_property_info, collect_oneOf
 
 # Configure logging
 log = logging.getLogger("ofn2mkdocs")
@@ -28,7 +28,7 @@ def get_target_info(g: Graph, expr, cls_name: str, ns: str, prefix_map: dict) ->
         is_complex = True
         return target_id, is_complex, None, target_qname, reflexive, expr
 
-def add_class_expression_node(graph, g: Graph, expr, ns: str, prefix_map: dict, global_all_classes: set, ns_to_ontology: dict, abstract_map: dict, created: set, is_superclass: bool = False, in_associated_cluster: bool = False) -> tuple:
+def add_class_expression_node(graph, g: Graph, expr, ns: str, prefix_map: dict, global_all_classes: set, ns_to_ontology: dict, abstract_map: dict, created: set, is_superclass: bool = False, in_associated_cluster: bool = False, enum_members: list = None, enum_name: str = None) -> tuple:
     """Recursively add nodes for class expressions, returning (node_id, label)."""
     if isinstance(expr, URIRef):
         qname = get_qname(g, expr, ns, prefix_map)
@@ -84,8 +84,16 @@ def add_class_expression_node(graph, g: Graph, expr, ns: str, prefix_map: dict, 
             graph.edge(node_id, comp_id, style="dotted", label="of", arrowhead="normal")
             log.debug("Added complement node %s: %s", node_id, expr_str)
             return node_id, ""
-        # Fallback for other complex expressions
-        graph.node(node_id, label=expr_str, shape="plaintext")
+        # Handle oneOf enumeration
+        oneOf_members = collect_oneOf(g, expr)
+        if oneOf_members:
+            stereo = "Enum"
+            member_str = '<BR/>'.join([f"+ {get_qname(g, m, ns, prefix_map)}" for m in sorted(oneOf_members, key=str)])
+            graph.node(node_id, f'<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">«{stereo}»<BR/>{enum_name or expr_str}</TD></TR><TR><TD ALIGN="LEFT">{member_str}</TD></TR></TABLE>>', margin="0")
+            log.debug("Added enum node %s: %s with members %s", node_id, enum_name or expr_str, oneOf_members)
+            return node_id, enum_name or ""
+        # Default for other expressions
+        graph.node(node_id, f'<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">{expr_str}</TD></TR></TABLE>>', margin="0")
         log.debug("Added fallback node %s: %s", node_id, expr_str)
         return node_id, expr_str
 
@@ -93,7 +101,9 @@ def generate_diagram(g: Graph, cls: URIRef, cls_name: str, cls_id: str, ns: str,
     """Generate a DOT file for a given class, producing an ODM-like diagram with associated cluster defined before edges."""
     # Ensure output directory exists
     diagrams_dir = os.path.join(os.path.dirname(ofn_path), "diagrams")
-    os.makedirs(diagrams_dir, exist_ok=True)
+    if not os.path.exists(diagrams_dir):
+        os.makedirs(diagrams_dir)
+        log.info(f"Created diagrams directory: {diagrams_dir}")
     cls_filename = f"{ontology_name}__{cls_name}"
 
     # Initialize Digraph with ODM-like styling
@@ -274,6 +284,12 @@ def generate_diagram(g: Graph, cls: URIRef, cls_name: str, cls_id: str, ns: str,
                     target_expr = OWL.Thing
 
                 if target_expr and label_parts:
+                    # Check for oneOf enumeration
+                    oneOf_members = collect_oneOf(g, target_expr)
+                    enum_name = None
+                    if oneOf_members:
+                        prop_local = prop_name.split(':')[-1]
+                        enum_name = f"{prop_local[0].upper()}{prop_local[1:]}Enum"
                     target_id, _, _, target_qname, reflexive, _ = get_target_info(g, target_expr, cls_name, ns, prefix_map)
                     key = (prop_name, target_id)
                     if key not in combined:
@@ -284,7 +300,9 @@ def generate_diagram(g: Graph, cls: URIRef, cls_name: str, cls_id: str, ns: str,
                             'target_expr': target_expr,
                             'reflexive': reflexive,
                             'target_qname': target_qname,
-                            'is_inverse': is_inverse
+                            'is_inverse': is_inverse,
+                            'enum_members': oneOf_members,
+                            'enum_name': enum_name
                         }
                     combined[key]['label_parts'].extend(label_parts)
                     combined[key]['style'] = "dashed" if is_refined else combined[key]['style']
@@ -313,6 +331,8 @@ def generate_diagram(g: Graph, cls: URIRef, cls_name: str, cls_id: str, ns: str,
         reflexive = data['reflexive']
         target_expr = data['target_expr']
         is_inverse = data['is_inverse']
+        enum_members = data.get('enum_members', [])
+        enum_name = data.get('enum_name')
         target_id, target_label = add_class_expression_node(dot, g, target_expr, ns, prefix_map, global_all_classes, ns_to_ontology, abstract_map, created_complex, is_superclass=False, in_associated_cluster=True)
         label_prefix = f"«{', '.join(sorted(set(label_parts)))}» " if label_parts else ""
         if style == "solid":

@@ -1,3 +1,4 @@
+# utils.py
 import re
 import logging
 import traceback
@@ -125,144 +126,119 @@ def get_ontology_metadata(g: Graph, ns: str, predicate: URIRef) -> Optional[str]
     return None
 
 def iter_annotations(g: Graph, subj: URIRef, ns: str, prefix_map: dict) -> Iterable[Tuple[str, str]]:
-    """Yield (predicate, value) pairs for annotations as readable strings,
-    excluding those in SKIP_IN_OTHER."""
-    if subj is None:
-        log.error("Invalid subject URI provided to iter_annotations: None")
-        return
-    for p, o in g.predicate_objects(subj):
-        if not isinstance(p, URIRef):
-            continue
-        if p in SKIP_IN_OTHER:
-            continue
-        if isinstance(o, Literal):
-            yield (get_qname(g, p, ns, prefix_map), str(o))
+    """Yield (predicate_qname, literal) for annotations on subj, excluding DESC_PROPS and SKIP_IN_OTHER."""
+    for p, o in sorted(g.predicate_objects(subj), key=lambda po: get_qname(g, po[0], ns, prefix_map).lower()):
+        if isinstance(o, Literal) and p not in SKIP_IN_OTHER:
+            yield get_qname(g, p, ns, prefix_map), str(o)
 
-def collect_list(g: Graph, head: URIRef) -> List:
-    """Collect RDF list into Python list."""
-    result = []
-    current = head
-    while current and current != RDF.nil:
-        first = g.value(current, RDF.first)
+def collect_list(g: Graph, node) -> list:
+    """Collect RDF list members into a Python list."""
+    members = []
+    while node != RDF.nil:
+        first = g.value(node, RDF.first)
         if first:
-            result.append(first)
-        current = g.value(current, RDF.rest)
-    return result
-
-def get_leaf_classes(g: Graph, expr, ns: str, prefix_map: dict) -> List[URIRef]:
-    """Get all leaf classes from a class expression."""
-    classes = []
-    if isinstance(expr, URIRef):
-        classes.append(expr)
-    else:
-        union = g.value(expr, OWL.unionOf)
-        if union and union != RDF.nil:
-            classes.extend(collect_list(g, union))
-        inter = g.value(expr, OWL.intersectionOf)
-        if inter and inter != RDF.nil:
-            classes.extend(collect_list(g, inter))
-        comp = g.value(expr, OWL.complementOf)
-        if comp:
-            classes.extend(get_leaf_classes(g, comp, ns, prefix_map))
-    return classes
+            members.append(first)
+        node = g.value(node, RDF.rest)
+    return members
 
 def get_class_expression_str(g: Graph, expr, ns: str, prefix_map: dict) -> str:
-    """Generate a readable string for class expressions, similar to Protégé."""
+    """Convert complex class expression to string representation."""
     if isinstance(expr, URIRef):
         return get_qname(g, expr, ns, prefix_map)
-    union = g.value(expr, OWL.unionOf)
-    if union and union != RDF.nil:
-        members = collect_list(g, union)
-        return f"({' or '.join(get_class_expression_str(g, m, ns, prefix_map) for m in sorted(members, key=str))})"
-    inter = g.value(expr, OWL.intersectionOf)
-    if inter and inter != RDF.nil:
-        members = collect_list(g, inter)
-        return f"({' and '.join(get_class_expression_str(g, m, ns, prefix_map) for m in sorted(members, key=str))})"
-    comp = g.value(expr, OWL.complementOf)
-    if comp:
-        return f"(not {get_class_expression_str(g, comp, ns, prefix_map)})"
+    if isinstance(expr, BNode):
+        union_col = g.value(expr, OWL.unionOf)
+        if union_col and union_col != RDF.nil:
+            members = collect_list(g, union_col)
+            return " or ".join(sorted(get_class_expression_str(g, m, ns, prefix_map) for m in members))
+        inter_col = g.value(expr, OWL.intersectionOf)
+        if inter_col and inter_col != RDF.nil:
+            members = collect_list(g, inter_col)
+            return " and ".join(sorted(get_class_expression_str(g, m, ns, prefix_map) for m in members))
+        complement = g.value(expr, OWL.complementOf)
+        if complement:
+            return "not " + get_class_expression_str(g, complement, ns, prefix_map)
+        oneOf_members = collect_oneOf(g, expr)
+        if oneOf_members:
+            return "Enum: " + ", ".join(sorted(get_qname(g, m, ns, prefix_map) for m in oneOf_members))
+        return "ComplexExpr"  # Fallback
     return str(expr)
 
-def class_restrictions(g: Graph, c: URIRef, ns: str, prefix_map: dict) -> List[Tuple[str, str]]:
-    """Extract OWL restrictions and subClassOf constraints for Markdown output."""
-    if c is None:
-        return []
+def get_leaf_classes(g: Graph, expr, ns: str, prefix_map: dict) -> list:
+    """Recursively get leaf classes from class expressions."""
+    leaves = []
+    if isinstance(expr, URIRef):
+        leaves.append(expr)
+    elif isinstance(expr, BNode):
+        union_col = g.value(expr, OWL.unionOf)
+        inter_col = g.value(expr, OWL.intersectionOf)
+        complement = g.value(expr, OWL.complementOf)
+        oneOf_members = collect_oneOf(g, expr)
+        if union_col and union_col != RDF.nil:
+            members = collect_list(g, union_col)
+            for m in members:
+                leaves.extend(get_leaf_classes(g, m, ns, prefix_map))
+        elif inter_col and inter_col != RDF.nil:
+            members = collect_list(g, inter_col)
+            for m in members:
+                leaves.extend(get_leaf_classes(g, m, ns, prefix_map))
+        elif complement:
+            leaves.extend(get_leaf_classes(g, complement, ns, prefix_map))
+        elif oneOf_members:
+            leaves.extend(oneOf_members)  # Treat individuals as leaves
+        else:
+            leaves.append(expr)  # Fallback for other BNodes
+    return leaves
 
+def collect_oneOf(g: Graph, node) -> list:
+    """Collect members of owl:oneOf if present."""
+    if (node, RDF.type, OWL.Class) in g:
+        oneOf_col = g.value(node, OWL.oneOf)
+        if oneOf_col and oneOf_col != RDF.nil:
+            return collect_list(g, oneOf_col)
+    return []
+
+def class_restrictions(g: Graph, cls: URIRef, ns: str, prefix_map: dict) -> list:
+    """Collect restrictions for a class, including inherited refinements."""
     rows = []
-    for super_cls in g.objects(c, RDFS.subClassOf):
-        if isinstance(super_cls, URIRef) and (super_cls, RDF.type, OWL.Class) in g:
-            super_qname = get_qname(g, super_cls, ns, prefix_map)
-            rows.append(("subClassOf", super_qname))
-        elif (super_cls, RDF.type, OWL.Restriction) in g:
-            restr = super_cls
+    for restr in g.objects(cls, RDFS.subClassOf):
+        if (restr, RDF.type, OWL.Restriction) in g:
             prop = g.value(restr, OWL.onProperty)
-            prop_name, is_inverse, base_prop = get_property_info(g, prop, ns, prefix_map)
-
-            all_values_from = g.value(restr, OWL.allValuesFrom)
-            if all_values_from:
-                label_parts = ["only"]
-                target_str = get_class_expression_str(g, all_values_from, ns, prefix_map)
-                rows.append((prop_name, f"{' '.join(label_parts)} {target_str}"))
-
-            some_values_from = g.value(restr, OWL.someValuesFrom)
-            if some_values_from:
-                label_parts = ["some"]
-                target_str = get_class_expression_str(g, some_values_from, ns, prefix_map)
-                rows.append((prop_name, f"{' '.join(label_parts)} {target_str}"))
-
-            on_class = g.value(restr, OWL.onClass)
-            qualified_card = g.value(restr, OWL.qualifiedCardinality)
-            min_qualified_card = g.value(restr, OWL.minQualifiedCardinality)
-            max_qualified_card = g.value(restr, OWL.maxQualifiedCardinality)
-            if prop_name and (qualified_card is not None or min_qualified_card is not None or max_qualified_card is not None) and on_class:
+            if prop:
+                prop_name, is_inverse, base_prop = get_property_info(g, prop, ns, prefix_map)
+                is_refined = is_refined_property(g, cls, prop, restr)
+                min_card = g.value(restr, OWL.minQualifiedCardinality) or g.value(restr, OWL.minCardinality)
+                max_card = g.value(restr, OWL.maxQualifiedCardinality) or g.value(restr, OWL.maxCardinality)
+                card = g.value(restr, OWL.qualifiedCardinality) or g.value(restr, OWL.cardinality)
+                all_values_from = g.value(restr, OWL.allValuesFrom)
+                some_values_from = g.value(restr, OWL.someValuesFrom)
+                has_value = g.value(restr, OWL.hasValue)
                 label_parts = []
-                if qualified_card is not None:
-                    label_parts.append(f"exactly {qualified_card}")
-                if min_qualified_card is not None:
-                    label_parts.append(f"min {min_qualified_card}")
-                if max_qualified_card is not None:
-                    label_parts.append(f"max {max_qualified_card}")
-                if label_parts:
-                    target_str = get_class_expression_str(g, on_class, ns, prefix_map)
-                    rows.append((prop_name, f"{' '.join(label_parts)} {target_str}"))
+                range_expr = None
+                if all_values_from:
+                    range_expr = all_values_from
+                    label_parts.append("all")
+                if some_values_from:
+                    range_expr = some_values_from
+                    label_parts.append("some")
+                if has_value:
+                    range_expr = has_value
+                    label_parts.append("has")
+                if card:
+                    label_parts.append(f"exactly {card}")
+                if min_card:
+                    label_parts.append(f"min {min_card}")
+                if max_card:
+                    label_parts.append(f"max {max_card}")
 
-            on_data_range = g.value(restr, OWL.onDataRange)
-            if prop_name and (qualified_card or min_qualified_card or max_qualified_card) and on_data_range:
-                label_parts = []
-                if qualified_card is not None:
-                    label_parts.append(f"exactly {qualified_card}")
-                if min_qualified_card is not None:
-                    label_parts.append(f"min {min_qualified_card}")
-                if max_qualified_card is not None:
-                    label_parts.append(f"max {max_qualified_card}")
-                if label_parts:
-                    range_name = get_class_expression_str(g, on_data_range, ns, prefix_map)
+                # Handle unqualified cardinality by treating as qualified with owl:Thing
+                if label_parts and not range_expr:
+                    range_expr = OWL.Thing
+
+                if range_expr and label_parts:
+                    range_name = get_class_expression_str(g, range_expr, ns, prefix_map)
                     rows.append((prop_name, f"{' '.join(label_parts)} {range_name}"))
-
-            card = g.value(restr, OWL.cardinality)
-            min_card = g.value(restr, OWL.minCardinality)
-            max_card = g.value(restr, OWL.maxCardinality)
-            if card is not None:
-                range_type = g.value(base_prop, RDFS.range) if base_prop else None
-                if range_type:
-                    range_name = get_class_expression_str(g, range_type, ns, prefix_map)
-                    rows.append((prop_name, f"exactly {card} {range_name}"))
-                else:
-                    rows.append((prop_name, f"exactly {card} owl::Thing"))
-            if min_card is not None:
-                range_type = g.value(base_prop, RDFS.range) if base_prop else None
-                if range_type:
-                    range_name = get_class_expression_str(g, range_type, ns, prefix_map)
-                    rows.append((prop_name, f"min {min_card} {range_name}"))
-                else:
-                    rows.append((prop_name, f"min {min_card} owl::Thing"))
-            if max_card is not None:
-                range_type = g.value(base_prop, RDFS.range) if base_prop else None
-                if range_type:
-                    range_name = get_class_expression_str(g, range_type, ns, prefix_map)
-                    rows.append((prop_name, f"max {max_card} {range_name}"))
-                else:
-                    rows.append((prop_name, f"max {max_card} owl::Thing"))
+            else:
+                rows.append(("", "Unsupported restriction"))
 
     return rows
 
