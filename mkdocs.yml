@@ -110,6 +110,10 @@ plugins:
   - search
   - git-revision-date-localized:
       type: date
+      exclude:
+        - temp_dir/**
+      fallback_to_build_date: true 
+      strict: false  
   - include-markdown
   - multirepo:
       cleanup: true  # Optional: Clean up temp dirs after build
