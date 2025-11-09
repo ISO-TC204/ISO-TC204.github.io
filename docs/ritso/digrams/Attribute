@@ -1,0 +1,7 @@
+// Diagram for Alert
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=10]
+	Animal [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e"><B>Animal</B></TD></TR><TR><TD ALIGN="LEFT">weight: xsd:integer «only»</TD></TR></TABLE>> margin=0]
+}
