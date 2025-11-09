@@ -118,8 +118,8 @@ plugins:
       strict: false  
   - include-markdown
   - multirepo:
-      cleanup: false
-      keep_docs_dir: false
+      cleanup: true
+      keep_docs_dir: true
 markdown_extensions:
   - abbr
   - admonition

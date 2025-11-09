@@ -18,13 +18,19 @@ jobs:
         with:
           fetch-depth: 0  # Fetch full history for plugins that need commit history
 
-      # Step 2: Set up Python
+      # Step 2: Clenup directories from previous builds
+      - name: Clean multirepo directories
+        run: |
+          rm -rf docs/registries/ritso/*  # Adjust path to match your multirepo imports
+          rm -rf temp_dir  # If multirepo leaves temp_dir (with cleanup: false)
+
+      # Step 3: Set up Python
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
-      # Step 3: Install MkDocs and dependencies
+      # Step 4: Install MkDocs and dependencies
       - name: Install dependencies
         run: |
           pip install mkdocs-material
@@ -32,13 +38,13 @@ jobs:
           pip install mkdocs-include-markdown-plugin
           pip install mkdocs-multirepo-plugin
 
-      # Step 4: Build the MkDocs site
+      # Step 5: Build the MkDocs site
       - name: Build the site
         env:
           EXPORT_PDF: 1  # Optional: set to generate PDF if you have the mkdocs-pdf-export-plugin installed
         run: mkdocs build --strict
 
-      # Step 5: Deploy to GitHub Pages
+      # Step 6: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         run: |
           mkdocs gh-deploy --force --verbose
