@@ -70,6 +70,51 @@
 | http://www.opengis.net/ont/geosparql# | sfWithin | object_property |  |
 | http://www.opengis.net/ont/geosparql# | spatialDimension | datatype_property |  |
 | http://www.opengis.net/ont/sf# | Geometry | class |  |
+| http://www.openlr.org/ontology# | CircleLocationReference | class | Circle area location. |
+| http://www.openlr.org/ontology# | ClosedLineLocationReference | class | Closed line (polygon boundary) location. |
+| http://www.openlr.org/ontology# | Coordinates | class | WGS84 coordinate pair. |
+| http://www.openlr.org/ontology# | FormOfWay | class | Physical road type. |
+| http://www.openlr.org/ontology# | FunctionalRoadClass | class | Functional road class based on importance. |
+| http://www.openlr.org/ontology# | GeoCoordinateLocationReference | class | Unbound point location. |
+| http://www.openlr.org/ontology# | GridLocationReference | class | Grid area location. |
+| http://www.openlr.org/ontology# | LineAttributes | class | Attributes of a line: FRC, FOW, bearing. |
+| http://www.openlr.org/ontology# | LineLocationReference | class | Line location with LRPs and offsets. |
+| http://www.openlr.org/ontology# | LocationReference | class | Abstract base for all location references. |
+| http://www.openlr.org/ontology# | LocationReferencePoint | class | LRP with coordinates, line, and path attributes. |
+| http://www.openlr.org/ontology# | OpenLRObjectProperty | object_property | Grouping of OpenLR object properties. |
+| http://www.openlr.org/ontology# | OpenLRThing | class | Grouping of OpenLR classes. |
+| http://www.openlr.org/ontology# | Orientation | class | Orientation for point locations. |
+| http://www.openlr.org/ontology# | PathAttributes | class | Attributes to next point: lowest FRC, distance. |
+| http://www.openlr.org/ontology# | PoiWithAccessPointLocationReference | class | POI with access point along line. |
+| http://www.openlr.org/ontology# | PointAlongLineLocationReference | class | Point along a line with offset. |
+| http://www.openlr.org/ontology# | PolygonLocationReference | class | Polygon area location. |
+| http://www.openlr.org/ontology# | RectangleLocationReference | class | Rectangle area location. |
+| http://www.openlr.org/ontology# | SideOfRoad | class | Side of the road for point locations. |
+| http://www.openlr.org/ontology# | bearing | datatype_property | Bearing value; multiply by 11.25 for degrees. |
+| http://www.openlr.org/ontology# | distanceToNext | datatype_property | Distance in meters to next point. |
+| http://www.openlr.org/ontology# | hasCenter | object_property |  |
+| http://www.openlr.org/ontology# | hasCoordinates | object_property |  |
+| http://www.openlr.org/ontology# | hasCorner | object_property | Ordered list of corners. |
+| http://www.openlr.org/ontology# | hasFOW | object_property |  |
+| http://www.openlr.org/ontology# | hasFRC | object_property |  |
+| http://www.openlr.org/ontology# | hasLRP | object_property | Ordered list of LRPs. |
+| http://www.openlr.org/ontology# | hasLineAttributes | object_property |  |
+| http://www.openlr.org/ontology# | hasLowerLeft | object_property |  |
+| http://www.openlr.org/ontology# | hasLowestFRCToNext | object_property |  |
+| http://www.openlr.org/ontology# | hasOrientation | object_property |  |
+| http://www.openlr.org/ontology# | hasPOICoordinates | object_property |  |
+| http://www.openlr.org/ontology# | hasPathAttributes | object_property |  |
+| http://www.openlr.org/ontology# | hasSideOfRoad | object_property |  |
+| http://www.openlr.org/ontology# | hasUpperRight | object_property |  |
+| http://www.openlr.org/ontology# | latitude | datatype_property |  |
+| http://www.openlr.org/ontology# | longitude | datatype_property |  |
+| http://www.openlr.org/ontology# | negativeOffset | datatype_property | Negative offset in meters. |
+| http://www.openlr.org/ontology# | numColumns | datatype_property |  |
+| http://www.openlr.org/ontology# | numRows | datatype_property |  |
+| http://www.openlr.org/ontology# | positiveOffset | datatype_property | Positive offset in meters. |
+| http://www.openlr.org/ontology# | radius | datatype_property | Radius in meters. |
+| http://www.openlr.org/ontology# | value | datatype_property |  |
+| http://www.openlr.org/ontology# | version | datatype_property |  |
 | http://www.w3.org/1999/02/22-rdf-syntax-ns# | List | class |  |
 | http://www.w3.org/2001/XMLSchema# | date | class |  |
 | http://www.w3.org/2001/XMLSchema# | dateTime | class |  |
@@ -239,6 +284,22 @@
 | http://www.w3.org/ns/ssn/ | isProxyFor | object_property |  |
 | http://www.w3.org/ns/ssn/ | wasOriginatedBy | object_property |  |
 | http://xmlns.com/foaf/0.1/ | Agent | class |  |
+| https://isotc204.org/25965/openlr# | Coordinates | class | WGS 84 coordinates (longitude, latitude) for an LRP |
+| https://isotc204.org/25965/openlr# | FormOfWay | class | Type of road segment, e.g., motorway, single carriageway |
+| https://isotc204.org/25965/openlr# | FunctionalRoadClass | class | Classification of road importance, e.g., FRC0 (main road) to FRC7 (local road) |
+| https://isotc204.org/25965/openlr# | LocationReference | class | Represents a location reference in OpenLR, consisting of a sequence of LRPs and optional offsets |
+| https://isotc204.org/25965/openlr# | LocationReferencePoint | class | A point in an OpenLR path, defined by coordinates and attributes like FRC, FOW, and bearing |
+| https://isotc204.org/25965/openlr# | hasBearing | datatype_property |  |
+| https://isotc204.org/25965/openlr# | hasCoordinates | object_property |  |
+| https://isotc204.org/25965/openlr# | hasDistanceToNext | datatype_property |  |
+| https://isotc204.org/25965/openlr# | hasFOW | object_property |  |
+| https://isotc204.org/25965/openlr# | hasFRC | object_property |  |
+| https://isotc204.org/25965/openlr# | hasLRP | object_property |  |
+| https://isotc204.org/25965/openlr# | hasLatitude | datatype_property |  |
+| https://isotc204.org/25965/openlr# | hasLongitude | datatype_property |  |
+| https://isotc204.org/25965/openlr# | hasNegativeOffset | datatype_property |  |
+| https://isotc204.org/25965/openlr# | hasPositiveOffset | datatype_property |  |
+| https://isotc204.org/25965/openlr# | nextLRP | object_property |  |
 | https://isotc204.org/25965/transport/transportnetwork# | Alert | class |  |
 | https://isotc204.org/25965/transport/transportnetwork# | AlertDataProperty | datatype_property |  |
 | https://isotc204.org/25965/transport/transportnetwork# | AlertObjectProperty | object_property |  |
@@ -370,6 +431,8 @@
 | https://isotc204.org/ontologies/its/location# | LocationPattern | class |  |
 | https://isotc204.org/ontologies/its/location# | LocationReference | class |  |
 | https://isotc204.org/ontologies/its/location# | LocationThing | class |  |
+| https://isotc204.org/ontologies/its/location# | NamedArea | class |  |
+| https://isotc204.org/ontologies/its/location# | NetworkLocation | class |  |
 | https://isotc204.org/ontologies/its/location# | PointCoordinates | class |  |
 | https://isotc204.org/ontologies/its/location# | PointDestination | class |  |
 | https://isotc204.org/ontologies/its/location# | PointLocation | class |  |

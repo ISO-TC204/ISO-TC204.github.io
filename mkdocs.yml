@@ -45,14 +45,18 @@ nav:
       - Concept Registry: ritso/python/concept_registry.md
       - City Data Model:
         - Part 1: 
-          - v1.0.1: '!import https://github.com/k-vaughn/ontology-cdm-p1?branch=main'
+          - v1.0.1: '!import https://github.com/iso-tc204/ontology-cdm-p1?branch=v1.0.1'
         - Part 2: 
-          - v1.0.1: '!import https://github.com/k-vaughn/ontology-cdm-p2?branch=main'
+          - v1.0.1: '!import https://github.com/iso-tc204/ontology-cdm-p2?branch=v1.0.1'
         - Part 3: 
-          - v1.0.0: '!import https://github.com/k-vaughn/ontology-cdm-p3?branch=main'
+          - v1.0.0: '!import https://github.com/iso-tc204/ontology-cdm-p3?branch=v1.0.0'
       - ITS:
-        - Traffic Regulations: 
-          - v0.0.1: '!import https://github.com/k-vaughn/ontology-its-regulation?branch=main'
+        - Location: 
+          - v0.0.1: '!import https://github.com/iso-tc204/ontology-its-location?branch=v0.0.1'
+        - Regulation: 
+          - v0.0.1: '!import https://github.com/iso-tc204/ontology-its-regulation?branch=v0.0.1'
+        - Time: 
+          - v0.0.1: '!import https://github.com/iso-tc204/ontology-its-time?branch=v0.0.1'
   - Standards: 
     - Overview: standards.md
     - METR: https://iso-tc204.github.io/iso24315/

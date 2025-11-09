@@ -69,12 +69,19 @@ def process_ontology(ofn_path: str, errors: list, ontology_info) -> tuple:
         log.error(error_msg)
         return None, None, None, None, None, None
 
-    # Load OFN ontology using funowl
+    # Load OFN content and remove unsupported DLSafeRule (SWRL rules are not supported by funowl)
     try:
-        doc = to_python(ofn_path)
-        if not doc:
-            raise ValueError("Failed to parse OWL functional syntax document")
+        with open(ofn_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        # Assuming the DLSafeRule is at the end before the closing parenthesis
+        if 'DLSafeRule' in content:
+            content = content.rsplit('DLSafeRule', 1)[0].rstrip() + ')'
+            log.info(f"Removed unsupported DLSafeRule from {ofn_path} as funowl does not support SWRL rules.")
         
+        # Parse the modified content using funowl
+        doc = to_python(content)
+        if not doc:
+            raise ValueError("Failed to parse OWL functional syntax document")        
         # Get default namespace from document
         ns = None
         if hasattr(doc, 'ontology') and doc.ontology and doc.ontology.iri:
