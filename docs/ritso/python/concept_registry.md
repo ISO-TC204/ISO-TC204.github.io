@@ -3,12 +3,31 @@
 | http://ontology.eil.utoronto.ca/5087/2/Sensors/ | sensorsObjectProperty | object_property |  |
 | http://ontology.eil.utoronto.ca/5087/2/Sensors/ | sensorsThing | class |  |
 | http://ontology.eil.utoronto.ca/5087/2/Sensors/ | ssnDataProperty | datatype_property |  |
+| http://ontology.eil.utoronto.ca/ISO21972/iso21972# | Cardinality_unit | class | Just as the meter is the unit of measure for length, a gci:Cardinality_unit is the unit of measure for the size of a set. The gci:Cardinality_unit is a ratio scale: gci:Cardinality_scale, which is a subclass of om:Ratio_scale and is has a zero element (namely zero). |
 | http://ontology.eil.utoronto.ca/ISO21972/iso21972# | City | class |  |
 | http://ontology.eil.utoronto.ca/ISO21972/iso21972# | Feature | class |  |
+| http://ontology.eil.utoronto.ca/ISO21972/iso21972# | Measure | class |  |
+| http://ontology.eil.utoronto.ca/ISO21972/iso21972# | Measurement_scale | class |  |
+| http://ontology.eil.utoronto.ca/ISO21972/iso21972# | Monetary_unit | class |  |
 | http://ontology.eil.utoronto.ca/ISO21972/iso21972# | Population | class |  |
+| http://ontology.eil.utoronto.ca/ISO21972/iso21972# | Population_measure | class | Reused from GCI Foundation ontology |
+| http://ontology.eil.utoronto.ca/ISO21972/iso21972# | Population_size | class | Reused from GCI Foundation ontology: http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl |
+| http://ontology.eil.utoronto.ca/ISO21972/iso21972# | Quantity | class |  |
+| http://ontology.eil.utoronto.ca/ISO21972/iso21972# | System_of_units | class | In order to achieve a coherent, interdependent set of units of measure in the wide variety of units that exist, units are organised in systems of units. A system of units is based on a set of units chosen by convention to be the system’s base units, units that are considered to be mutually independent (i.e., can’t be expressed in terms of each other). |
+| http://ontology.eil.utoronto.ca/ISO21972/iso21972# | Unit_of_measure | class |  |
+| http://ontology.eil.utoronto.ca/ISO21972/iso21972# | Unit_of_measureDivision | class |  |
+| http://ontology.eil.utoronto.ca/ISO21972/iso21972# | base_unit | object_property |  |
 | http://ontology.eil.utoronto.ca/ISO21972/iso21972# | cardinality_of | object_property |  |
+| http://ontology.eil.utoronto.ca/ISO21972/iso21972# | defined_by | object_property |  |
+| http://ontology.eil.utoronto.ca/ISO21972/iso21972# | denominator | object_property |  |
+| http://ontology.eil.utoronto.ca/ISO21972/iso21972# | exponent | datatype_property |  |
+| http://ontology.eil.utoronto.ca/ISO21972/iso21972# | factor | datatype_property |  |
 | http://ontology.eil.utoronto.ca/ISO21972/iso21972# | for_time_interval | object_property |  |
 | http://ontology.eil.utoronto.ca/ISO21972/iso21972# | hasValue | object_property |  |
+| http://ontology.eil.utoronto.ca/ISO21972/iso21972# | numerator | object_property |  |
+| http://ontology.eil.utoronto.ca/ISO21972/iso21972# | numerical_value | datatype_property |  |
+| http://ontology.eil.utoronto.ca/ISO21972/iso21972# | unit_of_measure | object_property |  |
+| http://ontology.eil.utoronto.ca/ISO21972/iso21972# | value | object_property |  |
 | http://purl.org/vocommons/voaf# | Vocabulary | class |  |
 | http://schema.org/ | GeoCoordinates | class |  |
 | http://schema.org/ | PostalAddress | class |  |
@@ -16,21 +35,85 @@
 | http://schema.org/ | gender | object_property | Gender of the person. |
 | http://schema.org/ | name | datatype_property |  |
 | http://www.opengis.net/ont/geosparql# | Geometry | class |  |
+| http://www.opengis.net/ont/geosparql# | SpatialObject | class |  |
+| http://www.opengis.net/ont/geosparql# | asGML | datatype_property |  |
+| http://www.opengis.net/ont/geosparql# | asWKT | datatype_property |  |
+| http://www.opengis.net/ont/geosparql# | coordinateDimension | datatype_property |  |
+| http://www.opengis.net/ont/geosparql# | dimension | datatype_property |  |
+| http://www.opengis.net/ont/geosparql# | ehContains | object_property |  |
+| http://www.opengis.net/ont/geosparql# | ehCoveredBy | object_property |  |
+| http://www.opengis.net/ont/geosparql# | ehCovers | object_property |  |
+| http://www.opengis.net/ont/geosparql# | ehDisjoint | object_property |  |
+| http://www.opengis.net/ont/geosparql# | ehEquals | object_property |  |
+| http://www.opengis.net/ont/geosparql# | ehInside | object_property |  |
+| http://www.opengis.net/ont/geosparql# | ehMeet | object_property |  |
+| http://www.opengis.net/ont/geosparql# | ehOverlap | object_property |  |
+| http://www.opengis.net/ont/geosparql# | hasGeometry | object_property |  |
+| http://www.opengis.net/ont/geosparql# | hasSerialization | datatype_property |  |
+| http://www.opengis.net/ont/geosparql# | isEmpty | datatype_property |  |
+| http://www.opengis.net/ont/geosparql# | isSimple | datatype_property |  |
+| http://www.opengis.net/ont/geosparql# | rcc8dc | object_property |  |
+| http://www.opengis.net/ont/geosparql# | rcc8ec | object_property |  |
+| http://www.opengis.net/ont/geosparql# | rcc8eq | object_property |  |
+| http://www.opengis.net/ont/geosparql# | rcc8ntpp | object_property |  |
+| http://www.opengis.net/ont/geosparql# | rcc8ntppi | object_property |  |
+| http://www.opengis.net/ont/geosparql# | rcc8po | object_property |  |
+| http://www.opengis.net/ont/geosparql# | rcc8tpp | object_property |  |
+| http://www.opengis.net/ont/geosparql# | rcc8tppi | object_property |  |
+| http://www.opengis.net/ont/geosparql# | sfContains | object_property |  |
+| http://www.opengis.net/ont/geosparql# | sfCrosses | object_property |  |
+| http://www.opengis.net/ont/geosparql# | sfDisjoint | object_property |  |
+| http://www.opengis.net/ont/geosparql# | sfEquals | object_property |  |
+| http://www.opengis.net/ont/geosparql# | sfIntersects | object_property |  |
+| http://www.opengis.net/ont/geosparql# | sfOverlaps | object_property |  |
+| http://www.opengis.net/ont/geosparql# | sfTouches | object_property |  |
+| http://www.opengis.net/ont/geosparql# | sfWithin | object_property |  |
+| http://www.opengis.net/ont/geosparql# | spatialDimension | datatype_property |  |
+| http://www.opengis.net/ont/sf# | Geometry | class |  |
+| http://www.w3.org/1999/02/22-rdf-syntax-ns# | List | class |  |
+| http://www.w3.org/2001/XMLSchema# | date | class |  |
+| http://www.w3.org/2001/XMLSchema# | dateTime | class |  |
+| http://www.w3.org/2001/XMLSchema# | dateTimeStamp | class |  |
 | http://www.w3.org/2001/XMLSchema# | decimal | datatype |  |
+| http://www.w3.org/2001/XMLSchema# | duration | class |  |
+| http://www.w3.org/2001/XMLSchema# | gDay | class |  |
+| http://www.w3.org/2001/XMLSchema# | gMonth | class |  |
+| http://www.w3.org/2001/XMLSchema# | gYear | class |  |
+| http://www.w3.org/2001/XMLSchema# | gYearMonth | class |  |
+| http://www.w3.org/2001/XMLSchema# | nonNegativeInteger | datatype |  |
 | http://www.w3.org/2001/XMLSchema# | string | datatype |  |
 | http://www.w3.org/2002/07/owl# | Thing | class |  |
 | http://www.w3.org/2003/01/geo/wgs84_pos# | lat | datatype_property |  |
 | http://www.w3.org/2003/01/geo/wgs84_pos# | long | datatype_property |  |
+| http://www.w3.org/2004/02/skos/core# | Collection | class |  |
+| http://www.w3.org/2004/02/skos/core# | Concept | class |  |
+| http://www.w3.org/2004/02/skos/core# | ConceptScheme | class |  |
+| http://www.w3.org/2004/02/skos/core# | hasTopConcept | object_property |  |
+| http://www.w3.org/2004/02/skos/core# | inScheme | object_property |  |
+| http://www.w3.org/2004/02/skos/core# | member | object_property |  |
+| http://www.w3.org/2004/02/skos/core# | memberList | object_property |  |
+| http://www.w3.org/2004/02/skos/core# | notation | datatype_property |  |
+| http://www.w3.org/2004/02/skos/core# | semanticRelation | object_property |  |
 | http://www.w3.org/2006/time# | DateTimeDescription | class |  |
 | http://www.w3.org/2006/time# | DateTimeInterval | class |  |
+| http://www.w3.org/2006/time# | DayOfWeek | class | El día de la semana |
+| http://www.w3.org/2006/time# | Duration | class | Duración de una extensión temporal expresada como un número escalado por una unidad temporal. |
 | http://www.w3.org/2006/time# | DurationDescription | class |  |
 | http://www.w3.org/2006/time# | GeneralDateTimeDescription | class |  |
 | http://www.w3.org/2006/time# | GeneralDurationDescription | class |  |
+| http://www.w3.org/2006/time# | Instant | class | A temporal entity with zero extent or duration |
 | http://www.w3.org/2006/time# | Interval | class |  |
+| http://www.w3.org/2006/time# | January | class |  |
+| http://www.w3.org/2006/time# | MonthOfYear | class | El mes del año. |
 | http://www.w3.org/2006/time# | ProperInterval | class |  |
+| http://www.w3.org/2006/time# | TRS | class | A temporal reference system, such as a temporal coordinate system (with an origin, direction, and scale), a calendar-clock combination, or a (possibly hierarchical) ordinal system. |
 | http://www.w3.org/2006/time# | TemporalDuration | class |  |
 | http://www.w3.org/2006/time# | TemporalEntity | class |  |
 | http://www.w3.org/2006/time# | TemporalPosition | class |  |
+| http://www.w3.org/2006/time# | TemporalUnit | class | A standard duration, which provides a scale factor for a time extent, or the granularity or precision for a time position. |
+| http://www.w3.org/2006/time# | TimePosition | class | A temporal position described using either a (nominal) value from an ordinal reference system, or a (numeric) value in a temporal coordinate system. |
+| http://www.w3.org/2006/time# | TimeZone | class | A Time Zone specifies the amount by which the local time is offset from UTC. |
+| http://www.w3.org/2006/time# | Year | class | Year duration |
 | http://www.w3.org/2006/time# | after | object_property |  |
 | http://www.w3.org/2006/time# | before | object_property |  |
 | http://www.w3.org/2006/time# | day | object_property |  |
@@ -39,6 +122,8 @@
 | http://www.w3.org/2006/time# | days | object_property |  |
 | http://www.w3.org/2006/time# | hasBeginning | object_property |  |
 | http://www.w3.org/2006/time# | hasDateTimeDescription | object_property |  |
+| http://www.w3.org/2006/time# | hasDuration | object_property | Duración de una entidad temporal, expresada como un valor escalado o un valor nominal. |
+| http://www.w3.org/2006/time# | hasDurationDescription | object_property | Duración de una entidad temporal, expresada utilizando una descripción estructurada. |
 | http://www.w3.org/2006/time# | hasEnd | object_property |  |
 | http://www.w3.org/2006/time# | hasTRS | object_property |  |
 | http://www.w3.org/2006/time# | hasTemporalDuration | object_property |  |
@@ -50,6 +135,7 @@
 | http://www.w3.org/2006/time# | inTemporalPosition | object_property |  |
 | http://www.w3.org/2006/time# | inTimePosition | object_property |  |
 | http://www.w3.org/2006/time# | inXSDDate | object_property |  |
+| http://www.w3.org/2006/time# | inXSDDateTime | datatype_property | Posición de un instante, expresado utilizando xsd:dateTime. |
 | http://www.w3.org/2006/time# | inXSDDateTimeStamp | object_property |  |
 | http://www.w3.org/2006/time# | inXSDgYear | object_property |  |
 | http://www.w3.org/2006/time# | inXSDgYearMonth | object_property |  |
@@ -91,6 +177,10 @@
 | http://www.w3.org/ns/org# | memberOf | object_property |  |
 | http://www.w3.org/ns/prov# | Activity | class |  |
 | http://www.w3.org/ns/prov# | Agent | class |  |
+| http://www.w3.org/ns/prov# | Influence | class |  |
+| http://www.w3.org/ns/prov# | InstantaneousEvent | class |  |
+| http://www.w3.org/ns/prov# | Location | class |  |
+| http://www.w3.org/ns/prov# | Role | class |  |
 | http://www.w3.org/ns/sosa/ | ActuatableProperty | class | An actuatable quality (property, characteristic) of a FeatureOfInterest. |
 | http://www.w3.org/ns/sosa/ | Actuation | class | An Actuation carries out an (Actuation) Procedure to change the state of the world using an Actuator. |
 | http://www.w3.org/ns/sosa/ | Actuator | class | A device that is used by, or implements, an (Actuation) Procedure that changes the state of the world. |
@@ -149,8 +239,121 @@
 | http://www.w3.org/ns/ssn/ | isProxyFor | object_property |  |
 | http://www.w3.org/ns/ssn/ | wasOriginatedBy | object_property |  |
 | http://xmlns.com/foaf/0.1/ | Agent | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | Alert | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | AlertDataProperty | datatype_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | AlertObjectProperty | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | Footpath | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | FootpathLane | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | FootpathLink | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | FootpathNetwork | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | FootpathSection | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | FootpathSegment | class | A FootpathSegment can be defined to be a part of a FootpathSection, especially when the FootpathSection does not span an entire FootpathLink. |
+| https://isotc204.org/25965/transport/transportnetwork# | GroupOfLines | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | ITSDataProperty | datatype_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | ITSObjectProperty | object_property |  |
 | https://isotc204.org/25965/transport/transportnetwork# | ITSPattern | class |  |
 | https://isotc204.org/25965/transport/transportnetwork# | ITSThing | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | Junction | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | LocationObjectProperty | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | MicromobilityLane | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | MicromobilityLink | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | MicromobilityNetwork | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | MicromobilityNetworkPattern | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | MicromobilityPath | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | MicromobilityPathSection | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | MicromobilityPathSegment | class | A MicromobilityPathSegment can be defined to be a part of a MicromobilityPathSection, especially when the MicromobilityPathSection does not span an entire MicromobilityLink. |
+| https://isotc204.org/25965/transport/transportnetwork# | NetworkElement | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | PedestrianNetworkPattern | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | PointOnRoute | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | PublicTransportElement | class | A PublicTransportElement represents any element of a public transport system. It can be a part of another PublicTransportElement and can be decomposed into smaller PublicTransportElement. |
+| https://isotc204.org/25965/transport/transportnetwork# | PublicTransportLine | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | PublicTransportRoute | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | PublicTransportSystem | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | PublicTransportSystemPattern | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | RailCorridor | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | RailNetwork | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | RailNetworkPattern | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | RailSection | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | Road | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | RoadLane | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | RoadLink | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | RoadLinkUserType | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | RoadNetwork | class | Roads are most commonly associated with motor vehicles, but can be designed for other types of vehicles (e.g., micromobility vehicles). |
+| https://isotc204.org/25965/transport/transportnetwork# | RoadNetworkPattern | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | RoadSection | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | RoadSegment | class | A RoadSegment can be defined to be a part of a RoadSection, for example, when the RoadSection does not span an entire RoadLink. |
+| https://isotc204.org/25965/transport/transportnetwork# | RoutePoint | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | ScheduledCode | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | TrackLink | class | Due to the nature of rail, each TrackLink consists of a single lane, but multiple TrackLinks can exist along the same RailCorridor. |
+| https://isotc204.org/25965/transport/transportnetwork# | TrackSegment | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | TransportAlert | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | TransportAlertPattern | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | TransportNetwork | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | TransportNetworkDataProperty | datatype_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | TransportNetworkObjectProperty | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | TransportNetworkPattern | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | TransportNode | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | TravelCorridor | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | TravelCorridorLink | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | TravelCorridorPattern | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | TravelCorridorSegment | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | TravelledWay | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | TravelledWayLane | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | TravelledWayLink | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | TravelledWaySection | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | TravelledWaySegment | class |  |
+| https://isotc204.org/25965/transport/transportnetwork# | activities | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | affects | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | allowedDirections | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | beginTime | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | capacity | datatype_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | category | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | cause | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | certainty | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | code | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | corridorElement | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | creationTime | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | designator | datatype_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | direction | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | distribution | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | effect | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | egress | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | endTime | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | expiryTime | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | from | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | headline | datatype_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | index | datatype_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | ingress | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | isBorderCrossing | datatype_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | isViaPoint | datatype_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | issuer | datatype_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | lastUpdateTime | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | location | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | maxLanes | datatype_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | next | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | numLanes | datatype_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | pavementType | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | point | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | points | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | previous | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | primaryUser | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | recommendation | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | referencedAlert | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | resources | datatype_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | routePointType | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | severity | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | speedLimit | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | status | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | timeInterval | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | to | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | travelCorridorSegment | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | travelTime | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | urgency | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | usedBy | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | userCategory | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | uses | object_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | website | datatype_property |  |
+| https://isotc204.org/25965/transport/transportnetwork# | width | datatype_property |  |
 | https://isotc204.org/ontologies/its/location# | AreaDestination | class |  |
 | https://isotc204.org/ontologies/its/location# | AreaLocation | class |  |
 | https://isotc204.org/ontologies/its/location# | Destination | class |  |
@@ -459,6 +662,7 @@
 | https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Time# | TimeOntologyDataProperty | datatype_property | Data property added for organizational purposes, to identify data properties defined in the Time Ontology. |
 | https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Time# | TimeOntologyProperty | object_property | Property added for organizational purposes, to identify properties defined in the Time Ontology. |
 | https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Time# | TimeOntologyThing | class | Class added for organizational purposes, to identify classes defined in the Time Ontology. |
+| https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/ | properPartOf | object_property |  |
 | https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building# | Building | class | Building: A Building is a structure with some location in the urban system. The location of the Building in space may change due to construction, but the Parcel/Lot of land it is located on cannot. |
 | https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building# | BuildingFacility | class |  |
 | https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building# | BuildingFunction | class |  |
@@ -817,3 +1021,10 @@
 | https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure# | networkType | object_property |  |
 | https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure# | supports | object_property |  |
 | https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure# | transportationInfrastructureObjectProperty | object_property |  |
+| https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/transinfras# | Road | class |  |
+| https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/transinfras# | RoadLink | class |  |
+| https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/transinfras# | RoadSegment | class |  |
+| https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/transinfras# | TravelledWay | class |  |
+| https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/transinfras# | TravelledWayLink | class |  |
+| https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/transinfras# | TravelledWaySegment | class |  |
+| https://www.opengis.net/ont/geosparql# | Feature | class |  |
