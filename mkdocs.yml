@@ -119,7 +119,7 @@ plugins:
   - include-markdown
   - multirepo:
       cleanup: true
-      keep_docs_dir: true
+      keep_docs_dir: false
 markdown_extensions:
   - abbr
   - admonition
