@@ -323,7 +323,6 @@
 | https://isotc204.org/25965/transport/transportnetwork# | MicromobilityPath | class |  |
 | https://isotc204.org/25965/transport/transportnetwork# | MicromobilityPathSection | class |  |
 | https://isotc204.org/25965/transport/transportnetwork# | MicromobilityPathSegment | class | A MicromobilityPathSegment can be defined to be a part of a MicromobilityPathSection, especially when the MicromobilityPathSection does not span an entire MicromobilityLink. |
-| https://isotc204.org/25965/transport/transportnetwork# | NetworkElement | class |  |
 | https://isotc204.org/25965/transport/transportnetwork# | PedestrianNetworkPattern | class |  |
 | https://isotc204.org/25965/transport/transportnetwork# | PointOnRoute | class |  |
 | https://isotc204.org/25965/transport/transportnetwork# | PublicTransportElement | class | A PublicTransportElement represents any element of a public transport system. It can be a part of another PublicTransportElement and can be decomposed into smaller PublicTransportElement. |
@@ -431,8 +430,6 @@
 | https://isotc204.org/ontologies/its/location# | LocationPattern | class |  |
 | https://isotc204.org/ontologies/its/location# | LocationReference | class |  |
 | https://isotc204.org/ontologies/its/location# | LocationThing | class |  |
-| https://isotc204.org/ontologies/its/location# | NamedArea | class |  |
-| https://isotc204.org/ontologies/its/location# | NetworkLocation | class |  |
 | https://isotc204.org/ontologies/its/location# | PointCoordinates | class |  |
 | https://isotc204.org/ontologies/its/location# | PointDestination | class |  |
 | https://isotc204.org/ontologies/its/location# | PointLocation | class |  |
