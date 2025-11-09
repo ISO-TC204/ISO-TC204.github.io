@@ -27,6 +27,7 @@ nav:
     - Fee and toll collection (WG 5): wg5/index.md
     - Fleet management (WG 7): wg7/index.md
     - Geographic data (WG 3): wg3/index.md
+    - Geographic information systems (JWG 11): tc211jwg11/index.md
     - Identifiers (AG 2): ag2/index.md
     - Mobility integration (WG 19): wg19/index.md
     - Nomadic devices in ITS (WG 17): wg17/index.md
@@ -42,6 +43,7 @@ nav:
     - RITSO: 
       - Home: ritso/index.md
       - Ontology formats: ritso/ontology_formats.md
+      - Ontology Registry: ritso/ontology_registry.md
       - Concept Registry: ritso/python/concept_registry.md
       - City Data Model:
         - Part 1: 
@@ -116,7 +118,7 @@ plugins:
       strict: false  
   - include-markdown
   - multirepo:
-      cleanup: true  # Optional: Clean up temp dirs after build
+      cleanup: false
       keep_docs_dir: false
 markdown_extensions:
   - abbr
