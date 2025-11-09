@@ -43,7 +43,7 @@ nav:
     - RITSO: 
       - Home: ritso/index.md
       - Ontology formats: ritso/ontology_formats.md
-      - Ontology Registry: ritso/ontology_registry.md
+      - Ontology Registry: ritso/python/ontology_registry.md
       - Concept Registry: ritso/python/concept_registry.md
       - City Data Model:
         - Part 1: 
