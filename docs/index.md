@@ -24,7 +24,6 @@ A user-friendly overview of TC204 including:
 - [Registries](registries.md) that we actively maintain
 - Guidance to practitioners who _use_ our [standards](standards.md)
 - Information on how to [contribute](contributor.md) to the process
-- [News](news.md) about ISO TC 204 efforts
 - Links to related [resources](resources.md) produced by others (in ISO and elsewhere)
 - Answers to [frequently asked questions](faq.md)
 
