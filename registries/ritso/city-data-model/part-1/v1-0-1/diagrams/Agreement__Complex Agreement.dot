@@ -1,0 +1,19 @@
+// Diagram for Complex Agreement
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		"Complex Agreement" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Complex Agreement</TD></TR></TABLE>> URL="../classes/Agreement__Complex Agreement.md" margin=0]
+	}
+	Agreement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Agreement</TD></TR></TABLE>> URL="../_counters/Agreement__Agreement.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+	}
+	"Complex Agreement" -> Agreement [arrowhead=onormal style=solid]
+	Agreement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Agreement</TD></TR></TABLE>> URL="../_counters/Agreement__Agreement.md" margin=0]
+	"Complex Agreement" -> Agreement [label=" hasSubAgreement 
+ «min 2»  " arrowhead=normal style=solid]
+}

@@ -1,0 +1,25 @@
+// Diagram for TravelCorridorLink
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		TravelCorridorLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">TravelCorridorLink</TD></TR></TABLE>> URL="../classes/transportnetwork__TravelCorridorLink.md" margin=0]
+	}
+	TravelledWayLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWayLink</TD></TR></TABLE>> URL="../_counters/transportnetwork__TravelledWayLink.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		TravelCorridor [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelCorridor</TD></TR></TABLE>> URL="../_counters/transportnetwork__TravelCorridor.md" margin=0]
+		TravelCorridorSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelCorridorSegment</TD></TR></TABLE>> URL="../_counters/transportnetwork__TravelCorridorSegment.md" margin=0]
+	}
+	TravelCorridorLink -> TravelledWayLink [arrowhead=onormal style=solid]
+	TravelCorridorLink -> Invis [style=invis]
+	Invis -> TravelCorridor [style=invis]
+	TravelCorridor -> TravelCorridorSegment [style=invis]
+	TravelCorridorLink -> TravelCorridorSegment [label=" onProperty: partwhole::hasProperPart 
+ «min 1, only»  " arrowhead=normal style=dashed]
+	TravelCorridorLink -> TravelCorridor [label=" onProperty: partwhole::properPartOf 
+ «only»  " arrowhead=normal style=dashed]
+}

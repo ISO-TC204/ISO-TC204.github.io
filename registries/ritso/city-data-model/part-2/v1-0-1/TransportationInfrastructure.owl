@@ -1,0 +1,464 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#"
+     xml:base="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/ansportationInfrastructure#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:adms="http://www.w3.org/ns/adms#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:genProp="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties#"
+     xmlns:partwhole="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology#"
+     xmlns:spatialLoc="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc#"
+     xmlns:infrastructure="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Infrastructure#">
+    <owl:Ontology rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#">
+        <owl:imports rdf:resource="https://isotc204.org/registries/ritso/city-data-model/part-1/v1-0-1/GenericProperties.owl"/>
+        <owl:imports rdf:resource="https://isotc204.org/registries/ritso/city-data-model/part-1/v1-0-1/Mereology.owl"/>
+        <owl:imports rdf:resource="https://isotc204.org/registries/ritso/city-data-model/part-1/v1-0-1/SpatialLoc.owl"/>
+        <owl:imports rdf:resource="https://isotc204.org/registries/ritso/city-data-model/part-2/v1-0-1/Infrastructure.owl"/>
+        <dc:description>The Transportation Infrastructure pattern defines the concepts that are relevant in describing the physical transportation infrastructure and their characteristics. This includes the concepts of a Road, Bridge, and Tunnel. The Infrastructure Pattern is reused here, as these transportation structures are all defined as types of (subclasses) Infrastructure Elements.</dc:description>
+        <dc:issued>May 3, 2021</dc:issued>
+        <dc:title>Transportation Infrastructure Pattern</dc:title>
+        <owl:versionInfo rdf:datatype="xsd:decimal">1.0</owl:versionInfo>
+        <adms:relatedDocumentation>Under development. Refer to latest draft of ISO 5087-2.</adms:relatedDocumentation>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+    
+
+
+    <!-- http://www.w3.org/ns/adms#relatedDocumentation -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/adms#relatedDocumentation"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/based_near -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/based_near"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#aggregateOf -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#aggregateOf">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#transportationInfrastructureObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#aggregationOf -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#aggregationOf">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#transportationInfrastructureObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#networkType -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#networkType">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#transportationInfrastructureObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#supports -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#supports">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#transportationInfrastructureObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#transportationInfrastructureObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#transportationInfrastructureObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties#hasName -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties#hasName"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Infrastructure#InfrastructureElement -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Infrastructure#InfrastructureElement"/>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#Bridge -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#Bridge">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Infrastructure#InfrastructureElement"/>
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TransportationInfrastructureOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology#hasProperPart"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#BridgeSegment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#supports"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TravelledWaySegment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#BridgeSegment -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#BridgeSegment">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Infrastructure#InfrastructureElement"/>
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TransportationInfrastructureOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#supports"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TravelledWaySegment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#RailLine -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#RailLine">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TransportationInfrastructureOntologyThing"/>
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TravelledWay"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#aggregationOf"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#RailLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#RailSegment -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#RailSegment">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TransportationInfrastructureOntologyThing"/>
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TravelledWaySegment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology#properPartOf"/>
+                <owl:someValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#RailLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#Road -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#Road">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TransportationInfrastructureOntologyThing"/>
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TravelledWay"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#aggregationOf"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#RoadLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#RoadSegment -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#RoadSegment">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TransportationInfrastructureOntologyThing"/>
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TravelledWaySegment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology#properPartOf"/>
+                <owl:someValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#RoadLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#networkType"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#RoadNetworkType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#Tunnel -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#Tunnel">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Infrastructure#InfrastructureElement"/>
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TransportationInfrastructureOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology#hasProperPart"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TunnelSegment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#supports"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TravelledWaySegment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TunnelSegment -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TunnelSegment">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Infrastructure#InfrastructureElement"/>
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TransportationInfrastructureOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#supports"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TravelledWaySegment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#RailLink -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#RailLink">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TransportationInfrastructureOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#aggregateOf"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#RailLine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#RoadLink -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#RoadLink">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TransportationInfrastructureOntologyThing"/>
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TravelledWayLink"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#aggregateOf"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#Road"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#RoadNetworkType -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#RoadNetworkType">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TransportationInfrastructureOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#hasCode"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TransportationInfrastructureOntologyThing -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TransportationInfrastructureOntologyThing">
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TravelledWay -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TravelledWay">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TransportationInfrastructureOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#aggregationOf"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TravelledWayLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TravelledWayLink -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TravelledWayLink">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Infrastructure#InfrastructureElement"/>
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TransportationInfrastructureOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#aggregateOf"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TravelledWay"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TravelledWaySegment -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TravelledWaySegment">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Infrastructure#InfrastructureElement"/>
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TransportationInfrastructureOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology#properPartOf"/>
+                <owl:someValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/TransportationInfrastructure#TravelledWayLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

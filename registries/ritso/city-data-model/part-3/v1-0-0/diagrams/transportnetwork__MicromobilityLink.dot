@@ -1,0 +1,33 @@
+// Diagram for MicromobilityLink
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		MicromobilityLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">MicromobilityLink</TD></TR></TABLE>> URL="../classes/transportnetwork__MicromobilityLink.md" margin=0]
+	}
+	RoadLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadLink</TD></TR></TABLE>> URL="../_counters/transportnetwork__RoadLink.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		MicromobilityNetwork [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">MicromobilityNetwork</TD></TR></TABLE>> URL="../_counters/transportnetwork__MicromobilityNetwork.md" margin=0]
+		MicromobilityPath [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">MicromobilityPath</TD></TR></TABLE>> URL="../_counters/transportnetwork__MicromobilityPath.md" margin=0]
+		MicromobilityPathSection [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">MicromobilityPathSection</TD></TR></TABLE>> URL="../_counters/transportnetwork__MicromobilityPathSection.md" margin=0]
+		MicromobilityPathSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">MicromobilityPathSegment</TD></TR></TABLE>> URL="../_counters/transportnetwork__MicromobilityPathSegment.md" margin=0]
+	}
+	MicromobilityLink -> RoadLink [arrowhead=onormal style=solid]
+	MicromobilityLink -> Invis [style=invis]
+	Invis -> MicromobilityNetwork [style=invis]
+	MicromobilityNetwork -> MicromobilityPath [style=invis]
+	MicromobilityPath -> MicromobilityPathSection [style=invis]
+	MicromobilityPathSection -> MicromobilityPathSegment [style=invis]
+	MicromobilityLink -> MicromobilityPathSegment [label=" onProperty: partwhole::hasProperPart 
+ «min 1, only»  " arrowhead=normal style=dashed]
+	N062cbcf2a4454574a194720d742c7b84 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	N062cbcf2a4454574a194720d742c7b84 -> MicromobilityNetwork [label=member arrowhead=normal style=dotted]
+	N062cbcf2a4454574a194720d742c7b84 -> MicromobilityPath [label=member arrowhead=normal style=dotted]
+	N062cbcf2a4454574a194720d742c7b84 -> MicromobilityPathSection [label=member arrowhead=normal style=dotted]
+	MicromobilityLink -> N062cbcf2a4454574a194720d742c7b84 [label=" onProperty: partwhole::properPartOf 
+ «only»  " arrowhead=normal style=dashed]
+}

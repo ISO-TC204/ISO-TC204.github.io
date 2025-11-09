@@ -1,0 +1,44 @@
+// Diagram for Contract
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Contract [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Contract</TD></TR></TABLE>> URL="../classes/Contract__Contract.md" margin=0]
+	}
+	ContractOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ContractOntologyThing</TD></TR></TABLE>> URL="../_counters/Contract__ContractOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		agreement__Agreement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">agreement::Agreement</TD></TR></TABLE>> margin=0]
+		cdmOrg__Organization [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdmOrg::Organization</TD></TR></TABLE>> margin=0]
+		ContractualElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ContractualElement</TD></TR></TABLE>> URL="../_counters/Contract__ContractualElement.md" margin=0]
+		person__Person [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">person::Person</TD></TR></TABLE>> margin=0]
+		time__Interval [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">time::Interval</TD></TR></TABLE>> margin=0]
+		time__TemporalEntity [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">time::TemporalEntity</TD></TR></TABLE>> margin=0]
+	}
+	Contract -> ContractOntologyThing [arrowhead=onormal style=solid]
+	Contract -> Invis [style=invis]
+	Invis -> agreement__Agreement [style=invis]
+	agreement__Agreement -> cdmOrg__Organization [style=invis]
+	cdmOrg__Organization -> ContractualElement [style=invis]
+	ContractualElement -> person__Person [style=invis]
+	person__Person -> time__Interval [style=invis]
+	time__Interval -> time__TemporalEntity [style=invis]
+	Contract -> ContractualElement [label=" hasContractualElement 
+ «some»  " arrowhead=normal style=solid]
+	Contract -> agreement__Agreement [label=" specifiesAgreement 
+ «some»  " arrowhead=normal style=solid]
+	Contract -> time__TemporalEntity [label=" executedOn 
+ «only»  " arrowhead=normal style=solid]
+	Contract -> time__Interval [label=" isValidFor 
+ «only»  " arrowhead=normal style=solid]
+	Ndab9eac798d8462ba480148cb2cbc211 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	Ndab9eac798d8462ba480148cb2cbc211 -> cdmOrg__Organization [label=member arrowhead=normal style=dotted]
+	Ndab9eac798d8462ba480148cb2cbc211 -> person__Person [label=member arrowhead=normal style=dotted]
+	Contract -> Ndab9eac798d8462ba480148cb2cbc211 [label=" hasParty 
+ «min 2»  " arrowhead=normal style=solid]
+	Contract -> person__Person [label=" hasSignatory 
+ «min 2»  " arrowhead=normal style=solid]
+}

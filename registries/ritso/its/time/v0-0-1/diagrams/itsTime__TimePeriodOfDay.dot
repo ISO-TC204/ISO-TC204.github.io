@@ -1,0 +1,41 @@
+// Diagram for TimePeriodOfDay
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		TimePeriodOfDay [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">TimePeriodOfDay</TD></TR></TABLE>> URL="../classes/itsTime__TimePeriodOfDay.md" margin=0]
+	}
+	TimeThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TimeThing</TD></TR></TABLE>> URL="../_counters/itsTime__TimeThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		FuzzyTime [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FuzzyTime</TD></TR></TABLE>> URL="../_counters/itsTime__FuzzyTime.md" margin=0]
+		time__Instant [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">time::Instant</TD></TR></TABLE>> margin=0]
+	}
+	TimePeriodOfDay -> TimeThing [arrowhead=onormal style=solid]
+	TimePeriodOfDay -> Invis [style=invis]
+	Invis -> FuzzyTime [style=invis]
+	FuzzyTime -> time__Instant [style=invis]
+	nc9411b7b35684569a3e72dc81cbf3841b37 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	nc9411b7b35684569a3e72dc81cbf3841b37 -> time__Instant [label=member arrowhead=normal style=dotted]
+	nc9411b7b35684569a3e72dc81cbf3841b37 -> FuzzyTime [label=member arrowhead=normal style=dotted]
+	TimePeriodOfDay -> nc9411b7b35684569a3e72dc81cbf3841b37 [label=" endTimeOfPeriod 
+ «only»  " arrowhead=normal style=solid]
+	nc9411b7b35684569a3e72dc81cbf3841b41 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	nc9411b7b35684569a3e72dc81cbf3841b41 -> time__Instant [label=member arrowhead=normal style=dotted]
+	nc9411b7b35684569a3e72dc81cbf3841b41 -> FuzzyTime [label=member arrowhead=normal style=dotted]
+	TimePeriodOfDay -> nc9411b7b35684569a3e72dc81cbf3841b41 [label=" startTimeOfPeriod 
+ «only»  " arrowhead=normal style=solid]
+	nc9411b7b35684569a3e72dc81cbf3841b45 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	nc9411b7b35684569a3e72dc81cbf3841b45 -> time__Instant [label=member arrowhead=normal style=dotted]
+	nc9411b7b35684569a3e72dc81cbf3841b45 -> FuzzyTime [label=member arrowhead=normal style=dotted]
+	TimePeriodOfDay -> nc9411b7b35684569a3e72dc81cbf3841b45 [label=" endTimeOfPeriod 
+ «exactly 1»  " arrowhead=normal style=solid]
+	nc9411b7b35684569a3e72dc81cbf3841b49 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	nc9411b7b35684569a3e72dc81cbf3841b49 -> time__Instant [label=member arrowhead=normal style=dotted]
+	nc9411b7b35684569a3e72dc81cbf3841b49 -> FuzzyTime [label=member arrowhead=normal style=dotted]
+	TimePeriodOfDay -> nc9411b7b35684569a3e72dc81cbf3841b49 [label=" startTimeOfPeriod 
+ «exactly 1»  " arrowhead=normal style=solid]
+}

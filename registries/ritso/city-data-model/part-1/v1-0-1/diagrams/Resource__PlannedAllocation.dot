@@ -1,0 +1,31 @@
+// Diagram for PlannedAllocation
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		PlannedAllocation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">PlannedAllocation</TD></TR><TR><TD ALIGN="LEFT">otime::hasTime: xsd::string «exactly 1»</TD></TR></TABLE>> URL="../classes/Resource__PlannedAllocation.md" margin=0]
+	}
+	change__Manifestation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">change::Manifestation</TD></TR></TABLE>> margin=0]
+	ResourceOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ResourceOntologyThing</TD></TR></TABLE>> URL="../_counters/Resource__ResourceOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		activity__State [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">activity::State</TD></TR></TABLE>> margin=0]
+		i72__Quantity [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">i72::Quantity</TD></TR></TABLE>> margin=0]
+		Resource [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Resource</TD></TR></TABLE>> URL="../_counters/Resource__Resource.md" margin=0]
+	}
+	PlannedAllocation -> change__Manifestation [arrowhead=onormal style=solid]
+	PlannedAllocation -> ResourceOntologyThing [arrowhead=onormal style=solid]
+	PlannedAllocation -> Invis [style=invis]
+	Invis -> activity__State [style=invis]
+	activity__State -> i72__Quantity [style=invis]
+	i72__Quantity -> Resource [style=invis]
+	PlannedAllocation -> Resource [label=" forResource 
+ «exactly 1»  " arrowhead=normal style=solid]
+	PlannedAllocation -> activity__State [label=" forState 
+ «exactly 1»  " arrowhead=normal style=solid]
+	PlannedAllocation -> i72__Quantity [label=" hasQuantity 
+ «exactly 1»  " arrowhead=normal style=solid]
+}

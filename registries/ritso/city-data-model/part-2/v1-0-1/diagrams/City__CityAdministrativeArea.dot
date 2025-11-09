@@ -1,0 +1,23 @@
+// Diagram for CityAdministrativeArea
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		CityAdministrativeArea [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">CityAdministrativeArea</TD></TR></TABLE>> URL="../classes/City__CityAdministrativeArea.md" margin=0]
+	}
+	CityOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">CityOntologyThing</TD></TR></TABLE>> URL="../_counters/City__CityOntologyThing.md" margin=0]
+	JurisdictionalArea [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">JurisdictionalArea</TD></TR></TABLE>> URL="../_counters/City__JurisdictionalArea.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		i72__City [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">i72::City</TD></TR></TABLE>> margin=0]
+	}
+	CityAdministrativeArea -> CityOntologyThing [arrowhead=onormal style=solid]
+	CityAdministrativeArea -> JurisdictionalArea [arrowhead=onormal style=solid]
+	CityAdministrativeArea -> Invis [style=invis]
+	Invis -> i72__City [style=invis]
+	CityAdministrativeArea -> i72__City [label=" onProperty: administrativeAreaOf 
+ «some»  " arrowhead=normal style=dashed]
+}

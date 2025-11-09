@@ -1,0 +1,28 @@
+// Diagram for TrackSegment
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		TrackSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">TrackSegment</TD></TR></TABLE>> URL="../classes/transportnetwork__TrackSegment.md" margin=0]
+	}
+	TravelledWaySegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWaySegment</TD></TR></TABLE>> URL="../_counters/transportnetwork__TravelledWaySegment.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		RailSection [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RailSection</TD></TR></TABLE>> URL="../_counters/transportnetwork__RailSection.md" margin=0]
+		TrackLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TrackLink</TD></TR></TABLE>> URL="../_counters/transportnetwork__TrackLink.md" margin=0]
+	}
+	TrackSegment -> TravelledWaySegment [arrowhead=onormal style=solid]
+	TrackSegment -> Invis [style=invis]
+	Invis -> RailSection [style=invis]
+	RailSection -> TrackLink [style=invis]
+	N231df07fe0174e10a41c694e274c2e44 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	N231df07fe0174e10a41c694e274c2e44 -> RailSection [label=member arrowhead=normal style=dotted]
+	N231df07fe0174e10a41c694e274c2e44 -> TrackLink [label=member arrowhead=normal style=dotted]
+	TrackSegment -> N231df07fe0174e10a41c694e274c2e44 [label=" onProperty: partwhole::properPartOf 
+ «only»  " arrowhead=normal style=dashed]
+	TrackSegment -> TrackLink [label=" onProperty: partwhole::properPartOf 
+ «exactly 1»  " arrowhead=normal style=dashed]
+}

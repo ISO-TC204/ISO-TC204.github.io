@@ -1,0 +1,25 @@
+// Diagram for Citizenship
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Citizenship [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Citizenship</TD></TR></TABLE>> URL="../classes/Person__Citizenship.md" margin=0]
+	}
+	PersonOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PersonOntologyThing</TD></TR></TABLE>> URL="../_counters/Person__PersonOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		contact__Country [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">contact::Country</TD></TR></TABLE>> margin=0]
+		time__ProperInterval [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">time::ProperInterval</TD></TR></TABLE>> margin=0]
+	}
+	Citizenship -> PersonOntologyThing [arrowhead=onormal style=solid]
+	Citizenship -> Invis [style=invis]
+	Invis -> contact__Country [style=invis]
+	contact__Country -> time__ProperInterval [style=invis]
+	Citizenship -> contact__Country [label=" forCountry 
+ «max 1»  " arrowhead=normal style=solid]
+	Citizenship -> time__ProperInterval [label=" validityPeriod 
+ «max 1»  " arrowhead=normal style=solid]
+}

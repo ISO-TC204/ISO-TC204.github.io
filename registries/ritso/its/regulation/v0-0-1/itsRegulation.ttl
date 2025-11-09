@@ -1,0 +1,227 @@
+@prefix : <https://isotc204.org/ontologies/its/regulation#> .
+@prefix cityunits: <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/CityUnits/> .
+@prefix code: <https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix genProp: <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties#> .
+@prefix its-location: <https://isotc204.org/ontologies/its/location#> .
+@prefix its-time: <https://isotc204.org/ontologies/its/time#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix transportnetwork: <https://isotc204.org/25965/transport/transportnetwork#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dc:description a owl:AnnotationProperty .
+
+dc:title a owl:AnnotationProperty .
+
+terms:description a owl:AnnotationProperty .
+
+xsd:gDay a rdfs:Datatype .
+
+xsd:gMonth a rdfs:Datatype .
+
+xsd:time a rdfs:Datatype .
+
+: a owl:Ontology ;
+    dc:title "Ontology for Traffic Regulations" ;
+    terms:description "This ontology defines concepts related to traffic regulations using concepts specified in ISO/IEC 5087-1 and ISO/IEC-5087-2." ;
+    owl:imports <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2003/11/swrl>,
+        <http://www.w3.org/2003/11/swrlb>,
+        <http://www.w3.org/2006/time>,
+        transportnetwork:,
+        its-location:,
+        its-time:,
+        <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Agent>,
+        cityunits:,
+        <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties>,
+        <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology>,
+        <https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code>,
+        <https://www.opengis.net/ont/geosparql> .
+
+:TrafficRegulationOrder a owl:Class ;
+    terms:description "A TrafficRegulation Order is a legally recognised document that specifies one or more traffic regulations." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass code:Code ;
+            owl:onProperty :status ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass its-time:Validity ;
+            owl:onProperty :implementedValidity ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass its-time:Validity ;
+            owl:onProperty :validityByOrder ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :TrafficRegulation ;
+            owl:onProperty :trafficRegulation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty genProp:hasIdentifier ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :LegalBasis ;
+            owl:onProperty :legalBasis ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty genProp:hasDescription ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom its-time:Validity ;
+            owl:onProperty :implementedValidity ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :RuleMaker ;
+            owl:onProperty :issuingAuthority ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :LegalBasis ;
+            owl:onProperty :legalBasis ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty genProp:hasDescription ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom its-time:Validity ;
+            owl:onProperty :validityByOrder ],
+        [ a owl:Restriction ;
+            owl:onClass :RuleMaker ;
+            owl:onProperty :issuingAuthority ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom code:Code ;
+            owl:onProperty :reasonCode ],
+        [ a owl:Restriction ;
+            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :TrafficRegulation ;
+            owl:onProperty :trafficRegulation ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty genProp:hasIdentifier ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom code:Code ;
+            owl:onProperty :status ],
+        :TroThing ;
+    xsd:pattern "TroPattern" .
+
+:TroPattern a owl:Class ;
+    rdfs:subClassOf transportnetwork:ITSPattern .
+
+:externalReferences a owl:ObjectProperty ;
+    rdfs:subPropertyOf :RegulationObjectProperty .
+
+:implementedLocation a owl:ObjectProperty ;
+    rdfs:subPropertyOf :RegulationObjectProperty .
+
+:index a owl:DatatypeProperty ;
+    rdfs:subPropertyOf transportnetwork:ITSDataProperty .
+
+:predefinedItineraryReference a owl:DatatypeProperty ;
+    rdfs:subPropertyOf :TroDataProperty .
+
+:predefinedLocationGroupReference a owl:DatatypeProperty ;
+    rdfs:subPropertyOf :TroDataProperty .
+
+:validityTimeSpecification a owl:ObjectProperty ;
+    rdfs:subPropertyOf :RegulationObjectProperty .
+
+transportnetwork:ITSObjectProperty a owl:ObjectProperty .
+
+transportnetwork:ITSPattern a owl:Class .
+
+transportnetwork:ITSThing a owl:Class .
+
+:reasonCode a owl:ObjectProperty ;
+    dc:description "A reason justifying the existence of the instance of the class" ;
+    rdfs:subPropertyOf :RegulationObjectProperty .
+
+xsd:date a rdfs:Datatype .
+
+transportnetwork:ITSDataProperty a owl:DatatypeProperty .
+
+:RuleMaker a owl:Class ;
+    terms:description "A rule maker is an entity that has the responsibility for creating and maintaining rules of the road or regulations for a geographic and operational scope as defined by the parent jurisdictional entity." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :LegalBasis ;
+            owl:onProperty :legalBasis ],
+        :TroThing ;
+    xsd:pattern "TroPattern" .
+
+:TrafficRegulation a owl:Class ;
+    terms:description "A traffic regulation is a rule having the force of law that is established by a regulator through a traffic regulation order." ;
+    rdfs:subClassOf :TroThing ;
+    xsd:pattern "TroPattern" .
+
+:date a owl:DatatypeProperty .
+
+:implementedValidity a owl:ObjectProperty ;
+    rdfs:subPropertyOf :RegulationObjectProperty .
+
+:issuingAuthority a owl:ObjectProperty ;
+    dc:description "The entity that issued the instance of the containing class" ;
+    rdfs:subPropertyOf :RegulationObjectProperty .
+
+:status a owl:ObjectProperty ;
+    dc:description "The status of the instance of the containing class" ;
+    rdfs:subPropertyOf :RegulationObjectProperty .
+
+:trafficRegulation a owl:ObjectProperty ;
+    rdfs:subPropertyOf :RegulationObjectProperty .
+
+:validityByOrder a owl:ObjectProperty ;
+    rdfs:subPropertyOf :RegulationObjectProperty .
+
+:version a owl:DatatypeProperty ;
+    rdfs:subPropertyOf :TroDataProperty .
+
+genProp:hasDescription a owl:DatatypeProperty .
+
+genProp:hasIdentifier a owl:DatatypeProperty .
+
+genProp:hasName a owl:DatatypeProperty .
+
+:LegalBasis a owl:Class ;
+    terms:description "A legal basis provides references to the legal documents that authorize an entity to issue the types of regulations covered by a traffic regulation order." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :version ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:date ;
+            owl:onProperty :date ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty genProp:hasName ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty genProp:hasName ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:date ;
+            owl:onProperty :date ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty :version ],
+        :TroThing ;
+    xsd:pattern "TroPattern" .
+
+:TroDataProperty a owl:DatatypeProperty ;
+    rdfs:subPropertyOf transportnetwork:ITSDataProperty .
+
+:legalBasis a owl:ObjectProperty ;
+    terms:description "formal authority within the law (e.g., statute, ordinance, administrative rule, constitutional provision) that empowers an entity to create, adopt, or enforce a regulation" ;
+    rdfs:subPropertyOf :RegulationObjectProperty .
+
+code:Code a owl:Class .
+
+:TroThing a owl:Class ;
+    rdfs:subClassOf transportnetwork:ITSThing ;
+    xsd:pattern "TroPattern" .
+
+its-time:Validity a owl:Class .
+
+:RegulationObjectProperty a owl:ObjectProperty ;
+    rdfs:subPropertyOf transportnetwork:ITSObjectProperty .
+

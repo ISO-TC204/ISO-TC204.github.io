@@ -1,0 +1,35 @@
+// Diagram for Outcome
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Outcome [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Outcome</TD></TR><TR><TD ALIGN="LEFT">genProp::hasDescription: xsd::string «max 1»</TD></TR></TABLE>> URL="../classes/CityService__Outcome.md" margin=0]
+	}
+	CityServiceOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">CityServiceOntologyThing</TD></TR></TABLE>> URL="../_counters/CityService__CityServiceOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		ImpactDirection [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ImpactDirection</TD></TR></TABLE>> URL="../_counters/CityService__ImpactDirection.md" margin=0]
+		Importance [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Importance</TD></TR></TABLE>> URL="../_counters/CityService__Importance.md" margin=0]
+		iso21972__Indicator [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">iso21972::Indicator</TD></TR></TABLE>> margin=0]
+		Stakeholder [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Stakeholder</TD></TR></TABLE>> URL="../_counters/CityService__Stakeholder.md" margin=0]
+	}
+	Outcome -> CityServiceOntologyThing [arrowhead=onormal style=solid]
+	Outcome -> Invis [style=invis]
+	Invis -> ImpactDirection [style=invis]
+	ImpactDirection -> Importance [style=invis]
+	Importance -> iso21972__Indicator [style=invis]
+	iso21972__Indicator -> Stakeholder [style=invis]
+	Outcome -> iso21972__Indicator [label=" hasIndicator 
+ «only»  " arrowhead=normal style=solid]
+	Outcome -> Stakeholder [label=" fromPerspectiveOf 
+ «exactly 1»  " arrowhead=normal style=solid]
+	Outcome -> Stakeholder [label=" hasBeneficialStakeholder 
+ «exactly 1»  " arrowhead=normal style=solid]
+	Outcome -> Importance [label=" hasImportance 
+ «max 1»  " arrowhead=normal style=solid]
+	Outcome -> ImpactDirection [label=" intendedImpact 
+ «max 1»  " arrowhead=normal style=solid]
+}

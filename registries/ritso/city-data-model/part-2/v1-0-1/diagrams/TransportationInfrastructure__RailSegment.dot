@@ -1,0 +1,23 @@
+// Diagram for RailSegment
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		RailSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">RailSegment</TD></TR></TABLE>> URL="../classes/TransportationInfrastructure__RailSegment.md" margin=0]
+	}
+	TransportationInfrastructureOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TransportationInfrastructureOntologyThing</TD></TR></TABLE>> URL="../_counters/TransportationInfrastructure__TransportationInfrastructureOntologyThing.md" margin=0]
+	TravelledWaySegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWaySegment</TD></TR></TABLE>> URL="../_counters/TransportationInfrastructure__TravelledWaySegment.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		RailLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RailLink</TD></TR></TABLE>> URL="../_counters/TransportationInfrastructure__RailLink.md" margin=0]
+	}
+	RailSegment -> TransportationInfrastructureOntologyThing [arrowhead=onormal style=solid]
+	RailSegment -> TravelledWaySegment [arrowhead=onormal style=solid]
+	RailSegment -> Invis [style=invis]
+	Invis -> RailLink [style=invis]
+	RailSegment -> RailLink [label=" partwhole::properPartOf 
+ «some»  " arrowhead=normal style=solid]
+}

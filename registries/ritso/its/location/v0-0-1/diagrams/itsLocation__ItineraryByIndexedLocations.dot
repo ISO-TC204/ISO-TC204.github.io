@@ -1,0 +1,21 @@
+// Diagram for ItineraryByIndexedLocations
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		ItineraryByIndexedLocations [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">ItineraryByIndexedLocations</TD></TR></TABLE>> URL="../classes/itsLocation__ItineraryByIndexedLocations.md" margin=0]
+	}
+	Itinerary [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Itinerary</TD></TR></TABLE>> URL="../_counters/itsLocation__Itinerary.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		IndexedLocation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">IndexedLocation</TD></TR></TABLE>> URL="../_counters/itsLocation__IndexedLocation.md" margin=0]
+	}
+	ItineraryByIndexedLocations -> Itinerary [arrowhead=onormal style=solid]
+	ItineraryByIndexedLocations -> Invis [style=invis]
+	Invis -> IndexedLocation [style=invis]
+	ItineraryByIndexedLocations -> IndexedLocation [label=" locationContainedInItinerary 
+ «only»  " arrowhead=normal style=solid]
+}

@@ -1,0 +1,58 @@
+// Diagram for RecurringEvent
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		RecurringEvent [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">RecurringEvent</TD></TR><TR><TD ALIGN="LEFT">endTime: xsd::time «only»</TD></TR><TR><TD ALIGN="LEFT">startTime: xsd::time «only»</TD></TR></TABLE>> URL="../classes/RecurringEvent__RecurringEvent.md" margin=0]
+	}
+	RecurringEventThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RecurringEventThing</TD></TR></TABLE>> URL="../_counters/RecurringEvent__RecurringEventThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		activity__Activity [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">activity::Activity</TD></TR></TABLE>> margin=0]
+		activity__State [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">activity::State</TD></TR></TABLE>> margin=0]
+		spatialLoc__Location [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">spatialLoc::Location</TD></TR></TABLE>> margin=0]
+		time__DayOfWeek [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">time::DayOfWeek</TD></TR></TABLE>> margin=0]
+		time__GeneralDateTimeDescription [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">time::GeneralDateTimeDescription</TD></TR></TABLE>> margin=0]
+		time__TemporalEntity [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">time::TemporalEntity</TD></TR></TABLE>> margin=0]
+	}
+	RecurringEvent -> RecurringEventThing [arrowhead=onormal style=solid]
+	RecurringEvent -> Invis [style=invis]
+	Invis -> activity__Activity [style=invis]
+	activity__Activity -> activity__State [style=invis]
+	activity__State -> spatialLoc__Location [style=invis]
+	spatialLoc__Location -> time__DayOfWeek [style=invis]
+	time__DayOfWeek -> time__GeneralDateTimeDescription [style=invis]
+	time__GeneralDateTimeDescription -> time__TemporalEntity [style=invis]
+	RecurringEvent -> activity__State [label=" beginsRecurringState 
+ «only»  " arrowhead=normal style=solid]
+	RecurringEvent -> time__TemporalEntity [label=" beginsRecurringTime 
+ «only»  " arrowhead=normal style=solid]
+	RecurringEvent -> activity__State [label=" endsRecurringState 
+ «only»  " arrowhead=normal style=solid]
+	RecurringEvent -> time__TemporalEntity [label=" endsRecurringTime 
+ «only»  " arrowhead=normal style=solid]
+	RecurringEvent -> time__DayOfWeek [label=" hasDayOfWeek 
+ «only»  " arrowhead=normal style=solid]
+	RecurringEvent -> activity__Activity [label=" hasOccurrence 
+ «only»  " arrowhead=normal style=solid]
+	RecurringEvent [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RecurringEvent</TD></TR></TABLE>> URL="../_counters/RecurringEvent__RecurringEvent.md" margin=0]
+	RecurringEvent -> RecurringEvent [label=" hasSubRecurringEvent 
+ «only»  " arrowhead=normal style=solid]
+	RecurringEvent -> time__GeneralDateTimeDescription [label=" onDateTimeDescription 
+ «only»  " arrowhead=normal style=solid]
+	Ne7c04b7f8e9e4555b5d2c9192de9e5a5 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	Ne7c04b7f8e9e4555b5d2c9192de9e5a5 -> time__DayOfWeek [label=member arrowhead=normal style=dotted]
+	Ne7c04b7f8e9e4555b5d2c9192de9e5a5 -> time__TemporalEntity [label=member arrowhead=normal style=dotted]
+	RecurringEvent -> Ne7c04b7f8e9e4555b5d2c9192de9e5a5 [label=" recursAddition 
+ «only»  " arrowhead=normal style=solid]
+	Nf4b446c4d2184fa6b50b15f1b633f812 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	Nf4b446c4d2184fa6b50b15f1b633f812 -> time__DayOfWeek [label=member arrowhead=normal style=dotted]
+	Nf4b446c4d2184fa6b50b15f1b633f812 -> time__TemporalEntity [label=member arrowhead=normal style=dotted]
+	RecurringEvent -> Nf4b446c4d2184fa6b50b15f1b633f812 [label=" recursExcept 
+ «only»  " arrowhead=normal style=solid]
+	RecurringEvent -> spatialLoc__Location [label=" spatialLoc::associatedLocation 
+ «only»  " arrowhead=normal style=solid]
+}

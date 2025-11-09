@@ -1,0 +1,33 @@
+// Diagram for Agreement
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Agreement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Agreement</TD></TR></TABLE>> URL="../classes/Agreement__Agreement.md" margin=0]
+	}
+	AgreementOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">AgreementOntologyThing</TD></TR></TABLE>> URL="../_counters/Agreement__AgreementOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		agent__Agent [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">agent::Agent</TD></TR></TABLE>> margin=0]
+		spatialLoc__Location [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">spatialLoc::Location</TD></TR></TABLE>> margin=0]
+		time__Instant [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">time::Instant</TD></TR></TABLE>> margin=0]
+		time__Interval [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">time::Interval</TD></TR></TABLE>> margin=0]
+	}
+	Agreement -> AgreementOntologyThing [arrowhead=onormal style=solid]
+	Agreement -> Invis [style=invis]
+	Invis -> agent__Agent [style=invis]
+	agent__Agent -> spatialLoc__Location [style=invis]
+	spatialLoc__Location -> time__Instant [style=invis]
+	time__Instant -> time__Interval [style=invis]
+	Agreement -> time__Instant [label=" establishedOn 
+ «only»  " arrowhead=normal style=solid]
+	Agreement -> time__Interval [label=" validFor 
+ «only»  " arrowhead=normal style=solid]
+	Agreement -> spatialLoc__Location [label=" validIn 
+ «only»  " arrowhead=normal style=solid]
+	Agreement -> agent__Agent [label=" involvesAgent 
+ «min 2»  " arrowhead=normal style=solid]
+}

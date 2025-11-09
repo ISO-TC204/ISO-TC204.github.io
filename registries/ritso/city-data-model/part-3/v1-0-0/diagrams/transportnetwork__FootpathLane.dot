@@ -1,0 +1,21 @@
+// Diagram for FootpathLane
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		FootpathLane [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">FootpathLane</TD></TR></TABLE>> URL="../classes/transportnetwork__FootpathLane.md" margin=0]
+	}
+	TravelledWayLane [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWayLane</TD></TR></TABLE>> URL="../_counters/transportnetwork__TravelledWayLane.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		FootpathSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FootpathSegment</TD></TR></TABLE>> URL="../_counters/transportnetwork__FootpathSegment.md" margin=0]
+	}
+	FootpathLane -> TravelledWayLane [arrowhead=onormal style=solid]
+	FootpathLane -> Invis [style=invis]
+	Invis -> FootpathSegment [style=invis]
+	FootpathLane -> FootpathSegment [label=" onProperty: partwhole::properPartOf 
+ «min 1, only»  " arrowhead=normal style=dashed]
+}

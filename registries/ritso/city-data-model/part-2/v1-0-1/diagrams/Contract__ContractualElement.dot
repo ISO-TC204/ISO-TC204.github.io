@@ -1,0 +1,19 @@
+// Diagram for ContractualElement
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		ContractualElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">ContractualElement</TD></TR><TR><TD ALIGN="LEFT">hasContractText: xsd::string</TD></TR></TABLE>> URL="../classes/Contract__ContractualElement.md" margin=0]
+	}
+	ContractOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ContractOntologyThing</TD></TR></TABLE>> URL="../_counters/Contract__ContractOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+	}
+	ContractualElement -> ContractOntologyThing [arrowhead=onormal style=solid]
+	Contract [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Contract</TD></TR></TABLE>> URL="../_counters/Contract__Contract.md" margin=0]
+	Contract -> ContractualElement [label=" inverse hasContractualElement 
+ «some»  " arrowhead=inv style=solid]
+}

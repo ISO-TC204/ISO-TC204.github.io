@@ -1,0 +1,46 @@
+// Diagram for Activity
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Activity [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Activity</TD></TR></TABLE>> URL="../classes/Activity__Activity.md" margin=0]
+	}
+	ActivityOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ActivityOntologyThing</TD></TR></TABLE>> URL="../_counters/Activity__ActivityOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		ActivityStatus [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ActivityStatus</TD></TR></TABLE>> URL="../_counters/Activity__ActivityStatus.md" margin=0]
+		spatialLoc__Location [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">spatialLoc::Location</TD></TR></TABLE>> margin=0]
+		State [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">State</TD></TR></TABLE>> URL="../_counters/Activity__State.md" margin=0]
+		time__Interval [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">time::Interval</TD></TR></TABLE>> margin=0]
+	}
+	Activity -> ActivityOntologyThing [arrowhead=onormal style=solid]
+	Activity -> Invis [style=invis]
+	Invis -> ActivityStatus [style=invis]
+	ActivityStatus -> spatialLoc__Location [style=invis]
+	spatialLoc__Location -> State [style=invis]
+	State -> time__Interval [style=invis]
+	Activity -> time__Interval [label=" occursAt 
+ «some»  " arrowhead=normal style=solid]
+	Activity -> spatialLoc__Location [label=" spatialLoc::associatedLocation 
+ «only»  " arrowhead=normal style=solid]
+	Activity -> State [label=" causes 
+ «only»  " arrowhead=normal style=solid]
+	State -> Activity [label=" inverse enables 
+ «only»  " arrowhead=inv style=solid]
+	Activity -> State [label=" hasEffect 
+ «only»  " arrowhead=normal style=solid]
+	State -> Activity [label=" inverse preconditionOf 
+ «only»  " arrowhead=inv style=solid]
+	Activity [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Activity</TD></TR></TABLE>> URL="../_counters/Activity__Activity.md" margin=0]
+	Activity -> Activity [label=" hasSubactivity 
+ «only»  " arrowhead=normal style=solid]
+	Activity -> Activity [label=" occursBefore 
+ «only»  " arrowhead=normal style=solid]
+	Activity -> Activity [label=" occursDirectlyBefore 
+ «only»  " arrowhead=normal style=solid]
+	Activity -> ActivityStatus [label=" hasStatus 
+ «exactly 1»  " arrowhead=normal style=solid]
+}

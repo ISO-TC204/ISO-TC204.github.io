@@ -1,0 +1,21 @@
+// Diagram for LineLocationReference
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		LineLocationReference [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">LineLocationReference</TD></TR><TR><TD ALIGN="LEFT">negativeOffset: xsd::integer «max 1»</TD></TR><TR><TD ALIGN="LEFT">positiveOffset: xsd::integer «max 1»</TD></TR></TABLE>> URL="../classes/OpenLR__LineLocationReference.md" margin=0]
+	}
+	LocationReference [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">LocationReference</TD></TR></TABLE>> URL="../_counters/OpenLR__LocationReference.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		LocationReferencePoint [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">LocationReferencePoint</TD></TR></TABLE>> URL="../_counters/OpenLR__LocationReferencePoint.md" margin=0]
+	}
+	LineLocationReference -> LocationReference [arrowhead=onormal style=solid]
+	LineLocationReference -> Invis [style=invis]
+	Invis -> LocationReferencePoint [style=invis]
+	LineLocationReference -> LocationReferencePoint [label=" hasLRP 
+ «min 2»  " arrowhead=normal style=solid]
+}

@@ -1,0 +1,38 @@
+// Diagram for TravelledWaySegment
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		TravelledWaySegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">TravelledWaySegment</TD></TR></TABLE>> URL="../classes/transportnetwork__TravelledWaySegment.md" margin=0]
+	}
+	NetworkElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">NetworkElement</TD></TR></TABLE>> URL="../_counters/transportnetwork__NetworkElement.md" margin=0]
+	transinfras__TravelledWaySegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">transinfras::TravelledWaySegment</TD></TR></TABLE>> margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		TravelCorridorSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelCorridorSegment</TD></TR></TABLE>> URL="../_counters/transportnetwork__TravelCorridorSegment.md" margin=0]
+		TravelledWayLane [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWayLane</TD></TR></TABLE>> URL="../_counters/transportnetwork__TravelledWayLane.md" margin=0]
+		TravelledWayLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWayLink</TD></TR></TABLE>> URL="../_counters/transportnetwork__TravelledWayLink.md" margin=0]
+		TravelledWaySection [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWaySection</TD></TR></TABLE>> URL="../_counters/transportnetwork__TravelledWaySection.md" margin=0]
+	}
+	TravelledWaySegment -> NetworkElement [arrowhead=onormal style=solid]
+	TravelledWaySegment -> transinfras__TravelledWaySegment [arrowhead=onormal style=solid]
+	TravelledWaySegment -> Invis [style=invis]
+	Invis -> TravelCorridorSegment [style=invis]
+	TravelCorridorSegment -> TravelledWayLane [style=invis]
+	TravelledWayLane -> TravelledWayLink [style=invis]
+	TravelledWayLink -> TravelledWaySection [style=invis]
+	TravelledWaySegment -> TravelCorridorSegment [label=" travelCorridorSegment 
+ «only»  " arrowhead=normal style=solid]
+	TravelledWaySegment -> TravelledWayLane [label=" onProperty: partwhole::hasProperPart 
+ «min 1, only»  " arrowhead=normal style=dashed]
+	N700dc761067241238d4c7ab3ad6eb1bb [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	N700dc761067241238d4c7ab3ad6eb1bb -> TravelledWayLink [label=member arrowhead=normal style=dotted]
+	N700dc761067241238d4c7ab3ad6eb1bb -> TravelledWaySection [label=member arrowhead=normal style=dotted]
+	TravelledWaySegment -> N700dc761067241238d4c7ab3ad6eb1bb [label=" onProperty: partwhole::properPartOf 
+ «only»  " arrowhead=normal style=dashed]
+	TravelledWaySegment -> TravelledWayLink [label=" onProperty: partwhole::properPartOf 
+ «min 1»  " arrowhead=normal style=dashed]
+}

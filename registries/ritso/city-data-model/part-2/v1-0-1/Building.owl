@@ -1,0 +1,710 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#"
+     xml:base="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:adms="http://www.w3.org/ns/adms#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/"
+     xmlns:change="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change#"
+     xmlns:cityUnits="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/CityUnits#"
+     xmlns:partwhole="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology#"
+     xmlns:spatialLoc="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc#"
+     xmlns:contact="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#"
+     xmlns:infrastructure="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Infrastructure#">
+    <owl:Ontology rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#">
+        <owl:versionIRI rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building.owl"/>
+        <owl:imports rdf:resource="https://isotc204.org/registries/ritso/city-data-model/part-1/v1-0-1/Change.owl"/>
+        <owl:imports rdf:resource="https://isotc204.org/registries/ritso/city-data-model/part-1/v1-0-1/CityUnits.owl"/>
+        <owl:imports rdf:resource="https://isotc204.org/registries/ritso/city-data-model/part-1/v1-0-1/Mereology.owl"/>
+        <owl:imports rdf:resource="https://isotc204.org/registries/ritso/city-data-model/part-1/v1-0-1/SpatialLoc.owl"/>
+        <owl:imports rdf:resource="https://isotc204.org/registries/ritso/city-data-model/part-2/v1-0-1/Contact.owl"/>
+        <owl:imports rdf:resource="https://isotc204.org/registries/ritso/city-data-model/part-2/v1-0-1/Infrastructure.owl"/>
+        <dc:description>A Building is a structure with some location in the urban system. The location of the Building in space may change due to construction, but the Parcel/Lot of land it is located on cannot.
+There may be many different types (subclasses) of buildings, such as House, Apartment Building, Office Building, and so on.
+</dc:description>
+        <dc:title>Building Ontology</dc:title>
+        <vann:preferredNamespacePrefix>building</vann:preferredNamespacePrefix>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.2</owl:versionInfo>
+        <adms:relatedDocumentation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Under development. Refer to latest version of ISO 5087-2.</adms:relatedDocumentation>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+    
+
+
+    <!-- http://www.w3.org/ns/adms#relatedDocumentation -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/adms#relatedDocumentation"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/based_near -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/based_near"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyProperty -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyProperty">
+        <dc:description>Added for organizational purposes, to identify properties defined in the Building ontology.</dc:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#SchemaOrgProperty -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#SchemaOrgProperty">
+        <dc:description>Added for organizational purposes, to capture the properties reused from Schema.org. Notice that since we cannot import schema.org we must manually reference the individual IRIs.</dc:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#buildingFacility -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#buildingFacility">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology#hasComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#floorAreaRatio -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#floorAreaRatio">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#floorToCeilingHeight -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#floorToCeilingHeight">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#hasBuildingFloorArea -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#hasBuildingFloorArea">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#hasBuildingFootprintArea -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#hasBuildingFootprintArea">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#hasBuildingHeight -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#hasBuildingHeight">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#hasBuildingUnit -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#hasBuildingUnit">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology#hasComponent"/>
+        <owl:inverseOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#unitInBuilding"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#hasConstructionStatus -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#hasConstructionStatus">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology#hasComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#hasFunction -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#hasFunction">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#hasRent -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#hasRent">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#locatedOn -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#locatedOn">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyProperty"/>
+        <dc:description>A Building is located on some parcel of land.</dc:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#unitInBuilding -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#unitInBuilding">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology#componentOf"/>
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology#containedIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#unitSize -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#unitSize">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#use -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#use">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#windowToWallRatio -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#windowToWallRatio">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#yearOfConstruction -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#yearOfConstruction">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/address -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/address">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#SchemaOrgProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology#containedIn -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology#containedIn"/>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology#hasValue -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology#hasValue"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyDataProperty">
+        <dc:description>Added for organizational purposes, to identify data properties defined in the Building ontology.</dc:description>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#builtAccordingToConstructionCode -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#builtAccordingToConstructionCode">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#numAboveGroundFloors -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#numAboveGroundFloors">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#numBuildingUnits -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#numBuildingUnits">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#numFloors -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#numFloors">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#numberOfBedrooms -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#numberOfBedrooms">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#numberOfRooms -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#numberOfRooms">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#propertyRegistrationID -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#propertyRegistrationID">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#Building -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#Building">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyThing"/>
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Infrastructure#InfrastructureElement"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#day"/>
+                                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#month"/>
+                                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#year"/>
+                                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#yearOfConstruction"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#buildingFacility"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#Facility"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#hasBuildingFloorArea"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/CityUnits#Area"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#hasBuildingFootprintArea"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/CityUnits#Area"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#hasBuildingHeight"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/CityUnits#Length"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#hasBuildingUnit"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#use"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingUse"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#floorAreaRatio"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/ISO21972/iso21972#RatioIndicator"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/ISO21972/iso21972#hasDenominator"/>
+                                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/CityUnits#Area"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/ISO21972/iso21972#hasNumerator"/>
+                                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/CityUnits#Area"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#hasConstructionStatus"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#ConstructionStatus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#windowToWallRatio"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/ISO21972/iso21972#RatioIndicator"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/ISO21972/iso21972#hasDenominator"/>
+                                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/CityUnits#Area"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/ISO21972/iso21972#hasNumerator"/>
+                                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/CityUnits#Area"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#builtAccordingToConstructionCode"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#numFloors"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#numAboveGroundFloors"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#numBuildingUnits"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#propertyRegistrationID"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>Building: A Building is a structure with some location in the urban system. The location of the Building in space may change due to construction, but the Parcel/Lot of land it is located on cannot.
+There are different types (subclasses) of buildings; House, Apartment Building, Office Building...
+A Building has an owner, which may be a Persons or some Organization.
+A Building has occupants, which may or may not be the same Persons or Firm who own it.
+A Building has a market value.
+A Building may provide some Parking.
+A Building has some Location.
+A Building has some height, some footprint area, and some floor area. The floor area is often greater than the footprint area as it accounts for the area of each floor of the building. However, floor area excludes unoccupied areas such as basements. These properties are considered variant as it is possible for a building to undergo construction to increase its dimensions.
+A Building contains one or many units.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingFunction -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingFunction">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyThing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyThing -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyThing">
+        <dc:description>Added for organizational purposes, to identify classes defined in the Building ontology.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingUnit -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingUnit">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyThing"/>
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change#Manifestation"/>
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Infrastructure#InfrastructureElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#buildingFacility"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#Facility"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#floorToCeilingHeight"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/CityUnits#Length"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#hasRent"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/CityUnits#MonetaryValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#unitSize"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/CityUnits#Area"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasAddress"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Address"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology#hasValue"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/CityUnits#MonetaryValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#unitInBuilding"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#Building"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change#existsAt"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#numberOfBedrooms"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#numberOfRooms"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>BuildingUnit: A part of a Building which may be occupied by some Persons or Organization.
+A BuildingUnit has a size (square footage, number of rooms)
+A BuildingUnit may contain some Facilities, e.g. kitchen, bath.(Note that contain is distinct from the notion of including amenities, which may be part of the Tenure)
+A BuildingUnit has an address</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingUse -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingUse">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#hasCode"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#ConstructionStatus -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#ConstructionStatus">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#hasCode"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#Facility -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#Facility">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#BuildingOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc#hasLocation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc#Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

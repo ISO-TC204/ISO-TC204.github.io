@@ -1,0 +1,21 @@
+// Diagram for PathAttributes
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		PathAttributes [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">PathAttributes</TD></TR><TR><TD ALIGN="LEFT">distanceToNext: xsd::integer «exactly 1»</TD></TR></TABLE>> URL="../classes/OpenLR__PathAttributes.md" margin=0]
+	}
+	OpenLRThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">OpenLRThing</TD></TR></TABLE>> URL="../_counters/OpenLR__OpenLRThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		FunctionalRoadClass [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FunctionalRoadClass</TD></TR></TABLE>> URL="../_counters/OpenLR__FunctionalRoadClass.md" margin=0]
+	}
+	PathAttributes -> OpenLRThing [arrowhead=onormal style=solid]
+	PathAttributes -> Invis [style=invis]
+	Invis -> FunctionalRoadClass [style=invis]
+	PathAttributes -> FunctionalRoadClass [label=" hasLowestFRCToNext 
+ «exactly 1»  " arrowhead=normal style=solid]
+}

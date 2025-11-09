@@ -1,0 +1,25 @@
+// Diagram for ForProfitOrganization
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		ForProfitOrganization [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">ForProfitOrganization</TD></TR></TABLE>> URL="../classes/Organization__ForProfitOrganization.md" margin=0]
+	}
+	Organization [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Organization</TD></TR></TABLE>> URL="../_counters/Organization__Organization.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		BusinessEstablishment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">BusinessEstablishment</TD></TR></TABLE>> URL="../_counters/Organization__BusinessEstablishment.md" margin=0]
+		IndustryType [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">IndustryType</TD></TR></TABLE>> URL="../_counters/Organization__IndustryType.md" margin=0]
+	}
+	ForProfitOrganization -> Organization [arrowhead=onormal style=solid]
+	ForProfitOrganization -> Invis [style=invis]
+	Invis -> BusinessEstablishment [style=invis]
+	BusinessEstablishment -> IndustryType [style=invis]
+	ForProfitOrganization -> BusinessEstablishment [label=" hasEstablishment 
+ «only»  " arrowhead=normal style=solid]
+	ForProfitOrganization -> IndustryType [label=" hasIndustryType 
+ «only»  " arrowhead=normal style=solid]
+}

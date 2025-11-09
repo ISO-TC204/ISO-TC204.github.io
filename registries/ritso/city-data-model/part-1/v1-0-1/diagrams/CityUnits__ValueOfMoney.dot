@@ -1,0 +1,21 @@
+// Diagram for ValueOfMoney
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		ValueOfMoney [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">ValueOfMoney</TD></TR></TABLE>> URL="../classes/CityUnits__ValueOfMoney.md" margin=0]
+	}
+	AmountOfMoney [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">AmountOfMoney</TD></TR></TABLE>> URL="../_counters/CityUnits__AmountOfMoney.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		MonetaryValue [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">MonetaryValue</TD></TR></TABLE>> URL="../_counters/CityUnits__MonetaryValue.md" margin=0]
+	}
+	ValueOfMoney -> AmountOfMoney [arrowhead=onormal style=solid]
+	ValueOfMoney -> Invis [style=invis]
+	Invis -> MonetaryValue [style=invis]
+	ValueOfMoney -> MonetaryValue [label=" onProperty: i72::value 
+ «only»  " arrowhead=normal style=dashed]
+}

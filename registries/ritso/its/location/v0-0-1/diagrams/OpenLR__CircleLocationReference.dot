@@ -1,0 +1,21 @@
+// Diagram for CircleLocationReference
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		CircleLocationReference [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">CircleLocationReference</TD></TR><TR><TD ALIGN="LEFT">radius: xsd::integer «exactly 1»</TD></TR></TABLE>> URL="../classes/OpenLR__CircleLocationReference.md" margin=0]
+	}
+	LocationReference [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">LocationReference</TD></TR></TABLE>> URL="../_counters/OpenLR__LocationReference.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		Coordinates [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Coordinates</TD></TR></TABLE>> URL="../_counters/OpenLR__Coordinates.md" margin=0]
+	}
+	CircleLocationReference -> LocationReference [arrowhead=onormal style=solid]
+	CircleLocationReference -> Invis [style=invis]
+	Invis -> Coordinates [style=invis]
+	CircleLocationReference -> Coordinates [label=" hasCenter 
+ «exactly 1»  " arrowhead=normal style=solid]
+}

@@ -1,0 +1,25 @@
+// Diagram for BusinessEstablishment
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		BusinessEstablishment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">BusinessEstablishment</TD></TR></TABLE>> URL="../classes/Organization__BusinessEstablishment.md" margin=0]
+	}
+	CityOrgOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">CityOrgOntologyThing</TD></TR></TABLE>> URL="../_counters/Organization__CityOrgOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		contact__Address [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">contact::Address</TD></TR></TABLE>> margin=0]
+		spatialLoc__Location [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">spatialLoc::Location</TD></TR></TABLE>> margin=0]
+	}
+	BusinessEstablishment -> CityOrgOntologyThing [arrowhead=onormal style=solid]
+	BusinessEstablishment -> Invis [style=invis]
+	Invis -> contact__Address [style=invis]
+	contact__Address -> spatialLoc__Location [style=invis]
+	BusinessEstablishment -> contact__Address [label=" contact::hasAddress 
+ «only»  " arrowhead=normal style=solid]
+	BusinessEstablishment -> spatialLoc__Location [label=" spatialLoc::hasLocation 
+ «max 1»  " arrowhead=normal style=solid]
+}

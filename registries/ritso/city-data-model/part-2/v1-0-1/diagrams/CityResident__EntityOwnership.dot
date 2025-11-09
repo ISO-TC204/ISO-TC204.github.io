@@ -1,0 +1,29 @@
+// Diagram for EntityOwnership
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		EntityOwnership [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">EntityOwnership</TD></TR><TR><TD ALIGN="LEFT">percentOwnership: xsd::decimal «max 1»</TD></TR></TABLE>> URL="../classes/CityResident__EntityOwnership.md" margin=0]
+	}
+	ControlledEntity [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ControlledEntity</TD></TR></TABLE>> URL="../_counters/CityResident__ControlledEntity.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		building__Building [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">building::Building</TD></TR></TABLE>> margin=0]
+		cdmOrg__Organization [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdmOrg::Organization</TD></TR></TABLE>> margin=0]
+		landUse__LandArea [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">landUse::LandArea</TD></TR></TABLE>> margin=0]
+	}
+	EntityOwnership -> ControlledEntity [arrowhead=onormal style=solid]
+	EntityOwnership -> Invis [style=invis]
+	Invis -> building__Building [style=invis]
+	building__Building -> cdmOrg__Organization [style=invis]
+	cdmOrg__Organization -> landUse__LandArea [style=invis]
+	N1618980622d2405ea4e1dadb0aa0267c [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	N1618980622d2405ea4e1dadb0aa0267c -> building__Building [label=member arrowhead=normal style=dotted]
+	N1618980622d2405ea4e1dadb0aa0267c -> landUse__LandArea [label=member arrowhead=normal style=dotted]
+	N1618980622d2405ea4e1dadb0aa0267c -> cdmOrg__Organization [label=member arrowhead=normal style=dotted]
+	EntityOwnership -> N1618980622d2405ea4e1dadb0aa0267c [label=" onProperty: entity 
+ «max 1»  " arrowhead=normal style=dashed]
+}

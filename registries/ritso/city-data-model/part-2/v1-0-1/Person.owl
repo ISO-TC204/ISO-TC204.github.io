@@ -1,0 +1,815 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#"
+     xml:base="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:adms="http://www.w3.org/ns/adms#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:agent="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Agent#"
+     xmlns:change="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change#"
+     xmlns:cityUnits="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/CityUnits#"
+     xmlns:code="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#"
+     xmlns:contact="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#">
+    <owl:Ontology rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#">
+        <owl:imports rdf:resource="https://isotc204.org/registries/ritso/city-data-model/part-1/v1-0-1/Agent.owl"/>
+        <owl:imports rdf:resource="https://isotc204.org/registries/ritso/city-data-model/part-1/v1-0-1/CityUnits.owl"/>
+        <owl:imports rdf:resource="https://isotc204.org/registries/ritso/city-data-model/part-2/v1-0-1/Code.owl"/>
+        <owl:imports rdf:resource="https://isotc204.org/registries/ritso/city-data-model/part-2/v1-0-1/Contact.owl"/>
+        <dc:description>Ontology to capture concepts related to Persons.</dc:description>
+        <dc:title>Person Ontology</dc:title>
+        <vann:preferredNamespacePrefix>person</vann:preferredNamespacePrefix>
+        <adms:relatedDocumentation>Under development. Refer to latest version of ISO 5087-1.</adms:relatedDocumentation>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+    
+
+
+    <!-- http://www.w3.org/ns/adms#relatedDocumentation -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/adms#relatedDocumentation"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/based_near -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/based_near"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasAddress -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasAddress"/>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasTelephone -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasTelephone"/>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyProperty -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyProperty">
+        <dc:description>Added for organizational purposes, to identify properties defined in the Person ontology.</dc:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#alias -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#alias">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#birthDate -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#birthDate">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyProperty"/>
+        <change:isInvariant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</change:isInvariant>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#birthplace -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#birthplace">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#children -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#children">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyProperty"/>
+        <dc:description>A child of the person.</dc:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#citizenOf -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#citizenOf">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#deathDate -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#deathDate">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#deathPlace -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#deathPlace">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#forCountry -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#forCountry">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#forPerson -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#forPerson">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#hasAge -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#hasAge">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#hasEducation -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#hasEducation">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#hasGenderIdentity -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#hasGenderIdentity">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#hasIDType -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#hasIDType">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#hasPersonID -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#hasPersonID">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyProperty"/>
+        <change:isInvariant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</change:isInvariant>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#hasQualification -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#hasQualification">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#hasSkill -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#hasSkill">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#income -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#income">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#issuedBy -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#issuedBy">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#name -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#name">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#parent -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#parent">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyProperty"/>
+        <dc:description>A parent of this person. Supersedes parents.</dc:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#sex -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#sex">
+        <owl:equivalentProperty rdf:resource="http://schema.org/gender"/>
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyProperty"/>
+        <change:isInvariant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</change:isInvariant>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#spouse -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#spouse">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyProperty"/>
+        <dc:description>The person&apos;s spouse.</dc:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#validityPeriod -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#validityPeriod">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/time#hasTime"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/gender -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/gender">
+        <dc:description>Gender of the person.</dc:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#email -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#email"/>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyDataProperty"/>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#additionalName -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#additionalName">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#familyName -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#familyName">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#givenName -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#givenName">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#photoID -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#photoID">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#PhoneNumber -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#PhoneNumber"/>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#Citizenship -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#Citizenship">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#forCountry"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#validityPeriod"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#Education -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#Education">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#hasCode"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#Gender -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#Gender">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#hasCode"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#IDType -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#IDType">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#hasCode"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#Person -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#Person">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyThing"/>
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Agent#Agent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasAddress"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Address"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasTelephone"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#PhoneNumber"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#alias"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonName"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#children"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#citizenOf"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#Citizenship"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#hasEducation"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#Education"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#hasGenderIdentity"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#Gender"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#hasPersonID"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonId"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#hasSkill"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#Skill"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#income"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/CityUnits#MonetaryValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#parent"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#spouse"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#birthDate"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#birthplace"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Address"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#deathDate"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#deathPlace"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Address"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#name"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonName"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#sex"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#Sex"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#email"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A Person may have a unique identifier.
+A Person has a date of birth, and may have a date of death.
+A Person may be a member of a Family and/or a Household.
+A Person has a mother and father, and may have a spouse and/or child(ren). Note that we define the parent relation as the legal relation as opposed to biological. This property may be specialized and restricted, for example hasBiologicalMother: exactly 1 Person.
+A Person may have some Job and associated Income.
+A Person may have access to some Vehicle.
+A Person may have access to some Bicycle.
+A Person may have some TransitPass.
+A Person has an address of residence and may have other contact information such as E-mail, phone number, etcetera.
+A Person has a Schedule for a given point (period) in time.
+Note that some properties are not defined in the Person ontology, but in an extension of the Person ontology that captures the interaction between iCity domain ontologies (e.g. Persons and their Vehicles)</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonId -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonId">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#hasIDType"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#IDType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#issuedBy"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Agent#Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#validityPeriod"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#Interval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties#hasIdentifier"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#photoID"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonName -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonName">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#additionalName"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#givenName"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#familyName"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyThing -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyThing">
+        <dc:description>Added for organizational purposes, to identify classes defined in the Person ontology.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#Qualification -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#Qualification">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyThing"/>
+        <dc:description>A Qualification captures some official degree of accomplishment. It may be required for something and/or possessed by some Person.</dc:description>
+        <rdfs:comment>To be defined in greater detail in future versions. Likely to be defined in a separate ontology.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#SchemaOrgThing -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#SchemaOrgThing">
+        <dc:description>Added for organizational purposes, to capture the classes reused from Schema.org. Notice that since we cannot import schema.org we must manually reference the individual IRIs.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#Sex -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#Sex">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#hasCode"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#Skill -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#Skill">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#PersonOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#hasCode"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A Skill captures an ability to perfom some activity or set of activities.</dc:description>
+        <rdfs:comment>To be defined in greater detail in future versions. Likely to be defined in a separate ontology.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/PostalAddress -->
+
+    <owl:Class rdf:about="http://schema.org/PostalAddress">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#SchemaOrgThing"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#female -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#female">
+        <rdf:type rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#Sex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#male -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#male">
+        <rdf:type rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#Sex"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

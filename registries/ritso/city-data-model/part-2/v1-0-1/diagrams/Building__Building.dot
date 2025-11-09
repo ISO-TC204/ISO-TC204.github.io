@@ -1,0 +1,63 @@
+// Diagram for Building
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Building [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Building</TD></TR><TR><TD ALIGN="LEFT">builtAccordingToConstructionCode: xsd::string «only»</TD></TR><TR><TD ALIGN="LEFT">numAboveGroundFloors: xsd::nonNegativeInteger «max 1»</TD></TR><TR><TD ALIGN="LEFT">numBuildingUnits: xsd::nonNegativeInteger «max 1»</TD></TR><TR><TD ALIGN="LEFT">numFloors: xsd::nonNegativeInteger «exactly 1»</TD></TR><TR><TD ALIGN="LEFT">propertyRegistrationID: xsd::string «max 1»</TD></TR></TABLE>> URL="../classes/Building__Building.md" margin=0]
+	}
+	BuildingOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">BuildingOntologyThing</TD></TR></TABLE>> URL="../_counters/Building__BuildingOntologyThing.md" margin=0]
+	infrastructure__InfrastructureElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">infrastructure::InfrastructureElement</TD></TR></TABLE>> margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		BuildingUnit [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">BuildingUnit</TD></TR></TABLE>> URL="../_counters/Building__BuildingUnit.md" margin=0]
+		BuildingUse [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">BuildingUse</TD></TR></TABLE>> URL="../_counters/Building__BuildingUse.md" margin=0]
+		cityUnits__Area [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cityUnits::Area</TD></TR></TABLE>> margin=0]
+		cityUnits__Length [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cityUnits::Length</TD></TR></TABLE>> margin=0]
+		ConstructionStatus [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ConstructionStatus</TD></TR></TABLE>> URL="../_counters/Building__ConstructionStatus.md" margin=0]
+		Facility [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Facility</TD></TR></TABLE>> URL="../_counters/Building__Facility.md" margin=0]
+		iso21972__RatioIndicator [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">iso21972::RatioIndicator</TD></TR></TABLE>> margin=0]
+	}
+	Building -> BuildingOntologyThing [arrowhead=onormal style=solid]
+	Building -> infrastructure__InfrastructureElement [arrowhead=onormal style=solid]
+	Building -> Invis [style=invis]
+	Invis -> BuildingUnit [style=invis]
+	BuildingUnit -> BuildingUse [style=invis]
+	BuildingUse -> cityUnits__Area [style=invis]
+	cityUnits__Area -> cityUnits__Length [style=invis]
+	cityUnits__Length -> ConstructionStatus [style=invis]
+	ConstructionStatus -> Facility [style=invis]
+	Facility -> iso21972__RatioIndicator [style=invis]
+	Building -> Facility [label=" buildingFacility 
+ «only»  " arrowhead=normal style=solid]
+	Building -> cityUnits__Area [label=" hasBuildingFloorArea 
+ «only»  " arrowhead=normal style=solid]
+	Building -> cityUnits__Area [label=" hasBuildingFootprintArea 
+ «only»  " arrowhead=normal style=solid]
+	Building -> cityUnits__Length [label=" hasBuildingHeight 
+ «only»  " arrowhead=normal style=solid]
+	BuildingUnit -> Building [label=" inverse unitInBuilding 
+ «only»  " arrowhead=inv style=solid]
+	Building -> BuildingUse [label=" use 
+ «only»  " arrowhead=normal style=solid]
+	N2d935dd4b99942b189eb83ecb1d16916 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«intersectionOf»</TD></TR></TABLE>> margin=0]
+	N030696be0b124facbf19eb5cbb5b135f [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">ComplexExpr</TD></TR></TABLE>> margin=0]
+	N2d935dd4b99942b189eb83ecb1d16916 -> N030696be0b124facbf19eb5cbb5b135f [label=member arrowhead=normal style=dotted]
+	Na32312e277a144e1b9ef4180c30ecb24 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">ComplexExpr</TD></TR></TABLE>> margin=0]
+	N2d935dd4b99942b189eb83ecb1d16916 -> Na32312e277a144e1b9ef4180c30ecb24 [label=member arrowhead=normal style=dotted]
+	N2d935dd4b99942b189eb83ecb1d16916 -> iso21972__RatioIndicator [label=member arrowhead=normal style=dotted]
+	Building -> N2d935dd4b99942b189eb83ecb1d16916 [label=" floorAreaRatio 
+ «max 1»  " arrowhead=normal style=solid]
+	Building -> ConstructionStatus [label=" hasConstructionStatus 
+ «max 1»  " arrowhead=normal style=solid]
+	N51969dd2a51b442a96907a1ee362e3cf [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«intersectionOf»</TD></TR></TABLE>> margin=0]
+	N09c52e982e8243c6918a31a84a6fc7f8 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">ComplexExpr</TD></TR></TABLE>> margin=0]
+	N51969dd2a51b442a96907a1ee362e3cf -> N09c52e982e8243c6918a31a84a6fc7f8 [label=member arrowhead=normal style=dotted]
+	Nec3eb0f5cda04620ad06b939395830fd [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">ComplexExpr</TD></TR></TABLE>> margin=0]
+	N51969dd2a51b442a96907a1ee362e3cf -> Nec3eb0f5cda04620ad06b939395830fd [label=member arrowhead=normal style=dotted]
+	N51969dd2a51b442a96907a1ee362e3cf -> iso21972__RatioIndicator [label=member arrowhead=normal style=dotted]
+	Building -> N51969dd2a51b442a96907a1ee362e3cf [label=" windowToWallRatio 
+ «max 1»  " arrowhead=normal style=solid]
+}

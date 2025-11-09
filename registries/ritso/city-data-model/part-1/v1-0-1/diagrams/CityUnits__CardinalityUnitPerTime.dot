@@ -1,0 +1,25 @@
+// Diagram for CardinalityUnitPerTime
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		CardinalityUnitPerTime [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">CardinalityUnitPerTime</TD></TR></TABLE>> URL="../classes/CityUnits__CardinalityUnitPerTime.md" margin=0]
+	}
+	i72__Unit_of_measureDivision [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">i72::Unit_of_measureDivision</TD></TR></TABLE>> margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		i72__Cardinality_unit [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">i72::Cardinality_unit</TD></TR></TABLE>> margin=0]
+		TimeUnit [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TimeUnit</TD></TR></TABLE>> URL="../_counters/CityUnits__TimeUnit.md" margin=0]
+	}
+	CardinalityUnitPerTime -> i72__Unit_of_measureDivision [arrowhead=onormal style=solid]
+	CardinalityUnitPerTime -> Invis [style=invis]
+	Invis -> i72__Cardinality_unit [style=invis]
+	i72__Cardinality_unit -> TimeUnit [style=invis]
+	CardinalityUnitPerTime -> TimeUnit [label=" i72::denominator 
+ «only»  " arrowhead=normal style=solid]
+	CardinalityUnitPerTime -> i72__Cardinality_unit [label=" i72::numerator 
+ «only»  " arrowhead=normal style=solid]
+}

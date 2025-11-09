@@ -1,0 +1,27 @@
+// Diagram for Input
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Input [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Input</TD></TR><TR><TD ALIGN="LEFT">genProp::hasDescription: xsd::string «only»</TD></TR><TR><TD ALIGN="LEFT">genProp::hasName: xsd::string «max 1»</TD></TR></TABLE>> URL="../classes/CityService__Input.md" margin=0]
+	}
+	CityServiceOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">CityServiceOntologyThing</TD></TR></TABLE>> URL="../_counters/CityService__CityServiceOntologyThing.md" margin=0]
+	resource__TerminalResourceState [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">resource::TerminalResourceState</TD></TR></TABLE>> margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		Stakeholder [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Stakeholder</TD></TR></TABLE>> URL="../_counters/CityService__Stakeholder.md" margin=0]
+		time__DateTimeInterval [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">time::DateTimeInterval</TD></TR></TABLE>> margin=0]
+	}
+	Input -> CityServiceOntologyThing [arrowhead=onormal style=solid]
+	Input -> resource__TerminalResourceState [arrowhead=onormal style=solid]
+	Input -> Invis [style=invis]
+	Invis -> Stakeholder [style=invis]
+	Stakeholder -> time__DateTimeInterval [style=invis]
+	Input -> Stakeholder [label=" hasContributingStakeholder 
+ «only»  " arrowhead=normal style=solid]
+	Input -> time__DateTimeInterval [label=" iso21972::for_time_interval 
+ «only»  " arrowhead=normal style=solid]
+}

@@ -1,0 +1,21 @@
+// Diagram for Salary
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Salary [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Salary</TD></TR></TABLE>> URL="../classes/Organization__Salary.md" margin=0]
+	}
+	Compensation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Compensation</TD></TR></TABLE>> URL="../_counters/Organization__Compensation.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		cityunits__MonetaryValue [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cityunits::MonetaryValue</TD></TR></TABLE>> margin=0]
+	}
+	Salary -> Compensation [arrowhead=onormal style=solid]
+	Salary -> Invis [style=invis]
+	Invis -> cityunits__MonetaryValue [style=invis]
+	Salary -> cityunits__MonetaryValue [label=" annualPay 
+ «max 1»  " arrowhead=normal style=solid]
+}

@@ -1,0 +1,25 @@
+// Diagram for NetworkLocation
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		NetworkLocation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">NetworkLocation</TD></TR></TABLE>> URL="../classes/itsLocation__NetworkLocation.md" margin=0]
+	}
+	Location [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Location</TD></TR></TABLE>> URL="../_counters/itsLocation__Location.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		Destination [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Destination</TD></TR></TABLE>> URL="../_counters/itsLocation__Destination.md" margin=0]
+		SupplementaryPositionalDescription [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">SupplementaryPositionalDescription</TD></TR></TABLE>> URL="../_counters/itsLocation__SupplementaryPositionalDescription.md" margin=0]
+	}
+	NetworkLocation -> Location [arrowhead=onormal style=solid]
+	NetworkLocation -> Invis [style=invis]
+	Invis -> Destination [style=invis]
+	Destination -> SupplementaryPositionalDescription [style=invis]
+	NetworkLocation -> SupplementaryPositionalDescription [label=" positionalDescription 
+ «max 1, only»  " arrowhead=normal style=solid]
+	NetworkLocation -> Destination [label=" destination 
+ «max 1»  " arrowhead=normal style=solid]
+}

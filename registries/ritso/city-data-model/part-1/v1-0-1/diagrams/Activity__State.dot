@@ -1,0 +1,31 @@
+// Diagram for State
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		State [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">State</TD></TR></TABLE>> URL="../classes/Activity__State.md" margin=0]
+	}
+	ActivityOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ActivityOntologyThing</TD></TR></TABLE>> URL="../_counters/Activity__ActivityOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		Activity [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Activity</TD></TR></TABLE>> URL="../_counters/Activity__Activity.md" margin=0]
+		StateStatus [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">StateStatus</TD></TR></TABLE>> URL="../_counters/Activity__StateStatus.md" margin=0]
+	}
+	State -> ActivityOntologyThing [arrowhead=onormal style=solid]
+	State -> Invis [style=invis]
+	Invis -> Activity [style=invis]
+	Activity -> StateStatus [style=invis]
+	Activity -> State [label=" inverse causes 
+ «only»  " arrowhead=inv style=solid]
+	Activity -> State [label=" inverse hasEffect 
+ «only»  " arrowhead=inv style=solid]
+	State -> Activity [label=" enables 
+ «only»  " arrowhead=normal style=solid]
+	State -> Activity [label=" preconditionOf 
+ «only»  " arrowhead=normal style=solid]
+	State -> StateStatus [label=" hasStatus 
+ «exactly 1»  " arrowhead=normal style=solid]
+}

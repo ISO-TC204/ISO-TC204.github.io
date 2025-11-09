@@ -1,0 +1,39 @@
+// Diagram for Organization
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Organization [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Organization</TD></TR></TABLE>> URL="../classes/Organization__Organization.md" margin=0]
+	}
+	cdmOrgStruct__Organization [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdmOrgStruct::Organization</TD></TR></TABLE>> margin=0]
+	CityOrgOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">CityOrgOntologyThing</TD></TR></TABLE>> URL="../_counters/Organization__CityOrgOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		contact__Address [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">contact::Address</TD></TR></TABLE>> margin=0]
+		contact__PhoneNumber [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">contact::PhoneNumber</TD></TR></TABLE>> margin=0]
+		Goal [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Goal</TD></TR></TABLE>> URL="../_counters/Organization__Goal.md" margin=0]
+		Operation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Operation</TD></TR></TABLE>> URL="../_counters/Organization__Operation.md" margin=0]
+		spatialLoc__Location [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">spatialLoc::Location</TD></TR></TABLE>> margin=0]
+	}
+	Organization -> cdmOrgStruct__Organization [arrowhead=onormal style=solid]
+	Organization -> CityOrgOntologyThing [arrowhead=onormal style=solid]
+	Organization -> Invis [style=invis]
+	Invis -> contact__Address [style=invis]
+	contact__Address -> contact__PhoneNumber [style=invis]
+	contact__PhoneNumber -> Goal [style=invis]
+	Goal -> Operation [style=invis]
+	Operation -> spatialLoc__Location [style=invis]
+	Organization -> spatialLoc__Location [label=" spatialLoc::hasLocation 
+ «only»  " arrowhead=normal style=solid]
+	Organization -> contact__PhoneNumber [label=" contact::hasTelephone 
+ «only»  " arrowhead=normal style=solid]
+	Organization -> Goal [label=" hasGoal 
+ «only»  " arrowhead=normal style=solid]
+	Organization -> Operation [label=" operatingHours 
+ «only»  " arrowhead=normal style=solid]
+	Organization -> contact__Address [label=" orgAddress 
+ «only»  " arrowhead=normal style=solid]
+}

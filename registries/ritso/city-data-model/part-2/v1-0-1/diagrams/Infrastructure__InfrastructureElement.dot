@@ -1,0 +1,32 @@
+// Diagram for InfrastructureElement
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		InfrastructureElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">InfrastructureElement</TD></TR><TR><TD ALIGN="LEFT">genProp::hasDescription: xsd::string «only»</TD></TR><TR><TD ALIGN="LEFT">genProp::hasIdentifier: xsd::string «only»</TD></TR><TR><TD ALIGN="LEFT">genProp::hasName: xsd::string «only»</TD></TR></TABLE>> URL="../classes/Infrastructure__InfrastructureElement.md" margin=0]
+	}
+	InfrastructureOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">InfrastructureOntologyThing</TD></TR></TABLE>> URL="../_counters/Infrastructure__InfrastructureOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		cityUnits__MonetaryValue [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cityUnits::MonetaryValue</TD></TR></TABLE>> margin=0]
+		contact__Address [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">contact::Address</TD></TR></TABLE>> margin=0]
+		spatialLoc__Location [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">spatialLoc::Location</TD></TR></TABLE>> margin=0]
+	}
+	InfrastructureElement -> InfrastructureOntologyThing [arrowhead=onormal style=solid]
+	InfrastructureElement -> Invis [style=invis]
+	Invis -> cityUnits__MonetaryValue [style=invis]
+	cityUnits__MonetaryValue -> contact__Address [style=invis]
+	contact__Address -> spatialLoc__Location [style=invis]
+	InfrastructureElement -> cityUnits__MonetaryValue [label=" i72::hasValue 
+ «only»  " arrowhead=normal style=solid]
+	InfrastructureElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">InfrastructureElement</TD></TR></TABLE>> URL="../_counters/Infrastructure__InfrastructureElement.md" margin=0]
+	InfrastructureElement -> InfrastructureElement [label=" partwhole::hasProperPart 
+ «only»  " arrowhead=normal style=solid]
+	InfrastructureElement -> spatialLoc__Location [label=" spatialLoc::hasLocation 
+ «only»  " arrowhead=normal style=solid]
+	InfrastructureElement -> contact__Address [label=" contact::hasAddress 
+ «only»  " arrowhead=normal style=solid]
+}

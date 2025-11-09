@@ -1,0 +1,35 @@
+// Diagram for CityResident
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		CityResident [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">CityResident</TD></TR></TABLE>> URL="../classes/CityResident__CityResident.md" margin=0]
+	}
+	CityResidentOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">CityResidentOntologyThing</TD></TR></TABLE>> URL="../_counters/CityResident__CityResidentOntologyThing.md" margin=0]
+	person__Person [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">person::Person</TD></TR></TABLE>> margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		city__JurisdictionalArea [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">city::JurisdictionalArea</TD></TR></TABLE>> margin=0]
+		EntityOperation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">EntityOperation</TD></TR></TABLE>> URL="../_counters/CityResident__EntityOperation.md" margin=0]
+		EntityOwnership [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">EntityOwnership</TD></TR></TABLE>> URL="../_counters/CityResident__EntityOwnership.md" margin=0]
+		Residence [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Residence</TD></TR></TABLE>> URL="../_counters/CityResident__Residence.md" margin=0]
+	}
+	CityResident -> CityResidentOntologyThing [arrowhead=onormal style=solid]
+	CityResident -> person__Person [arrowhead=onormal style=solid]
+	CityResident -> Invis [style=invis]
+	Invis -> city__JurisdictionalArea [style=invis]
+	city__JurisdictionalArea -> EntityOperation [style=invis]
+	EntityOperation -> EntityOwnership [style=invis]
+	EntityOwnership -> Residence [style=invis]
+	CityResident -> Residence [label=" hasResidence 
+ «only»  " arrowhead=normal style=solid]
+	CityResident -> EntityOperation [label=" operates 
+ «only»  " arrowhead=normal style=solid]
+	CityResident -> EntityOwnership [label=" owns 
+ «only»  " arrowhead=normal style=solid]
+	CityResident -> city__JurisdictionalArea [label=" residentOf 
+ «only»  " arrowhead=normal style=solid]
+}

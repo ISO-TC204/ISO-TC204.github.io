@@ -1,0 +1,16 @@
+// Diagram for LegalBasis
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		LegalBasis [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">LegalBasis</TD></TR><TR><TD ALIGN="LEFT">date: xsd::date «max 1, only»</TD></TR><TR><TD ALIGN="LEFT">genProp::hasName: xsd::string «exactly 1, only»</TD></TR><TR><TD ALIGN="LEFT">version: xsd::string «max 1, only»</TD></TR></TABLE>> URL="../classes/itsRegulation__LegalBasis.md" margin=0]
+	}
+	TroThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TroThing</TD></TR></TABLE>> URL="../_counters/itsRegulation__TroThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+	}
+	LegalBasis -> TroThing [arrowhead=onormal style=solid]
+}

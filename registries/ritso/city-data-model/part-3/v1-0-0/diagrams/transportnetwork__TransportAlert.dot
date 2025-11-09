@@ -1,0 +1,21 @@
+// Diagram for TransportAlert
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		TransportAlert [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">TransportAlert</TD></TR></TABLE>> URL="../classes/transportnetwork__TransportAlert.md" margin=0]
+	}
+	Alert [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Alert</TD></TR></TABLE>> URL="../_counters/transportnetwork__Alert.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		NetworkElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">NetworkElement</TD></TR></TABLE>> URL="../_counters/transportnetwork__NetworkElement.md" margin=0]
+	}
+	TransportAlert -> Alert [arrowhead=onormal style=solid]
+	TransportAlert -> Invis [style=invis]
+	Invis -> NetworkElement [style=invis]
+	TransportAlert -> NetworkElement [label=" affects 
+ «only»  " arrowhead=normal style=solid]
+}

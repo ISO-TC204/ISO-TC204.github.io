@@ -1,0 +1,30 @@
+// Diagram for Atomic Agreement
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		"Atomic Agreement" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Atomic Agreement</TD></TR></TABLE>> URL="../classes/Agreement__Atomic Agreement.md" margin=0]
+	}
+	Agreement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Agreement</TD></TR></TABLE>> URL="../_counters/Agreement__Agreement.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		activity__Activity [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">activity::Activity</TD></TR></TABLE>> margin=0]
+	}
+	"Atomic Agreement" -> Agreement [arrowhead=onormal style=solid]
+	"Atomic Agreement" -> Invis [style=invis]
+	Invis -> activity__Activity [style=invis]
+	"Atomic Agreement" -> activity__Activity [label=" commitsToActivity 
+ «some»  " arrowhead=normal style=solid]
+	agent__Agent [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">agent::Agent</TD></TR></TABLE>> margin=0]
+	agent__Agent -> "Atomic Agreement" [label=" inverse hasClaim 
+ «only»  " arrowhead=inv style=solid]
+	agent__Agent -> "Atomic Agreement" [label=" inverse hasDuty 
+ «only»  " arrowhead=inv style=solid]
+	agent__Agent -> "Atomic Agreement" [label=" inverse hasNoClaim 
+ «only»  " arrowhead=inv style=solid]
+	agent__Agent -> "Atomic Agreement" [label=" inverse hasPrivilege 
+ «only»  " arrowhead=inv style=solid]
+}

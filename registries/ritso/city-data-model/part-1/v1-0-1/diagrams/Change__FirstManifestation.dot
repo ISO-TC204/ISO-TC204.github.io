@@ -1,0 +1,27 @@
+// Diagram for FirstManifestation
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		FirstManifestation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">FirstManifestation</TD></TR></TABLE>> URL="../classes/Change__FirstManifestation.md" margin=0]
+	}
+	Manifestation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Manifestation</TD></TR></TABLE>> URL="../_counters/Change__Manifestation.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+	}
+	FirstManifestation -> Manifestation [arrowhead=onormal style=solid]
+	N115955051efa48cf91c1122c771e38e6 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«intersectionOf»</TD></TR></TABLE>> margin=0]
+	N1a820ac0bcff41a99675a3e1fd78f242 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«not»</TD></TR></TABLE>> margin=0]
+	FirstManifestation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FirstManifestation</TD></TR></TABLE>> URL="../_counters/Change__FirstManifestation.md" margin=0]
+	N1a820ac0bcff41a99675a3e1fd78f242 -> FirstManifestation [label=of arrowhead=normal style=dotted]
+	N115955051efa48cf91c1122c771e38e6 -> N1a820ac0bcff41a99675a3e1fd78f242 [label=member arrowhead=normal style=dotted]
+	Manifestation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Manifestation</TD></TR></TABLE>> URL="../_counters/Change__Manifestation.md" margin=0]
+	N115955051efa48cf91c1122c771e38e6 -> Manifestation [label=member arrowhead=normal style=dotted]
+	FirstManifestation -> N115955051efa48cf91c1122c771e38e6 [label=" precedesManifestation 
+ «only»  " arrowhead=normal style=solid]
+	FirstManifestation -> Manifestation [label=" hasLatestManifestation 
+ «exactly 1»  " arrowhead=normal style=solid]
+}

@@ -1,0 +1,38 @@
+// Diagram for RoadSegment
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		RoadSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">RoadSegment</TD></TR><TR><TD ALIGN="LEFT">numLanes: xsd::nonNegativeInteger «exactly 1, only»</TD></TR><TR><TD ALIGN="LEFT">width: xsd::nonNegativeInteger «exactly 1, only»</TD></TR></TABLE>> URL="../classes/transportnetwork__RoadSegment.md" margin=0]
+	}
+	transinfras__RoadSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">transinfras::RoadSegment</TD></TR></TABLE>> margin=0]
+	TravelledWaySegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWaySegment</TD></TR></TABLE>> URL="../_counters/transportnetwork__TravelledWaySegment.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		code__Code [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">code::Code</TD></TR></TABLE>> margin=0]
+		RoadLane [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadLane</TD></TR></TABLE>> URL="../_counters/transportnetwork__RoadLane.md" margin=0]
+		RoadLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadLink</TD></TR></TABLE>> URL="../_counters/transportnetwork__RoadLink.md" margin=0]
+		RoadSection [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadSection</TD></TR></TABLE>> URL="../_counters/transportnetwork__RoadSection.md" margin=0]
+	}
+	RoadSegment -> transinfras__RoadSegment [arrowhead=onormal style=solid]
+	RoadSegment -> TravelledWaySegment [arrowhead=onormal style=solid]
+	RoadSegment -> Invis [style=invis]
+	Invis -> code__Code [style=invis]
+	code__Code -> RoadLane [style=invis]
+	RoadLane -> RoadLink [style=invis]
+	RoadLink -> RoadSection [style=invis]
+	RoadSegment -> code__Code [label=" pavementType 
+ «max 1, only»  " arrowhead=normal style=solid]
+	RoadSegment -> RoadLane [label=" onProperty: partwhole::hasProperPart 
+ «min 1, only»  " arrowhead=normal style=dashed]
+	N379a62d5f98f4442a803dfa6e198d726 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	N379a62d5f98f4442a803dfa6e198d726 -> RoadLink [label=member arrowhead=normal style=dotted]
+	N379a62d5f98f4442a803dfa6e198d726 -> RoadSection [label=member arrowhead=normal style=dotted]
+	RoadSegment -> N379a62d5f98f4442a803dfa6e198d726 [label=" onProperty: partwhole::properPartOf 
+ «only»  " arrowhead=normal style=dashed]
+	RoadSegment -> RoadLink [label=" onProperty: partwhole::properPartOf 
+ «exactly 1»  " arrowhead=normal style=dashed]
+}

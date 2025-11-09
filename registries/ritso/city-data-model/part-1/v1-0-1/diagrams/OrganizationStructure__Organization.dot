@@ -1,0 +1,20 @@
+// Diagram for Organization
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Organization [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Organization</TD></TR></TABLE>> URL="../classes/OrganizationStructure__Organization.md" margin=0]
+	}
+	agent__Agent [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">agent::Agent</TD></TR></TABLE>> margin=0]
+	org__Organization [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">org::Organization</TD></TR></TABLE>> margin=0]
+	OrganizationStructureOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">OrganizationStructureOntologyThing</TD></TR></TABLE>> URL="../_counters/OrganizationStructure__OrganizationStructureOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+	}
+	Organization -> agent__Agent [arrowhead=onormal style=solid]
+	Organization -> org__Organization [arrowhead=onormal style=solid]
+	Organization -> OrganizationStructureOntologyThing [arrowhead=onormal style=solid]
+}

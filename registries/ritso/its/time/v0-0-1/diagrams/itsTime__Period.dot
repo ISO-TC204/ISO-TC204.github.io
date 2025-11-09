@@ -1,0 +1,29 @@
+// Diagram for Period
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Period [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Period</TD></TR><TR><TD ALIGN="LEFT">endOfPeriod: xsd::dateTime «max 1, only»</TD></TR><TR><TD ALIGN="LEFT">genProp::hasName: xsd::string «max 1, only»</TD></TR><TR><TD ALIGN="LEFT">startOfPeriod: xsd::dateTime «max 1, only»</TD></TR></TABLE>> URL="../classes/itsTime__Period.md" margin=0]
+	}
+	TimeThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TimeThing</TD></TR></TABLE>> URL="../_counters/itsTime__TimeThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		DaySelector [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">DaySelector</TD></TR></TABLE>> URL="../_counters/itsTime__DaySelector.md" margin=0]
+		SpecialDay [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">SpecialDay</TD></TR></TABLE>> URL="../_counters/itsTime__SpecialDay.md" margin=0]
+		TimePeriodOfDay [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TimePeriodOfDay</TD></TR></TABLE>> URL="../_counters/itsTime__TimePeriodOfDay.md" margin=0]
+	}
+	Period -> TimeThing [arrowhead=onormal style=solid]
+	Period -> Invis [style=invis]
+	Invis -> DaySelector [style=invis]
+	DaySelector -> SpecialDay [style=invis]
+	SpecialDay -> TimePeriodOfDay [style=invis]
+	Period -> DaySelector [label=" applicableDays 
+ «only»  " arrowhead=normal style=solid]
+	Period -> SpecialDay [label=" recurringSpecialDay 
+ «only»  " arrowhead=normal style=solid]
+	Period -> TimePeriodOfDay [label=" recurringTimePeriodOfDay 
+ «only»  " arrowhead=normal style=solid]
+}

@@ -1,0 +1,24 @@
+// Diagram for CapacityRate
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		CapacityRate [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">CapacityRate</TD></TR></TABLE>> URL="../classes/CityUnits__CapacityRate.md" margin=0]
+	}
+	i72__Quantity [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">i72::Quantity</TD></TR></TABLE>> margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		Capacity [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Capacity</TD></TR></TABLE>> URL="../_counters/CityUnits__Capacity.md" margin=0]
+	}
+	CapacityRate -> i72__Quantity [arrowhead=onormal style=solid]
+	CapacityRate -> Invis [style=invis]
+	Invis -> Capacity [style=invis]
+	N124f6f3594f249c78c13c3b71eccad05 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">ComplexExpr</TD></TR></TABLE>> margin=0]
+	CapacityRate -> N124f6f3594f249c78c13c3b71eccad05 [label=" onProperty: i72::value 
+ «only»  " arrowhead=normal style=dashed]
+	CapacityRate -> Capacity [label=" i72::cardinality_of 
+ «exactly 1»  " arrowhead=normal style=solid]
+}

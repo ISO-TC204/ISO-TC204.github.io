@@ -1,0 +1,34 @@
+// Diagram for PublicTransportLine
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		PublicTransportLine [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">PublicTransportLine</TD></TR></TABLE>> URL="../classes/transportnetwork__PublicTransportLine.md" margin=0]
+	}
+	PublicTransportElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PublicTransportElement</TD></TR></TABLE>> URL="../_counters/transportnetwork__PublicTransportElement.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		code__Code [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">code::Code</TD></TR></TABLE>> margin=0]
+		GroupOfLines [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">GroupOfLines</TD></TR></TABLE>> URL="../_counters/transportnetwork__GroupOfLines.md" margin=0]
+		PublicTransportRoute [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PublicTransportRoute</TD></TR></TABLE>> URL="../_counters/transportnetwork__PublicTransportRoute.md" margin=0]
+		PublicTransportSystem [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PublicTransportSystem</TD></TR></TABLE>> URL="../_counters/transportnetwork__PublicTransportSystem.md" margin=0]
+	}
+	PublicTransportLine -> PublicTransportElement [arrowhead=onormal style=solid]
+	PublicTransportLine -> Invis [style=invis]
+	Invis -> code__Code [style=invis]
+	code__Code -> GroupOfLines [style=invis]
+	GroupOfLines -> PublicTransportRoute [style=invis]
+	PublicTransportRoute -> PublicTransportSystem [style=invis]
+	PublicTransportLine -> code__Code [label=" allowedDirections 
+ «min 1, only»  " arrowhead=normal style=solid]
+	PublicTransportLine -> PublicTransportRoute [label=" partwhole::hasProperPart 
+ «min 1, only»  " arrowhead=normal style=solid]
+	Nd1265cae752c47e4bb000e9a8c8db5e3 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	Nd1265cae752c47e4bb000e9a8c8db5e3 -> GroupOfLines [label=member arrowhead=normal style=dotted]
+	Nd1265cae752c47e4bb000e9a8c8db5e3 -> PublicTransportSystem [label=member arrowhead=normal style=dotted]
+	PublicTransportLine -> Nd1265cae752c47e4bb000e9a8c8db5e3 [label=" partwhole::properPartOf 
+ «only»  " arrowhead=normal style=solid]
+}

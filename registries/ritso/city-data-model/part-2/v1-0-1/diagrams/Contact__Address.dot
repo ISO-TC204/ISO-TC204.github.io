@@ -1,0 +1,45 @@
+// Diagram for Address
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Address [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Address</TD></TR><TR><TD ALIGN="LEFT">hasBuilding: xsd::string «max 1»</TD></TR><TR><TD ALIGN="LEFT">hasCitySection: xsd::string «max 1»</TD></TR><TR><TD ALIGN="LEFT">hasPostalBox: xsd::string «max 1»</TD></TR><TR><TD ALIGN="LEFT">hasPostalCode: xsd::string «max 1»</TD></TR><TR><TD ALIGN="LEFT">hasStreet: xsd::string «max 1»</TD></TR><TR><TD ALIGN="LEFT">hasStreetNumber: xsd::string «max 1»</TD></TR><TR><TD ALIGN="LEFT">hasUnitNumber: xsd::string «max 1»</TD></TR><TR><TD ALIGN="LEFT">maxStreetNumber: xsd::string «max 1»</TD></TR><TR><TD ALIGN="LEFT">minStreetNumber: xsd::nonNegativeInteger «max 1»</TD></TR><TR><TD ALIGN="LEFT">wgs84::lat: xsd::decimal «max 1»</TD></TR><TR><TD ALIGN="LEFT">wgs84::long: xsd::decimal «max 1»</TD></TR></TABLE>> URL="../classes/Contact__Address.md" margin=0]
+	}
+	ContactThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ContactThing</TD></TR></TABLE>> URL="../_counters/Contact__ContactThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		AddressType [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">AddressType</TD></TR></TABLE>> URL="../_counters/Contact__AddressType.md" margin=0]
+		city__City [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">city::City</TD></TR></TABLE>> margin=0]
+		Country [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Country</TD></TR></TABLE>> URL="../_counters/Contact__Country.md" margin=0]
+		spatialLoc__Location [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">spatialLoc::Location</TD></TR></TABLE>> margin=0]
+		State [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">State</TD></TR></TABLE>> URL="../_counters/Contact__State.md" margin=0]
+		StreetDirection [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">StreetDirection</TD></TR></TABLE>> URL="../_counters/Contact__StreetDirection.md" margin=0]
+		StreetType [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">StreetType</TD></TR></TABLE>> URL="../_counters/Contact__StreetType.md" margin=0]
+	}
+	Address -> ContactThing [arrowhead=onormal style=solid]
+	Address -> Invis [style=invis]
+	Invis -> AddressType [style=invis]
+	AddressType -> city__City [style=invis]
+	city__City -> Country [style=invis]
+	Country -> spatialLoc__Location [style=invis]
+	spatialLoc__Location -> State [style=invis]
+	State -> StreetDirection [style=invis]
+	StreetDirection -> StreetType [style=invis]
+	Address -> AddressType [label=" hasAddressType 
+ «only»  " arrowhead=normal style=solid]
+	Address -> spatialLoc__Location [label=" spatialLoc::hasLocation 
+ «max 1»  " arrowhead=normal style=solid]
+	Address -> city__City [label=" hasCity 
+ «max 1»  " arrowhead=normal style=solid]
+	Address -> Country [label=" hasCountry 
+ «max 1»  " arrowhead=normal style=solid]
+	Address -> State [label=" hasProvince 
+ «max 1»  " arrowhead=normal style=solid]
+	Address -> StreetDirection [label=" hasStreetDirection 
+ «max 1»  " arrowhead=normal style=solid]
+	Address -> StreetType [label=" hasStreetType 
+ «max 1»  " arrowhead=normal style=solid]
+}

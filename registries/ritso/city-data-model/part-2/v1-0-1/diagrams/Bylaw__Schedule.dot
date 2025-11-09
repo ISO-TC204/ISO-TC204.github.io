@@ -1,0 +1,25 @@
+// Diagram for Schedule
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Schedule [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Schedule</TD></TR><TR><TD ALIGN="LEFT">genProp::hasDescription: xsd::string «max 1»</TD></TR><TR><TD ALIGN="LEFT">genProp::hasIdentifier: xsd::string «max 1»</TD></TR><TR><TD ALIGN="LEFT">genProp::hasName: xsd::string «max 1»</TD></TR></TABLE>> URL="../classes/Bylaw__Schedule.md" margin=0]
+	}
+	BylawOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">BylawOntologyThing</TD></TR></TABLE>> URL="../_counters/Bylaw__BylawOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		Clause [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Clause</TD></TR></TABLE>> URL="../_counters/Bylaw__Clause.md" margin=0]
+		Law [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Law</TD></TR></TABLE>> URL="../_counters/Bylaw__Law.md" margin=0]
+	}
+	Schedule -> BylawOntologyThing [arrowhead=onormal style=solid]
+	Schedule -> Invis [style=invis]
+	Invis -> Clause [style=invis]
+	Clause -> Law [style=invis]
+	Schedule -> Clause [label=" hasClause 
+ «only»  " arrowhead=normal style=solid]
+	Schedule -> Law [label=" partwhole::properPartOf 
+ «exactly 1»  " arrowhead=normal style=solid]
+}

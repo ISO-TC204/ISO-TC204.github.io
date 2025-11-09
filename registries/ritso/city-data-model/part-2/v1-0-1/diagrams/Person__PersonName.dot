@@ -1,0 +1,16 @@
+// Diagram for PersonName
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		PersonName [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">PersonName</TD></TR><TR><TD ALIGN="LEFT">additionalName: xsd::string «only»</TD></TR><TR><TD ALIGN="LEFT">familyName: xsd::string «max 1»</TD></TR><TR><TD ALIGN="LEFT">givenName: xsd::string «only»</TD></TR></TABLE>> URL="../classes/Person__PersonName.md" margin=0]
+	}
+	PersonOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PersonOntologyThing</TD></TR></TABLE>> URL="../_counters/Person__PersonOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+	}
+	PersonName -> PersonOntologyThing [arrowhead=onormal style=solid]
+}

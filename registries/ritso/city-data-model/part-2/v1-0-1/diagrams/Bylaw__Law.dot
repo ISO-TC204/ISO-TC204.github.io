@@ -1,0 +1,50 @@
+// Diagram for Law
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Law [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Law</TD></TR><TR><TD ALIGN="LEFT">abstract: xsd::string «max 1»</TD></TR><TR><TD ALIGN="LEFT">dateInEffect: xsd::dateTime «max 1»</TD></TR><TR><TD ALIGN="LEFT">datePublished: xsd::dateTime «max 1»</TD></TR><TR><TD ALIGN="LEFT">expires: xsd::dateTime «max 1»</TD></TR><TR><TD ALIGN="LEFT">genProp::hasName: xsd::string «only»</TD></TR><TR><TD ALIGN="LEFT">keywords: xsd::string «only»</TD></TR><TR><TD ALIGN="LEFT">legislationDate: xsd::dateTime «max 1»</TD></TR><TR><TD ALIGN="LEFT">legislationIdentifier: xsd::string «max 1»</TD></TR></TABLE>> URL="../classes/Bylaw__Law.md" margin=0]
+	}
+	BylawOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">BylawOntologyThing</TD></TR></TABLE>> URL="../_counters/Bylaw__BylawOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		city__JurisdictionalArea [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">city::JurisdictionalArea</TD></TR></TABLE>> margin=0]
+		Clause [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Clause</TD></TR></TABLE>> URL="../_counters/Bylaw__Clause.md" margin=0]
+		Definition [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Definition</TD></TR></TABLE>> URL="../_counters/Bylaw__Definition.md" margin=0]
+		InForce [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">InForce</TD></TR></TABLE>> margin=0]
+		NotInForce [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">NotInForce</TD></TR></TABLE>> margin=0]
+		PartiallyInForce [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PartiallyInForce</TD></TR></TABLE>> margin=0]
+		Schedule [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Schedule</TD></TR></TABLE>> URL="../_counters/Bylaw__Schedule.md" margin=0]
+	}
+	Law -> BylawOntologyThing [arrowhead=onormal style=solid]
+	Law -> Invis [style=invis]
+	Invis -> city__JurisdictionalArea [style=invis]
+	city__JurisdictionalArea -> Clause [style=invis]
+	Clause -> Definition [style=invis]
+	Definition -> InForce [style=invis]
+	InForce -> NotInForce [style=invis]
+	NotInForce -> PartiallyInForce [style=invis]
+	PartiallyInForce -> Schedule [style=invis]
+	Law -> Clause [label=" hasClause 
+ «only»  " arrowhead=normal style=solid]
+	Law -> Definition [label=" hasDefinition 
+ «only»  " arrowhead=normal style=solid]
+	Law -> Clause [label=" hasPenaltyClause 
+ «only»  " arrowhead=normal style=solid]
+	Law -> Clause [label=" hasRepealClause 
+ «only»  " arrowhead=normal style=solid]
+	Law -> Schedule [label=" hasSchedule 
+ «only»  " arrowhead=normal style=solid]
+	Law -> Clause [label=" hasSeveranceClause 
+ «only»  " arrowhead=normal style=solid]
+	Law -> Clause [label=" hasTransitionClause 
+ «only»  " arrowhead=normal style=solid]
+	N2f6fcac160504d54b07b4ed85f3cae46 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">«Enum»<BR/>Enum: InForce, NotInForce, PartiallyInForce</TD></TR><TR><TD ALIGN="LEFT">+ InForce<BR/>+ NotInForce<BR/>+ PartiallyInForce</TD></TR></TABLE>> margin=0]
+	Law -> N2f6fcac160504d54b07b4ed85f3cae46 [label=" legislationLegalForce 
+ «only»  " arrowhead=normal style=solid]
+	Law -> city__JurisdictionalArea [label=" legislationJurisdiction 
+ «max 1»  " arrowhead=normal style=solid]
+}

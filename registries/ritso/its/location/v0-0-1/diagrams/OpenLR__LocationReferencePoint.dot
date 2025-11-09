@@ -1,0 +1,29 @@
+// Diagram for LocationReferencePoint
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		LocationReferencePoint [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">LocationReferencePoint</TD></TR></TABLE>> URL="../classes/OpenLR__LocationReferencePoint.md" margin=0]
+	}
+	OpenLRThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">OpenLRThing</TD></TR></TABLE>> URL="../_counters/OpenLR__OpenLRThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		Coordinates [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Coordinates</TD></TR></TABLE>> URL="../_counters/OpenLR__Coordinates.md" margin=0]
+		LineAttributes [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">LineAttributes</TD></TR></TABLE>> URL="../_counters/OpenLR__LineAttributes.md" margin=0]
+		PathAttributes [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PathAttributes</TD></TR></TABLE>> URL="../_counters/OpenLR__PathAttributes.md" margin=0]
+	}
+	LocationReferencePoint -> OpenLRThing [arrowhead=onormal style=solid]
+	LocationReferencePoint -> Invis [style=invis]
+	Invis -> Coordinates [style=invis]
+	Coordinates -> LineAttributes [style=invis]
+	LineAttributes -> PathAttributes [style=invis]
+	LocationReferencePoint -> Coordinates [label=" hasCoordinates 
+ «exactly 1»  " arrowhead=normal style=solid]
+	LocationReferencePoint -> LineAttributes [label=" hasLineAttributes 
+ «exactly 1»  " arrowhead=normal style=solid]
+	LocationReferencePoint -> PathAttributes [label=" hasPathAttributes 
+ «max 1»  " arrowhead=normal style=solid]
+}

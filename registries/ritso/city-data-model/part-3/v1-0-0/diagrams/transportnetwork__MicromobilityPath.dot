@@ -1,0 +1,25 @@
+// Diagram for MicromobilityPath
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		MicromobilityPath [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">MicromobilityPath</TD></TR></TABLE>> URL="../classes/transportnetwork__MicromobilityPath.md" margin=0]
+	}
+	Road [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Road</TD></TR></TABLE>> URL="../_counters/transportnetwork__Road.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		MicromobilityLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">MicromobilityLink</TD></TR></TABLE>> URL="../_counters/transportnetwork__MicromobilityLink.md" margin=0]
+		MicromobilityNetwork [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">MicromobilityNetwork</TD></TR></TABLE>> URL="../_counters/transportnetwork__MicromobilityNetwork.md" margin=0]
+	}
+	MicromobilityPath -> Road [arrowhead=onormal style=solid]
+	MicromobilityPath -> Invis [style=invis]
+	Invis -> MicromobilityLink [style=invis]
+	MicromobilityLink -> MicromobilityNetwork [style=invis]
+	MicromobilityPath -> MicromobilityLink [label=" onProperty: partwhole::hasProperPart 
+ «min 1, only»  " arrowhead=normal style=dashed]
+	MicromobilityPath -> MicromobilityNetwork [label=" onProperty: partwhole::properPartOf 
+ «only»  " arrowhead=normal style=dashed]
+}

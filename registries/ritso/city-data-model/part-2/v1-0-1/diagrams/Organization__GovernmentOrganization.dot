@@ -1,0 +1,25 @@
+// Diagram for GovernmentOrganization
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		GovernmentOrganization [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">GovernmentOrganization</TD></TR></TABLE>> URL="../classes/Organization__GovernmentOrganization.md" margin=0]
+	}
+	Organization [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Organization</TD></TR></TABLE>> URL="../_counters/Organization__Organization.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		city__JurisdictionalArea [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">city::JurisdictionalArea</TD></TR></TABLE>> margin=0]
+		cityService__Program [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cityService::Program</TD></TR></TABLE>> margin=0]
+	}
+	GovernmentOrganization -> Organization [arrowhead=onormal style=solid]
+	GovernmentOrganization -> Invis [style=invis]
+	Invis -> city__JurisdictionalArea [style=invis]
+	city__JurisdictionalArea -> cityService__Program [style=invis]
+	GovernmentOrganization -> cityService__Program [label=" hasProgram 
+ «only»  " arrowhead=normal style=solid]
+	GovernmentOrganization -> city__JurisdictionalArea [label=" jurisdiction 
+ «only»  " arrowhead=normal style=solid]
+}

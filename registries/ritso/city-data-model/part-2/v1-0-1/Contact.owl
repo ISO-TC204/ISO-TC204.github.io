@@ -1,0 +1,3559 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#"
+     xml:base="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:schema="http://schema.org/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:adms="http://www.w3.org/ns/adms#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:wgs84="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xml:city="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/City#"
+     xml:code="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#"
+     xmlns:spatialLoc="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc#">
+    <owl:Ontology rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#">
+        <owl:imports rdf:resource="https://isotc204.org/registries/ritso/city-data-model/part-1/v1-0-1/SpatialLoc.owl"/>
+        <owl:imports rdf:resource="https://isotc204.org/registries/ritso/city-data-model/part-2/v1-0-1/City.owl"/>
+        <owl:imports rdf:resource="https://isotc204.org/registries/ritso/city-data-model/part-2/v1-0-1/Code.owl"/>
+        <ns:license>http://creativecommons.org/licenses/by/3.0/</ns:license>
+        <dc:creator xml:lang="en">Mark S. Fox, http://eil.utoronto.ca/profiles/foxpro.html
+Enterprise Integration Laboratory, http://eil.utoronto.ca
+University of Toronto, 
+msf@eil.utoronto.ca</dc:creator>
+        <dc:title xml:lang="en">Contact Pattern</dc:title>
+        <vann:preferredNamespacePrefix>ic</vann:preferredNamespacePrefix>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/ns/adms#relatedDocumentation -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/adms#relatedDocumentation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#time -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#time"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#OperatingProperty -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#OperatingProperty">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#contactObjectProperty"/>
+        <dc:description xml:lang="en">Properties that define the hours of operation of the contact.</dc:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#addressProperty -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#addressProperty">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#contactObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Address"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#contactObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#contactObjectProperty"/>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#dayofWeek -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#dayofWeek">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#OperatingProperty"/>
+        <rdfs:comment xml:lang="en">Specifies the day of the week, e.g., Monday, that the times apply to.  This is the default for that day and can be overidden by the &quot;hasDate&quot; property.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasAddress -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasAddress">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#contactObjectProperty"/>
+        <rdfs:range rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Address"/>
+        <rdfs:comment xml:lang="en">hasAddress links any class to the Address class.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasAddressType -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasAddressType">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#addressProperty"/>
+        <rdfs:range rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#AddressType"/>
+        <rdfs:label xml:lang="en">has Address Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasCity -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasCity">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#addressProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <dc:description xml:lang="en">has City</dc:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasCountry -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasCountry">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#addressProperty"/>
+        <rdfs:label xml:lang="en">has Country</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasGeoCoordinates -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasGeoCoordinates">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#addressProperty"/>
+        <rdfs:label xml:lang="en">has Geo Coordinates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasOperatingHours -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasOperatingHours">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#OperatingProperty"/>
+        <rdfs:range rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#HoursOfOperation"/>
+        <rdfs:label xml:lang="en">has Operating Hours</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasPhoneType -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasPhoneType">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#contactObjectProperty"/>
+        <rdfs:range rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#PhoneType"/>
+        <rdfs:label xml:lang="en">has Phone Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasProvince -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasProvince">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#addressProperty"/>
+        <rdfs:label xml:lang="en">has Province</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasStreetDirection -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasStreetDirection">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#addressProperty"/>
+        <rdfs:domain rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Address"/>
+        <rdfs:range rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#StreetDirection"/>
+        <rdfs:label xml:lang="en">has Street Direction</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasStreetType -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasStreetType">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#addressProperty"/>
+        <rdfs:domain rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Address"/>
+        <rdfs:range rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#StreetType"/>
+        <rdfs:label xml:lang="en">has Street Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasTelephone -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasTelephone">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#contactObjectProperty"/>
+        <rdfs:label xml:lang="en">has Telephone</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#addressDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="en">lattitude</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#long -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#addressDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="en">longitude</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#addressDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#addressDataProperty">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#contactDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#contactDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#contactDataProperty"/>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasAreaCode -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasAreaCode">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#telephoneDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="en">has Area Code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasBuilding -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasBuilding">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#addressDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <dc:description xml:lang="en">The building where the address is located.  Often used in countries like England, India and Japan.</dc:description>
+        <rdfs:label xml:lang="en">has Building</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasCityS -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasCityS">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#addressDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasCitySection -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasCitySection">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#addressDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <dc:description xml:lang="en">The section of the city where the address is located.  Often used in countries like England, India and Japan.</dc:description>
+        <rdfs:label xml:lang="en">has City Section</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasClosingTime -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasClosingTime">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#operatingDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">has Closing Time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasCountryCode -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasCountryCode">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#telephoneDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="en">has Country Code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasDate -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasDate">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#operatingDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <dc:description xml:lang="en">Specifies the opening and closing times for a specific date.  For example, used to provide times for a holiday which deviates from the norm.</dc:description>
+        <rdfs:label xml:lang="en">has Date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasEmail -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasEmail">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#contactDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasLocation -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasLocation">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#contactDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">Closet street intersection for the organization.</dc:description>
+        <rdfs:label xml:lang="en">has Location</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasOpeningTime -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasOpeningTime">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#operatingDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">has Opening Time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasPersonalEmail -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasPersonalEmail">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasEmail"/>
+        <rdfs:label xml:lang="en">has Personal Email</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasPhoneNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasPhoneNumber">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#telephoneDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="en">has Phone Number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasPostalBox -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasPostalBox">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#addressDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <dc:description xml:lang="en">An address can have a postal box associated with it.</dc:description>
+        <rdfs:label xml:lang="en">has Postal Box</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasPostalCode -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasPostalCode">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#addressDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="en">has Postal Code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasStreet -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasStreet">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#addressDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="en">has Street</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasStreetNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasStreetNumber">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#addressDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="en">has Street Number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasUnitNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasUnitNumber">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#addressDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="en">has Unit Number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasWebSite -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasWebSite">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#contactDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">has Web Site</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasWorkEmail -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasWorkEmail">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasEmail"/>
+        <rdfs:label xml:lang="en">has Work Email</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#maxStreetNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#maxStreetNumber">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#addressDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#minStreetNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#minStreetNumber">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#addressDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#operatingDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#operatingDataProperty">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#contactDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#telephoneDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#telephoneDataProperty">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#contactDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/GeoCoordinates -->
+
+    <owl:Class rdf:about="http://schema.org/GeoCoordinates">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#SchemaOrgThing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Address -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Address">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#ContactThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasAddressType"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#AddressType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc#hasLocation"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc#Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasCity"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/City#City"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasCountry"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasProvince"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#State"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasStreetDirection"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#StreetDirection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasStreetType"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#StreetType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasBuilding"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasCitySection"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasPostalBox"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasPostalCode"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasStreet"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasStreetNumber"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasUnitNumber"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#maxStreetNumber"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#minStreetNumber"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en">Address is the main concept for a contact.  It has been designed to represent any type of address in the world, including India and the UK.  For example, the property hasBuilding is important in many UK and Indian addresses to further identify the person or business location.
+
+Street information is divided into separate properties to fully indentify direction (hasStreetDirection), Type (hasStreetType), etc.  See the associated list of properties for more.</dc:description>
+        <rdfs:label xml:lang="en">Address</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#AddressType -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#AddressType">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#ContactThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#hasCode"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en">Different type for home, office, cottage, etc.</dc:description>
+        <rdfs:label xml:lang="en">Address Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#CellNumber -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#CellNumber">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#PhoneNumber"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasPhoneType"/>
+                <owl:hasValue rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#CellPhone"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Mobile Telephone Number</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#ContactThing -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#ContactThing"/>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#CottageAddress -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#CottageAddress">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Address"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasAddressType"/>
+                <owl:hasValue rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Cottage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Cottage Address</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Country -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Country">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#ContactThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#hasCode"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#FaxNumber -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#FaxNumber">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#PhoneNumber"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasPhoneType"/>
+                <owl:hasValue rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#FaxPhone"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Fax Telephone Number</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#HomeAddress -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#HomeAddress">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Address"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasAddressType"/>
+                <owl:hasValue rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Home"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Home Address</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#HomeNumber -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#HomeNumber">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#PhoneNumber"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasPhoneType"/>
+                <owl:hasValue rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#HomePhone"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Home Telephone Number</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#HoursOfOperation -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#HoursOfOperation">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#ContactThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#dayofWeek"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#DayOfWeek"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasClosingTime"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasOpeningTime"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en">HoursOfOperation class provides the ability to define when the contact &quot;opens&quot; and &quot;closes&quot;. Used for businesses.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#PhoneNumber -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#PhoneNumber">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#ContactThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasPhoneType"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#PhoneType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasAreaCode"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasCountryCode"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasPhoneNumber"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en">PhoneNumber is another core class. It is divided into country code, and phone number.</dc:description>
+        <rdfs:label xml:lang="en">Phone Number</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#PhoneType -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#PhoneType">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#ContactThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#hasCode"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en">Types of phoned include home, cell, work, etc.</dc:description>
+        <rdfs:label xml:lang="en">Phone Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#SchemaOrgThing -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#SchemaOrgThing"/>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#State -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#State">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#ContactThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#hasCode"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#StreetDirection -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#StreetDirection">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#ContactThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#hasCode"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Street Direction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#StreetType -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#StreetType">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#ContactThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#hasCode"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Street Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#TollFreeNumber -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#TollFreeNumber">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#PhoneNumber"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasPhoneType"/>
+                <owl:hasValue rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#TollFreePhone"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Toll  Free Telephone Number</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#WorkAddress -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#WorkAddress">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Address"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasAddressType"/>
+                <owl:hasValue rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Work"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Work Address</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#WorkNumber -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#WorkNumber">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#PhoneNumber"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#hasPhoneType"/>
+                <owl:hasValue rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#WorkPhone"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Work Telephone Number</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Abbey -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Abbey">
+        <rdfs:label xml:lang="en">ABBEY</rdfs:label>
+        <rdfs:label xml:lang="en">Abbey</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Acres -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Acres">
+        <rdfs:label xml:lang="en">AC</rdfs:label>
+        <rdfs:label xml:lang="en">ACRES</rdfs:label>
+        <rdfs:label xml:lang="en">Acres</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Alley -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Alley">
+        <rdfs:label xml:lang="en">AL</rdfs:label>
+        <rdfs:label xml:lang="en">ALLEY</rdfs:label>
+        <rdfs:label xml:lang="fr">ALLÉE</rdfs:label>
+        <rdfs:label xml:lang="en">ALY</rdfs:label>
+        <rdfs:label xml:lang="en">Alley</rdfs:label>
+        <rdfs:label xml:lang="fr">Allée</rdfs:label>
+        <rdfs:label xml:lang="fr">RLE</rdfs:label>
+        <rdfs:label xml:lang="fr">Ruelle</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Annex -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Annex">
+        <rdfs:label xml:lang="en">ANX</rdfs:label>
+        <rdfs:label xml:lang="fr">Anex</rdfs:label>
+        <rdfs:label xml:lang="en">Annex</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Arcade -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Arcade">
+        <rdfs:label xml:lang="en">ARC</rdfs:label>
+        <rdfs:label xml:lang="en">Arcade</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Autoroute -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Autoroute">
+        <rdfs:label xml:lang="en">AUT</rdfs:label>
+        <rdfs:label xml:lang="en">Autoroute</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Avenue -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Avenue">
+        <rdfs:label xml:lang="en">AV</rdfs:label>
+        <rdfs:label xml:lang="fr">AV</rdfs:label>
+        <rdfs:label xml:lang="en">AVE</rdfs:label>
+        <rdfs:label xml:lang="en">Avenue</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Barrage -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Barrage">
+        <rdfs:label xml:lang="fr">BRGE</rdfs:label>
+        <rdfs:label xml:lang="en">Barrage</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Bay -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Bay">
+        <rdfs:label xml:lang="en">BA</rdfs:label>
+        <rdfs:label xml:lang="en">BAY</rdfs:label>
+        <rdfs:label xml:lang="en">Bay</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Bayou -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Bayou">
+        <rdfs:label xml:lang="en">BYU</rdfs:label>
+        <rdfs:label xml:lang="en">Bayou</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Beach -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Beach">
+        <rdfs:label xml:lang="en">BCH</rdfs:label>
+        <rdfs:label xml:lang="en">BE</rdfs:label>
+        <rdfs:label xml:lang="en">BEACH</rdfs:label>
+        <rdfs:label xml:lang="en">Beach</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Bend -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Bend">
+        <rdfs:label xml:lang="en">BEND</rdfs:label>
+        <rdfs:label xml:lang="en">BN</rdfs:label>
+        <rdfs:label xml:lang="en">BND</rdfs:label>
+        <rdfs:label xml:lang="en">Bend</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Block -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Block">
+        <rdfs:label xml:lang="fr">BLOC</rdfs:label>
+        <rdfs:label xml:lang="en">BLOCK</rdfs:label>
+        <rdfs:label xml:lang="fr">Bloc</rdfs:label>
+        <rdfs:label xml:lang="en">Block</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Bluff -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Bluff">
+        <rdfs:label xml:lang="en">BLF</rdfs:label>
+        <rdfs:label xml:lang="en">BLFS</rdfs:label>
+        <rdfs:label xml:lang="en">Bluff</rdfs:label>
+        <rdfs:label xml:lang="en">Bluffs</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Bottom -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Bottom">
+        <rdfs:label xml:lang="en">BTM</rdfs:label>
+        <rdfs:label xml:lang="en">Bottom</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Boulevard -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Boulevard">
+        <rdfs:label xml:lang="en">BLVD</rdfs:label>
+        <rdfs:label xml:lang="fr">BOUL</rdfs:label>
+        <rdfs:label xml:lang="en">BV</rdfs:label>
+        <rdfs:label xml:lang="en">Boulevard</rdfs:label>
+        <rdfs:label xml:lang="fr">Boulevard</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Box -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Box">
+        <rdfs:label xml:lang="en">Box</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Branch -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Branch">
+        <rdfs:label xml:lang="en">BR</rdfs:label>
+        <rdfs:label xml:lang="en">Branch</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Bridge -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Bridge">
+        <rdfs:label xml:lang="en">BRG</rdfs:label>
+        <rdfs:label xml:lang="en">Bridge</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Brook -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Brook">
+        <rdfs:label xml:lang="en">BRK</rdfs:label>
+        <rdfs:label xml:lang="en">BRKS</rdfs:label>
+        <rdfs:label xml:lang="en">Brook</rdfs:label>
+        <rdfs:label xml:lang="en">Brooks</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Burg -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Burg">
+        <rdfs:label xml:lang="en">BG</rdfs:label>
+        <rdfs:label xml:lang="en">BGS</rdfs:label>
+        <rdfs:label xml:lang="en">Burg</rdfs:label>
+        <rdfs:label xml:lang="en">Burgs</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Burrow -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Burrow">
+        <rdfs:label xml:lang="en">Burrow</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#By-pass -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#By-pass">
+        <rdfs:label xml:lang="en">BYP</rdfs:label>
+        <rdfs:label xml:lang="en">BYPASS</rdfs:label>
+        <rdfs:label xml:lang="en">By-pass</rdfs:label>
+        <rdfs:label xml:lang="en">Bypass</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Byway -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Byway">
+        <rdfs:label xml:lang="en">BYWAY</rdfs:label>
+        <rdfs:label xml:lang="en">Byway</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Camp -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Camp">
+        <rdfs:label xml:lang="en">CP</rdfs:label>
+        <rdfs:label xml:lang="en">Camp</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Campus -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Campus">
+        <rdfs:label xml:lang="en">CAMPUS</rdfs:label>
+        <rdfs:label xml:lang="en">Campus</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Canyon -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Canyon">
+        <rdfs:label xml:lang="en">CYN</rdfs:label>
+        <rdfs:label xml:lang="en">Canyon</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Cape -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Cape">
+        <rdfs:label xml:lang="en">CA</rdfs:label>
+        <rdfs:label xml:lang="en">CAPE</rdfs:label>
+        <rdfs:label xml:lang="en">CPE</rdfs:label>
+        <rdfs:label xml:lang="en">Cape</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Carrefour -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Carrefour">
+        <rdfs:label xml:lang="en">CARREF</rdfs:label>
+        <rdfs:label xml:lang="en">Carrefour</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Castle -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Castle">
+        <rdfs:label xml:lang="en">CS</rdfs:label>
+        <rdfs:label xml:lang="en">Castle</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Causeway -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Causeway">
+        <rdfs:label xml:lang="en">CSWY</rdfs:label>
+        <rdfs:label xml:lang="en">Causeway</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#CellPhone -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#CellPhone">
+        <rdfs:label xml:lang="en">Cell Phone</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Centre -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Centre">
+        <rdfs:label xml:lang="fr">C</rdfs:label>
+        <rdfs:label xml:lang="en">CE</rdfs:label>
+        <rdfs:label xml:lang="en">CTR</rdfs:label>
+        <rdfs:label xml:lang="en">CTRS</rdfs:label>
+        <rdfs:label xml:lang="en">Centre</rdfs:label>
+        <rdfs:label xml:lang="en">Centres</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Cercle -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Cercle">
+        <rdfs:label xml:lang="en">CERCLE</rdfs:label>
+        <rdfs:label xml:lang="en">Cercle</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Chare -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Chare">
+        <rdfs:label xml:lang="en">CHARE</rdfs:label>
+        <rdfs:label xml:lang="en">Chare</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Chase -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Chase">
+        <rdfs:label xml:lang="en">CHASE</rdfs:label>
+        <rdfs:label xml:lang="en">Chase</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Chemin -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Chemin">
+        <rdfs:label xml:lang="en">CH</rdfs:label>
+        <rdfs:label xml:lang="en">Chemin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Circle -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Circle">
+        <rdfs:label xml:lang="fr">CERCLE</rdfs:label>
+        <rdfs:label xml:lang="en">CI</rdfs:label>
+        <rdfs:label xml:lang="en">CIR</rdfs:label>
+        <rdfs:label xml:lang="en">CIRS</rdfs:label>
+        <rdfs:label xml:lang="fr">Cercle</rdfs:label>
+        <rdfs:label xml:lang="en">Circle</rdfs:label>
+        <rdfs:label xml:lang="en">Circles</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Circuit -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Circuit">
+        <rdfs:label xml:lang="en">CIRCT</rdfs:label>
+        <rdfs:label xml:lang="en">Circuit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Cliffs -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Cliffs">
+        <rdfs:label xml:lang="en">CLF</rdfs:label>
+        <rdfs:label xml:lang="en">CLFS</rdfs:label>
+        <rdfs:label xml:lang="en">Cliff</rdfs:label>
+        <rdfs:label xml:lang="en">Cliffs</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Climb -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Climb">
+        <rdfs:label xml:lang="en">Climb</rdfs:label>
+        <rdfs:label xml:lang="fr">MONTÉE</rdfs:label>
+        <rdfs:label xml:lang="fr">Montée</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Close -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Close">
+        <rdfs:label xml:lang="en">CL</rdfs:label>
+        <rdfs:label xml:lang="en">CLOSE</rdfs:label>
+        <rdfs:label xml:lang="en">Close</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Club -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Club">
+        <rdfs:label xml:lang="en">CLB</rdfs:label>
+        <rdfs:label xml:lang="en">Club</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Coast -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Coast">
+        <rdfs:label xml:lang="en">Coast</rdfs:label>
+        <rdfs:label xml:lang="fr">CÔTE</rdfs:label>
+        <rdfs:label xml:lang="fr">Côte</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Common -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Common">
+        <rdfs:label xml:lang="en">CM</rdfs:label>
+        <rdfs:label xml:lang="en">CMN</rdfs:label>
+        <rdfs:label xml:lang="en">CMNS</rdfs:label>
+        <rdfs:label xml:lang="en">COMMON</rdfs:label>
+        <rdfs:label xml:lang="en">Common</rdfs:label>
+        <rdfs:label xml:lang="en">Commons</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Concession -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Concession">
+        <rdfs:label xml:lang="en">CONC</rdfs:label>
+        <rdfs:label xml:lang="en">Concession</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Corners -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Corners">
+        <rdfs:label xml:lang="en">COR</rdfs:label>
+        <rdfs:label xml:lang="en">CORS</rdfs:label>
+        <rdfs:label xml:lang="en">CRNRS</rdfs:label>
+        <rdfs:label xml:lang="en">Corner</rdfs:label>
+        <rdfs:label xml:lang="en">Corners</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Cottage -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Cottage">
+        <rdfs:label xml:lang="en">Cottage Address</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Cour -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Cour">
+        <rdfs:label xml:lang="en">COUR</rdfs:label>
+        <rdfs:label xml:lang="en">Cour</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Cours -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Cours">
+        <rdfs:label xml:lang="en">COURS</rdfs:label>
+        <rdfs:label xml:lang="en">Cours</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Course -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Course">
+        <rdfs:label xml:lang="en">CRSE</rdfs:label>
+        <rdfs:label xml:lang="en">Course</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Court -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Court">
+        <rdfs:label xml:lang="en">CO</rdfs:label>
+        <rdfs:label xml:lang="fr">COUR</rdfs:label>
+        <rdfs:label xml:lang="fr">COURS</rdfs:label>
+        <rdfs:label xml:lang="en">CRT</rdfs:label>
+        <rdfs:label xml:lang="en">CT</rdfs:label>
+        <rdfs:label xml:lang="en">CTS</rdfs:label>
+        <rdfs:label xml:lang="en">Court</rdfs:label>
+        <rdfs:label xml:lang="en">Courts</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Cove -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Cove">
+        <rdfs:label xml:lang="en">COVE</rdfs:label>
+        <rdfs:label xml:lang="en">CV</rdfs:label>
+        <rdfs:label xml:lang="en">CVS</rdfs:label>
+        <rdfs:label xml:lang="en">Cove</rdfs:label>
+        <rdfs:label xml:lang="en">Coves</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Creek -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Creek">
+        <rdfs:label xml:lang="en">CRK</rdfs:label>
+        <rdfs:label xml:lang="en">Creek</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Crescent -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Crescent">
+        <rdfs:label xml:lang="en">CR</rdfs:label>
+        <rdfs:label xml:lang="en">CRES</rdfs:label>
+        <rdfs:label xml:lang="fr">CROIS</rdfs:label>
+        <rdfs:label xml:lang="en">Crescent</rdfs:label>
+        <rdfs:label xml:lang="fr">Croissant</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Crest -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Crest">
+        <rdfs:label xml:lang="en">CRST</rdfs:label>
+        <rdfs:label xml:lang="en">CT</rdfs:label>
+        <rdfs:label xml:lang="en">Crest</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Croissant -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Croissant">
+        <rdfs:label xml:lang="en">CROIS</rdfs:label>
+        <rdfs:label xml:lang="en">Croissant</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Cross -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Cross">
+        <rdfs:label xml:lang="en">CX</rdfs:label>
+        <rdfs:label xml:lang="en">Cross</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Crossing -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Crossing">
+        <rdfs:label xml:lang="en">CROSS</rdfs:label>
+        <rdfs:label xml:lang="en">Crossing</rdfs:label>
+        <rdfs:label xml:lang="en">XING</rdfs:label>
+        <rdfs:label xml:lang="en">XS</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Crossroads -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Crossroads">
+        <rdfs:label xml:lang="en">Crossroad</rdfs:label>
+        <rdfs:label xml:lang="en">Crossroads</rdfs:label>
+        <rdfs:label xml:lang="en">XRD</rdfs:label>
+        <rdfs:label xml:lang="en">XRDS</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Cul-de-sac -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Cul-de-sac">
+        <rdfs:label xml:lang="en">CDS</rdfs:label>
+        <rdfs:label xml:lang="en">Cul-de-sac</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Curve -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Curve">
+        <rdfs:label xml:lang="en">CURV</rdfs:label>
+        <rdfs:label xml:lang="en">Curve</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Côte -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Côte">
+        <rdfs:label xml:lang="en">CÔTE</rdfs:label>
+        <rdfs:label xml:lang="en">Côte</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Dale -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Dale">
+        <rdfs:label xml:lang="en">DALE</rdfs:label>
+        <rdfs:label xml:lang="en">DL</rdfs:label>
+        <rdfs:label xml:lang="en">Dale</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Dam -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Dam">
+        <rdfs:label xml:lang="en">DM</rdfs:label>
+        <rdfs:label xml:lang="en">Dam</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Dell -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Dell">
+        <rdfs:label xml:lang="en">DELL</rdfs:label>
+        <rdfs:label xml:lang="en">Dell</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Desert -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Desert">
+        <rdfs:label xml:lang="en">Desert</rdfs:label>
+        <rdfs:label xml:lang="fr">Desserte</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Diagonal -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Diagonal">
+        <rdfs:label xml:lang="en">Diagonal</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Diversion -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Diversion">
+        <rdfs:label xml:lang="en">DI</rdfs:label>
+        <rdfs:label xml:lang="en">DIVERS</rdfs:label>
+        <rdfs:label xml:lang="en">Diversion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Divide -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Divide">
+        <rdfs:label xml:lang="en">DV</rdfs:label>
+        <rdfs:label xml:lang="en">Divide</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Downs -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Downs">
+        <rdfs:label xml:lang="en">DO</rdfs:label>
+        <rdfs:label xml:lang="en">DOWNS</rdfs:label>
+        <rdfs:label xml:lang="en">Downs</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Drive -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Drive">
+        <rdfs:label xml:lang="en">DR</rdfs:label>
+        <rdfs:label xml:lang="en">Drive</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#End -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#End">
+        <rdfs:label xml:lang="en">EN</rdfs:label>
+        <rdfs:label xml:lang="en">END</rdfs:label>
+        <rdfs:label xml:lang="en">End</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Esplanada -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Esplanada">
+        <rdfs:label xml:lang="en">ESPL</rdfs:label>
+        <rdfs:label xml:lang="en">Esplanada</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Esplanade -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Esplanade">
+        <rdfs:label xml:lang="en">ESPL</rdfs:label>
+        <rdfs:label xml:lang="es">Esplanada</rdfs:label>
+        <rdfs:label xml:lang="en">Esplanade</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Estates -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Estates">
+        <rdfs:label xml:lang="en">ES</rdfs:label>
+        <rdfs:label xml:lang="en">EST</rdfs:label>
+        <rdfs:label xml:lang="en">ESTATE</rdfs:label>
+        <rdfs:label xml:lang="en">ESTS</rdfs:label>
+        <rdfs:label xml:lang="en">Estate</rdfs:label>
+        <rdfs:label xml:lang="en">Estates</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Expressway -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Expressway">
+        <rdfs:label xml:lang="en">EXPY</rdfs:label>
+        <rdfs:label xml:lang="en">Expressway</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Extension -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Extension">
+        <rdfs:label xml:lang="en">EXT</rdfs:label>
+        <rdfs:label xml:lang="en">EXTEN</rdfs:label>
+        <rdfs:label xml:lang="en">EXTS</rdfs:label>
+        <rdfs:label xml:lang="en">Extension</rdfs:label>
+        <rdfs:label xml:lang="en">Extensions</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Fall -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Fall">
+        <rdfs:label xml:lang="en">FALL</rdfs:label>
+        <rdfs:label xml:lang="en">Fall</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Falls -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Falls">
+        <rdfs:label xml:lang="en">FLS</rdfs:label>
+        <rdfs:label xml:lang="en">Falls</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Farm -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Farm">
+        <rdfs:label xml:lang="en">FARM</rdfs:label>
+        <rdfs:label xml:lang="en">Farm</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#FaxPhone -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#FaxPhone">
+        <rdfs:label xml:lang="en">Fax Line</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Ferry -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Ferry">
+        <rdfs:label xml:lang="en">FRY</rdfs:label>
+        <rdfs:label xml:lang="en">Ferry</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Field -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Field">
+        <rdfs:label xml:lang="en">FIELD</rdfs:label>
+        <rdfs:label xml:lang="en">FLD</rdfs:label>
+        <rdfs:label xml:lang="en">FLDS</rdfs:label>
+        <rdfs:label xml:lang="en">Field</rdfs:label>
+        <rdfs:label xml:lang="en">Fields</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Flat -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Flat">
+        <rdfs:label xml:lang="en">FLT of FLTS</rdfs:label>
+        <rdfs:label xml:lang="en">Flat</rdfs:label>
+        <rdfs:label xml:lang="en">Flats</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Ford -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Ford">
+        <rdfs:label xml:lang="en">FRD</rdfs:label>
+        <rdfs:label xml:lang="en">FRDS</rdfs:label>
+        <rdfs:label xml:lang="en">Ford</rdfs:label>
+        <rdfs:label xml:lang="en">Fords</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Forest -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Forest">
+        <rdfs:label xml:lang="en">FOREST</rdfs:label>
+        <rdfs:label xml:lang="en">FRST</rdfs:label>
+        <rdfs:label xml:lang="en">Forest</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Forge -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Forge">
+        <rdfs:label xml:lang="en">FRG</rdfs:label>
+        <rdfs:label xml:lang="en">FRGS</rdfs:label>
+        <rdfs:label xml:lang="en">Forge</rdfs:label>
+        <rdfs:label xml:lang="en">Forges</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Fork -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Fork">
+        <rdfs:label xml:lang="en">FRK</rdfs:label>
+        <rdfs:label xml:lang="en">FRKS</rdfs:label>
+        <rdfs:label xml:lang="en">Fork</rdfs:label>
+        <rdfs:label xml:lang="en">Forks</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Fort -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Fort">
+        <rdfs:label xml:lang="en">FT</rdfs:label>
+        <rdfs:label xml:lang="en">Fort</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Freeway -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Freeway">
+        <rdfs:label xml:lang="en">FR</rdfs:label>
+        <rdfs:label xml:lang="en">FWY</rdfs:label>
+        <rdfs:label xml:lang="en">Freeway</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Front -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Front">
+        <rdfs:label xml:lang="en">FRONT</rdfs:label>
+        <rdfs:label xml:lang="en">Front</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Gardens -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Gardens">
+        <rdfs:label xml:lang="en">GD</rdfs:label>
+        <rdfs:label xml:lang="en">GDN</rdfs:label>
+        <rdfs:label xml:lang="en">GDNS</rdfs:label>
+        <rdfs:label xml:lang="en">Garden</rdfs:label>
+        <rdfs:label xml:lang="en">Gardens</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Gate -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Gate">
+        <rdfs:label xml:lang="en">GA</rdfs:label>
+        <rdfs:label xml:lang="en">GATE</rdfs:label>
+        <rdfs:label xml:lang="en">Gate</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Gateway -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Gateway">
+        <rdfs:label xml:lang="en">GTWY</rdfs:label>
+        <rdfs:label xml:lang="en">GW</rdfs:label>
+        <rdfs:label xml:lang="en">Gateway</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Glade -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Glade">
+        <rdfs:label xml:lang="en">GLADE</rdfs:label>
+        <rdfs:label xml:lang="en">Glade</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Glen -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Glen">
+        <rdfs:label xml:lang="en">GL</rdfs:label>
+        <rdfs:label xml:lang="en">GLEN</rdfs:label>
+        <rdfs:label xml:lang="en">GLN</rdfs:label>
+        <rdfs:label xml:lang="en">GLNS</rdfs:label>
+        <rdfs:label xml:lang="en">Glen</rdfs:label>
+        <rdfs:label xml:lang="en">Glens</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Glenway -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Glenway">
+        <rdfs:label xml:lang="en">Glenway</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Golfway -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Golfway">
+        <rdfs:label xml:lang="en">Golfway</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Green -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Green">
+        <rdfs:label xml:lang="en">GR</rdfs:label>
+        <rdfs:label xml:lang="en">GREEN</rdfs:label>
+        <rdfs:label xml:lang="en">GREENS</rdfs:label>
+        <rdfs:label xml:lang="en">GRN</rdfs:label>
+        <rdfs:label xml:lang="en">GRNS</rdfs:label>
+        <rdfs:label xml:lang="en">Green</rdfs:label>
+        <rdfs:label xml:lang="en">Greens</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Grounds -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Grounds">
+        <rdfs:label xml:lang="en">GRNDS</rdfs:label>
+        <rdfs:label xml:lang="en">Grounds</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Grove -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Grove">
+        <rdfs:label xml:lang="en">GROVE</rdfs:label>
+        <rdfs:label xml:lang="en">GRV</rdfs:label>
+        <rdfs:label xml:lang="en">GRVS</rdfs:label>
+        <rdfs:label xml:lang="en">GV</rdfs:label>
+        <rdfs:label xml:lang="en">Grove</rdfs:label>
+        <rdfs:label xml:lang="en">Groves</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Hall -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Hall">
+        <rdfs:label xml:lang="en">HL</rdfs:label>
+        <rdfs:label xml:lang="en">Hall</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Harbour -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Harbour">
+        <rdfs:label xml:lang="en">HARBR</rdfs:label>
+        <rdfs:label xml:lang="en">HB</rdfs:label>
+        <rdfs:label xml:lang="en">HBR</rdfs:label>
+        <rdfs:label xml:lang="en">HBRS</rdfs:label>
+        <rdfs:label xml:lang="en">Harbour</rdfs:label>
+        <rdfs:label xml:lang="en">Harbours</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Haven -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Haven">
+        <rdfs:label xml:lang="en">HA</rdfs:label>
+        <rdfs:label xml:lang="en">HVN</rdfs:label>
+        <rdfs:label xml:lang="en">Haven</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Heath -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Heath">
+        <rdfs:label xml:lang="en">HE</rdfs:label>
+        <rdfs:label xml:lang="en">HEATH</rdfs:label>
+        <rdfs:label xml:lang="en">Heath</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Heights -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Heights">
+        <rdfs:label xml:lang="en">HT</rdfs:label>
+        <rdfs:label xml:lang="en">HTS</rdfs:label>
+        <rdfs:label xml:lang="en">Heights</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Highlands -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Highlands">
+        <rdfs:label xml:lang="en">HGHLDS</rdfs:label>
+        <rdfs:label xml:lang="en">Highlands</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Highway -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Highway">
+        <rdfs:label xml:lang="en">HI</rdfs:label>
+        <rdfs:label xml:lang="en">HWY</rdfs:label>
+        <rdfs:label xml:lang="en">Highway</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Hill -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Hill">
+        <rdfs:label xml:lang="en">HILL</rdfs:label>
+        <rdfs:label xml:lang="en">HL</rdfs:label>
+        <rdfs:label xml:lang="en">HLS</rdfs:label>
+        <rdfs:label xml:lang="en">Hill</rdfs:label>
+        <rdfs:label xml:lang="en">Hills</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Hollow -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Hollow">
+        <rdfs:label xml:lang="en">HO</rdfs:label>
+        <rdfs:label xml:lang="en">HOLLOW</rdfs:label>
+        <rdfs:label xml:lang="en">HOLW</rdfs:label>
+        <rdfs:label xml:lang="en">Hollow</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Home -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Home">
+        <rdfs:label xml:lang="en">Home Address</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#HomePhone -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#HomePhone">
+        <rdfs:label xml:lang="en">Home Phone</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Impasse -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Impasse">
+        <rdfs:label xml:lang="en">IMP</rdfs:label>
+        <rdfs:label xml:lang="en">Impasse</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Inlet -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Inlet">
+        <rdfs:label xml:lang="en">IN</rdfs:label>
+        <rdfs:label xml:lang="en">INLET</rdfs:label>
+        <rdfs:label xml:lang="en">INLT</rdfs:label>
+        <rdfs:label xml:lang="en">Inlet</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Island -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Island">
+        <rdfs:label xml:lang="en">IS</rdfs:label>
+        <rdfs:label xml:lang="en">ISLAND</rdfs:label>
+        <rdfs:label xml:lang="en">ISLE</rdfs:label>
+        <rdfs:label xml:lang="en">ISS</rdfs:label>
+        <rdfs:label xml:lang="en">Island</rdfs:label>
+        <rdfs:label xml:lang="en">Islands</rdfs:label>
+        <rdfs:label xml:lang="en">Isle</rdfs:label>
+        <rdfs:label xml:lang="fr">ÎLE</rdfs:label>
+        <rdfs:label xml:lang="fr">Île</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Junction -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Junction">
+        <rdfs:label xml:lang="en">JCT</rdfs:label>
+        <rdfs:label xml:lang="en">JCTS</rdfs:label>
+        <rdfs:label xml:lang="en">Junction</rdfs:label>
+        <rdfs:label xml:lang="en">Junctions</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Keep -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Keep">
+        <rdfs:label xml:lang="en">KE</rdfs:label>
+        <rdfs:label xml:lang="en">Keep</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Key -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Key">
+        <rdfs:label xml:lang="en">KEY</rdfs:label>
+        <rdfs:label xml:lang="en">KY</rdfs:label>
+        <rdfs:label xml:lang="en">KYS</rdfs:label>
+        <rdfs:label xml:lang="en">Key</rdfs:label>
+        <rdfs:label xml:lang="en">Keys</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Knoll -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Knoll">
+        <rdfs:label xml:lang="en">KN</rdfs:label>
+        <rdfs:label xml:lang="en">KNL</rdfs:label>
+        <rdfs:label xml:lang="en">KNLS</rdfs:label>
+        <rdfs:label xml:lang="en">KNOLL</rdfs:label>
+        <rdfs:label xml:lang="en">Knoll</rdfs:label>
+        <rdfs:label xml:lang="en">Knolls</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Lake -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Lake">
+        <rdfs:label xml:lang="en">LK</rdfs:label>
+        <rdfs:label xml:lang="en">LKS</rdfs:label>
+        <rdfs:label xml:lang="en">Lake</rdfs:label>
+        <rdfs:label xml:lang="en">Lakes</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Land -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Land">
+        <rdfs:label xml:lang="en">LAND</rdfs:label>
+        <rdfs:label xml:lang="en">Land</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Landing -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Landing">
+        <rdfs:label xml:lang="en">LANDNG</rdfs:label>
+        <rdfs:label xml:lang="en">LD</rdfs:label>
+        <rdfs:label xml:lang="en">LNDG</rdfs:label>
+        <rdfs:label xml:lang="en">Landing</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Lane -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Lane">
+        <rdfs:label xml:lang="en">LANE</rdfs:label>
+        <rdfs:label xml:lang="en">LN</rdfs:label>
+        <rdfs:label xml:lang="en">Lane</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Light -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Light">
+        <rdfs:label xml:lang="en">LGT</rdfs:label>
+        <rdfs:label xml:lang="en">LGTS</rdfs:label>
+        <rdfs:label xml:lang="en">Light</rdfs:label>
+        <rdfs:label xml:lang="en">Lights</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Ligne -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Ligne">
+        <rdfs:label xml:lang="en">Ligne</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Limits -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Limits">
+        <rdfs:label xml:lang="en">LMTS</rdfs:label>
+        <rdfs:label xml:lang="en">Limits</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Line -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Line">
+        <rdfs:label xml:lang="en">LINE</rdfs:label>
+        <rdfs:label xml:lang="en">Line</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Link -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Link">
+        <rdfs:label xml:lang="en">LI</rdfs:label>
+        <rdfs:label xml:lang="en">LINK</rdfs:label>
+        <rdfs:label xml:lang="en">Link</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Loaf -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Loaf">
+        <rdfs:label xml:lang="en">LF</rdfs:label>
+        <rdfs:label xml:lang="en">Loaf</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Lock -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Lock">
+        <rdfs:label xml:lang="en">LCK</rdfs:label>
+        <rdfs:label xml:lang="en">LCKS</rdfs:label>
+        <rdfs:label xml:lang="en">Lock</rdfs:label>
+        <rdfs:label xml:lang="en">Locks</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Lodge -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Lodge">
+        <rdfs:label xml:lang="en">LDG</rdfs:label>
+        <rdfs:label xml:lang="en">Lodge</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Lookout -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Lookout">
+        <rdfs:label xml:lang="en">LKOUT</rdfs:label>
+        <rdfs:label xml:lang="en">Lookout</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Loop -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Loop">
+        <rdfs:label xml:lang="en">LO</rdfs:label>
+        <rdfs:label xml:lang="en">LOOP</rdfs:label>
+        <rdfs:label xml:lang="en">Loop</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Mall -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Mall">
+        <rdfs:label xml:lang="en">MA</rdfs:label>
+        <rdfs:label xml:lang="en">MALL</rdfs:label>
+        <rdfs:label xml:lang="en">Mall</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Manor -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Manor">
+        <rdfs:label xml:lang="en">MANOR</rdfs:label>
+        <rdfs:label xml:lang="en">MNR</rdfs:label>
+        <rdfs:label xml:lang="en">MNRS</rdfs:label>
+        <rdfs:label xml:lang="en">MR</rdfs:label>
+        <rdfs:label xml:lang="en">Manor</rdfs:label>
+        <rdfs:label xml:lang="en">Manors</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Maze -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Maze">
+        <rdfs:label xml:lang="en">MAZE</rdfs:label>
+        <rdfs:label xml:lang="en">MZ</rdfs:label>
+        <rdfs:label xml:lang="en">Maze</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Meadow -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Meadow">
+        <rdfs:label xml:lang="en">MD</rdfs:label>
+        <rdfs:label xml:lang="en">MDW</rdfs:label>
+        <rdfs:label xml:lang="en">MDWS</rdfs:label>
+        <rdfs:label xml:lang="en">MEADOW</rdfs:label>
+        <rdfs:label xml:lang="en">Meadow</rdfs:label>
+        <rdfs:label xml:lang="en">Meadows</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Mews -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Mews">
+        <rdfs:label xml:lang="en">ME</rdfs:label>
+        <rdfs:label xml:lang="en">MEWS</rdfs:label>
+        <rdfs:label xml:lang="en">Mews</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Mill -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Mill">
+        <rdfs:label xml:lang="en">ML</rdfs:label>
+        <rdfs:label xml:lang="en">MLS</rdfs:label>
+        <rdfs:label xml:lang="en">Mill</rdfs:label>
+        <rdfs:label xml:lang="en">Mills</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Mission -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Mission">
+        <rdfs:label xml:lang="en">MSN</rdfs:label>
+        <rdfs:label xml:lang="en">Mission</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Moor -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Moor">
+        <rdfs:label xml:lang="en">MOOR</rdfs:label>
+        <rdfs:label xml:lang="en">Moor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Motorway -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Motorway">
+        <rdfs:label xml:lang="en">MTWY</rdfs:label>
+        <rdfs:label xml:lang="en">Motorway</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Mount -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Mount">
+        <rdfs:label xml:lang="en">MOUNT</rdfs:label>
+        <rdfs:label xml:lang="en">MT</rdfs:label>
+        <rdfs:label xml:lang="en">Mount</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Mountain -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Mountain">
+        <rdfs:label xml:lang="en">MTN</rdfs:label>
+        <rdfs:label xml:lang="en">MTNS</rdfs:label>
+        <rdfs:label xml:lang="en">Mountain</rdfs:label>
+        <rdfs:label xml:lang="en">Mountains</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Neck -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Neck">
+        <rdfs:label xml:lang="en">NCK</rdfs:label>
+        <rdfs:label xml:lang="en">Neck</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Nene -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Nene">
+        <rdfs:label xml:lang="en">NENE</rdfs:label>
+        <rdfs:label xml:lang="en">Nene</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Oaks -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Oaks">
+        <rdfs:label xml:lang="en">OA</rdfs:label>
+        <rdfs:label xml:lang="en">Oaks</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Orchard -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Orchard">
+        <rdfs:label xml:lang="en">ORCH</rdfs:label>
+        <rdfs:label xml:lang="en">Orchard</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Oval -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Oval">
+        <rdfs:label xml:lang="en">OVAL</rdfs:label>
+        <rdfs:label xml:lang="en">Oval</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Overpass -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Overpass">
+        <rdfs:label xml:lang="en">OPAS</rdfs:label>
+        <rdfs:label xml:lang="en">Overpass</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Parade -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Parade">
+        <rdfs:label xml:lang="en">PARADE</rdfs:label>
+        <rdfs:label xml:lang="en">PR</rdfs:label>
+        <rdfs:label xml:lang="en">Parade</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Parc -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Parc">
+        <rdfs:label xml:lang="en">PARC</rdfs:label>
+        <rdfs:label xml:lang="en">Parc</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Park -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Park">
+        <rdfs:label xml:lang="en">PA</rdfs:label>
+        <rdfs:label xml:lang="fr">PARC</rdfs:label>
+        <rdfs:label xml:lang="en">PARK</rdfs:label>
+        <rdfs:label xml:lang="en">PK</rdfs:label>
+        <rdfs:label xml:lang="fr">Parc</rdfs:label>
+        <rdfs:label xml:lang="en">Park</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Parkway -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Parkway">
+        <rdfs:label xml:lang="en">PK</rdfs:label>
+        <rdfs:label xml:lang="en">PKWY</rdfs:label>
+        <rdfs:label xml:lang="en">PKY</rdfs:label>
+        <rdfs:label xml:lang="en">Parkway</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Pass -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Pass">
+        <rdfs:label xml:lang="en">PASS</rdfs:label>
+        <rdfs:label xml:lang="en">PS</rdfs:label>
+        <rdfs:label xml:lang="en">PSGE</rdfs:label>
+        <rdfs:label xml:lang="en">Pass</rdfs:label>
+        <rdfs:label xml:lang="en">Passage</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Passage -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Passage">
+        <rdfs:label xml:lang="en">PASS</rdfs:label>
+        <rdfs:label xml:lang="en">Passage</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Path -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Path">
+        <rdfs:label xml:lang="fr">CH</rdfs:label>
+        <rdfs:label xml:lang="fr">Chemin</rdfs:label>
+        <rdfs:label xml:lang="en">PATH</rdfs:label>
+        <rdfs:label xml:lang="en">PH</rdfs:label>
+        <rdfs:label xml:lang="en">Path</rdfs:label>
+        <rdfs:label xml:lang="en">SENT</rdfs:label>
+        <rdfs:label xml:lang="fr">Sentier</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Pathway -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Pathway">
+        <rdfs:label xml:lang="en">PTWAY</rdfs:label>
+        <rdfs:label xml:lang="en">Pathway</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Peak -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Peak">
+        <rdfs:label xml:lang="en">Peak</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Pike -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Pike">
+        <rdfs:label xml:lang="en">PIKE</rdfs:label>
+        <rdfs:label xml:lang="en">Pike</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Pine -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Pine">
+        <rdfs:label xml:lang="en">PINE</rdfs:label>
+        <rdfs:label xml:lang="en">PINES</rdfs:label>
+        <rdfs:label xml:lang="en">PNES</rdfs:label>
+        <rdfs:label xml:lang="en">Pine</rdfs:label>
+        <rdfs:label xml:lang="en">Pines</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Pines -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Pines">
+        <rdfs:label xml:lang="en">PINES</rdfs:label>
+        <rdfs:label xml:lang="en">Pines</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Place -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Place">
+        <rdfs:label xml:lang="en">PL</rdfs:label>
+        <rdfs:label xml:lang="fr">PLACE</rdfs:label>
+        <rdfs:label xml:lang="en">Place</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Placeway -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Placeway">
+        <rdfs:label xml:lang="en">Placeway</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Plain -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Plain">
+        <rdfs:label xml:lang="en">PLN</rdfs:label>
+        <rdfs:label xml:lang="en">PLNS</rdfs:label>
+        <rdfs:label xml:lang="en">Plain</rdfs:label>
+        <rdfs:label xml:lang="en">Plains</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Plateau -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Plateau">
+        <rdfs:label xml:lang="en">PLAT</rdfs:label>
+        <rdfs:label xml:lang="en">Plateau</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Plaza -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Plaza">
+        <rdfs:label xml:lang="en">PLAZA</rdfs:label>
+        <rdfs:label xml:lang="en">PLZ</rdfs:label>
+        <rdfs:label xml:lang="en">PZ</rdfs:label>
+        <rdfs:label xml:lang="en">Plaza</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Point -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Point">
+        <rdfs:label xml:lang="fr">POINTE</rdfs:label>
+        <rdfs:label xml:lang="en">PT</rdfs:label>
+        <rdfs:label xml:lang="en">Point</rdfs:label>
+        <rdfs:label xml:lang="fr">Pointe</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Pond -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Pond">
+        <rdfs:label xml:lang="en">PD</rdfs:label>
+        <rdfs:label xml:lang="en">Pond</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Port -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Port">
+        <rdfs:label xml:lang="en">PORT</rdfs:label>
+        <rdfs:label xml:lang="en">PRT</rdfs:label>
+        <rdfs:label xml:lang="en">Port</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Prairie -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Prairie">
+        <rdfs:label xml:lang="en">PR</rdfs:label>
+        <rdfs:label xml:lang="en">Prairie</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Private -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Private">
+        <rdfs:label xml:lang="en">PVT</rdfs:label>
+        <rdfs:label xml:lang="en">Private</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Promenade -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Promenade">
+        <rdfs:label xml:lang="en">PM</rdfs:label>
+        <rdfs:label xml:lang="en">PROM</rdfs:label>
+        <rdfs:label xml:lang="en">Promenade</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Quai -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Quai">
+        <rdfs:label xml:lang="en">QUAI</rdfs:label>
+        <rdfs:label xml:lang="en">Quai</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Quary -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Quary">
+        <rdfs:label xml:lang="en">QU</rdfs:label>
+        <rdfs:label xml:lang="en">Quary</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Quay -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Quay">
+        <rdfs:label xml:lang="en">QUAY</rdfs:label>
+        <rdfs:label xml:lang="en">QY</rdfs:label>
+        <rdfs:label xml:lang="en">Quay</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Radial -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Radial">
+        <rdfs:label xml:lang="en">RADL</rdfs:label>
+        <rdfs:label xml:lang="en">Radial</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Ramp -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Ramp">
+        <rdfs:label xml:lang="en">RAMP</rdfs:label>
+        <rdfs:label xml:lang="en">Ramp</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Ranch -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Ranch">
+        <rdfs:label xml:lang="en">RA</rdfs:label>
+        <rdfs:label xml:lang="en">RNCH</rdfs:label>
+        <rdfs:label xml:lang="en">Ranch</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Rang -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Rang">
+        <rdfs:label xml:lang="en">RANG</rdfs:label>
+        <rdfs:label xml:lang="en">Rang</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Range -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Range">
+        <rdfs:label xml:lang="en">RG</rdfs:label>
+        <rdfs:label xml:lang="en">Range</rdfs:label>
+        <rdfs:label xml:lang="fr">Rangée</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Rapid -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Rapid">
+        <rdfs:label xml:lang="en">RPD</rdfs:label>
+        <rdfs:label xml:lang="en">RPDS</rdfs:label>
+        <rdfs:label xml:lang="en">Rapid</rdfs:label>
+        <rdfs:label xml:lang="en">Rapids</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Reach -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Reach">
+        <rdfs:label xml:lang="en">Reach</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Rest -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Rest">
+        <rdfs:label xml:lang="en">RST</rdfs:label>
+        <rdfs:label xml:lang="en">Rest</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Ridge -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Ridge">
+        <rdfs:label xml:lang="en">RDG</rdfs:label>
+        <rdfs:label xml:lang="en">RDGS</rdfs:label>
+        <rdfs:label xml:lang="en">RG</rdfs:label>
+        <rdfs:label xml:lang="en">RIDGE</rdfs:label>
+        <rdfs:label xml:lang="en">Ridge</rdfs:label>
+        <rdfs:label xml:lang="en">Ridges</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Right-of-Way -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Right-of-Way">
+        <rdfs:label xml:lang="fr">Droit de passage</rdfs:label>
+        <rdfs:label xml:lang="en">ROWY</rdfs:label>
+        <rdfs:label xml:lang="en">Right of Way</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Rise -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Rise">
+        <rdfs:label xml:lang="en">RI</rdfs:label>
+        <rdfs:label xml:lang="en">RISE</rdfs:label>
+        <rdfs:label xml:lang="en">Rise</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#River -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#River">
+        <rdfs:label xml:lang="en">RIV</rdfs:label>
+        <rdfs:label xml:lang="en">River</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Road -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Road">
+        <rdfs:label xml:lang="en">RD</rdfs:label>
+        <rdfs:label xml:lang="en">Road</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Rond-point -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Rond-point">
+        <rdfs:label xml:lang="en">RDPT</rdfs:label>
+        <rdfs:label xml:lang="en">Rond-point</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Round -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Round">
+        <rdfs:label xml:lang="en">Ronde (French</rdfs:label>
+        <rdfs:label xml:lang="en">Round</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Round-about -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Round-about">
+        <rdfs:label xml:lang="en">RDPT</rdfs:label>
+        <rdfs:label xml:lang="fr">Rond-point</rdfs:label>
+        <rdfs:label xml:lang="en">Round about</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Route -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Route">
+        <rdfs:label xml:lang="en">RTE</rdfs:label>
+        <rdfs:label xml:lang="en">Route</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Row -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Row">
+        <rdfs:label xml:lang="en">RO</rdfs:label>
+        <rdfs:label xml:lang="en">ROW</rdfs:label>
+        <rdfs:label xml:lang="en">Row</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Run -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Run">
+        <rdfs:label xml:lang="en">RU</rdfs:label>
+        <rdfs:label xml:lang="en">RUN</rdfs:label>
+        <rdfs:label xml:lang="en">Run</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Sentier -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Sentier">
+        <rdfs:label xml:lang="en">SENT</rdfs:label>
+        <rdfs:label xml:lang="en">Sentier</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Shoal -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Shoal">
+        <rdfs:label xml:lang="en">SHL</rdfs:label>
+        <rdfs:label xml:lang="en">SHLS</rdfs:label>
+        <rdfs:label xml:lang="en">Shoal</rdfs:label>
+        <rdfs:label xml:lang="en">Shoals</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Shores -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Shores">
+        <rdfs:label xml:lang="en">SH</rdfs:label>
+        <rdfs:label xml:lang="en">SHR</rdfs:label>
+        <rdfs:label xml:lang="en">SHRS</rdfs:label>
+        <rdfs:label xml:lang="en">Shore</rdfs:label>
+        <rdfs:label xml:lang="en">Shores</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Sideroad -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Sideroad">
+        <rdfs:label xml:lang="en">Sideroad</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Skyway -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Skyway">
+        <rdfs:label xml:lang="en">SKWY</rdfs:label>
+        <rdfs:label xml:lang="en">Skyway</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Springs -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Springs">
+        <rdfs:label xml:lang="en">SP</rdfs:label>
+        <rdfs:label xml:lang="en">SPG</rdfs:label>
+        <rdfs:label xml:lang="en">SPGS</rdfs:label>
+        <rdfs:label xml:lang="en">Spring</rdfs:label>
+        <rdfs:label xml:lang="en">Springs</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Spur -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Spur">
+        <rdfs:label xml:lang="en">SPUR</rdfs:label>
+        <rdfs:label xml:lang="en">Spur</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Square -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Square">
+        <rdfs:label xml:lang="fr">CAR</rdfs:label>
+        <rdfs:label xml:lang="fr">Carré</rdfs:label>
+        <rdfs:label xml:lang="en">SQ</rdfs:label>
+        <rdfs:label xml:lang="en">SQS</rdfs:label>
+        <rdfs:label xml:lang="en">Square</rdfs:label>
+        <rdfs:label xml:lang="en">Squares</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Standard -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Standard">
+        <rdfs:label xml:lang="en">Standard</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Station -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Station">
+        <rdfs:label xml:lang="en">STA</rdfs:label>
+        <rdfs:label xml:lang="en">Station</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Stravenue -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Stravenue">
+        <rdfs:label xml:lang="en">STRA</rdfs:label>
+        <rdfs:label xml:lang="en">Stravenue</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Stream -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Stream">
+        <rdfs:label xml:lang="fr">RUIS</rdfs:label>
+        <rdfs:label xml:lang="fr">Ruisseau</rdfs:label>
+        <rdfs:label xml:lang="en">STRM</rdfs:label>
+        <rdfs:label xml:lang="en">Stream</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Street -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Street">
+        <rdfs:label xml:lang="fr">RUE</rdfs:label>
+        <rdfs:label xml:lang="fr">Rue</rdfs:label>
+        <rdfs:label xml:lang="en">ST</rdfs:label>
+        <rdfs:label xml:lang="en">STS</rdfs:label>
+        <rdfs:label xml:lang="en">Street</rdfs:label>
+        <rdfs:label xml:lang="en">Streets</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Stroll -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Stroll">
+        <rdfs:label xml:lang="en">Stroll</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Subdivision -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Subdivision">
+        <rdfs:label xml:lang="en">SUBDIV</rdfs:label>
+        <rdfs:label xml:lang="en">Subdivision</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Summit -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Summit">
+        <rdfs:label xml:lang="en">SMT</rdfs:label>
+        <rdfs:label xml:lang="en">SU</rdfs:label>
+        <rdfs:label xml:lang="en">Summit</rdfs:label>
+        <rdfs:label xml:lang="en">Summits</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Tailer -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Tailer">
+        <rdfs:label xml:lang="en">TRLR</rdfs:label>
+        <rdfs:label xml:lang="en">Tailer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Terrace -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Terrace">
+        <rdfs:label xml:lang="en">TC</rdfs:label>
+        <rdfs:label xml:lang="en">TER</rdfs:label>
+        <rdfs:label xml:lang="en">TERR</rdfs:label>
+        <rdfs:label xml:lang="fr">TSSE</rdfs:label>
+        <rdfs:label xml:lang="en">Terrace</rdfs:label>
+        <rdfs:label xml:lang="fr">Terrasse</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Thicket -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Thicket">
+        <rdfs:label xml:lang="en">THICK</rdfs:label>
+        <rdfs:label xml:lang="en">Thicket</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Throughway -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Throughway">
+        <rdfs:label xml:lang="en">TRWY</rdfs:label>
+        <rdfs:label xml:lang="en">Throughway</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#TollFreePhone -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#TollFreePhone">
+        <rdfs:label xml:lang="en">Toll Free Number</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Tour -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Tour">
+        <rdfs:label xml:lang="en">Tour</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Towers -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Towers">
+        <rdfs:label xml:lang="en">TOWERS</rdfs:label>
+        <rdfs:label xml:lang="en">Towers</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Townline -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Townline">
+        <rdfs:label xml:lang="en">TLINE</rdfs:label>
+        <rdfs:label xml:lang="en">Townline</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Trace -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Trace">
+        <rdfs:label xml:lang="en">TRCE</rdfs:label>
+        <rdfs:label xml:lang="en">Trace</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Track -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Track">
+        <rdfs:label xml:lang="en">TRAK</rdfs:label>
+        <rdfs:label xml:lang="en">Track</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Trafficway -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Trafficway">
+        <rdfs:label xml:lang="en">TRFY</rdfs:label>
+        <rdfs:label xml:lang="en">Trafficway</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Trail -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Trail">
+        <rdfs:label xml:lang="en">TR</rdfs:label>
+        <rdfs:label xml:lang="en">TRAIL</rdfs:label>
+        <rdfs:label xml:lang="en">TRL</rdfs:label>
+        <rdfs:label xml:lang="en">Trail</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Tunnel -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Tunnel">
+        <rdfs:label xml:lang="en">TUNL</rdfs:label>
+        <rdfs:label xml:lang="en">Tunnel</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Turnabout -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Turnabout">
+        <rdfs:label xml:lang="en">TRNABT</rdfs:label>
+        <rdfs:label xml:lang="en">Turnabout</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Turnpike -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Turnpike">
+        <rdfs:label xml:lang="en">TPKE</rdfs:label>
+        <rdfs:label xml:lang="en">Turnpike</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Union -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Union">
+        <rdfs:label xml:lang="en">UN</rdfs:label>
+        <rdfs:label xml:lang="en">UNS</rdfs:label>
+        <rdfs:label xml:lang="en">Union</rdfs:label>
+        <rdfs:label xml:lang="en">Unions</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Vale -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Vale">
+        <rdfs:label xml:lang="en">VA</rdfs:label>
+        <rdfs:label xml:lang="en">VALE</rdfs:label>
+        <rdfs:label xml:lang="en">Vale</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Valley -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Valley">
+        <rdfs:label xml:lang="en">VLY</rdfs:label>
+        <rdfs:label xml:lang="en">VLYS</rdfs:label>
+        <rdfs:label xml:lang="en">Valley</rdfs:label>
+        <rdfs:label xml:lang="en">Valleys</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Via -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Via">
+        <rdfs:label xml:lang="en">VIA</rdfs:label>
+        <rdfs:label xml:lang="en">Via</rdfs:label>
+        <rdfs:label xml:lang="en">Viaduct</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#View -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#View">
+        <rdfs:label xml:lang="en">VIEW</rdfs:label>
+        <rdfs:label xml:lang="en">VW</rdfs:label>
+        <rdfs:label xml:lang="en">VWS</rdfs:label>
+        <rdfs:label xml:lang="en">View</rdfs:label>
+        <rdfs:label xml:lang="en">Views</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Villa -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Villa">
+        <rdfs:label xml:lang="en">VI</rdfs:label>
+        <rdfs:label xml:lang="en">VILLA</rdfs:label>
+        <rdfs:label xml:lang="en">VILLAS</rdfs:label>
+        <rdfs:label xml:lang="en">VLG</rdfs:label>
+        <rdfs:label xml:lang="en">VLGS</rdfs:label>
+        <rdfs:label xml:lang="en">Villa</rdfs:label>
+        <rdfs:label xml:lang="en">Villas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Village -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Village">
+        <rdfs:label xml:lang="en">VG</rdfs:label>
+        <rdfs:label xml:lang="en">VILLGE</rdfs:label>
+        <rdfs:label xml:lang="en">Village</rdfs:label>
+        <rdfs:label xml:lang="en">Villages</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Ville -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Ville">
+        <rdfs:label xml:lang="en">VL</rdfs:label>
+        <rdfs:label xml:lang="en">Ville</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Vista -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Vista">
+        <rdfs:label xml:lang="en">VIS</rdfs:label>
+        <rdfs:label xml:lang="en">VISTA</rdfs:label>
+        <rdfs:label xml:lang="en">VS</rdfs:label>
+        <rdfs:label xml:lang="en">Vista</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Voie -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Voie">
+        <rdfs:label xml:lang="en">VOIE</rdfs:label>
+        <rdfs:label xml:lang="en">Voie</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Walk -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Walk">
+        <rdfs:label xml:lang="en">WALK</rdfs:label>
+        <rdfs:label xml:lang="en">WK</rdfs:label>
+        <rdfs:label xml:lang="en">Walk</rdfs:label>
+        <rdfs:label xml:lang="en">Walkway</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Wall -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Wall">
+        <rdfs:label xml:lang="en">WALL</rdfs:label>
+        <rdfs:label xml:lang="en">Wall</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Way -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Way">
+        <rdfs:label xml:lang="fr">VOIE</rdfs:label>
+        <rdfs:label xml:lang="fr">Voie</rdfs:label>
+        <rdfs:label xml:lang="en">WAY</rdfs:label>
+        <rdfs:label xml:lang="en">WAYS</rdfs:label>
+        <rdfs:label xml:lang="en">WY</rdfs:label>
+        <rdfs:label xml:lang="en">Way</rdfs:label>
+        <rdfs:label xml:lang="en">Ways</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Well -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Well">
+        <rdfs:label xml:lang="en">WL</rdfs:label>
+        <rdfs:label xml:lang="en">Well</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Wells -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Wells">
+        <rdfs:label xml:lang="en">WLS</rdfs:label>
+        <rdfs:label xml:lang="en">Wells</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Wharf -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Wharf">
+        <rdfs:label xml:lang="en">WHARF</rdfs:label>
+        <rdfs:label xml:lang="en">Wharf</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Wold -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Wold">
+        <rdfs:label xml:lang="en">Wold</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Wood -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Wood">
+        <rdfs:label xml:lang="en">WO</rdfs:label>
+        <rdfs:label xml:lang="en">WOOD</rdfs:label>
+        <rdfs:label xml:lang="en">WOODS</rdfs:label>
+        <rdfs:label xml:lang="en">Wood</rdfs:label>
+        <rdfs:label xml:lang="en">Woods</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Work -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Work">
+        <rdfs:label xml:lang="en">WorkAddress</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#WorkPhone -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#WorkPhone">
+        <rdfs:label xml:lang="en">Work Phone</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Wynd -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Wynd">
+        <rdfs:label xml:lang="en">WD</rdfs:label>
+        <rdfs:label xml:lang="en">WYND</rdfs:label>
+        <rdfs:label xml:lang="en">Wynd</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#east -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#east">
+        <rdfs:label xml:lang="en">E</rdfs:label>
+        <rdfs:label xml:lang="en">East</rdfs:label>
+        <rdfs:label xml:lang="fr">Est</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#north -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#north">
+        <rdfs:label xml:lang="en">N</rdfs:label>
+        <rdfs:label xml:lang="fr">Nord</rdfs:label>
+        <rdfs:label xml:lang="en">North</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#north-east -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#north-east">
+        <rdfs:label xml:lang="en">NE</rdfs:label>
+        <rdfs:label xml:lang="fr">Nord-est</rdfs:label>
+        <rdfs:label xml:lang="en">North East</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#north-west -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#north-west">
+        <rdfs:label xml:lang="en">NO</rdfs:label>
+        <rdfs:label xml:lang="en">NW</rdfs:label>
+        <rdfs:label xml:lang="fr">Nord-ouest</rdfs:label>
+        <rdfs:label xml:lang="en">North West</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#south -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#south">
+        <rdfs:label xml:lang="en">S</rdfs:label>
+        <rdfs:label xml:lang="en">South</rdfs:label>
+        <rdfs:label xml:lang="fr">Sud</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#south-east -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#south-east">
+        <rdfs:label xml:lang="en">SE</rdfs:label>
+        <rdfs:label xml:lang="en">South East</rdfs:label>
+        <rdfs:label xml:lang="fr">Sud-est</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#south-west -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#south-west">
+        <rdfs:label xml:lang="en">SO</rdfs:label>
+        <rdfs:label xml:lang="en">SW</rdfs:label>
+        <rdfs:label xml:lang="en">South West</rdfs:label>
+        <rdfs:label xml:lang="fr">Sud-ouest</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#west -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#west">
+        <rdfs:label xml:lang="en">O</rdfs:label>
+        <rdfs:label xml:lang="en">Ouest</rdfs:label>
+        <rdfs:label xml:lang="en">W</rdfs:label>
+        <rdfs:label xml:lang="en">West</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Échangeur -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#Échangeur">
+        <rdfs:label xml:lang="fr">Échangeur</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

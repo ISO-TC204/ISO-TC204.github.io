@@ -1,0 +1,21 @@
+// Diagram for YearlyRecurringEvent
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		YearlyRecurringEvent [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">YearlyRecurringEvent</TD></TR></TABLE>> URL="../classes/RecurringEvent__YearlyRecurringEvent.md" margin=0]
+	}
+	RecurringEvent [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RecurringEvent</TD></TR></TABLE>> URL="../_counters/RecurringEvent__RecurringEvent.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		time__GeneralDateTimeDescription [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">time::GeneralDateTimeDescription</TD></TR></TABLE>> margin=0]
+	}
+	YearlyRecurringEvent -> RecurringEvent [arrowhead=onormal style=solid]
+	YearlyRecurringEvent -> Invis [style=invis]
+	Invis -> time__GeneralDateTimeDescription [style=invis]
+	YearlyRecurringEvent -> time__GeneralDateTimeDescription [label=" onProperty: onDateTimeDescription 
+ «exactly 1»  " arrowhead=normal style=dashed]
+}

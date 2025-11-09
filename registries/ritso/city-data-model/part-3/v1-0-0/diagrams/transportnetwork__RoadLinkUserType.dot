@@ -1,0 +1,33 @@
+// Diagram for RoadLinkUserType
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		RoadLinkUserType [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">RoadLinkUserType</TD></TR></TABLE>> URL="../classes/transportnetwork__RoadLinkUserType.md" margin=0]
+	}
+	ITSThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ITSThing</TD></TR></TABLE>> URL="../_counters/transportnetwork__ITSThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		cityunits__Duration [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cityunits::Duration</TD></TR></TABLE>> margin=0]
+		cityunits__Speed [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cityunits::Speed</TD></TR></TABLE>> margin=0]
+		code__Code [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">code::Code</TD></TR></TABLE>> margin=0]
+		RoadLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadLink</TD></TR></TABLE>> URL="../_counters/transportnetwork__RoadLink.md" margin=0]
+	}
+	RoadLinkUserType -> ITSThing [arrowhead=onormal style=solid]
+	RoadLinkUserType -> Invis [style=invis]
+	Invis -> cityunits__Duration [style=invis]
+	cityunits__Duration -> cityunits__Speed [style=invis]
+	cityunits__Speed -> code__Code [style=invis]
+	code__Code -> RoadLink [style=invis]
+	RoadLinkUserType -> cityunits__Speed [label=" speedLimit 
+ «max 1, only»  " arrowhead=normal style=solid]
+	RoadLinkUserType -> cityunits__Duration [label=" travelTime 
+ «max 1, only»  " arrowhead=normal style=solid]
+	RoadLinkUserType -> code__Code [label=" userCategory 
+ «exactly 1, only»  " arrowhead=normal style=solid]
+	RoadLinkUserType -> RoadLink [label=" uses 
+ «only»  " arrowhead=normal style=solid]
+}

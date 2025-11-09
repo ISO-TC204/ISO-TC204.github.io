@@ -1,0 +1,511 @@
+@prefix : <https://isotc204.org/ontologies/its/time#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix code: <https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix genProp: <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties#> .
+@prefix transportnetwork: <https://isotc204.org/25965/transport/transportnetwork#> .
+@base <https://isotc204.org/ontologies/its/time#> .
+
+<https://isotc204.org/ontologies/its/time#> rdf:type owl:Ontology ;
+                                             owl:imports <http://www.w3.org/2002/07/owl> ,
+                                                         <http://www.w3.org/2006/time> ,
+                                                         transportnetwork: ,
+                                                         <https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code> ;
+                                             dc:description "This ontology defines concepts related to time as used within ITS using concepts specified in ISO/IEC 5087-1 and ISO/IEC-5087-2." ;
+                                             dc:title "Ontology for time within ITS" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/description
+dc:description rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2006/time#Duration
+time:Duration rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://isotc204.org/25965/transport/transportnetwork#ITSObjectProperty
+transportnetwork:ITSObjectProperty rdf:type owl:ObjectProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#TimeObjectProperty
+:TimeObjectProperty rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf transportnetwork:ITSObjectProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#applicableDayOfWeek
+:applicableDayOfWeek rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :TimeObjectProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#applicableDays
+:applicableDays rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :TimeObjectProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#endTimeOfPeriod
+:endTimeOfPeriod rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :TimeDataProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#exceptionPeriod
+:exceptionPeriod rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :TimeObjectProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#offset
+:offset rdf:type owl:ObjectProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#publicEvent
+:publicEvent rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :TimeObjectProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#recurringSpecialDay
+:recurringSpecialDay rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :TimeObjectProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#recurringTimePeriodOfDay
+:recurringTimePeriodOfDay rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :TimeObjectProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#routeDestination
+:routeDestination rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :TimeObjectProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#specialDayType
+:specialDayType rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :TimeObjectProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#startTimeOfPeriod
+:startTimeOfPeriod rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :TimeDataProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#timeReference
+:timeReference rdf:type owl:ObjectProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#validPeriod
+:validPeriod rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :TimeObjectProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#validityStatus
+:validityStatus rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :TimeObjectProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#validityTimeSpecification
+:validityTimeSpecification rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://isotc204.org/25965/transport/transportnetwork#ITSDataProperty
+transportnetwork:ITSDataProperty rdf:type owl:DatatypeProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#TimeDataProperty
+:TimeDataProperty rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf transportnetwork:ITSDataProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#after
+:after rdf:type owl:DatatypeProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#applicableDayOfMonth
+:applicableDayOfMonth rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :TimeDataProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#applicableMonth
+:applicableMonth rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :TimeDataProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#applicableWeekOfMonth
+:applicableWeekOfMonth rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf :TimeDataProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#date
+:date rdf:type owl:DatatypeProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#endOfPeriod
+:endOfPeriod rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :TimeDataProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#intersectWithApplicableDays
+:intersectWithApplicableDays rdf:type owl:DatatypeProperty ;
+                             rdfs:subPropertyOf :TimeDataProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#overallEndTime
+:overallEndTime rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :TimeDataProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#overallStartTime
+:overallStartTime rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :TimeDataProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#overrunning
+:overrunning rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :TimeDataProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#predefinedItineraryReference
+:predefinedItineraryReference rdf:type owl:DatatypeProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#predefinedLocationGroupReference
+:predefinedLocationGroupReference rdf:type owl:DatatypeProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#startOfPeriod
+:startOfPeriod rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :TimeDataProperty .
+
+
+###  https://isotc204.org/ontologies/its/time#version
+:version rdf:type owl:DatatypeProperty .
+
+
+###  https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties#hasName
+genProp:hasName rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2006/time#DayOfWeek
+time:DayOfWeek rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#Instant
+time:Instant rdf:type owl:Class .
+
+
+###  https://isotc204.org/25965/transport/transportnetwork#ITSPattern
+transportnetwork:ITSPattern rdf:type owl:Class .
+
+
+###  https://isotc204.org/25965/transport/transportnetwork#ITSThing
+transportnetwork:ITSThing rdf:type owl:Class .
+
+
+###  https://isotc204.org/ontologies/its/time#DaySelector
+:DaySelector rdf:type owl:Class ;
+             rdfs:subClassOf :TimeThing ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :applicableDayOfWeek ;
+                               owl:allValuesFrom time:DayOfWeek
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :applicableDayOfWeek ;
+                               owl:maxQualifiedCardinality "6"^^xsd:nonNegativeInteger ;
+                               owl:onClass time:DayOfWeek
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :applicableDayOfMonth ;
+                               owl:allValuesFrom xsd:gDay
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :applicableMonth ;
+                               owl:allValuesFrom xsd:gMonth
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :applicableDayOfMonth ;
+                               owl:maxQualifiedCardinality "30"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:gDay
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :applicableMonth ;
+                               owl:maxQualifiedCardinality "11"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:gMonth
+                             ] ;
+             xsd:pattern "TimePattern" .
+
+
+###  https://isotc204.org/ontologies/its/time#FuzzyTime
+:FuzzyTime rdf:type owl:Class ;
+           rdfs:subClassOf :TimeThing ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :offset ;
+                             owl:allValuesFrom time:Duration
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :timeReference ;
+                             owl:allValuesFrom code:Code
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :offset ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass time:Duration
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :timeReference ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass code:Code
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :after ;
+                             owl:allValuesFrom xsd:boolean
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :after ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:boolean
+                           ] ;
+           dc:description "An instant in time designated by a timeReference event cuopled with a defined offset either before or after the referenced event. Possible codes can include \\\"dawn\\\", \\\"dusk\\\", \\\"start of rain\\\", \\\"start of school\\\", etc. The offset indicates the amount of units of time from this event either before (after = false) or after (after = true) an event meeting the indicated designation. The website can provide additional details about the occurance of the event (e.g., a schedule for the school sessions)." ;
+           xsd:pattern "TimePattern" .
+
+
+###  https://isotc204.org/ontologies/its/time#InstanceOfDayWithinMonth
+:InstanceOfDayWithinMonth rdf:type owl:Class ;
+                          rdfs:subClassOf :TimeThing ;
+                          xsd:pattern "TimePattern" .
+
+
+###  https://isotc204.org/ontologies/its/time#OverallPeriod
+:OverallPeriod rdf:type owl:Class ;
+               rdfs:subClassOf :TimeThing ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :exceptionPeriod ;
+                                 owl:allValuesFrom :Period
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :validPeriod ;
+                                 owl:allValuesFrom :Period
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :overallEndTime ;
+                                 owl:allValuesFrom xsd:dateTime
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :overallStartTime ;
+                                 owl:allValuesFrom xsd:dateTime
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :overallStartTime ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:dateTime
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :overallEndTime ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:dateTime
+                               ] ;
+               xsd:pattern "TimePattern" .
+
+
+###  https://isotc204.org/ontologies/its/time#Period
+:Period rdf:type owl:Class ;
+        rdfs:subClassOf :TimeThing ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :applicableDays ;
+                          owl:allValuesFrom :DaySelector
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :recurringSpecialDay ;
+                          owl:allValuesFrom :SpecialDay
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :recurringTimePeriodOfDay ;
+                          owl:allValuesFrom :TimePeriodOfDay
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :endOfPeriod ;
+                          owl:allValuesFrom xsd:dateTime
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :startOfPeriod ;
+                          owl:allValuesFrom xsd:dateTime
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty genProp:hasName ;
+                          owl:allValuesFrom xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :endOfPeriod ;
+                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:dateTime
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :startOfPeriod ;
+                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:dateTime
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty genProp:hasName ;
+                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:string
+                        ] ;
+        xsd:pattern "TimePattern" .
+
+
+###  https://isotc204.org/ontologies/its/time#PublicHoliday
+:PublicHoliday rdf:type owl:Class ;
+               rdfs:subClassOf :SpecialDay ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty genProp:hasName ;
+                                 owl:allValuesFrom xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty genProp:hasName ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:string
+                               ] ;
+               xsd:pattern "TimePattern" .
+
+
+###  https://isotc204.org/ontologies/its/time#SpecialDay
+:SpecialDay rdf:type owl:Class ;
+            rdfs:subClassOf :TimeThing ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :publicEvent ;
+                              owl:allValuesFrom code:Code
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :specialDayType ;
+                              owl:allValuesFrom code:Code
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :specialDayType ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass code:Code
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :publicEvent ;
+                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass code:Code
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :intersectWithApplicableDays ;
+                              owl:allValuesFrom xsd:boolean
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :intersectWithApplicableDays ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:boolean
+                            ] ;
+            xsd:pattern "TimePattern" .
+
+
+###  https://isotc204.org/ontologies/its/time#TimePattern
+:TimePattern rdf:type owl:Class ;
+             rdfs:subClassOf transportnetwork:ITSPattern .
+
+
+###  https://isotc204.org/ontologies/its/time#TimePeriodOfDay
+:TimePeriodOfDay rdf:type owl:Class ;
+                 rdfs:subClassOf :TimeThing ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :endTimeOfPeriod ;
+                                   owl:allValuesFrom [ rdf:type owl:Class ;
+                                                       owl:unionOf ( time:Instant
+                                                                     :FuzzyTime
+                                                                   )
+                                                     ]
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :startTimeOfPeriod ;
+                                   owl:allValuesFrom [ rdf:type owl:Class ;
+                                                       owl:unionOf ( time:Instant
+                                                                     :FuzzyTime
+                                                                   )
+                                                     ]
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :endTimeOfPeriod ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass [ rdf:type owl:Class ;
+                                                 owl:unionOf ( time:Instant
+                                                               :FuzzyTime
+                                                             )
+                                               ]
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :startTimeOfPeriod ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass [ rdf:type owl:Class ;
+                                                 owl:unionOf ( time:Instant
+                                                               :FuzzyTime
+                                                             )
+                                               ]
+                                 ] ;
+                 xsd:pattern "TimePattern" .
+
+
+###  https://isotc204.org/ontologies/its/time#TimeThing
+:TimeThing rdf:type owl:Class ;
+           rdfs:subClassOf transportnetwork:ITSThing ;
+           xsd:pattern "TimePattern" .
+
+
+###  https://isotc204.org/ontologies/its/time#Validity
+:Validity rdf:type owl:Class ;
+          rdfs:subClassOf :TimeThing ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :validityStatus ;
+                            owl:allValuesFrom code:Code
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :validityTimeSpecification ;
+                            owl:allValuesFrom :OverallPeriod
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :validityStatus ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass code:Code
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :validityTimeSpecification ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :OverallPeriod
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :overrunning ;
+                            owl:allValuesFrom xsd:boolean
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :overrunning ;
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:boolean
+                          ] ;
+          xsd:pattern "TimePattern" .
+
+
+###  https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#Code
+code:Code rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

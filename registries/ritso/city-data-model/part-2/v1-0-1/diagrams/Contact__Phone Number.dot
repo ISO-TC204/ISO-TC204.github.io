@@ -1,0 +1,21 @@
+// Diagram for Phone Number
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		"Phone Number" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Phone Number</TD></TR><TR><TD ALIGN="LEFT">hasAreaCode: xsd::nonNegativeInteger «exactly 1»</TD></TR><TR><TD ALIGN="LEFT">hasCountryCode: xsd::nonNegativeInteger «exactly 1»</TD></TR><TR><TD ALIGN="LEFT">hasPhoneNumber: xsd::nonNegativeInteger «exactly 1»</TD></TR></TABLE>> URL="../classes/Contact__Phone Number.md" margin=0]
+	}
+	ContactThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ContactThing</TD></TR></TABLE>> URL="../_counters/Contact__ContactThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		PhoneType [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PhoneType</TD></TR></TABLE>> URL="../_counters/Contact__PhoneType.md" margin=0]
+	}
+	"Phone Number" -> ContactThing [arrowhead=onormal style=solid]
+	"Phone Number" -> Invis [style=invis]
+	Invis -> PhoneType [style=invis]
+	"Phone Number" -> PhoneType [label=" hasPhoneType 
+ «exactly 1»  " arrowhead=normal style=solid]
+}

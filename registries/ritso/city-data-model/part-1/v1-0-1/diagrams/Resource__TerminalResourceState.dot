@@ -1,0 +1,31 @@
+// Diagram for TerminalResourceState
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		TerminalResourceState [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">TerminalResourceState</TD></TR></TABLE>> URL="../classes/Resource__TerminalResourceState.md" margin=0]
+	}
+	activity__TerminalState [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">activity::TerminalState</TD></TR></TABLE>> margin=0]
+	ResourceOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ResourceOntologyThing</TD></TR></TABLE>> URL="../_counters/Resource__ResourceOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		i72__Quantity [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">i72::Quantity</TD></TR></TABLE>> margin=0]
+		PlannedAllocation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PlannedAllocation</TD></TR></TABLE>> URL="../_counters/Resource__PlannedAllocation.md" margin=0]
+		Resource [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Resource</TD></TR></TABLE>> URL="../_counters/Resource__Resource.md" margin=0]
+	}
+	TerminalResourceState -> activity__TerminalState [arrowhead=onormal style=solid]
+	TerminalResourceState -> ResourceOntologyThing [arrowhead=onormal style=solid]
+	TerminalResourceState -> Invis [style=invis]
+	Invis -> i72__Quantity [style=invis]
+	i72__Quantity -> PlannedAllocation [style=invis]
+	PlannedAllocation -> Resource [style=invis]
+	TerminalResourceState -> PlannedAllocation [label=" hasAllocation 
+ «only»  " arrowhead=normal style=solid]
+	TerminalResourceState -> i72__Quantity [label=" hasQuantity 
+ «only»  " arrowhead=normal style=solid]
+	Resource -> TerminalResourceState [label=" inverse resourceOf 
+ «only»  " arrowhead=inv style=solid]
+}

@@ -1,0 +1,21 @@
+// Diagram for TravelledWayLane
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		TravelledWayLane [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">TravelledWayLane</TD></TR></TABLE>> URL="../classes/transportnetwork__TravelledWayLane.md" margin=0]
+	}
+	NetworkElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">NetworkElement</TD></TR></TABLE>> URL="../_counters/transportnetwork__NetworkElement.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		TravelledWaySegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWaySegment</TD></TR></TABLE>> URL="../_counters/transportnetwork__TravelledWaySegment.md" margin=0]
+	}
+	TravelledWayLane -> NetworkElement [arrowhead=onormal style=solid]
+	TravelledWayLane -> Invis [style=invis]
+	Invis -> TravelledWaySegment [style=invis]
+	TravelledWayLane -> TravelledWaySegment [label=" onProperty: partwhole::properPartOf 
+ «min 1, only»  " arrowhead=normal style=dashed]
+}

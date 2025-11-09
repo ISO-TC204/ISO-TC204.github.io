@@ -1,0 +1,21 @@
+// Diagram for MicromobilityLane
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		MicromobilityLane [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">MicromobilityLane</TD></TR></TABLE>> URL="../classes/transportnetwork__MicromobilityLane.md" margin=0]
+	}
+	RoadLane [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadLane</TD></TR></TABLE>> URL="../_counters/transportnetwork__RoadLane.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		MicromobilityPathSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">MicromobilityPathSegment</TD></TR></TABLE>> URL="../_counters/transportnetwork__MicromobilityPathSegment.md" margin=0]
+	}
+	MicromobilityLane -> RoadLane [arrowhead=onormal style=solid]
+	MicromobilityLane -> Invis [style=invis]
+	Invis -> MicromobilityPathSegment [style=invis]
+	MicromobilityLane -> MicromobilityPathSegment [label=" onProperty: partwhole::properPartOf 
+ «min 1, only»  " arrowhead=normal style=dashed]
+}

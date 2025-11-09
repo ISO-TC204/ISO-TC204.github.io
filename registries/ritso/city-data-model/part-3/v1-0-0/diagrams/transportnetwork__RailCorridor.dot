@@ -1,0 +1,25 @@
+// Diagram for RailCorridor
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		RailCorridor [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">RailCorridor</TD></TR></TABLE>> URL="../classes/transportnetwork__RailCorridor.md" margin=0]
+	}
+	TravelledWay [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWay</TD></TR></TABLE>> URL="../_counters/transportnetwork__TravelledWay.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		RailNetwork [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RailNetwork</TD></TR></TABLE>> URL="../_counters/transportnetwork__RailNetwork.md" margin=0]
+		TrackLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TrackLink</TD></TR></TABLE>> URL="../_counters/transportnetwork__TrackLink.md" margin=0]
+	}
+	RailCorridor -> TravelledWay [arrowhead=onormal style=solid]
+	RailCorridor -> Invis [style=invis]
+	Invis -> RailNetwork [style=invis]
+	RailNetwork -> TrackLink [style=invis]
+	RailCorridor -> TrackLink [label=" onProperty: partwhole::hasProperPart 
+ «min 1, only»  " arrowhead=normal style=dashed]
+	RailCorridor -> RailNetwork [label=" onProperty: partwhole::properPartOf 
+ «only»  " arrowhead=normal style=dashed]
+}

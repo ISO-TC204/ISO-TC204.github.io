@@ -1,0 +1,27 @@
+// Diagram for RoadSegment
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		RoadSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">RoadSegment</TD></TR></TABLE>> URL="../classes/TransportationInfrastructure__RoadSegment.md" margin=0]
+	}
+	TransportationInfrastructureOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TransportationInfrastructureOntologyThing</TD></TR></TABLE>> URL="../_counters/TransportationInfrastructure__TransportationInfrastructureOntologyThing.md" margin=0]
+	TravelledWaySegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWaySegment</TD></TR></TABLE>> URL="../_counters/TransportationInfrastructure__TravelledWaySegment.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		RoadLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadLink</TD></TR></TABLE>> URL="../_counters/TransportationInfrastructure__RoadLink.md" margin=0]
+		RoadNetworkType [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadNetworkType</TD></TR></TABLE>> URL="../_counters/TransportationInfrastructure__RoadNetworkType.md" margin=0]
+	}
+	RoadSegment -> TransportationInfrastructureOntologyThing [arrowhead=onormal style=solid]
+	RoadSegment -> TravelledWaySegment [arrowhead=onormal style=solid]
+	RoadSegment -> Invis [style=invis]
+	Invis -> RoadLink [style=invis]
+	RoadLink -> RoadNetworkType [style=invis]
+	RoadSegment -> RoadLink [label=" partwhole::properPartOf 
+ «some»  " arrowhead=normal style=solid]
+	RoadSegment -> RoadNetworkType [label=" networkType 
+ «only»  " arrowhead=normal style=solid]
+}

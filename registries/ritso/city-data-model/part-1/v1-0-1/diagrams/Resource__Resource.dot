@@ -1,0 +1,37 @@
+// Diagram for Resource
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Resource [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Resource</TD></TR></TABLE>> URL="../classes/Resource__Resource.md" margin=0]
+	}
+	ResourceOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ResourceOntologyThing</TD></TR></TABLE>> URL="../_counters/Resource__ResourceOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		activity__Activity [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">activity::Activity</TD></TR></TABLE>> margin=0]
+		i72__Quantity [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">i72::Quantity</TD></TR></TABLE>> margin=0]
+		PlannedAllocation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PlannedAllocation</TD></TR></TABLE>> URL="../_counters/Resource__PlannedAllocation.md" margin=0]
+		spatialLoc__ocation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">spatialLoc::ocation</TD></TR></TABLE>> margin=0]
+	}
+	Resource -> ResourceOntologyThing [arrowhead=onormal style=solid]
+	Resource -> Invis [style=invis]
+	Invis -> activity__Activity [style=invis]
+	activity__Activity -> i72__Quantity [style=invis]
+	i72__Quantity -> PlannedAllocation [style=invis]
+	PlannedAllocation -> spatialLoc__ocation [style=invis]
+	Resource -> spatialLoc__ocation [label=" spatialLoc::asLocation 
+ «only»  " arrowhead=normal style=solid]
+	Resource -> PlannedAllocation [label=" hasAllocation 
+ «only»  " arrowhead=normal style=solid]
+	Resource -> activity__Activity [label=" participatesIn 
+ «min 1»  " arrowhead=normal style=solid]
+	Resource -> i72__Quantity [label=" capacityInUse 
+ «exactly 1»  " arrowhead=normal style=solid]
+	Resource -> i72__Quantity [label=" hasAvailableCapacity 
+ «exactly 1»  " arrowhead=normal style=solid]
+	Resource -> i72__Quantity [label=" hasCapacity 
+ «exactly 1»  " arrowhead=normal style=solid]
+}

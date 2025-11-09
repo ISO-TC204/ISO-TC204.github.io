@@ -1,0 +1,21 @@
+// Diagram for RuleMaker
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		RuleMaker [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">RuleMaker</TD></TR></TABLE>> URL="../classes/itsRegulation__RuleMaker.md" margin=0]
+	}
+	TroThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TroThing</TD></TR></TABLE>> URL="../_counters/itsRegulation__TroThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		LegalBasis [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">LegalBasis</TD></TR></TABLE>> URL="../_counters/itsRegulation__LegalBasis.md" margin=0]
+	}
+	RuleMaker -> TroThing [arrowhead=onormal style=solid]
+	RuleMaker -> Invis [style=invis]
+	Invis -> LegalBasis [style=invis]
+	RuleMaker -> LegalBasis [label=" legalBasis 
+ «max 1»  " arrowhead=normal style=solid]
+}

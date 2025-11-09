@@ -1,0 +1,16 @@
+// Diagram for NonBindingTerm
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		NonBindingTerm [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">NonBindingTerm</TD></TR></TABLE>> URL="../classes/Contract__NonBindingTerm.md" margin=0]
+	}
+	ContractualElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ContractualElement</TD></TR></TABLE>> URL="../_counters/Contract__ContractualElement.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+	}
+	NonBindingTerm -> ContractualElement [arrowhead=onormal style=solid]
+}

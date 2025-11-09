@@ -1,0 +1,41 @@
+// Diagram for TrafficRegulationOrder
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		TrafficRegulationOrder [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">TrafficRegulationOrder</TD></TR><TR><TD ALIGN="LEFT">genProp::hasDescription: xsd::string «max 1, only»</TD></TR><TR><TD ALIGN="LEFT">genProp::hasIdentifier: xsd::string «exactly 1, only»</TD></TR></TABLE>> URL="../classes/itsRegulation__TrafficRegulationOrder.md" margin=0]
+	}
+	TroThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TroThing</TD></TR></TABLE>> URL="../_counters/itsRegulation__TroThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		code__Code [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">code::Code</TD></TR></TABLE>> margin=0]
+		"its-time__Validity" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">its-time::Validity</TD></TR></TABLE>> margin=0]
+		LegalBasis [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">LegalBasis</TD></TR></TABLE>> URL="../_counters/itsRegulation__LegalBasis.md" margin=0]
+		RuleMaker [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RuleMaker</TD></TR></TABLE>> URL="../_counters/itsRegulation__RuleMaker.md" margin=0]
+		TrafficRegulation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TrafficRegulation</TD></TR></TABLE>> URL="../_counters/itsRegulation__TrafficRegulation.md" margin=0]
+	}
+	TrafficRegulationOrder -> TroThing [arrowhead=onormal style=solid]
+	TrafficRegulationOrder -> Invis [style=invis]
+	Invis -> code__Code [style=invis]
+	code__Code -> "its-time__Validity" [style=invis]
+	"its-time__Validity" -> LegalBasis [style=invis]
+	LegalBasis -> RuleMaker [style=invis]
+	RuleMaker -> TrafficRegulation [style=invis]
+	TrafficRegulationOrder -> code__Code [label=" status 
+ «exactly 1, only»  " arrowhead=normal style=solid]
+	TrafficRegulationOrder -> "its-time__Validity" [label=" implementedValidity 
+ «max 1, only»  " arrowhead=normal style=solid]
+	TrafficRegulationOrder -> "its-time__Validity" [label=" validityByOrder 
+ «max 1, only»  " arrowhead=normal style=solid]
+	TrafficRegulationOrder -> TrafficRegulation [label=" trafficRegulation 
+ «min 1, only»  " arrowhead=normal style=solid]
+	TrafficRegulationOrder -> LegalBasis [label=" legalBasis 
+ «max 1, only»  " arrowhead=normal style=solid]
+	TrafficRegulationOrder -> RuleMaker [label=" issuingAuthority 
+ «exactly 1, only»  " arrowhead=normal style=solid]
+	TrafficRegulationOrder -> code__Code [label=" reasonCode 
+ «only»  " arrowhead=normal style=solid]
+}

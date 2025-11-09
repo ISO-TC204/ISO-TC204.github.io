@@ -1,0 +1,21 @@
+// Diagram for ControlledEntity
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		ControlledEntity [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">ControlledEntity</TD></TR><TR><TD ALIGN="LEFT">time::hasTime: xsd::string «max 1»</TD></TR></TABLE>> URL="../classes/CityResident__ControlledEntity.md" margin=0]
+	}
+	CityResidentOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">CityResidentOntologyThing</TD></TR></TABLE>> URL="../_counters/CityResident__CityResidentOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		owl__Thing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">owl::Thing</TD></TR></TABLE>> margin=0]
+	}
+	ControlledEntity -> CityResidentOntologyThing [arrowhead=onormal style=solid]
+	ControlledEntity -> Invis [style=invis]
+	Invis -> owl__Thing [style=invis]
+	ControlledEntity -> owl__Thing [label=" entity 
+ «some»  " arrowhead=normal style=solid]
+}

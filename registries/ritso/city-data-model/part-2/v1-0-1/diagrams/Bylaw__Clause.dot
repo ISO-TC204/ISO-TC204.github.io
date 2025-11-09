@@ -1,0 +1,42 @@
+// Diagram for Clause
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Clause [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Clause</TD></TR><TR><TD ALIGN="LEFT">genProp::hasDescription: xsd::string «max 1»</TD></TR><TR><TD ALIGN="LEFT">genProp::hasIdentifier: xsd::string «max 1»</TD></TR><TR><TD ALIGN="LEFT">genProp::hasName: xsd::string «max 1»</TD></TR></TABLE>> URL="../classes/Bylaw__Clause.md" margin=0]
+	}
+	BylawOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">BylawOntologyThing</TD></TR></TABLE>> URL="../_counters/Bylaw__BylawOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		bylaw [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">bylaw</TD></TR></TABLE>> margin=0]
+		Law [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Law</TD></TR></TABLE>> URL="../_counters/Bylaw__Law.md" margin=0]
+		penalty [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">penalty</TD></TR></TABLE>> margin=0]
+		repeal [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">repeal</TD></TR></TABLE>> margin=0]
+		schedule [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">schedule</TD></TR></TABLE>> margin=0]
+		severance [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">severance</TD></TR></TABLE>> margin=0]
+		transition [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">transition</TD></TR></TABLE>> margin=0]
+	}
+	Clause -> BylawOntologyThing [arrowhead=onormal style=solid]
+	Clause -> Invis [style=invis]
+	Invis -> bylaw [style=invis]
+	bylaw -> Law [style=invis]
+	Law -> penalty [style=invis]
+	penalty -> repeal [style=invis]
+	repeal -> schedule [style=invis]
+	schedule -> severance [style=invis]
+	severance -> transition [style=invis]
+	N0e3db3945cf8476284a12a26eaf6dc92 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">«Enum»<BR/>Enum: bylaw, penalty, repeal, schedule, severance, transition</TD></TR><TR><TD ALIGN="LEFT">+ bylaw<BR/>+ penalty<BR/>+ repeal<BR/>+ schedule<BR/>+ severance<BR/>+ transition</TD></TR></TABLE>> margin=0]
+	Clause -> N0e3db3945cf8476284a12a26eaf6dc92 [label=" clauseType 
+ «some»  " arrowhead=normal style=solid]
+	Clause [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Clause</TD></TR></TABLE>> URL="../_counters/Bylaw__Clause.md" margin=0]
+	Clause -> Clause [label=" hasClause 
+ «only»  " arrowhead=normal style=solid]
+	N1aae571bf78f4941a4e4943a266616cb [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	N1aae571bf78f4941a4e4943a266616cb -> Clause [label=member arrowhead=normal style=dotted]
+	N1aae571bf78f4941a4e4943a266616cb -> Law [label=member arrowhead=normal style=dotted]
+	Clause -> N1aae571bf78f4941a4e4943a266616cb [label=" partwhole::properPartOf 
+ «exactly 1»  " arrowhead=normal style=solid]
+}

@@ -1,0 +1,19 @@
+// Diagram for mass
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		mass [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">mass</TD></TR></TABLE>> URL="../classes/CityUnits__mass.md" margin=0]
+	}
+	i72__Quantity [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">i72::Quantity</TD></TR></TABLE>> margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+	}
+	mass -> i72__Quantity [arrowhead=onormal style=solid]
+	N0d3f77aadf5a48f286dc41cf36566715 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">ComplexExpr</TD></TR></TABLE>> margin=0]
+	mass -> N0d3f77aadf5a48f286dc41cf36566715 [label=" onProperty: i72::value 
+ «only»  " arrowhead=normal style=dashed]
+}

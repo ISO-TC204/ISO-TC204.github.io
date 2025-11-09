@@ -1,0 +1,29 @@
+// Diagram for PointAlongLineLocationReference
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		PointAlongLineLocationReference [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">PointAlongLineLocationReference</TD></TR><TR><TD ALIGN="LEFT">positiveOffset: xsd::integer «exactly 1»</TD></TR></TABLE>> URL="../classes/OpenLR__PointAlongLineLocationReference.md" margin=0]
+	}
+	LocationReference [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">LocationReference</TD></TR></TABLE>> URL="../_counters/OpenLR__LocationReference.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		LocationReferencePoint [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">LocationReferencePoint</TD></TR></TABLE>> URL="../_counters/OpenLR__LocationReferencePoint.md" margin=0]
+		Orientation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Orientation</TD></TR></TABLE>> URL="../_counters/OpenLR__Orientation.md" margin=0]
+		SideOfRoad [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">SideOfRoad</TD></TR></TABLE>> URL="../_counters/OpenLR__SideOfRoad.md" margin=0]
+	}
+	PointAlongLineLocationReference -> LocationReference [arrowhead=onormal style=solid]
+	PointAlongLineLocationReference -> Invis [style=invis]
+	Invis -> LocationReferencePoint [style=invis]
+	LocationReferencePoint -> Orientation [style=invis]
+	Orientation -> SideOfRoad [style=invis]
+	PointAlongLineLocationReference -> LocationReferencePoint [label=" hasLRP 
+ «exactly 2»  " arrowhead=normal style=solid]
+	PointAlongLineLocationReference -> Orientation [label=" hasOrientation 
+ «max 1»  " arrowhead=normal style=solid]
+	PointAlongLineLocationReference -> SideOfRoad [label=" hasSideOfRoad 
+ «max 1»  " arrowhead=normal style=solid]
+}

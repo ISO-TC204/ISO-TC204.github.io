@@ -1,0 +1,556 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#"
+     xml:base="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:adms="http://www.w3.org/ns/adms#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:change="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change#"
+     xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:spatialLoc="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc#">
+    <owl:Ontology rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#">
+        <owl:imports rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change.owl"/>
+        <owl:imports rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc.owl"/>
+        <owl:imports rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Time.owl"/>
+        <ns:license>http://creativecommons.org/licenses/by/3.0/</ns:license>
+        <dc:creator>Megan Katsumi</dc:creator>
+        <dc:description>Ontology to capture concepts related to activities.</dc:description>
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-11-06</dc:issued>
+        <dc:title>Activity Ontology</dc:title>
+        <vann:preferredNamespacePrefix>activity</vann:preferredNamespacePrefix>
+        <owl:priorVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-11-05</owl:priorVersion>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.2</owl:versionInfo>
+    </owl:Ontology>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ActivityOntologyProperty -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ActivityOntologyProperty">
+        <dc:description>Added for organizational purposes, to identify all properties defined in the Activity ontology.</dc:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#achievedAt -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#achievedAt">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ActivityOntologyProperty"/>
+        <rdfs:domain rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#State"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#effectOf"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#endOf"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#hasDecomp"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#conjunctiveAchievedAt"/>
+            <rdf:Description rdf:about="http://www.w3.org/2006/time#intervalDuring"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#preconditionOf"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#beginOf"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#beginOf -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#beginOf">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ActivityOntologyProperty"/>
+        <rdfs:domain rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#Activity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#occursAt"/>
+            <rdf:Description rdf:about="http://www.w3.org/2006/time#hasBeginning"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#causedBy -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#causedBy">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ActivityOntologyProperty"/>
+        <owl:inverseOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#causes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#causes -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#causes">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ActivityOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#conjunctiveAchievedAt -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#conjunctiveAchievedAt">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#achievedAt"/>
+        <rdfs:domain rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ConjunctiveState"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#disjunctiveAchievedAt -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#disjunctiveAchievedAt">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#achievedAt"/>
+        <rdfs:domain rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#DisjunctiveState"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#effectOf -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#effectOf">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ActivityOntologyProperty"/>
+        <owl:inverseOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#hasEffect"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#enabledBy -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#enabledBy">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ActivityOntologyProperty"/>
+        <owl:inverseOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#enables"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#enables -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#enables">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ActivityOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#endOf -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#endOf">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ActivityOntologyProperty"/>
+        <rdfs:domain rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#Activity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#occursAt"/>
+            <rdf:Description rdf:about="http://www.w3.org/2006/time#hasEnd"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#hasDecomp -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#hasDecomp">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#hasSubstate"/>
+        <rdfs:domain rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#State"/>
+        <rdfs:range rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#State"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#hasEffect -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#hasEffect">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#causedBy"/>
+        <rdfs:domain rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#Activity"/>
+        <rdfs:range rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#State"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#hasPrecondition -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#hasPrecondition">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#enabledBy"/>
+        <owl:inverseOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#preconditionOf"/>
+        <rdfs:domain rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#Activity"/>
+        <rdfs:range rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#State"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#hasStatus -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#hasStatus">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ActivityOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#hasSubactivity -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#hasSubactivity">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ActivityOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#hasSubstate -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#hasSubstate">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ActivityOntologyProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#occursAfter -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#occursAfter">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ActivityOntologyProperty"/>
+        <owl:inverseOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#occursBefore"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#occursAt -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#occursAt">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ActivityOntologyProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#occursBefore -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#occursBefore">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ActivityOntologyProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#Activity"/>
+        <rdfs:range rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#Activity"/>
+        <rdfs:comment>An activity occursBefore another if its endOf instant is before the beginOf instant of the other activity; the occursBefore relation is transitive. We cannot define this semantics in OWL, though it could be captured in future work by an extension with rules.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#occursDirectlyAfter -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#occursDirectlyAfter">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#occursAfter"/>
+        <owl:inverseOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#occursDirectlyBefore"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#occursDirectlyBefore -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#occursDirectlyBefore">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#occursBefore"/>
+        <rdfs:domain rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#Activity"/>
+        <rdfs:range rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#Activity"/>
+        <rdfs:comment>An activity occursDirectlyBefore another if it occursAt an interval that meets the interval of the other activity. We cannot define this semantics in OWL, though it could be captured by an extension with rules.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#preconditionOf -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#preconditionOf">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ActivityOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#satisfiedBy -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#satisfiedBy">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ActivityOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#scheduledFor -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#scheduledFor">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ActivityOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#terminalAchievedAt -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#terminalAchievedAt">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#achievedAt"/>
+        <rdfs:domain rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#TerminalState"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#Activity -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#Activity">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ActivityOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#occursAt"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#Interval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc#associatedLocation"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc#Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#causes"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#State"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#enabledBy"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#State"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#hasEffect"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#State"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#hasPrecondition"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#State"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#hasSubactivity"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#occursBefore"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#occursDirectlyBefore"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#hasStatus"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ActivityStatus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>An Activity describes something that occurs in the domain.
+An Activity may be further defined by (decomposed into) Subactivities.
+An Activity may have precondition and/or effect State.
+An Activity may be enabled by or cause some State. An enabling of causing state is a generalization of a precondition/effect; an Activity is enabled by or causes some State if it has a subactivity with a precondition or effect (respectively) of that State. 
+In other words, the state may not be required directly before, or cause directly after the activity, but by some more specialized sub-activity.
+An Activity occurs at some point in time and space.
+An Activity takes place during some interval, and so has some duration.
+An Activity may have some Manifestations that participate in it.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ActivityOntologyThing -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ActivityOntologyThing">
+        <dc:description>Added for organizational purposes, to identify all classes defined in the Activity ontology.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ActivityStatus -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ActivityStatus">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ActivityOntologyThing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ConjunctiveState -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ConjunctiveState">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#NonTerminalState"/>
+        <owl:disjointWith rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#DisjunctiveState"/>
+        <dc:description>Naturally, a conjunctive state type is defined by the conjunction of its child state types, whereas a disjunctive state type is defined by the disjunction of its child states.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#DisjunctiveState -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#DisjunctiveState">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#NonTerminalState"/>
+        <dc:description>Naturally, a conjunctive state type is defined by the conjunction of its child state types, whereas a disjunctive state type is defined by the disjunction of its child states.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ManifestationState -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ManifestationState">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#TerminalState"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#satisfiedBy"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/Manifestation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#NonTerminalState -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#NonTerminalState">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#State"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#hasDecomp"/>
+                        <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#State"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#hasDecomp"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#State"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#hasSubstate"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#State"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#TerminalState"/>
+        <dc:description>A non-terminal state type has substates. It may be conjunctive or disjunctive. 
+A state type cannot be both conjunctive and disjunctive.
+	ConjunctiveStateType disjointWith DisjunctiveStateType
+Conjunctive and disjunctive state types, which do have substates, are achieved at some time if their decomposition of state types is achieved.
+Note that in this representation, decomp_of is not a transitive relation, it only refers to the direct children of a non-terminal state type. A more general relation that is transitive is the substate relation.
+decomp_of(x,y) -&gt; substate(x,y)</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#State -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#State">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ActivityOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#causedBy"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#effectOf"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#enables"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#preconditionOf"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#hasStatus"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#StateStatus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A state refers to a class of manifestations. It may be a precondition or effect of some Activity, or more generally it may enabled or be caused by some Activity. If a state is complex, it may refer to some combination of classes of manifestations.
+A note on complex states:
+Say that a shopping activity, Activity-Shop, requires both the VehicleW30LGas state, but also some state wherein the mall is open, OpenMall. Each state would first be defined separately. Then, we can simply state:
+precondition(VehicleW30LGas,Activity-Shop) AND  precondition(OpenMall,Activity-Shop)
+were the preconditions required disjunctively, we could state:
+precondition(VehicleW30LGas,Activity-Shop) OR precondition(OpenMall,Activity-Shop)
+However, in large and complex domains, there will be cases in which the above approach is undesirable. In particular, due to the complexity of the description that results as the state being described becomes more detailed. In many cases it will be more natural and convenient to be able to refer to a single, aggregate state. We therefore extend the representation of States to capture aggregation, as approached in the concept of state trees introduced by TOVE as a construct for the activity cluster.
+
+A State may be either non-terminal or terminal. A terminal state has no child states, and therefore refers directly to a class of manifestations, whereas a non-terminal state has child states, which may define some classes of manifestations, or further define some other complex states.
+	NonTerminalState(x) v TerminalState(x) = State(x)
+A state  cannot be both non-terminal and terminal.
+	TerminalState disjointWith NonTerminalState</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#StateStatus -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#StateStatus">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#ActivityOntologyThing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#TerminalState -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#TerminalState">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#State"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#hasDecomp"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity#State"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A terminal state type has no substates (cannot be decomposed). It corresponds to a particular class of manifestations. A terminal state is achieved at some time if and only if there exists a manifestation within its defined classification, that exists at that time.
+
+hasResource: links to the resource participating in the state
+hasQuantity: specifies the quantity of resource participating in the state</dc:description>
+    </owl:Class>
+    
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

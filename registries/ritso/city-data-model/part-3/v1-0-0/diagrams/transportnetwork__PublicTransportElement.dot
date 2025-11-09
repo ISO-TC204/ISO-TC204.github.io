@@ -1,0 +1,16 @@
+// Diagram for PublicTransportElement
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		PublicTransportElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">PublicTransportElement</TD></TR></TABLE>> URL="../classes/transportnetwork__PublicTransportElement.md" margin=0]
+	}
+	ITSThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ITSThing</TD></TR></TABLE>> URL="../_counters/transportnetwork__ITSThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+	}
+	PublicTransportElement -> ITSThing [arrowhead=onormal style=solid]
+}

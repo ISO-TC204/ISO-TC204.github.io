@@ -1,0 +1,27 @@
+// Diagram for Tunnel
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Tunnel [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Tunnel</TD></TR></TABLE>> URL="../classes/TransportationInfrastructure__Tunnel.md" margin=0]
+	}
+	infrastructure__InfrastructureElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">infrastructure::InfrastructureElement</TD></TR></TABLE>> margin=0]
+	TransportationInfrastructureOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TransportationInfrastructureOntologyThing</TD></TR></TABLE>> URL="../_counters/TransportationInfrastructure__TransportationInfrastructureOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		TravelledWaySegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWaySegment</TD></TR></TABLE>> URL="../_counters/TransportationInfrastructure__TravelledWaySegment.md" margin=0]
+		TunnelSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TunnelSegment</TD></TR></TABLE>> URL="../_counters/TransportationInfrastructure__TunnelSegment.md" margin=0]
+	}
+	Tunnel -> infrastructure__InfrastructureElement [arrowhead=onormal style=solid]
+	Tunnel -> TransportationInfrastructureOntologyThing [arrowhead=onormal style=solid]
+	Tunnel -> Invis [style=invis]
+	Invis -> TravelledWaySegment [style=invis]
+	TravelledWaySegment -> TunnelSegment [style=invis]
+	Tunnel -> TunnelSegment [label=" partwhole::hasProperPart 
+ «only»  " arrowhead=normal style=solid]
+	Tunnel -> TravelledWaySegment [label=" supports 
+ «only»  " arrowhead=normal style=solid]
+}

@@ -1,0 +1,2811 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.opengis.net/ont/geosparql"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.opengis.net/ont/geosparql">
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="geo" IRI="http://www.opengis.net/ont/geosparql#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+<!--    <Import>http://purl.org/dc/elements/1.1/</Import> -->
+    <Import>http://www.opengis.net/ont/gml</Import>
+    <Import>http://www.opengis.net/ont/sf</Import>
+    <Import>http://www.w3.org/2004/02/skos/core</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal>Open Geospatial Consortium</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2012-04-30</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <Literal>An RDF/OWL vocabulary for representing spatial information</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>http://www.opengis.net/doc/IS/geosparql/1.0</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <Literal>OGC GeoSPARQL – A Geographic Query Language for RDF Data OGC 11-052r5</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>http://www.opengis.net/def/function/ogc-geosparql/1.0</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>http://www.opengis.net/def/rule/ogc-geosparql/1.0</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>http://www.opengis.net/doc/IS/geosparql/1.0</IRI>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Feature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Geometry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SpatialObject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#defaultGeometry"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ehContains"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ehCoveredBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ehCovers"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ehDisjoint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ehEquals"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ehInside"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ehMeet"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ehOverlap"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGeometry"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#rcc8dc"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#rcc8ec"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#rcc8eq"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#rcc8ntpp"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#rcc8ntppi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#rcc8po"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#rcc8tpp"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#rcc8tppi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sfContains"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sfCrosses"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sfDisjoint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sfEquals"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sfIntersects"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sfOverlaps"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sfTouches"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sfWithin"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#asGML"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#asWKT"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#coordinateDimension"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#dimension"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSerialization"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isEmpty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isSimple"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#spatialDimension"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="#gmlLiteral"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="#wktLiteral"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rdf:List"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Feature"/>
+        <Class IRI="#SpatialObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Geometry"/>
+        <Class IRI="#SpatialObject"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Feature"/>
+        <Class IRI="#Geometry"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#defaultGeometry"/>
+        <ObjectProperty IRI="#hasGeometry"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#defaultGeometry"/>
+        <Class IRI="#Feature"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ehContains"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ehCoveredBy"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ehCovers"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ehDisjoint"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ehEquals"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ehInside"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ehMeet"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ehOverlap"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGeometry"/>
+        <Class IRI="#Feature"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#rcc8dc"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#rcc8ec"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#rcc8eq"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#rcc8ntpp"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#rcc8ntppi"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#rcc8po"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#rcc8tpp"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#rcc8tppi"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sfContains"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sfCrosses"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sfDisjoint"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sfEquals"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sfIntersects"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sfOverlaps"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sfTouches"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sfWithin"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#defaultGeometry"/>
+        <Class IRI="#Geometry"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ehContains"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ehCoveredBy"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ehCovers"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ehDisjoint"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ehEquals"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ehInside"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ehMeet"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ehOverlap"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasGeometry"/>
+        <Class IRI="#Geometry"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#rcc8dc"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#rcc8ec"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#rcc8eq"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#rcc8ntpp"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#rcc8ntppi"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#rcc8po"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#rcc8tpp"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#rcc8tppi"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sfContains"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sfCrosses"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sfDisjoint"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sfEquals"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sfIntersects"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sfOverlaps"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sfTouches"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sfWithin"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#asGML"/>
+        <DataProperty IRI="#hasSerialization"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#asWKT"/>
+        <DataProperty IRI="#hasSerialization"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#asGML"/>
+        <Class IRI="#Geometry"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#asWKT"/>
+        <Class IRI="#Geometry"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#coordinateDimension"/>
+        <Class IRI="#Geometry"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#dimension"/>
+        <Class IRI="#Geometry"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSerialization"/>
+        <Class IRI="#Geometry"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#isEmpty"/>
+        <Class IRI="#Geometry"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#isSimple"/>
+        <Class IRI="#Geometry"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#spatialDimension"/>
+        <Class IRI="#Geometry"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#asGML"/>
+        <Datatype IRI="#gmlLiteral"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#asWKT"/>
+        <Datatype IRI="#wktLiteral"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#coordinateDimension"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#dimension"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSerialization"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isEmpty"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isSimple"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#spatialDimension"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#Feature</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#Feature</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#Feature</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#Feature</IRI>
+        <Literal xml:lang="en">
+      This class represents the top-level feature type. This class is 
+      equivalent to GFI_Feature defined in ISO 19156:2011, and it is 
+      superclass of all feature types.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Feature</IRI>
+        <Literal xml:lang="en">
+      This class represents the top-level feature type. This class is 
+      equivalent to GFI_Feature defined in ISO 19156:2011, and it is 
+      superclass of all feature types.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Feature</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Feature</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Feature</IRI>
+        <Literal xml:lang="en">Feature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#Feature</IRI>
+        <Literal xml:lang="en">
+      This class represents the top-level feature type. This class is 
+      equivalent to GFI_Feature defined in ISO 19156:2011, and it is 
+      superclass of all feature types.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#Feature</IRI>
+        <Literal xml:lang="en">Feature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#Geometry</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#Geometry</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#Geometry</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#Geometry</IRI>
+        <Literal xml:lang="en">
+      The class represents the top-level geometry type. This class is 
+      equivalent to the UML class GM_Object defined in ISO 19107, and 
+      it is superclass of all geometry types.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Geometry</IRI>
+        <Literal xml:lang="en">
+      The class represents the top-level geometry type. This class is 
+      equivalent to the UML class GM_Object defined in ISO 19107, and 
+      it is superclass of all geometry types.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Geometry</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Geometry</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Geometry</IRI>
+        <Literal xml:lang="en">Geometry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#Geometry</IRI>
+        <Literal xml:lang="en">
+      The class represents the top-level geometry type. This class is 
+      equivalent to the UML class GM_Object defined in ISO 19107, and 
+      it is superclass of all geometry types.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#Geometry</IRI>
+        <Literal xml:lang="en">Geometry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#SpatialObject</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#SpatialObject</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#SpatialObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#SpatialObject</IRI>
+        <Literal xml:lang="en">
+      The class spatial-object represents everything that can have 
+      a spatial representation. It is superclass of feature and geometry.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SpatialObject</IRI>
+        <Literal xml:lang="en">
+      The class spatial-object represents everything that can have 
+      a spatial representation. It is superclass of feature and geometry.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#SpatialObject</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#SpatialObject</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SpatialObject</IRI>
+        <Literal xml:lang="en">SpatialObject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#SpatialObject</IRI>
+        <Literal xml:lang="en">
+      The class spatial-object represents everything that can have 
+      a spatial representation. It is superclass of feature and geometry.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#SpatialObject</IRI>
+        <Literal xml:lang="en">SpatialObject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#asGML</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#asGML</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#asGML</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#asGML</IRI>
+        <Literal xml:lang="en">
+      The GML serialization of a geometry
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#asGML</IRI>
+        <Literal xml:lang="en">
+      The GML serialization of a geometry
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#asGML</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#asGML</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#asGML</IRI>
+        <Literal xml:lang="en">asGML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#asGML</IRI>
+        <Literal xml:lang="en">
+      The GML serialization of a geometry
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#asGML</IRI>
+        <Literal xml:lang="en">asGML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#asWKT</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#asWKT</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#asWKT</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#asWKT</IRI>
+        <Literal xml:lang="en">
+      The WKT serialization of a geometry
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#asWKT</IRI>
+        <Literal xml:lang="en">
+      The WKT serialization of a geometry
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#asWKT</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#asWKT</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#asWKT</IRI>
+        <Literal xml:lang="en">asWKT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#asWKT</IRI>
+        <Literal xml:lang="en">
+      The WKT serialization of a geometry
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#asWKT</IRI>
+        <Literal xml:lang="en">asWKT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#coordinateDimension</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#coordinateDimension</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#coordinateDimension</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#coordinateDimension</IRI>
+        <Literal xml:lang="en">
+      The number of measurements or axes needed to describe the position of this
+      geometry in a coordinate system.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#coordinateDimension</IRI>
+        <Literal xml:lang="en">
+      The number of measurements or axes needed to describe the position of this
+      geometry in a coordinate system.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#coordinateDimension</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#coordinateDimension</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#coordinateDimension</IRI>
+        <Literal xml:lang="en">coordinateDimension</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#coordinateDimension</IRI>
+        <Literal xml:lang="en">
+      The number of measurements or axes needed to describe the position of this
+      geometry in a coordinate system.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#coordinateDimension</IRI>
+        <Literal xml:lang="en">coordinateDimension</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#defaultGeometry</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#defaultGeometry</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#defaultGeometry</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#defaultGeometry</IRI>
+        <Literal xml:lang="en">
+      The default geometry to be used in spatial calculations.
+      It is Usually the most detailed geometry.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#defaultGeometry</IRI>
+        <Literal xml:lang="en">
+      The default geometry to be used in spatial calculations.
+      It is Usually the most detailed geometry.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#defaultGeometry</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#defaultGeometry</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#defaultGeometry</IRI>
+        <Literal xml:lang="en">defaultGeometry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#defaultGeometry</IRI>
+        <Literal xml:lang="en">
+      The default geometry to be used in spatial calculations.
+      It is Usually the most detailed geometry.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#defaultGeometry</IRI>
+        <Literal xml:lang="en">defaultGeometry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#dimension</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#dimension</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#dimension</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#dimension</IRI>
+        <Literal xml:lang="en">
+      The topological dimension of this geometric object, which 
+      must be less than or equal to the coordinate dimension. 
+      In non-homogeneous collections, this will return the largest 
+      topological dimension of the contained objects.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#dimension</IRI>
+        <Literal xml:lang="en">
+      The topological dimension of this geometric object, which 
+      must be less than or equal to the coordinate dimension. 
+      In non-homogeneous collections, this will return the largest 
+      topological dimension of the contained objects.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#dimension</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#dimension</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dimension</IRI>
+        <Literal xml:lang="en">dimension</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#dimension</IRI>
+        <Literal xml:lang="en">
+      The topological dimension of this geometric object, which 
+      must be less than or equal to the coordinate dimension. 
+      In non-homogeneous collections, this will return the largest 
+      topological dimension of the contained objects.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#dimension</IRI>
+        <Literal xml:lang="en">dimension</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#ehContains</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#ehContains</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#ehContains</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#ehContains</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: T*TFF*FF*
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ehContains</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: T*TFF*FF*
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehContains</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehContains</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ehContains</IRI>
+        <Literal xml:lang="en">contains</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#ehContains</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: T*TFF*FF*
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#ehContains</IRI>
+        <Literal xml:lang="en">contains</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#ehCoveredBy</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#ehCoveredBy</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#ehCoveredBy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#ehCoveredBy</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject is spatially covered 
+      by the object SpatialObject. DE-9IM: TFF*TFT**
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ehCoveredBy</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject is spatially covered 
+      by the object SpatialObject. DE-9IM: TFF*TFT**
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehCoveredBy</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehCoveredBy</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ehCoveredBy</IRI>
+        <Literal xml:lang="en">coveredBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#ehCoveredBy</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject is spatially covered 
+      by the object SpatialObject. DE-9IM: TFF*TFT**
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#ehCoveredBy</IRI>
+        <Literal xml:lang="en">coveredBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#ehCovers</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#ehCovers</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#ehCovers</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#ehCovers</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially covers the 
+      object SpatialObject. DE-9IM: T*TFT*FF*
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ehCovers</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially covers the 
+      object SpatialObject. DE-9IM: T*TFT*FF*
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehCovers</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehCovers</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ehCovers</IRI>
+        <Literal xml:lang="en">covers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#ehCovers</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially covers the 
+      object SpatialObject. DE-9IM: T*TFT*FF*
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#ehCovers</IRI>
+        <Literal xml:lang="en">covers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#ehDisjoint</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#ehDisjoint</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#ehDisjoint</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#ehDisjoint</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject is spatially disjoint
+      from the object SpatialObject. DE-9IM: FF*FF****
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ehDisjoint</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject is spatially disjoint
+      from the object SpatialObject. DE-9IM: FF*FF****
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehDisjoint</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehDisjoint</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ehDisjoint</IRI>
+        <Literal xml:lang="en">disjoint</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#ehDisjoint</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject is spatially disjoint
+      from the object SpatialObject. DE-9IM: FF*FF****
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#ehDisjoint</IRI>
+        <Literal xml:lang="en">disjoint</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#ehEquals</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#ehEquals</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#ehEquals</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#ehEquals</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially equals the 
+      object SpatialObject. DE-9IM: TFFFTFFFT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ehEquals</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially equals the 
+      object SpatialObject. DE-9IM: TFFFTFFFT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehEquals</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehEquals</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ehEquals</IRI>
+        <Literal xml:lang="en">equals</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#ehEquals</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially equals the 
+      object SpatialObject. DE-9IM: TFFFTFFFT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#ehEquals</IRI>
+        <Literal xml:lang="en">equals</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#ehInside</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#ehInside</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#ehInside</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#ehInside</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject is spatially inside 
+      the object SpatialObject. DE-9IM: TFF*FFT**
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ehInside</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject is spatially inside 
+      the object SpatialObject. DE-9IM: TFF*FFT**
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehInside</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehInside</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ehInside</IRI>
+        <Literal xml:lang="en">inside</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#ehInside</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject is spatially inside 
+      the object SpatialObject. DE-9IM: TFF*FFT**
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#ehInside</IRI>
+        <Literal xml:lang="en">inside</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#ehMeet</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#ehMeet</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#ehMeet</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#ehMeet</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially meets the 
+      object SpatialObject. 
+      DE-9IM: FT******* ^ F**T***** ^ F***T****
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ehMeet</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially meets the 
+      object SpatialObject. 
+      DE-9IM: FT******* ^ F**T***** ^ F***T****
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehMeet</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehMeet</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ehMeet</IRI>
+        <Literal xml:lang="en">meet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#ehMeet</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially meets the 
+      object SpatialObject. 
+      DE-9IM: FT******* ^ F**T***** ^ F***T****
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#ehMeet</IRI>
+        <Literal xml:lang="en">meet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#ehOverlap</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#ehOverlap</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#ehOverlap</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#ehOverlap</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially overlaps the 
+      object SpatialObject. DE-9IM: T*T***T**
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ehOverlap</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially overlaps the 
+      object SpatialObject. DE-9IM: T*T***T**
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehOverlap</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehOverlap</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ehOverlap</IRI>
+        <Literal xml:lang="en">overlap</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#ehOverlap</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially overlaps the 
+      object SpatialObject. DE-9IM: T*T***T**
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#ehOverlap</IRI>
+        <Literal xml:lang="en">overlap</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#gmlLiteral</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#gmlLiteral</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#gmlLiteral</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#gmlLiteral</IRI>
+        <Literal xml:lang="en">
+      A GML serialization of a geometry object.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#gmlLiteral</IRI>
+        <Literal xml:lang="en">
+      A GML serialization of a geometry object.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#gmlLiteral</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#gmlLiteral</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#gmlLiteral</IRI>
+        <Literal xml:lang="en">GML Literal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#gmlLiteral</IRI>
+        <Literal xml:lang="en">
+      A GML serialization of a geometry object.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#gmlLiteral</IRI>
+        <Literal xml:lang="en">GML Literal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#hasGeometry</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#hasGeometry</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#hasGeometry</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#hasGeometry</IRI>
+        <Literal xml:lang="en">
+      A spatial representation for a given feature.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasGeometry</IRI>
+        <Literal xml:lang="en">
+      A spatial representation for a given feature.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasGeometry</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasGeometry</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasGeometry</IRI>
+        <Literal xml:lang="en">hasGeometry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#hasGeometry</IRI>
+        <Literal xml:lang="en">
+      A spatial representation for a given feature.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#hasGeometry</IRI>
+        <Literal xml:lang="en">hasGeometry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#hasSerialization</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#hasSerialization</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#hasSerialization</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#hasSerialization</IRI>
+        <Literal xml:lang="en">
+      Connects a geometry object with its text-based serialization.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasSerialization</IRI>
+        <Literal xml:lang="en">
+      Connects a geometry object with its text-based serialization.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasSerialization</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasSerialization</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasSerialization</IRI>
+        <Literal xml:lang="en">has serialization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#hasSerialization</IRI>
+        <Literal xml:lang="en">
+      Connects a geometry object with its text-based serialization.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#hasSerialization</IRI>
+        <Literal xml:lang="en">has serialization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#isEmpty</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#isEmpty</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#isEmpty</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#isEmpty</IRI>
+        <Literal xml:lang="en">
+      (true) if this geometric object is the empty Geometry. If 
+      true, then this geometric object represents the empty point 
+      set for the coordinate space.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isEmpty</IRI>
+        <Literal xml:lang="en">
+      (true) if this geometric object is the empty Geometry. If 
+      true, then this geometric object represents the empty point 
+      set for the coordinate space.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#isEmpty</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#isEmpty</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isEmpty</IRI>
+        <Literal xml:lang="en">isEmpty</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#isEmpty</IRI>
+        <Literal xml:lang="en">
+      (true) if this geometric object is the empty Geometry. If 
+      true, then this geometric object represents the empty point 
+      set for the coordinate space.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#isEmpty</IRI>
+        <Literal xml:lang="en">isEmpty</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#isSimple</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#isSimple</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#isSimple</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#isSimple</IRI>
+        <Literal xml:lang="en">
+      (true) if this geometric object has no anomalous geometric 
+      points, such as self intersection or self tangency.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isSimple</IRI>
+        <Literal xml:lang="en">
+      (true) if this geometric object has no anomalous geometric 
+      points, such as self intersection or self tangency.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#isSimple</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#isSimple</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isSimple</IRI>
+        <Literal xml:lang="en">isSimple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#isSimple</IRI>
+        <Literal xml:lang="en">
+      (true) if this geometric object has no anomalous geometric 
+      points, such as self intersection or self tangency.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#isSimple</IRI>
+        <Literal xml:lang="en">isSimple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#rcc8dc</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#rcc8dc</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#rcc8dc</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#rcc8dc</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject is spatially disjoint
+      from the object SpatialObject. DE-9IM: FFTFFTTTT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#rcc8dc</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject is spatially disjoint
+      from the object SpatialObject. DE-9IM: FFTFFTTTT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8dc</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8dc</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#rcc8dc</IRI>
+        <Literal xml:lang="en">disconnected</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#rcc8dc</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject is spatially disjoint
+      from the object SpatialObject. DE-9IM: FFTFFTTTT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#rcc8dc</IRI>
+        <Literal xml:lang="en">disconnected</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#rcc8ec</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#rcc8ec</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#rcc8ec</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#rcc8ec</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially meets the 
+      object SpatialObject. DE-9IM: FFTFTTTTT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#rcc8ec</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially meets the 
+      object SpatialObject. DE-9IM: FFTFTTTTT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8ec</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8ec</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#rcc8ec</IRI>
+        <Literal xml:lang="en">externally connected</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#rcc8ec</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially meets the 
+      object SpatialObject. DE-9IM: FFTFTTTTT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#rcc8ec</IRI>
+        <Literal xml:lang="en">externally connected</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#rcc8eq</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#rcc8eq</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#rcc8eq</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#rcc8eq</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially equals the 
+      object SpatialObject. DE-9IM: TFFFTFFFT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#rcc8eq</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially equals the 
+      object SpatialObject. DE-9IM: TFFFTFFFT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8eq</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8eq</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#rcc8eq</IRI>
+        <Literal xml:lang="en">equals</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#rcc8eq</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially equals the 
+      object SpatialObject. DE-9IM: TFFFTFFFT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#rcc8eq</IRI>
+        <Literal xml:lang="en">equals</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#rcc8ntpp</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#rcc8ntpp</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#rcc8ntpp</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#rcc8ntpp</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject is spatially inside 
+      the object SpatialObject. DE-9IM: TFFTFFTTT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#rcc8ntpp</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject is spatially inside 
+      the object SpatialObject. DE-9IM: TFFTFFTTT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8ntpp</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8ntpp</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#rcc8ntpp</IRI>
+        <Literal xml:lang="en">non-tangential proper part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#rcc8ntpp</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject is spatially inside 
+      the object SpatialObject. DE-9IM: TFFTFFTTT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#rcc8ntpp</IRI>
+        <Literal xml:lang="en">non-tangential proper part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#rcc8ntppi</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#rcc8ntppi</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#rcc8ntppi</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#rcc8ntppi</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: TTTFFTFFT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#rcc8ntppi</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: TTTFFTFFT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8ntppi</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8ntppi</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#rcc8ntppi</IRI>
+        <Literal xml:lang="en">non-tangential proper part inverse</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#rcc8ntppi</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: TTTFFTFFT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#rcc8ntppi</IRI>
+        <Literal xml:lang="en">non-tangential proper part inverse</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#rcc8po</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#rcc8po</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#rcc8po</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#rcc8po</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially overlaps the 
+      object SpatialObject. DE-9IM: TTTTTTTTT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#rcc8po</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially overlaps the 
+      object SpatialObject. DE-9IM: TTTTTTTTT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8po</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8po</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#rcc8po</IRI>
+        <Literal xml:lang="en">partially overlapping</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#rcc8po</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially overlaps the 
+      object SpatialObject. DE-9IM: TTTTTTTTT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#rcc8po</IRI>
+        <Literal xml:lang="en">partially overlapping</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#rcc8tpp</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#rcc8tpp</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#rcc8tpp</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#rcc8tpp</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject is spatially covered 
+      by the object SpatialObject. DE-9IM: TFFTTFTTT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#rcc8tpp</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject is spatially covered 
+      by the object SpatialObject. DE-9IM: TFFTTFTTT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8tpp</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8tpp</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#rcc8tpp</IRI>
+        <Literal xml:lang="en">tangential proper part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#rcc8tpp</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject is spatially covered 
+      by the object SpatialObject. DE-9IM: TFFTTFTTT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#rcc8tpp</IRI>
+        <Literal xml:lang="en">tangential proper part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#rcc8tppi</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#rcc8tppi</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#rcc8tppi</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#rcc8tppi</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially covers the 
+      object SpatialObject. DE-9IM: TTTFTTFFT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#rcc8tppi</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially covers the 
+      object SpatialObject. DE-9IM: TTTFTTFFT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8tppi</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8tppi</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#rcc8tppi</IRI>
+        <Literal xml:lang="en">tangential proper part inverse</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#rcc8tppi</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially covers the 
+      object SpatialObject. DE-9IM: TTTFTTFFT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#rcc8tppi</IRI>
+        <Literal xml:lang="en">tangential proper part inverse</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#sfContains</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#sfContains</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#sfContains</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#sfContains</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: T*****FF*
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sfContains</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: T*****FF*
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfContains</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfContains</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sfContains</IRI>
+        <Literal xml:lang="en">contains</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#sfContains</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: T*****FF*
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#sfContains</IRI>
+        <Literal xml:lang="en">contains</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#sfCrosses</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#sfCrosses</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#sfCrosses</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#sfCrosses</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially crosses the 
+      object SpatialObject. DE-9IM: T*T******
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sfCrosses</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially crosses the 
+      object SpatialObject. DE-9IM: T*T******
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfCrosses</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfCrosses</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sfCrosses</IRI>
+        <Literal xml:lang="en">crosses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#sfCrosses</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially crosses the 
+      object SpatialObject. DE-9IM: T*T******
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#sfCrosses</IRI>
+        <Literal xml:lang="en">crosses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#sfDisjoint</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#sfDisjoint</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#sfDisjoint</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#sfDisjoint</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject is spatially disjoint 
+      from the object SpatialObject. DE-9IM: FF*FF****
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sfDisjoint</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject is spatially disjoint 
+      from the object SpatialObject. DE-9IM: FF*FF****
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfDisjoint</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfDisjoint</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sfDisjoint</IRI>
+        <Literal xml:lang="en">disjoint</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#sfDisjoint</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject is spatially disjoint 
+      from the object SpatialObject. DE-9IM: FF*FF****
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#sfDisjoint</IRI>
+        <Literal xml:lang="en">disjoint</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#sfEquals</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#sfEquals</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#sfEquals</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#sfEquals</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially equals the 
+      object SpatialObject. DE-9IM: TFFFTFFFT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sfEquals</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially equals the 
+      object SpatialObject. DE-9IM: TFFFTFFFT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfEquals</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfEquals</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sfEquals</IRI>
+        <Literal xml:lang="en">equals</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#sfEquals</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially equals the 
+      object SpatialObject. DE-9IM: TFFFTFFFT
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#sfEquals</IRI>
+        <Literal xml:lang="en">equals</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#sfIntersects</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#sfIntersects</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#sfIntersects</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#sfIntersects</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject is not spatially disjoint 
+      from the object SpatialObject.
+      DE-9IM: T******** ^ *T******* ^ ***T***** ^ ****T**** 
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sfIntersects</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject is not spatially disjoint 
+      from the object SpatialObject.
+      DE-9IM: T******** ^ *T******* ^ ***T***** ^ ****T**** 
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfIntersects</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfIntersects</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sfIntersects</IRI>
+        <Literal xml:lang="en">intersects</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#sfIntersects</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject is not spatially disjoint 
+      from the object SpatialObject.
+      DE-9IM: T******** ^ *T******* ^ ***T***** ^ ****T**** 
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#sfIntersects</IRI>
+        <Literal xml:lang="en">intersects</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#sfOverlaps</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#sfOverlaps</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#sfOverlaps</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#sfOverlaps</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially overlaps the 
+      object SpatialObject. DE-9IM: T*T***T** 
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sfOverlaps</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially overlaps the 
+      object SpatialObject. DE-9IM: T*T***T** 
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfOverlaps</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfOverlaps</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sfOverlaps</IRI>
+        <Literal xml:lang="en">overlaps</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#sfOverlaps</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially overlaps the 
+      object SpatialObject. DE-9IM: T*T***T** 
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#sfOverlaps</IRI>
+        <Literal xml:lang="en">overlaps</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#sfTouches</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#sfTouches</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#sfTouches</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#sfTouches</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially touches the 
+      object SpatialObject.
+      DE-9IM: FT******* ^ F**T***** ^ F***T****
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sfTouches</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially touches the 
+      object SpatialObject.
+      DE-9IM: FT******* ^ F**T***** ^ F***T****
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfTouches</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfTouches</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sfTouches</IRI>
+        <Literal xml:lang="en">touches</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#sfTouches</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject spatially touches the 
+      object SpatialObject.
+      DE-9IM: FT******* ^ F**T***** ^ F***T****
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#sfTouches</IRI>
+        <Literal xml:lang="en">touches</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#sfWithin</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#sfWithin</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#sfWithin</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#sfWithin</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject is spatially within the 
+      object SpatialObject. DE-9IM: T*F**F***
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sfWithin</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject is spatially within the 
+      object SpatialObject. DE-9IM: T*F**F***
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfWithin</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfWithin</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sfWithin</IRI>
+        <Literal xml:lang="en">within</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#sfWithin</IRI>
+        <Literal xml:lang="en">
+      Exists if the subject SpatialObject is spatially within the 
+      object SpatialObject. DE-9IM: T*F**F***
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#sfWithin</IRI>
+        <Literal xml:lang="en">within</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#spatialDimension</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#spatialDimension</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#spatialDimension</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#spatialDimension</IRI>
+        <Literal xml:lang="en">
+      The number of measurements or axes needed to describe the spatial position of 
+      this geometry in a coordinate system.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#spatialDimension</IRI>
+        <Literal xml:lang="en">
+      The number of measurements or axes needed to describe the spatial position of 
+      this geometry in a coordinate system.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#spatialDimension</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#spatialDimension</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#spatialDimension</IRI>
+        <Literal xml:lang="en">spatialDimension</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#spatialDimension</IRI>
+        <Literal xml:lang="en">
+      The number of measurements or axes needed to describe the spatial position of 
+      this geometry in a coordinate system.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#spatialDimension</IRI>
+        <Literal xml:lang="en">spatialDimension</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <IRI>#wktLiteral</IRI>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <IRI>#wktLiteral</IRI>
+        <Literal>OGC GeoSPARQL 1.0 Standard Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>#wktLiteral</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2011-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#wktLiteral</IRI>
+        <Literal xml:lang="en">
+      A Well-known Text serialization of a geometry object.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#wktLiteral</IRI>
+        <Literal xml:lang="en">
+      A Well-known Text serialization of a geometry object.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#wktLiteral</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#wktLiteral</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#wktLiteral</IRI>
+        <Literal xml:lang="en">Well-known Text Literal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#wktLiteral</IRI>
+        <Literal xml:lang="en">
+      A Well-known Text serialization of a geometry object.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#wktLiteral</IRI>
+        <Literal xml:lang="en">Well-known Text Literal</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

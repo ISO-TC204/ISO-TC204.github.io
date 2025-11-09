@@ -1,0 +1,32 @@
+// Diagram for FootpathSegment
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		FootpathSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">FootpathSegment</TD></TR></TABLE>> URL="../classes/transportnetwork__FootpathSegment.md" margin=0]
+	}
+	TravelledWaySegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWaySegment</TD></TR></TABLE>> URL="../_counters/transportnetwork__TravelledWaySegment.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		FootpathLane [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FootpathLane</TD></TR></TABLE>> URL="../_counters/transportnetwork__FootpathLane.md" margin=0]
+		FootpathLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FootpathLink</TD></TR></TABLE>> URL="../_counters/transportnetwork__FootpathLink.md" margin=0]
+		FootpathSection [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FootpathSection</TD></TR></TABLE>> URL="../_counters/transportnetwork__FootpathSection.md" margin=0]
+	}
+	FootpathSegment -> TravelledWaySegment [arrowhead=onormal style=solid]
+	FootpathSegment -> Invis [style=invis]
+	Invis -> FootpathLane [style=invis]
+	FootpathLane -> FootpathLink [style=invis]
+	FootpathLink -> FootpathSection [style=invis]
+	FootpathSegment -> FootpathLane [label=" onProperty: partwhole::hasProperPart 
+ «min 1, only»  " arrowhead=normal style=dashed]
+	Nd76692a1b23649d4a208928e441b178f [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	Nd76692a1b23649d4a208928e441b178f -> FootpathLink [label=member arrowhead=normal style=dotted]
+	Nd76692a1b23649d4a208928e441b178f -> FootpathSection [label=member arrowhead=normal style=dotted]
+	FootpathSegment -> Nd76692a1b23649d4a208928e441b178f [label=" onProperty: partwhole::properPartOf 
+ «only»  " arrowhead=normal style=dashed]
+	FootpathSegment -> FootpathLink [label=" onProperty: partwhole::properPartOf 
+ «min 1»  " arrowhead=normal style=dashed]
+}

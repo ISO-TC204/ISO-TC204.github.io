@@ -1,0 +1,21 @@
+// Diagram for Facility
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Facility [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Facility</TD></TR></TABLE>> URL="../classes/Building__Facility.md" margin=0]
+	}
+	BuildingOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">BuildingOntologyThing</TD></TR></TABLE>> URL="../_counters/Building__BuildingOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		spatialLoc__Location [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">spatialLoc::Location</TD></TR></TABLE>> margin=0]
+	}
+	Facility -> BuildingOntologyThing [arrowhead=onormal style=solid]
+	Facility -> Invis [style=invis]
+	Invis -> spatialLoc__Location [style=invis]
+	Facility -> spatialLoc__Location [label=" spatialLoc::hasLocation 
+ «exactly 1»  " arrowhead=normal style=solid]
+}

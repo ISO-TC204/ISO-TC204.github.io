@@ -1,0 +1,21 @@
+// Diagram for NonProfitOrganization
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		NonProfitOrganization [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">NonProfitOrganization</TD></TR></TABLE>> URL="../classes/Organization__NonProfitOrganization.md" margin=0]
+	}
+	Organization [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Organization</TD></TR></TABLE>> URL="../_counters/Organization__Organization.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		cityService__Program [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cityService::Program</TD></TR></TABLE>> margin=0]
+	}
+	NonProfitOrganization -> Organization [arrowhead=onormal style=solid]
+	NonProfitOrganization -> Invis [style=invis]
+	Invis -> cityService__Program [style=invis]
+	NonProfitOrganization -> cityService__Program [label=" hasProgram 
+ «only»  " arrowhead=normal style=solid]
+}

@@ -1,0 +1,21 @@
+// Diagram for AreaDestination
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		AreaDestination [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">AreaDestination</TD></TR></TABLE>> URL="../classes/itsLocation__AreaDestination.md" margin=0]
+	}
+	Destination [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Destination</TD></TR></TABLE>> URL="../_counters/itsLocation__Destination.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		AreaLocation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">AreaLocation</TD></TR></TABLE>> URL="../_counters/itsLocation__AreaLocation.md" margin=0]
+	}
+	AreaDestination -> Destination [arrowhead=onormal style=solid]
+	AreaDestination -> Invis [style=invis]
+	Invis -> AreaLocation [style=invis]
+	AreaDestination -> AreaLocation [label=" areaLocation 
+ «exactly 1»  " arrowhead=normal style=solid]
+}

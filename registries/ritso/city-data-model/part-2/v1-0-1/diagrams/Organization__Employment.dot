@@ -1,0 +1,33 @@
+// Diagram for Employment
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Employment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Employment</TD></TR></TABLE>> URL="../classes/Organization__Employment.md" margin=0]
+	}
+	CityOrgOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">CityOrgOntologyThing</TD></TR></TABLE>> URL="../_counters/Organization__CityOrgOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		Compensation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Compensation</TD></TR></TABLE>> URL="../_counters/Organization__Compensation.md" margin=0]
+		EmploymentStatus [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">EmploymentStatus</TD></TR></TABLE>> URL="../_counters/Organization__EmploymentStatus.md" margin=0]
+		Occupation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Occupation</TD></TR></TABLE>> URL="../_counters/Organization__Occupation.md" margin=0]
+		Organization [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Organization</TD></TR></TABLE>> URL="../_counters/Organization__Organization.md" margin=0]
+	}
+	Employment -> CityOrgOntologyThing [arrowhead=onormal style=solid]
+	Employment -> Invis [style=invis]
+	Invis -> Compensation [style=invis]
+	Compensation -> EmploymentStatus [style=invis]
+	EmploymentStatus -> Occupation [style=invis]
+	Occupation -> Organization [style=invis]
+	Employment -> Organization [label=" employedBy 
+ «some»  " arrowhead=normal style=solid]
+	Employment -> Compensation [label=" hasCompensation 
+ «some»  " arrowhead=normal style=solid]
+	Employment -> Occupation [label=" employedAs 
+ «only»  " arrowhead=normal style=solid]
+	Employment -> EmploymentStatus [label=" hasEmploymentStatus 
+ «only»  " arrowhead=normal style=solid]
+}

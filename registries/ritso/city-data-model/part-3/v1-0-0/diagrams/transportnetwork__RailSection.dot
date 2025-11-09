@@ -1,0 +1,30 @@
+// Diagram for RailSection
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		RailSection [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">RailSection</TD></TR></TABLE>> URL="../classes/transportnetwork__RailSection.md" margin=0]
+	}
+	TravelledWaySection [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWaySection</TD></TR></TABLE>> URL="../_counters/transportnetwork__TravelledWaySection.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		RailNetwork [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RailNetwork</TD></TR></TABLE>> URL="../_counters/transportnetwork__RailNetwork.md" margin=0]
+		TrackLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TrackLink</TD></TR></TABLE>> URL="../_counters/transportnetwork__TrackLink.md" margin=0]
+		TrackSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TrackSegment</TD></TR></TABLE>> URL="../_counters/transportnetwork__TrackSegment.md" margin=0]
+	}
+	RailSection -> TravelledWaySection [arrowhead=onormal style=solid]
+	RailSection -> Invis [style=invis]
+	Invis -> RailNetwork [style=invis]
+	RailNetwork -> TrackLink [style=invis]
+	TrackLink -> TrackSegment [style=invis]
+	N5859ab67a1e843d59e161237eca545c8 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	N5859ab67a1e843d59e161237eca545c8 -> TrackLink [label=member arrowhead=normal style=dotted]
+	N5859ab67a1e843d59e161237eca545c8 -> TrackSegment [label=member arrowhead=normal style=dotted]
+	RailSection -> N5859ab67a1e843d59e161237eca545c8 [label=" onProperty: partwhole::hasProperPart 
+ «only»  " arrowhead=normal style=dashed]
+	RailSection -> RailNetwork [label=" onProperty: partwhole::properPartOf 
+ «only»  " arrowhead=normal style=dashed]
+}

@@ -1,0 +1,702 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/"
+     xml:base="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/"
+     xmlns:WV="http://www.wurvoc.org/vocabularies/WV/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:adms="http://www.w3.org/ns/adms#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:om-1="http://www.wurvoc.org/vocabularies/om-1.8/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:Change="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/"
+     xmlns:schema="http://schema.org/"
+     xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:CityUnits="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/CityUnits/"
+     xmlns:CityService="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/"
+     xmlns:RecurringEvent="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/RecurringEvent/">
+    <owl:Ontology rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService">
+        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Activity.owl"/>
+        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Mereology.owl"/>
+        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/2/Organization.owl"/>
+        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/2/Person.owl"/>
+        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/1/GenericProperties.owl"/>
+        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/2/Code.owl"/>
+        <dc:description>Cities provide a variety of services to residents and businesses, including health and social services. The city service ontology, is based on the Canadian Government Reference Model (CGRM). See Wiseman, R. (2015). Canadian Governments Reference Models. In Service Systems Science (pp. 109-128). Springer, Tokyo.</dc:description>
+        <dc:title>City Service Pattern</dc:title>
+        <vann:preferredNamespacePrefix>Under development. Refer to latest version of ISO 5087-2.</vann:preferredNamespacePrefix>
+        <vann:preferredNamespacePrefix>cityservice</vann:preferredNamespacePrefix>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://www.w3.org/ns/adms#relatedDocumentation -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/adms#relatedDocumentation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService#forActivity -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService#forActivity">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService#hasActualAmount -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService#hasActualAmount">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService#hasPlannedAmount -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService#hasPlannedAmount">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService#usedByIndicator -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService#usedByIndicator">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyObjectProperty"/>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/forStakeholder -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/forStakeholder">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/fromPerspectiveOf -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/fromPerspectiveOf">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasBeneficialStakeholder -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasBeneficialStakeholder">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasCatchmentArea -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasCatchmentArea">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasCatchmentAreaType -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasCatchmentAreaType">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasContributingStakeholder -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasContributingStakeholder">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasImpact -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasImpact">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasImportance -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasImportance">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasIndicator -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasIndicator">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasInput -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasInput">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasOutcome -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasOutcome">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasOutput -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasOutput">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasProgram -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasProgram">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasService -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasService">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/intendedImpact -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/intendedImpact">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/performs -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/performs">
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CatchmentAreaType -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CatchmentAreaType">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code/hasCode"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code/Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyThing -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyThing"/>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/ImpactDirection -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/ImpactDirection">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code/hasCode"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code/Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Importance -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Importance">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code/hasCode"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code/Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Input -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Input">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyThing"/>
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/TerminalResourceState"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasContributingStakeholder"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Stakeholder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/ISO21972/iso21972#for_time_interval"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#DateTimeInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasDescription"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasName"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>Input defines the resources and the stakeholders that contribute them that are input to an Activity:
+•	inputFor: The Program or Service or Activity this is an input for.
+•	hasContributingStakeholder: The Stakeholders that contribute the resources as input.
+•	hasType: Specifies the input Resource.
+•	hasPlannedAmount: Specifies the amount of the input Resource
+•	hasActualAmount: Specifies actual amount of input Resource used.
+•	i72:for_time_interval: Specifies the time interval over which the input is used.
+•	sch:name: Name for the Input.
+•	sch:description: Description for the Input.</dc:description>
+        <rdfs:label xml:lang="en">Input</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Outcome -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Outcome">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasIndicator"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/ISO21972/iso21972#Indicator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/fromPerspectiveOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Stakeholder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasBeneficialStakeholder"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Stakeholder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasImportance"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Importance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/intendedImpact"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/ImpactDirection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasDescription"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en">Outcome’s “are what stakeholders experience as a result of a city Programs and/or Services.  They can be positive or negative, intended or unintended.” Outcome contains the following properties:
+•	hasBeneficialStakeholder: Identifies the Stakeholder affected.
+•	hasIndicator: Identifies the set of Indicators the organization assigns to the Outcome.
+•	schema:description: A general description of the Outcome as a string.
+•	fromPerspectiveOf: Identifies the Stakeholder who is determining the importance of the Impact.
+•	hasImportance: Specifies how important the Impact is (high, medium, low).
+•	intendedImpact: Identifies the intended direction of the change.</dc:description>
+        <rdfs:label xml:lang="en">Outcome</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Output -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Output">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyThing"/>
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/TerminalResourceState"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService#usedByIndicator"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/ISO21972/iso21972#Indicator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasDescription"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasName"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en">Output is a quantitative summary of an activity. For example, if the activity is ‘we provide training’ and the output is ‘we trained 50 people to NVQ level 3’. Or a production output could produce 100 meals for the homeless. Basic to these outputs is “what” has been produced and the quantity.
+•	forActivity: Identifies the Activity or Service that produces the Output.
+•	hasPlannedAmount: Specifies the amount of the output Resource
+•	hasActualAmount: Specifies actual amount of output Resource produced.
+•	hasResource: Identifies the Resource that is produced such as a skill, or a type of Meal.
+•	usedByIndicator: Identifies the Indicators that use this Output in determining the value of the Indicator.</dc:description>
+        <rdfs:label xml:lang="en">Output</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Program -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Program">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyThing"/>
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasBeneficialStakeholder"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Stakeholder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasContributingStakeholder"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Stakeholder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasInput"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Input"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasOutcome"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Outcome"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasOutput"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Output"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasService"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Service"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasDescription"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasName"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en">A Program defines a set of services that focus on a shared set of Outcomes. For example, a “poverty reduction program” can be made up of a set of Services such as mobiles services that provides food and clothing to those that live on the street, and a training service that provides basic skills for those living on the street. A Program has a set of Stakeholders that may contribute or benefit. The following are the Program properties:
+•	hasService: Identifies the Services that make up the Program.
+•	hasOutcome: Identifies the Outcomes that the program is trying to achieve.
+•	hasContributingStakeholder: Identifies the stakeholders that contribute to the Program.
+•	hasBeneficialStakeholder: Identifies the stakeholders that benefit from the Program.
+•	hasInput: Identifies the Inputs to the Program.
+•	hasOutput: Identifies the Outputs of the Program.</dc:description>
+        <rdfs:label xml:lang="en">Program</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Service -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Service">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyThing"/>
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasBeneficialStakeholder"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Stakeholder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasContributingStakeholder"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Stakeholder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasInput"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Input"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasOutcome"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Outcome"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasOutput"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Output"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasDescription"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasName"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en">A Program is composed of one or more Services.  As described in the Program description, a poverty reduction program can have many services with each service comprised of different activities, Inputs, Outputs and Outcomes. The following are the Service properties:
+•	iso5087-1:hasSubActivity: Identifies the Activities that make that comprise the Service.
+•	hasInput: Identifies the Inputs to the Service.
+•	hasOutput: Identifies the Outputs of the Service.
+•	hasOutcome: Identifies the Outcomes that are specific to the Service.
+•	hasContributingStakeholder: Identifies the stakeholders that contribute to the Service.
+•	hasBeneficialStakeholder: Identifies the stakeholders that benefit from the Service.</dc:description>
+        <rdfs:label xml:lang="en">Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Stakeholder -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/Stakeholder">
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CityServiceOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Organization/Organization"/>
+                    <rdf:Description rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/performs"/>
+                <owl:someValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasCatchmentArea"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc/Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/hasCatchmentAreaType"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/CatchmentAreaType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasDescription"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasName"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/global-catchmentArea -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/global-catchmentArea"/>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/high -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/high"/>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/local-catchmentArea -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/local-catchmentArea"/>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/low -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/low"/>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/medium -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/medium"/>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/multinational-catchmentArea -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/multinational-catchmentArea"/>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/national-catchmentArea -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/national-catchmentArea"/>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/negative -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/negative"/>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/neutral -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/neutral"/>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/positive -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/positive"/>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/provincial-catchmentArea -->
+
+    <owl:NamedIndividual rdf:about="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/provincial-catchmentArea"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

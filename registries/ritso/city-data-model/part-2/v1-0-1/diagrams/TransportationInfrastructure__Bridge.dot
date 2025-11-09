@@ -1,0 +1,27 @@
+// Diagram for Bridge
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Bridge [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Bridge</TD></TR></TABLE>> URL="../classes/TransportationInfrastructure__Bridge.md" margin=0]
+	}
+	infrastructure__InfrastructureElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">infrastructure::InfrastructureElement</TD></TR></TABLE>> margin=0]
+	TransportationInfrastructureOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TransportationInfrastructureOntologyThing</TD></TR></TABLE>> URL="../_counters/TransportationInfrastructure__TransportationInfrastructureOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		BridgeSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">BridgeSegment</TD></TR></TABLE>> URL="../_counters/TransportationInfrastructure__BridgeSegment.md" margin=0]
+		TravelledWaySegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWaySegment</TD></TR></TABLE>> URL="../_counters/TransportationInfrastructure__TravelledWaySegment.md" margin=0]
+	}
+	Bridge -> infrastructure__InfrastructureElement [arrowhead=onormal style=solid]
+	Bridge -> TransportationInfrastructureOntologyThing [arrowhead=onormal style=solid]
+	Bridge -> Invis [style=invis]
+	Invis -> BridgeSegment [style=invis]
+	BridgeSegment -> TravelledWaySegment [style=invis]
+	Bridge -> BridgeSegment [label=" partwhole::hasProperPart 
+ «only»  " arrowhead=normal style=solid]
+	Bridge -> TravelledWaySegment [label=" supports 
+ «only»  " arrowhead=normal style=solid]
+}

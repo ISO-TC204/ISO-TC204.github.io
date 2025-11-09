@@ -1,0 +1,19 @@
+// Diagram for AmendingBylaw
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		AmendingBylaw [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">AmendingBylaw</TD></TR></TABLE>> URL="../classes/Bylaw__AmendingBylaw.md" margin=0]
+	}
+	Bylaw [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Bylaw</TD></TR></TABLE>> URL="../_counters/Bylaw__Bylaw.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+	}
+	AmendingBylaw -> Bylaw [arrowhead=onormal style=solid]
+	Bylaw [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Bylaw</TD></TR></TABLE>> URL="../_counters/Bylaw__Bylaw.md" margin=0]
+	AmendingBylaw -> Bylaw [label=" legislationChanges 
+ «exactly 1»  " arrowhead=normal style=solid]
+}

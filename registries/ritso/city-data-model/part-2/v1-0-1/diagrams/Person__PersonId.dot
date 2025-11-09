@@ -1,0 +1,29 @@
+// Diagram for PersonId
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		PersonId [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">PersonId</TD></TR><TR><TD ALIGN="LEFT">genericproperties::hasIdentifier: xsd::string «exactly 1»</TD></TR><TR><TD ALIGN="LEFT">photoID: xsd::boolean «max 1»</TD></TR></TABLE>> URL="../classes/Person__PersonId.md" margin=0]
+	}
+	PersonOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PersonOntologyThing</TD></TR></TABLE>> URL="../_counters/Person__PersonOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		agent__Agent [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">agent::Agent</TD></TR></TABLE>> margin=0]
+		IDType [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">IDType</TD></TR></TABLE>> URL="../_counters/Person__IDType.md" margin=0]
+		time__Interval [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">time::Interval</TD></TR></TABLE>> margin=0]
+	}
+	PersonId -> PersonOntologyThing [arrowhead=onormal style=solid]
+	PersonId -> Invis [style=invis]
+	Invis -> agent__Agent [style=invis]
+	agent__Agent -> IDType [style=invis]
+	IDType -> time__Interval [style=invis]
+	PersonId -> IDType [label=" hasIDType 
+ «only»  " arrowhead=normal style=solid]
+	PersonId -> agent__Agent [label=" issuedBy 
+ «max 1»  " arrowhead=normal style=solid]
+	PersonId -> time__Interval [label=" validityPeriod 
+ «max 1»  " arrowhead=normal style=solid]
+}

@@ -1,0 +1,21 @@
+// Diagram for LocationGroupByList
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		LocationGroupByList [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">LocationGroupByList</TD></TR></TABLE>> URL="../classes/itsLocation__LocationGroupByList.md" margin=0]
+	}
+	LocationGroup [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">LocationGroup</TD></TR></TABLE>> URL="../_counters/itsLocation__LocationGroup.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		Location [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Location</TD></TR></TABLE>> URL="../_counters/itsLocation__Location.md" margin=0]
+	}
+	LocationGroupByList -> LocationGroup [arrowhead=onormal style=solid]
+	LocationGroupByList -> Invis [style=invis]
+	Invis -> Location [style=invis]
+	LocationGroupByList -> Location [label=" locationContainedInGroup 
+ «min 2, only»  " arrowhead=normal style=solid]
+}

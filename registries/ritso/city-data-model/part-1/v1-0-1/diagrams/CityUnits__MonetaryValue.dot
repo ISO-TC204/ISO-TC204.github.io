@@ -1,0 +1,21 @@
+// Diagram for MonetaryValue
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		MonetaryValue [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">MonetaryValue</TD></TR><TR><TD ALIGN="LEFT">hasRelativeYear: xsd::gYear «exactly 1»</TD></TR></TABLE>> URL="../classes/CityUnits__MonetaryValue.md" margin=0]
+	}
+	i72__Measure [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">i72::Measure</TD></TR></TABLE>> margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		i72__Monetary_unit [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">i72::Monetary_unit</TD></TR></TABLE>> margin=0]
+	}
+	MonetaryValue -> i72__Measure [arrowhead=onormal style=solid]
+	MonetaryValue -> Invis [style=invis]
+	Invis -> i72__Monetary_unit [style=invis]
+	MonetaryValue -> i72__Monetary_unit [label=" onProperty: i72::unit_of_measure 
+ «only»  " arrowhead=normal style=dashed]
+}

@@ -1,0 +1,28 @@
+// Diagram for NetworkElement
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		NetworkElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">NetworkElement</TD></TR><TR><TD ALIGN="LEFT">genProp::hasIdentifier: xsd::string «exactly 1, only»</TD></TR></TABLE>> URL="../classes/transportnetwork__NetworkElement.md" margin=0]
+	}
+	geo__Feature [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">geo::Feature</TD></TR></TABLE>> margin=0]
+	ITSThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ITSThing</TD></TR></TABLE>> URL="../_counters/transportnetwork__ITSThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		ScheduledCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ScheduledCode</TD></TR></TABLE>> URL="../_counters/transportnetwork__ScheduledCode.md" margin=0]
+	}
+	NetworkElement -> geo__Feature [arrowhead=onormal style=solid]
+	NetworkElement -> ITSThing [arrowhead=onormal style=solid]
+	NetworkElement -> Invis [style=invis]
+	Invis -> ScheduledCode [style=invis]
+	NetworkElement -> ScheduledCode [label=" status 
+ «only»  " arrowhead=normal style=solid]
+	NetworkElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">NetworkElement</TD></TR></TABLE>> URL="../_counters/transportnetwork__NetworkElement.md" margin=0]
+	NetworkElement -> NetworkElement [label=" partwhole::hasProperPart 
+ «only»  " arrowhead=normal style=solid]
+	NetworkElement -> NetworkElement [label=" partwhole::properPartOf 
+ «only»  " arrowhead=normal style=solid]
+}

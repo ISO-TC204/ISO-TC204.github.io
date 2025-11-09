@@ -1,0 +1,25 @@
+// Diagram for Household
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Household [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Household</TD></TR><TR><TD ALIGN="LEFT">time::hasTime: time::ProperInterval «only»</TD></TR></TABLE>> URL="../classes/Household__Household.md" margin=0]
+	}
+	HouseholdOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">HouseholdOntologyThing</TD></TR></TABLE>> URL="../_counters/Household__HouseholdOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		cityResident__Residence [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cityResident::Residence</TD></TR></TABLE>> margin=0]
+		person__Person [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">person::Person</TD></TR></TABLE>> margin=0]
+	}
+	Household -> HouseholdOntologyThing [arrowhead=onormal style=solid]
+	Household -> Invis [style=invis]
+	Invis -> cityResident__Residence [style=invis]
+	cityResident__Residence -> person__Person [style=invis]
+	Household -> person__Person [label=" cdmOrg::hasMember 
+ «only»  " arrowhead=normal style=solid]
+	Household -> cityResident__Residence [label=" householdOccupies 
+ «max 1»  " arrowhead=normal style=solid]
+}

@@ -1,0 +1,33 @@
+// Diagram for Residence
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Residence [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Residence</TD></TR><TR><TD ALIGN="LEFT">time::hasTime: xsd::string «max 1»</TD></TR></TABLE>> URL="../classes/CityResident__Residence.md" margin=0]
+	}
+	CityResidentOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">CityResidentOntologyThing</TD></TR></TABLE>> URL="../_counters/CityResident__CityResidentOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		contact__Address [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">contact::Address</TD></TR></TABLE>> margin=0]
+		HomeType [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">HomeType</TD></TR></TABLE>> URL="../_counters/CityResident__HomeType.md" margin=0]
+		iso21972__City [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">iso21972::City</TD></TR></TABLE>> margin=0]
+		ResidentialRelationship [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ResidentialRelationship</TD></TR></TABLE>> URL="../_counters/CityResident__ResidentialRelationship.md" margin=0]
+	}
+	Residence -> CityResidentOntologyThing [arrowhead=onormal style=solid]
+	Residence -> Invis [style=invis]
+	Invis -> contact__Address [style=invis]
+	contact__Address -> HomeType [style=invis]
+	HomeType -> iso21972__City [style=invis]
+	iso21972__City -> ResidentialRelationship [style=invis]
+	Residence -> ResidentialRelationship [label=" hasResidentialRelationship 
+ «exactly 1»  " arrowhead=normal style=solid]
+	Residence -> iso21972__City [label=" forCity 
+ «max 1»  " arrowhead=normal style=solid]
+	Residence -> HomeType [label=" hasHomeType 
+ «max 1»  " arrowhead=normal style=solid]
+	Residence -> contact__Address [label=" contact::hasAddress 
+ «max 1»  " arrowhead=normal style=solid]
+}

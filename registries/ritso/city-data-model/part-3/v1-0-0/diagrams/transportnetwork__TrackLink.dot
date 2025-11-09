@@ -1,0 +1,33 @@
+// Diagram for TrackLink
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		TrackLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">TrackLink</TD></TR></TABLE>> URL="../classes/transportnetwork__TrackLink.md" margin=0]
+	}
+	TravelledWayLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWayLink</TD></TR></TABLE>> URL="../_counters/transportnetwork__TravelledWayLink.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		RailCorridor [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RailCorridor</TD></TR></TABLE>> URL="../_counters/transportnetwork__RailCorridor.md" margin=0]
+		RailNetwork [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RailNetwork</TD></TR></TABLE>> URL="../_counters/transportnetwork__RailNetwork.md" margin=0]
+		RailSection [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RailSection</TD></TR></TABLE>> URL="../_counters/transportnetwork__RailSection.md" margin=0]
+		TrackSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TrackSegment</TD></TR></TABLE>> URL="../_counters/transportnetwork__TrackSegment.md" margin=0]
+	}
+	TrackLink -> TravelledWayLink [arrowhead=onormal style=solid]
+	TrackLink -> Invis [style=invis]
+	Invis -> RailCorridor [style=invis]
+	RailCorridor -> RailNetwork [style=invis]
+	RailNetwork -> RailSection [style=invis]
+	RailSection -> TrackSegment [style=invis]
+	TrackLink -> TrackSegment [label=" onProperty: partwhole::hasProperPart 
+ «only»  " arrowhead=normal style=dashed]
+	Na87ac8e139e44b31a0a6b5a005709347 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	Na87ac8e139e44b31a0a6b5a005709347 -> RailCorridor [label=member arrowhead=normal style=dotted]
+	Na87ac8e139e44b31a0a6b5a005709347 -> RailNetwork [label=member arrowhead=normal style=dotted]
+	Na87ac8e139e44b31a0a6b5a005709347 -> RailSection [label=member arrowhead=normal style=dotted]
+	TrackLink -> Na87ac8e139e44b31a0a6b5a005709347 [label=" onProperty: partwhole::properPartOf 
+ «only»  " arrowhead=normal style=dashed]
+}

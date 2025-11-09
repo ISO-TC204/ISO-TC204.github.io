@@ -1,0 +1,21 @@
+// Diagram for duration
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		duration [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">duration</TD></TR></TABLE>> URL="../classes/CityUnits__duration.md" margin=0]
+	}
+	i72__Quantity [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">i72::Quantity</TD></TR></TABLE>> margin=0]
+	time__TemporalDuration [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">time::TemporalDuration</TD></TR></TABLE>> margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+	}
+	duration -> i72__Quantity [arrowhead=onormal style=solid]
+	duration -> time__TemporalDuration [arrowhead=onormal style=solid]
+	N9560dab8f30441ae801b1755451b6882 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">ComplexExpr</TD></TR></TABLE>> margin=0]
+	duration -> N9560dab8f30441ae801b1755451b6882 [label=" onProperty: i72::value 
+ «only»  " arrowhead=normal style=dashed]
+}

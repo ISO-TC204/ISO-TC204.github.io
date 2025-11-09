@@ -1,0 +1,30 @@
+// Diagram for FootpathSection
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		FootpathSection [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">FootpathSection</TD></TR></TABLE>> URL="../classes/transportnetwork__FootpathSection.md" margin=0]
+	}
+	TravelledWaySection [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWaySection</TD></TR></TABLE>> URL="../_counters/transportnetwork__TravelledWaySection.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		FootpathLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FootpathLink</TD></TR></TABLE>> URL="../_counters/transportnetwork__FootpathLink.md" margin=0]
+		FootpathNetwork [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FootpathNetwork</TD></TR></TABLE>> URL="../_counters/transportnetwork__FootpathNetwork.md" margin=0]
+		FootpathSegment [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FootpathSegment</TD></TR></TABLE>> URL="../_counters/transportnetwork__FootpathSegment.md" margin=0]
+	}
+	FootpathSection -> TravelledWaySection [arrowhead=onormal style=solid]
+	FootpathSection -> Invis [style=invis]
+	Invis -> FootpathLink [style=invis]
+	FootpathLink -> FootpathNetwork [style=invis]
+	FootpathNetwork -> FootpathSegment [style=invis]
+	Ndb8dd05a698345509a4366868b854c07 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	Ndb8dd05a698345509a4366868b854c07 -> FootpathLink [label=member arrowhead=normal style=dotted]
+	Ndb8dd05a698345509a4366868b854c07 -> FootpathSegment [label=member arrowhead=normal style=dotted]
+	FootpathSection -> Ndb8dd05a698345509a4366868b854c07 [label=" onProperty: partwhole::hasProperPart 
+ «only»  " arrowhead=normal style=dashed]
+	FootpathSection -> FootpathNetwork [label=" onProperty: partwhole::properPartOf 
+ «only»  " arrowhead=normal style=dashed]
+}

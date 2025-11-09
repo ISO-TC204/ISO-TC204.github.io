@@ -1,0 +1,36 @@
+// Diagram for TransportNetwork
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		TransportNetwork [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">TransportNetwork</TD></TR></TABLE>> URL="../classes/transportnetwork__TransportNetwork.md" margin=0]
+	}
+	NetworkElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">NetworkElement</TD></TR></TABLE>> URL="../_counters/transportnetwork__NetworkElement.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		TransportNode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TransportNode</TD></TR></TABLE>> URL="../_counters/transportnetwork__TransportNode.md" margin=0]
+		TravelledWay [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWay</TD></TR></TABLE>> URL="../_counters/transportnetwork__TravelledWay.md" margin=0]
+		TravelledWayLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWayLink</TD></TR></TABLE>> URL="../_counters/transportnetwork__TravelledWayLink.md" margin=0]
+		TravelledWaySection [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWaySection</TD></TR></TABLE>> URL="../_counters/transportnetwork__TravelledWaySection.md" margin=0]
+	}
+	TransportNetwork -> NetworkElement [arrowhead=onormal style=solid]
+	TransportNetwork -> Invis [style=invis]
+	Invis -> TransportNode [style=invis]
+	TransportNode -> TravelledWay [style=invis]
+	TravelledWay -> TravelledWayLink [style=invis]
+	TravelledWayLink -> TravelledWaySection [style=invis]
+	Ne56f9a3959e44550b9c1f74c3155b0e8 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	TransportNetwork [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TransportNetwork</TD></TR></TABLE>> URL="../_counters/transportnetwork__TransportNetwork.md" margin=0]
+	Ne56f9a3959e44550b9c1f74c3155b0e8 -> TransportNetwork [label=member arrowhead=normal style=dotted]
+	Ne56f9a3959e44550b9c1f74c3155b0e8 -> TransportNode [label=member arrowhead=normal style=dotted]
+	Ne56f9a3959e44550b9c1f74c3155b0e8 -> TravelledWay [label=member arrowhead=normal style=dotted]
+	Ne56f9a3959e44550b9c1f74c3155b0e8 -> TravelledWayLink [label=member arrowhead=normal style=dotted]
+	Ne56f9a3959e44550b9c1f74c3155b0e8 -> TravelledWaySection [label=member arrowhead=normal style=dotted]
+	TransportNetwork -> Ne56f9a3959e44550b9c1f74c3155b0e8 [label=" onProperty: partwhole::hasProperPart 
+ «only»  " arrowhead=normal style=dashed]
+	TransportNetwork -> TransportNetwork [label=" onProperty: partwhole::properPartOf 
+ «only»  " arrowhead=normal style=dashed]
+}

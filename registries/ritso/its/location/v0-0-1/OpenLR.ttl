@@ -1,0 +1,471 @@
+@prefix : <http://www.openlr.org/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+<http://www.openlr.org/ontology> rdf:type owl:Ontology ;
+    owl:versionInfo "1.0" ;
+    rdfs:label "OpenLR Ontology" ;
+    dc:title "OpenLR Ontology" ;
+    rdfs:comment """Ontology modeling the Open Location Referencing (OpenLR) standard for map-independent location referencing. 
+    Based on OpenLR White Paper v1.5 and Python reference implementation. 
+    Supports line, point, and area locations with attributes like FRC, FOW, bearings, offsets, etc.""" .
+
+# Enumeration Classes and Individuals
+
+:FunctionalRoadClass rdf:type owl:Class ;
+    rdfs:subClassOf :OpenLRThing ;
+    rdfs:comment "Functional road class based on importance." .
+
+:FRC0 rdf:type :FunctionalRoadClass ;
+    rdfs:label "Main road" ;
+    :value 0 .
+
+:FRC1 rdf:type :FunctionalRoadClass ;
+    rdfs:label "First class road" ;
+    :value 1 .
+
+:FRC2 rdf:type :FunctionalRoadClass ;
+    rdfs:label "Second class road" ;
+    :value 2 .
+
+:FRC3 rdf:type :FunctionalRoadClass ;
+    rdfs:label "Third class road" ;
+    :value 3 .
+
+:FRC4 rdf:type :FunctionalRoadClass ;
+    rdfs:label "Fourth class road" ;
+    :value 4 .
+
+:FRC5 rdf:type :FunctionalRoadClass ;
+    rdfs:label "Fifth class road" ;
+    :value 5 .
+
+:FRC6 rdf:type :FunctionalRoadClass ;
+    rdfs:label "Sixth class road" ;
+    :value 6 .
+
+:FRC7 rdf:type :FunctionalRoadClass ;
+    rdfs:label "Other class road" ;
+    :value 7 .
+
+:FormOfWay rdf:type owl:Class ;
+    rdfs:subClassOf :OpenLRThing ;
+    rdfs:comment "Physical road type." .
+
+:FOW_UNDEFINED rdf:type :FormOfWay ;
+    rdfs:label "Undefined" ;
+    :value 0 .
+
+:FOW_MOTORWAY rdf:type :FormOfWay ;
+    rdfs:label "Motorway" ;
+    :value 1 .
+
+:FOW_MULTIPLE_CARRIAGEWAY rdf:type :FormOfWay ;
+    rdfs:label "Multiple carriageway" ;
+    :value 2 .
+
+:FOW_SINGLE_CARRIAGEWAY rdf:type :FormOfWay ;
+    rdfs:label "Single carriageway" ;
+    :value 3 .
+
+:FOW_ROUNDABOUT rdf:type :FormOfWay ;
+    rdfs:label "Roundabout" ;
+    :value 4 .
+
+:FOW_TRAFFICSQUARE rdf:type :FormOfWay ;
+    rdfs:label "Traffic square" ;
+    :value 5 .
+
+:FOW_SLIPROAD rdf:type :FormOfWay ;
+    rdfs:label "Slip road" ;
+    :value 6 .
+
+:FOW_OTHER rdf:type :FormOfWay ;
+    rdfs:label "Other" ;
+    :value 7 .
+
+:SideOfRoad rdf:type owl:Class ;
+    rdfs:subClassOf :OpenLRThing ;
+    rdfs:comment "Side of the road for point locations." .
+
+:SOR_ON_ROAD_OR_UNKNOWN rdf:type :SideOfRoad ;
+    rdfs:label "On road or unknown" ;
+    :value 0 .
+
+:SOR_RIGHT rdf:type :SideOfRoad ;
+    rdfs:label "Right" ;
+    :value 1 .
+
+:SOR_LEFT rdf:type :SideOfRoad ;
+    rdfs:label "Left" ;
+    :value 2 .
+
+:SOR_BOTH rdf:type :SideOfRoad ;
+    rdfs:label "Both" ;
+    :value 3 .
+
+:Orientation rdf:type owl:Class ;
+    rdfs:subClassOf :OpenLRThing ;
+    rdfs:comment "Orientation for point locations." .
+
+:ORI_NO_ORIENTATION_OR_UNKNOWN rdf:type :Orientation ;
+    rdfs:label "No orientation or unknown" ;
+    :value 0 .
+
+:ORI_WITH_LINE_DIRECTION rdf:type :Orientation ;
+    rdfs:label "With line direction" ;
+    :value 1 .
+
+:ORI_AGAINST_LINE_DIRECTION rdf:type :Orientation ;
+    rdfs:label "Against line direction" ;
+    :value 2 .
+
+:ORI_BOTH rdf:type :Orientation ;
+    rdfs:label "Both" ;
+    :value 3 .
+
+# Data Properties for Enum Values (optional, for querying)
+:value rdf:type owl:DatatypeProperty ;
+    rdfs:subPropertyOf :OpenLRDataProperty ;
+    rdfs:range xsd:integer .
+
+# Core Classes
+
+:OpenLRThing rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:comment "Grouping of OpenLR classes." .
+
+:OpenLRObjectProperty rdf:type owl:ObjectProperty ;
+    rdfs:comment "Grouping of OpenLR object properties." .
+
+:OpenLRDataProperty rdf:type owl:DataProperty ;
+    rdfs:comment "Grouping of OpenLR data properties." .
+
+:Coordinates rdf:type owl:Class ;
+    rdfs:subClassOf :OpenLRThing ;
+    rdfs:comment "WGS84 coordinate pair." ;
+    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                      owl:onProperty :longitude ;
+                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onDataRange xsd:double
+                    ] ,
+                    [ rdf:type owl:Restriction ;
+                      owl:onProperty :latitude ;
+                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onDataRange xsd:double
+                    ] .
+
+:longitude rdf:type owl:DatatypeProperty ;
+    rdfs:subPropertyOf :OpenLRDataProperty ;
+    rdfs:domain :Coordinates ;
+    rdfs:range xsd:double .
+
+:latitude rdf:type owl:DatatypeProperty ;
+    rdfs:subPropertyOf :OpenLRDataProperty ;
+    rdfs:domain :Coordinates ;
+    rdfs:range xsd:double .
+
+:LineAttributes rdf:type owl:Class ;
+    rdfs:subClassOf :OpenLRThing ;
+    rdfs:comment "Attributes of a line: FRC, FOW, bearing." ;
+    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                      owl:onProperty :hasFRC ;
+                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onClass :FunctionalRoadClass
+                    ] ,
+                    [ rdf:type owl:Restriction ;
+                      owl:onProperty :hasFOW ;
+                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onClass :FormOfWay
+                    ] ,
+                    [ rdf:type owl:Restriction ;
+                      owl:onProperty :bearing ;
+                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onDataRange xsd:integer
+                    ] .
+
+:hasFRC rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf :OpenLRObjectProperty ;
+    rdfs:domain :LineAttributes ;
+    rdfs:range :FunctionalRoadClass .
+
+:hasFOW rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf :OpenLRObjectProperty ;
+    rdfs:domain :LineAttributes ;
+    rdfs:range :FormOfWay .
+
+:bearing rdf:type owl:DatatypeProperty ;
+    rdfs:subPropertyOf :OpenLRDataProperty ;
+    rdfs:domain :LineAttributes ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "Bearing value; multiply by 11.25 for degrees." .
+
+:PathAttributes rdf:type owl:Class ;
+    rdfs:subClassOf :OpenLRThing ;
+    rdfs:comment "Attributes to next point: lowest FRC, distance." ;
+    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                      owl:onProperty :hasLowestFRCToNext ;
+                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onClass :FunctionalRoadClass
+                    ] ,
+                    [ rdf:type owl:Restriction ;
+                      owl:onProperty :distanceToNext ;
+                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onDataRange xsd:integer
+                    ] .
+
+:hasLowestFRCToNext rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf :OpenLRObjectProperty ;
+    rdfs:domain :PathAttributes ;
+    rdfs:range :FunctionalRoadClass .
+
+:distanceToNext rdf:type owl:DatatypeProperty ;
+    rdfs:subPropertyOf :OpenLRDataProperty ;
+    rdfs:domain :PathAttributes ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "Distance in meters to next point." .
+
+:LocationReferencePoint rdf:type owl:Class ;
+    rdfs:subClassOf :OpenLRThing ;
+    rdfs:comment "LRP with coordinates, line, and path attributes." ;
+    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                      owl:onProperty :hasCoordinates ;
+                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onClass :Coordinates
+                    ] ,
+                    [ rdf:type owl:Restriction ;
+                      owl:onProperty :hasLineAttributes ;
+                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onClass :LineAttributes
+                    ] ,
+                    [ rdf:type owl:Restriction ;
+                      owl:onProperty :hasPathAttributes ;
+                      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onClass :PathAttributes
+                    ] .
+
+:hasCoordinates rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf :OpenLRObjectProperty ;
+    rdfs:domain :LocationReferencePoint ;
+    rdfs:range :Coordinates .
+
+:hasLineAttributes rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf :OpenLRObjectProperty ;
+    rdfs:domain :LocationReferencePoint ;
+    rdfs:range :LineAttributes .
+
+:hasPathAttributes rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf :OpenLRObjectProperty ;
+    rdfs:domain :LocationReferencePoint ;
+    rdfs:range :PathAttributes .
+
+:LocationReference rdf:type owl:Class ;
+    rdfs:subClassOf :OpenLRThing ;
+    rdfs:comment "Abstract base for all location references." ;
+    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                      owl:onProperty :version ;
+                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onDataRange xsd:integer
+                    ] .
+
+:version rdf:type owl:DatatypeProperty ;
+    rdfs:subPropertyOf :OpenLRDataProperty ;
+    rdfs:range xsd:integer .
+
+:LineLocationReference rdf:type owl:Class ;
+    rdfs:subClassOf :LocationReference ;
+    rdfs:comment "Line location with LRPs and offsets." ;
+    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                      owl:onProperty :hasLRP ;
+                      owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                      owl:onClass :LocationReferencePoint
+                    ] ,
+                    [ rdf:type owl:Restriction ;
+                      owl:onProperty :positiveOffset ;
+                      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onDataRange xsd:integer
+                    ] ,
+                    [ rdf:type owl:Restriction ;
+                      owl:onProperty :negativeOffset ;
+                      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onDataRange xsd:integer
+                    ] .
+
+:hasLRP rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf :OpenLRObjectProperty ;
+    rdfs:domain :LineLocationReference ;
+    rdfs:range :LocationReferencePoint ;
+    rdfs:comment "Ordered list of LRPs." .
+
+:positiveOffset rdf:type owl:DatatypeProperty ;
+    rdfs:subPropertyOf :OpenLRDataProperty ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "Positive offset in meters." .
+
+:negativeOffset rdf:type owl:DatatypeProperty ;
+    rdfs:subPropertyOf :OpenLRDataProperty ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "Negative offset in meters." .
+
+:ClosedLineLocationReference rdf:type owl:Class ;
+    rdfs:subClassOf :LineLocationReference ;
+    rdfs:comment "Closed line (polygon boundary) location." .
+
+:GeoCoordinateLocationReference rdf:type owl:Class ;
+    rdfs:subClassOf :LocationReference ;
+    rdfs:comment "Unbound point location." ;
+    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                      owl:onProperty :hasCoordinates ;
+                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onClass :Coordinates
+                    ] .
+
+:PointAlongLineLocationReference rdf:type owl:Class ;
+    rdfs:subClassOf :LocationReference ;
+    rdfs:comment "Point along a line with offset." ;
+    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                      owl:onProperty :hasLRP ;
+                      owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                      owl:onClass :LocationReferencePoint
+                    ] ,
+                    [ rdf:type owl:Restriction ;
+                      owl:onProperty :positiveOffset ;
+                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onDataRange xsd:integer
+                    ] ,
+                    [ rdf:type owl:Restriction ;
+                      owl:onProperty :hasOrientation ;
+                      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onClass :Orientation
+                    ] ,
+                    [ rdf:type owl:Restriction ;
+                      owl:onProperty :hasSideOfRoad ;
+                      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onClass :SideOfRoad
+                    ] .
+
+:hasOrientation rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf :OpenLRObjectProperty ;
+    rdfs:range :Orientation .
+
+:hasSideOfRoad rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf :OpenLRObjectProperty ;
+    rdfs:range :SideOfRoad .
+
+:PoiWithAccessPointLocationReference rdf:type owl:Class ;
+    rdfs:subClassOf :LocationReference ;
+    rdfs:comment "POI with access point along line." ;
+    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                      owl:onProperty :hasLRP ;
+                      owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                      owl:onClass :LocationReferencePoint
+                    ] ,
+                    [ rdf:type owl:Restriction ;
+                      owl:onProperty :positiveOffset ;
+                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onDataRange xsd:integer
+                    ] ,
+                    [ rdf:type owl:Restriction ;
+                      owl:onProperty :hasPOICoordinates ;
+                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onClass :Coordinates
+                    ] ,
+                    [ rdf:type owl:Restriction ;
+                      owl:onProperty :hasOrientation ;
+                      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onClass :Orientation
+                    ] ,
+                    [ rdf:type owl:Restriction ;
+                      owl:onProperty :hasSideOfRoad ;
+                      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onClass :SideOfRoad
+                    ] .
+
+:hasPOICoordinates rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf :OpenLRObjectProperty ;
+    rdfs:range :Coordinates .
+
+:CircleLocationReference rdf:type owl:Class ;
+    rdfs:subClassOf :LocationReference ;
+    rdfs:comment "Circle area location." ;
+    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                      owl:onProperty :hasCenter ;
+                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onClass :Coordinates
+                    ] ,
+                    [ rdf:type owl:Restriction ;
+                      owl:onProperty :radius ;
+                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onDataRange xsd:integer
+                    ] .
+
+:hasCenter rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf :OpenLRObjectProperty ;
+    rdfs:range :Coordinates .
+
+:radius rdf:type owl:DatatypeProperty ;
+    rdfs:subPropertyOf :OpenLRDataProperty ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "Radius in meters." .
+
+:RectangleLocationReference rdf:type owl:Class ;
+    rdfs:subClassOf :LocationReference ;
+    rdfs:comment "Rectangle area location." ;
+    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                      owl:onProperty :hasLowerLeft ;
+                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onClass :Coordinates
+                    ] ,
+                    [ rdf:type owl:Restriction ;
+                      owl:onProperty :hasUpperRight ;
+                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onClass :Coordinates
+                    ] .
+
+:hasLowerLeft rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf :OpenLRObjectProperty ;
+    rdfs:range :Coordinates .
+
+:hasUpperRight rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf :OpenLRObjectProperty ;
+    rdfs:range :Coordinates .
+
+:GridLocationReference rdf:type owl:Class ;
+    rdfs:subClassOf :RectangleLocationReference ;
+    rdfs:comment "Grid area location." ;
+    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                      owl:onProperty :numColumns ;
+                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onDataRange xsd:integer
+                    ] ,
+                    [ rdf:type owl:Restriction ;
+                      owl:onProperty :numRows ;
+                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onDataRange xsd:integer
+                    ] .
+
+:numColumns rdf:type owl:DatatypeProperty ;
+    rdfs:subPropertyOf :OpenLRDataProperty ;
+    rdfs:range xsd:integer .
+
+:numRows rdf:type owl:DatatypeProperty ;
+    rdfs:subPropertyOf :OpenLRDataProperty ;
+    rdfs:range xsd:integer .
+
+:PolygonLocationReference rdf:type owl:Class ;
+    rdfs:subClassOf :LocationReference ;
+    rdfs:comment "Polygon area location." ;
+    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                      owl:onProperty :hasCorner ;
+                      owl:minQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
+                      owl:onClass :Coordinates
+                    ] .
+
+:hasCorner rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf :OpenLRObjectProperty ;
+    rdfs:range :Coordinates ;
+    rdfs:comment "Ordered list of corners." .

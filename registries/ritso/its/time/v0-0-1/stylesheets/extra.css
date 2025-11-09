@@ -1,0 +1,186 @@
+body.frontmatter h1 {
+    color: blue;
+    font-weight: bold;
+}
+
+/* Add spacing below collapsed navigation sections */
+.md-nav--primary .md-nav__item>.md-nav__link {
+    margin-bottom: 8px;
+}
+
+/* Reset the section counter and prepare for subsections */
+body {
+    counter-set: section var(--section-number);
+}
+
+h1 {
+    counter-reset: subsection;
+    counter-reset: figure;
+
+}
+
+h2 {
+    counter-reset: subsubsection;
+    counter-increment: subsection;
+}
+
+h3 {
+    counter-reset: subsubsubsection;
+    counter-increment: subsubsection;
+}
+
+h4 {
+    counter-reset: subsubsubsubsection;
+    counter-increment: subsubsubsection;
+}
+
+h5 {
+    counter-reset: subsubsubsubsection;
+    counter-increment: subsubsubsection;
+}
+
+figcaption {
+    counter-increment: figure;
+}
+
+/* Section numbering for body and annex (unified with variable) */
+h1::before {
+    content: "Section " counter(section, var(--section-style)) " ";
+}
+
+h2::before {
+    content: counter(section, var(--section-style)) "." counter(subsection) " ";
+}
+
+h3::before {
+    content: counter(section, var(--section-style)) "." counter(subsection) "." counter(subsubsection) " ";
+}
+
+h4::before {
+    content: counter(section, var(--section-style)) "." counter(subsection) "." counter(subsubsection) "." counter(subsubsubsection) " ";
+}
+
+h5::before {
+    content: counter(section, var(--section-style)) "." counter(subsection) "." counter(subsubsection) "." counter(subsubsubsection) "." counter(subsubsubsubsection) " ";
+}
+
+figcaption {
+    font-weight: bold;
+}
+
+figcaption::before {
+    content: "Figure " counter(section, var(--section-style)) "-" counter(figure) " ";
+    font-weight: bold;
+}
+
+next-fig::before {
+    counter-increment: figure 1;
+    content: "Figure " counter(section, var(--section-style)) "-" counter(figure);
+}
+
+next-fig::after {
+    counter-increment: figure -1;
+    content: '';
+}
+
+/* General styling for status badges */
+.status-badge {
+    display: inline-block !important;
+    padding: 5px 10px !important;
+    border-radius: 5px !important;
+    font-weight: bold !important;
+    margin-bottom: 1em !important;
+    font-size: 0.9em !important;
+    text-align: center;
+}
+
+/* Proposal - Gray */
+.status-badge.proposal {
+    background-color: #B0B0B0 !important;
+    /* Gray */
+    color: black !important;
+}
+
+/* Draft - Yellow */
+.status-badge.draft {
+    background-color: #FFD700 !important;
+    /* Yellow */
+    color: black !important;
+}
+
+/* Preliminary - Orange */
+.status-badge.preliminary {
+    background-color: #FFA500;
+    /* Orange */
+    color: black;
+}
+
+/* Recommended */
+.status-badge.recommended {
+    background-color: #1E90FF;
+    /* Blue */
+    color: white;
+}
+
+/* Approved - Green */
+.status-badge.approved {
+    background-color: #0AA00A;
+    /* Green */
+    color: white;
+}
+
+/* TOC numbering (mirrors content structure, uses separate counters to avoid conflicts) */
+.md-nav--secondary {
+    counter-set: toc-section var(--section-number);
+}
+
+.md-nav--secondary .md-nav__list {
+    counter-reset: toc-subsection;
+}
+
+.md-nav--secondary .md-nav__list>.md-nav__item {
+    counter-increment: toc-subsection;
+}
+
+.md-nav--secondary .md-nav__list>.md-nav__item>.md-nav__link::before {
+    content: counter(toc-section, var(--section-style)) "." counter(toc-subsection) " ";
+}
+
+/* Level 3 (h3/subsubsection) */
+.md-nav--secondary .md-nav__list>.md-nav__item>.md-nav>.md-nav__list {
+    counter-reset: toc-subsubsection;
+}
+
+.md-nav--secondary .md-nav__list>.md-nav__item>.md-nav>.md-nav__list>.md-nav__item {
+    counter-increment: toc-subsubsection;
+}
+
+.md-nav--secondary .md-nav__list>.md-nav__item>.md-nav>.md-nav__list>.md-nav__item>.md-nav__link::before {
+    content: counter(toc-section, var(--section-style)) "." counter(toc-subsection) "." counter(toc-subsubsection) " ";
+}
+
+/* Level 4 (h4/subsubsubsection) */
+.md-nav--secondary .md-nav__list>.md-nav__item>.md-nav>.md-nav__list>.md-nav__item>.md-nav>.md-nav__list {
+    counter-reset: toc-subsubsubsection;
+}
+
+.md-nav--secondary .md-nav__list>.md-nav__item>.md-nav>.md-nav__list>.md-nav__item>.md-nav>.md-nav__list>.md-nav__item {
+    counter-increment: toc-subsubsubsection;
+}
+
+.md-nav--secondary .md-nav__list>.md-nav__item>.md-nav>.md-nav__list>.md-nav__item>.md-nav>.md-nav__list>.md-nav__item>.md-nav__link::before {
+    content: counter(toc-section, var(--section-style)) "." counter(toc-subsection) "." counter(toc-subsubsection) "." counter(toc-subsubsubsection) " ";
+}
+
+/* Level 5 (h5/subsubsubsubsection) */
+.md-nav--secondary .md-nav__list>.md-nav__item>.md-nav>.md-nav__list>.md-nav__item>.md-nav>.md-nav__list>.md-nav__item>.md-nav>.md-nav__list {
+    counter-reset: toc-subsubsubsubsection;
+}
+
+.md-nav--secondary .md-nav__list>.md-nav__item>.md-nav>.md-nav__list>.md-nav__item>.md-nav>.md-nav__list>.md-nav__item>.md-nav>.md-nav__list>.md-nav__item {
+    counter-increment: toc-subsubsubsubsection;
+}
+
+.md-nav--secondary .md-nav__list>.md-nav__item>.md-nav>.md-nav__list>.md-nav__item>.md-nav>.md-nav__list>.md-nav__item>.md-nav>.md-nav__list>.md-nav__item>.md-nav__link::before {
+    content: counter(toc-section, var(--section-style)) "." counter(toc-subsection) "." counter(toc-subsubsection) "." counter(toc-subsubsubsection) "." counter(toc-subsubsubsubsection) " ";
+}

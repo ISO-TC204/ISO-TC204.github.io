@@ -1,0 +1,23 @@
+// Diagram for OverallPeriod
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		OverallPeriod [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">OverallPeriod</TD></TR><TR><TD ALIGN="LEFT">overallEndTime: xsd::dateTime «max 1, only»</TD></TR><TR><TD ALIGN="LEFT">overallStartTime: xsd::dateTime «exactly 1, only»</TD></TR></TABLE>> URL="../classes/itsTime__OverallPeriod.md" margin=0]
+	}
+	TimeThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TimeThing</TD></TR></TABLE>> URL="../_counters/itsTime__TimeThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		Period [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Period</TD></TR></TABLE>> URL="../_counters/itsTime__Period.md" margin=0]
+	}
+	OverallPeriod -> TimeThing [arrowhead=onormal style=solid]
+	OverallPeriod -> Invis [style=invis]
+	Invis -> Period [style=invis]
+	OverallPeriod -> Period [label=" exceptionPeriod 
+ «only»  " arrowhead=normal style=solid]
+	OverallPeriod -> Period [label=" validPeriod 
+ «only»  " arrowhead=normal style=solid]
+}

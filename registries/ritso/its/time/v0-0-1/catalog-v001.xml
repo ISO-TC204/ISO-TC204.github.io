@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/CityUnits" uri="imported/CityUnits.owl"/>
+    <uri id="User Entered Import Resolution" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/transinfras" uri="imported/TransportationInfrastructure.owl"/>
+    <uri id="User Entered Import Resolution" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/code" uri="imported/Code.owl"/>
+    <uri id="User Entered Import Resolution" name="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/activity" uri="imported/Activity.owl"/>
+    <uri id="User Entered Import Resolution" name="https://isotc204.org/25965/transport/transportnetwork#" uri="imported/transportnetwork.ofn"/>
+    <uri id="User Entered Import Resolution" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code" uri="imported/Code.owl"/>
+    <uri id="User Entered Import Resolution" name="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology" uri="imported/Mereology.owl"/>
+    <uri id="User Entered Import Resolution" name="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties" uri="imported/GenericProperties.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base=""/>
+</catalog>

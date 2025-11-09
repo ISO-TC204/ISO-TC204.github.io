@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="https://isotc204.org/registries/ritso/city-data-model/part-2/v1-0-1/CityResident.owl" uri="CityResident.owl"/>
+    <uri id="User Entered Import Resolution" name="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource.owl" uri="file:/Users/kvaughn/GitHub/ontology-cdm-p1/docs/Resource.owl"/>
+    <uri id="User Entered Import Resolution" name="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties.owl" uri="file:/Users/kvaughn/GitHub/ontology-cdm-p1/docs/GenericProperties.owl"/>
+    <uri id="User Entered Import Resolution" name="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity.owl" uri="file:/Users/kvaughn/GitHub/ontology-cdm-p1/docs/Activity.owl"/>
+    <uri id="User Entered Import Resolution" name="https://isotc204.org/registries/ritso/city-data-model/part-1/v1-0-1/Agent.owl" uri="file:/Users/kvaughn/GitHub/ontology-cdm-p1/docs/Agent.owl"/>
+    <uri id="User Entered Import Resolution" name="https://isotc204.org/registries/ritso/city-data-model/part-1/v1-0-1/Agreement.owl" uri="file:/Users/kvaughn/GitHub/ontology-cdm-p1/docs/Agreement.owl"/>
+    <uri id="User Entered Import Resolution" name="https://isotc204.org/registries/ritso/city-data-model/part-2/v1-0-1/Person.owl" uri="temp/Person.owl"/>
+    <uri id="User Entered Import Resolution" name="http://xontology.eil.utoronto.ca/5087/2/Contact.owl" uri="temp/Contact.owl"/>
+    <uri id="User Entered Import Resolution" name="https://isotc204.org/registries/ritso/city-data-model/part-2/v1-0-1/Organization.owl" uri="temp/Organization.owl"/>
+    <uri id="User Entered Import Resolution" name="https://isotc204.org/registries/ritso/city-data-model/part-2/v1-0-1/Code.owl" uri="temp/Code.owl"/>
+    <uri id="User Entered Import Resolution" name="https://isotc204.org/registries/ritso/city-data-model/part-2/v1-0-1/Infrastructure.owl" uri="temp/Infrastructure.owl"/>
+    <uri id="User Entered Import Resolution" name="https://isotc204.org/registries/ritso/city-data-model/part-2/v1-0-1/Contact.owl" uri="temp/Contact.owl"/>
+    <uri id="User Entered Import Resolution" name="https://isotc204.org/registries/ritso/city-data-model/part-1/v1-0-1/SpatialLoc.owl" uri="file:/Users/kvaughn/GitHub/ontology-cdm-p1/docs/SpatialLoc.owl"/>
+    <uri id="User Entered Import Resolution" name="https://isotc204.org/registries/ritso/city-data-model/part-1/v1-0-1/CityUnits.owl" uri="file:/Users/kvaughn/GitHub/ontology-cdm-p1/docs/CityUnits.owl"/>
+    <uri id="User Entered Import Resolution" name="https://isotc204.org/registries/ritso/city-data-model/part-1/v1-0-1/Change.owl" uri="file:/Users/kvaughn/GitHub/ontology-cdm-p1/docs/Change.owl"/>
+    <uri id="User Entered Import Resolution" name="https://isotc204.org/registries/ritso/city-data-model/part-2/v1-0-1/Building.owl" uri="Building.owl"/>
+    <uri id="User Entered Import Resolution" name="https://isotc204.org/registries/ritso/city-data-model/part-2/v1-0-1/LandUse.owl" uri="temp/LandUse.owl"/>
+    <uri id="User Entered Import Resolution" name="https://isotc204.org/registries/ritso/city-data-model/part-2/v1-0-1/Bylaw.owl" uri="Bylaw.owl"/>
+    <uri id="User Entered Import Resolution" name="https://isotc204.org/registries/ritso/city-data-model/part-1/v1-0-1/GenericProperties.owl" uri="file:/Users/kvaughn/GitHub/ontology-cdm-p1/docs/GenericProperties.owl"/>
+    <uri id="User Entered Import Resolution" name="https://isotc204.org/registries/ritso/city-data-model/part-2/v1-0-1/City.owl" uri="temp/City.owl"/>
+    <uri id="User Entered Import Resolution" name="https://isotc204.org/registries/ritso/city-data-model/part-1/v1-0-1/Mereology.owl" uri="file:/Users/kvaughn/GitHub/ontology-cdm-p1/docs/Mereology.owl"/>
+    <uri id="User Entered Import Resolution" name="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Time.owl" uri="file:/Users/kvaughn/GitHub/ontology-cdm-p1/docs/Time.owl"/>
+    <uri id="User Entered Import Resolution" name="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc.owl" uri="file:/Users/kvaughn/GitHub/ontology-cdm-p1/docs/SpatialLoc.owl"/>
+    <uri id="User Entered Import Resolution" name="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change.owl" uri="file:/Users/kvaughn/GitHub/ontology-cdm-p1/docs/Change.owl"/>
+    <uri id="User Entered Import Resolution" name="https://isotc204.org/registries/ritso/city-data-model/part-1/v1-0-1/Activity.owl" uri="file:/Users/kvaughn/GitHub/ontology-cdm-p1/docs/Activity.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1762622700344" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building#" uri="Building.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1762622700344" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Bylaw#" uri="Bylaw.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1762622700344" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/City#" uri="City.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1762622700344" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityResident#" uri="CityResident.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1762622700344" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService#" uri="CityService.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1762622700344" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#" uri="temp/Code.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1762622700344" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#" uri="Contact.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1762622700344" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contract#" uri="Contract.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1762622700344" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Household#" uri="Household.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1762622700344" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Infrastructure#" uri="Infrastructure.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1762622700344" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/LandUse#" uri="LandUse.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1762622700344" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Organization#" uri="Organization.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1762622700344" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#" uri="Person.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1762622700344" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Sensors#" uri="Sensors.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1762622700344" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/ansportationInfrastructure#" uri="TransportationInfrastructure.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1762622700344" name="shadowed:https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/City#" uri="temp/City.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1762622700344" name="shadowed:https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityResident#" uri="temp/CityResident.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1762622700344" name="shadowed:https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService#" uri="temp/CityService.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1762622700344" name="shadowed:https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contact#" uri="temp/Contact.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1762622700344" name="shadowed:https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contract#" uri="temp/Contract.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1762622700344" name="shadowed:https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Household#" uri="temp/Household.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1762622700344" name="shadowed:https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Infrastructure#" uri="temp/Infrastructure.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1762622700344" name="shadowed:https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/LandUse#" uri="temp/LandUse.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1762622700344" name="shadowed:https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Organization#" uri="temp/Organization.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1762622700344" name="shadowed:https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Person#" uri="temp/Person.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1762622700344" name="shadowed:https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Sensors#" uri="temp/Sensors.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1762622700344" name="shadowed:https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/ansportationInfrastructure#" uri="temp/TransportationInfrastructure.owl"/>
+    </group>
+</catalog>

@@ -1,0 +1,23 @@
+// Diagram for TravelledWayLink
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		TravelledWayLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">TravelledWayLink</TD></TR></TABLE>> URL="../classes/TransportationInfrastructure__TravelledWayLink.md" margin=0]
+	}
+	infrastructure__InfrastructureElement [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">infrastructure::InfrastructureElement</TD></TR></TABLE>> margin=0]
+	TransportationInfrastructureOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TransportationInfrastructureOntologyThing</TD></TR></TABLE>> URL="../_counters/TransportationInfrastructure__TransportationInfrastructureOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		TravelledWay [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TravelledWay</TD></TR></TABLE>> URL="../_counters/TransportationInfrastructure__TravelledWay.md" margin=0]
+	}
+	TravelledWayLink -> infrastructure__InfrastructureElement [arrowhead=onormal style=solid]
+	TravelledWayLink -> TransportationInfrastructureOntologyThing [arrowhead=onormal style=solid]
+	TravelledWayLink -> Invis [style=invis]
+	Invis -> TravelledWay [style=invis]
+	TravelledWayLink -> TravelledWay [label=" aggregateOf 
+ «only»  " arrowhead=normal style=solid]
+}

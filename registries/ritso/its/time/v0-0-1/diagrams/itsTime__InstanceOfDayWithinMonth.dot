@@ -1,0 +1,16 @@
+// Diagram for InstanceOfDayWithinMonth
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		InstanceOfDayWithinMonth [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">InstanceOfDayWithinMonth</TD></TR></TABLE>> URL="../classes/itsTime__InstanceOfDayWithinMonth.md" margin=0]
+	}
+	TimeThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TimeThing</TD></TR></TABLE>> URL="../_counters/itsTime__TimeThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+	}
+	InstanceOfDayWithinMonth -> TimeThing [arrowhead=onormal style=solid]
+}

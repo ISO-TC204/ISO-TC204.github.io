@@ -1,0 +1,130 @@
+@media print {
+    @page {
+        size: letter portrait;
+        margin: 25mm 10mm 25mm 10mm;
+        counter-increment: page;
+        font-family: "Arial,Helvetica,sans-serif";
+        font-size: 12pt;
+        color: grey;
+
+        @top-left {
+            content: 'NTCIP 8008';
+        }
+
+        @top-right {
+            content: 'Page ' counter(page);
+        }
+
+        @bottom-center {
+            content: '<a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a>';
+        }
+
+    }
+
+    /* No header and footer on the first page */
+    @page :first {
+        @top-left {
+            content: none;
+        }
+
+        @top-right {
+            content: none;
+        }
+
+        @bottom-center {
+            content: none;
+        }
+    }
+
+    /* Styles applied only when generating the PDF */
+
+    /* Reset the section counter and prepare for subsections */
+    h1 {
+        counter-reset: subsection;
+        /* Reset subsection numbering when a new h1 appears */
+        counter-reset: requirement;
+    }
+
+    h2 {
+        counter-reset: subsubsection;
+        counter-increment: subsection;
+    }
+
+    h3 {
+        counter-reset: subsubsubsection;
+        counter-increment: subsubsection;
+    }
+
+    h4 {
+        counter-reset: subsubsubsubsection;
+        counter-increment: subsubsubsection;
+    }
+
+    h5 {
+        counter-reset: subsubsubsubsection;
+        counter-increment: subsubsubsection;
+    }
+
+    /* Section numbering for body */
+    h1.body::before {
+        content: "Section " counter(section) " ";
+    }
+
+    h2.body::before {
+        content: counter(section) "." counter(subsection) " ";
+    }
+
+    h3.body::before {
+        content: counter(section) "." counter(subsection) "." counter(subsubsection) " ";
+    }
+
+    h4.body::before {
+        content: counter(section) "." counter(subsection) "." counter(subsubsection) "." counter(subsubsubsection) " ";
+    }
+
+    h5.body::before {
+        content: counter(section) "." counter(subsection) "." counter(subsubsection) "." counter(subsubsubsection) "." counter(subsubsubsubsection)" ";
+    }
+
+    /* Section numbering for annex h1 (use upper-alpha) */
+    h1.annex::before {
+        content: "Annex " counter(section, upper-alpha) " ";
+    }
+
+    h2.annex::before {
+        content: counter(section, upper-alpha) "." counter(subsection) " ";
+    }
+
+    h3.annex::before {
+        content: counter(section, upper-alpha) "." counter(subsection) "." counter(subsubsection) " ";
+    }
+
+    h4.annex::before {
+        content: counter(section, upper-alpha) "." counter(subsection) "." counter(subsubsection) "." counter(subsubsubsection) " ";
+    }
+
+    h5.annex::before {
+        content: counter(section, upper-alpha) "." counter(subsection) "." counter(subsubsection) "." counter(subsubsubsection) "." counter(subsubsubsubsection)" ";
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        page-break-after: avoid;
+        page-break-before: avoid;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Arial,Helvetica,sans-serif";
+        font-size: 12pt;
+    }
+
+    p {
+        font-size: 12pt;
+    }
+}

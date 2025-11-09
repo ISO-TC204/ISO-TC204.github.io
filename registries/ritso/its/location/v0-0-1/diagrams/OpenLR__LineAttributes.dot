@@ -1,0 +1,25 @@
+// Diagram for LineAttributes
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		LineAttributes [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">LineAttributes</TD></TR><TR><TD ALIGN="LEFT">bearing: xsd::integer «exactly 1»</TD></TR></TABLE>> URL="../classes/OpenLR__LineAttributes.md" margin=0]
+	}
+	OpenLRThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">OpenLRThing</TD></TR></TABLE>> URL="../_counters/OpenLR__OpenLRThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		FormOfWay [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FormOfWay</TD></TR></TABLE>> URL="../_counters/OpenLR__FormOfWay.md" margin=0]
+		FunctionalRoadClass [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FunctionalRoadClass</TD></TR></TABLE>> URL="../_counters/OpenLR__FunctionalRoadClass.md" margin=0]
+	}
+	LineAttributes -> OpenLRThing [arrowhead=onormal style=solid]
+	LineAttributes -> Invis [style=invis]
+	Invis -> FormOfWay [style=invis]
+	FormOfWay -> FunctionalRoadClass [style=invis]
+	LineAttributes -> FunctionalRoadClass [label=" hasFRC 
+ «exactly 1»  " arrowhead=normal style=solid]
+	LineAttributes -> FormOfWay [label=" hasFOW 
+ «exactly 1»  " arrowhead=normal style=solid]
+}

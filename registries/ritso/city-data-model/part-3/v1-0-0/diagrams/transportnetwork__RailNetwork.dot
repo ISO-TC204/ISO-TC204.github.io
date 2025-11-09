@@ -1,0 +1,31 @@
+// Diagram for RailNetwork
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		RailNetwork [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">RailNetwork</TD></TR></TABLE>> URL="../classes/transportnetwork__RailNetwork.md" margin=0]
+	}
+	TransportNetwork [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TransportNetwork</TD></TR></TABLE>> URL="../_counters/transportnetwork__TransportNetwork.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		RailCorridor [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RailCorridor</TD></TR></TABLE>> URL="../_counters/transportnetwork__RailCorridor.md" margin=0]
+		RailSection [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RailSection</TD></TR></TABLE>> URL="../_counters/transportnetwork__RailSection.md" margin=0]
+		TrackLink [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TrackLink</TD></TR></TABLE>> URL="../_counters/transportnetwork__TrackLink.md" margin=0]
+	}
+	RailNetwork -> TransportNetwork [arrowhead=onormal style=solid]
+	RailNetwork -> Invis [style=invis]
+	Invis -> RailCorridor [style=invis]
+	RailCorridor -> RailSection [style=invis]
+	RailSection -> TrackLink [style=invis]
+	N183190e241a94441a40bf03385015e17 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	N183190e241a94441a40bf03385015e17 -> RailCorridor [label=member arrowhead=normal style=dotted]
+	N183190e241a94441a40bf03385015e17 -> RailSection [label=member arrowhead=normal style=dotted]
+	N183190e241a94441a40bf03385015e17 -> TrackLink [label=member arrowhead=normal style=dotted]
+	RailNetwork -> N183190e241a94441a40bf03385015e17 [label=" onProperty: partwhole::hasProperPart 
+ «only»  " arrowhead=normal style=dashed]
+	RailNetwork -> TrackLink [label=" onProperty: partwhole::hasProperPart 
+ «min 1»  " arrowhead=normal style=dashed]
+}

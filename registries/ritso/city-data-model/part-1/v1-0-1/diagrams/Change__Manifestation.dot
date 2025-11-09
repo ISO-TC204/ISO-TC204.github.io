@@ -1,0 +1,28 @@
+// Diagram for Manifestation
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Manifestation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Manifestation</TD></TR></TABLE>> URL="../classes/Change__Manifestation.md" margin=0]
+	}
+	ChangeOntologyThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ChangeOntologyThing</TD></TR></TABLE>> URL="../_counters/Change__ChangeOntologyThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		time__TemporalEntity [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">time::TemporalEntity</TD></TR></TABLE>> margin=0]
+	}
+	Manifestation -> ChangeOntologyThing [arrowhead=onormal style=solid]
+	Manifestation -> Invis [style=invis]
+	Invis -> time__TemporalEntity [style=invis]
+	Manifestation -> time__TemporalEntity [label=" existsAt 
+ «exactly 1»  " arrowhead=normal style=solid]
+	Manifestation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Manifestation</TD></TR></TABLE>> URL="../_counters/Change__Manifestation.md" margin=0]
+	Manifestation -> Manifestation [label=" hasFirstManifestation 
+ «exactly 1»  " arrowhead=normal style=solid]
+	Manifestation -> Manifestation [label=" inverse hasPreviousManifestation 
+ «max 1»  " arrowhead=inv style=solid]
+	Manifestation -> Manifestation [label=" hasPreviousManifestation 
+ «max 1»  " arrowhead=normal style=solid]
+}

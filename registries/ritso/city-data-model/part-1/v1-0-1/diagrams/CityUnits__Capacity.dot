@@ -1,0 +1,19 @@
+// Diagram for Capacity
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Capacity [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Capacity</TD></TR></TABLE>> URL="../classes/CityUnits__Capacity.md" margin=0]
+	}
+	CityUnitsThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">CityUnitsThing</TD></TR></TABLE>> URL="../_counters/CityUnits__CityUnitsThing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+	}
+	Capacity -> CityUnitsThing [arrowhead=onormal style=solid]
+	owl__Thing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">owl::Thing</TD></TR></TABLE>> margin=0]
+	Capacity -> owl__Thing [label=" i72::defined_by 
+ «min 1»  " arrowhead=normal style=solid]
+}

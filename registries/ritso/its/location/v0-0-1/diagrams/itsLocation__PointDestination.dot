@@ -1,0 +1,21 @@
+// Diagram for PointDestination
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		PointDestination [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">PointDestination</TD></TR></TABLE>> URL="../classes/itsLocation__PointDestination.md" margin=0]
+	}
+	Destination [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Destination</TD></TR></TABLE>> URL="../_counters/itsLocation__Destination.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		PointLocation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PointLocation</TD></TR></TABLE>> URL="../_counters/itsLocation__PointLocation.md" margin=0]
+	}
+	PointDestination -> Destination [arrowhead=onormal style=solid]
+	PointDestination -> Invis [style=invis]
+	Invis -> PointLocation [style=invis]
+	PointDestination -> PointLocation [label=" pointLocation 
+ «exactly 1, only»  " arrowhead=normal style=solid]
+}
