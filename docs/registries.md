@@ -7,7 +7,7 @@
 ISO TC 204 manages registries to maintain information that needs to be updated more frequently than the normal standards update cycle, including the following:
 
 ??? info "Registry for ITS Identifiers (RITSI)"
-    [Registry for ITS Identifiers (RITSI)](ritsi/): This registry records assigned values used for various identifier types (e.g., the ITS application identifier (ITS-AID)).
+    [Registry for ITS Identifiers (RITSI)](ritsi/): This registry records assigned values used for various identifier types (e.g., the ITS application identifier (ITS-AID)). The listing of ITS-AID values is identical to and is coordinated with the [listing of Provider Service Identifiers (PSIDs)](https://standards.ieee.org/products-programs/regauth/psid/public/) as managed by IEEE.
 
 ??? "Registry for ITS Ontologies (RITSO)"
     [Registry for ITS Ontologies (RITSO)](ritso/index.md): This registry, which is still under initial stages of development, records the ontology (sometimes called the data model), for ITS and define how key ITS concepts relate to each other.
