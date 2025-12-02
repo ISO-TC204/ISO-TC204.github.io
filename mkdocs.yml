@@ -93,7 +93,9 @@ nav:
     - Secure ITS Management Patterns: cybersecurity/patterns-management.md
     - Glossary: cybersecurity/cybersecurity-glossary.md
   - Resources: resources.md
-site_url: https://iso-tc204.github.io
+site_url: https://isotc204.org/
+extra:
+  CNAME: isotc204.org
 copyright: CC BY 4.0
 theme:
   name: material
