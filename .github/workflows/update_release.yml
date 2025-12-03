@@ -44,11 +44,7 @@ jobs:
       - name: Build the site
         run: mkdocs build --strict
 
-      # Step 6. Create/restore CNAME file before deploying
-      - name: Create CNAME file
-        run: echo "isotc204.org" > site/CNAME
-
-      # Step 7: Deploy to GitHub Pages
+      # Step 6: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         run: |
           mkdocs gh-deploy --force --verbose
