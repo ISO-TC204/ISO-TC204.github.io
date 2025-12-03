@@ -1,7 +1,5 @@
 <!-- tc204-standards-main-page.md -->
 
-![Draft for review only](assets/img/draft_for_review.svg)
-
 # TC 204 Foundational Standards
 
 The following standards effectively establish the foundation upon which most other TC204 standards are (or should be) built. It is highly recommended that all practitioners are familiar with these standards:

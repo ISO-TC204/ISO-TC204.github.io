@@ -1,7 +1,5 @@
 <!-- resources.md -->
 
-![Draft for review only](assets/img/draft_for_review.svg)
-
 This page identifies numerous key resources for the ITS industry. You can click on any item to show additional details.
 
 ??? info "ISO"

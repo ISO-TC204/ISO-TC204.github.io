@@ -1,7 +1,5 @@
 <!-- registries.md -->
 
-![Draft for review only](assets/img/draft_for_review.svg)
-
 # Registries managed by ISO TC 204
 
 ISO TC 204 manages registries to maintain information that needs to be updated more frequently than the normal standards update cycle, including the following:

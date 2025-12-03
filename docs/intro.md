@@ -1,7 +1,5 @@
 <!-- intro.md -->
 
-![Draft for review only](assets/img/draft_for_review.svg)
-
 # Introduction to ITS
 
 Intelligent Transportation Systems (ITS) refer to the integration of advanced technologies into transportation infrastructure and vehicles to enhance safety, efficiency, sustainability, and mobility. ITS leverages information and communication technologies to optimize the movement of people and goods, addressing challenges like traffic congestion, accidents, and environmental impact.

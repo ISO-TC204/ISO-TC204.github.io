@@ -1,7 +1,5 @@
 <!-- about.md -->
 
-![Draft for review only](assets/img/draft_for_review.svg)
-
 # About ISO Documents
 
 ## Document Types

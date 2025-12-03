@@ -1,7 +1,5 @@
 <!-- registries.md -->
 
-![Draft for review only](assets/img/draft_for_review.svg)
-
 # Contributing to ISO TC 204
 
 ## Contributing to formal ISO documents

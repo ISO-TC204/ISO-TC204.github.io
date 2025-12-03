@@ -1,7 +1,5 @@
 <!-- tc204.md -->
 
-![Draft for review only](assets/img/draft_for_review.svg)
-
 # Welcome to ISO/TC 204's informational home page
 
 _ISO TC 204 addresses the worldwide market that has come to be known as Intelligent Transport Systems  (ITS). Standardization of information, communication and control systems in the field of urban and rural surface transportation, including intermodal and multimodal aspects thereof, traveller information, traffic management, public transport, commercial transport, emergency services and commercial service in the intelligent transport systems (ITS) field._

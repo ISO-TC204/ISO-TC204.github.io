@@ -1,7 +1,5 @@
 <!-- vocab.md -->
 
-![Draft for review only](assets/img/draft_for_review.svg)
-
 The following acronyms are commonly used throughout this site.
 
 `AA`
