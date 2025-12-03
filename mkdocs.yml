@@ -27,6 +27,7 @@ nav:
     - Fee and toll collection (WG 5): wg5/index.md
     - Fleet management (WG 7): wg7/index.md
     - Geographic data (WG 3): wg3/index.md
+    - Geographic information systems (JWG 11): tc211jwg11/index.md
     - Identifiers (AG 2): ag2/index.md
     - Mobility integration (WG 19): wg19/index.md
     - Nomadic devices in ITS (WG 17): wg17/index.md
@@ -38,8 +39,26 @@ nav:
     - Traveller information (WG 10): wg10/index.md
   - Registries: 
     - Overview: registries.md
-    - Registry for ITS Identifiers (RITSI): https://iso-tc204.github.io/iso5345/
-    - Registry for ITS Ontologies (RITSO): https://k-vaughn.github.io/ontologies/latest/
+    - RITSI: '!import https://github.com/iso-tc204/iso5345?branch=main'
+    - RITSO: 
+      - Home: ritso/index.md
+      - Ontology formats: ritso/ontology_formats.md
+      - Ontology Registry: ritso/python/ontology_registry.md
+      - Concept Registry: ritso/python/concept_registry.md
+      - City Data Model:
+        - Part 1: 
+          - v1.0.1: '!import https://github.com/iso-tc204/ontology-cdm-p1?branch=v1.0.1'
+        - Part 2: 
+          - v1.0.2: '!import https://github.com/iso-tc204/ontology-cdm-p2?branch=v1.0.2'
+        - Part 3: 
+          - v1.0.0: '!import https://github.com/iso-tc204/ontology-cdm-p3?branch=v1.0.0'
+      - ITS:
+        - Location: 
+          - v0.0.1: '!import https://github.com/iso-tc204/ontology-its-location?branch=v0.0.1'
+        - Regulation: 
+          - v0.0.1: '!import https://github.com/iso-tc204/ontology-its-regulation?branch=v0.0.1'
+        - Time: 
+          - v0.0.1: '!import https://github.com/iso-tc204/ontology-its-time?branch=v0.0.1'
   - Standards: 
     - Overview: standards.md
     - METR: https://iso-tc204.github.io/iso24315/
@@ -74,7 +93,9 @@ nav:
     - Secure ITS Management Patterns: cybersecurity/patterns-management.md
     - Glossary: cybersecurity/cybersecurity-glossary.md
   - Resources: resources.md
-site_url: https://iso-tc204.github.io
+site_url: https://isotc204.org/
+extra:
+  CNAME: isotc204.org
 copyright: CC BY 4.0
 theme:
   name: material
@@ -93,7 +114,14 @@ plugins:
   - search
   - git-revision-date-localized:
       type: date
+      exclude:
+        - temp_dir/**
+      fallback_to_build_date: true 
+      strict: false  
   - include-markdown
+  - multirepo:
+      cleanup: true
+      keep_docs_dir: false
 markdown_extensions:
   - abbr
   - admonition

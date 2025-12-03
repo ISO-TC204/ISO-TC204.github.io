@@ -10,34 +10,41 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # Needed for gh-deploy to push to gh-pages
 
     steps:
       # Step 1: Check out the repository
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Fetch full history for plugins that need commit history
 
-      # Step 2: Set up Python
+      # Step 2: Clean multirepo leftovers from previous builds
+      - name: Clean multirepo directories
+        run: |
+          rm -rf docs/registries/ritso/*  
+          rm -rf temp_dir 
+
+      # Step 3: Set up Python
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
-      # Step 3: Install MkDocs and dependencies
+      # Step 4: Install MkDocs and dependencies
       - name: Install dependencies
         run: |
           pip install mkdocs-material
           pip install mkdocs-git-revision-date-localized-plugin
           pip install mkdocs-include-markdown-plugin
+          pip install mkdocs-multirepo-plugin
 
-      # Step 4: Build the MkDocs site
+      # Step 5: Build the MkDocs site
       - name: Build the site
-        env:
-          EXPORT_PDF: 1  # Optional: set to generate PDF if you have the mkdocs-pdf-export-plugin installed
         run: mkdocs build --strict
 
-      # Step 5: Deploy to GitHub Pages
+      # Step 6: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         run: |
           mkdocs gh-deploy --force --verbose

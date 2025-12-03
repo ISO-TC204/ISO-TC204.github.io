@@ -1,0 +1,11 @@
+// Diagram for Footpath
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=10]
+	Dog [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER"><B>Dog</B></TD></TR></TABLE>> margin=0]
+	Person [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER"><B>Person</B></TD></TR></TABLE>> margin=0]
+	Eye [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER"><B>Eye</B></TD></TR></TABLE>> margin=0]
+	Dog -> Person [label="onProperty: owner" arrowhead=normal]
+	Dog -> Eye [label="«exactly 2, only»\nonProperty: eyes" arrowhead=normal]
+}
