@@ -1,16 +1,14 @@
 <!-- about.md -->
 
-![Draft for review only](assets/img/draft_for_review.svg)
-
 # About ISO/TC204 Intelligent Transport Systems
 
 ## Overview
 
-Since our establishment in 1992, TC204 has developed and maintained a suite of standards and other artefacts for the Intelligent Transport Systems (ITS) environment. The ITS environment interacts with many other domains and TC 204 coordinates with other ISO technical committees (e.g., TC 22) to ensure a proper division of work as defined by our scope.
+Since our establishment in 1992, ISO's Technical Committee 204 (TC204) has developed and maintained a suite of standards and other artefacts for the Intelligent Transport Systems (ITS) environment. The ITS environment interacts with many other domains and TC 204 coordinates with other ISO technical committees (e.g., TC 22) to ensure a proper division of work as defined by our scope.
 
 <blockquote> {% include "ag4/scope.html" %}</blockquote>
 
-To date, we have published over 360 documents that collectively describe broad swaths of the ITS domain. This work exists within a much broader operating context requiring collaboration with other developers of related standards, both **_within ISO_** (such as [TC22 Road Vehicles](https://www.iso.org/committee/46706.html) and [TC344 Innovative Logistics](https://www.iso.org/committee/9824329.html)) **_and beyond_** (such as [CEN/TC278 ITS Standards](https://www.itsstandards.eu/) and [ISO/IEC JTC 4 Smart and sustainable cities and communities](https://www.iso.org/committee/11064026.html)). We currently have [liaisons](https://www.iso.org/committee/54706.html#liaisons) with roughly 40 other groups.
+To date, we have published over 360 documents that collectively describe broad swaths of the ITS domain. This work exists within a much broader operating context requiring collaboration with other developers of related standards, both **_within ISO_** (such as [TC22 Road Vehicles](https://www.iso.org/committee/46706.html) and [TC344 Innovative Logistics](https://www.iso.org/committee/9824329.html)) **_and beyond_** (such as [CEN/TC278 ITS Standards](https://www.itsstandards.eu/) and [ISO/IEC JTC 4 Smart and sustainable cities and communities](https://www.iso.org/committee/11064026.html)). We currently have [liaisons](https://www.iso.org/committee/54706.html#liaisons) with approximately 40 other groups.
 
 ![TC204 Liaisons](assets/img/liaisons.png){.figure}
 

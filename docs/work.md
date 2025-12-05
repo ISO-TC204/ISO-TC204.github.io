@@ -1,7 +1,5 @@
 <!-- work.md -->
 
-![Draft for review only](assets/img/draft_for_review.svg)
-
 # Work for ISO TC 204
 
 The following sortable table lists the WGs and topic areas included within ISO TC 204.
