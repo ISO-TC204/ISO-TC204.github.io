@@ -2,6 +2,7 @@ site_name: ISO TC 204 Information
 site_description: Information about ISO TC 204 standardization efforts
 repo_url: https://github.com/ISO-TC204/ISO-TC204.github.io
 nav:
+  - TC204 on ISO.org: https://www.iso.org/committee/54706.html
   - Home: index.md
   - About:
     - About TC 204: about.md
