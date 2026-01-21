@@ -103,6 +103,7 @@ def main():
             # Process classes for diagrams and Markdown
             for cls in sorted(local_classes, key=lambda u: get_label(g, u).lower()):
                 cls_name = get_label(g, cls)
+                log.info(cls_name)
                 if cls_name == 'ITSThing':
                     continue
                 cls_id = get_id(cls_name)

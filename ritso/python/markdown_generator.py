@@ -173,6 +173,7 @@ def generate_markdown(g: Graph, cls: URIRef, cls_name: str, global_patterns: dic
     try:
         os.makedirs(classes_dir, exist_ok=True)
         with open(filename, "w", encoding="utf-8") as f:
+            f.write("![Draft for review only](/assets/img/draft_for_review.svg)\n\n")
             f.write(content)
         log.debug("Generated Markdown file: %s", filename)
     except Exception as e:
@@ -386,6 +387,7 @@ def generate_index(docs_dir: str, input_files: list, ontology_info: dict, global
     # Write index.md
     try:
         with open(index_path, "w", encoding="utf-8") as f:
+            f.write("![Draft for review only](/assets/img/draft_for_review.svg)\n\n")
             f.write(index_content)
         log.info("Generated index.md at %s", index_path)
     except Exception as e:

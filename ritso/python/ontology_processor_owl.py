@@ -4,8 +4,8 @@ import logging
 import traceback
 import re
 from rdflib import Graph, RDF, OWL, URIRef, Literal, XSD, RDFS
-from utils import get_qname, get_ontology_metadata, _norm_base, get_leaf_classes, collect_oneOf, collect_list
-from rdflib.namespace import DC, DCTERMS
+from utils import get_qname, get_ontology_metadata, _norm_base, get_leaf_classes, collect_oneOf, collect_list, update_concept_registry, parse_ontology_registry, update_ontology_registry
+from rdflib.namespace import DC, DCTERMS, SKOS
 
 log = logging.getLogger("owl2mkdocs")
 
@@ -44,26 +44,6 @@ def parse_concept_registry(script_dir):
                     log.warning(f"Skipping row due to missing header: {line} ({str(e)})")
     log.info(f"Loaded {len(registry)} entries from concept_registry.md")
     return registry
-
-def update_concept_registry(script_dir, registry):
-    registry_path = os.path.join(script_dir, "concept_registry.md")
-    with open(registry_path, 'w', encoding='utf-8') as f:
-        f.write("| base_uri | name | type | description |\n|----------|------|------|-------------|\n")
-        # Sort by base_uri and then name
-        sorted_items = sorted(registry.items(), key=lambda x: (x[0].rsplit('/', 1)[0] if '/' in x[0] else x[0], x[0].rsplit('/', 1)[1] if '/' in x[0] else ''))
-        for uri, info in sorted_items:
-            if '#' in uri:
-                base_uri, name = uri.rsplit('#', 1)
-                base_uri += '#'
-            elif '/' in uri:
-                base_uri, name = uri.rsplit('/', 1)
-                base_uri += '/'
-            else:
-                base_uri = ''
-                name = uri
-            if not base_uri.startswith('N') and not name.startswith('N'):
-                f.write(f"| {base_uri} | {name} | {info['type']} | {info['description']} |\n")
-    log.info(f"Updated concept_registry.md with {len(registry)} entries")
 
 def process_ontology(owl_path: str, errors: list, ontology_info) -> tuple:
     """Process an OWL file and update ontology_info, return graph, namespace, prefix map, classes, local_classes, and property map."""
@@ -208,6 +188,7 @@ def process_ontology(owl_path: str, errors: list, ontology_info) -> tuple:
     # Load the concept registry from the Python script directory
     script_dir = os.path.dirname(os.path.realpath(__file__))
     registry = parse_concept_registry(script_dir)
+    ontology_registry = parse_ontology_registry(script_dir)
 
     # Add object and datatype properties from registry to the graph
     for uri, info in registry.items():
@@ -278,21 +259,21 @@ def process_ontology(owl_path: str, errors: list, ontology_info) -> tuple:
         uri = str(cls)
         log.debug(f"Examining class: {uri}")
         if uri not in registry and uri not in new_concepts:
-            description = g.value(cls, RDFS.comment) or g.value(cls, DC.description) or ''
+            description = g.value(cls, SKOS.definition) or g.value(cls, DCTERMS.description) or g.value(cls, DC.description) or g.value(cls, RDFS.comment) or '-'
             new_concepts[uri] = {'type': 'class', 'description': str(description) if isinstance(description, Literal) else description}
             log.debug(f"Added class: {uri} (local={uri.startswith(ns)})")
     # Object properties
     for prop in g.subjects(RDF.type, OWL.ObjectProperty):
         uri = str(prop)
         if uri not in registry and uri not in new_concepts:
-            description = g.value(prop, RDFS.comment) or g.value(prop, DC.description) or ''
+            description = g.value(prop, SKOS.definition) or g.value(prop, DCTERMS.description) or g.value(prop, DC.description) or g.value(prop, RDFS.comment) or '-'
             new_concepts[uri] = {'type': 'object_property', 'description': str(description) if isinstance(description, Literal) else description}
             log.debug(f"Added object_property: {uri} (local={uri.startswith(ns)})")
     # Datatype properties
     for prop in g.subjects(RDF.type, OWL.DatatypeProperty):
         uri = str(prop)
         if uri not in registry and uri not in new_concepts:
-            description = g.value(prop, RDFS.comment) or g.value(prop, DC.description) or ''
+            description = g.value(prop, SKOS.definition) or g.value(prop, DCTERMS.description) or g.value(prop, DC.description) or g.value(prop, RDFS.comment) or '-'
             new_concepts[uri] = {'type': 'datatype_property', 'description': str(description) if isinstance(description, Literal) else description}
             log.debug(f"Added datatype_property: {uri} (local={uri.startswith(ns)})")
 
@@ -376,9 +357,18 @@ def process_ontology(owl_path: str, errors: list, ontology_info) -> tuple:
 
     # Extract ontology metadata and update ontology_info
     dc_title = get_ontology_metadata(g, ns, DC.title) or "Untitled Ontology"
-    dc_description = get_ontology_metadata(g, ns, DC.description) or ""
+    dc_description = get_ontology_metadata(g, ns, SKOS.definition) or get_ontology_metadata(g, ns, DCTERMS.description) or get_ontology_metadata(g, ns, DC.description) or get_ontology_metadata(g, ns, RDFS.comment) or '-'
+    log.info(f"Ontology description: {dc_description}")
+    log.info(f"SKOS description: {g.value(cls, SKOS.definition)}")
     ontology_info["title"] = dc_title
     ontology_info["description"] = dc_description
+    official_iri = ns
+    if official_iri not in ontology_registry:
+        preferred_prefix = ontology_info["ontology_name"]
+        ritso_location = os.path.basename(os.path.dirname(os.path.dirname(owl_path)))
+        description = ontology_info["description"]
+        ontology_registry[official_iri] = {'preferred_prefix': preferred_prefix, 'ritso_location': ritso_location, 'description': description}
+    update_ontology_registry(script_dir, ontology_registry)
     ontology_info["patterns"] = set()
     ontology_info["non_pattern_classes"] = set()
 

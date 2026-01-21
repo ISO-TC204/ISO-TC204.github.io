@@ -3,7 +3,7 @@ import logging
 import traceback
 from rdflib import Graph, RDF, OWL, URIRef, RDFS, Literal
 from funowl.converters.functional_converter import to_python
-from utils import get_qname, get_ontology_metadata, _norm_base, get_prefix_named_pairs
+from utils import get_qname, get_ontology_metadata, _norm_base, get_prefix_named_pairs, update_concept_registry
 from rdflib.namespace import DC, DCTERMS
 
 log = logging.getLogger("ofn2mkdocs")
@@ -43,22 +43,6 @@ def parse_concept_registry(script_dir):
                     log.warning(f"Skipping row due to missing header: {line} ({str(e)})")
     log.info(f"Loaded {len(registry)} entries from concept_registry.md")
     return registry
-
-def update_concept_registry(script_dir, registry):
-    registry_path = os.path.join(script_dir, "concept_registry.md")
-    with open(registry_path, 'w', encoding='utf-8') as f:
-        f.write("| base_uri | name | type | description |\n|----------|------|------|-------------|\n")
-        # Sort by base_uri and then name
-        sorted_items = sorted(registry.items(), key=lambda x: (x[0].rsplit('/', 1)[0] if '/' in x[0] else x[0], x[0].rsplit('/', 1)[1] if '/' in x[0] else ''))
-        for uri, info in sorted_items:
-            base_uri, name = uri.rsplit('/', 1) if '/' in uri else (uri, '')
-            if '#' in name:
-                base_uri, name = f"{base_uri}/{name.split('#')[0]}#", name.split('#')[1]
-            if not base_uri.endswith(('#', '/')):
-                base_uri += '/'
-            if not base_uri.startswith('N'):
-                f.write(f"| {base_uri} | {name} | {info['type']} | {info['description']} |\n")
-    log.info(f"Updated concept_registry.md with {len(registry)} entries")
 
 def process_ontology(ofn_path: str, errors: list, ontology_info) -> tuple:
     """Process an OFN file, update ontology_info, and return graph, namespace, prefix map, classes, local classes, and property map."""

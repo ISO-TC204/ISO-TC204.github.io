@@ -1,4 +1,5 @@
 # utils.py
+import os
 import re
 import logging
 import traceback
@@ -101,7 +102,8 @@ def get_label(g: Graph, c: URIRef) -> str:
     for _, _, lbl in g.triples((c, RDFS.label, None)):
         if isinstance(lbl, Literal):
             return str(lbl)
-    return str(c).split('#')[-1]
+    fragment_start = max(c.rfind('#'), c.rfind('/')) + 1
+    return c[fragment_start:]
 
 def get_first_literal(g: Graph, subj: URIRef, preds: Iterable[URIRef]) -> Optional[str]:
     if subj is None:
@@ -336,3 +338,70 @@ def get_ontology_for_uri(uri_str: str, ns_to_ontology: dict) -> str:
         if norm_uri.startswith(_norm_base(ont_ns)):
             return ont_name
     return None
+
+def update_concept_registry(script_dir, registry):
+    registry_path = os.path.join(script_dir, "concept_registry.md")
+    with open(registry_path, 'w', encoding='utf-8') as f:
+        f.write("![Draft for review only](/assets/img/draft_for_review.svg)\n\n")
+        f.write("# Concept Registry\n\n")
+        f.write("This page lists all known concepts (classes and properties) included in the RITSO.\n\n")
+        f.write("| base_uri | name | type | description |\n|----------|------|------|-------------|\n")
+        # Sort by base_uri and then name
+        sorted_items = sorted(registry.items(), key=lambda x: (x[0].rsplit('/', 1)[0] if '/' in x[0] else x[0], x[0].rsplit('/', 1)[1] if '/' in x[0] else ''))
+        for uri, info in sorted_items:
+            base_uri, name = uri.rsplit('/', 1) if '/' in uri else (uri, '')
+            if '#' in name:
+                base_uri, name = f"{base_uri}/{name.split('#')[0]}#", name.split('#')[1]
+            if not base_uri.endswith(('#', '/')):
+                base_uri += '/'
+            if not base_uri.startswith('N'):
+                f.write(f"| {base_uri} | {name} | {info['type']} | {info['description']} |\n")
+    log.info(f"Updated concept_registry.md with {len(registry)} entries")
+
+def parse_ontology_registry(script_dir):
+    registry_path = os.path.join(script_dir, "ontology_registry.md")
+    if not os.path.exists(registry_path):
+        with open(registry_path, 'w', encoding='utf-8') as f:
+            f.write("|Prefix | Official IRI                                       | RITSO Location     | Description |\n|----------|------|------|-------------|\n")
+        log.info(f"Created new ontology_registry.md in {script_dir}")
+        return {}
+    content = open(registry_path, 'r', encoding='utf-8').read()
+    lines = content.splitlines()
+    registry = {}
+    in_table = False
+    headers = None
+    for line in lines:
+        if line.strip().startswith('|'):
+            if not in_table:
+                headers = [h.strip().lower() for h in line.split('|') if h.strip()]
+                log.debug(f"Parsed headers: {headers}")
+                in_table = True
+            elif headers and not line.strip().startswith('|---'):
+                values = [v.strip() for v in line.split('|') if v.strip()]
+                log.info(f"Parsed values: {values}")
+                if len(values) < 4:  # Require all four columns
+                    log.warning(f"Skipping row with insufficient values (expected 4, got {len(values)}): {line}")
+                    continue
+                try:
+                    preferred_prefix = values[0]
+                    official_iri = values[1]
+                    ritso_location = values[2]
+                    description = values[3]
+                    registry[official_iri] = {'preferred_prefix': preferred_prefix, 'ritso_location': ritso_location, 'description': description}
+                except ValueError as e:
+                    log.warning(f"Skipping row due to missing header: {line} ({str(e)})")
+    log.info(f"Loaded {len(registry)} entries from ontology_registry.md")
+    return registry
+
+def update_ontology_registry(script_dir, ontology_registry):
+    registry_path = os.path.join(script_dir, "ontology_registry.md")
+    with open(registry_path, 'w', encoding='utf-8') as f:
+        f.write("![Draft for review only](/assets/img/draft_for_review.svg)\n\n")
+        f.write("# Ontology Registry\n\n")
+        f.write("This page lists all known ontologies included in the RITSO.\n\n")
+        f.write("|Prefix | Official IRI | RITSO Location | Description |\n|-------|--------------|----------------|-------------|\n")
+        # Sort by preferred_prefix (case-insensitive)
+        sorted_items = sorted(ontology_registry.items(), key=lambda x: x[1]['preferred_prefix'].lower())
+        for iri, info in sorted_items:
+            f.write(f"| {info['preferred_prefix']} | {iri} | {info['ritso_location']} | {info['description']} |\n")
+    log.info(f"Updated ontology_registry.md with {len(ontology_registry)} entries")
