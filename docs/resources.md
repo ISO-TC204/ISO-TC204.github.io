@@ -91,6 +91,9 @@ This page identifies numerous key resources for the ITS industry. You can click 
 ??? info "A Guide to ITS: EU-ICIP"
     The [EU-ICIP GUIDE to Intelligent Transport Systems Standards](https://www.mobilityits.eu/) provides a rich source of information about ITS Communications and Information Protocols together with foundational concepts such as “About ITS”, “ITS Architecture” and definitions of commonly-used terminology. The site is developed and maintained by [CEN/TC278 Intelligent Transport Systems](https://www.cencenelec.eu/areas-of-work/cen-sectors/transport-and-packaging-cen/intelligent-transport-systems/).
 
+??? info "ITS Standardization Activities of ISO/TC 204"
+    Japan produces an annual report on [ITS Standardization Activities of ISO/TC 204](/assets/pdf/its_2025_en.pdf), which provides an updated summary of activities within TC 204.
+
 ??? info "How to Purchase Standards"
     ## Purchasing individual standards
 

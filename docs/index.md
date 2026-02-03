@@ -27,7 +27,7 @@ A user-friendly overview of TC204 including:
 
 ## Other information
 
-In addition to this site, which is intended for the public-at-large, national experts might be interested in looking at our Wiki page for guidance on the standards development process.
+In addition to this site, which is intended for the public-at-large, national experts might be interested in looking at our [Wiki page](https://github.com/ISO-TC204/ISO-TC204.github.io/wiki) for guidance on the standards development process.
 
 **⚠️Not what you were looking for?**
 
