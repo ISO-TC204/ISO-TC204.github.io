@@ -173,7 +173,7 @@ An ITS integrates myriad devices and services, each of which may be provisioned 
 <table>
   <tr>
     <td style="width: 170px; vertical-align: middle; text-align: center;">
-      <img src=images/icon_low_latency.jpg alt="Low Latency Icon" height="150">
+      <img src="/cybersecurity/images/icon_low_latency.jpg" alt="Low Latency Icon" height="150">
     </td>
     <td>
      <br>
@@ -188,7 +188,7 @@ An ITS integrates myriad devices and services, each of which may be provisioned 
 <table>
   <tr>
     <td style="width: 170px; vertical-align: middle; text-align: center;">
-      <img src=images/icon_mobile.jpg alt="Mobility Icon" height="150">
+      <img src="/cybersecurity/images/icon_mobile.jpg" alt="Mobility Icon" height="150">
     </td>
     <td>
   <br>
@@ -203,7 +203,7 @@ An ITS integrates myriad devices and services, each of which may be provisioned 
 <table>
   <tr>
     <td style="width: 170px; vertical-align: middle; text-align: center;">
-      <img src=images/icon_privacy.jpg alt="Privacy Icon" height="150">
+      <img src="/cybersecurity/images/icon_privacy.jpg" alt="Privacy Icon" height="150">
     </td>
     <td>
       <br>
@@ -218,7 +218,7 @@ An ITS integrates myriad devices and services, each of which may be provisioned 
 <table>
   <tr>
     <td style="width: 170px; vertical-align: middle; text-align: center;">
-      <img src=images/icon_multijurisdictional.jpg alt="Multi Jurisdictional Icon" height="150">
+      <img src="/cybersecurity/images/icon_multijurisdictional.jpg" alt="Multi Jurisdictional Icon" height="150">
     </td>
     <td>
      <br>
@@ -233,7 +233,7 @@ ITS environments involve a wide range of stakeholders, including vehicles from m
 <table>
   <tr>
     <td style="width: 170px; vertical-align: middle; text-align: center;">
-      <img src=images/icon_appsandroles.jpg alt="Applications and Roles Icon" height="150">
+      <img src="/cybersecurity/images/icon_appsandroles.jpg" alt="Applications and Roles Icon" height="150">
     </td>
     <td>
      <br>
@@ -247,7 +247,7 @@ Traditional network security approaches control who can join a system and provid
 <table>
   <tr>
     <td style="width: 170px; vertical-align: middle; text-align: center;">
-      <img src=images/icon_safety_critical.jpg alt="Safety Critical Icon" height="150">
+      <img src="/cybersecurity/images/icon_safety_critical.jpg" alt="Safety Critical Icon" height="150">
     </td>
     <td>
         <br>
@@ -261,7 +261,7 @@ Traditional network security approaches control who can join a system and provid
 <table>
   <tr>
     <td style="width: 170px; vertical-align: middle; text-align: center;">
-      <img src=images/icon_massive_scale.jpg alt="Scale Icon" height="150">
+      <img src="/cybersecurity/images/icon_massive_scale.jpg" alt="Scale Icon" height="150">
     </td>
     <td>
      <br>
