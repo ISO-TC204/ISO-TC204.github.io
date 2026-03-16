@@ -4,27 +4,27 @@
 
 ### ITS Systems of Systems
 
-Intelligent Transportation Systems (ITS) enhance mobility, safety, and operational efficiency through connected and automated technologies. Modern ITS deployments function as a system of systems composed of vehicles, roadside equipment, traffic management centers, communications infrastructure, and cloud or backend services. These components exchange near real-time data to support traffic operations, cooperative services, and safety applications. ITS architectures are distributed. Components may be owned and operated by different entities, including public authorities, private operators, vehicle manufacturers, and service providers. Interoperability and trust must extend across organizational and jurisdictional boundaries. An ITS Station represents a logical entity capable of sending, receiving, and processing ITS messages. An ITS Station may reside within a vehicle, roadside device, or backend infrastructure component. The station concept provides a consistent architectural abstraction for defining security functions, trust relationships, and message processing behavior across heterogeneous platforms. The figure below illustrates representative components of an ITS deployment and their interaction within a system-of-systems architecture.
+Intelligent Transportation Systems (ITS) enhance mobility, safety, and operational efficiency through connected and automated technologies. Modern ITS deployments function as a system of systems composed of vehicles, roadside equipment, traffic management centers, communications infrastructure, and cloud or backend services. These components exchange near real-time data to support traffic operations, cooperative services, and safety applications. ITS architectures are distributed. Components may be owned and operated by different entities, including public authorities, private operators, vehicle manufacturers, and service providers. Interoperability and trust must extend across organizational and jurisdictional boundaries. An ITS Station represents a logical entity capable of sending, receiving, and processing ITS messages. An ITS Station may reside within a vehicle, roadside device, or backend infrastructure component. The station concept provides a consistent architectural abstraction for defining security functions, trust relationships, and message processing behaviour across heterogeneous platforms. The figure below illustrates representative components of an ITS deployment and their interaction within a system-of-systems architecture.
 
 ![ITS Environment](images/its_generic.jpg)
 
-Vehicles, roadside systems, and backend services exchange time-sensitive data that can influence traffic control decisions and vehicle behavior. As a result, failures in communication integrity, authentication, or availability can produce operational disruption or safety impacts. ITS environments operate under conditions of mobility, wireless communication, and low-latency decision-making. These characteristics increase exposure to spoofing, message manipulation, denial-of-service, misconfiguration, and compromised endpoint behavior. Systems must be designed to ensure that messages are authentic, unaltered, authorized, and available when required.
+Vehicles, roadside systems, and backend services exchange time-sensitive data that can influence traffic control decisions and vehicle behaviour. As a result, failures in communication integrity, authentication, or availability can produce operational disruption or safety impacts. ITS environments operate under conditions of mobility, wireless communication, and low-latency decision-making. These characteristics increase exposure to spoofing, message manipulation, denial-of-service, misconfiguration, and compromised endpoint behaviour. Systems must be designed to ensure that messages are authentic, unaltered, authorized, and available when required.
 
 ## ITS Cybersecurity
 
 Cybersecurity protects digital systems and data from unauthorized access, manipulation, or disruption. In transportation environments, cybersecurity directly affects operational control and safety-related functions. ITS components influence traffic signal timing, roadway advisories, cooperative vehicle messaging, and automated decision support.
 
-Unauthorized modification of traffic control commands, roadside device configurations, or connected vehicle message streams can alter operational behavior. Suppression, injection, or replay of safety messages can degrade system reliability. Compromise of infrastructure services can reduce visibility, coordination, or trust within the transportation network.
+Unauthorized modification of traffic control commands, roadside device configurations, or connected vehicle message streams can alter operational behaviour. Suppression, injection, or replay of safety messages can degrade system reliability. Compromise of infrastructure services can reduce visibility, coordination, or trust within the transportation network.
 
 ![vehicle_v2x](images/vehicle_v2x.jpg){ width="67%" }
 
-Connected and Automated Vehicle (CAV) cybersecurity focuses on vehicle-based ITS stations and their associated communications. CAV environments rely on wireless broadcast messaging, distributed trust management, and time-sensitive data exchange. Vehicles and infrastructure may act on received information with minimal human intervention. Security controls in CAV ecosystems must ensure that safety-relevant data is authentic, unmodified, authorized, and available under dynamic operating conditions. 
+Connected and Automated Vehicle (CAV) cybersecurity focuses on vehicle-based ITS stations and their associated communications. CAV environments rely on wireless broadcast messaging, distributed trust management, and time-sensitive data exchange. Vehicles and infrastructure may act on received information with minimal human intervention. Security controls in CAV ecosystems must ensure that safety-relevant data is authentic, unmodified, authorized, and available under dynamic operating conditions.
 
 ![ITS Ecosystem Threats](images/its_threats.jpg)
 
 CAV systems implement these security properties using a dedicated credential framework designed for V2X communications. This framework is defined by IEEE Std. 1609.2. The 1609.2 certificate format differs from traditional X.509 certificates used in enterprise networks. It is optimized for low-latency broadcast environments, high message frequency, and large-scale credential rotation. A 1609.2 certificate binds a public key to defined service permissions and operational constraints. Vehicles use private keys associated with these certificates to digitally sign outgoing safety messages. Receiving stations validate the certificate, evaluate its permissions, and verify the digital signature before accepting the message for processing.
 
-### Message Authentication and Data Integrity 
+### Message Authentication and Data Integrity
 
 Integrity protection prevents unauthorized modification of data in transit or at rest. Authenticity validation confirms that a message was generated by a credentialed entity within the trust ecosystem. These properties are enforced through cryptographic hashing and digital signature mechanisms bound to provisioned certificates.
 
@@ -54,7 +54,7 @@ When a receiving ITS station processes a secured message, it evaluates the secur
 
 European C-ITS deployments implement a functionally equivalent encapsulation mechanism defined in ETSI TS 103 097. While the encoding and container naming differ, ETSI profiles the same underlying security concepts. The structure binds the payload to a signer credential, includes the metadata required for validation, and ensures that application processing occurs only after cryptographic verification.
 
-### Authorization 
+### Authorization
 
 Authentication confirms possession of a valid credential. Authorization determines whether the credential holder is permitted to perform a specific function within the CAV ecosystem. CAV authorization decisions rely on structured service identifiers and permission attributes encoded within certificates and evaluated locally by each ITS station. CAV messages are associated with defined applications or services. Each service is identified by an ITS Application Identifier (ITS-AID(. The ITS-AID uniquely identifies the protocol or application context under which a message is generated and interpreted. It provides the receiver with the semantic context required to apply the correct validation and policy rules.
 
@@ -70,7 +70,7 @@ Each ITS station maintains a local policy and access control database that defin
 
 CAV ecosystems are designed to support authenticated safety messaging without enabling long-term tracking of individual vehicles. To achieve this, vehicles operate using short-lived credentials known as pseudonym certificates. These certificates allow a vehicle to prove membership in a trusted system while limiting the ability of observers to correlate messages over time. A pseudonym certificate binds a short-lived public key to defined service permissions without embedding persistent identity information. The vehicle signs outgoing safety messages using the private key corresponding to the active pseudonym certificate. Receiving stations validate the certificate and signature but do not learn the long-term identity of the sender.
 
-The credential management infrastructure separates enrollment identity from operational pseudonyms. Enrollment certificate authorities provision vehicles into the trust system. Pseudonym certificate authorities issue batches of short-lived certificates derived from approved enrollment credentials. Architectural separation between these roles prevents any single authority from directly correlating long-term identity with active pseudonym certificates under normal operating conditions. To support scalable issuance of large numbers of pseudonym certificates, deployments commonly use butterfly key expansion techniques. In this model, a vehicle generates a seed key pair and derives multiple public keys through deterministic expansion. The certificate authority signs the expanded public keys without learning the corresponding private keys.
+The credential management infrastructure separates enrolment identity from operational pseudonyms. Enrolment certificate authorities provision vehicles into the trust system. Pseudonym certificate authorities issue batches of short-lived certificates derived from approved enrolment credentials. Architectural separation between these roles prevents any single authority from directly correlating long-term identity with active pseudonym certificates under normal operating conditions. To support scalable issuance of large numbers of pseudonym certificates, deployments commonly use butterfly key expansion techniques. In this model, a vehicle generates a seed key pair and derives multiple public keys through deterministic expansion. The certificate authority signs the expanded public keys without learning the corresponding private keys.
 
 Pseudonym certificates have limited validity periods. Vehicles rotate active certificates at defined intervals to reduce linkability between successive transmissions. Rotation frequency is a configurable parameter influenced by privacy policy and application requirements. Shorter rotation intervals increase privacy protection but may increase certificate management overhead and validation processing.
 
@@ -80,7 +80,7 @@ ITS cybersecurity must address multiple interface types operating under differen
 
 #### Local and Physical Interfaces
 
-ITS field devices frequently expose local interfaces used for installation, diagnostics, and maintenance. Examples include serial console access, USB service ports, debugging interfaces such as JTAG or UART, removable media interfaces, and local web administration endpoints. These interfaces may be physically accessible in roadside environments where equipment is mounted on poles, cabinets, or gantries. 
+ITS field devices frequently expose local interfaces used for installation, diagnostics, and maintenance. Examples include serial console access, USB service ports, debugging interfaces such as JTAG or UART, removable media interfaces, and local web administration endpoints. These interfaces may be physically accessible in roadside environments where equipment is mounted on poles, cabinets, or gantries.
 
 Attackers may attempt to obtain direct device access in order to extract credentials, modify firmware, or bypass network security controls. Systems must therefore protect local interfaces through hardware and software mechanisms such as authenticated maintenance access, secure boot enforcement, firmware integrity verification, disabled debug interfaces in production devices, and hardware protections that prevent unauthorized firmware modification.
 
@@ -92,57 +92,51 @@ Broadcast interfaces distribute safety-relevant information to multiple recipien
 
 ITS broadcast messages are encapsulated within secure data objects defined by the applicable V2X security standard. The sender signs the message payload using a provisioned private key bound to a certificate issued within the ITS trust ecosystem. The certificate encodes service permissions and operational constraints. Recipients validate the certificate against locally configured trust anchors and verify the digital signature before processing the message. Broadcast safety interfaces prioritize integrity and authenticity. Confidentiality is generally not applied to safety broadcasts, as message content is intended for situational awareness within the local environment.
 
-Broadcast safety interfaces must also implement strict message validation and defensive parsing. Receivers may process messages from unknown or potentially malicious transmitters operating within radio range. Implementations must therefore enforce schema validation, field bounds checking, certificate authorization validation, and replay protection before passing messages to higher-level applications. Failure to correctly validate broadcast inputs can allow malformed or unauthorized messages to influence infrastructure behavior.
+Broadcast safety interfaces must also implement strict message validation and defensive parsing. Receivers may process messages from unknown or potentially malicious transmitters operating within radio range. Implementations must therefore enforce schema validation, field bounds checking, certificate authorization validation, and replay protection before passing messages to higher-level applications. Failure to correctly validate broadcast inputs can allow malformed or unauthorized messages to influence infrastructure behaviour.
 
 #### Backhaul and Networked Interfaces
 
 Backhaul interfaces connect roadside equipment, traffic management centers, cloud services, and administrative systems. Many ITS deployments logically separate operational data channels from device management channels to reduce the risk that compromise of operational interfaces exposes administrative control functions. These interfaces typically operate over IP-based networks and may traverse public or shared infrastructure. Backhaul interfaces support session establishment, mutual authentication, and encrypted transport. Transport Layer Security is commonly used to protect backhaul communications. TLS provides confidentiality, integrity, and endpoint authentication using X.509 certificates issued by a recognized certificate authority. X.509 remains the dominant credential format for enterprise and infrastructure network security due to its broad tool support and integration with existing IT systems.
 
-ISO 21177 defines the use of TLS within ITS station architectures, specifying profiles appropriate for transportation deployments. It addresses certificate validation, cipher suite selection, and secure channel establishment within ITS contexts. In certain architectures, IEEE 1609.2 credentials may also be used to authenticate application-layer messages transported over IP networks. 
+ISO 21177 defines the use of TLS within ITS station architectures, specifying profiles appropriate for transportation deployments. It addresses certificate validation, cipher suite selection, and secure channel establishment within ITS contexts. In certain architectures, IEEE 1609.2 credentials may also be used to authenticate application-layer messages transported over IP networks.
 
 Backhaul security must also address configuration management, remote administration, firmware updates, logging, and credential provisioning interfaces. Systems must enforce mutual authentication, certificate validation, and strict access control for management endpoints. Compromise of backhaul channels can undermine trust distribution, certificate lifecycle management, and operational visibility across the ITS deployment. Backhaul interfaces typically require confidentiality in addition to integrity and authenticity. Encryption protects operational data, credentials in transit, and administrative commands from disclosure or manipulation.
 
 ### Physical Cybersecurity Protections
 
-ITS infrastructure operates in environments where physical access cannot always be prevented. Roadside cabinets, traffic controllers, dynamic message signs, roadside units, and communications enclosures are deployed in publicly accessible locations. Vehicles also operate outside controlled facilities. Mechanical protections such as locked cabinets, controlled key distribution, and tamper-evident enclosures provide a first layer of defense. For some ITS equipment, cabinet design impacts security. Enclosures that conceal internal wiring, limit exposed ports, and restrict direct access to removable media reduce the opportunity for manipulation. Physical separation of power, communications, and control components within cabinets can further limit accidental or intentional interference.
+ITS infrastructure operates in environments where physical access cannot always be prevented. Roadside cabinets, traffic controllers, dynamic message signs, roadside units, and communications enclosures are deployed in publicly accessible locations. Vehicles also operate outside controlled facilities. Mechanical protections such as locked cabinets, controlled key distribution, and tamper-evident enclosures provide a first layer of defence. For some ITS equipment, cabinet design impacts security. Enclosures that conceal internal wiring, limit exposed ports, and restrict direct access to removable media reduce the opportunity for manipulation. Physical separation of power, communications, and control components within cabinets can further limit accidental or intentional interference.
 
 Maintenance procedures directly affect physical security. Field devices require periodic inspection, configuration updates, and repair. Access logs, documented work orders, and dual-control procedures increase transparency and reduce the risk of unauthorized modification during legitimate maintenance activities. Uncontrolled distribution of mechanical keys or universal access tools increases systemic risk.
 
 Physical tampering may include forced cabinet entry, device substitution, unauthorized hardware installation, cable interception, or manipulation of local interfaces. These actions can disrupt operations even in the absence of network compromise. Systems should therefore consider environmental hardening, intrusion detection switches, and visible tamper indicators as part of deployment strategy.
 
-### Misbehavior Detection
+### Misbehaviour Detection
 
-Misbehaviour detection systems are designed to identify faulty or deceptive behaviour by evaluating whether observed behavior aligns with protocol rules, physical plausibility, and expected operational patterns. Detection mechanisms may identify inconsistent position reports, implausible motion dynamics, contradictory safety messages, or anomalous transmission patterns. Detection occurs at multiple layers. Vehicles and roadside units may perform local plausibility checks on received Basic Safety Messages and other cooperative data. When a station determines that observed behavior deviates from defined thresholds or policy constraints, it generates a Misbehavior Report. The report captures relevant message evidence, contextual data, and identifying information associated with the credential used to sign the suspect messages.
-
-
+Misbehaviour detection systems are designed to identify faulty or deceptive behaviour by evaluating whether observed behaviour aligns with protocol rules, physical plausibility, and expected operational patterns. Detection mechanisms may identify inconsistent position reports, implausible motion dynamics, contradictory safety messages, or anomalous transmission patterns. Detection occurs at multiple layers. Vehicles and roadside units may perform local plausibility checks on received Basic Safety Messages and other cooperative data. When a station determines that observed behaviour deviates from defined thresholds or policy constraints, it generates a Misbehaviour Report. The report captures relevant message evidence, contextual data, and identifying information associated with the credential used to sign the suspect messages.
 
 ![MisbehaviourLifecycle](images/MisbehaviorLifecycle.jpg)
 
+Misbehaviour Reports are transmitted to designated authorities through available network paths. An onboard unit may forward a report directly to the credential management authority or route it through a roadside unit. Roadside units may independently generate reports based on aggregated observations and forward them to a traffic management center or credential authority. Backend systems analyze submitted reports, correlate observations from multiple sources, and assess whether the reported behaviour reflects malfunction, environmental anomaly, or intentional misuse. If analysis confirms persistent or severe misbehaviour, the responsible authority may initiate suspension or revocation actions within the credential management system. Updated revocation information is then distributed to participating ITS stations for enforcement. The figure above illustrates a simplified view of how misbehaviour is detected, validated, and responded to in a credential-based ITS environment.
 
+### Credential Management
 
-Misbehavior Reports are transmitted to designated authorities through available network paths. An onboard unit may forward a report directly to the credential management authority or route it through a roadside unit. Roadside units may independently generate reports based on aggregated observations and forward them to a traffic management center or credential authority. Backend systems analyze submitted reports, correlate observations from multiple sources, and assess whether the reported behavior reflects malfunction, environmental anomaly, or intentional misuse. If analysis confirms persistent or severe misbehavior, the responsible authority may initiate suspension or revocation actions within the credential management system. Updated revocation information is then distributed to participating ITS stations for enforcement. The figure above illustrates a simplified view of how misbehaviour is detected, validated, and responded to in a credential-based ITS environment.
+A Credential Management System is a specialized public key infrastructure designed for cooperative ITS environments. It establishes and maintains the trust relationships required for authenticated V2X communications and is engineered to support large-scale issuance of short-lived pseudonym certificates, distributed trust validation, and credential revocation under mobility and broadcast constraints. The credential management system provisions vehicles and roadside units with enrolment credentials and batches of pseudonym certificates.
 
-### Credential Management 
+#### Credential Management System Architecture
 
-A Credential Management System is a specialized public key infrastructure designed for cooperative ITS environments. It establishes and maintains the trust relationships required for authenticated V2X communications and is engineered to support large-scale issuance of short-lived pseudonym certificates, distributed trust validation, and credential revocation under mobility and broadcast constraints. The credential management system provisions vehicles and roadside units with enrollment credentials and batches of pseudonym certificates. 
-
-#### Credential Management System Architecture 
-
-Credential management systems used in cooperative ITS deployments are typically deployed as federated public key infrastructures designed to support large-scale issuance of pseudonym credentials while preserving operational privacy. The architecture separates governance, certificate issuance, distribution of trust material, and misbehavior response functions so that no single component controls all aspects of identity management.
+Credential management systems used in cooperative ITS deployments are typically deployed as federated public key infrastructures designed to support large-scale issuance of pseudonym credentials while preserving operational privacy. The architecture separates governance, certificate issuance, distribution of trust material, and misbehaviour response functions so that no single component controls all aspects of identity management.
 
 ![Public Key Infrastructure](images/pki.jpg)
-
-
 
 Trust governance operates above the certificate authority hierarchy. Participating domains maintain a Certificate Trust List (CTL) that enumerates the root certificate authorities accepted within the ecosystem. Governance entities approve the inclusion or removal of these authorities and publish updated trust lists to participating ITS stations. In some deployments, a Central Point of Contact (C-POC) coordinates trust list management and cross-domain trust relationships.
 
 Within the credential management infrastructure, Root Certificate Authorities (RCAs) establish the roots of certificate chains used by operational authorities. These roots are recognized by end entities only if they appear in the applicable CTL. Beneath the root authorities, Subordinate Certificate Authorities issue operational credentials used within the ecosystem.
 
-Registration Authorities (RAs) process enrollment requests and validate device eligibility prior to certificate issuance. During enrollment, the RA verifies that a vehicle, roadside unit, or other ITS station satisfies the certificate policy requirements defined for participation in the ecosystem. Upon successful validation, enrollment credentials are issued and may later be used to request batches of pseudonym certificates for operational messaging.
+Registration Authorities (RAs) process enrolment requests and validate device eligibility prior to certificate issuance. During enrolment, the RA verifies that a vehicle, roadside unit, or other ITS station satisfies the certificate policy requirements defined for participation in the ecosystem. Upon successful validation, enrolment credentials are issued and may later be used to request batches of pseudonym certificates for operational messaging.
 
 Distribution Centers (DCs) provide mechanisms for ITS stations to retrieve updated trust anchors, certificate trust lists, and revocation information. Devices periodically synchronize with these services to maintain an up-to-date view of trusted authorities and revoked credentials.
 
-The architecture also incorporates misbehavior management functions. A Misbehavior Authority receives reports of anomalous or malicious behavior from participating devices or infrastructure. After evaluating supporting evidence, the authority may coordinate with governance entities and certificate authorities to suspend or revoke credentials associated with the offending device. Revocation information is propagated through the distribution infrastructure so that relying ITS stations can reject messages associated with revoked credentials.
+The architecture also incorporates misbehaviour management functions. A Misbehaviour Authority receives reports of anomalous or malicious behaviour from participating devices or infrastructure. After evaluating supporting evidence, the authority may coordinate with governance entities and certificate authorities to suspend or revoke credentials associated with the offending device. Revocation information is propagated through the distribution infrastructure so that relying ITS stations can reject messages associated with revoked credentials.
 
 ### Trust Management
 
@@ -158,9 +152,9 @@ Authorization is evaluated as part of this validation process. V2X certificates 
 
 Revocation status must also be considered during credential evaluation. ITS stations periodically obtain updated revocation data from the credential management distribution infrastructure and maintain this information locally. During message processing, the station checks whether the credential used to sign the message has been revoked or suspended. Messages associated with revoked credentials are rejected before application processing.
 
-Trust management also incorporates credential lifecycle considerations. During initial provisioning, an ITS station receives enrollment credentials that establish its membership within the ecosystem. These credentials enable the station to request operational pseudonym certificates used for message signing. Pseudonym certificates are intentionally short-lived and are rotated periodically in order to limit long-term correlation of transmitted messages while preserving authenticated participation in the trust system.
+Trust management also incorporates credential lifecycle considerations. During initial provisioning, an ITS station receives enrolment credentials that establish its membership within the ecosystem. These credentials enable the station to request operational pseudonym certificates used for message signing. Pseudonym certificates are intentionally short-lived and are rotated periodically in order to limit long-term correlation of transmitted messages while preserving authenticated participation in the trust system.
 
-End entities, including onboard units and roadside units, rely on locally stored trust anchors and periodically updated trust lists to validate received credentials. Each ITS station performs credential validation independently using locally provisioned trust material. Trust anchors define the root certificate authorities that a station recognizes as trusted issuers within the ITS system. 
+End entities, including onboard units and roadside units, rely on locally stored trust anchors and periodically updated trust lists to validate received credentials. Each ITS station performs credential validation independently using locally provisioned trust material. Trust anchors define the root certificate authorities that a station recognizes as trusted issuers within the ITS system.
 
 ## Why ITS Cybersecurity is Unique
 
@@ -182,7 +176,6 @@ An ITS integrates myriad devices and services, each of which may be provisioned 
   </tr>
 </table>
 
-
 ## 2. Mobility Requirements
 
 <table>
@@ -196,7 +189,6 @@ An ITS integrates myriad devices and services, each of which may be provisioned 
     </td>
   </tr>
 </table>
-
 
 ## 3. Anonymity Requirements
 
@@ -212,7 +204,6 @@ An ITS integrates myriad devices and services, each of which may be provisioned 
   </tr>
 </table>
 
-
 ## 4. Multi-Entity Trust Management
 
 <table>
@@ -227,7 +218,6 @@ ITS environments involve a wide range of stakeholders, including vehicles from m
   </tr>
 </table>
 
-
 ## 5. Embedded Permissions within Certificates
 
 <table>
@@ -240,7 +230,6 @@ ITS environments involve a wide range of stakeholders, including vehicles from m
 Traditional network security approaches control who can join a system and provides fine-grained access through user accounts and roles. In ITS, however, devices often share the same network infrastructure, so connecting alone does not grant any special rights. Instead, each device must present a certificate that embeds explicit permissions, defining exactly which applications and roles it is allowed to use. For example, IEEE Std. 1609.2 certificates contain Intelligent Transport System Application Identifiers (ITS-AID), Provider Service Identifiers (PSID), and Service Specific Permissions (SSP) that control which messages a participant may send and what actions it may request. This ensures that only properly authorized vehicles can request signal priority or transmit safety-critical data, even on a shared network.</td>
     </tr>
 </table>
-
 
 ## 6. Continuous Adaptation to Evolving Threats in Dynamic Environment
 
@@ -255,7 +244,6 @@ Traditional network security approaches control who can join a system and provid
     </tr>
 </table>
 
-
 ## 7. Velocity of Change
 
 <table>
@@ -269,8 +257,6 @@ The scalability and certificate management challenge in V2X ITS comes from the e
     </td>
   </tr>
 </table>
-
-
 
 ## Internet vs. ITS Cybersecurity
 
@@ -290,4 +276,3 @@ The table below contrasts typical deployment characteristics associated with tra
 | Operation in environments where backend connectivity may be intermittent or unavailable during message validation | ✘                  | ✔                                         |
 | Persistent client–server communication between defined endpoints over managed IP networks | ✔                  | ✘                                         |
 | Integration with enterprise identity management, cloud APIs, and traditional IT infrastructure components | ✔                  | ✘                                         |
-
