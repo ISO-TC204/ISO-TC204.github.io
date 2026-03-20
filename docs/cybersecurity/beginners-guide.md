@@ -6,7 +6,13 @@
 
 Intelligent Transportation Systems (ITS) enhance mobility, safety, and operational efficiency through connected and automated technologies. Modern ITS deployments function as a system of systems composed of vehicles, roadside equipment, traffic management centers, communications infrastructure, and cloud or backend services. These components exchange near real-time data to support traffic operations, cooperative services, and safety applications. ITS architectures are distributed. Components may be owned and operated by different entities, including public authorities, private operators, vehicle manufacturers, and service providers. Interoperability and trust must extend across organizational and jurisdictional boundaries. An ITS Station represents a logical entity capable of sending, receiving, and processing ITS messages. An ITS Station may reside within a vehicle, roadside device, or backend infrastructure component. The station concept provides a consistent architectural abstraction for defining security functions, trust relationships, and message processing behaviour across heterogeneous platforms. The figure below illustrates representative components of an ITS deployment and their interaction within a system-of-systems architecture.
 
-![ITS Environment](images/its_generic.jpg)
+
+
+
+
+
+
+
 
 Vehicles, roadside systems, and backend services exchange time-sensitive data that can influence traffic control decisions and vehicle behaviour. As a result, failures in communication integrity, authentication, or availability can produce operational disruption or safety impacts. ITS environments operate under conditions of mobility, wireless communication, and low-latency decision-making. These characteristics increase exposure to spoofing, message manipulation, denial-of-service, misconfiguration, and compromised endpoint behaviour. Systems must be designed to ensure that messages are authentic, unaltered, authorized, and available when required.
 
