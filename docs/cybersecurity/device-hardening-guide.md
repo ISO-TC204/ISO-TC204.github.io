@@ -1,4 +1,4 @@
-# Device and Application Security Policy Recommendations
+# ITS Hardening Guide
 
 It is important that application developers and manufacturers understand the complexities related to the configuration options for various cybersecurity controls. The tables below provides examples of cybersecurity configuration options and in many cases recommendations for the optimal option. Each of these policy item details has been taken from the FHWA ITS2P program recommendations.
 
