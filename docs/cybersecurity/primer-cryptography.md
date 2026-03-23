@@ -4,19 +4,17 @@
 
 Cryptography is the use of mathematics and carefully designed algorithms to protect information and establish trust. In ITS, it is used to help devices and systems prove who they are, verify that messages have not been altered and protect sensitive communications.  
 
-A cryptographic algorithm is a defined method for performing a security function, such as encrypting data, creating a digital signature, or checking integrity. Algorithms depend on cryptographic keys, which are secret values used by the algorithm to produce a result. In general, the security of a cryptographic system does not depend on hiding the algorithm, but instead on keeping the key used by the algorithm secret. 
+A cryptographic algorithm is a defined method for performing a security function, such as encrypting data, creating a digital signature, or checking integrity. Algorithms depend on cryptographic keys, which are secret values used by the algorithm to produce a result. In general, the security of a cryptographic system does not depend on hiding the algorithm, but instead on keeping the key used by the algorithm secret.
 
-Some cryptographic systems use the same secret key to protect and recover information. This is called symmetric cryptography, and it is commonly used when two parties already share a trusted secret and need efficient protection for data. Common symmetric algorithms include AES and ChaCha20. Other systems use a pair of related keys: a private key that is kept secret and a public key that can be shared. This is called asymmetric cryptography, and it is widely used for digital certificates, digital signatures, and trust establishment between parties that do not already share a secret. Common asymmetric algorithms include Rivest Shamir Adelmen (RSA) and Elliptic Curve Cryptography (ECC), such as Elliptic Curve Digital Signature Algorithm (ECDSA). 
+Some cryptographic systems use the same secret key to protect and recover information. This is called symmetric cryptography, and it is commonly used when two parties already share a trusted secret and need efficient protection for data. Common symmetric algorithms include AES and ChaCha20. Other systems use a pair of related keys: a private key that is kept secret and a public key that can be shared. This is called asymmetric cryptography, and it is widely used for digital certificates, digital signatures, and trust establishment between parties that do not already share a secret. Common asymmetric algorithms include Rivest Shamir Adelmen (RSA) and Elliptic Curve Cryptography (ECC), such as Elliptic Curve Digital Signature Algorithm (ECDSA).
 
-The figure below illustrates differences between symmetric and asymmetric cryptography. 
+The figure below illustrates differences between symmetric and asymmetric cryptography.
 
-![Cryptography Basics](images\cryptography_basics.png)
-
-
+![Cryptography Basics](images/cryptography_basics.png)
 
 ## The Role of Cryptography in ITS
 
-Cryptography is used in ITS to verify messages, protect communications, and control which devices are allowed to participate in applications. V2X messaging relies on cryptography to sign messages so that receiving devices can verify that the sending device is trusted and that messages have not been altered. Cryptography is also used in secure communications between infrastructure and backend systems. 
+Cryptography is used in ITS to verify messages, protect communications, and control which devices are allowed to participate in applications. V2X messaging relies on cryptography to sign messages so that receiving devices can verify that the sending device is trusted and that messages have not been altered. Cryptography is also used in secure communications between infrastructure and backend systems.
 
 Cryptography is also used to secure communications between infrastructure and backend systems. Roadside units, traffic management centers, and cloud services use cryptographic protocols to authenticate systems and protect data in transit or at rest.
 
@@ -26,7 +24,7 @@ Security functions such as device provisioning, certificate management, and soft
 
 In V2X communications, messages are digitally signed so that receiving devices can verify the sender and confirm the message has not been altered. Because most V2X messages are broadcast and received by many unknown devices, encryption is generally not used. Instead, trust is established through certificates and digital signatures.
 
-To generate a signature, the sending device constructs a standardized secure data structure, encodes it in a deterministic format, computes a cryptographic hash over the encoded data, and signs that hash using its private key. The resulting signature is attached to the message along with a reference to the signing certificate. 
+To generate a signature, the sending device constructs a standardized secure data structure, encodes it in a deterministic format, computes a cryptographic hash over the encoded data, and signs that hash using its private key. The resulting signature is attached to the message along with a reference to the signing certificate.
 
 When a message is received, the receiving device reconstructs the signed data, validates the certificate against its trusted authorities, checks certificate validity and revocation status, and verifies the signature using the sender’s public key. If any of these steps fail, the message is rejected.
 
@@ -38,9 +36,9 @@ Short-lived pseudonym certificates are used to reduce the ability to track devic
 
 Communications between infrastructure components and backend systems are protected using secure communication channels. These communications typically occur between known systems, such as roadside units and traffic management centers. Transport Layer Security (TLS) is used to establish a secure session between systems. During session establishment, both endpoints authenticate each other using digital certificates. If certificate validation fails, the session is not established.
 
-In ITS environments, secure session establishment and communication are defined by ISO 21177. This standard specifies how TLS is applied to ITS communications, including mutual authentication between systems and the protection of data in transit. The figure below illustrates a secure TLS connection between an RSU and TMC. 
+In ITS environments, secure session establishment and communication are defined by ISO 21177. This standard specifies how TLS is applied to ITS communications, including mutual authentication between systems and the protection of data in transit. The figure below illustrates a secure TLS connection between an RSU and TMC.
 
-![Backhaul Cryptography](images\backhaul_cryptography.png)
+![Backhaul Cryptography](images/backhaul_cryptography.png)
 
 Once a secure session is established, data exchanged between systems is encrypted and protected against interception, modification, and replay while in transit.
 
@@ -54,11 +52,11 @@ Software and firmware updates are digitally signed to ensure they originate from
 
 Signing is typically performed using a private key held by the software provider or operator. Devices are provisioned with the corresponding trusted public keys or certificates used to validate updates. This process prevents unauthorized or malicious code from being installed on ITS devices.
 
-#### Trust Enrollment
+#### Trust Enrolment
 
-Trust enrollment establishes the initial trust relationship between a device and the credential management system. During enrollment, a device is provisioned with cryptographic keys and issued an enrollment credential that allows it to request additional certificates.
+Trust enrolment establishes the initial trust relationship between a device and the credential management system. During enrolment, a device is provisioned with cryptographic keys and issued an enrolment credential that allows it to request additional certificates.
 
-The enrollment process includes authentication of the device, validation of its eligibility to participate in the system, and secure delivery of credentials. Private keys are generated and stored securely on the device and are not shared. Once enrolled, the device can obtain operational certificates and participate in trusted communications within the ITS environment.
+The enrolment process includes authentication of the device, validation of its eligibility to participate in the system, and secure delivery of credentials. Private keys are generated and stored securely on the device and are not shared. Once enrolled, the device can obtain operational certificates and participate in trusted communications within the ITS environment.
 
 #### Operational Management
 
@@ -70,7 +68,7 @@ In environments using protocols such as NTCIP, cryptography is applied to protec
 
 ### The difference between message security and transport security
 
-Transport security protects the communication channel between two systems. It ensures that data cannot be read or modified while in transit, but protection typically ends once the data reaches its destination. Message security protects the data itself. Security information, such as digital signatures, travels with the message so that any receiving system can verify the sender and confirm the message has not been altered, even after it has been forwarded or stored. 
+Transport security protects the communication channel between two systems. It ensures that data cannot be read or modified while in transit, but protection typically ends once the data reaches its destination. Message security protects the data itself. Security information, such as digital signatures, travels with the message so that any receiving system can verify the sender and confirm the message has not been altered, even after it has been forwarded or stored.
 
 In ITS, transport security is used for point-to-point communications such as backhaul connections, while message security is used for broadcast communications such as V2X, where messages are received by many unknown devices.
 
