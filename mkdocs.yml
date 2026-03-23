@@ -63,7 +63,7 @@ nav:
   - Cybersecurity: 
     - Introduction: cybersecurity/index.md
     - Beginners Guide: cybersecurity/beginners-guide.md 
-    - Cryptography Fundamentals: cybersecurity/primer-its-credentials.md
+    - Cryptography Fundamentals: cybersecurity/primer-cryptography.md
     - ITS Security Regulations and Standards: 
       - Overview: cybersecurity/its-security-standards.md
       - Certificate Policy (CP): cybersecurity/policies-cp.md
