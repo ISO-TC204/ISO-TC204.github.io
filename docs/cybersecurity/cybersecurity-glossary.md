@@ -28,14 +28,22 @@ Cocoon Key
 Cooperative ITS Credential Management System (CCMS)
 : The European system for managing certificates, trust lists, and permissions for ITS stations.
 
-European Certificate Trust List (ECTL)
-: The signed electronic version of a trust list used in European deployments to distribute trusted root and authority information to devices.
+Elliptic Curve Cryptography (ECC) 
+
+: A form of public-key cryptography based on the mathematics of elliptic curves. It provides equivalent security to traditional algorithms with smaller key sizes, making it efficient for constrained environments.
+
+Elliptic Curve Digital Signature Algorithm (ECDSA). 
+
+: A digital signature algorithm based on elliptic curve cryptography. It is used to create and verify signatures that provide authentication and data integrity.
 
 Enrolment Authority (EA)
 : In European C-ITS, the authority that issues Enrolment Credentials proving a device’s legitimacy.
 
 Enrolment Credential (EC)
 : A long-term certificate proving that a device is approved to request operational certificates.
+
+European Certificate Trust List (ECTL)
+: The signed electronic version of a trust list used in European deployments to distribute trusted root and authority information to devices.
 
 Hardware Security Module (HSM)
 : A dedicated hardware component used to securely generate, store, and use cryptographic keys; provides strong protection against key theft or tampering.
@@ -49,8 +57,16 @@ Lateral Movement
 Man-in-the-Middle Attack
 : A threat where an attacker secretly intercepts and possibly alters communication between two parties who believe they are communicating directly with each other.
 
+Message Authentication Code (MAC)
+
+:  A cryptographic value generated using a shared secret key and input data that allows a receiver to verify that the data has not been altered and that it came from a party that possesses the same secret key.
+
 Misbehaviour Detection
 : A set of processes and services that identify and respond to devices that send invalid or malicious messages.
+
+National Transportation Communications for Intelligent Transportation Systems Protocol (NTCIP)
+
+: A family of standards that define how transportation management systems communicate with field devices using standardized data objects and messaging.
 
 Onboard Unit (OBU)
 : An in-vehicle device that communicates with other vehicles and roadside equipment using secure V2X messages.
@@ -60,6 +76,10 @@ Provider Service Identifier (PSID)
 
 Pseudonym Certificate
 : A short-lived certificate in the SCMS that allows vehicles to sign messages without exposing a permanent identity.
+
+Rivest Shamir Adelmen (RSA) 
+
+: A public-key cryptographic algorithm based on the mathematical difficulty of factoring large integers. It is used for encryption, digital signatures, and key exchange.
 
 Root Certificate Authority (Root CA)
 : The highest trust anchor in a PKI that signs subordinate certificates.

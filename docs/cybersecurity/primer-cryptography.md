@@ -1,5 +1,121 @@
 # Primer on ITS Cryptography
 
+## What is Cryptography?
+
+Cryptography is the use of mathematics and carefully designed algorithms to protect information and establish trust. In ITS, it is used to help devices and systems prove who they are, verify that messages have not been altered and protect sensitive communications.  
+
+A cryptographic algorithm is a defined method for performing a security function, such as encrypting data, creating a digital signature, or checking integrity. Algorithms depend on cryptographic keys, which are secret values used by the algorithm to produce a result. In general, the security of a cryptographic system does not depend on hiding the algorithm, but instead on keeping the key used by the algorithm secret. 
+
+Some cryptographic systems use the same secret key to protect and recover information. This is called symmetric cryptography, and it is commonly used when two parties already share a trusted secret and need efficient protection for data. Common symmetric algorithms include AES and ChaCha20. Other systems use a pair of related keys: a private key that is kept secret and a public key that can be shared. This is called asymmetric cryptography, and it is widely used for digital certificates, digital signatures, and trust establishment between parties that do not already share a secret. Common asymmetric algorithms include Rivest Shamir Adelmen (RSA) and Elliptic Curve Cryptography (ECC), such as Elliptic Curve Digital Signature Algorithm (ECDSA). 
+
+The figure below illustrates differences between symmetric and asymmetric cryptography. 
+
+![Cryptography Basics](images\cryptography_basics.png)
+
+
+
+## The Role of Cryptography in ITS
+
+Cryptography is used in ITS to verify messages, protect communications, and control which devices are allowed to participate in applications. V2X messaging relies on cryptography to sign messages so that receiving devices can verify that the sending device is trusted and that messages have not been altered. Cryptography is also used in secure communications between infrastructure and backend systems. 
+
+Cryptography is also used to secure communications between infrastructure and backend systems. Roadside units, traffic management centers, and cloud services use cryptographic protocols to authenticate systems and protect data in transit or at rest.
+
+Security functions such as device provisioning, certificate management, and software updates also rely on cryptography. These processes ensure that only authorized devices can join the system, that credentials are issued and managed securely, and that software originates from trusted sources.
+
+### V2X Message Security
+
+In V2X communications, messages are digitally signed so that receiving devices can verify the sender and confirm the message has not been altered. Because most V2X messages are broadcast and received by many unknown devices, encryption is generally not used. Instead, trust is established through certificates and digital signatures.
+
+To generate a signature, the sending device constructs a standardized secure data structure, encodes it in a deterministic format, computes a cryptographic hash over the encoded data, and signs that hash using its private key. The resulting signature is attached to the message along with a reference to the signing certificate. 
+
+When a message is received, the receiving device reconstructs the signed data, validates the certificate against its trusted authorities, checks certificate validity and revocation status, and verifies the signature using the sender’s public key. If any of these steps fail, the message is rejected.
+
+Authorization is enforced through application identifiers and permissions carried in certificates. Receiving devices evaluate whether the sender is permitted to generate the specific type of message being processed before accepting it.
+
+Short-lived pseudonym certificates are used to reduce the ability to track devices over time. Messages remain verifiable without exposing long-term identity, supporting both trust and privacy in broadcast environments.
+
+### Backhaul/Infrastructure Communications
+
+Communications between infrastructure components and backend systems are protected using secure communication channels. These communications typically occur between known systems, such as roadside units and traffic management centers. Transport Layer Security (TLS) is used to establish a secure session between systems. During session establishment, both endpoints authenticate each other using digital certificates. If certificate validation fails, the session is not established.
+
+In ITS environments, secure session establishment and communication are defined by ISO 21177. This standard specifies how TLS is applied to ITS communications, including mutual authentication between systems and the protection of data in transit. The figure below illustrates a secure TLS connection between an RSU and TMC. 
+
+![Backhaul Cryptography](images\backhaul_cryptography.png)
+
+Once a secure session is established, data exchanged between systems is encrypted and protected against interception, modification, and replay while in transit.
+
+### Security Management Functions
+
+Cryptography is used to support system management functions such as device provisioning, credential management, and operational control. These functions ensure that only authorized devices can join the system and that system integrity is maintained over time.
+
+#### Firmware and Software Update Signing
+
+Software and firmware updates are digitally signed to ensure they originate from a trusted source and have not been modified. Devices verify the signature before installing an update. If signature validation fails, the update is rejected.
+
+Signing is typically performed using a private key held by the software provider or operator. Devices are provisioned with the corresponding trusted public keys or certificates used to validate updates. This process prevents unauthorized or malicious code from being installed on ITS devices.
+
+#### Trust Enrollment
+
+Trust enrollment establishes the initial trust relationship between a device and the credential management system. During enrollment, a device is provisioned with cryptographic keys and issued an enrollment credential that allows it to request additional certificates.
+
+The enrollment process includes authentication of the device, validation of its eligibility to participate in the system, and secure delivery of credentials. Private keys are generated and stored securely on the device and are not shared. Once enrolled, the device can obtain operational certificates and participate in trusted communications within the ITS environment.
+
+#### Operational Management
+
+Cryptography is used to secure operational management functions such as device configuration, monitoring, and control. These functions are typically performed over management protocols and interfaces used to operate field devices, including traffic signal controllers, dynamic message signs, and other roadside equipment.
+
+Management communications are protected using secure transport mechanisms to authenticate systems and prevent unauthorized access. This ensures that only authorized operators or systems can issue commands, retrieve status information, or modify device configurations.
+
+In environments using protocols such as NTCIP, cryptography is applied to protect management sessions and, where supported, to authenticate commands and responses. This may include the use of secure versions of management protocols, credential-based authentication, and encrypted communication channels. These protections help prevent unauthorized control of infrastructure devices, interception of sensitive operational data, and modification of commands in transit.
+
+### The difference between message security and transport security
+
+Transport security protects the communication channel between two systems. It ensures that data cannot be read or modified while in transit, but protection typically ends once the data reaches its destination. Message security protects the data itself. Security information, such as digital signatures, travels with the message so that any receiving system can verify the sender and confirm the message has not been altered, even after it has been forwarded or stored. 
+
+In ITS, transport security is used for point-to-point communications such as backhaul connections, while message security is used for broadcast communications such as V2X, where messages are received by many unknown devices.
+
+## Cryptographic Algorithms and Primitives
+
+### Hash functions
+
+A hash function takes input data and produces a fixed-length output (a hash). It is designed so that even a small change in the input produces a completely different result. Hashes are used to check data integrity. Examples include SHA-256 and SHA-384.
+
+### Public-key cryptography
+
+Public-key cryptography uses a pair of related keys: a public key that can be shared and a private key that is kept secret. It is used for authentication, key exchange, and establishing trust between systems that do not share a secret. Examples include RSA and Elliptic Curve Cryptography (ECC).
+
+### Digital signatures
+
+A digital signature is created using a private key and can be verified using the corresponding public key. It proves who sent a message and that the message has not been altered. Examples include ECDSA and RSA signatures.
+
+### Symmetric cryptography
+
+Symmetric cryptography uses a single shared secret key for both encryption and decryption. It is efficient and commonly used to protect data in transit once a secure session is established. Examples include AES (e.g., AES-128, AES-256).
+
+### Key Derivation
+
+Key derivation takes a secret value and produces one or more cryptographic keys from it. This allows systems to generate fresh keys for different purposes without exchanging new secrets. Examples include HKDF and PBKDF2.
+
+### Message Authentication Code (MAC) vs Digital Signature
+
+A Message Authentication Code (MAC) uses a shared secret key to verify data integrity and authenticity between trusted parties. It is efficient but requires both sides to share the same key. A digital signature does not require a shared secret. It uses a private/public key pair and allows any receiver to verify the sender.
+
+## Key Protection
+
+ITS devices must protect cryptographic keys from unauthorized access and use. This includes how keys are generated, stored, and used during operations such as signing and decryption.
+
+Private keys must not be exposed in plaintext to applications, users, or external interfaces. Cryptographic operations should be performed in a way that limits access to key material and reduces the risk of extraction.
+
+Key protection can be implemented using secure hardware components, software-based protections, or a combination of both, depending on the device and deployment environment. Examples of stronger protection mechanisms include Trusted Platform Modules (TPMs), Hardware Security Modules (HSMs), and secure elements, which provide isolated environments for key storage and use.
+
+## Credential Lifecycle Management
+
+Credentials, such as certificates have lifetimes and expire. They follow an operational management lifecycle. The lifecycle begins with key generation and initial provisioning, where a device is issued credentials that establish its eligibility to participate in the system. Devices then obtain additional certificates used for operational communications, such as signing V2X messages.
+
+During operation, credentials are used, rotated, and periodically renewed. Short-lived certificates are replaced frequently to support privacy and limit exposure if a credential is compromised. Credentials may be revoked before expiration if a device is compromised, misbehaves, or is no longer authorized. Devices must be able to receive and process revocation information to stop trusting those credentials. At the end of the lifecycle, credentials expire or are decommissioned, and devices must obtain new credentials to continue participating in the system.
+
+Credential management systems implement and enforce this lifecycle across all participating devices and infrastructure.
+
 ## Credential Management Systems
 
 Credential Management Systems provide trust services for modern ITS, allowing ITS services and components to establish trust relationships, authenticate peers, authorize device behaviour, and protect privacy across distributed and safety-critical operating environments. A Credential Management System issues, manages and revokes cryptographic credentials that enable vehicles, RSUs, and backend services to securely exchange information.
@@ -28,7 +144,7 @@ An SCMS architecture relies on a Certificate Trust List (CTL) as the root of tru
 
 The CTL is provisioned during manufacturing or enrolment and updated over time. Devices must manage CTL updates carefully, as stale trust information can lead to validation failures, interoperability issues, or delayed response to security incidents.
 
-In Europe, trust between ITS deployments is coordinated using the C ITS Point of Contact Protocol. Rather than relying on a Certificate Trust List as defined in SCMS based systems, the C ITS Point of Contact Protocol provides a standardized mechanism for establishing and managing trust relationships between certificate authorities and operational domains across Europe. Through this protocol, participating entities exchange trust information, certificate authority references, and policy constraints that enable devices and backend systems to validate certificates and support interoperability across national and organizational boundaries.
+In Europe, trust between ITS deployments is coordinated using the C ITS Point of Contact Protocol (CPOC). Rather than relying on a Certificate Trust List as defined in SCMS based systems, the C ITS Point of Contact Protocol provides a standardized mechanism for establishing and managing trust relationships between certificate authorities and operational domains across Europe. Through this protocol, participating entities exchange trust information, certificate authority references, and policy constraints that enable devices and backend systems to validate certificates and support interoperability across national and organizational boundaries.
 
 ### Certificate Types
 

@@ -20,7 +20,7 @@ Begin with this [introductory guide](beginners-guide.md) to understand the basic
 
 ## ITS Cybersecurity
 
-### 1. [ITS Cybersecurity Cryptography Fundamentals](primer-its-credentials.md)
+### 1. [ITS Cybersecurity Cryptography Fundamentals](primer-cryptography.md)
 
 Organizations that develop or operate ITS must establish trust between vehicles, infrastructure, and supporting systems operating in open and distributed environments. Trust is established through the use of digital certificates that authenticate messages, authorize applications, and support privacy and accountability requirements.
 
