@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://isotc204.org/cybersecurity/primer-its-credentials/">
+        <link rel="canonical" href="https://isotc204.org/cybersecurity/primer-cryptography/">
       
       
         <link rel="prev" href="../beginners-guide/">
@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -3071,6 +3071,222 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#what-is-cryptography" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Cryptography?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-role-of-cryptography-in-its" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Role of Cryptography in ITS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Role of Cryptography in ITS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v2x-message-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        V2X Message Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backhaulinfrastructure-communications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backhaul/Infrastructure Communications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-management-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Management Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security Management Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#firmware-and-software-update-signing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Firmware and Software Update Signing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trust-enrolment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trust Enrolment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operational-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operational Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-difference-between-message-security-and-transport-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The difference between message security and transport security
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cryptographic-algorithms-and-primitives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cryptographic Algorithms and Primitives
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cryptographic Algorithms and Primitives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hash-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hash functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#public-key-cryptography" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public-key cryptography
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#digital-signatures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Digital signatures
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symmetric-cryptography" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Symmetric cryptography
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-derivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Derivation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-authentication-code-mac-vs-digital-signature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Message Authentication Code (MAC) vs Digital Signature
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Protection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credential-lifecycle-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credential Lifecycle Management
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#credential-management-systems" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4187,6 +4403,222 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#what-is-cryptography" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Cryptography?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-role-of-cryptography-in-its" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Role of Cryptography in ITS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Role of Cryptography in ITS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v2x-message-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        V2X Message Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backhaulinfrastructure-communications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backhaul/Infrastructure Communications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-management-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Management Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security Management Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#firmware-and-software-update-signing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Firmware and Software Update Signing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trust-enrolment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trust Enrolment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operational-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operational Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-difference-between-message-security-and-transport-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The difference between message security and transport security
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cryptographic-algorithms-and-primitives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cryptographic Algorithms and Primitives
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cryptographic Algorithms and Primitives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hash-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hash functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#public-key-cryptography" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public-key cryptography
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#digital-signatures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Digital signatures
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symmetric-cryptography" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Symmetric cryptography
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-derivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Derivation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-authentication-code-mac-vs-digital-signature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Message Authentication Code (MAC) vs Digital Signature
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Protection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credential-lifecycle-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credential Lifecycle Management
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#credential-management-systems" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4508,6 +4940,63 @@
 
 
 <h1 id="primer-on-its-cryptography">Primer on <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Cryptography<a class="headerlink" href="#primer-on-its-cryptography" title="Permanent link">&para;</a></h1>
+<h2 id="what-is-cryptography">What is Cryptography?<a class="headerlink" href="#what-is-cryptography" title="Permanent link">&para;</a></h2>
+<p>Cryptography is the use of mathematics and carefully designed algorithms to protect information and establish trust. In <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr>, it is used to help devices and systems prove who they are, verify that messages have not been altered and protect sensitive communications.  </p>
+<p>A cryptographic algorithm is a defined method for performing a security function, such as encrypting data, creating a digital signature, or checking integrity. Algorithms depend on cryptographic keys, which are secret values used by the algorithm to produce a result. In general, the security of a cryptographic <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr> does not depend on hiding the algorithm, but instead on keeping the key used by the algorithm secret.</p>
+<p>Some cryptographic systems use the same secret key to protect and recover information. This is called symmetric cryptography, and it is commonly used when two parties already share a trusted secret and <abbr title="user need to transport one or more material entities to a different location">need</abbr> efficient protection for data. Common symmetric algorithms include AES and ChaCha20. Other systems use a pair of related keys: a private key that is kept secret and a public key that can be shared. This is called asymmetric cryptography, and it is widely used for digital certificates, digital signatures, and trust establishment between parties that do not already share a secret. Common asymmetric algorithms include Rivest Shamir Adelmen (RSA) and Elliptic Curve Cryptography (ECC), such as Elliptic Curve Digital Signature Algorithm (ECDSA).</p>
+<p>The figure below illustrates differences between symmetric and asymmetric cryptography.</p>
+<p><img alt="Cryptography Basics" src="../images/cryptography_basics.png" /></p>
+<h2 id="the-role-of-cryptography-in-its">The Role of Cryptography in <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr><a class="headerlink" href="#the-role-of-cryptography-in-its" title="Permanent link">&para;</a></h2>
+<p>Cryptography is used in <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> to verify messages, protect communications, and control which devices are allowed to participate in applications. V2X messaging relies on cryptography to sign messages so that receiving devices can verify that the sending device is trusted and that messages have not been altered. Cryptography is also used in secure communications between infrastructure and backend systems.</p>
+<p>Cryptography is also used to secure communications between infrastructure and backend systems. Roadside units, traffic management centers, and cloud services use cryptographic protocols to authenticate systems and protect data in transit or at rest.</p>
+<p>Security functions such as device provisioning, certificate management, and software updates also rely on cryptography. These processes ensure that only authorized devices can join the <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr>, that credentials are issued and managed securely, and that software originates from trusted sources.</p>
+<h3 id="v2x-message-security">V2X Message Security<a class="headerlink" href="#v2x-message-security" title="Permanent link">&para;</a></h3>
+<p>In V2X communications, messages are digitally signed so that receiving devices can verify the sender and confirm the <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> has not been altered. Because most V2X messages are broadcast and received by many unknown devices, encryption is generally not used. Instead, trust is established through certificates and digital signatures.</p>
+<p>To generate a signature, the sending device constructs a standardized secure data structure, encodes it in a deterministic format, computes a cryptographic hash over the encoded data, and signs that hash using its private key. The resulting signature is attached to the <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> along with a reference to the signing certificate.</p>
+<p>When a <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> is received, the receiving device reconstructs the signed data, validates the certificate against its trusted authorities, checks certificate validity and revocation status, and verifies the signature using the sender’s public key. If any of these steps fail, the <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> is rejected.</p>
+<p>Authorization is enforced through application identifiers and permissions carried in certificates. Receiving devices evaluate whether the sender is permitted to generate the specific type of <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> being processed before accepting it.</p>
+<p>Short-lived pseudonym certificates are used to reduce the ability to track devices over time. Messages remain verifiable without exposing long-term identity, supporting both trust and privacy in broadcast environments.</p>
+<h3 id="backhaulinfrastructure-communications">Backhaul/Infrastructure Communications<a class="headerlink" href="#backhaulinfrastructure-communications" title="Permanent link">&para;</a></h3>
+<p>Communications between infrastructure components and backend systems are protected using secure communication channels. These communications typically occur between known systems, such as <abbr title="portion of the road reservation excluding all roadway and driving space(s)">roadside</abbr> units and traffic management centers. Transport Layer Security (TLS) is used to establish a secure session between systems. During session establishment, both endpoints authenticate each other using digital certificates. If certificate validation fails, the session is not established.</p>
+<p>In <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> environments, secure session establishment and communication are defined by ISO 21177. This standard specifies how TLS is applied to <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> communications, including mutual authentication between systems and the protection of data in transit. The figure below illustrates a secure TLS connection between an <abbr title="roadside unit">RSU</abbr> and TMC.</p>
+<p><img alt="Backhaul Cryptography" src="../images/backhaul_cryptography.png" /></p>
+<p>Once a secure session is established, data exchanged between systems is encrypted and protected against interception, modification, and replay while in transit.</p>
+<h3 id="security-management-functions">Security Management Functions<a class="headerlink" href="#security-management-functions" title="Permanent link">&para;</a></h3>
+<p>Cryptography is used to <abbr title="ITS component that provides services in support of one or more other ITS components">support system</abbr> management functions such as device provisioning, credential management, and operational control. These functions ensure that only authorized devices can join the <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr> and that <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr> integrity is maintained over time.</p>
+<h4 id="firmware-and-software-update-signing">Firmware and Software Update Signing<a class="headerlink" href="#firmware-and-software-update-signing" title="Permanent link">&para;</a></h4>
+<p>Software and firmware updates are digitally signed to ensure they originate from a trusted source and have not been modified. Devices verify the signature before installing an update. If signature validation fails, the update is rejected.</p>
+<p>Signing is typically performed using a private key held by the software <abbr title="entity that delivers one or more transport services">provider</abbr> or operator. Devices are provisioned with the corresponding trusted public keys or certificates used to validate updates. This process prevents unauthorized or malicious code from being installed on <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> devices.</p>
+<h4 id="trust-enrolment">Trust Enrolment<a class="headerlink" href="#trust-enrolment" title="Permanent link">&para;</a></h4>
+<p>Trust enrolment establishes the initial trust relationship between a device and the credential management <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr>. During enrolment, a device is provisioned with cryptographic keys and issued an enrolment credential that allows it to request additional certificates.</p>
+<p>The enrolment process includes authentication of the device, validation of its eligibility to participate in the <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr>, and secure delivery of credentials. Private keys are generated and stored securely on the device and are not shared. Once enrolled, the device can obtain operational certificates and participate in trusted communications within the <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> environment.</p>
+<h4 id="operational-management">Operational Management<a class="headerlink" href="#operational-management" title="Permanent link">&para;</a></h4>
+<p>Cryptography is used to secure operational management functions such as device configuration, monitoring, and control. These functions are typically performed over management protocols and interfaces used to operate field devices, including traffic signal controllers, dynamic <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> signs, and other <abbr title="portion of the road reservation excluding all roadway and driving space(s)">roadside</abbr> equipment.</p>
+<p>Management communications are protected using secure transport mechanisms to authenticate systems and prevent unauthorized access. This ensures that only authorized operators or systems can issue commands, retrieve status information, or modify device configurations.</p>
+<p>In environments using protocols such as NTCIP, cryptography is applied to protect management sessions and, where supported, to authenticate commands and responses. This may include the use of secure versions of management protocols, credential-based authentication, and encrypted communication channels. These protections help prevent unauthorized control of infrastructure devices, interception of sensitive operational data, and modification of commands in transit.</p>
+<h3 id="the-difference-between-message-security-and-transport-security">The difference between <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> security and transport security<a class="headerlink" href="#the-difference-between-message-security-and-transport-security" title="Permanent link">&para;</a></h3>
+<p>Transport security protects the communication channel between two systems. It ensures that data cannot be read or modified while in transit, but protection typically ends once the data reaches its destination. Message security protects the data itself. Security information, such as digital signatures, travels with the <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> so that any receiving <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr> can verify the sender and confirm the <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> has not been altered, even after it has been forwarded or stored.</p>
+<p>In <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr>, transport security is used for point-to-point communications such as backhaul connections, while <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> security is used for broadcast communications such as V2X, where messages are received by many unknown devices.</p>
+<h2 id="cryptographic-algorithms-and-primitives">Cryptographic Algorithms and Primitives<a class="headerlink" href="#cryptographic-algorithms-and-primitives" title="Permanent link">&para;</a></h2>
+<h3 id="hash-functions">Hash functions<a class="headerlink" href="#hash-functions" title="Permanent link">&para;</a></h3>
+<p>A hash function takes input data and produces a fixed-length output (a hash). It is designed so that even a small change in the input produces a completely different result. Hashes are used to check data integrity. Examples include SHA-256 and SHA-384.</p>
+<h3 id="public-key-cryptography">Public-key cryptography<a class="headerlink" href="#public-key-cryptography" title="Permanent link">&para;</a></h3>
+<p>Public-key cryptography uses a pair of related keys: a public key that can be shared and a private key that is kept secret. It is used for authentication, key exchange, and establishing trust between systems that do not share a secret. Examples include RSA and Elliptic Curve Cryptography (ECC).</p>
+<h3 id="digital-signatures">Digital signatures<a class="headerlink" href="#digital-signatures" title="Permanent link">&para;</a></h3>
+<p>A digital signature is created using a private key and can be verified using the corresponding public key. It proves who sent a <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> and that the <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> has not been altered. Examples include ECDSA and RSA signatures.</p>
+<h3 id="symmetric-cryptography">Symmetric cryptography<a class="headerlink" href="#symmetric-cryptography" title="Permanent link">&para;</a></h3>
+<p>Symmetric cryptography uses a single shared secret key for both encryption and decryption. It is efficient and commonly used to protect data in transit once a secure session is established. Examples include AES (e.g., AES-128, AES-256).</p>
+<h3 id="key-derivation">Key Derivation<a class="headerlink" href="#key-derivation" title="Permanent link">&para;</a></h3>
+<p>Key derivation takes a secret value and produces one or more cryptographic keys from it. This allows systems to generate fresh keys for different purposes without exchanging new secrets. Examples include HKDF and PBKDF2.</p>
+<h3 id="message-authentication-code-mac-vs-digital-signature">Message Authentication Code (MAC) vs Digital Signature<a class="headerlink" href="#message-authentication-code-mac-vs-digital-signature" title="Permanent link">&para;</a></h3>
+<p>A Message Authentication Code (MAC) uses a shared secret key to verify data integrity and authenticity between trusted parties. It is efficient but requires both sides to share the same key. A digital signature does not require a shared secret. It uses a private/public key pair and allows any receiver to verify the sender.</p>
+<h2 id="key-protection">Key Protection<a class="headerlink" href="#key-protection" title="Permanent link">&para;</a></h2>
+<p><abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> devices must protect cryptographic keys from unauthorized access and use. This includes how keys are generated, stored, and used during operations such as signing and decryption.</p>
+<p>Private keys must not be exposed in plaintext to applications, users, or external interfaces. Cryptographic operations should be performed in a way that limits access to key material and reduces the risk of extraction.</p>
+<p>Key protection can be implemented using secure hardware components, software-based protections, or a combination of both, depending on the device and deployment environment. Examples of stronger protection mechanisms include Trusted Platform Modules (TPMs), Hardware Security Modules (HSMs), and secure elements, which provide isolated environments for key storage and use.</p>
+<h2 id="credential-lifecycle-management">Credential Lifecycle Management<a class="headerlink" href="#credential-lifecycle-management" title="Permanent link">&para;</a></h2>
+<p>Credentials, such as certificates have lifetimes and expire. They follow an operational management lifecycle. The lifecycle begins with key generation and initial provisioning, where a device is issued credentials that establish its eligibility to participate in the <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr>. Devices then obtain additional certificates used for operational communications, such as signing V2X messages.</p>
+<p>During operation, credentials are used, rotated, and periodically renewed. Short-lived certificates are replaced frequently to support privacy and limit exposure if a credential is compromised. Credentials may be revoked before expiration if a device is compromised, misbehaves, or is no longer authorized. Devices must be able to receive and process revocation information to stop trusting those credentials. At the end of the lifecycle, credentials expire or are decommissioned, and devices must obtain new credentials to continue participating in the <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr>.</p>
+<p>Credential management systems implement and enforce this lifecycle across all participating devices and infrastructure.</p>
 <h2 id="credential-management-systems">Credential Management Systems<a class="headerlink" href="#credential-management-systems" title="Permanent link">&para;</a></h2>
 <p>Credential Management Systems provide trust services for modern <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr>, allowing <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> services and components to establish trust relationships, authenticate peers, authorize device behaviour, and protect privacy across distributed and safety-critical operating environments. A Credential Management System issues, manages and revokes cryptographic credentials that enable vehicles, RSUs, and backend services to securely exchange information.</p>
 <p>In North America and other regions, the credential management function is performed by a Security Credential Management System (<abbr title="security credential management system">SCMS</abbr>). The <abbr title="security credential management system">SCMS</abbr> is a distributed credential management <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr> designed specifically to enable V2X and <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> trusted communications. In Europe, credential management is provided through a Cooperative <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Credential Management System (<abbr title="Cooperative Credential Management System: support system that enables trusted communications among ITS components and protects data from unauthorized access">CCMS</abbr>) framework. The European <abbr title="Cooperative Credential Management System: support system that enables trusted communications among ITS components and protects data from unauthorized access">CCMS</abbr> can be considered more centralized when compared with the North American <abbr title="security credential management system">SCMS</abbr> <abbr title="fundamental concepts or properties of a system in its environment embodied in its elements , relationships and in the principles of its design and evolution">architecture</abbr>.</p>
@@ -4527,7 +5016,7 @@
 <h3 id="trust-anchors">Trust Anchors<a class="headerlink" href="#trust-anchors" title="Permanent link">&para;</a></h3>
 <p>An <abbr title="security credential management system">SCMS</abbr> <abbr title="fundamental concepts or properties of a system in its environment embodied in its elements , relationships and in the principles of its design and evolution">architecture</abbr> relies on a <abbr title="A list of trusted Root Certificate Authorities and security authorities used to verify which certificates a system accepts.">Certificate Trust List</abbr> (<abbr title="Certificate Trust List">CTL</abbr>) as the root of trust. The <abbr title="Certificate Trust List">CTL</abbr> explicitly defines which certificate authorities are trusted and the scope under which they are trusted. <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> devices rely on the <abbr title="Certificate Trust List">CTL</abbr> when validating certificates, reconstructing implicit public keys, and enforcing application-level authorization. No certificate authority is trusted unless it is explicitly referenced in the <abbr title="Certificate Trust List">CTL</abbr>. <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> devices rely on the <abbr title="Certificate Trust List">CTL</abbr> to validate certificate issuers, reconstruct implicit public keys, and enforce authorization constraints.</p>
 <p>The <abbr title="Certificate Trust List">CTL</abbr> is provisioned during manufacturing or enrolment and updated over time. Devices must manage <abbr title="Certificate Trust List">CTL</abbr> updates carefully, as stale trust information can lead to validation failures, interoperability issues, or delayed response to security incidents.</p>
-<p>In Europe, trust between <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> deployments is coordinated using the C <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Point of Contact Protocol. Rather than relying on a <abbr title="A list of trusted Root Certificate Authorities and security authorities used to verify which certificates a system accepts.">Certificate Trust List</abbr> as defined in <abbr title="security credential management system">SCMS</abbr> based systems, the C <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Point of Contact Protocol provides a standardized mechanism for establishing and managing trust relationships between certificate authorities and operational domains across Europe. Through this protocol, participating entities exchange trust information, certificate authority references, and policy constraints that enable devices and backend systems to validate certificates and support interoperability across national and organizational boundaries.</p>
+<p>In Europe, trust between <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> deployments is coordinated using the C <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Point of Contact Protocol (<abbr title="C-ITS Point of Contact">CPOC</abbr>). Rather than relying on a <abbr title="A list of trusted Root Certificate Authorities and security authorities used to verify which certificates a system accepts.">Certificate Trust List</abbr> as defined in <abbr title="security credential management system">SCMS</abbr> based systems, the C <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Point of Contact Protocol provides a standardized mechanism for establishing and managing trust relationships between certificate authorities and operational domains across Europe. Through this protocol, participating entities exchange trust information, certificate authority references, and policy constraints that enable devices and backend systems to validate certificates and support interoperability across national and organizational boundaries.</p>
 <h3 id="certificate-types">Certificate Types<a class="headerlink" href="#certificate-types" title="Permanent link">&para;</a></h3>
 <p><abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> credential management systems use multiple certificate types to balance security, operational needs, scalability, and privacy. Different certificates serve different roles within the <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr>, ranging from long-lived credentials used for provisioning and management to short-lived credentials used for operational messaging. Together, these certificate types enable trusted communications while preventing long-term tracking and unauthorized behaviour.</p>
 <h4 id="pseudonym-certificates">Pseudonym Certificates<a class="headerlink" href="#pseudonym-certificates" title="Permanent link">&para;</a></h4>
@@ -4595,7 +5084,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 21, 2026 14:53:47 UTC">January 21, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 23, 2026 15:32:44 UTC">March 23, 2026</span>
   </span>
 
     

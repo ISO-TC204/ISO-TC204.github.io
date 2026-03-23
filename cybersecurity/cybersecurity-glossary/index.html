@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -3011,7 +3011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../primer-its-credentials/" class="md-nav__link">
+      <a href="../primer-cryptography/" class="md-nav__link">
         
   
   
@@ -4086,12 +4086,20 @@
 </dd>
 <dt>Cooperative <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Credential Management System (<abbr title="Cooperative Credential Management System: support system that enables trusted communications among ITS components and protects data from unauthorized access">CCMS</abbr>)</dt>
 <dd>The European <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr> for managing certificates, trust lists, and permissions for <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> stations.</dd>
-<dt>European <abbr title="A list of trusted Root Certificate Authorities and security authorities used to verify which certificates a system accepts.">Certificate Trust List</abbr> (<abbr title="European Certificate Trust List">ECTL</abbr>)</dt>
-<dd>The signed electronic version of a trust list used in European deployments to distribute trusted root and authority information to devices.</dd>
+<dt>Elliptic Curve Cryptography (ECC) </dt>
+<dd>
+<p>A form of public-key cryptography based on the mathematics of elliptic curves. It provides equivalent security to traditional algorithms with smaller key sizes, making it efficient for constrained environments.</p>
+</dd>
+<dt>Elliptic Curve Digital Signature Algorithm (ECDSA). </dt>
+<dd>
+<p>A digital signature algorithm based on elliptic curve cryptography. It is used to create and verify signatures that provide authentication and data integrity.</p>
+</dd>
 <dt><abbr title="In European C-ITS, the authority that issues Enrolment Credentials proving a device’s legitimacy.">Enrolment Authority</abbr> (<abbr title="Enrolment Authority">EA</abbr>)</dt>
 <dd>In European <abbr title="Connected ITS: subset of ITS where information is shared among ITS stations in a manner that enables its use by multiple ITS services">C-ITS</abbr>, the authority that issues Enrolment Credentials proving a device’s legitimacy.</dd>
 <dt><abbr title="A long-term certificate proving that a device is approved to request operational certificates.">Enrolment Credential</abbr> (<abbr title="Enrolment Credential">EC</abbr>)</dt>
 <dd>A long-term certificate proving that a device is approved to request operational certificates.</dd>
+<dt>European <abbr title="A list of trusted Root Certificate Authorities and security authorities used to verify which certificates a system accepts.">Certificate Trust List</abbr> (<abbr title="European Certificate Trust List">ECTL</abbr>)</dt>
+<dd>The signed electronic version of a trust list used in European deployments to distribute trusted root and authority information to devices.</dd>
 <dt>Hardware Security Module (<abbr title="hardware security module">HSM</abbr>)</dt>
 <dd>A dedicated hardware component used to securely generate, store, and use cryptographic keys; provides strong protection against key theft or tampering.</dd>
 <dt>Intelligent Transport System Application Identifier (<abbr title="ITS Application Identifier">ITS-AID</abbr>)</dt>
@@ -4100,14 +4108,26 @@
 <dd>An attacker technique where access gained on one device or network segment is used to move to other <abbr title="characteristic of a material entity that is equipped with enabled (i.e. on) and operational electronic communication technologies to support ITS services , including the means to send and receive data to and from other connected entities">connected</abbr> systems, increasing the impact of a breach.</dd>
 <dt>Man-in-the-Middle Attack</dt>
 <dd>A threat where an attacker secretly intercepts and possibly alters communication between two parties who believe they are communicating directly with each other.</dd>
+<dt>Message Authentication Code (MAC)</dt>
+<dd>
+<p>A cryptographic value generated using a shared secret key and input data that allows a receiver to verify that the data has not been altered and that it came from a party that possesses the same secret key.</p>
+</dd>
 <dt>Misbehaviour Detection</dt>
 <dd>A set of processes and services that identify and respond to devices that send invalid or malicious messages.</dd>
+<dt>National Transportation Communications for Intelligent Transportation Systems Protocol (NTCIP)</dt>
+<dd>
+<p>A family of standards that define how transportation management systems communicate with field devices using standardized data objects and messaging.</p>
+</dd>
 <dt>Onboard Unit (<abbr title="onboard unit">OBU</abbr>)</dt>
 <dd>An in-<abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> device that communicates with other vehicles and <abbr title="portion of the road reservation excluding all roadway and driving space(s)">roadside</abbr> equipment using secure V2X messages.</dd>
 <dt>Provider Service Identifier (<abbr title="provider service identifier">PSID</abbr>)</dt>
 <dd>An identifier in certificates that defines which <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> applications a device is authorized to use.</dd>
 <dt>Pseudonym Certificate</dt>
 <dd>A short-lived certificate in the <abbr title="security credential management system">SCMS</abbr> that allows vehicles to sign messages without exposing a permanent identity.</dd>
+<dt>Rivest Shamir Adelmen (RSA) </dt>
+<dd>
+<p>A public-key cryptographic algorithm based on the mathematical difficulty of factoring large integers. It is used for encryption, digital signatures, and key exchange.</p>
+</dd>
 <dt>Root Certificate Authority (Root <abbr title="certificate authority">CA</abbr>)</dt>
 <dd>The highest trust anchor in a PKI that signs subordinate certificates.</dd>
 <dt>Roadside Unit (<abbr title="roadside unit">RSU</abbr>)</dt>
@@ -4146,7 +4166,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 6, 2026 20:06:56 UTC">January 6, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 20, 2026 18:39:20 UTC">March 20, 2026</span>
   </span>
 
     

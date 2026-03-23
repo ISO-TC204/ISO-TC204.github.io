@@ -16,14 +16,14 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../primer-its-credentials/">
+        <link rel="next" href="../primer-cryptography/">
       
       
         
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -3363,7 +3363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../primer-its-credentials/" class="md-nav__link">
+      <a href="../primer-cryptography/" class="md-nav__link">
         
   
   
@@ -4719,7 +4719,6 @@
 <h2 id="an-introduction-to-its-and-its-cybersecurity">An Introduction to <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> and <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Cybersecurity<a class="headerlink" href="#an-introduction-to-its-and-its-cybersecurity" title="Permanent link">&para;</a></h2>
 <h3 id="its-systems-of-systems"><abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Systems of Systems<a class="headerlink" href="#its-systems-of-systems" title="Permanent link">&para;</a></h3>
 <p>Intelligent Transportation Systems (<abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr>) enhance mobility, safety, and operational efficiency through <abbr title="characteristic of a material entity that is equipped with enabled (i.e. on) and operational electronic communication technologies to support ITS services , including the means to send and receive data to and from other connected entities">connected</abbr> and automated technologies. Modern <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> deployments function as a <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr> of systems composed of vehicles, <abbr title="portion of the road reservation excluding all roadway and driving space(s)">roadside</abbr> equipment, traffic management centers, communications infrastructure, and cloud or backend services. These components exchange near real-time data to support traffic operations, cooperative services, and safety applications. <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> architectures are distributed. Components may be owned and operated by different entities, including public authorities, private operators, <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> manufacturers, and service providers. Interoperability and trust must extend across organizational and jurisdictional boundaries. An <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Station represents a logical <abbr title="concrete or abstract thing that exists, did exist, or can possibly exist, including associations among these things">entity</abbr> capable of sending, receiving, and processing <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> messages. An <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Station may reside within a <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr>, <abbr title="portion of the road reservation excluding all roadway and driving space(s)">roadside</abbr> device, or backend infrastructure component. The station concept provides a consistent architectural abstraction for defining security functions, trust relationships, and <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> processing behaviour across heterogeneous platforms. The figure below illustrates representative components of an <abbr title="installation capable of performing one or more ITS applications">ITS deployment</abbr> and their interaction within a <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr>-of-systems <abbr title="fundamental concepts or properties of a system in its environment embodied in its elements , relationships and in the principles of its design and evolution">architecture</abbr>.</p>
-<p><img alt="ITS Environment" src="../images/its_generic.jpg" /></p>
 <p>Vehicles, <abbr title="portion of the road reservation excluding all roadway and driving space(s)">roadside</abbr> systems, and backend services exchange time-sensitive data that can influence traffic control decisions and <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> behaviour. As a result, failures in communication integrity, authentication, or availability can produce operational disruption or safety impacts. <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> environments operate under conditions of mobility, wireless communication, and low-latency decision-making. These characteristics increase exposure to spoofing, <abbr title="grouping of data elements , data frames , or data elements and data frames that is used to convey information">message</abbr> manipulation, denial-of-service, misconfiguration, and compromised endpoint behaviour. Systems must be designed to ensure that messages are authentic, unaltered, authorized, and available when required.</p>
 <h2 id="its-cybersecurity"><abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Cybersecurity<a class="headerlink" href="#its-cybersecurity" title="Permanent link">&para;</a></h2>
 <p>Cybersecurity protects digital systems and data from unauthorized access, manipulation, or disruption. In transportation environments, cybersecurity directly affects operational control and safety-related functions. <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> components influence traffic signal timing, <abbr title="part of the surface of the road reservation primarily designed for the movement of vehicles that conform to a specified set of requirements">roadway</abbr> advisories, cooperative <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> messaging, and automated decision support.</p>
@@ -4972,7 +4971,7 @@ The scalability and certificate management challenge in V2X ITS comes from the e
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 16, 2026 15:11:16 UTC">March 16, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 23, 2026 15:32:44 UTC">March 23, 2026</span>
   </span>
 
     
