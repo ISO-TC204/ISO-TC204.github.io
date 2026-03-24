@@ -69,8 +69,8 @@ nav:
       - Certificate Policy (CP): cybersecurity/policies-cp.md
       - SCMS Policy: cybersecurity/policies-scms.md
       - CCMS Policy: cybersecurity/policies-ccms.md
-      - Device Security Policy Configurations: cybersecurity/policies-device.md
-    - ITS Threat analysis: cybersecurity/threat-analysis.md
+      - Device Hardening Guide: cybersecurity/device-hardening-guide.md
+    - ITS Threat analysis: cybersecurity/its-threat-analysis.md
     - ITS Cybersecurity Patterns: 
       - Overview: cybersecurity/its-security-patterns.md
       - Secure ITS Management Patterns: cybersecurity/patterns-management.md
@@ -89,7 +89,7 @@ nav:
       - ITS Application Developers: cybersecurity/stakeholder-appdev.md
       - Certificate Management Authorities: cybersecurity/stakeholder-certmgmt.md
       - Original Equipment Manufacturers (OEMs): cybersecurity/stakeholder-oem.md
-    - Misuse Cases: cybersecurity/its-misuse-cases.md
+    - Common Security Gaps: cybersecurity/its-security-gaps.md
     - Glossary: cybersecurity/cybersecurity-glossary.md
   - Resources: resources.md
 site_url: https://isotc204.org/

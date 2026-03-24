@@ -26,7 +26,7 @@ Each pattern in this section presents a reusable cybersecurity approach that can
 - Support alignment with regional standards and trust frameworks.
 - Promote consistency across devices, services, and jurisdictions.
 
-Patterns are grouped by functional area (e.g., Application, Network, Management, etc) but may span multiple areas depending on system design. You can browse by area, or start with patterns that align to specific [risk concerns](threat-analysis.md), such as certificate misuse, message spoofing, or unauthorized device access.
+Patterns are grouped by functional area (e.g., Application, Network, Management, etc) but may span multiple areas depending on system design. You can browse by area, or start with patterns that align to specific [risk concerns](its-threat-analysis.md), such as certificate misuse, message spoofing, or unauthorized device access.
 
 ## Trusted ITS Principles
 
