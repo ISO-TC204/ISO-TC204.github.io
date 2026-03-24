@@ -92,7 +92,7 @@ Symmetric cryptography uses a single shared secret key for both encryption and d
 
 ### Key Derivation
 
-Key derivation takes a secret value and produces one or more cryptographic keys from it. This allows systems to generate fresh keys for different purposes without exchanging new secrets. Examples include HKDF and PBKDF2.
+Key derivation takes a secret value and produces one or more cryptographic keys from it. This allows systems to generate fresh keys for different purposes without exchanging new secrets. Examples include Hash-Based Message Authentication Code (HMAC)-based Extract-and-Expand Key Derivation Function (HKDF) and Password-Based Key Derivation Function 2 (PBKDF2).
 
 ### Message Authentication Code (MAC) vs Digital Signature
 

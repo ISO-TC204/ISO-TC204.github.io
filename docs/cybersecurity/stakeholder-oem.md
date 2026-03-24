@@ -6,7 +6,7 @@ Vehicle manufacturers (OEMs) play a central role in ensuring that connected and 
 
 OEMs should establish and maintain a Cybersecurity Management System (CSMS) in alignment with ISO/SAE 21434 and regulatory requirements such as UNECE R155. A CSMS provides the organizational governance needed to manage cybersecurity risk across the full lifecycle of a vehicle, from concept through decommissioning. It should cover:
 
-- Cybersecurity [risk assessment and threat analysis](threat-analysis.md) at the concept and design stages.
+- Cybersecurity [risk assessment and threat analysis](its-threat-analysis.md) at the concept and design stages.
 - Integration of cybersecurity into requirements, design reviews, and testing activities.
 - Continuous monitoring of vulnerabilities and incidents throughout the operational phase.
 - Defined roles, responsibilities, and escalation paths for handling cybersecurity events.

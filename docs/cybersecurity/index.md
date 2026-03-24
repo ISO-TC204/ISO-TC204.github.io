@@ -1,14 +1,14 @@
-# Introduction to ITS Cybersecurity 
+# Introduction to ITS Cybersecurity
 
-Welcome to the International Standards Organization (ISO) Guide Intelligent Transportation Systems (ITS) Cybersecurity.  This site provides practical guidance on how to secure ITS deployments, including threats, standards, system-design approaches, and operational practices. 
+Welcome to the International Standards Organization (ISO) Guide Intelligent Transportation Systems (ITS) Cybersecurity.  This site provides practical guidance on how to secure ITS deployments, including threats, standards, system-design approaches, and operational practices.
 
-An ITS is composed of vehicles, roadside devices, communication networks, backend systems and applications that exchange data in near real-time. These components often communicate across trust boundaries. Vehicles may join and leave networks dynamically, and cannot rely on pre-established trust relationships with roadside infrastructure or peer vehicles. The figure below illustrates some of the complexities associated with an ITS System-of-Systems. 
+An ITS is composed of vehicles, roadside devices, communication networks, backend systems and applications that exchange data in near real-time. These components often communicate across trust boundaries. Vehicles may join and leave networks dynamically, and cannot rely on pre-established trust relationships with roadside infrastructure or peer vehicles. The figure below illustrates some of the complexities associated with an ITS System-of-Systems.
 
-![ITS Environment](C:/Users/BrianRussell/Documents/backup/cybersecurity/images/its_generic.jpg)
+![ITS Environment](/cybersecurity/images/its_generic.jpg)
 
-Systems such as Roadside Units (RSUs), sensors, and vehicle On-Board Units (OBUs) are often managed by different organizations. Each organization is responsible for securing its own systems and operations. For example, an Original Equipment Manufacturer (OEM) manages software and firmware updates for its brand of vehicles, a fleet operator monitors the performance and security posture of its fleet, and an infrastructure owner/operator manages roadside devices such as traffic signal controllers. 
+Systems such as Roadside Units (RSUs), sensors, and vehicle On-Board Units (OBUs) are often managed by different organizations. Each organization is responsible for securing its own systems and operations. For example, an Original Equipment Manufacturer (OEM) manages software and firmware updates for its brand of vehicles, a fleet operator monitors the performance and security posture of its fleet, and an infrastructure owner/operator manages roadside devices such as traffic signal controllers.
 
-These ITS systems exchange data through defined applications that generate and process messages for specific purposes, such as safety, mobility, or traffic operations. Each message is associated with an application profile that defines its structure, meaning and how it should be handled by a receiving system. For example, a vehicle may broadcast a safety message describing its position, speed and other attributes, while infrastructure systems may exchange signal status or control information. These Vehicle-to-Everything (V2X) messages are transmitted and/or received by applications on vehicles, road side equipment, and backend systems, and must be validated, authorized, and interpreted consistently across all ITS participants. 
+These ITS systems exchange data through defined applications that generate and process messages for specific purposes, such as safety, mobility, or traffic operations. Each message is associated with an application profile that defines its structure, meaning and how it should be handled by a receiving system. For example, a vehicle may broadcast a safety message describing its position, speed and other attributes, while infrastructure systems may exchange signal status or control information. These Vehicle-to-Everything (V2X) messages are transmitted and/or received by applications on vehicles, road side equipment, and backend systems, and must be validated, authorized, and interpreted consistently across all ITS participants.
 
 Because these systems must operate together across organizational boundaries, ITS cybersecurity depends on well-defined standards. These standards define how messages are secured, how devices are identified and authorized, how trust is established between systems, and how data is protected in transit and at rest.
 
@@ -22,11 +22,11 @@ If you are new to the concept of ITS cybersecurity, start with the [Beginners Gu
 
 ### 1. [ITS Cryptography Fundamentals](primer-cryptography.md)
 
-ITS applications use cryptography to protect message integrity, authenticate senders, and control which devices and applications are allowed to participate in the system. These mechanisms are applied to both broadcast communications such as V2X messaging, and point-to-point communications between infrastructure and back-end systems.  This section explains how cryptographic functions such as digital signatures, secure communication protocols, and credential management are used in practice, including how messages are secured, how systems establish trust, and how credentials are issued, used and managed over time. 
+ITS applications use cryptography to protect message integrity, authenticate senders, and control which devices and applications are allowed to participate in the system. These mechanisms are applied to both broadcast communications such as V2X messaging, and point-to-point communications between infrastructure and back-end systems.  This section explains how cryptographic functions such as digital signatures, secure communication protocols, and credential management are used in practice, including how messages are secured, how systems establish trust, and how credentials are issued, used and managed over time.
 
 ### 2. [Security Regulations, Frameworks, Standards and Guidance Documents](its-security-standards.md)
 
-ITS cybersecurity is informed by a combination of regulations, frameworks and technical standards.  These documents establish how systems are secured and how organizations should manage cybersecurity risk. Frameworks such as ISO/IEC 27001 and the NIST Cybersecurity Framework (CSF) define governance practices, while regulations such as the EU Cybersecurity Resilience Act and UNECE R155/R156 define mandatory requirements. Technical standards developed by organizations such as IEEE, SAE and ETSI define how security is implemented in ITS systems, devices and applications. 
+ITS cybersecurity is informed by a combination of regulations, frameworks and technical standards.  These documents establish how systems are secured and how organizations should manage cybersecurity risk. Frameworks such as ISO/IEC 27001 and the NIST Cybersecurity Framework (CSF) define governance practices, while regulations such as the EU Cybersecurity Resilience Act and UNECE R155/R156 define mandatory requirements. Technical standards developed by organizations such as IEEE, SAE and ETSI define how security is implemented in ITS systems, devices and applications.
 
 ### 3. [Performing an ITS Threat Analysis](its-threat-analysis.md)
 
@@ -34,7 +34,7 @@ ITS device manufacturers, OEMs, and infrastructure owner-operators need to under
 
 ### 4. [ITS Security Design Patterns](its-security-patterns.md)
 
-ITS systems require consistent approaches to implementing security across devices, applications, networks, and operational processes. Security design patterns provide reusable solutions for common challenges such as securing communications, managing credentials, enforcing access control, and detecting misbehaviour. This section organizes these patterns by functional area, including application, device, network, and management layers. Each pattern describes how a specific security capability can be implemented in practice. 
+ITS systems require consistent approaches to implementing security across devices, applications, networks, and operational processes. Security design patterns provide reusable solutions for common challenges such as securing communications, managing credentials, enforcing access control, and detecting misbehaviour. This section organizes these patterns by functional area, including application, device, network, and management layers. Each pattern describes how a specific security capability can be implemented in practice.
 
 ### 5. [Interoperability Strategies](its-interoperability-strategies.md)
 
@@ -50,4 +50,4 @@ ITS cybersecurity is shared across multiple stakeholder groups, each responsible
 
 ### 8. [Common ITS Security Gaps & Remediations](its-security-gaps.md)
 
-ITS systems must correctly validate data, enforce authorization, and apply trust decisions during operation. When these functions are not implemented or behave inconsistently, systems may accept invalid inputs, misinterpret data, or apply incorrect decisions. This section identifies common security gaps and the controls required to address them. Each example links a specific system condition to a corresponding requirement, helping implementers understand what must be enforced for correct and reliable system behavior.
+ITS systems must correctly validate data, enforce authorization, and apply trust decisions during operation. When these functions are not implemented or behave inconsistently, systems may accept invalid inputs, misinterpret data, or apply incorrect decisions. This section identifies common security gaps and the controls required to address them. Each example links a specific system condition to a corresponding requirement, helping implementers understand what must be enforced for correct and reliable system behaviour.

@@ -1,14 +1,14 @@
 # Common ITS Security Gaps & Remediations
 
-Secure operation depends on correct validation of data, enforcement of authorization, and consistent trust decisions. When these functions are implemented incorrectly or behave inconsistently, systems may accept invalid inputs or apply unintended actions. This section highlights common security gaps and the controls required to address them, linking specific system conditions to the mechanisms needed to ensure correct and reliable behavior.
+Secure operation depends on correct validation of data, enforcement of authorization, and consistent trust decisions. When these functions are implemented incorrectly or behave inconsistently, systems may accept invalid inputs or apply unintended actions. This section highlights common security gaps and the controls required to address them, linking specific system conditions to the mechanisms needed to ensure correct and reliable behaviour.
 
-## 1. **Message Trust and Validation**
+## 1. Message Trust and Validation
 
 Standards such as IEEE 1609.2 and ETSI TS 103 097 define how V2X messages are encoded, signed, and validated. Systems rely on these structures to verify message integrity, authenticate message sender, and determine whether a message should be processed. Validation must be performed consistently across implementations. Differences in certificate handling, encoding, algorithm support, or trust anchor configuration, or policy enforcement can cause messages to be incorrectly accepted or rejected.  
 
 ### Incorrect Trust Decisions Due to Certificate Validity Timing
 
-**Context**: In some ITS workflows, messages are not processed immediately after they are generated. Data may be stored, forwarded, or validated later by backend systems, logging platforms, or external services. In these cases, systems must determine whether a message was valid at the time it was created, not just at the time it is received. 
+**Context**: In some ITS workflows, messages are not processed immediately after they are generated. Data may be stored, forwarded, or validated later by backend systems, logging platforms, or external services. In these cases, systems must determine whether a message was valid at the time it was created, not just at the time it is received.
 
 **Condition**: If this distinction is not handled correctly, a signed message may be accepted even though the certificate used to generate the signature was not valid at the time of signing, or a valid message may be rejected because the certificate has since expired. This typically occurs when validation is performed only against the current system time rather than the message creation time.
 
@@ -16,7 +16,7 @@ Standards such as IEEE 1609.2 and ETSI TS 103 097 define how V2X messages are en
 
 ### Incorrect Trust Decisions Due to Missing or Stale Revocation Information
 
-**Context**: Certificates may be revoked before their expiration due to compromise, misbehavior, or administrative action. Revocation information is distributed through mechanisms such as Certificate Revocation Lists (CRLs) or equivalent trust framework updates, which must be regularly obtained and enforced by receiving systems.
+**Context**: Certificates may be revoked before their expiration due to compromise, misbehaviour, or administrative action. Revocation information is distributed through mechanisms such as Certificate Revocation Lists (CRLs) or equivalent trust framework updates, which must be regularly obtained and enforced by receiving systems.
 
 **Condition**: If revocation information is not available, not current, or not checked during validation, a message may be accepted even though the signing certificate has been revoked. This can occur when systems fail to update revocation data, do not enforce revocation checks, or operate in disconnected environments without compensating controls.
 
@@ -86,8 +86,6 @@ ITS systems rely on secure communication protocols such as TLS (e.g., ISO 21177)
 
 **Recommended Approach:** Deployment specifications should define the credential formats to be supported for mutual authentication. Systems should be configured to support the required credential formats and ensure that authentication mechanisms are compatible across communicating systems.
 
-
-
 ## 4. Trust Configuration and System State
 
 Correct message validation and secure communication depend on locally configured trust anchors and accurate system time. These elements are often assumed to be correct, but misconfiguration or drift can cause otherwise valid messages or connections to fail.
@@ -104,7 +102,6 @@ Correct message validation and secure communication depend on locally configured
 
 **Context:** Certificate validation, signature verification, and revocation checks rely on accurate system time. Time is used to evaluate certificate validity periods, signature timestamps, and other time-dependent security attributes.
 
-**Condition:** If system time is incorrect, valid certificates or signatures may appear invalid, or expired or revoked credentials may be incorrectly accepted. This can lead to inconsistent validation results and failed communication between systems. 
+**Condition:** If system time is incorrect, valid certificates or signatures may appear invalid, or expired or revoked credentials may be incorrectly accepted. This can lead to inconsistent validation results and failed communication between systems.
 
 **Recommended Approach:** Systems should maintain accurate and reliable time synchronization using appropriate time sources. Time should be monitored and managed to ensure it remains within acceptable bounds for validation of certificates and signatures.
-
