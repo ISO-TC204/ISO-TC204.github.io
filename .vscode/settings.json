@@ -11,6 +11,7 @@
         "auditd",
         "automakers",
         "automobiles",
+        "AVPS",
         "backhaul",
         "Bikesharing",
         "Brainpool",
@@ -37,6 +38,7 @@
         "FIBO",
         "FIPS",
         "Geolexica",
+        "GTDM",
         "HKDF",
         "HMAC",
         "ICIP",
@@ -71,6 +73,7 @@
         "RLAN",
         "RSZW",
         "SCMS",
+        "SDMA",
         "SHACL",
         "sidelink",
         "sidewalks",
@@ -95,6 +98,7 @@
         "VACM",
         "VDMS",
         "VDMSs",
-        "vocab"
+        "vocab",
+        "Zigbee"
     ]
 }
