@@ -21,4 +21,3 @@ Compliance models vary by region. For example, European Root CAs must meet defin
 ## Incident Response and Coordination
 
 Policy authorities are also responsible for establishing and coordinating incident response processes. This includes developing national or regional Computer Security Incident Response Teams (CSIRTs) with the capability to handle ITS-specific incidents, defining reporting obligations for manufacturers and operators, and ensuring that incident information is shared across stakeholders. Authorities coordinate response to cybersecurity incidents across organizational boundaries, including defining reporting obligations, supporting misbehaviour detection processes, and enabling cross-domain response when incidents affect multiple jurisdictions.
-
