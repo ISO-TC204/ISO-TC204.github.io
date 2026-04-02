@@ -2365,6 +2365,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="General">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github-repository-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Repository Organization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imported-ontologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Imported Ontologies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ritso-formatting-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RITSO Formatting Policies
+      
+    </span>
+  </a>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2379,10 +2418,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#recommended-annotations" class="md-nav__link">
+  <a href="#ontology-annotations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Recommended Annotations
+        Ontology Annotations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#annotations-for-ontology-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Annotations for Ontology Elements
       
     </span>
   </a>
@@ -4029,6 +4079,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="General">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github-repository-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Repository Organization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imported-ontologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Imported Ontologies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ritso-formatting-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RITSO Formatting Policies
+      
+    </span>
+  </a>
+  
 </li>
       
         <li class="md-nav__item">
@@ -4043,10 +4132,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#recommended-annotations" class="md-nav__link">
+  <a href="#ontology-annotations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Recommended Annotations
+        Ontology Annotations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#annotations-for-ontology-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Annotations for Ontology Elements
       
     </span>
   </a>
@@ -4204,16 +4304,31 @@
 <ul>
 <li>GitHub: for version control</li>
 <li>Web Ontology Language (OWL): for specifying the semantics of the ontology</li>
-<li>W3C Turtle (<em>.ttl) file format: for formally specifying OWL content. Alternative formats include RDF (</em>.owl) and ontology functional syntax notation (*.ofn).</li>
-<li>The <a href="https://github.com/k-vaughn/ontologies/tree/main/python">python scripts</a> developed by this registry effort: to convert the ontology files into more human-friendly source files</li>
+<li>W3C Turtle (*.ttl) file format: for <a href="../turtle/">formally specifying the core semantics of OWL content</a>.</li>
+<li>SHACL: for <a href="../turtle/#Constraining-the-Ontology-with-SHACL">defining constraints</a></li>
+<li>The <a href="https://github.com/ISO-TC204/ont2md">python scripts</a> developed by this registry effort: to convert the *.ttl files into markdown files and diagrams to provide a user-friendly website.</li>
 <li>GraphViz: to convert the text description of graphics into actual graphics</li>
 <li>Material for MkDocs: to convert the source files into a website</li>
 </ul>
+<h3 id="github-repository-organization">GitHub Repository Organization<a class="headerlink" href="#github-repository-organization" title="Permanent link">&para;</a></h3>
+<p>A separate <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> repository is maintained within GitHub for each ontology namespace.</p>
+<p>Ontology repository names follow the pattern of <code>ontology-domain-topic-v#</code>, where <code>#</code> is replaced with the major version number and <code>domain</code> is replaced with one of the following:</p>
+<ul>
+<li><code>its</code>: For ontologies developed and managed by this project, in which case, <code>topic</code> is replaced by a unique topic area name.</li>
+<li><code>cdm</code>: For ontologies of the city data model, in which case, <code>topic</code> is replaced by <code>part#</code>, with the # indicating the part number of ISO/IEC 5087.</li>
+<li><code>import</code>: For other imported ontologies, in which case, <code>topic</code> is replaced by the preferred prefix for the ontology.</li>
+</ul>
+<h3 id="imported-ontologies">Imported Ontologies<a class="headerlink" href="#imported-ontologies" title="Permanent link">&para;</a></h3>
+<p><abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> ontologies are built upon several widely-referenced ontologies. The <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> ontologies import the official versions of these ontologies, as needed (e.g. <code>PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;</code>). However, to provide a coherent and all-encompassing web-based explantation of the <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> ontology, the imported ontologies are replicated in the RITSO to enable visualization and linking between concepts. The replicated ontology is often revised from the official version to:</p>
+<ul>
+<li>translate to *.ttl so that the web content can be easily generated,</li>
+<li>tweaked to follow the RITSO formatting policies, which often requires annotation properties to be re-characterized so that the generated website displays the intended information (e.g., an rdfs:comment can be changed to a skos:definition).</li>
+</ul>
+<h2 id="ritso-formatting-policies">RITSO Formatting Policies<a class="headerlink" href="#ritso-formatting-policies" title="Permanent link">&para;</a></h2>
 <h2 id="namespaces">Namespaces<a class="headerlink" href="#namespaces" title="Permanent link">&para;</a></h2>
-<p>Every <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> ontology <strong>should</strong> declare the following namespace prefixes:</p>
+<p><abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> ontologies <strong>should</strong> only declare prefixes used within the document, which often includes the following:</p>
 <ul>
 <li>: (i.e., the default) typically the ontology namespace</li>
-<li>cc: http://creativecommons.org/ns#</li>
 <li>dcterms: http://purl.org/dc/terms/</li>
 <li>owl: http://www.w3.org/2002/07/owl#</li>
 <li>dash: http://datashapes.org/dash# (when used)</li>
@@ -4221,12 +4336,15 @@
 <li>rdfs: http://www.w3.org/2000/01/rdf-schema#</li>
 <li>skos: http://www.w3.org/2004/02/skos/core#</li>
 <li>vann: http://purl.org/vocab/vann/</li>
-<li>xml: http://www.w3.org/XML/1998/namespace</li>
 <li>xsd: http://www.w3.org/2001/XMLSchema#</li>
+<li>cdm1: https://w3id.org/citydata/part1/v1/</li>
+<li>cdm2: https://w3id.org/citydata/part2/v1/</li>
+<li>cdm3: https://w3id.org/citydata/part3/v1/</li>
+<li><abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr>-specific ontologies</li>
 </ul>
-<p>In addition, <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> ontologies <strong>should</strong> declare a namespace prefix for each additional ontology referenced. Even if the prefix is not used in the ontology file, declaring the prefix allows the diagrams that are generated by the python scripts to shorten the IRI to just the prefix to make diagrams more readable. The prefixes <strong>should</strong> use the preferred prefix for the referenced ontology (when declared) and it does not cause a conflict. Ideally, <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> ontologies should only reference ontologies already included in the RITSO.  </p>
-<h2 id="recommended-annotations">Recommended Annotations<a class="headerlink" href="#recommended-annotations" title="Permanent link">&para;</a></h2>
-<p>The RITSO recommends using the following annotations when describing ontologies.</p>
+<p>In addition, <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> ontologies <strong>shall</strong> declare a namespace prefix for each ontology referenced, even if the prefix is not used in the ontology file. Declaring the prefix allows the diagrams that are generated by the python scripts to shorten the IRI to just the prefix to make diagrams more readable. The prefixes <strong>shall</strong> use the preferred prefix for the referenced ontology (when declared) and it does not cause a conflict. Ideally, <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> ontologies should only reference ontologies already included in the RITSO.  </p>
+<h2 id="ontology-annotations">Ontology Annotations<a class="headerlink" href="#ontology-annotations" title="Permanent link">&para;</a></h2>
+<p>The RITSO recommends using the following annotations, in the order shown, when describing ontologies.</p>
 <table>
 <thead>
 <tr>
@@ -4235,6 +4353,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>### Ontology Definition ###</td>
+<td></td>
+</tr>
 <tr>
 <td><code>dcterms:title</code></td>
 <td>The name of the resource.</td>
@@ -4252,24 +4374,52 @@
 <td>The preferred prefix to use when referring to items in this resource.</td>
 </tr>
 <tr>
+<td><code>dcterms:license</code></td>
+<td>Identifies the legal usage terms; CC-BY 4.0 is recommended.</td>
+</tr>
+<tr>
+<td><code>its-core:draft</code></td>
+<td>Indicates whether this is a draft (i.e. whether the website should include the draft logo at the top of each page).</td>
+</tr>
+<tr>
+<td>### Provenance Information ###</td>
+<td></td>
+</tr>
+<tr>
 <td><code>dcterms:creator</code></td>
 <td>Primary author; can be more than one.</td>
 </tr>
 <tr>
 <td><code>dcterms:created</code></td>
-<td>Date of creation of the ontology file.</td>
+<td>The date of the last full release of the ontology file.</td>
+</tr>
+<tr>
+<td><code>dcterms:modified</code></td>
+<td>The date on which this file was last modified.</td>
+</tr>
+<tr>
+<td>### Additional provenance information for main ontology file ###</td>
+<td></td>
+</tr>
+<tr>
+<td><code>owl:versionInfo</code></td>
+<td>The semantic version number of the ontology.</td>
 </tr>
 <tr>
 <td><code>owl:versionIRI</code></td>
-<td>The version of the ontology represented by this resource using semantic versioning.</td>
+<td>The version IRI of the ontology.</td>
 </tr>
 <tr>
 <td><code>owl:priorVersion</code></td>
-<td>The date of the official preceding version of the ontology.</td>
+<td>The version IRI of the prior ontology version.</td>
 </tr>
 <tr>
-<td><code>dcterms:license</code></td>
-<td>Identifies the legal usage terms; CC-BY 4.0 is recommended.</td>
+<td>### Imports ###</td>
+<td></td>
+</tr>
+<tr>
+<td><code>owl:imports</code></td>
+<td>For each imported ontology (that is not imported by one of the prior imports).</td>
 </tr>
 </tbody>
 </table>
@@ -4288,15 +4438,11 @@
 </tr>
 <tr>
 <td><code>dcterms:contributor</code></td>
-<td>Contributor to the ontology for which credit is to be provided.</td>
+<td>Contributor to the ontology for which credit is to be provided but not a primary author.</td>
 </tr>
 <tr>
 <td><code>dcterms:issued</code></td>
-<td>Year that the associated document was formally issued.</td>
-</tr>
-<tr>
-<td><code>dcterms:modified</code></td>
-<td>Identifies the date of an update date; pair with repeatable <code>skos:changeNote</code> for descriptions.</td>
+<td>Year that the associated document (e.g. standard) was formally issued.</td>
 </tr>
 <tr>
 <td><code>rdfs:seeAlso</code></td>
@@ -4304,10 +4450,11 @@
 </tr>
 <tr>
 <td><code>skos:changeNote</code></td>
-<td>Provides a description of the update date; pair with <code>dcterms:modified</code></td>
+<td>Provides a description of the updates made since the last version</td>
 </tr>
 </tbody>
 </table>
+<h2 id="annotations-for-ontology-elements">Annotations for Ontology Elements<a class="headerlink" href="#annotations-for-ontology-elements" title="Permanent link">&para;</a></h2>
 <p>The RITSO recommends using the following annotations when describing ontology elements (e.g., classes and properties).</p>
 <table>
 <thead>
@@ -4405,7 +4552,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 21, 2026 14:55:43 UTC">January 21, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 2, 2026 21:35:49 UTC">April 2, 2026</span>
   </span>
 
     
