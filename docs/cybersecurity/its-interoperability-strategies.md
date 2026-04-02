@@ -1,42 +1,69 @@
-# Interoperability Strategies for ITS Security
+# ITS Interoperability
 
-## Regional Considerations: Understand regional differences in regulation and approach
+ITS interoperability requires that products and systems from different vendors, regions, and domains can exchange, interpret and trust data in a consistent manner.  This depends on alignment across multiple layers, including message formats, security mechanisms, credential policies, and communication protocols. These layers must operate consistently even when systems are deployed across different regions, organizations, and governance models.
 
-While ITS cybersecurity standards aim for global interoperability, implementation often varies across regions due to different legal frameworks, privacy expectations, governance models, and deployment architectures. These differences directly affect how trust is established, how permissions are granted, and how secure communications are managed. Understanding regional approaches, such as the SCMS model in North America and the C-ITS Trust Model in Europe is important for organizations deploying cross-border systems or designing interoperable ITS devices and services.  These differences must be taken into account when designing systems intended for multi-regional interoperability.
+## Message and Data Interoperability
 
-### Governance
+Systems must encode, transmit, and interpret messages consistently. This includes agreement on message structure, field definitions, data types, and semantic meaning so that information exchanged between systems is understood in the same way.
 
-There are differences in regional trust models that influence cybersecurity policies and procedures. For example, certificate provisioning to ITS devices is handled differently in Europe vs. North America. These differences impact who can manage certificate policies, who can issue credentials, and how PKI system compliance is enforced.
+Standards define these message sets and their usage. For example:
 
-Europe employs a centralized governance model under the [European Commission](https://commission.europa.eu/index_en). The Certificate Policy Authority (CPA) governs root-level decisions, including Root CA approvals and revocations, scheduling of the [European Certificate Trust List (ECTL)](https://cpoc.jrc.ec.europa.eu/ECTL.html) signing sessions, maintaining policy documents, and management enrolment requests. Roles such as the Trust List Manager (TLM) and [C-ITS point of Contact (CPOC)](https://cpoc.jrc.ec.europa.eu/index.html) operate in accordance with CPA decisions.
+- SAE J2735 defines common V2X message structures such as Basic Safety Messages (BSM), Signal Phase and Timing (SPaT), and MAP messages.
+- SAE J2945/x documents define application-level requirements and expected behavior associated with those messages.
+- CTI 4501 profiles define how message sets are applied in specific deployments, such as connected intersections.
 
-North America employs a multi-entity consensus model.  [SCMS Manager](https://www.scmsmanager.org/) for example relies on a group of Electors to establish trust by signing a Certificate Trust List (CTL). Electors follow criteria established through working groups and committees, such as the [Ecosystem Audit Committee (EAC)](https://www.scmsmanager.org/wp-content/uploads/2024/10/SCMS-Manager-EAC-Requirements-v1_0.pdf). In North America, each SCMS Provider is responsible for its own certificate issuance processes, subject to periodic compliance review.
+If systems interpret message fields differently, apply inconsistent encoding rules, or assign different meanings to the same data, messages may be processed incorrectly or discarded. Interoperability at this layer depends on consistent implementation of message definitions and their associated application rules.
 
-### Privacy and Anonymity
+### Secure Data Structures
 
-ITS systems are designed to prevent long-term tracking and identity exposure by using pseudonym certificates, which are short-term certificates that anonymize the link between individual messages and their originating OBUs. The use of short-lived pseudonym certificates is governed by policy. In Europe, privacy is tightly regulated by the [General Data Protection Regulation (GDPR)](https://gdpr-info.eu/). As a result, European C-ITS deployments emphasize strict data minimization and correlation to identity. The use of pseudonym certificates is regulated in the C-ITS Certificate Policy for the CCMS.
+Systems must implement security services using compatible data structures, encoding rules, and certificate handling so that messages can be authenticated, validated, and, where applicable, decrypted across implementations. 
 
-In North America, privacy protections are implemented through pseudonymity as well. Certificate are rotated frequently and linkages to vehicle identifies are restricted.
+Standards define how security is applied to messages. For example:
 
-### Compliance and Audit
+- IEEE 1609.2 defines core security services, including `SignedData` and `EncryptedData` structures, signature formats, and certificate usage.
+- ETSI TS 103 097 defines a regional profile of these structures, including security headers, certificate formats, and message profiles
 
-In Europe, accredited Root CAs must pass technical and organizational audits  prior to inclusion in the ECTL, as required by the C-ITS Security Policy for CCMS.
+These standards define how messages are secured and interpreted across systems, including how messages are wrapped (such as signed or encrypted), how data is encoded (for example using ASN.1 with canonical encoding rules), and how certificates are included, referenced, and validated.
 
-In North America, each SCMS Provider selects an independent PKI auditor to validate conformance with SCMS Manager’s Provider Requirements. Providers must maintain certifications (e.g., [ISO 27001](https://www.iso.org/standard/27001) or [TISAX](https://www.enx.com/en-US/tisax/)), and all Certificate Policy (CP) and Certificate Practices Statement (CPS) documents must reflect the approved policy set.
+Interoperability depends on consistent implementation of these elements. Differences in encoding rules, signature structures or algorithms, or certificate handling including variations in format or trust models, can prevent systems from validating or processing messages correctly.
 
-## The Need for ITS Interoperability
+## Credential and Trust Interoperability 
 
-ITS interoperability refers to the ability of systems that use different certificate authorities or policy frameworks to securely validate and exchange messages. As connected vehicles and infrastructure begin to operate across jurisdictions and trust domains, enabling interoperability becomes essential for safe and reliable communication.
+Systems must be able to establish trust in credentials issued by different authorities, organizations, or jurisdictions. This includes validating certificates, understanding their scope of use, and determining whether they should be accepted within a given deployment.
 
-As ITS are increasingly deployed across cities, regions, and national borders, secure communication between vehicles and infrastructure must be maintained even when those systems operate under different governance models and trust frameworks. Interoperability ensures that connected devices, for example vehicles crossing jurisdictional lines or roadside units supporting multiple jurisdictions, can recognize and validate each other’s messages reliably.
+Standards define how this trust is established and managed. For example, IEEE 1609.2.1 defines interfaces for certificate handling and distribution, while IEEE 1609.2.2 defines mechanisms for establishing trust between independent credential management systems. In practice, this is implemented through frameworks such as SCMS and CCMS, which define certificate policies, trust models, and governance processes.
 
-Interoperability becomes especially important in contexts where operational coordination spans multiple entities. This includes for example metropolitan planning organizations managing smart intersections, regional agencies operating roadside units, or national governments deploying connected vehicle credentials. Each may have its own policies, security credentials, and trust authorities, but their systems must work together seamlessly. Without an interoperability framework, safety-critical messages, such as vehicle warnings or signal phase and timing information may go unrecognized or untrusted.
+Interoperability at this layer depends on alignment of trust anchors, certificate policies, and validation rules. Systems must not only be able to process certificates, but also determine whether those certificates represent entities that are trusted within the local context.
 
-Effective strategies for achieving interoperability include establishing mutual trust relationships, using common message standards, aligning policy enforcement, and supporting devices that can operate within multiple trust domains. The goal is to ensure that messages originating from one domain can be validated and trusted by another without sacrificing security or requiring proprietary solutions. The following sections outline technical and policy-based approaches that support interoperability in the real world, including the role of standards like IEEE 1609.2.2 and the harmonization of certificate policies across trust domains.
+## Authorization and Application Interoperability
 
-## Multi-Jurisdictional Trust with IEEE 1609.2.2
+Systems must interpret application identifiers and associated permissions consistently so that messages are processed according to their intended use. Even when a message is valid and the sender’s certificate is trusted, the receiving system must still determine whether the sender is permitted to perform the action associated with that message.
+
+Standards define how permissions are expressed and enforced. For example, SAE J2945/5 defines Service Specific Permissions (SSPs) and their use within applications, while SAE J3268 defines Provider Service Identifiers (PSIDs) and their assignment to specific ITS services.
+
+Interoperability at this layer depends on consistent interpretation of these identifiers and permissions. Systems must evaluate whether a message is authorized within its declared application context, based on locally enforced policies.
+
+## Communication and Transport Interoperability
+
+Systems must be able to establish and maintain communication using compatible networking, radio, and transport protocols. This includes how messages are routed, how channels are managed, and how secure sessions are established.
+
+Standards define these communication layers. For example, IEEE 1609.3 specifies networking services for V2X communications. SAE J3161 defines profiles for LTE-V2X communications, and ISO 21177 specifies the use of TLS to secure communications between ITS stations and backend systems.
+
+Interoperability at this layer depends on alignment of communication protocols, channel usage, and transport security configurations. Systems must support compatible mechanisms for message exchange and session establishment. If communication protocols, radio configurations, or transport security mechanisms are not aligned, systems will be unable to exchange data, regardless of whether higher-layer message, security, or trust mechanisms are correctly implemented.
+
+## Cross-Domain and Regional Interoperability
+
+Systems must operate across organizational, regional, and policy boundaries where different credential management systems and governance models are in place. This includes validating and trusting messages originating from external domains that may follow different certificate policies, issuance processes, and trust frameworks.
+
+Regional implementations differ in governance, privacy requirements, and compliance models. For example, Europe uses a more centralized trust model coordinated through the European Certificate Trust List (ECTL) and CPOC, while North America uses a multi-entity model where trust is established through Certificate Trust Lists (CTLs) managed by SCMS participants. These differences affect how credentials are issued, how trust is established, and how policies are enforced across domains.
+
+Standards and frameworks define how this interoperability can be achieved. IEEE 1609.2.2 provides mechanisms for establishing trust between independent security domains using structures such as Certificate Trust Lists (CTLs) and associated trust permissions. Regional implementations include frameworks such as SCMS in North America and CCMS in Europe, along with supporting mechanisms such as CPOC for coordinating trust relationships across European deployments .
+
+Interoperability at this layer depends on how trust is extended between domains. Differences in governance models, certificate policies, privacy requirements, and audit processes influence how credentials are issued and validated. Systems must account for these differences when determining whether to trust external certificates and how to apply them. Systems may operate with different certificate authorities, policy frameworks, and credential formats, but must still be able to validate and trust messages across these boundaries in a controlled and predictable manner.
 
 IEEE 1609.2.2 introduces a framework for establishing trust across security domains that operate under different policies, using the Certificate Trust List (CTL). The CTL enumerates Root Certificate Authorities (Root CAs) that the local system recognizes as trusted. Trust is extended by placing the hashed identifier of a Root CA (HashedId32) onto the CTL. This signals to end entities in the local domain that certificates chaining back to the listed Root CA are recognized and valid for use, as long as the trust conditions associated with that Root CA are met.
+
+### Multi Jurisdictional Trust (IEEE 1609.2.2)
 
 IEEE 1609.2.2 adds the ability to assign trust permissions to each Root CA listed on the CTL. These permissions define exactly what a receiving end entity should trust when it encounters a certificate from an external domain. Permissions can be specified in several ways:
 
@@ -47,3 +74,4 @@ IEEE 1609.2.2 adds the ability to assign trust permissions to each Root CA liste
 These permissions provide fine-grained control. For example, an SCMS Manager can trust a foreign Root CA for the purpose of receiving basic safety messages but indicate that it does not trust the opOrgId field due to differences in organizational vetting procedures. This model allows a system operator to define exactly what it accepts from each external trust domain. The receiving entity uses these trust permissions to evaluate messages and ensure that certificates are only accepted for the purposes explicitly permitted by the local CTL.
 
 IEEE 1609.2.2 enables interoperability between policy domains without requiring them to adopt identical certificate enrolment and other policies. It provides a mechanism for trust to be extended in a controlled and explicit way, supporting cross-border or cross-organizational communication while respecting local assurance requirements.
+
