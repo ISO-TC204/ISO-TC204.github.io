@@ -21,7 +21,7 @@ Ontologies are important because they:
 ## How do ontologies relate to a data model or interface standard?
 
 - Ontologies vs. Data Models and interface standards:
-    - Data models and interface standards define the structure and constraints for storing, communicating, and managing data (e.g., tables, fields, and relationships in a database or message). They focuse on data organization and representation along with storage and communication efficiency.
+    - Data models and interface standards define the structure and constraints for storing, communicating, and managing data (e.g., tables, fields, and relationships in a database or message). They focus on data organization and representation along with storage and communication efficiency.
     - An ontology focuses on the semantics (meaning) of data, defining concepts, their properties, and relationships in a domain. Ontologies are more abstract and expressive, emphasizing knowledge representation over storage.
     - Relation: Ontologies can inform data models by providing a semantic layer that ensures data structures align with domain knowledge. For example, an ontology might define that "a patient has a diagnosis," which a data model translates into specific database tables and fields.
 - Ontologies vs. Interface Standards:
@@ -47,7 +47,7 @@ Ontologies are documented using:
 - Human-Readable Documentation: Often supplemented with natural language descriptions, diagrams (e.g., UML-like graphs), or wikis to explain the ontology’s purpose, scope, and usage.
 - Version Control: Ontologies are often stored in repositories (e.g., GitHub) with versioning to track changes.
 
-## How are ontologies organized as scoped?
+## How are ontologies organized and scoped?
 
 Ontologies are organized and scoped to ensure they are focused, manageable, and reusable. Within large domains, such as ITS, ontologies can become quite large and encompass expertise from many fields. To manage this complexity, the ITS ontology is broken down into multiple ontology efforts, each represented in one or more ontology files. In some cases (e.g., location referencing), the expertise extends beyond ITS, and we adopt or adapt more widely referenced definitions from other domains (e.g., ISO TC 211, ISO/IEC JTC 4).
 

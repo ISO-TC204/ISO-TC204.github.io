@@ -27,7 +27,7 @@ TC204 executes its [official work programme](https://www.iso.org/contents/data/c
 
 Our structure is shown below together with our [participating and observing](https://www.iso.org/en/contents/data/committee/05/47/54706.html?view=participation) members. All of [TC204’s groups and convenors](https://www.iso.org/en/contents/data/committee/05/47/54706.html#structure) may be approached via the [TC204 Secretariat.](https://www.iso.org/en/contents/data/committee/05/47/54706.html#secretariat)
 
-## Scope of TC204 Working Groups
+## Domains of Interest of TC204 Working Groups
 
 TC204's current active groups and their purposes are outlined below.
 
