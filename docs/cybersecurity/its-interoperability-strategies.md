@@ -9,14 +9,14 @@ Systems must encode, transmit, and interpret messages consistently. This include
 Standards define these message sets and their usage. For example:
 
 - SAE J2735 defines common V2X message structures such as Basic Safety Messages (BSM), Signal Phase and Timing (SPaT), and MAP messages.
-- SAE J2945/x documents define application-level requirements and expected behavior associated with those messages.
+- SAE J2945/x documents define application-level requirements and expected behaviour associated with those messages.
 - CTI 4501 profiles define how message sets are applied in specific deployments, such as connected intersections.
 
 If systems interpret message fields differently, apply inconsistent encoding rules, or assign different meanings to the same data, messages may be processed incorrectly or discarded. Interoperability at this layer depends on consistent implementation of message definitions and their associated application rules.
 
 ### Secure Data Structures
 
-Systems must implement security services using compatible data structures, encoding rules, and certificate handling so that messages can be authenticated, validated, and, where applicable, decrypted across implementations. 
+Systems must implement security services using compatible data structures, encoding rules, and certificate handling so that messages can be authenticated, validated, and, where applicable, decrypted across implementations.
 
 Standards define how security is applied to messages. For example:
 
@@ -27,7 +27,7 @@ These standards define how messages are secured and interpreted across systems, 
 
 Interoperability depends on consistent implementation of these elements. Differences in encoding rules, signature structures or algorithms, or certificate handling including variations in format or trust models, can prevent systems from validating or processing messages correctly.
 
-## Credential and Trust Interoperability 
+## Credential and Trust Interoperability
 
 Systems must be able to establish trust in credentials issued by different authorities, organizations, or jurisdictions. This includes validating certificates, understanding their scope of use, and determining whether they should be accepted within a given deployment.
 
@@ -74,4 +74,3 @@ IEEE 1609.2.2 adds the ability to assign trust permissions to each Root CA liste
 These permissions provide fine-grained control. For example, an SCMS Manager can trust a foreign Root CA for the purpose of receiving basic safety messages but indicate that it does not trust the opOrgId field due to differences in organizational vetting procedures. This model allows a system operator to define exactly what it accepts from each external trust domain. The receiving entity uses these trust permissions to evaluate messages and ensure that certificates are only accepted for the purposes explicitly permitted by the local CTL.
 
 IEEE 1609.2.2 enables interoperability between policy domains without requiring them to adopt identical certificate enrolment and other policies. It provides a mechanism for trust to be extended in a controlled and explicit way, supporting cross-border or cross-organizational communication while respecting local assurance requirements.
-
