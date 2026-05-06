@@ -1,6 +1,6 @@
 # Ontology Registry
 
-![Draft for review only](/assets/img/draft_for_review.svg)
+![Draft for review only](../../assets/img/draft_for_review.svg)
 
 This page lists all known ontologies included in the RITSO.
 

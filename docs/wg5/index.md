@@ -20,7 +20,7 @@ Currently, there are three main technologies used in EFC:
 
 EFC standards provide solid technical support for agreements between stakeholders (toll chargers and toll service providers) and underpin the interoperability between EFC systems.
 
-![Benefits of EFC standards](/assets/img/wg5benefits.png)
+![Benefits of EFC standards](../assets/img/wg5benefits.png)
 
 Benefits of EFC standards
 
@@ -68,7 +68,7 @@ Click for a standard preview (which links to the Online Browsing Platform, which
 
 Want to know more or participate? Please contact us.
 
-![Contact us](/assets/img/wg5pics.png)
+![Contact us](../assets/img/wg5pics.png)
 
 **Relationships to other standards:**
 

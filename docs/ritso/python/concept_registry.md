@@ -1,4 +1,4 @@
-![Draft for review only](/assets/img/draft_for_review.svg)
+![Draft for review only](../../assets/img/draft_for_review.svg)
 
 # Concept Registry
 

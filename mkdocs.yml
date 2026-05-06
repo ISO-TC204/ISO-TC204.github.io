@@ -44,19 +44,32 @@ nav:
     - RITSO: 
       - Home: ritso/index.md
       - Ontology formats: ritso/ontology_formats.md
+      - Naming conventions: ritso/naming_conventions.md
+      - Turtle file format: ritso/turtle.md
       - Ontology registry: ritso/python/ontology_registry.md
       - Concept registry: ritso/python/concept_registry.md
       - Imported ontologies:
-        - i72: https://isotc204.org/ontology-imported-i72
+        - foaf: https://isotc204.org/ontology-import-foaf
+        - geo: https://isotc204.org/ontology-import-geo
+        - gr: https://isotc204.org/ontology-import-gr
+        - i72: https://isotc204.org/ontology-i72-v1
+        - org: https://isotc204.org/ontology-import-org
+        - prov: https://isotc204.org/ontology-import-prov
+        - schema: https://isotc204.org/ontology-import-schema
+        - time: https://isotc204.org/ontology-import-time
+        - wgs84: https://isotc204.org/ontology-import-wgs84
+        - xsd: https://isotc204.org/ontology-import-xsd
       - City Data Model:
-        - Part 1: https://isotc204.org/ontology-cdm-p1
-        - Part 2: https://isotc204.org/ontology-cdm-p2
-        - Part 3: https://isotc204.org/ontology-cdm-p3
+        - Part 1: https://isotc204.org/ontology-cdm-p1-v1
+        - Part 2: https://isotc204.org/ontology-cdm-p2-v1
+        - Part 3: https://isotc204.org/ontology-cdm-p3-v1
       - ITS:
-        - Core: https://isotc204.org/ontology-its-core
-        - Location: https://isotc204.org/ontology-its-location
-        - Regulation: https://isotc204.org/ontology-its-regulation
-        - Time: https://isotc204.org/ontology-its-time
+        - Core: https://isotc204.org/ontology-its-core-v1
+        - Agent: https://isotc204.org/ontology-its-agent-v1
+        - Location: https://isotc204.org/ontology-its-location-v1
+        - Regulation: https://isotc204.org/ontology-its-regulation-v1
+        - Time: https://isotc204.org/ontology-its-time-v1
+        - Transport Network: https://isotc204.org/ontology-its-transport-network-v1
   - Standards: 
     - Overview: standards.md
     - METR: https://iso-tc204.github.io/iso24315/
