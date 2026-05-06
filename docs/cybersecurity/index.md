@@ -6,7 +6,7 @@ Welcome to the International Standards Organization (ISO) Guide Intelligent Tran
 
 An ITS is composed of vehicles, roadside devices, communication networks, backend systems and applications that exchange data in near real-time. These components often communicate across trust boundaries. Vehicles may join and leave networks dynamically, and cannot rely on pre-established trust relationships with roadside infrastructure or peer vehicles. The figure below illustrates some of the complexities associated with an ITS System-of-Systems.
 
-![ITS Environment](/cybersecurity/images/its_generic.jpg)
+![ITS Environment](images/its_generic.jpg)
 
 Systems such as Roadside Units (RSUs), sensors, and vehicle On-Board Units (OBUs) are often managed by different organizations. Each organization is responsible for securing its own systems and operations. For example, an Original Equipment Manufacturer (OEM) manages software and firmware updates for its brand of vehicles, a fleet operator monitors the performance and security posture of its fleet, and an infrastructure owner/operator manages roadside devices such as traffic signal controllers.
 
@@ -20,11 +20,11 @@ The following sections provide practical guidance on key aspects of ITS cybersec
 
 If you are new to the concept of ITS cybersecurity, start with the [Beginners Guide](beginners-guide.md).  Use this as a starting point to understand how ITS systems validate messages, authenticate participants, enforce authorization, and maintain trust across distributed environments.
 
-A glossary of terms is also available here: [site glossary](cybersecurity-glossary.md). 
+A glossary of terms is also available here: [site glossary](cybersecurity-glossary.md).
 
 ## Design and Implement ITS Cybersecurity
 
-Use this guide to define, implement, and maintain ITS cybersecurity. The sections below are organized as a workflow, from establishing trust and identifying applicable standards, to analyzing threats, implementing controls, enabling interoperability, and maintaining secure operation. Start with the areas most relevant to your work, or follow the sections in order to develop a complete, standards-aligned ITS cybersecurity approach.
+Use this guide to define, implement, and maintain ITS cybersecurity. The sections below are organized as a workflow, from establishing trust and identifying applicable standards, to analysing threats, implementing controls, enabling interoperability, and maintaining secure operation. Start with the areas most relevant to your work, or follow the sections in order to develop a complete, standards-aligned ITS cybersecurity approach.
 
 ### 1. [Establish and Validate Trust Using Cryptography and Certificates](primer-cryptography.md)
 
@@ -36,11 +36,11 @@ Determine which regulations, frameworks, and standards apply to your ITS deploym
 
 ### 3. [Conduct an ITS Threat Analysis](its-threat-analysis.md)
 
-Determine how threats to ITS systems translate into operational risk and what must be protected across devices, communications, and services. Threat analysis identifies assets, data flows, and trust boundaries, and evaluates how they could be targeted by adversaries. Use this section to perform a threat, vulnerability, and risk assessment (TVRA), assess likelihood and impact, and prioritize risks to define security requirements and guide control selection. 
+Determine how threats to ITS systems translate into operational risk and what must be protected across devices, communications, and services. Threat analysis identifies assets, data flows, and trust boundaries, and evaluates how they could be targeted by adversaries. Use this section to perform a threat, vulnerability, and risk assessment (TVRA), assess likelihood and impact, and prioritize risks to define security requirements and guide control selection.
 
 ### 4. [Implement Consistent Security Across ITS Systems](its-security-patterns.md)
 
-Define how security is consistently implemented across ITS devices, applications, networks, and operational processes. ITS systems require repeatable approaches to enforce trust, validate messages, manage credentials, and detect and respond to misbehaviour across distributed components. Security design patterns provide reusable solutions to these challenges, organized by functional areas such as application, device, network, and management layers. Use this section to select and apply proven security patterns, translate requirements into implementable controls, and ensure consistent enforcement of security functions across ITS deployments. 
+Define how security is consistently implemented across ITS devices, applications, networks, and operational processes. ITS systems require repeatable approaches to enforce trust, validate messages, manage credentials, and detect and respond to misbehaviour across distributed components. Security design patterns provide reusable solutions to these challenges, organized by functional areas such as application, device, network, and management layers. Use this section to select and apply proven security patterns, translate requirements into implementable controls, and ensure consistent enforcement of security functions across ITS deployments.
 
 ### 5. [Enable Secure Interoperable Systems](its-interoperability-strategies.md)
 
@@ -50,7 +50,7 @@ Determine how ITS systems interoperate across devices, vendors, and jurisdiction
 
 Define how ITS devices and systems are securely configured and hardened to operate in exposed and distributed environments. Many ITS deployments are physically accessible and remotely reachable, increasing the risk of compromise if not properly secured. Use this section to implement configuration and hardening practices across authentication, access control, logging, encryption, software updates, and key management to reduce attack surface, enforce consistent security policies, and maintain secure operation over time.
 
-### 7. [Assign and Coordinate Cybersecurity Responsibilities ](its-stakeholder-guidance.md)
+### 7. [Assign and Coordinate Cybersecurity Responsibilities](its-stakeholder-guidance.md)
 
 Define how cybersecurity responsibilities are assigned across ITS stakeholders and how those responsibilities are coordinated to support secure system operation. ITS cybersecurity spans multiple organizations, including standards developers, certificate authorities, infrastructure operators, OEMs, application developers, and policy authorities, each responsible for different parts of the system. Use this section to understand stakeholder roles, define responsibilities, and ensure coordinated implementation of security controls across vehicles, infrastructure, backend systems, and trust services.
 

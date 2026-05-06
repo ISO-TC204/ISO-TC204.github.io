@@ -8,7 +8,7 @@ Authorities define requirements for protecting identity and preventing long-term
 
 ## Compliance, Audit and Certification
 
-Authorities must verify that policies and regulations are implemented effectively. This includes auditing certificate management authorities for compliance with CP and CPS requirements, reviewing OEM Cybersecurity Management Systems (CSMS) for conformance with [ISO/SAE 21434](ISO/SAE 21434) or [UNECE WP.29 R155](https://unece.org/transport/documents/2021/03/standards/un-regulation-no-155-cyber-security-and-cyber-security) requirements, and conducting inspections of Infrastructure Owner-Operators (IOOs) to confirm that device security controls are applied consistently. Audits provide assurance that obligations are properly enforced in practice. Authorities define and enforce compliance requirements for all participating entities, including certificate management providers, manufacturers, and operators.
+Authorities must verify that policies and regulations are implemented effectively. This includes auditing certificate management authorities for compliance with CP and CPS requirements, reviewing OEM Cybersecurity Management Systems (CSMS) for conformance with [ISO/SAE 21434](https://www.iso.org/standard/70918.html) or [UNECE WP.29 R155](https://unece.org/transport/documents/2021/03/standards/un-regulation-no-155-cyber-security-and-cyber-security) requirements, and conducting inspections of Infrastructure Owner-Operators (IOOs) to confirm that device security controls are applied consistently. Audits provide assurance that obligations are properly enforced in practice. Authorities define and enforce compliance requirements for all participating entities, including certificate management providers, manufacturers, and operators.
 
 This includes:
 
@@ -16,7 +16,7 @@ This includes:
 - validating OEM cybersecurity management systems
 - ensuring infrastructure operators apply required security controls
 
-Compliance models vary by region. For example, European Root CAs must meet defined technical and organizational requirements prior to inclusion in the ECTL, while North American SCMS providers are audited against ecosystem-defined requirements and must maintain recognized certifications such as [ISO/IEC 27001](ISO/IEC 27001) or the [Trusted Information Security Assessment Exchange (TISAX)](https://enx.com/en-US/TISAX/).
+Compliance models vary by region. For example, European Root CAs must meet defined technical and organizational requirements prior to inclusion in the ECTL, while North American SCMS providers are audited against ecosystem-defined requirements and must maintain recognized certifications such as [ISO/IEC 27001](https://www.iso.org/standard/27001) or the [Trusted Information Security Assessment Exchange (TISAX)](https://enx.com/en-US/TISAX/).
 
 ## Incident Response and Coordination
 
