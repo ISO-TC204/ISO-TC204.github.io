@@ -1,4 +1,4 @@
-# ITS Interoperability
+# Enable Secure Interoperable Systems
 
 ITS interoperability requires that products and systems from different vendors, regions, and domains can exchange, interpret and trust data in a consistent manner.  This depends on alignment across multiple layers, including message formats, security mechanisms, credential policies, and communication protocols. These layers must operate consistently even when systems are deployed across different regions, organizations, and governance models.
 

@@ -1,4 +1,4 @@
-# Cybersecurity Patterns for ITS System Design
+# Implement Consistent Security Across ITS Systems
 
 Intelligent Transportation Systems (ITS) are composed of independently developed and managed components, including vehicles, infrastructure, mobile applications, and backend systems that must operate securely across organizational and jurisdictional boundaries. These systems must exchange authenticated data, enforce policy-based permissions, and maintain trust even when governed by different standards bodies, operators, or certificate authorities.
 
