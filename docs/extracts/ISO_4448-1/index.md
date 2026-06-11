@@ -11,6 +11,8 @@ annotation: "This Extract does not replace the technical standard itself; it is 
 note: "Note: This Extract presents selected clauses of the described document and retains the original clause numbering."
 ---
 
+{{ render_standard_metadata() }}
+
 ## Introduction
 
 In 2023, there are several hundred companies around the world – mostly start-ups – engaged in the development of small, remote-controlled and sometimes partially automated devices for operation on city sidewalks and cycle paths. Thousands of small retailers and dozens of delivery companies use these systems for last-mile delivery. Already, many more cities have a small number of such PMRs than robotic taxis in pilot operation. This means that cities are likely to face PMR regulation requirements much sooner than the regulation of robotic cars and trucks is expected.

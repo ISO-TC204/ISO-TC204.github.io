@@ -11,6 +11,8 @@ annotation: "This Extract does not replace the technical standard itself; it is 
 note: "Note: This Extract presents selected chapters of the described document and retains the original chapter numbering."
 ---
 
+{{ render_standard_metadata() }}
+
 ## Introduction
 
 The standard ISO 14823-1:2024 defines the **Graphic Data Dictionary (GDD)** – a unified, language-independent system for encoding traffic signs and pictograms for the needs of Intelligent Transport Systems (ITS). Its purpose is to enable **efficient transmission, interpretation, and display of traffic information** across different countries, systems, and technologies. This dictionary is used for information exchange between centres (DATEX II) and between infrastructure and vehicles (cooperative systems, C-ITS) for describing traffic signs displayed, for example, on variable message signs.

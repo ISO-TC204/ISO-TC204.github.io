@@ -11,6 +11,8 @@ annotation: "This Extract does not replace the technical standard itself; it is 
 note: "Note: The extract lists selected chapters of the described document and adopts the original chapter numbering."
 ---
 
+{{ render_standard_metadata() }}
+
 ## Introduction
 
 This standard defines data exchange requirements to support Electric Vehicle (EV)-based Demand Response (DR) services utilizing nomadic devices, considering two types of EV-based DR services. One is to reduce demand of electric vehicles charging when there is a shortage on the grid side. The other is to increase demand of electric vehicles charging when the surplus on the grid side is forecasted day ahead.

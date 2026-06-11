@@ -11,6 +11,13 @@ annotation: "This Extract does not replace the technical standard itself; it is 
 note: "Note: This Extract presents selected chapters of the described document and retains the original chapter numbering."
 ---
 
+_**{{ page.meta.name }}**_
+
+!!! note
+    Published: in {{ page.meta.published }} (Edition {{ page.meta.edition }}), {{ page.meta.pages }} pages
+
+    This Extract does not replace the technical standard itself; it is only informative material about the standard.
+
 ## Introduction
 
 This technical standard (hereinafter also referred to as the "described document") specifies the application interface for electronic fee collection (EFC) systems that utilize dedicated short-range communication (DSRC). Specifically, it establishes the technical conditions for the EFC transaction model, EFC functions, and EFC data attributes from which an EFC transaction can be created in a DSRC environment.

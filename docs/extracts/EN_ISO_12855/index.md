@@ -1,11 +1,17 @@
-# EN ISO 12855:2022 EXTRACT
+---
+published: 2022
+edition: 3
+pages: 153
+title: "EN ISO 12855 - Extract"
+standard: "EN ISO 12855"
+name: "Electronic Fee Collection (EFC) – Information exchange between service provision and toll charging"
+name_1: "Electronic Fee Collection (EFC)"
+name_2: "Information exchange between service provision and toll charging"
+annotation: "This Extract does not replace the technical standard itself; it is only informative material about the standard."
+note: "Note: This Extract presents selected chapters of the described document and retains the original chapter numbering."
+---
 
-_**Electronic Fee Collection (EFC) – Information exchange between service provision and toll charging**_
-
-!!! note
-    Published in 2022 (Edition 3), 153 pages
-
-    This Extract does not replace the technical standard itself; it is only informative material about the standard.
+{{ render_standard_metadata() }}
 
 ## Introduction
 

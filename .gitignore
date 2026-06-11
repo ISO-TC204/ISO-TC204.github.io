@@ -4,6 +4,5 @@ site/
 site.zip
 venv/
 docs/cybersecurity/.project
-/site/
 .DS_Store
 temp_dir/

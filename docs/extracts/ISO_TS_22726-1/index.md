@@ -12,6 +12,8 @@ annotation: "This Extract does not replace the technical standard itself; it is 
 note: "Note: This Extract presents selected chapters of the described document and retains the original chapter numbering."
 ---
 
+{{ render_standard_metadata() }}
+
 ## Introduction
 
 The ISO/TS 22726 series was created in response to the need to unify the way **static map data for automated driving (ADS)** are represented and stored. Modern vehicles with a high degree of automation require extremely precise, consistent, and rapidly accessible map data that link detailed descriptions of infrastructure with dynamic traffic information. Existing standards — such as ISO 14296 or GDF 5.1 - cover navigation or data exchange between providers, but they are not optimized for **runtime access in onboard systems** nor for representing detailed elements such as lanes, their topology, precise geometries, or relationships to traffic events.
