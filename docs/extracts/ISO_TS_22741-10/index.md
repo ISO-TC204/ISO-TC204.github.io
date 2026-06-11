@@ -11,8 +11,6 @@ annotation: "This Extract does not replace the technical standard itself; it is 
 note: "Note: This Extract presents selected chapters of the described document and retains the original chapter numbering."
 ---
 
-{{ render_standard_metadata() }}
-
 ## Introduction
 
 The ISO 22741-10 standard (hereinafter referred to as 'the described document') is part of a set of standards that define the principles of information exchange between infrastructure devices and traffic centres using AP-DATEX (an application profile of DATEX II, which serves for the exchange of traffic data between various information systems).

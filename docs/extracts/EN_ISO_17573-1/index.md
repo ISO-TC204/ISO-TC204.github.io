@@ -11,8 +11,6 @@ annotation: "This Extract does not replace the technical standard itself; it is 
 note: "Note: This Extract presents selected chapters of the described document and retains the original chapter numbering."
 ---
 
-{{ render_standard_metadata() }}
-
 ## Introduction
 
 This standard, consisting of a single part (hereinafter referred to as the "described document"), defines the architecture for tolling environments. In these environments, a user who has a contract with only one Service Provider can use their vehicle across various Toll Domains operated by different Toll Chargers.
