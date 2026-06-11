@@ -10,7 +10,7 @@ nav:
     - Intro to ITS: intro.md
     - Business Plan: assets/pdf/business-plan-2008-04-06.pdf
     - Contact us: contact.md
-    - Vocabulary: vocab.md
+    - Vocabulary: https://isotc204.org/iso14812/
     - Acknowledgements: acknowledgements.md
     - Contributions: contributor.md
     - FAQs: faq.md
@@ -72,7 +72,22 @@ nav:
         - Transport Network: https://isotc204.org/ontology-its-transport-network-v1
   - Standards: 
     - Overview: standards.md
-    - METR: https://iso-tc204.github.io/iso24315/
+    - Extracts:
+      - ISO/TR 4448-1: extracts/ISO_4448-1/index.md
+      - EN ISO 12855: extracts/EN_ISO_12855/index.md
+      - ISO 14823-1: extracts/ISO_14823-1/index.md
+      - EN ISO 14906: extracts/EN_ISO_14906/index.md
+      - ISO 15622: extracts/ISO_15622/index.md
+      - EN ISO 17573-1: extracts/EN_ISO_17573-1/index.md
+      - ISO 17748-3: extracts/ISO_17748-3/index.md
+      - ISO/TS 19091: extracts/ISO_TS_19091/index.md
+      - ISO 21214: extracts/ISO_21214/index.md
+      - ISO 23792-1: extracts/ISO_23792-1/index.md
+      - ISO 26683-2: extracts/ISO_26683-2/index.md
+      - ISO/TS 22726-1: extracts/ISO_TS_22726-1/index.md
+      - ISO/TS 22741-10: extracts/ISO_TS_22741-10/index.md
+    - METR: https://isotc204.org/iso24315/
+    - Vocabulary: https://isotc204.org/iso14812/
   - Cybersecurity: 
     - Introduction: cybersecurity/index.md
     - Beginners Guide: cybersecurity/beginners-guide.md 
@@ -124,6 +139,10 @@ theme:
     repo: fontawesome/brands/github
 plugins:
   - search
+  - redirects:
+      redirect_maps:
+        'metr.md': 'https://isotc204.org/iso24315/'
+        'vocabulary.md': 'https://isotc204.org/iso14812/'
   - git-revision-date-localized:
       type: date
       exclude:
