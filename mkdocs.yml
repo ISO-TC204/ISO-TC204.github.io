@@ -138,6 +138,8 @@ theme:
   icon:
     repo: fontawesome/brands/github
 plugins:
+  - macros:
+      module_name: macros
   - search
   - redirects:
       redirect_maps:
