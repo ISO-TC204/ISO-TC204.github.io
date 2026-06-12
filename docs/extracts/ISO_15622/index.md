@@ -12,8 +12,6 @@ annotation: "This Extract does not replace the technical standard itself; it is 
 note: "Note: This Extract presents selected chapters of the described document and retains the original chapter numbering."
 ---
 
-{{ render_standard_metadata() }}
-
 ## Introduction
 
 This standard belongs to the family of standards dealing with driver assistance systems and intelligent transport systems. The main function of Adaptive Cruise Control (ACC) is to control vehicle speed adaptively relative to a forward vehicle by using information concerning: (1) the distance to forward vehicles, (2) the motion of the subject vehicle equipped with ACC, and (3) driver commands. Based on the acquired information, the controller (ACC control strategy) transmits commands to the actuators responsible for longitudinal vehicle control and simultaneously provides status information to the driver (see Figure 1).

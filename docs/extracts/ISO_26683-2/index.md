@@ -11,8 +11,6 @@ annotation: "This Extract does not replace the technical standard itself; it is 
 note: "Note: The Extract presents selected chapters of the described document and retains the original chapter numbering."
 ---
 
-{{ render_standard_metadata() }}
-
 ## Introduction
 
 The ISO 26683 (FLC‑CIC) set of standards uses advanced information and communication technology for freight transport, focusing on the presentation of data when providing end‑to‑end services related to cargo and their means of transport. It does not provide a system design, nor does it specify the technologies to be used.

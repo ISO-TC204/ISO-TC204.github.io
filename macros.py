@@ -1,3 +1,16 @@
+def on_pre_page_macros(env):
+    """
+    Automatically inject the standard metadata box into extract pages
+    so source files don't need an explicit {{ render_standard_metadata() }} call.
+
+    Fires before Jinja2 processes the page. Only extract pages set the
+    'standard' front matter key, so that is used as the selector. Guard
+    against double-injection in case a file still has the explicit call.
+    """
+    if "standard" in env.page.meta and "render_standard_metadata" not in env.markdown:
+        env.markdown = "{{ render_standard_metadata() }}\n\n" + env.markdown
+
+
 def define_env(env):
     """Define macros and variables for MkDocs."""
 

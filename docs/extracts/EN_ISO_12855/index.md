@@ -11,8 +11,6 @@ annotation: "This Extract does not replace the technical standard itself; it is 
 note: "Note: This Extract presents selected chapters of the described document and retains the original chapter numbering."
 ---
 
-{{ render_standard_metadata() }}
-
 ## Introduction
 
 This technical standard (hereinafter also referred to as the “described document”) specifies the interface for the exchange of data messages between the main entities (roles) of the electronic fee collection system architecture, i.e., the toll charger and the toll service provider. It establishes the complete specification of data messages, their syntax, semantics, and the mechanism of their transmission.

@@ -12,8 +12,6 @@ annotation: "This Extract does not replace the technical standard itself; it is 
 note: "Note: This Extract presents selected chapters of the described document and retains the original chapter numbering."
 ---
 
-{{ render_standard_metadata() }}
-
 ## Introduction
 
 The ISO 21214 international standard (hereinafter referred to as the described document) introduces a set of functional requirements for the communication interface of an ITS station.

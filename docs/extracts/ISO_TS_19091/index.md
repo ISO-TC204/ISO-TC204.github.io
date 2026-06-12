@@ -12,8 +12,6 @@ annotation: "This Extract does not replace the technical standard itself; it is 
 note: "Note: This Extract presents selected chapters of the described document and retains the original chapter numbering."
 ---
 
-{{ render_standard_metadata() }}
-
 ## Introduction
 
 ISO/TS 19091 (hereinafter referred to as "this document") describes the use cases for several applications in the domain of signalized intersections, the goal of which is to improve safety, mobility, and environmental sustainability. For each use case, the information needs are defined that must be fulfilled through communication between vehicles and the infrastructure. In this way, the requirements for individual applications are defined, and these are subsequently mapped to data frames and data elements through which the individual requirements are fulfilled within the defined message set.
