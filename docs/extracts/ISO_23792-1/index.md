@@ -41,33 +41,33 @@ Most additional related standards, technical specifications, and research docume
 
 The document explicitly defines 6 terms and definitions (selection):
 
-**motorway –** road specially designed and built for motorized traffic that does not serve properties bordering on it
+**motorway** – road specially designed and built for motorized traffic that does not serve properties bordering on it
 
-**route –** planned sequence of waypoints to reach a destination
+**route** – planned sequence of waypoints to reach a destination
 
-**trajectory –** sequence of locations that define the intended motion vector of the subject vehicle
+**trajectory** – sequence of locations that define the intended motion vector of the subject vehicle
 
-**vehicle motion control (VMC) –** activities necessary to adjust vehicle movement continuously in real time, which include “lateral vehicle motion control” and “longitudinal vehicle motion control”
+**vehicle motion control (VMC)** – activities necessary to adjust vehicle movement continuously in real time, which include “lateral vehicle motion control” and “longitudinal vehicle motion control”
 
 ## 4 Symbols and abbreviated terms
 
 The document defines 14 abbreviated terms (selection):
 
-MCS Motorway chauffeur system
+**MCS** – Motorway chauffeur system
 
-FRU fallback-ready user
+**FRU** – fallback-ready user
 
-DDT dynamic driving task
+**DDT** – dynamic driving task
 
-RTI request to intervene
+**RTI** – request to intervene
 
-MRM minimal risk manoeuvre
+**MRM** – minimal risk manoeuvre
 
-MRC minimal risk condition
+**MRC** – minimal risk condition
 
-OEDR object and event detection and response
+**OEDR** – object and event detection and response
 
-TTC time to collision
+**TTC** – time to collision
 
 Other terms and abbreviations from the ITS domain can be found in the ITSTerminology dictionary ([www.itsterminology.org](http://www.itsterminology.org)), the StandardLand website ([www.standardland.cz](http://www.standardland.cz)) or the OBP plataform ([www.iso.org/obp](http://www.iso.org/obp)).
 
@@ -85,9 +85,11 @@ This subclause is further divided into five parts and systematically describes t
 
 Subclause 5**.2.4 Abnormalities in roadway operational condition** includes extraordinary situations such as road works or incidents. Subclause **5.2.5 Ambient environmental conditions** describes weather and lighting conditions.
 
-![Figure 1 — Example of geographic boundary (geofence) of an ODD (Fig. 2 in the source document)](fig-1.png)
+![Figure 1](fig-1.png){.figure}
 
-**Figure 1 — Example of geographic boundary (geofence) of an ODD (Fig. 2 in the source document)**
+/// caption
+Figure 1 — Example of geographic boundary (geofence) of an ODD (Fig. 2 in the source document)
+///
 
 ### 5.3 System functionalities
 

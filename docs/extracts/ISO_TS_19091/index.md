@@ -68,19 +68,19 @@ The technical specification defines 52 terms. The most important include:
 
 The technical specification contains 51 abbreviations. The most important include:
 
-**CV** Connected Vehicle
+**CV** – Connected Vehicle
 
-**OBE** On-Board Equipment
+**OBE** – On-Board Equipment
 
-**RSE** Roadside Equipment
+**RSE** – Roadside Equipment
 
-**SPaT** Signal Phase and Timing
+**SPaT** – Signal Phase and Timing
 
-**SRM** Signal Request Message (J2735™)
+**SRM** – Signal Request Message (J2735™)
 
-**SSM** Signal Status Message (J2735™)
+**SSM** – Signal Status Message (J2735™)
 
-**TSC** Traffic Signal Controller
+**TSC** – Traffic Signal Controller
 
 Other terms and abbreviations from the ITS domain can be found in the ITSTerminology dictionary ([www.itsterminology.org](http://www.itsterminology.org)), the StandardLand website ([www.standardland.cz](http://www.standardland.cz)) or the OBP plataform ([www.iso.org/obp](http://www.iso.org/obp)).
 
@@ -92,9 +92,11 @@ The "Functional model" subclause describes the three basic components within V2I
 
 Within the functional model, the general system architecture is also described, including the technical components with which the individual elements described above are equipped – see Figure 1 below. The functions of individual elements in this figure are described in the standard to the extent of approximately one page.
 
-![Figure 1 – General architecture for V2I/I2V communications (Fig. 2 of the source standard)](fig-1.png)
+![Figure 1](fig-1.png){.figure}
 
-**Figure 1 – General architecture for V2I/I2V communications (Fig. 2 of the source standard)**
+/// caption
+Figure 1 – General architecture for V2I/I2V communications (Fig. 2 of the source standard)
+///
 
 Furthermore, the Functional model addresses message interactions, i.e. an explanation of the broadcast principle within DSRC communications and the implications and requirements this has for message transmission (frequent repetition of the same message "over the air" instead of interactive information exchange used in TCP/IP).
 
@@ -162,13 +164,13 @@ In this very brief clause, the following is literally stated:
 
 "This document specifies the data dictionary to be used internationally for the deployment of the following messages:
 
-- *map data (MAP);*
+1. *map data (MAP);*
 
-- *signal phase and timing (SPaT);*
+1. *signal phase and timing (SPaT);*
 
-- *signal request message (SRM);*
+1. *signal request message (SRM);*
 
-- *signal status message (SSM).*
+1. *signal status message (SSM).*
 
 The structure of these messages is defined by selection of an annex and the message requirements therein. The annexes with message structure requirements are as follows:
 

@@ -15,8 +15,7 @@ note: "Note: This Extract presents selected chapters of the described document a
 
 This technical standard (hereinafter also referred to as the “described document”) specifies the interface for the exchange of data messages between the main entities (roles) of the electronic fee collection system architecture, i.e., the toll charger and the toll service provider. It establishes the complete specification of data messages, their syntax, semantics, and the mechanism of their transmission.
 
-!!! note
-    This Extract presents selected chapters of the described document and retains the original chapter numbering.*
+*Note: This Extract presents selected chapters of the described document and retains the original chapter numbering.*
 
 ## Usage
 
@@ -40,21 +39,21 @@ ISO 17573-2, Electronic Fee Collection – System architecture for vehicle-relat
 
 This clause contains 42 abbreviations related to the described document, the most important of which are the following:
 
-**ADU** application data unit
+**ADU** – application data unit
 
-**DSRC** dedicated short-range communications
+**DSRC** – dedicated short-range communications
 
-**EFC** electronic fee collection system; electronic fee collection
+**EFC** – electronic fee collection system; electronic fee collection
 
-**GNSS** global navigation satellite system
+**GNSS** – global navigation satellite system
 
-**OBE** on-board equipment
+**OBE** – on-board equipment
 
-**RSE** roadside equipment
+**RSE** – roadside equipment
 
-**TC** toll charger
+**TC** – toll charger
 
-**TSP** toll service provider
+**TSP** – toll service provider
 
 Other terms and abbreviations from the ITS domain can be found in the *ITS Terminology* dictionary ([www.itsterminology.org](http://www.itsterminology.org)), the *StandardLand* website ([www.standardland.cz](http://www.standardland.cz)) or the *OBP platform* ([www.iso.org/obp](http://www.iso.org/obp)).
 
@@ -78,29 +77,37 @@ This clause, spanning 9 pages, contains a basic description of the interface fun
 
 - provision of medium provider billing details.
 
-![Figure 1 – Overview of functionalities (Fig. 3 of the source standard)](fig-1.png)
+![Figure 1](fig-1.png){.figure}
 
-**Figure 1 – Overview of functionalities (Fig. 3 of the source standard)**
+/// caption
+Figure 1 – Overview of functionalities (Fig. 3 of the source standard)
+///
 
 ## 6 Specification
 
 This clause, spanning 121 pages, contains a description of the structure of 19 application data units (ADUs) that form the data messages transmitted via the interface. This is the pivotal clause of the described document. The ADUs listed in the table below are defined sequentially:
 
-![](fig-2.png)
+![Table 1](fig-2.png){.figure}
 
-**Table 1 – Overview of ADUs (Tab. 5 of the source standard)**
+/// caption | <
+Table 1 – Overview of ADUs (Tab. 5 of the source standard)
+///
 
 For illustration, the definition of the ExceptionListADU data unit is provided below.
 
-**Table 2 – Definition of ExceptionListADU (Tab. 77 of the source standard)**
+![Table 2](fig-3.png){.figure}
 
-![Table 2 – Definition of ExceptionListADU (Tab. 77 of the source standard)](fig-3.png)
+/// caption | <
+Table 2 – Definition of ExceptionListADU (Tab. 77 of the source standard)
+///
 
 Individual data types are explained sequentially in the text, or their definition is provided. For illustration, the definition of the ExceptionListEntry data type is provided below.
 
-**Table 3 – Definition of ExceptionListEntry (Tab. 78 of the source standard)**
+![Table 3](fig-4.png){.figure}
 
-![Table 3 – Definition of ExceptionListEntry (Tab. 78 of the source standard)](fig-4.png)
+/// caption | <
+Table 3 – Definition of ExceptionListEntry (Tab. 78 of the source standard)
+///
 
 ## 7 Transmission Mechanisms
 

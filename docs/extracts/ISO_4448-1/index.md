@@ -55,17 +55,17 @@ Note 1 to entry: This is a form of ADS-DV (Automated Driving System – Dedicate
 
 This clause lists 12 abbreviations from the field of mobile robots in public space, the most important of which are the following:
 
-**ADS** automated driving system
+**ADS** – automated driving system
 
-**DDT** dynamic driving task
+**DDT** – dynamic driving task
 
-**IoT** internet of things
+**IoT** – internet of things
 
-**PMR** public-area mobile robot, ground-based automated mobile system in public space
+**PMR** – public-area mobile robot, ground-based automated mobile system in public space
 
-**PUDO** pickup and drop off
+**PUDO** – pickup and drop off
 
-**VRU** vulnerable road user
+**VRU** – vulnerable road user
 
 Other terms and abbreviations from the ITS domain can be found in the ITSTerminology dictionary ([www.itsterminology.org](http://www.itsterminology.org/)), the StandardLand website ([www.standardland.cz](http://www.standardland.cz/)) or the OBP platform ([www.iso.org/obp](http://www.iso.org/obp)).
 
@@ -81,38 +81,40 @@ Clause 6 is 4 pages long and elaborates on the necessary steps that the standard
 
 Clause 7 is 10 pages long and describes the reasons why standardization is necessary. Subclause 7.1 discusses the comparison of robotic vehicles and delivery robots in terms of quantity and timing of deployment, with standardisation of these means being more urgent.
 
-![Figure 1 — Example of PMR forms for the distribution of small packages 
-(Source. Urban robotics foundation)](fig-1.png)
+![Figure 1](fig-1.png){.figure}
 
-**Figure 1 — Example of PMR forms for the distribution of small packages** *(Source. Urban robotics foundation)*
+/// caption
+Figure 1 — Example of PMR forms for the distribution of small packages 
+(Source. Urban robotics foundation)
+///
 
 Subclause **7.2** describes the need to create a safe space in the public space of the city, where such systems could move, the majority of which is devoted to safety aspects and also to lower operating costs than those associated with robo-vehicles.
 
 Subclause **7.3** deals with challenges such as common obstacles on the infrastructure/pavement, such as garbage cans, parked vehicles, stored building materials or evicted furniture, fallen tree branches or bushes growing into the road, places where the pavement ends or poor quality of the pavement surface. At the same time, it also lists 12 issues that need to be solved by regulation:
 
-- pedestrian and cyclist safety and rights-of-way;
+1. pedestrian and cyclist safety and rights-of-way;
 
-- requirements for infrastructure dimensions (related to accessibility regulations);
+1. requirements for infrastructure dimensions (related to accessibility regulations);
 
-- PMR speeds, dimensions, weights (maximums and minimums);
+1. PMR speeds, dimensions, weights (maximums and minimums);
 
-- equipment such as brakes, lights, speakers, mics, reflectors, signage (decals);
+1. equipment such as brakes, lights, speakers, mics, reflectors, signage (decals);
 
-- device identification and its visibility for enforcement;
+1. device identification and its visibility for enforcement;
 
-- areas and hours of operation, especially avoiding certain zones such as schools;
+1. areas and hours of operation, especially avoiding certain zones such as schools;
 
-- PMR behaviour regarding accessibility (e.g. distance-keeping, blocking ramps or entrance ways);
+1. PMR behaviour regarding accessibility (e.g. distance-keeping, blocking ramps or entrance ways);
 
-- audible signals emanating from a PMR such as their loudness and meaning;
+1. audible signals emanating from a PMR such as their loudness and meaning;
 
-- requirements to alert other users of PMR presence (sounds, lights, flags);
+1. requirements to alert other users of PMR presence (sounds, lights, flags);
 
-- requirements to recognize and respond to sounds such as emergency vehicle sirens;
+1. requirements to recognize and respond to sounds such as emergency vehicle sirens;
 
-- enforcement and penalties;
+1. enforcement and penalties;
 
-- liability and insurance.
+1. liability and insurance.
 
 ## 8 Operating principles for PMRs
 
