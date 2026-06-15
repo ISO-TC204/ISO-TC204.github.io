@@ -1,4 +1,4 @@
-<!-- registries.md -->
+<!-- contributor.md -->
 
 # Commenting and Contributing to ISO TC 204
 
@@ -6,7 +6,7 @@ At a very high-level:
 
 **Commenting** is a usually request to change something such as adding, modifying or removing content or links on a TC204 webpage **_(or document???)_**. _Comments_ trigger a TC204 process to create an "issue" in TC204's GitHub respository. Less frequently, _Comments_ may simply be feedback rather than a request for change. _Comments_ can be submitted via a number of pathways which are dependent upon whether a person is a member of TC204 or not. 
 
-**Contributing** is a response to resolve an issue raised by a _Comment_ in the GitHub environment.  _Contributions_ are only prepared, reviewed and agreed by TC204 experts. Once finalised, _Contributions_ are only incorporated (merged) into TC204's repository and published by one of TC204's site Maintainers.
+**Contributing** is a response to resolve an issue in the GitHub environment that was raised by a _Comment_.  _Contributions_ are only prepared, reviewed and agreed by TC204 experts. Once finalised, _Contributions_ are only incorporated (merged) into TC204's repository and published by one of TC204's site Maintainers.
 
 _Comments_ and _Contributions_ concerning TC204 documents can only be provided via formal processes defined by ISO and participating ISO members (National Standards Bodies). The formal _ISO Standards_ process is shown in Figure 1 and remains the official pathway to provide both _Comments_ and _Contributions_ to ensure .
 
@@ -28,7 +28,10 @@ TC204 has developed a [Guide for Editors](https://github.com/ISO-TC204/ISO-TC204
 
 ## Comments and Contributions for this website
 
-A number of pathways to _Comment_ or _Contribute_ to this website are shown in Figure 2, of which submissions via GitHub provide the most efficient, and are strongly preferred. 
-![Figure 2. TC204 Website Pathways for Comments and Contributions](https://www.iso.org/files/live/sites/isoorg/files/developing_standards/get_involved/img/Illust-The%20process2.svg)
+A number of pathways to _Comment_ or _Contribute_ to this website are shown in Figure 2, of which submissions via GitHub provide the most efficient, and are strongly preferred over direct email contact to the respective Working Group Convenor. 
 
-, you can use the associated [GitHub issues page](https://github.com/ISO-TC204/ISO-TC204.github.io/issues)
+![Figure 2. TC204 Website Pathways for Comments and Contributions](https://github.com/J-Venz/ISO-TC204.github.io/commit/974e2712f721df0eae0483a46ea7ec36ebae2d28).
+
+You can use the associated [GitHub issues page](https://github.com/ISO-TC204/ISO-TC204.github.io/issues)
+
+A number of templates are under development to further improve the quality and efficiency of _Comments_ and _Contributions_. 
