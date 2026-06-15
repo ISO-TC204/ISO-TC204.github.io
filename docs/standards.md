@@ -15,6 +15,7 @@ ISO TC 204 maintains over 350 documents. This website provides supporting inform
 |[EN ISO 17573-1](extracts/EN_ISO_17573-1/index.md)|Electronic Fee Collection (EFC) – System architecture for vehicle-related tolling – Part 1: Reference model|
 |[ISO 17748-3](extracts/ISO_17748-3/index.md)|Intelligent transport systems – Energy-based green ITS services for smart city mobility applications via nomadic and mobile devices – Part 3: Data exchange requirements for electric vehicle (EV)-based demand response charging services|
 |[ISO/TS 19091](extracts/ISO_TS_19091/index.md)|Intelligent transport systems – Cooperative ITS – Using V2I and I2V communications for applications related to signalized intersections|
+|[ISO/TS 21219-19](extracts/ISO_TS_21219-19/index.md)|Intelligent Transport Systems – Traffic and Travel Information (TTI) in the Transport Protocol Expert Group, Second Generation (TPEG2) – Part 19: Applications for Weather Information (TPEG2-WEA)|
 |[ISO 21214](extracts/ISO_21214/index.md)|Intelligent Transport Systems – CALM – Infrared-Based Communication Systems|
 |[ISO 23792-1](extracts/ISO_23792-1/index.md)|Intelligent transport systems – Motorway chauffeur systems (MCS) – Part 1: Framework and general requirements|
 |[ISO 26683-2](extracts/ISO_26683-2/index.md)|Intelligent Transport Systems – Freight land conveyance content identification and communication – Part 2: Application interface profiles|
