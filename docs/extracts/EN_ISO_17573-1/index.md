@@ -51,17 +51,17 @@ This clause contains 20 terms, the most important of which are the following:
 
 This clause contains 17 abbreviations, the most important of which are the following:
 
-**DSRC** Dedicated Short-Range Communication
+**DSRC** – Dedicated Short-Range Communication
 
-**EETS** European Electronic Toll Service
+**EETS** – European Electronic Toll Service
 
-**GNSS** Global Navigation Satellite System
+**GNSS** – Global Navigation Satellite System
 
-**OBU** On-Board Unit
+**OBU** – On-Board Unit
 
-**RSE** Road-Side Equipment
+**RSE** – Road-Side Equipment
 
-**TC** Toll Charger
+**TC** – Toll Charger
 
 Other terms and abbreviations from the ITS domain can be found in the *ITS Terminology* dictionary ([www.itsterminology.org](http://www.itsterminology.org)), the *StandardLand* website ([www.standardland.cz](http://www.standardland.cz)) or the *OBP platform* ([www.iso.org/obp](http://www.iso.org/obp)).
 
@@ -75,9 +75,11 @@ The distribution of these roles is illustrated in Figure 1 (blue denotes externa
 
 - Standardization and certification authorities, defining EFC standards or standards related to EFC systems or relevant to individual toll domains.
 
-![Figure 1 – Organizational objects in EFC (Fig. 1 of the source standard)](fig-1.png)
+![Figure 1](fig-1.png){.figure}
 
-**Figure 1 – Organizational objects in EFC (Fig. 1 of the source standard)**
+/// caption
+Figure 1 – Organizational objects in EFC (Fig. 1 of the source standard)
+///
 
 ## 6 Internal Roles within the EFC Environment
 
@@ -85,21 +87,25 @@ This clause, spanning five pages, describes various internal roles within the EF
 
 - Interoperability Manager: Tasked with managing the rules of the overall toll regime. Responsibilities include:
 
-- Defining security and data privacy concepts.
+    - Defining security and data privacy concepts.
 
-- Defining identification schemes and granting ID codes to tolling applications.
+    - Defining identification schemes and granting ID codes to tolling applications.
 
-- Certification processes for equipment and operational permits, as well as dispute resolution and monitoring.
+    - Certification processes for equipment and operational permits, as well as dispute resolution and monitoring.
 
-![Figure 2 – Roles in toll environment (Fig. 2 of the source standard)](fig-2.png)
+![Figure 2](fig-2.png){.figure}
 
-**Figure 2 – Roles in toll environment (Fig. 2 of the source standard)**
+/// caption
+Figure 2 – Roles in toll environment (Fig. 2 of the source standard)
+///
 
 Additionally, this clause provides a summary of the individual roles in terms of their responsibilities and mutual interactions (see Figure 3).
 
-![Figure 3 – Roles and their interactions and responsibilities (Fig. 3 of the source standard)](fig-3.png)
+![Figure 3](fig-3.png){.figure}
 
-**Figure 3 – Roles and their interactions and responsibilities (Fig. 3 of the source standard)**
+/// caption
+Figure 3 – Roles and their interactions and responsibilities (Fig. 3 of the source standard)
+///
 
 ## 7 Services
 
@@ -111,10 +117,12 @@ This clause, spanning 18 pages, provides a description of the services within th
 
 - Services involving the Toll Charger and Service Provider include data collection regarding the usage of road infrastructure subject to tolling, exception handling, and payment services.
 
-![Figure 4 – Services including toll charger, interoperability manager and service provider 
-(Fig. 5 of the source standard)](fig-4.png)
+![Figure 4](fig-4.png){.figure}
 
-**Figure 4 – Services including toll charger, interoperability manager and service provider (Fig. 5 of the source standard)**
+/// caption
+Figure 4 – Services including toll charger, interoperability manager and service provider 
+(Fig. 5 of the source standard)
+///
 
 ## 8 Physical Architecture of EFC
 
@@ -128,9 +136,11 @@ Annex A spanning 3 pages, describes the principle of mapping the EFC architectur
 
 Annex B, spanning 6 pages, provides a viewpoint on the EFC architecture within the ODP (Open Distributed Processing) standard, which defines a total of 5 perspectives/viewpoints. Within this viewpoint, individual information classes (including information objects) are defined, which are communicated between the individual roles of the architecture (see Table 1).
 
-**Table 1 – Information classes (Tab. 8 of the source standard)**
+![Table 1](fig-5.png){.figure}
 
-![Table 1 – Information classes (Tab. 8 of the source standard)](fig-5.png)
+/// caption | <
+Table 1 – Information classes (Tab. 8 of the source standard)
+///
 
 ## Annex C (informative) – Organizational Objects within Roles
 

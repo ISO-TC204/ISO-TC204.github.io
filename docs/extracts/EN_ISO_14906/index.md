@@ -35,9 +35,11 @@ The described document specifies the application interface for electronic fee co
 
 - interface behavior to ensure interoperability at the EFC application level and the DSRC application interface;
 
-![Figure 1 – Scope of the original document (Fig. 1 of the source standard)](fig-1.png)
+![Figure 1](fig-1.png){.figure}
 
-- **Figure 1 – Scope of the original document (Fig. 1 of the source standard)**
+/// caption
+Figure 1 – Scope of the original document (Fig. 1 of the source standard)
+///
 
 ## Related Documents (Selection)
 
@@ -63,13 +65,13 @@ This clause contains 17 terms and definitions related to the described document,
 
 This clause contains 35 abbreviations related to the described document, the most important of which are the following:
 
-**DSRC** dedicated short-range communications
+**DSRC** – dedicated short-range communications
 
-**EFC** electronic fee collection system; electronic fee collection
+**EFC** – electronic fee collection system; electronic fee collection
 
-**OBE** on-board equipment
+**OBE** – on-board equipment
 
-**RSE** roadside equipment
+**RSE** – roadside equipment
 
 Other terms and abbreviations from the ITS domain can be found in the *ITS Terminology* dictionary ([www.itsterminology.org](http://www.itsterminology.org)), the *StandardLand* website ([www.standardland.cz](http://www.standardland.cz)) or the *OBP platform* ([www.iso.org/obp](http://www.iso.org/obp)).
 
@@ -91,9 +93,11 @@ During the transaction phase, the services identified within the initialization 
 
 This clause, spanning 2 pages, describes the DSRC application interface functions defined for the EFC application. A total of 16 functions are described here, which are listed in the following table. Each function consists of a pair of service primitives, i.e., a request and a response, the parameters of which are described in detail in this clause.
 
-**Table 1 – Overview of DSRC application interface functions (Tab. 1 of the source standard)**
+![Table 1](fig-2.png){.figure}
 
-![Table 1 – Overview of DSRC application interface functions (Tab. 1 of the source standard)](fig-2.png)
+/// caption | <
+Table 1 – Overview of DSRC application interface functions (Tab. 1 of the source standard)
+///
 
 ## 8 EFC Attributes
 
@@ -133,9 +137,11 @@ Annex C, spanning 12 pages, provides an informative example of various types of 
 
 This annex aims to demonstrate the concept of various transactions and show how they are introduced in the described document. For illustration, an example of a read-only EFC transaction is provided below.
 
-![Figure 2 – EFC read-only transaction (Fig. C.1 of the source standard)](fig-3.png)
+![Figure 2](fig-3.png){.figure}
 
-**Figure 2 – EFC read-only transaction (Fig. C.1 of the source standard)**
+/// caption
+Figure 2 – EFC read-only transaction (Fig. C.1 of the source standard)
+///
 
 ## Annex D (normative) – Mapping Table Between Character Sets
 
@@ -145,9 +151,11 @@ Annex D, spanning 1 page, establishes mapping rules for converting characters of
 
 Annex E, spanning 3 pages, establishes mapping rules between attributes recorded in the vehicle registration certificate and the EFC attributes defined by this described document. The aim of this annex is to facilitate the personalization of the OBE with vehicle data. For illustration, the mapping for several of these attributes is provided below.
 
-**Table 2 – Mapping table for vehicle attributes (part of the table E.1 of the original document)**
+![Table 2](fig-4.png){.figure}
 
-![Table 2 – Mapping table for vehicle attributes (part of the table E.1 of the original document)](fig-4.png)
+/// caption | <
+Table 2 – Mapping table for vehicle attributes (part of the table E.1 of the original document)
+///
 
 ## Annex F (normative) – Security Calculations According to DES
 

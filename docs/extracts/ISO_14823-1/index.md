@@ -69,13 +69,13 @@ This clause defines the basic concepts used within the Graphic Data Dictionary (
 
 The clause lists 10 abbreviations used in the document. For the purposes of this Extract, the following are the most important:
 
-**ASN.1** Abstract Syntax Notation One, the formal language used to define the structure and encoding of the GDD
+**ASN.1** – Abstract Syntax Notation One, the formal language used to define the structure and encoding of the GDD
 
-**GDD** Graphic Data Dictionary, the dictionary defined by this standard
+**GDD** – Graphic Data Dictionary, the dictionary defined by this standard
 
-**OID** Object Identifier, the identifier used in version 2 for unique identification of pictograms
+**OID** – Object Identifier, the identifier used in version 2 for unique identification of pictograms
 
-**VMS** Variable Message Sign, variable traffic signage capable of displaying pictograms defined in the GDD
+**VMS** – Variable Message Sign, variable traffic signage capable of displaying pictograms defined in the GDD
 
 Other terms and abbreviations from the ITS domain can be found in the *ITS Terminology* dictionary ([www.itsterminology.org](http://www.itsterminology.org)), the *StandardLand* website ([www.standardland.cz](http://www.standardland.cz)) or the *OBP platform* ([www.iso.org/obp](http://www.iso.org/obp)).
 
@@ -109,8 +109,6 @@ Clause **8.1 General** states that each pictogram is assigned a code and a mnemo
 
 Clause **8.2 Mnemonics of the codes** describes the rules for forming names in lowerCamelCase, without spaces and without articles. One illustrative example is provided.
 
-**Table 1 (excerpt from Table 2 of the standard) Assigning a service category code and pictogram category code to a specific phrase (mnemonic):**
-
 <table>
   <tr>
     <th>Pictogram code</th>
@@ -129,6 +127,10 @@ Clause **8.2 Mnemonics of the codes** describes the rules for forming names in l
     <td>111</td>
   </tr>
 </table>
+
+/// caption | <
+Table 1 (excerpt from Table 2 of the standard) Assigning a service category code and pictogram category code to a specific phrase (mnemonic):
+///
 
 The following clauses (8.3–8.9) contain the definitions of codes presented through an extensive table in which each pictogram code is assigned a name and a mnemonic. The codes in the tables are grouped into sets, and the sizes of these sets range from tens to hundreds of pictogram codes, with gaps between the sets reserved for future use.
 

@@ -49,9 +49,9 @@ The described document refers to the terms listed in ISO 22741-1 and the ISO and
 
 This clause defines ten abbreviations, the most important of which are the following:
 
-**AP-DATEX** Application profile of DATEX II, used for the exchange of traffic data between various information systems
+**AP-DATEX** – Application profile of DATEX II, used for the exchange of traffic data between various information systems
 
-**VMS** Variable Message Sign, which allows setting variable traffic symbols and information according to the current traffic situation
+**VMS** – Variable Message Sign, which allows setting variable traffic symbols and information according to the current traffic situation
 
 Other terms and abbreviations from the ITS domain can be found in the *ITSTerminology* dictionary ([www.itsterminology.org](http://www.itsterminology.org)), the *StandardLand* website ([www.standardland.cz](http://www.standardland.cz)) or the *OBP plataform* ([www.iso.org/obp](http://www.iso.org/obp)).
 
@@ -59,9 +59,7 @@ Other terms and abbreviations from the ITS domain can be found in the *ITSTermin
 
 The chapter presents two tables with references to the conditions for demonstrating compliance, referring to standard 22741-1.
 
-*Table 1 defines user needs and the obligation to demonstrate their compliance (O = Optional, M = Mandatory).*
-
-**Table 1 — User need to feature conformance (Tab. 1 of the source standard)**
+Table 1 defines user needs and the obligation to demonstrate their compliance (O = Optional, M = Mandatory).
 
 <table>
   <tr>
@@ -89,13 +87,19 @@ The chapter presents two tables with references to the conditions for demonstrat
   </tr>
 </table>
 
+/// caption | <
+Table 1 — User need to feature conformance (Tab. 1 of the source standard)
+///
+
 ## 6 Physical Architecture
 
 The chapter contains a description of the physical arrangement of the VMS device itself. A general description of the system is given, also in relation to superior control (central system or locally via computer).
 
-![Figure 1 – View of y physical architecture (Fig. 1 of the source standard)](fig-1.png)
+![Figure 1](fig-1.png){.figure}
 
-**Figure 1 – View of y physical architecture (Fig. 1 of the source standard)**
+/// caption
+Figure 1 – View of physical architecture (Fig. 1 of the source standard)
+///
 
 ## 7 User Needs
 
@@ -139,6 +143,8 @@ It is Table B.1, a small sample of which is given below.
 
 In the complete table of the described document, further requirements and references to specific chapters follow.
 
-**Table 2 – Excerpt of the Requirements traceability matrix table (Tab. B.1 of the source standard)**
+![Table 2](fig-2.png){.figure}
 
-![Table 2 – Excerpt of the Requirements traceability matrix table (Tab. B.1 of the source standard)](fig-2.png)
+/// caption | <
+Table 2 – Excerpt of the Requirements traceability matrix table (Tab. B.1 of the source standard)
+///

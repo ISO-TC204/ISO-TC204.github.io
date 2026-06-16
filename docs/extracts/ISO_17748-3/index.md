@@ -39,31 +39,31 @@ The document described refers to ISO Guide 84 on climate change, standards relat
 
 This part of the technical standard defines 13 terms and 23 abbreviations, the key of which are the following:
 
-**customer baseline load (CBL)** the pattern of electric demand as usual, is needed to measure performance of DR program
+**customer baseline load (CBL)** – the pattern of electric demand as usual, is needed to measure performance of DR program
 
-**DR meter** the meter installed by the service provider to measure load amount of the customer.
+**DR meter** – the meter installed by the service provider to measure load amount of the customer.
 
-**electric vehicle supply equipment (EVSE)** equipment or a combination of equipment, providing dedicated functions to supply electric energy from a fixed electrical installation or supply network to an EV for the purpose of power transfer.
+**electric vehicle supply equipment (EVSE)** – equipment or a combination of equipment, providing dedicated functions to supply electric energy from a fixed electrical installation or supply network to an EV for the purpose of power transfer.
 
-**EV based DR** **service** DR activity by which the cost of charging electric vehicles is modified to cause consumers to shift consumption patterns
+**EV based DR** **service** – DR activity by which the cost of charging electric vehicles is modified to cause consumers to shift consumption patterns
 
-**reverse DR resource** DR resources for the purpose of large-scale transaction of power load increase, and electricity users of all types of contracts as participating customers without restrictions on the types of electricity use contracts concluded by electricity users in the Jeju area with sales companies or district electric operators
+**reverse DR resource** – DR resources for the purpose of large-scale transaction of power load increase, and electricity users of all types of contracts as participating customers without restrictions on the types of electricity use contracts concluded by electricity users in the Jeju area with sales companies or district electric operators
 
-**standard DR resource** DR resource that refers to national DR and includes electricity users with a contracted power of 200 kW or less, residential electricity users, and individual households belonging to collective buildings among electricity use contracts concluded with sales companies or district electric business operators as customers participating in DR
+**standard DR resource** – DR resource that refers to national DR and includes electricity users with a contracted power of 200 kW or less, residential electricity users, and individual households belonging to collective buildings among electricity use contracts concluded with sales companies or district electric business operators as customers participating in DR
 
-**virtual end node (VEN)** client and can be an EMS, a thermostat or other end device that accepts the OpenADR signal from a server (VTN)
+**virtual end node (VEN)** – client and can be an EMS, a thermostat or other end device that accepts the OpenADR signal from a server (VTN)
 
-**virtual top node (VTN)** server that transmits OpenADR signals to end devices or other intermediate servers
+**virtual top node (VTN)** – server that transmits OpenADR signals to end devices or other intermediate servers
 
-**CSMS** charging station management system
+**CSMS** – charging station management system
 
-**CSO** charging station operator
+**CSO** – charging station operator
 
-**DR** demand response
+**DR** – demand response
 
-**EMS** energy management system
+**EMS** – energy management system
 
-**EV** electric vehicle
+**EV** – electric vehicle
 
 Other terms and abbreviations from the ITS domain can be found in the *ITS Terminology* dictionary ([www.itsterminology.org](http://www.itsterminology.org)), the *StandardLand* website ([www.standardland.cz](http://www.standardland.cz)) or the *OBP platform* ([www.iso.org/obp](http://www.iso.org/obp)).
 
@@ -77,17 +77,21 @@ Chapter 4 is 8 pages long and describes supported EV based DR services by 5 figu
 
 - **a Reverse DR service procedure** (from Contract & Registration via DR Bidding to DR implementation & metering and Calculation & Settlement)
 
-![Figure 1 (Figure 1 of the source document) – EV-based standard DR service](fig-1.png)
+![Figure 1](fig-1.png){.figure}
 
-**Figure 1 (Figure 1 of the source document) – EV-based standard DR service**
+/// caption
+Figure 1 (Figure 1 of the source document) – EV-based standard DR service
+///
 
 ## 5 Requirements for main actors
 
 Chapter 5 is 5 pages long and describes the requirements for the main actors, as illustrated at the figure 2. These are requirements for EV requirements (5.2), EVSE requirements (5.3), Nomadic device requirements (5.4), Service provider requirements (5.5), Smart city cloud requirements (5.6) and Metering device requirements (5.7)
 
-![Figure 2 (Figure 6 of the source document) – Requirement of each actor for EV-based DR service](fig-2.png)
+![Figure 2](fig-2.png){.figure}
 
-**Figure 2 (Figure 6 of the source document) ­– Requirement of each actor for EV-based DR service**
+/// caption
+Figure 2 (Figure 6 of the source document) – Requirement of each actor for EV-based DR service
+///
 
 ## 6 Requirements for communication
 
@@ -99,12 +103,12 @@ Chapter 7 is one-page description of data sets exchanged between actors in each 
 
 ## Annex A (informative)
 
-is 4 page long and presents 4 different use cases. Each use case is described within a table, containing service type, customer, charging control, location of charging station and data exchange actors, and complemented with a figure of the communication architecture.
+This annex is 4 page long and presents 4 different use cases. Each use case is described within a table, containing service type, customer, charging control, location of charging station and data exchange actors, and complemented with a figure of the communication architecture.
 
 ## Annex B (informative)
 
-is 3 page long and presents 3 forms to be filled in: DR customer application for registration, Consent to collection and use of personal information and Consent to collection and use of information
+This annex is 3 page long and presents 3 forms to be filled in: DR customer application for registration, Consent to collection and use of personal information and Consent to collection and use of information
 
-## The bibliography
+## Bibliography
 
-provides 1 reference to the use cases and architecture of distributed energy storage systems (IEC CDV 63382).
+Bibliography provides 1 reference to the use cases and architecture of distributed energy storage systems (IEC CDV 63382).

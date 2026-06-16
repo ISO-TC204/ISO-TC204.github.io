@@ -16,9 +16,11 @@ note: "Note: This Extract presents selected chapters of the described document a
 
 This standard belongs to the family of standards dealing with driver assistance systems and intelligent transport systems. The main function of Adaptive Cruise Control (ACC) is to control vehicle speed adaptively relative to a forward vehicle by using information concerning: (1) the distance to forward vehicles, (2) the motion of the subject vehicle equipped with ACC, and (3) driver commands. Based on the acquired information, the controller (ACC control strategy) transmits commands to the actuators responsible for longitudinal vehicle control and simultaneously provides status information to the driver (see Figure 1).
 
-![Figure 1 — Functional ACC elements (Fig. 1 of the source standard)](fig-1.png)
+![Figure 1](fig-1.png){.figure}
 
-**Figure 1 — Functional ACC elements (Fig. 1 of the source standard)**
+/// caption
+Figure 1 — Functional ACC elements (Fig. 1 of the source standard)
+///
 
 The objective of ACC is the partial automation of longitudinal vehicle control and the reduction of driver workload to support and relieve the driver in a convenient manner. ACC systems are designed to provide longitudinal control of equipped vehicles travelling primarily on highways under free-flowing traffic conditions and, in the case of Full Speed Range Adaptive Cruise Control (FSRA), also under congested traffic conditions.
 
@@ -42,9 +44,9 @@ ACC is primarily intended to provide longitudinal vehicle control for vehicles t
 
 The following referenced documents are indispensable for the application of this document:
 
-ISO 2575 — *Road vehicles — Symbols for controls, indicators and tell-tales*
+- ISO 2575 — *Road vehicles — Symbols for controls, indicators and tell-tales*
 
-UN/ECE Regulation No. 13-H — *Uniform provisions concerning the approval of passenger cars with regard to braking*
+- UN/ECE Regulation No. 13-H — *Uniform provisions concerning the approval of passenger cars with regard to braking*
 
 ## 3 Terms and definitions
 
@@ -80,9 +82,11 @@ Other terms and abbreviations from the ITS domain can be found in the *ITS Termi
 
 Different actuator configurations for longitudinal vehicle control lead to significantly different system behaviour. The standard therefore distinguishes between FSRA and LSRA systems (see Table 1).
 
-**Table 1 — Classification of ACC system types (Tab. 1 of the source standard)**
+![Table 1](fig-2.png){.figure}
 
-![Table 1 — Classification of ACC system types (Tab. 1 of the source standard)](fig-2.png)
+/// caption | <
+Table 1 — Classification of ACC system types (Tab. 1 of the source standard)
+///
 
 The deceleration capability of the ACC system shall be clearly stated in the vehicle owner’s manual.
 
@@ -92,25 +96,27 @@ This chapter describes the functional design of the system and its behaviour and
 
 ### 6.1 Basic control strategy
 
-**ACC systems shall provide the following minimum control behaviour and state transitions:**
+ACC systems shall provide the following minimum control behaviour and state transitions:
 
-**when ACC is active, vehicle speed shall be controlled automatically either to maintain clearance to a forward vehicle or to maintain the set speed, whichever is lower;**
+- when ACC is active, vehicle speed shall be controlled automatically either to maintain clearance to a forward vehicle or to maintain the set speed, whichever is lower;
 
-**transition between speed-control and following-control modes shall be performed automatically by the ACC system;**
+- transition between speed-control and following-control modes shall be performed automatically by the ACC system;
 
-**the steady-state clearance may be adjustable either by the system or by the driver;**
+- the steady-state clearance may be adjustable either by the system or by the driver;
 
-**if more than one forward vehicle is present, the target vehicle shall be selected automatically;**
+- if more than one forward vehicle is present, the target vehicle shall be selected automatically;
 
-**for FSRA systems, transition from following control to hold state shall occur after vehicle standstill;**
+- for FSRA systems, transition from following control to hold state shall occur after vehicle standstill;
 
-**for LSRA systems, activation of ACC shall be inhibited below the minimum operational speed.**
+- for LSRA systems, activation of ACC shall be inhibited below the minimum operational speed.
 
-**The standard also defines ACC system states and transitions between “ACC off”, “ACC stand-by”, “ACC speed control”, “ACC following control” and “FSRA hold” states (see Figure 2).**
+The standard also defines ACC system states and transitions between “ACC off”, “ACC stand-by”, “ACC speed control”, “ACC following control” and “FSRA hold” states (see Figure 2).
 
-![Figure 2 — ACC states and transitions (Fig. 2 of the source standard)](fig-3.png)
+![Figure 2](fig-3.png){.figure}
 
-**Figure 2 — ACC states and transitions (Fig. 2 of the source standard)**
+/// caption
+Figure 2 — ACC states and transitions (Fig. 2 of the source standard)
+///
 
 ### 6.2 Functionality
 
@@ -122,15 +128,15 @@ The requirements related to automatic transitions between ACC control modes and 
 
 The standard specifies the following operational requirements (in **11** **subclauses):**
 
-**the ACC system shall provide means for the driver to select a desired set speed;**
+- the ACC system shall provide means for the driver to select a desired set speed;
 
-**driver braking input shall deactivate ACC functionality if the driver braking demand exceeds the ACC braking demand;**
+- driver braking input shall deactivate ACC functionality if the driver braking demand exceeds the ACC braking demand;
 
-**accelerator override by the driver shall always have priority over ACC engine power control;**
+- accelerator override by the driver shall always have priority over ACC engine power control;
 
-**ACC systems may automatically adjust the selected time gap according to environmental conditions such as poor weather;**
+- ACC systems may automatically adjust the selected time gap according to environmental conditions such as poor weather;
 
-**if both conventional cruise control and ACC are available, automatic switching between these systems shall not occur.**
+- if both conventional cruise control and ACC are available, automatic switching between these systems shall not occur.
 
 #### 6.3.2 Display elements
 
@@ -142,15 +148,15 @@ Chapter **6.3.3 Symbols** notes that standardized symbols according to ISO 2575 
 
 The standard defines operational limits for:
 
-**minimum operational speed;**
+- minimum operational speed;
 
-**maximum automatic acceleration;**
+- maximum automatic acceleration;
 
-**maximum automatic deceleration;**
+- maximum automatic deceleration;
 
-**maximum negative jerk;**
+- maximum negative jerk;
 
-**behaviour at very short distances to the target vehicle.**
+- behaviour at very short distances to the target vehicle.
 
 ### 6.5 Activation of brake lights
 
@@ -160,9 +166,11 @@ defines conditions under which the brake lights should be active.
 
 The clause defines the required system behaviour in the event of failures affecting individual ACC subsystems. Figure 4 illustrates the relationship between the ACC control strategy and the actuators responsible for longitudinal control, namely engine, transmission and brake control. Table 2 summarizes the corresponding failure reactions for failures in the engine, brake system, detecting and ranging sensor, and ACC controller, including conditions under which ACC control shall be relinquished or braking maintained temporarily. The driver shall be informed immediately about detected failures, and the warning shall remain active until the system is switched off. Reactivation of the ACC system is prohibited until a successful self-test has been completed after ignition cycling or ACC off/on switching.
 
-![Figure 3 — Actuators for longitudinal control (Fig. 4 of the source standard)](fig-4.png)
+![Figure 3](fig-4.png){.figure}
 
-**Figure 3 — Actuators for longitudinal control (Fig. 4 of the source standard)**
+/// caption
+Figure 3 — Actuators for longitudinal control (Fig. 4 of the source standard)
+///
 
 In case of failures, the driver shall be informed immediately, and ACC reactivation shall be prohibited until a successful self-test has been completed.
 
@@ -178,9 +186,9 @@ Testing shall be performed on a flat and dry asphalt or concrete surface under s
 
 The standard defines test targets for:
 
-**infrared LIDAR systems;**
+- infrared LIDAR systems;
 
-**millimetre-wave RADAR systems.**
+- millimetre-wave RADAR systems.
 
 Radar test targets are specified using Radar Cross Section (RCS) values.
 

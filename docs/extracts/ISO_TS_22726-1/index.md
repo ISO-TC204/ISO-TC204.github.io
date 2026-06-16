@@ -54,15 +54,15 @@ The following terms are also used in the standard and in the extract:
 
 This clause lists 33 abbreviations, the most important of which are:
 
-**ADS** automated driving system
+**ADS** – automated driving system
 
-**MHAD** map for highly automated driving
+**MHAD** – map for highly automated driving
 
-**RBE** RoadBeltElement
+**RBE** – RoadBeltElement
 
-**LBE** LaneBeltElement
+**LBE** – LaneBeltElement
 
-**RSE** RoadStructuresAndEquipment
+**RSE** – RoadStructuresAndEquipment
 
 Other terms and abbreviations from the ITS domain can be found in the *ITS Terminology* dictionary ([www.itsterminology.org](http://www.itsterminology.org)), the *StandardLand* website ([www.standardland.cz](http://www.standardland.cz)) or the *OBP platform* ([www.iso.org/obp](http://www.iso.org/obp)).
 
@@ -88,10 +88,12 @@ It describes the belt concept for roads, intersections and lanes as an area elem
 
 It describes the relationships between road features and road structure, and equipment features and shows, in a diagram, how road structure and equipment elements (bridge, guardrail) are assigned to road features (road belt) using anchor positions and projection points/lines. It defines, in a table, the composition of the MHAD class and its relationship with the subpackages.
 
-![Figure 1 – Example of the relationship between a road belt (A) with a bridge (B) and a guardrail (C) using anchor positions (1) and projection points (2) and projection lines (3) 
-(Fig. 7 of the source standard)](fig-1.png)
+![Figure 1](fig-1.png){.figure}
 
-**Figure 1 – Example of the relationship between a road belt (A) with a bridge (B) and a guardrail (C) using anchor positions (1) and projection points (2) and projection lines (3) (Fig. 7 of the source standard)**
+/// caption
+Figure 1 – Example of the relationship between a road belt (A) with a bridge (B) and a guardrail (C) using anchor positions (1) and projection points (2) and projection lines (3) 
+(Fig. 7 of the source standard)
+///
 
 ## 9 MHADCommonProperty package
 
@@ -106,8 +108,6 @@ The detailed class descriptions (in tabular form) include:
 - relationships with other classes, including definition, relationship type, multiplicity, and stereotype.
 
 The stereotype of an attribute may be a primitive type (a Boolean value), another complex class, or a class containing only an enumeration of values. An example of a tabular class definition for the class VerticalGradient from the CommonPhysicalCharacteristics package is shown in the following table.
-
-**Table 1 – Definition of the class VerticalGradient (Tab. 32 of the source standard)**
 
 <table>
   <tr>
@@ -147,6 +147,10 @@ The stereotype of an attribute may be a primitive type (a Boolean value), anothe
   </tr>
 </table>
 
+/// caption | <
+Table 1 – Definition of the class VerticalGradient (Tab. 32 of the source standard)
+///
+
 The TrafficRegulation package is the most extensive one; in addition, it defines the methodology for modelling traffic regulations, including the ability to describe time‑based and vehicle‑based conditions (defined as the TimeCondition and VehicleCondition subpackages), as well as the main objects for defining permanent and temporary regulations.
 
 TrafficRegulation is linked to belt features and manoeuvre trajectories at the lane or road level to enforce traffic regulations (turn prohibitions, time‑limited restrictions, conditional permissions, etc.).
@@ -157,17 +161,21 @@ This clause, spanning 61 pages, describes the model of the **road belt network**
 
 The individual classes contained in the package are described in a manner similar to Clause 9.
 
-![Figure 2 – Diagram of RoadBeltElement and IntersectionBelt (Fig. 16 of the source standard)](fig-2.png)
+![Figure 2](fig-2.png){.figure}
 
-**Figure 2 – Diagram of RoadBeltElement and IntersectionBelt (Fig. 16 of the source standard)**
+/// caption
+Figure 2 – Diagram of RoadBeltElement and IntersectionBelt (Fig. 16 of the source standard)
+///
 
 ## 11 LaneBeltNetwork package
 
 This clause, spanning 35 pages, describes the model of **lane belt networks**. LaneBeltNetwork models the lane-level structure with an analogous structure to the road-level model, but with higher granularity. It consists of the following subpackages: **LaneBeltNetworkFeature**, **LaneBeltFeatureProperty**, and **LaneBeltSegmentProperty**. It defines the class diagram of this package and the detailed rules for modelling the LaneBeltNetwork, that is, how the classes describing the elements and connections of the lane belt are constructed and interconnected, and how manoeuvre trajectories at the lane level are modelled.
 
-![Figure 3– Example of a lane-level manoeuvre trajectory (C) containing lane belt elements (A) and their connections (B) (Fig. 23 of the source standard)](fig-3.png)
+![Figure 3](fig-3.png){.figure}
 
-**Figure 3– Example of a lane-level manoeuvre trajectory (C) containing lane belt elements (A) and their connections (B) (Fig. 23 of the source standard)**
+/// caption
+Figure 3– Example of a lane-level manoeuvre trajectory (C) containing lane belt elements (A) and their connections (B) (Fig. 23 of the source standard)
+///
 
 ## 12 RoadStructureAndEquipment package
 
@@ -176,8 +184,6 @@ This clause, spanning 99 pages, describes the model of road structures and road 
 RoadStructureAndEquipment consists of the following subpackages: RoadEquipment, RoadMarking, RoadStructure, and RSECommonProperty.
 
 It defines the list of elements (see the example in the following table) and indicates to which preceding network concept they belong.
-
-**Table 2 – Excerpt from Tab. 172 of the source standard: Overview of RSE categories**
 
 <table>
   <tr>
@@ -201,6 +207,10 @@ It defines the list of elements (see the example in the following table) and ind
     <td></td>
   </tr>
 </table>
+
+/// caption | <
+Table 2 – Excerpt from Tab. 172 of the source standard: Overview of RSE categories
+///
 
 At the level of each subpackage, the clause contains a class diagram and a detailed description of the individual classes. The classes contained in the package are described in a manner like Clause 9.
 

@@ -97,13 +97,13 @@ The document does not define a single specific application interface profile. In
 
 Profiles for three basic levels of communication are specified. There is also a fourth layer for profiles, independent on scenarios, to be used accordingly to the needs of its instance and demand of the user.
 
-Level 1 (L1): from the vehicle's OBE to the roadside infrastructure
+- Level 1 (L1): from the vehicle's OBE to the roadside infrastructure
 
-Level 2 (L2): a) from the trailer(s) to the OBE or b) from items directly to the OBE
+- Level 2 (L2): a) from the trailer(s) to the OBE or b) from items directly to the OBE
 
-Level 3 (L3): from the item (incl. item sensors) to the interrogator/OBE of the trailer
+- Level 3 (L3): from the item (incl. item sensors) to the interrogator/OBE of the trailer
 
-Level D1: for data presentation only; data formatting in UBL, accordingly to potential requirements
+- Level D1: for data presentation only; data formatting in UBL, accordingly to potential requirements
 
 The **following clauses** deal with application profiles, related standards, requirements, and compliance. The method of data collection and auditing for identifying the cargo list is not defined in the profiles and is of an individual decision of the participant. The clauses below describe the 11 profiles for all of the above mentioned levels, L1 through L3 and D1.
 
@@ -119,9 +119,9 @@ The scenario focuses on collecting data from cargo via on-board DSRC equipment, 
 
 This scenario describes the possibility of collecting cargo data via on-board equipment, communicating in accordance with [ISO 10374](https://www.iso.org/search.html?PROD_isoorg_en%5Bquery%5D=10374) (for automatic container identification). Communication can run in any point of the route where are:
 
-interrogators in accordance with [ISO 10374](https://www.iso.org/search.html?PROD_isoorg_en%5Bquery%5D=10374)
+- interrogators in accordance with [ISO 10374](https://www.iso.org/search.html?PROD_isoorg_en%5Bquery%5D=10374)
 
-an on-board transponder in accordance with [ISO 10374](https://www.iso.org/search.html?PROD_isoorg_en%5Bquery%5D=10374)
+- an on-board transponder in accordance with [ISO 10374](https://www.iso.org/search.html?PROD_isoorg_en%5Bquery%5D=10374)
 
 ### 6.6 FLC-CIC Profile No.L1-4: GSM/UMTS/LTE/IMS/PDC/PHS (optional)
 
@@ -131,9 +131,9 @@ This profile uses the wireless communication among devices designed by [3GPP](ht
 
 Scenario of the profile enables the collection, archiving, and transmission of data from cargo via on-board equipment, communicating in accordance with [ISO 18000-6](https://www.iso.org/standard/88535.html) Type B or Type C, where:
 
-installed interrogators are in accordance with [ISO 18000-6](https://www.iso.org/standard/88535.html), Type B or C
+- installed interrogators are in accordance with [ISO 18000-6](https://www.iso.org/standard/88535.html), Type B or C
 
-the on-board transponder complies with [ISO 18000-6](https://www.iso.org/standard/88535.html), of the same type as the interrogator (Type B or C)
+- the on-board transponder complies with [ISO 18000-6](https://www.iso.org/standard/88535.html), of the same type as the interrogator (Type B or C)
 
 ### 6.8 FLC-CIC Profile No.L2-1: Item data agglomeration direct to vehicle OBE using RFID (optional)
 
@@ -143,15 +143,17 @@ Profile L2-1 describes usage of an RFID tag attached to a cargo item, and transm
 
 The profile is similar to L2-1, but for multiple containers or trailers. First, data is collected from items/sensors/seals into the interrogator or OBE of a trailer or a semi-trailer. Then, as the second step, the data is transferred to the vehicle OBE. Figure 1 below provides a schematic description of the physical architecture, but other solutions are also possible.
 
-![Figure 1 – Communication diagram – a tractor unit with semi-trailer and trailer and two loaded containers with items monitored by sensors (Fig. 7 of the source standard)](fig-1.png)
+![Figure 1](fig-1.png){.figure}
 
-*Figure 1 – Communication diagram – a tractor unit with semi-trailer and trailer and two loaded containers with items monitored by sensors (Fig. 7 of the source standard)*
+/// caption
+Figure 1 – Communication diagram – a tractor unit with semi-trailer and trailer and two loaded containers with items monitored by sensors (Fig. 7 of the source standard)
+///
 
 ### 6.10 FLC-CIC Profile No.L3-1: Item data agglomeration to trailer interrogator using RFID (optional)
 
 In this scenario, items have an attached RFID tag, from which data is transmitted to the interrogator of a semi-trailer or a trailer.
 
-### 6.11 FLC-CIC **Profile** No.L3-2: Item data agglomeration to vehicle OBE using short range RFID and/or bar-code or OCR (optional)
+### 6.11 FLC-CIC Profile No.L3-2: Item data agglomeration to vehicle OBE using short range RFID and/or bar-code or OCR (optional)
 
 In this scenario, the cargo contents are identified and audited only after loading: by an RFID interrogator or a barcode reader or by scanning an OCR marking. These devices do not have the range and capability to reliably collect data from items during loading.
 
