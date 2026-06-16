@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://isotc204.org/extracts/ISO_21214/">
       
       
-        <link rel="prev" href="../ISO_TS_19091/">
+        <link rel="prev" href="../ISO_TS_21219-19/">
       
       
         <link rel="next" href="../ISO_23792-1/">
@@ -3507,6 +3507,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../ISO_TS_21219-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISO/TS 21219-19
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -3845,6 +3873,17 @@
     <span class="md-ellipsis">
       
         Annex G (Informative) - Summary of changes between this version of ISO 21214 and the previously published version
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See also
       
     </span>
   </a>
@@ -5367,6 +5406,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See also
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5498,6 +5548,8 @@
   
     
   
+    
+  
 
       
     
@@ -5561,63 +5613,84 @@
 <p><strong>wake-up window; WuW</strong> – special case of a broadcast window and is used to “wake-up” sleeping units entering the communication zone of an active master</p>
 <h2 id="5-symbols-and-abbreviated-terms">5 Symbols and abbreviated terms<a class="headerlink" href="#5-symbols-and-abbreviated-terms" title="Permanent link">&para;</a></h2>
 <p>The standard contains 82 abbreviations. Example abbreviations:</p>
-<p><strong>CIR</strong> circular QAM <em>(a type of quadrature amplitude modulationcircular QAM)</em></p>
-<p><strong>HHH</strong> Hirt, Hassner, Heise (inventors of the HHH(1,13) code) <em>(packet coding and modulation developed specifically for IR communication)</em></p>
-<p><em><em>IR ** infrared </em>(infrared-based communication interface)</em></p>
-<p><strong>McW</strong> multicast window</p>
-<p><strong>TDMA</strong> time division multiple access</p>
-<p><strong><em>θH</em></strong> horizontal opening angle</p>
-<p><strong><em>θV</em></strong> vertical opening angle</p>
+<p><strong>CIR</strong> – circular QAM <em>(a type of quadrature amplitude modulationcircular QAM)</em></p>
+<p><strong>HHH</strong> – Hirt, Hassner, Heise (inventors of the HHH(1,13) code) <em>(packet coding and modulation developed specifically for IR communication)</em></p>
+<p><strong>IR</strong> – infrared <em>(infrared-based communication interface)</em></p>
+<p><strong>McW</strong> – multicast window</p>
+<p><strong>TDMA</strong> – time division multiple access</p>
+<p><strong><em>θH</em></strong> – horizontal opening angle</p>
+<p><strong><em>θV</em></strong> – vertical opening angle</p>
 <p><em>NOTE: Other terms and abbreviations from the <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> domain can be found in the ITSTerminology dictionary (</em><a href="http://www.itsterminology.org/">www.itsterminology.org</a><em>), the StandardLand website (</em><a href="http://www.standardland.cz/">www.standardland.cz</a><em>) or the OBP platform (</em><a href="http://www.iso.org/obp">www.iso.org/obp</a><em>).</em></p>
 <h2 id="6-requirements-transmitter-and-receiver-parameters">6 Requirements: Transmitter and Receiver Parameters<a class="headerlink" href="#6-requirements-transmitter-and-receiver-parameters" title="Permanent link">&para;</a></h2>
 <p>This clause, spanning 3 pages, defines the requirements for the IR receiver and IR transmitter in the form of parameter tables.</p>
 <p>Article <strong>6.1 Transmitter wavelengths and bandwidth and</strong> Article <strong>6.2 – Radiated power</strong>, both on a single page, define the technical requirements for the transmitter (wavelength, bandwidth, radiated power). For example parameters, see Table 1. The clause also defines 11 transmitter classes (based on radiated power).</p>
-<p><strong>Table 1– IR transmitter parameter specification (Tab. 1 of the source standard)</strong></p>
+<figure>
+<figcaption>
+<p>Table 1– IR transmitter parameter specification (Tab. 1 of the source standard)</p>
+</figcaption>
 <table>
   <tr>
-    <th>Parameter</th>
-    <th>Specification<br>Channel 870 Channel 970<br>(main channel) (alternative channel)</th>
+    <th rowspan="2">Parameter</th>
+    <th colspan="2">Specification</th>
+  </tr>
+  <tr>
+    <td>Channel 870<br>(main channel)</td>
+    <td>Channel 970<br>(alternative channel)</td>
   </tr>
   <tr>
     <td>TX1 Nominal transmitter wavelength</td>
-    <td>870 nm 970 nm</td>
+    <td>870 nm</td>
+    <td>970 nm</td>
   </tr>
   <tr>
     <td>TX2 Transmitter pass band</td>
-    <td>820 nm to 910 nm 920 nm to 1 010 nm</td>
+    <td>820 nm to 910 nm</td>
+    <td>920 nm to 1 010 nm</td>
   </tr>
   <tr>
     <td>TX3 Coherence length</td>
-    <td>&lt; 1 mm</td>
+    <td colspan="2">&lt; 1 mm</td>
   </tr>
   <tr>
     <td>TX4 Total radiated power</td>
-    <td>Dependent on transmitter class (see 6.2)</td>
+    <td colspan="2">Dependent on transmitter class (see 6.2)</td>
   </tr>
   <tr>
     <td>TX5 Minimum receiver in-band (RX2) radiated power</td>
-    <td>80 % of TX4</td>
+    <td colspan="2">80 % of TX4</td>
   </tr>
   <tr>
     <td>TX6a Radiated power below pass band</td>
-    <td>not specified &lt; 10 % of TX4</td>
+    <td>not specified</td>
+    <td>&lt; 10 % of TX4</td>
   </tr>
   <tr>
     <td>TX6b Radiated power above pass band</td>
-    <td>&lt; 10 % of TX4 not specified</td>
+    <td>&lt; 10 % of TX4</td>
+    <td>not specified</td>
   </tr>
 </table>
 
+</figure>
 <p>Article <strong>6.3 Receiver wavelengths and bandwidths</strong> and Article <strong>6.4 – Receiver <abbr title="set of ideas, abstractions or things in the real world that are identified with explicit boundaries and meaning and whose properties and behaviour follow the same rules">class</abbr></strong> span two pages and define, in the form of two tables, the technical requirements for the receiver (wavelength, bandwidth).</p>
 <p>Clause 6 also defines 16 receiver classes (based on receiver sensitivity).</p>
 <h2 id="7-modulation-and-coding">7 Modulation and Coding<a class="headerlink" href="#7-modulation-and-coding" title="Permanent link">&para;</a></h2>
 <p>This clause, spanning 3 pages, defines the basic set of requirements for modulation and coding in the IR environment. It provides the basic structure of a data packet at the OSI model physical layer, including pulse durations in μs. It also defines interface communication profiles (see Table 2 (Table 9 of the standard) – Communication profiles).</p>
-<p><strong>Table 2 – Excerpt of Table 9 of the source standard: Communication profiles</strong></p>
-<p><img alt="Table 2 – Excerpt of Table 9 of the source standard: Communication profiles" src="fig-1.png" /></p>
+<figure>
+<figcaption>
+<p>Table 2 – Excerpt of Table 9 of the source standard: Communication profiles</p>
+</figcaption>
+<p><img alt="Table 2" class="figure" src="fig-1.png" /></p>
+</figure>
 <h2 id="8-directivity-and-communication-zones">8 Directivity and Communication Zones<a class="headerlink" href="#8-directivity-and-communication-zones" title="Permanent link">&para;</a></h2>
 <p>This clause, spanning 3 pages, defines the geometrical and spatial requirements for the interaction of IR-based communication interfaces. It first graphically displays the geometric space of IR communication, and then shows the geometric <abbr title="space where two or more roads meet or cross">intersection</abbr> of two IR communication interfaces (see Figure 1). The next part of the clause defines communication zone shortcuts, which are essentially various geometric configurations of IR communication in space, with specific parameter values assigned according to the spatial arrangement shown in Figure 1.</p>
-<p><img alt="" src="fig-2.png" /></p>
-<p><strong>Figure 1 – Horizontal opening and vertical opening angles in IR communication (Fig. 5 of the source standard)</strong></p>
+<figure>
+<p><img alt="Figure 1" class="figure" src="fig-2.png" /></p>
+<figcaption>
+<p>Figure 1 – Horizontal opening and vertical opening angles in IR communication 
+(Fig. 5 of the source standard)</p>
+</figcaption>
+</figure>
 <h2 id="9-frames-and-windows">9 Frames and Windows<a class="headerlink" href="#9-frames-and-windows" title="Permanent link">&para;</a></h2>
 <p>This clause, spanning 20 pages, describes the general structure of communication frames in IR communication. It also defines the communication diagram for simultaneous communication of multiple IR units. Data frames are separated by a special frame structure, also described in this clause. Frames are divided into communication windows, which are also defined in this clause (management window, private window, multicast window, broadcast window, compatibility window, spare window, wake-up window).</p>
 <h2 id="10-mac-commands">10 MAC Commands<a class="headerlink" href="#10-mac-commands" title="Permanent link">&para;</a></h2>
@@ -5630,8 +5703,12 @@
 <p>This clause, spanning 4 pages, describes, in text and tables, the basic features of the IR interface <abbr title="part of the ITS station reference architecture that is responsible for management and configuration of all layers and entities within the ITS-S">management entity</abbr> (IR-ME), which is responsible for managing the IR MAC layer and the IR physical layer of the OSI model. This unit also ensures connectivity with the higher layers of the <abbr title="bounded secured managed domain that is able to meet requirements of the ITS trust domain within which it is designed to participate">ITS station</abbr>.</p>
 <h2 id="14-adaptation">14 Adaptation<a class="headerlink" href="#14-adaptation" title="Permanent link">&para;</a></h2>
 <p>This clause, spanning 6 pages, describes in text, diagrams, and tables, how to integrate the IR interface into the structure of the <abbr title="bounded secured managed domain that is able to meet requirements of the ITS trust domain within which it is designed to participate">ITS station</abbr>. The adaptation structure of the IR interface into the <abbr title="bounded secured managed domain that is able to meet requirements of the ITS trust domain within which it is designed to participate">ITS station</abbr> is shown in Figure 2.</p>
-<p><strong>Figure 2 – Medium adaptation of the IR interface into the <abbr title="bounded secured managed domain that is able to meet requirements of the ITS trust domain within which it is designed to participate">ITS station</abbr> (Fig. 17 of the source standard)</strong></p>
-<p><img alt="Figure 2 – Medium adaptation of the IR interface into the ITS station (Fig. 17 of the source standard)" src="fig-3.png" /></p>
+<figure>
+<p><img alt="Figure 2" class="figure" src="fig-3.png" /></p>
+<figcaption>
+<p>Figure 2 – Medium adaptation of the IR interface into the <abbr title="bounded secured managed domain that is able to meet requirements of the ITS trust domain within which it is designed to participate">ITS station</abbr> (Fig. 17 of the source standard)</p>
+</figcaption>
+</figure>
 <h2 id="15-adoption-of-other-standards-and-internationally-accepted-practices">15 Adoption of Other Standards and Internationally Accepted Practices<a class="headerlink" href="#15-adoption-of-other-standards-and-internationally-accepted-practices" title="Permanent link">&para;</a></h2>
 <p>This one-paragraph clause, with a reference to ISO 21217, describes how to apply the described document using local (regional) conditions and standards.</p>
 <h2 id="16-marking-and-labelling">16 Marking and Labelling<a class="headerlink" href="#16-marking-and-labelling" title="Permanent link">&para;</a></h2>
@@ -5652,6 +5729,10 @@
 <p>This 25-page annex describes in text, tables, and diagrams, the requirements for adapting the data layer of the existing MR-IR interface to achieve compatibility with the requirements of the described document.</p>
 <h2 id="annex-g-informative-summary-of-changes-between-this-version-of-iso-21214-and-the-previously-published-version">Annex G (Informative) - Summary of changes between this version of ISO 21214 and the previously published version<a class="headerlink" href="#annex-g-informative-summary-of-changes-between-this-version-of-iso-21214-and-the-previously-published-version" title="Permanent link">&para;</a></h2>
 <p>This 2-page annex contains a list of changes, compared to the original edition of the standard.</p>
+<h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.iso.org/standard/51523.html">iso.org: ISO 21214:2015</a></li>
+</ul>
 <!-- *[CEN]: European Committee for Standardization -->
 <!-- *[document]: uniquely identified unit of information for human use -->
 <!-- *[ISO]: International Organization for Standardization -->
@@ -5679,7 +5760,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 11, 2026 21:54:19 UTC">June 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 14, 2026 23:42:52 UTC">June 14, 2026</span>
   </span>
 
     

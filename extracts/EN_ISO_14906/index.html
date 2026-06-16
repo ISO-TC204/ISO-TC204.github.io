@@ -3634,6 +3634,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See also
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3742,6 +3753,34 @@
     
   
     ISO/TS 19091
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ISO_TS_21219-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISO/TS 21219-19
   
 
     
@@ -5213,6 +5252,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See also
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5344,6 +5394,8 @@
   
     
   
+    
+  
 
       
     
@@ -5406,10 +5458,12 @@
 <p>interface behavior to ensure interoperability at the <abbr title="electronic fee collection">EFC</abbr> application level and the <abbr title="dedicated short range communication">DSRC</abbr> application interface;</p>
 </li>
 </ul>
-<p><img alt="Figure 1 – Scope of the original document (Fig. 1 of the source standard)" src="fig-1.png" /></p>
-<ul>
-<li><strong>Figure 1 – Scope of the original document (Fig. 1 of the source standard)</strong></li>
-</ul>
+<figure>
+<p><img alt="Figure 1" class="figure" src="fig-1.png" /></p>
+<figcaption>
+<p>Figure 1 – Scope of the original document (Fig. 1 of the source standard)</p>
+</figcaption>
+</figure>
 <h2 id="related-documents-selection">Related Documents (Selection)<a class="headerlink" href="#related-documents-selection" title="Permanent link">&para;</a></h2>
 <p>The described document refers to 12 technical standards, the most important of which are:</p>
 <ul>
@@ -5428,10 +5482,10 @@
 <p><strong>transaction</strong> – a complete exchange of information between <abbr title="portion of the road reservation excluding all roadway and driving space(s)">roadside</abbr> equipment (RSE) and <abbr title="vehicle system that provides all ITS functionality on-board the vehicle">on-board equipment</abbr> (<abbr title="On-Board Equipment: vehicle system that provides all ITS functionality on-board the vehicle">OBE</abbr>)</p>
 <h2 id="4-abbreviations">4 Abbreviations<a class="headerlink" href="#4-abbreviations" title="Permanent link">&para;</a></h2>
 <p>This clause contains 35 abbreviations related to the described document, the most important of which are the following:</p>
-<p><strong><abbr title="dedicated short range communication">DSRC</abbr></strong> dedicated short-range communications</p>
-<p><strong><abbr title="electronic fee collection">EFC</abbr></strong> electronic fee collection <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr>; electronic fee collection</p>
-<p><strong><abbr title="On-Board Equipment: vehicle system that provides all ITS functionality on-board the vehicle">OBE</abbr></strong> <abbr title="vehicle system that provides all ITS functionality on-board the vehicle">on-board equipment</abbr></p>
-<p><strong>RSE</strong> <abbr title="portion of the road reservation excluding all roadway and driving space(s)">roadside</abbr> equipment</p>
+<p><strong><abbr title="dedicated short range communication">DSRC</abbr></strong> – dedicated short-range communications</p>
+<p><strong><abbr title="electronic fee collection">EFC</abbr></strong> – electronic fee collection <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr>; electronic fee collection</p>
+<p><strong><abbr title="On-Board Equipment: vehicle system that provides all ITS functionality on-board the vehicle">OBE</abbr></strong> – <abbr title="vehicle system that provides all ITS functionality on-board the vehicle">on-board equipment</abbr></p>
+<p><strong>RSE</strong> – <abbr title="portion of the road reservation excluding all roadway and driving space(s)">roadside</abbr> equipment</p>
 <p>Other terms and abbreviations from the <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> domain can be found in the <em><abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Terminology</em> dictionary (<a href="http://www.itsterminology.org">www.itsterminology.org</a>), the <em>StandardLand</em> website (<a href="http://www.standardland.cz">www.standardland.cz</a>) or the <em>OBP platform</em> (<a href="http://www.iso.org/obp">www.iso.org/obp</a>).</p>
 <h2 id="5-dsrc-application-interface-architecture">5 <abbr title="dedicated short range communication">DSRC</abbr> Application Interface Architecture<a class="headerlink" href="#5-dsrc-application-interface-architecture" title="Permanent link">&para;</a></h2>
 <p>This clause, spanning 5 pages, establishes which <abbr title="dedicated short range communication">DSRC</abbr> application interface services the electronic fee collection <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr> recognizes, in what order it invokes them, and how it uses them to retrieve or change attributes stored in the <abbr title="vehicle system that provides all ITS functionality on-board the vehicle">on-board equipment</abbr>. The basic services used include the functions GET, SET, ACTION, EVENT-REPORT, and INITIALISATION.</p>
@@ -5442,8 +5496,12 @@
 <p>During the transaction phase, the services identified within the initialization phase are utilized for the purpose of registering passage through a tolled section and exchanging information to determine the toll, as well as security elements to prevent subsequent manipulation of the record.</p>
 <h2 id="7-efc-functions">7 <abbr title="electronic fee collection">EFC</abbr> Functions<a class="headerlink" href="#7-efc-functions" title="Permanent link">&para;</a></h2>
 <p>This clause, spanning 2 pages, describes the <abbr title="dedicated short range communication">DSRC</abbr> application interface functions defined for the <abbr title="electronic fee collection">EFC</abbr> application. A total of 16 functions are described here, which are listed in the following table. Each function consists of a pair of service primitives, i.e., a request and a response, the parameters of which are described in detail in this clause.</p>
-<p><strong>Table 1 – Overview of <abbr title="dedicated short range communication">DSRC</abbr> application interface functions (Tab. 1 of the source standard)</strong></p>
-<p><img alt="Table 1 – Overview of DSRC application interface functions (Tab. 1 of the source standard)" src="fig-2.png" /></p>
+<figure>
+<figcaption>
+<p>Table 1 – Overview of <abbr title="dedicated short range communication">DSRC</abbr> application interface functions (Tab. 1 of the source standard)</p>
+</figcaption>
+<p><img alt="Table 1" class="figure" src="fig-2.png" /></p>
+</figure>
 <h2 id="8-efc-attributes">8 <abbr title="electronic fee collection">EFC</abbr> Attributes<a class="headerlink" href="#8-efc-attributes" title="Permanent link">&para;</a></h2>
 <p>This clause, spanning 24 pages, describes all <abbr title="electronic fee collection">EFC</abbr> data attributes, their name, purpose, and data content, i.e., a list of data elements forming the given attribute. For individual elements, their definition, data type according to <abbr title="Abstract Syntax Notation One, an interface description language for defining data structures that can be serialized and deserialized in a standard, cross-platform way">ASN.1</abbr>, permitted length in bytes, and permitted range of values are provided. A total of 47 attributes are specified in the described document, which are categorized into the following data groups – contract, receipt, <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr>, equipment, <abbr title="person that is currently responsible for the dynamic driving task for the vehicle">driver</abbr>, and payment. This is a pivotal clause of the described document.</p>
 <h2 id="annex-a-normative-specification-of-efc-data-types">Annex A (normative) – Specification of <abbr title="electronic fee collection">EFC</abbr> Data Types<a class="headerlink" href="#annex-a-normative-specification-of-efc-data-types" title="Permanent link">&para;</a></h2>
@@ -5485,14 +5543,22 @@
 </li>
 </ul>
 <p>This annex aims to demonstrate the concept of various transactions and show how they are introduced in the described document. For illustration, an example of a read-only <abbr title="electronic fee collection">EFC</abbr> transaction is provided below.</p>
-<p><img alt="Figure 2 – EFC read-only transaction (Fig. C.1 of the source standard)" src="fig-3.png" /></p>
-<p><strong>Figure 2 – <abbr title="electronic fee collection">EFC</abbr> read-only transaction (Fig. C.1 of the source standard)</strong></p>
+<figure>
+<p><img alt="Figure 2" class="figure" src="fig-3.png" /></p>
+<figcaption>
+<p>Figure 2 – <abbr title="electronic fee collection">EFC</abbr> read-only transaction (Fig. C.1 of the source standard)</p>
+</figcaption>
+</figure>
 <h2 id="annex-d-normative-mapping-table-between-character-sets">Annex D (normative) – Mapping Table Between Character Sets<a class="headerlink" href="#annex-d-normative-mapping-table-between-character-sets" title="Permanent link">&para;</a></h2>
 <p>Annex D, spanning 1 page, establishes mapping rules for converting characters of the ISO 8859-2 (Latin2, Eastern European) character set and the ISO 8859-5 (Cyrillic) character set into the ISO 8859-1 (Latin1, Western European) character set.</p>
 <h2 id="annex-e-informative-mapping-table-for-vehicle-attributes">Annex E (informative) – Mapping Table for Vehicle Attributes<a class="headerlink" href="#annex-e-informative-mapping-table-for-vehicle-attributes" title="Permanent link">&para;</a></h2>
 <p>Annex E, spanning 3 pages, establishes mapping rules between attributes recorded in the <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> registration certificate and the <abbr title="electronic fee collection">EFC</abbr> attributes defined by this described document. The aim of this annex is to facilitate the personalization of the <abbr title="On-Board Equipment: vehicle system that provides all ITS functionality on-board the vehicle">OBE</abbr> with <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> data. For illustration, the mapping for several of these attributes is provided below.</p>
-<p><strong>Table 2 – Mapping table for <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> attributes (part of the table E.1 of the original document)</strong></p>
-<p><img alt="Table 2 – Mapping table for vehicle attributes (part of the table E.1 of the original document)" src="fig-4.png" /></p>
+<figure>
+<figcaption>
+<p>Table 2 – Mapping table for <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> attributes (part of the table E.1 of the original document)</p>
+</figcaption>
+<p><img alt="Table 2" class="figure" src="fig-4.png" /></p>
+</figure>
 <h2 id="annex-f-normative-security-calculations-according-to-des">Annex F (normative) – Security Calculations According to DES<a class="headerlink" href="#annex-f-normative-security-calculations-according-to-des" title="Permanent link">&para;</a></h2>
 <p>Annex F, spanning 5 pages, contains a detailed definition of security calculations according to the Data Encryption Standard (DES).</p>
 <h2 id="annex-g-informative-example-of-security-calculations-according-to-des">Annex G (informative) – Example of Security Calculations According to DES<a class="headerlink" href="#annex-g-informative-example-of-security-calculations-according-to-des" title="Permanent link">&para;</a></h2>
@@ -5501,6 +5567,11 @@
 <p>Annex H, spanning 5 pages, contains a detailed definition of security calculations according to the Advanced Encryption Standard (AES).</p>
 <h2 id="annex-i-informative-example-of-security-calculations-according-to-aes">Annex I (informative) – Example of Security Calculations According to AES<a class="headerlink" href="#annex-i-informative-example-of-security-calculations-according-to-aes" title="Permanent link">&para;</a></h2>
 <p>Annex I, spanning 2 pages, provides a total of 4 numerical examples of security calculations according to the Advanced Encryption Standard (AES).</p>
+<h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.iso.org/standard/72124.html">iso.org: ISO EN 14906:2018</a></li>
+<li><a href="https://www.iso.org/standard/82931.html">iso.org: ISO EN 14906:2022</a></li>
+</ul>
 <!-- *[CEN]: European Committee for Standardization -->
 <!-- *[document]: uniquely identified unit of information for human use -->
 <!-- *[ISO]: International Organization for Standardization -->
@@ -5528,7 +5599,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 11, 2026 21:54:19 UTC">June 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 14, 2026 23:42:52 UTC">June 14, 2026</span>
   </span>
 
     

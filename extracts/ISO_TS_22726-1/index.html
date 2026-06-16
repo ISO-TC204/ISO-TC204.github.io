@@ -3510,6 +3510,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../ISO_TS_21219-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISO/TS 21219-19
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../ISO_21214/" class="md-nav__link">
         
   
@@ -3852,6 +3880,17 @@
     <span class="md-ellipsis">
       
         Annex D (informative) – Comparison of road network models
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See also
       
     </span>
   </a>
@@ -5213,6 +5252,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See also
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5344,6 +5394,8 @@
   
     
   
+    
+  
 
       
     
@@ -5403,11 +5455,11 @@
 <p><strong>subpackage</strong> – package hierarchically placed inside another package, used for finer structuring of its content</p>
 <h2 id="4-abbreviations">4 Abbreviations<a class="headerlink" href="#4-abbreviations" title="Permanent link">&para;</a></h2>
 <p>This clause lists 33 abbreviations, the most important of which are:</p>
-<p><strong><abbr title="Automated Driving System: driving automation system that is able to perform the entire DDT on a sustained basis">ADS</abbr></strong> automated driving <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr></p>
-<p><strong>MHAD</strong> map for highly automated driving</p>
-<p><strong>RBE</strong> RoadBeltElement</p>
-<p><strong>LBE</strong> LaneBeltElement</p>
-<p><strong>RSE</strong> RoadStructuresAndEquipment</p>
+<p><strong><abbr title="Automated Driving System: driving automation system that is able to perform the entire DDT on a sustained basis">ADS</abbr></strong> – automated driving <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr></p>
+<p><strong>MHAD</strong> – map for highly automated driving</p>
+<p><strong>RBE</strong> – RoadBeltElement</p>
+<p><strong>LBE</strong> – LaneBeltElement</p>
+<p><strong>RSE</strong> – RoadStructuresAndEquipment</p>
 <p>Other terms and abbreviations from the <abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> domain can be found in the <em><abbr title="system comprised of information, communication, sensor and control technologies and that is designed to benefit a surface transport system">ITS</abbr> Terminology</em> dictionary (<a href="http://www.itsterminology.org">www.itsterminology.org</a>), the <em>StandardLand</em> website (<a href="http://www.standardland.cz">www.standardland.cz</a>) or the <em>OBP platform</em> (<a href="http://www.iso.org/obp">www.iso.org/obp</a>).</p>
 <h2 id="5-document-structure-and-conformance">5 Document structure and conformance<a class="headerlink" href="#5-document-structure-and-conformance" title="Permanent link">&para;</a></h2>
 <p>This clause, 2 pages in length, refers to the main parts of the document and sets the requirements for conformance of implementations with this standard and for conformance of UML diagrams with ISO/IEC 19501.</p>
@@ -5420,9 +5472,13 @@
 <p>This overview clause, four pages long, defines the key concepts and configuration of the MHAD package. It identifies the subpackages of the MHAD package: RoadStructureAndEquipment, RoadBeltNetwork, LaneBeltNetwork and the shared package MHADCommonProperty, and shows their interdependencies in a <abbr title="set of ideas, abstractions or things in the real world that are identified with explicit boundaries and meaning and whose properties and behaviour follow the same rules">class</abbr> diagram.</p>
 <p>It describes the belt concept for roads, intersections and lanes as an area element defined by direction, width and side and terminal boundaries (lines), and shows two examples.</p>
 <p>It describes the relationships between road features and road structure, and equipment features and shows, in a diagram, how road structure and equipment elements (<abbr title="transport facility built over a gap to provide a continuous travel path">bridge</abbr>, guardrail) are assigned to road features (road belt) using anchor positions and projection points/lines. It defines, in a table, the composition of the MHAD <abbr title="set of ideas, abstractions or things in the real world that are identified with explicit boundaries and meaning and whose properties and behaviour follow the same rules">class</abbr> and its relationship with the subpackages.</p>
-<p><img alt="Figure 1 – Example of the relationship between a road belt (A) with a bridge (B) and a guardrail (C) using anchor positions (1) and projection points (2) and projection lines (3) 
-(Fig. 7 of the source standard)" src="fig-1.png" /></p>
-<p><strong>Figure 1 – Example of the relationship between a road belt (A) with a <abbr title="transport facility built over a gap to provide a continuous travel path">bridge</abbr> (B) and a guardrail (C) using anchor positions (1) and projection points (2) and projection lines (3) (Fig. 7 of the source standard)</strong></p>
+<figure>
+<p><img alt="Figure 1" class="figure" src="fig-1.png" /></p>
+<figcaption>
+<p>Figure 1 – Example of the relationship between a road belt (A) with a <abbr title="transport facility built over a gap to provide a continuous travel path">bridge</abbr> (B) and a guardrail (C) using anchor positions (1) and projection points (2) and projection lines (3) 
+(Fig. 7 of the source standard)</p>
+</figcaption>
+</figure>
 <h2 id="9-mhadcommonproperty-package">9 MHADCommonProperty package<a class="headerlink" href="#9-mhadcommonproperty-package" title="Permanent link">&para;</a></h2>
 <p>This clause, 75 pages in length, describes the <strong>MHADCommonProperty</strong> package, which defines the common data classes and relationships used within the MHAD data model. The package is divided into three main subpackages <strong>GeneralCommonProperty, CommonPhysicalCharacteristics and TrafficRegulation</strong>, described in separate subclauses. Each subpackage contains a <abbr title="set of ideas, abstractions or things in the real world that are identified with explicit boundaries and meaning and whose properties and behaviour follow the same rules">class</abbr> diagram and detailed descriptions of each <abbr title="set of ideas, abstractions or things in the real world that are identified with explicit boundaries and meaning and whose properties and behaviour follow the same rules">class</abbr>.</p>
 <p>The detailed <abbr title="set of ideas, abstractions or things in the real world that are identified with explicit boundaries and meaning and whose properties and behaviour follow the same rules">class</abbr> descriptions (in tabular form) include:</p>
@@ -5438,7 +5494,10 @@
 </li>
 </ul>
 <p>The stereotype of an attribute may be a primitive type (a Boolean value), another complex <abbr title="set of ideas, abstractions or things in the real world that are identified with explicit boundaries and meaning and whose properties and behaviour follow the same rules">class</abbr>, or a <abbr title="set of ideas, abstractions or things in the real world that are identified with explicit boundaries and meaning and whose properties and behaviour follow the same rules">class</abbr> containing only an enumeration of values. An example of a tabular <abbr title="set of ideas, abstractions or things in the real world that are identified with explicit boundaries and meaning and whose properties and behaviour follow the same rules">class</abbr> definition for the <abbr title="set of ideas, abstractions or things in the real world that are identified with explicit boundaries and meaning and whose properties and behaviour follow the same rules">class</abbr> VerticalGradient from the CommonPhysicalCharacteristics package is shown in the following table.</p>
-<p><strong>Table 1 – Definition of the <abbr title="set of ideas, abstractions or things in the real world that are identified with explicit boundaries and meaning and whose properties and behaviour follow the same rules">class</abbr> VerticalGradient (Tab. 32 of the source standard)</strong></p>
+<figure>
+<figcaption>
+<p>Table 1 – Definition of the <abbr title="set of ideas, abstractions or things in the real world that are identified with explicit boundaries and meaning and whose properties and behaviour follow the same rules">class</abbr> VerticalGradient (Tab. 32 of the source standard)</p>
+</figcaption>
 <table>
   <tr>
     <th colspan="3">Class: VerticalGradient</th>
@@ -5477,22 +5536,34 @@
   </tr>
 </table>
 
+</figure>
 <p>The TrafficRegulation package is the most extensive one; in addition, it defines the methodology for modelling traffic regulations, including the ability to describe time‑based and <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr>‑based conditions (defined as the TimeCondition and VehicleCondition subpackages), as well as the main objects for defining permanent and temporary regulations.</p>
 <p>TrafficRegulation is linked to belt features and manoeuvre trajectories at the <abbr title="portion of carriageway designed to accommodate a single line of moving road vehicles">lane</abbr> or road level to enforce traffic regulations (turn prohibitions, time‑limited restrictions, conditional permissions, etc.).</p>
 <h2 id="10-roadbeltnetwork-package">10 RoadBeltNetwork package<a class="headerlink" href="#10-roadbeltnetwork-package" title="Permanent link">&para;</a></h2>
 <p>This clause, spanning 61 pages, describes the model of the <strong>road belt network</strong>. RoadBeltNetwork consists of the following subpackages: <strong>RoadBeltNetworkFeature</strong>, <strong>RoadBeltFeatureProperty</strong>, and <strong>RoadBeltSegmentProperty</strong>. It defines the <abbr title="set of ideas, abstractions or things in the real world that are identified with explicit boundaries and meaning and whose properties and behaviour follow the same rules">class</abbr> diagram of this package and the detailed rules for modelling the RoadBeltNetwork, that is, how the classes describing intersections, manoeuvre trajectories at the road level, and the elements and segments of the road belt are constructed and interconnected, including examples.</p>
 <p>The individual classes contained in the package are described in a manner similar to Clause 9.</p>
-<p><img alt="Figure 2 – Diagram of RoadBeltElement and IntersectionBelt (Fig. 16 of the source standard)" src="fig-2.png" /></p>
-<p><strong>Figure 2 – Diagram of RoadBeltElement and IntersectionBelt (Fig. 16 of the source standard)</strong></p>
+<figure>
+<p><img alt="Figure 2" class="figure" src="fig-2.png" /></p>
+<figcaption>
+<p>Figure 2 – Diagram of RoadBeltElement and IntersectionBelt (Fig. 16 of the source standard)</p>
+</figcaption>
+</figure>
 <h2 id="11-lanebeltnetwork-package">11 LaneBeltNetwork package<a class="headerlink" href="#11-lanebeltnetwork-package" title="Permanent link">&para;</a></h2>
 <p>This clause, spanning 35 pages, describes the model of <strong><abbr title="portion of carriageway designed to accommodate a single line of moving road vehicles">lane</abbr> belt networks</strong>. LaneBeltNetwork models the <abbr title="portion of carriageway designed to accommodate a single line of moving road vehicles">lane</abbr>-level structure with an analogous structure to the road-level model, but with higher granularity. It consists of the following subpackages: <strong>LaneBeltNetworkFeature</strong>, <strong>LaneBeltFeatureProperty</strong>, and <strong>LaneBeltSegmentProperty</strong>. It defines the <abbr title="set of ideas, abstractions or things in the real world that are identified with explicit boundaries and meaning and whose properties and behaviour follow the same rules">class</abbr> diagram of this package and the detailed rules for modelling the LaneBeltNetwork, that is, how the classes describing the elements and connections of the <abbr title="portion of carriageway designed to accommodate a single line of moving road vehicles">lane</abbr> belt are constructed and interconnected, and how manoeuvre trajectories at the <abbr title="portion of carriageway designed to accommodate a single line of moving road vehicles">lane</abbr> level are modelled.</p>
-<p><img alt="Figure 3– Example of a lane-level manoeuvre trajectory (C) containing lane belt elements (A) and their connections (B) (Fig. 23 of the source standard)" src="fig-3.png" /></p>
-<p><strong>Figure 3– Example of a <abbr title="portion of carriageway designed to accommodate a single line of moving road vehicles">lane</abbr>-level manoeuvre trajectory (C) containing <abbr title="portion of carriageway designed to accommodate a single line of moving road vehicles">lane</abbr> belt elements (A) and their connections (B) (Fig. 23 of the source standard)</strong></p>
+<figure>
+<p><img alt="Figure 3" class="figure" src="fig-3.png" /></p>
+<figcaption>
+<p>Figure 3– Example of a <abbr title="portion of carriageway designed to accommodate a single line of moving road vehicles">lane</abbr>-level manoeuvre trajectory (C) containing <abbr title="portion of carriageway designed to accommodate a single line of moving road vehicles">lane</abbr> belt elements (A) and their connections (B) (Fig. 23 of the source standard)</p>
+</figcaption>
+</figure>
 <h2 id="12-roadstructureandequipment-package">12 RoadStructureAndEquipment package<a class="headerlink" href="#12-roadstructureandequipment-package" title="Permanent link">&para;</a></h2>
 <p>This clause, spanning 99 pages, describes the model of road structures and <abbr title="component of transport infrastructure along the roadway intended to contribute to the safety, operations, management, awareness, and comfort of movements of the road users">road equipment</abbr>, including horizontal road markings.</p>
 <p>RoadStructureAndEquipment consists of the following subpackages: RoadEquipment, RoadMarking, RoadStructure, and RSECommonProperty.</p>
 <p>It defines the list of elements (see the example in the following table) and indicates to which preceding network concept they belong.</p>
-<p><strong>Table 2 – Excerpt from Tab. 172 of the source standard: Overview of RSE categories</strong></p>
+<figure>
+<figcaption>
+<p>Table 2 – Excerpt from Tab. 172 of the source standard: Overview of RSE categories</p>
+</figcaption>
 <table>
   <tr>
     <th>Category</th>
@@ -5516,6 +5587,7 @@
   </tr>
 </table>
 
+</figure>
 <p>At the level of each subpackage, the clause contains a <abbr title="set of ideas, abstractions or things in the real world that are identified with explicit boundaries and meaning and whose properties and behaviour follow the same rules">class</abbr> diagram and a detailed description of the individual classes. The classes contained in the package are described in a manner like Clause 9.</p>
 <h2 id="13-relationship-between-mhad-and-dynamic-information">13 Relationship between MHAD and dynamic information<a class="headerlink" href="#13-relationship-between-mhad-and-dynamic-information" title="Permanent link">&para;</a></h2>
 <p>This clause, in two sentences, notes that dynamic information defined in TS 22726-2 may refine MHAD through the <strong>RoadNetworkElement</strong> interface and refers to the diagram in Clause 9.2.</p>
@@ -5527,6 +5599,10 @@
 <p>This annex, one page long, provides recommended resolution and metrics for positional data (<abbr title="global navigation satellite system">GNSS</abbr>/RTK), tolerances, and methodologies for accuracy validation.</p>
 <h2 id="annex-d-informative-comparison-of-road-network-models">Annex D (informative) – Comparison of <abbr title="interconnected collection of roads">road network</abbr> models<a class="headerlink" href="#annex-d-informative-comparison-of-road-network-models" title="Permanent link">&para;</a></h2>
 <p>This annex, five pages long, compares the MHAD belt model with traditional linear models (ISO/TS 20452, ISO 14296, GDF/ISO 20524-2) and includes recommendations for transformations and interoperability.</p>
+<h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.iso.org/standard/88210.html">ISO/TS 22726-1:2025</a></li>
+</ul>
 <!-- *[CEN]: European Committee for Standardization -->
 <!-- *[document]: uniquely identified unit of information for human use -->
 <!-- *[ISO]: International Organization for Standardization -->
@@ -5554,7 +5630,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 11, 2026 21:54:19 UTC">June 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 14, 2026 23:42:52 UTC">June 14, 2026</span>
   </span>
 
     

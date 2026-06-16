@@ -3510,6 +3510,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../ISO_TS_21219-19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISO/TS 21219-19
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../ISO_21214/" class="md-nav__link">
         
   
@@ -3907,6 +3935,17 @@
     <span class="md-ellipsis">
       
         Clause 10 – Declaration of patents and intellectual property
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See also
       
     </span>
   </a>
@@ -5379,6 +5418,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See also
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5510,6 +5560,8 @@
   
     
   
+    
+  
 
       
     
@@ -5590,10 +5642,20 @@
 <p>The document does not define a single specific application interface profile. Instead, it “provides interoperability where a communication medium has been selected and is in compliance with one or more of the standards referenced in Annex A of ISO 26683-1.” The profiles conform to the profile format defined in <a href="https://www.iso.org/standard/30726.html">ISO/IEC TR 10000-1</a>.</p>
 <h3 id="62-taxonomy-of-freight-land-conveyance-content-and-communication-application-interface-profiles">6.2 Taxonomy of freight land conveyance content and communication application interface profiles<a class="headerlink" href="#62-taxonomy-of-freight-land-conveyance-content-and-communication-application-interface-profiles" title="Permanent link">&para;</a></h3>
 <p>Profiles for three basic levels of communication are specified. There is also a fourth layer for profiles, independent on scenarios, to be used accordingly to the needs of its instance and demand of the user.</p>
+<ul>
+<li>
 <p>Level 1 (L1): from the <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr>'s <abbr title="On-Board Equipment: vehicle system that provides all ITS functionality on-board the vehicle">OBE</abbr> to the <abbr title="portion of the road reservation excluding all roadway and driving space(s)">roadside</abbr> infrastructure</p>
+</li>
+<li>
 <p>Level 2 (L2): a) from the trailer(s) to the <abbr title="On-Board Equipment: vehicle system that provides all ITS functionality on-board the vehicle">OBE</abbr> or b) from items directly to the <abbr title="On-Board Equipment: vehicle system that provides all ITS functionality on-board the vehicle">OBE</abbr></p>
+</li>
+<li>
 <p>Level 3 (L3): from the item (incl. item sensors) to the interrogator/<abbr title="On-Board Equipment: vehicle system that provides all ITS functionality on-board the vehicle">OBE</abbr> of the trailer</p>
+</li>
+<li>
 <p>Level D1: for data presentation only; data formatting in UBL, accordingly to potential requirements</p>
+</li>
+</ul>
 <p>The <strong>following clauses</strong> deal with application profiles, related standards, requirements, and compliance. The method of data collection and auditing for identifying the cargo list is not defined in the profiles and is of an individual decision of the participant. The clauses below describe the 11 profiles for all of the above mentioned levels, L1 through L3 and D1.</p>
 <h3 id="63-flc-cic-profile-nol1-1-iso-15628-dsrc-optional">6.3 FLC-CIC Profile No.L1-1: ISO 15628 <abbr title="dedicated short range communication">DSRC</abbr> (optional)<a class="headerlink" href="#63-flc-cic-profile-nol1-1-iso-15628-dsrc-optional" title="Permanent link">&para;</a></h3>
 <p>The scenario for the profile is as follows: data from the cargo is collected using <abbr title="dedicated short range communication">DSRC</abbr> on-board communication; the device uses the <abbr title="dedicated short range communication">DSRC</abbr> application layer in accordance with <a href="https://www.iso.org/search.html?PROD_isoorg_en%5Bquery%5D=15628">ISO 15628</a>.</p>
@@ -5601,23 +5663,39 @@
 <p>The scenario focuses on collecting data from cargo via on-board <abbr title="dedicated short range communication">DSRC</abbr> equipment, and using 5 GHz communications stations (CALM) in accordance with <a href="https://www.iso.org/standard/70074.html">ISO 21215</a>.</p>
 <h3 id="65-flc-cic-profile-nol1-3-iso-10374-optional">6.5 FLC-CIC Profile No.L1-3: ISO 10374 (optional)<a class="headerlink" href="#65-flc-cic-profile-nol1-3-iso-10374-optional" title="Permanent link">&para;</a></h3>
 <p>This scenario describes the possibility of collecting cargo data via <abbr title="vehicle system that provides all ITS functionality on-board the vehicle">on-board equipment</abbr>, communicating in accordance with <a href="https://www.iso.org/search.html?PROD_isoorg_en%5Bquery%5D=10374">ISO 10374</a> (for automatic container identification). Communication can run in any point of the route where are:</p>
+<ul>
+<li>
 <p>interrogators in accordance with <a href="https://www.iso.org/search.html?PROD_isoorg_en%5Bquery%5D=10374">ISO 10374</a></p>
+</li>
+<li>
 <p>an on-board transponder in accordance with <a href="https://www.iso.org/search.html?PROD_isoorg_en%5Bquery%5D=10374">ISO 10374</a></p>
+</li>
+</ul>
 <h3 id="66-flc-cic-profile-nol1-4-gsmumtslteimspdcphs-optional">6.6 FLC-CIC Profile No.L1-4: GSM/UMTS/LTE/IMS/PDC/PHS (optional)<a class="headerlink" href="#66-flc-cic-profile-nol1-4-gsmumtslteimspdcphs-optional" title="Permanent link">&para;</a></h3>
 <p>This profile uses the wireless communication among devices designed by <a href="https://www.3gpp.org/">3GPP</a> for 3G mobile systems in GSM networks and for radio technologies.</p>
 <h3 id="67-flc-cic-profile-nol1-5-iso-iec-18000-optional">6.7 FLC-CIC Profile No.L1-5: ISO IEC 18000 (optional)<a class="headerlink" href="#67-flc-cic-profile-nol1-5-iso-iec-18000-optional" title="Permanent link">&para;</a></h3>
 <p>Scenario of the profile enables the collection, archiving, and transmission of data from cargo via <abbr title="vehicle system that provides all ITS functionality on-board the vehicle">on-board equipment</abbr>, communicating in accordance with <a href="https://www.iso.org/standard/88535.html">ISO 18000-6</a> Type B or Type C, where:</p>
+<ul>
+<li>
 <p>installed interrogators are in accordance with <a href="https://www.iso.org/standard/88535.html">ISO 18000-6</a>, Type B or C</p>
+</li>
+<li>
 <p>the on-board transponder complies with <a href="https://www.iso.org/standard/88535.html">ISO 18000-6</a>, of the same type as the interrogator (Type B or C)</p>
+</li>
+</ul>
 <h3 id="68-flc-cic-profile-nol2-1-item-data-agglomeration-direct-to-vehicle-obe-using-rfid-optional">6.8 FLC-CIC Profile No.L2-1: Item data agglomeration direct to <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> <abbr title="On-Board Equipment: vehicle system that provides all ITS functionality on-board the vehicle">OBE</abbr> using RFID (optional)<a class="headerlink" href="#68-flc-cic-profile-nol2-1-item-data-agglomeration-direct-to-vehicle-obe-using-rfid-optional" title="Permanent link">&para;</a></h3>
 <p>Profile L2-1 describes usage of an RFID tag attached to a cargo item, and transmitting data directly to the <abbr title="On-Board Equipment: vehicle system that provides all ITS functionality on-board the vehicle">OBE</abbr> interrogator. It is recommended to use a <abbr title="combination of interacting elements organized to achieve one or more stated purposes">system</abbr> that complies with the RFID standards listed in the Annex A of <a href="https://www.iso.org/search.html?PROD_isoorg_en%5Bquery%5D=26683-1">ISO 26683-1</a>.</p>
 <h3 id="69-flc-cic-profile-nol2-2-data-agglomeration-from-multiple-trailers-optional">6.9 FLC-CIC Profile No.L2-2: Data agglomeration from multiple trailers (optional)<a class="headerlink" href="#69-flc-cic-profile-nol2-2-data-agglomeration-from-multiple-trailers-optional" title="Permanent link">&para;</a></h3>
 <p>The profile is similar to L2-1, but for multiple containers or trailers. First, data is collected from items/sensors/seals into the interrogator or <abbr title="On-Board Equipment: vehicle system that provides all ITS functionality on-board the vehicle">OBE</abbr> of a trailer or a semi-trailer. Then, as the second step, the data is transferred to the <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> <abbr title="On-Board Equipment: vehicle system that provides all ITS functionality on-board the vehicle">OBE</abbr>. Figure 1 below provides a schematic description of the physical <abbr title="fundamental concepts or properties of a system in its environment embodied in its elements , relationships and in the principles of its design and evolution">architecture</abbr>, but other solutions are also possible.</p>
-<p><img alt="Figure 1 – Communication diagram – a tractor unit with semi-trailer and trailer and two loaded containers with items monitored by sensors (Fig. 7 of the source standard)" src="fig-1.png" /></p>
-<p><em>Figure 1 – Communication diagram – a tractor unit with semi-trailer and trailer and two loaded containers with items monitored by sensors (Fig. 7 of the source standard)</em></p>
+<figure>
+<p><img alt="Figure 1" class="figure" src="fig-1.png" /></p>
+<figcaption>
+<p>Figure 1 – Communication diagram – a tractor unit with semi-trailer and trailer and two loaded containers with items monitored by sensors (Fig. 7 of the source standard)</p>
+</figcaption>
+</figure>
 <h3 id="610-flc-cic-profile-nol3-1-item-data-agglomeration-to-trailer-interrogator-using-rfid-optional">6.10 FLC-CIC Profile No.L3-1: Item data agglomeration to trailer interrogator using RFID (optional)<a class="headerlink" href="#610-flc-cic-profile-nol3-1-item-data-agglomeration-to-trailer-interrogator-using-rfid-optional" title="Permanent link">&para;</a></h3>
 <p>In this scenario, items have an attached RFID tag, from which data is transmitted to the interrogator of a semi-trailer or a trailer.</p>
-<h3 id="611-flc-cic-profile-nol3-2-item-data-agglomeration-to-vehicle-obe-using-short-range-rfid-andor-bar-code-or-ocr-optional">6.11 FLC-CIC <strong>Profile</strong> No.L3-2: Item data agglomeration to <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> <abbr title="On-Board Equipment: vehicle system that provides all ITS functionality on-board the vehicle">OBE</abbr> using short range RFID and/or bar-code or OCR (optional)<a class="headerlink" href="#611-flc-cic-profile-nol3-2-item-data-agglomeration-to-vehicle-obe-using-short-range-rfid-andor-bar-code-or-ocr-optional" title="Permanent link">&para;</a></h3>
+<h3 id="611-flc-cic-profile-nol3-2-item-data-agglomeration-to-vehicle-obe-using-short-range-rfid-andor-bar-code-or-ocr-optional">6.11 FLC-CIC Profile No.L3-2: Item data agglomeration to <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> <abbr title="On-Board Equipment: vehicle system that provides all ITS functionality on-board the vehicle">OBE</abbr> using short range RFID and/or bar-code or OCR (optional)<a class="headerlink" href="#611-flc-cic-profile-nol3-2-item-data-agglomeration-to-vehicle-obe-using-short-range-rfid-andor-bar-code-or-ocr-optional" title="Permanent link">&para;</a></h3>
 <p>In this scenario, the cargo contents are identified and audited only after loading: by an RFID interrogator or a barcode reader or by scanning an OCR marking. These devices do not have the range and capability to reliably collect data from items during loading.</p>
 <h3 id="612-flc-cic-profile-nol3-3-item-data-agglomeration-to-vehicle-obe-using-short-range-rfid-andor-bar-code-where-the-tractortruck-does-not-have-fixed-obe-optional">6.12 FLC-CIC Profile No.L3-3: Item data agglomeration to <abbr title="material entity designed to transport people or physical goods by changing its physical position">vehicle</abbr> <abbr title="On-Board Equipment: vehicle system that provides all ITS functionality on-board the vehicle">OBE</abbr> using short range RFID and/or bar-code where the tractor/truck does not have fixed <abbr title="On-Board Equipment: vehicle system that provides all ITS functionality on-board the vehicle">OBE</abbr> (optional)<a class="headerlink" href="#612-flc-cic-profile-nol3-3-item-data-agglomeration-to-vehicle-obe-using-short-range-rfid-andor-bar-code-where-the-tractortruck-does-not-have-fixed-obe-optional" title="Permanent link">&para;</a></h3>
 <p>Profile L3-3 is aimed for express or postal delivery systems, for supplying supermarkets or other warehouses, etc. Vehicles do not usually have the fixed <abbr title="On-Board Equipment installations">OBEs</abbr>, but use the <abbr title="person that is currently responsible for the dynamic driving task for the vehicle">driver</abbr>'s mobile device, which communicates with the dispatch centre either by physical or wireless connection.</p>
@@ -5629,6 +5707,10 @@
 <h2 id="clause-8-test-and-conformance-requirements">Clause 8 – Test and conformance requirements<a class="headerlink" href="#clause-8-test-and-conformance-requirements" title="Permanent link">&para;</a></h2>
 <h2 id="clause-9-marking-labelling-and-packaging">Clause 9 – Marking, labelling and packaging<a class="headerlink" href="#clause-9-marking-labelling-and-packaging" title="Permanent link">&para;</a></h2>
 <h2 id="clause-10-declaration-of-patents-and-intellectual-property">Clause 10 – Declaration of patents and intellectual property<a class="headerlink" href="#clause-10-declaration-of-patents-and-intellectual-property" title="Permanent link">&para;</a></h2>
+<h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.iso.org/standard/57600.html">iso.org: ISO 26683-2:2013</a></li>
+</ul>
 <!-- *[CEN]: European Committee for Standardization -->
 <!-- *[document]: uniquely identified unit of information for human use -->
 <!-- *[ISO]: International Organization for Standardization -->
@@ -5656,7 +5738,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 11, 2026 21:54:19 UTC">June 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 14, 2026 23:42:52 UTC">June 14, 2026</span>
   </span>
 
     
