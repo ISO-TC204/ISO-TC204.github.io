@@ -1,8 +1,8 @@
 ---
 published: 2023
 pages: 74
-title: "ISO/TS 21219-19 - Extract"
-standard: "ISO/TS 21219-19"
+title: "ISO 21219-19 - Extract"
+standard: "ISO 21219-19"
 name: "Intelligent Transport Systems – Traffic and Travel Information (TTI) in the Transport Protocol Expert Group, Second Generation (TPEG2) – Part 19: Applications for Weather Information (TPEG2-WEA)"
 name_1: "Intelligent Transport Systems"
 name_2: "Traffic and Travel Information (TTI) in the Transport Protocol Expert Group, Second Generation (TPEG2)"
@@ -65,7 +65,7 @@ Other terms and abbreviations from the ITS domain can be found in the *ITS Termi
 
 ## 5 Application constraints
 
-This chapter, one and a half pages in length, defines the constraints applicable to the TPEG2-WEA application. It specifies the application identifier and versioning rules defined in ISO/TS 21219-1, the required order of message containers (MMC, optionally ADC and LRC), and the requirements for extensibility and backward compatibility, including the ability of decoders to skip unknown elements. It also references the TPEG service component framework defined in ISO/TS 21219-5
+This chapter, one and a half pages in length, defines the constraints applicable to the TPEG2-WEA application. It specifies the application identifier and versioning rules defined in ISO 21219-1, the required order of message containers (MMC, optionally ADC and LRC), and the requirements for extensibility and backward compatibility, including the ability of decoders to skip unknown elements. It also references the TPEG service component framework defined in ISO 21219-5
 
 ## 6 WEA structure
 
