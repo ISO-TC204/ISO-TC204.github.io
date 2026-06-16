@@ -6,3 +6,4 @@ venv/
 docs/cybersecurity/.project
 .DS_Store
 temp_dir/
+__pycache__/
