@@ -1,0 +1,61 @@
+digraph GitHub_Group_PR_Review_Flow {
+    rankdir=TB;
+    node [fontname="Arial", fontsize=11];
+    edge [fontname="Arial", fontsize=10];
+
+    // Start
+    Start [label="Start: Developer\ncreates Pull Request" shape=oval style=filled fillcolor="#E3F2FD"];
+
+    // Main process nodes
+    CreatePR [label="1. Submit PR to target branch" shape=box style=filled fillcolor="#E8F5E9"];
+    Notify [label="2. GitHub notifies reviewers\n(individual or team/group)" shape=box style=filled fillcolor="#E8F5E9"];
+    ReviewPhase [label="3. Reviewers examine code,\ncomments, and changes" shape=box style=filled fillcolor="#FFF3E0"];
+
+    // Decision node
+    Decision1 [label="Do all required\nreviewers approve?" shape=diamond style=filled fillcolor="#FFF9C4" width=2.5];
+
+    // Approval paths
+    Approved [label="Yes: PR meets approval\nrequirements (e.g. minimum\n# of approvals)" shape=box style=filled fillcolor="#C8E6C9"];
+    Merge [label="4. Merge PR\n(manually or via\nbranch protection rules)" shape=box style=filled fillcolor="#E8F5E9"];
+    End [label="End: PR Merged" shape=oval style=filled fillcolor="#E3F2FD"];
+
+    // Rejection / iteration paths
+    ChangesRequested [label="No: Changes requested\nor comments left" shape=box style=filled fillcolor="#FFCDD2"];
+    UpdateCode [label="Developer addresses feedback\nand pushes new commits" shape=box style=filled fillcolor="#E8F5E9"];
+    ReReview [label="PR updated → Reviewers\nre-notified for new review" shape=box style=filled fillcolor="#E8F5E9"];
+
+    // Optional: Draft state and other statuses
+    Draft [label="PR can be in Draft state\nuntil ready for review" shape=parallelogram style=filled fillcolor="#F3E5F5"];
+
+    // Edges
+    Start -> CreatePR;
+    CreatePR -> Notify;
+    Notify -> Draft [label="Optional"];
+    Draft -> ReviewPhase [label="Ready for review"];
+    Notify -> ReviewPhase;
+
+    ReviewPhase -> Decision1;
+
+    Decision1 -> Approved [label="Yes"];
+    Decision1 -> ChangesRequested [label="No"];
+
+    Approved -> Merge;
+    Merge -> End;
+
+    ChangesRequested -> UpdateCode;
+    UpdateCode -> ReReview;
+    ReReview -> ReviewPhase [label="Loop"];
+
+    // Styling for group aspect
+    subgraph cluster_group {
+        label="Group / Team Review";
+        style="dashed";
+        color="#455A64";
+        ReviewPhase;
+        Decision1;
+    }
+
+    // Legend / note
+    Note [label="Note: Branch protection rules can enforce\nminimum approvals, code owners, or required checks" shape=note fillcolor="#F5F5F5" fontsize=9];
+    Note -> Decision1 [style=dotted];
+}
