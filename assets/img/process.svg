@@ -1,0 +1,516 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1703pt" height="1957pt" viewBox="0.00 0.00 1703.00 1957.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 1953.2)">
+<title>ISO_Committee_WG_Process</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-1953.2 1698.61,-1953.2 1698.61,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_legend</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M1182.61,-1864.4C1182.61,-1864.4 1674.61,-1864.4 1674.61,-1864.4 1680.61,-1864.4 1686.61,-1870.4 1686.61,-1876.4 1686.61,-1876.4 1686.61,-1929.2 1686.61,-1929.2 1686.61,-1935.2 1680.61,-1941.2 1674.61,-1941.2 1674.61,-1941.2 1182.61,-1941.2 1182.61,-1941.2 1176.61,-1941.2 1170.61,-1935.2 1170.61,-1929.2 1170.61,-1929.2 1170.61,-1876.4 1170.61,-1876.4 1170.61,-1870.4 1176.61,-1864.4 1182.61,-1864.4"/>
+<text xml:space="preserve" text-anchor="middle" x="1428.61" y="-1924.6" font-family="Times,serif" font-size="14.00">Symbols &amp; Key Roles</text>
+</g>
+<!-- Title -->
+<g id="node1" class="node">
+<title>Title</title>
+<text xml:space="preserve" text-anchor="middle" x="592.61" y="-1886.8" font-family="Arial Bold" font-size="12.00">ISO Committee &amp; WG Standardization Process</text>
+</g>
+<!-- Start -->
+<g id="node2" class="node">
+<title>Start</title>
+<ellipse fill="none" stroke="black" cx="759.61" cy="-1890.4" rx="27" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="759.61" y="-1887.7" font-family="Arial" font-size="9.00">Start</text>
+</g>
+<!-- Proposal -->
+<g id="node3" class="node">
+<title>Proposal</title>
+<polygon fill="none" stroke="black" points="817.63,-1835.4 701.6,-1835.4 701.6,-1799.4 817.63,-1799.4 817.63,-1835.4"/>
+<text xml:space="preserve" text-anchor="middle" x="759.61" y="-1814.7" font-family="Arial" font-size="9.00">WG or NB proposes PWI</text>
+</g>
+<!-- Start&#45;&gt;Proposal -->
+<g id="edge1" class="edge">
+<title>Start-&gt;Proposal</title>
+<path fill="none" stroke="black" d="M759.61,-1872.21C759.61,-1864.63 759.61,-1855.5 759.61,-1846.94"/>
+<polygon fill="black" stroke="black" points="763.12,-1846.94 759.61,-1836.94 756.12,-1846.94 763.12,-1846.94"/>
+</g>
+<!-- PWIResolution -->
+<g id="node4" class="node">
+<title>PWIResolution</title>
+<polygon fill="none" stroke="black" points="726.61,-1753.8 650.31,-1735.8 726.61,-1717.8 802.92,-1735.8 726.61,-1753.8"/>
+<text xml:space="preserve" text-anchor="middle" x="726.61" y="-1733.1" font-family="Arial" font-size="9.00">TC approves PWI?</text>
+</g>
+<!-- Proposal&#45;&gt;PWIResolution -->
+<g id="edge2" class="edge">
+<title>Proposal-&gt;PWIResolution</title>
+<path fill="none" stroke="black" d="M752.45,-1799.13C748.12,-1788.66 742.49,-1775.1 737.6,-1763.3"/>
+<polygon fill="black" stroke="black" points="740.84,-1761.98 733.78,-1754.08 734.38,-1764.66 740.84,-1761.98"/>
+</g>
+<!-- PWIResolution&#45;&gt;Proposal -->
+<g id="edge4" class="edge">
+<title>PWIResolution:e-&gt;Proposal</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M805.82,-1735.8C831.53,-1735.8 807.3,-1767.06 785.36,-1790.64"/>
+<polygon fill="black" stroke="black" points="782.89,-1788.16 778.52,-1797.82 787.95,-1792.99 782.89,-1788.16"/>
+<text xml:space="preserve" text-anchor="middle" x="805.29" y="-1774.2" font-family="Arial" font-size="8.00">No</text>
+</g>
+<!-- PWI -->
+<g id="node5" class="node">
+<title>PWI</title>
+<polygon fill="none" stroke="black" points="771.38,-1672.2 681.85,-1672.2 681.85,-1636.2 771.38,-1636.2 771.38,-1672.2"/>
+<text xml:space="preserve" text-anchor="middle" x="726.61" y="-1651.5" font-family="Arial" font-size="9.00">WG defines scope</text>
+</g>
+<!-- PWIResolution&#45;&gt;PWI -->
+<g id="edge3" class="edge">
+<title>PWIResolution-&gt;PWI</title>
+<path fill="none" stroke="black" d="M726.61,-1717.53C726.61,-1707.72 726.61,-1695.2 726.61,-1683.95"/>
+<polygon fill="black" stroke="black" points="730.12,-1683.95 726.61,-1673.95 723.12,-1683.95 730.12,-1683.95"/>
+<text xml:space="preserve" text-anchor="middle" x="733.51" y="-1692.6" font-family="Arial" font-size="8.00">Yes</text>
+</g>
+<!-- NPNeeded -->
+<g id="node6" class="node">
+<title>NPNeeded</title>
+<polygon fill="none" stroke="black" points="726.61,-1599.2 660.67,-1581.2 726.61,-1563.2 792.56,-1581.2 726.61,-1599.2"/>
+<text xml:space="preserve" text-anchor="middle" x="726.61" y="-1578.5" font-family="Arial" font-size="9.00">IS or TS target?</text>
+</g>
+<!-- PWI&#45;&gt;NPNeeded -->
+<g id="edge5" class="edge">
+<title>PWI-&gt;NPNeeded</title>
+<path fill="none" stroke="black" d="M726.61,-1636.01C726.61,-1628.43 726.61,-1619.3 726.61,-1610.74"/>
+<polygon fill="black" stroke="black" points="730.12,-1610.74 726.61,-1600.74 723.12,-1610.74 730.12,-1610.74"/>
+</g>
+<!-- NPResolution -->
+<g id="node7" class="node">
+<title>NPResolution</title>
+<polygon fill="none" stroke="black" points="827.61,-1517.6 698.62,-1499.6 827.61,-1481.6 956.61,-1499.6 827.61,-1517.6"/>
+<text xml:space="preserve" text-anchor="middle" x="827.61" y="-1496.9" font-family="Arial" font-size="9.00">TC approves sending to NP ballot?</text>
+</g>
+<!-- NPNeeded&#45;&gt;NPResolution -->
+<g id="edge6" class="edge">
+<title>NPNeeded-&gt;NPResolution</title>
+<path fill="none" stroke="black" d="M742.84,-1567.41C758.3,-1555.23 781.86,-1536.66 800.23,-1522.18"/>
+<polygon fill="black" stroke="black" points="802.15,-1525.12 807.84,-1516.19 797.82,-1519.63 802.15,-1525.12"/>
+<text xml:space="preserve" text-anchor="middle" x="790.05" y="-1538" font-family="Arial" font-size="8.00">Yes</text>
+</g>
+<!-- WGDevelop -->
+<g id="node11" class="node">
+<title>WGDevelop</title>
+<polygon fill="none" stroke="black" points="770.39,-1199.8 602.84,-1199.8 602.84,-1163.8 770.39,-1163.8 770.39,-1199.8"/>
+<text xml:space="preserve" text-anchor="middle" x="686.61" y="-1184.5" font-family="Arial" font-size="9.00">WG resolves any NP ballot comments</text>
+<text xml:space="preserve" text-anchor="middle" x="686.61" y="-1173.7" font-family="Arial" font-size="9.00">and develops one or more WDs</text>
+</g>
+<!-- NPNeeded&#45;&gt;WGDevelop -->
+<g id="edge7" class="edge">
+<title>NPNeeded-&gt;WGDevelop</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M710.12,-1567.48C693.6,-1553.18 670.61,-1528.31 670.61,-1500.6 670.61,-1500.6 670.61,-1500.6 670.61,-1262.4 670.61,-1244.99 674.34,-1225.85 678.19,-1210.7"/>
+<polygon fill="black" stroke="black" points="681.46,-1212.02 680.71,-1201.45 674.71,-1210.18 681.46,-1212.02"/>
+<text xml:space="preserve" text-anchor="middle" x="675.73" y="-1374.8" font-family="Arial" font-size="8.00">No</text>
+</g>
+<!-- NPResolution&#45;&gt;PWI -->
+<g id="edge9" class="edge">
+<title>NPResolution-&gt;PWI</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M826.59,-1517.74C824.6,-1538.64 818.77,-1574.25 801.61,-1599.2 793.44,-1611.09 781.75,-1621.3 770.02,-1629.53"/>
+<polygon fill="black" stroke="black" points="768.35,-1626.43 761.94,-1634.87 772.21,-1632.27 768.35,-1626.43"/>
+<text xml:space="preserve" text-anchor="middle" x="822.79" y="-1578.8" font-family="Arial" font-size="8.00">No</text>
+</g>
+<!-- Form4 -->
+<g id="node8" class="node">
+<title>Form4</title>
+<polygon fill="none" stroke="black" points="885.65,-1436 721.58,-1436 721.58,-1400 885.65,-1400 885.65,-1436"/>
+<text xml:space="preserve" text-anchor="middle" x="803.61" y="-1415.3" font-family="Arial" font-size="9.00">WG prepares Form 4 and rough draft</text>
+</g>
+<!-- NPResolution&#45;&gt;Form4 -->
+<g id="edge8" class="edge">
+<title>NPResolution-&gt;Form4</title>
+<path fill="none" stroke="black" d="M822.64,-1482.11C819.61,-1472.07 815.67,-1458.97 812.15,-1447.31"/>
+<polygon fill="black" stroke="black" points="815.51,-1446.31 809.27,-1437.75 808.8,-1448.33 815.51,-1446.31"/>
+<text xml:space="preserve" text-anchor="middle" x="823.94" y="-1456.4" font-family="Arial" font-size="8.00">Yes</text>
+</g>
+<!-- NPBallot -->
+<g id="node9" class="node">
+<title>NPBallot</title>
+<polygon fill="none" stroke="black" points="838.88,-1354.4 726.35,-1354.4 726.35,-1318.4 838.88,-1318.4 838.88,-1354.4"/>
+<text xml:space="preserve" text-anchor="middle" x="782.61" y="-1333.7" font-family="Arial" font-size="9.00">CM distributes NP ballot</text>
+</g>
+<!-- Form4&#45;&gt;NPBallot -->
+<g id="edge10" class="edge">
+<title>Form4-&gt;NPBallot</title>
+<path fill="none" stroke="black" d="M799.06,-1399.73C796.42,-1389.71 793.03,-1376.86 790.01,-1365.44"/>
+<polygon fill="black" stroke="black" points="793.48,-1364.88 787.55,-1356.1 786.72,-1366.66 793.48,-1364.88"/>
+</g>
+<!-- AWI -->
+<g id="node10" class="node">
+<title>AWI</title>
+<polygon fill="none" stroke="black" points="771.61,-1281.4 698.2,-1263.4 771.61,-1245.4 845.03,-1263.4 771.61,-1281.4"/>
+<text xml:space="preserve" text-anchor="middle" x="771.61" y="-1260.7" font-family="Arial" font-size="9.00">NP ballot passes?</text>
+</g>
+<!-- NPBallot&#45;&gt;AWI -->
+<g id="edge11" class="edge">
+<title>NPBallot-&gt;AWI</title>
+<path fill="none" stroke="black" d="M779.95,-1318.21C778.75,-1310.43 777.29,-1301.02 775.93,-1292.26"/>
+<polygon fill="black" stroke="black" points="779.4,-1291.78 774.41,-1282.44 772.48,-1292.85 779.4,-1291.78"/>
+</g>
+<!-- AWI&#45;&gt;PWI -->
+<g id="edge13" class="edge">
+<title>AWI-&gt;PWI</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M721.83,-1269.57C681.94,-1276.79 632.61,-1294.08 632.61,-1335.4 632.61,-1582.2 632.61,-1582.2 632.61,-1582.2 632.61,-1605.31 650.93,-1621.85 671.4,-1633.12"/>
+<polygon fill="black" stroke="black" points="669.69,-1636.18 680.19,-1637.56 672.84,-1629.93 669.69,-1636.18"/>
+<text xml:space="preserve" text-anchor="middle" x="637.73" y="-1456.4" font-family="Arial" font-size="8.00">No</text>
+</g>
+<!-- AWI&#45;&gt;WGDevelop -->
+<g id="edge12" class="edge">
+<title>AWI-&gt;WGDevelop</title>
+<path fill="none" stroke="black" d="M756.81,-1248.53C744.8,-1237.29 727.57,-1221.15 713.18,-1207.68"/>
+<polygon fill="black" stroke="black" points="715.9,-1205.43 706.21,-1201.15 711.12,-1210.54 715.9,-1205.43"/>
+<text xml:space="preserve" text-anchor="middle" x="741.1" y="-1220.2" font-family="Arial" font-size="8.00">Yes</text>
+</g>
+<!-- FinalWD -->
+<g id="node12" class="node">
+<title>FinalWD</title>
+<polygon fill="none" stroke="black" points="695.13,-1126.8 580.1,-1126.8 580.1,-1090.8 695.13,-1090.8 695.13,-1126.8"/>
+<text xml:space="preserve" text-anchor="middle" x="637.61" y="-1111.5" font-family="Arial" font-size="9.00">WG consensus on WD</text>
+<text xml:space="preserve" text-anchor="middle" x="637.61" y="-1100.7" font-family="Arial" font-size="9.00">Convenor submits to CM</text>
+</g>
+<!-- WGDevelop&#45;&gt;FinalWD -->
+<g id="edge14" class="edge">
+<title>WGDevelop-&gt;FinalWD</title>
+<path fill="none" stroke="black" d="M674.75,-1163.61C669.1,-1155.42 662.2,-1145.42 655.89,-1136.28"/>
+<polygon fill="black" stroke="black" points="658.79,-1134.32 650.23,-1128.07 653.03,-1138.29 658.79,-1134.32"/>
+</g>
+<!-- CDNeeded -->
+<g id="node13" class="node">
+<title>CDNeeded</title>
+<polygon fill="none" stroke="black" points="611.61,-1053.8 565.99,-1035.8 611.61,-1017.8 657.24,-1035.8 611.61,-1053.8"/>
+<text xml:space="preserve" text-anchor="middle" x="611.61" y="-1033.1" font-family="Arial" font-size="9.00">IS target?</text>
+</g>
+<!-- FinalWD&#45;&gt;CDNeeded -->
+<g id="edge15" class="edge">
+<title>FinalWD-&gt;CDNeeded</title>
+<path fill="none" stroke="black" d="M631.32,-1090.61C628.24,-1082.21 624.48,-1071.92 621.06,-1062.6"/>
+<polygon fill="black" stroke="black" points="624.39,-1061.51 617.67,-1053.32 617.82,-1063.92 624.39,-1061.51"/>
+</g>
+<!-- CDDesired -->
+<g id="node14" class="node">
+<title>CDDesired</title>
+<polygon fill="none" stroke="black" points="611.61,-972.2 527,-954.2 611.61,-936.2 696.23,-954.2 611.61,-972.2"/>
+<text xml:space="preserve" text-anchor="middle" x="611.61" y="-951.5" font-family="Arial" font-size="9.00">Optional CD desired?</text>
+</g>
+<!-- CDNeeded&#45;&gt;CDDesired -->
+<g id="edge17" class="edge">
+<title>CDNeeded-&gt;CDDesired</title>
+<path fill="none" stroke="black" d="M611.61,-1017.53C611.61,-1007.72 611.61,-995.2 611.61,-983.95"/>
+<polygon fill="black" stroke="black" points="615.12,-983.95 611.61,-973.95 608.12,-983.95 615.12,-983.95"/>
+<text xml:space="preserve" text-anchor="middle" x="616.73" y="-992.6" font-family="Arial" font-size="8.00">No</text>
+</g>
+<!-- CDConsult -->
+<g id="node15" class="node">
+<title>CDConsult</title>
+<polygon fill="none" stroke="black" points="583.14,-890.6 406.09,-890.6 406.09,-854.6 583.14,-854.6 583.14,-890.6"/>
+<text xml:space="preserve" text-anchor="middle" x="494.61" y="-869.9" font-family="Arial" font-size="9.00">CM distributes CD to TC for consultation</text>
+</g>
+<!-- CDNeeded&#45;&gt;CDConsult -->
+<g id="edge16" class="edge">
+<title>CDNeeded-&gt;CDConsult</title>
+<path fill="none" stroke="black" d="M585.86,-1027.46C560.39,-1018.74 522.6,-1001.55 503.83,-972.2 490.59,-951.49 489.26,-923.17 490.67,-902.19"/>
+<polygon fill="black" stroke="black" points="494.15,-902.59 491.61,-892.31 487.18,-901.93 494.15,-902.59"/>
+<text xml:space="preserve" text-anchor="middle" x="510.72" y="-951.8" font-family="Arial" font-size="8.00">Yes</text>
+</g>
+<!-- CDDesired&#45;&gt;CDConsult -->
+<g id="edge18" class="edge">
+<title>CDDesired-&gt;CDConsult</title>
+<path fill="none" stroke="black" d="M592.03,-939.88C574.96,-928.26 549.79,-911.14 529.32,-897.21"/>
+<polygon fill="black" stroke="black" points="531.48,-894.45 521.24,-891.72 527.54,-900.24 531.48,-894.45"/>
+<text xml:space="preserve" text-anchor="middle" x="567.01" y="-911" font-family="Arial" font-size="8.00">Yes</text>
+</g>
+<!-- DISNotification -->
+<g id="node18" class="node">
+<title>DISNotification</title>
+<polygon fill="none" stroke="black" points="673.15,-654.4 518.08,-654.4 518.08,-618.4 673.15,-618.4 673.15,-654.4"/>
+<text xml:space="preserve" text-anchor="middle" x="595.61" y="-633.7" font-family="Arial" font-size="9.00">WG notifies TC of impending ballot</text>
+</g>
+<!-- CDDesired&#45;&gt;DISNotification -->
+<g id="edge19" class="edge">
+<title>CDDesired-&gt;DISNotification</title>
+<path fill="none" stroke="black" d="M611.61,-935.81C611.61,-919.68 611.61,-895.02 611.61,-873.6 611.61,-873.6 611.61,-873.6 611.61,-717 611.61,-699.59 607.89,-680.45 604.04,-665.3"/>
+<polygon fill="black" stroke="black" points="607.52,-664.78 601.52,-656.05 600.77,-666.62 607.52,-664.78"/>
+<text xml:space="preserve" text-anchor="middle" x="616.73" y="-788.6" font-family="Arial" font-size="8.00">No</text>
+</g>
+<!-- ResolveComments -->
+<g id="node16" class="node">
+<title>ResolveComments</title>
+<polygon fill="none" stroke="black" points="429.37,-809 317.86,-809 317.86,-773 429.37,-773 429.37,-809"/>
+<text xml:space="preserve" text-anchor="middle" x="373.61" y="-788.3" font-family="Arial" font-size="9.00">WG resolves comments</text>
+</g>
+<!-- CDConsult&#45;&gt;ResolveComments -->
+<g id="edge20" class="edge">
+<title>CDConsult-&gt;ResolveComments</title>
+<path fill="none" stroke="black" d="M468.06,-854.13C450.88,-842.83 428.3,-827.98 409.53,-815.63"/>
+<polygon fill="black" stroke="black" points="411.65,-812.83 401.37,-810.26 407.8,-818.68 411.65,-812.83"/>
+</g>
+<!-- FirstBallot -->
+<g id="node17" class="node">
+<title>FirstBallot</title>
+<polygon fill="none" stroke="black" points="423.61,-736 354.35,-718 423.61,-700 492.88,-718 423.61,-736"/>
+<text xml:space="preserve" text-anchor="middle" x="423.61" y="-715.3" font-family="Arial" font-size="9.00">Initial DIS ballot?</text>
+</g>
+<!-- ResolveComments&#45;&gt;FirstBallot -->
+<g id="edge21" class="edge">
+<title>ResolveComments-&gt;FirstBallot</title>
+<path fill="none" stroke="black" d="M385.72,-772.81C392.05,-763.83 399.9,-752.68 406.81,-742.87"/>
+<polygon fill="black" stroke="black" points="409.54,-745.06 412.44,-734.87 403.82,-741.03 409.54,-745.06"/>
+</g>
+<!-- FirstBallot&#45;&gt;DISNotification -->
+<g id="edge22" class="edge">
+<title>FirstBallot-&gt;DISNotification</title>
+<path fill="none" stroke="black" d="M447.53,-705.93C473.35,-693.98 515.16,-674.63 547.78,-659.54"/>
+<polygon fill="black" stroke="black" points="549.04,-662.81 556.64,-655.44 546.1,-656.46 549.04,-662.81"/>
+<text xml:space="preserve" text-anchor="middle" x="526.81" y="-674.8" font-family="Arial" font-size="8.00">Yes</text>
+</g>
+<!-- DISResolution -->
+<g id="node19" class="node">
+<title>DISResolution</title>
+<polygon fill="none" stroke="black" points="500.14,-654.4 347.09,-654.4 347.09,-618.4 500.14,-618.4 500.14,-654.4"/>
+<text xml:space="preserve" text-anchor="middle" x="423.61" y="-633.7" font-family="Arial" font-size="9.00">TC resolves to send to FDIS ballot</text>
+</g>
+<!-- FirstBallot&#45;&gt;DISResolution -->
+<g id="edge23" class="edge">
+<title>FirstBallot-&gt;DISResolution</title>
+<path fill="none" stroke="black" d="M423.61,-699.73C423.61,-689.92 423.61,-677.4 423.61,-666.15"/>
+<polygon fill="black" stroke="black" points="427.12,-666.15 423.61,-656.15 420.12,-666.15 427.12,-666.15"/>
+<text xml:space="preserve" text-anchor="middle" x="428.73" y="-674.8" font-family="Arial" font-size="8.00">No</text>
+</g>
+<!-- DISBallot -->
+<g id="node21" class="node">
+<title>DISBallot</title>
+<polygon fill="none" stroke="black" points="486.37,-572.8 400.86,-572.8 400.86,-536.8 486.37,-536.8 486.37,-572.8"/>
+<text xml:space="preserve" text-anchor="middle" x="443.61" y="-552.1" font-family="Arial" font-size="9.00">WG submits draft</text>
+</g>
+<!-- DISNotification&#45;&gt;DISBallot -->
+<g id="edge24" class="edge">
+<title>DISNotification-&gt;DISBallot</title>
+<path fill="none" stroke="black" d="M562.26,-617.93C540.08,-606.32 510.75,-590.96 486.79,-578.41"/>
+<polygon fill="black" stroke="black" points="488.72,-575.47 478.24,-573.93 485.47,-581.67 488.72,-575.47"/>
+</g>
+<!-- DISResolution&#45;&gt;DISBallot -->
+<g id="edge25" class="edge">
+<title>DISResolution-&gt;DISBallot</title>
+<path fill="none" stroke="black" d="M427.95,-618.13C430.44,-608.22 433.63,-595.53 436.48,-584.19"/>
+<polygon fill="black" stroke="black" points="439.87,-585.06 438.91,-574.51 433.08,-583.35 439.87,-585.06"/>
+</g>
+<!-- BallotType -->
+<g id="node20" class="node">
+<title>BallotType</title>
+<polygon fill="none" stroke="black" points="443.61,-499.8 354.44,-481.8 443.61,-463.8 532.79,-481.8 443.61,-499.8"/>
+<text xml:space="preserve" text-anchor="middle" x="443.61" y="-479.1" font-family="Arial" font-size="9.00">Which document type?</text>
+</g>
+<!-- DISResult -->
+<g id="node22" class="node">
+<title>DISResult</title>
+<polygon fill="none" stroke="black" points="106.61,-418.2 31.13,-400.2 106.61,-382.2 182.1,-400.2 106.61,-418.2"/>
+<text xml:space="preserve" text-anchor="middle" x="106.61" y="-397.5" font-family="Arial" font-size="9.00">DIS ballot passes?</text>
+</g>
+<!-- BallotType&#45;&gt;DISResult -->
+<g id="edge27" class="edge">
+<title>BallotType-&gt;DISResult</title>
+<path fill="none" stroke="black" d="M403.97,-471.43C341.71,-456.73 221.25,-428.28 154.34,-412.47"/>
+<polygon fill="black" stroke="black" points="155.3,-409.1 144.76,-410.21 153.69,-415.92 155.3,-409.1"/>
+<text xml:space="preserve" text-anchor="middle" x="319.96" y="-438.6" font-family="Arial" font-size="8.00">IS (first ballot)</text>
+</g>
+<!-- DTSPasses -->
+<g id="node24" class="node">
+<title>DTSPasses</title>
+<polygon fill="none" stroke="black" points="277.61,-418.2 199.64,-400.2 277.61,-382.2 355.59,-400.2 277.61,-418.2"/>
+<text xml:space="preserve" text-anchor="middle" x="277.61" y="-397.5" font-family="Arial" font-size="9.00">DTS ballot passes?</text>
+</g>
+<!-- BallotType&#45;&gt;DTSPasses -->
+<g id="edge29" class="edge">
+<title>BallotType-&gt;DTSPasses</title>
+<path fill="none" stroke="black" d="M418.04,-468.54C389.69,-454.94 343.8,-432.94 312.24,-417.8"/>
+<polygon fill="black" stroke="black" points="314.03,-414.78 303.5,-413.61 311,-421.09 314.03,-414.78"/>
+<text xml:space="preserve" text-anchor="middle" x="375.67" y="-438.6" font-family="Arial" font-size="8.00">TS</text>
+</g>
+<!-- DTRPasses -->
+<g id="node25" class="node">
+<title>DTRPasses</title>
+<polygon fill="none" stroke="black" points="629.61,-418.2 551.23,-400.2 629.61,-382.2 708,-400.2 629.61,-418.2"/>
+<text xml:space="preserve" text-anchor="middle" x="629.61" y="-397.5" font-family="Arial" font-size="9.00">DTR ballot passes?</text>
+</g>
+<!-- BallotType&#45;&gt;DTRPasses -->
+<g id="edge30" class="edge">
+<title>BallotType-&gt;DTRPasses</title>
+<path fill="none" stroke="black" d="M471.06,-469.05C503.3,-455.26 556.91,-432.31 592.75,-416.98"/>
+<polygon fill="black" stroke="black" points="594.05,-420.23 601.87,-413.07 591.3,-413.79 594.05,-420.23"/>
+<text xml:space="preserve" text-anchor="middle" x="553.08" y="-438.6" font-family="Arial" font-size="8.00">TR</text>
+</g>
+<!-- FDISPasses -->
+<g id="node30" class="node">
+<title>FDISPasses</title>
+<polygon fill="none" stroke="black" points="453.61,-418.2 373.57,-400.2 453.61,-382.2 533.66,-400.2 453.61,-418.2"/>
+<text xml:space="preserve" text-anchor="middle" x="453.61" y="-397.5" font-family="Arial" font-size="9.00">FDIS ballot passes?</text>
+</g>
+<!-- BallotType&#45;&gt;FDISPasses -->
+<g id="edge28" class="edge">
+<title>BallotType-&gt;FDISPasses</title>
+<path fill="none" stroke="black" d="M445.74,-463.92C447,-453.89 448.62,-440.92 450.07,-429.38"/>
+<polygon fill="black" stroke="black" points="453.53,-429.92 451.31,-419.56 446.59,-429.04 453.53,-429.92"/>
+<text xml:space="preserve" text-anchor="middle" x="480.34" y="-438.6" font-family="Arial" font-size="8.00">IS (second ballot)</text>
+</g>
+<!-- DISBallot&#45;&gt;BallotType -->
+<g id="edge26" class="edge">
+<title>DISBallot-&gt;BallotType</title>
+<path fill="none" stroke="black" d="M443.61,-536.61C443.61,-529.03 443.61,-519.9 443.61,-511.34"/>
+<polygon fill="black" stroke="black" points="447.12,-511.34 443.61,-501.34 440.12,-511.34 447.12,-511.34"/>
+</g>
+<!-- FDISNeeded -->
+<g id="node27" class="node">
+<title>FDISNeeded</title>
+<polygon fill="none" stroke="black" points="106.61,-336.6 0,-318.6 106.61,-300.6 213.23,-318.6 106.61,-336.6"/>
+<text xml:space="preserve" text-anchor="middle" x="106.61" y="-315.9" font-family="Arial" font-size="9.00">Technical changes needed?</text>
+</g>
+<!-- DISResult&#45;&gt;FDISNeeded -->
+<g id="edge31" class="edge">
+<title>DISResult-&gt;FDISNeeded</title>
+<path fill="none" stroke="black" d="M106.61,-381.93C106.61,-372.12 106.61,-359.6 106.61,-348.35"/>
+<polygon fill="black" stroke="black" points="110.12,-348.35 106.61,-338.35 103.12,-348.35 110.12,-348.35"/>
+<text xml:space="preserve" text-anchor="middle" x="113.51" y="-357" font-family="Arial" font-size="8.00">Yes</text>
+</g>
+<!-- DISPasses -->
+<g id="node23" class="node">
+<title>DISPasses</title>
+<polygon fill="none" stroke="black" points="307.61,-890.6 227.57,-872.6 307.61,-854.6 387.66,-872.6 307.61,-890.6"/>
+<text xml:space="preserve" text-anchor="middle" x="307.61" y="-869.9" font-family="Arial" font-size="9.00">FDIS ballot passes?</text>
+</g>
+<!-- DISPasses&#45;&gt;ResolveComments -->
+<g id="edge35" class="edge">
+<title>DISPasses-&gt;ResolveComments</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M319.72,-857C328.79,-846.06 341.44,-830.8 352.2,-817.82"/>
+<polygon fill="black" stroke="black" points="354.63,-820.38 358.32,-810.44 349.25,-815.91 354.63,-820.38"/>
+<text xml:space="preserve" text-anchor="middle" x="349.68" y="-829.4" font-family="Arial" font-size="8.00">No</text>
+</g>
+<!-- ResolveEditorialComments -->
+<g id="node26" class="node">
+<title>ResolveEditorialComments</title>
+<polygon fill="none" stroke="black" points="526.38,-255 380.85,-255 380.85,-219 526.38,-219 526.38,-255"/>
+<text xml:space="preserve" text-anchor="middle" x="453.61" y="-234.3" font-family="Arial" font-size="9.00">WG resolves editorial comments</text>
+</g>
+<!-- DTSPasses&#45;&gt;ResolveEditorialComments -->
+<g id="edge33" class="edge">
+<title>DTSPasses-&gt;ResolveEditorialComments</title>
+<path fill="none" stroke="black" d="M292.62,-385.46C322.25,-358.32 388.65,-297.5 426.26,-263.05"/>
+<polygon fill="black" stroke="black" points="428.59,-265.66 433.6,-256.33 423.87,-260.5 428.59,-265.66"/>
+<text xml:space="preserve" text-anchor="middle" x="390" y="-316.2" font-family="Arial" font-size="8.00">Yes</text>
+</g>
+<!-- DTRPasses&#45;&gt;ResolveEditorialComments -->
+<g id="edge34" class="edge">
+<title>DTRPasses-&gt;ResolveEditorialComments</title>
+<path fill="none" stroke="black" d="M614.61,-385.46C584.98,-358.32 518.58,-297.5 480.97,-263.05"/>
+<polygon fill="black" stroke="black" points="483.36,-260.5 473.63,-256.33 478.64,-265.66 483.36,-260.5"/>
+<text xml:space="preserve" text-anchor="middle" x="566" y="-316.2" font-family="Arial" font-size="8.00">Yes</text>
+</g>
+<!-- Publish -->
+<g id="node31" class="node">
+<title>Publish</title>
+<polygon fill="none" stroke="black" points="611.63,-182 551.6,-182 551.6,-146 611.63,-146 611.63,-182"/>
+<text xml:space="preserve" text-anchor="middle" x="581.61" y="-161.3" font-family="Arial" font-size="9.00">Publication</text>
+</g>
+<!-- ResolveEditorialComments&#45;&gt;Publish -->
+<g id="edge38" class="edge">
+<title>ResolveEditorialComments-&gt;Publish</title>
+<path fill="none" stroke="black" d="M484.93,-218.63C501.96,-209.18 523.21,-197.4 541.45,-187.28"/>
+<polygon fill="black" stroke="black" points="543.14,-190.35 550.18,-182.43 539.74,-184.22 543.14,-190.35"/>
+</g>
+<!-- FDISNeeded&#45;&gt;ResolveComments -->
+<g id="edge37" class="edge">
+<title>FDISNeeded-&gt;ResolveComments</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M70.59,-330.86C40.89,-342.66 3.61,-364.4 3.61,-399.2 3.61,-719 3.61,-719 3.61,-719 3.61,-779.9 199.39,-789.77 306.12,-790.62"/>
+<polygon fill="black" stroke="black" points="305.89,-794.12 315.91,-790.68 305.93,-787.12 305.89,-794.12"/>
+<text xml:space="preserve" text-anchor="middle" x="10.51" y="-552.4" font-family="Arial" font-size="8.00">Yes</text>
+</g>
+<!-- FDISNeeded&#45;&gt;ResolveEditorialComments -->
+<g id="edge36" class="edge">
+<title>FDISNeeded-&gt;ResolveEditorialComments</title>
+<path fill="none" stroke="black" d="M150.56,-307.52C205.44,-294.93 300.48,-273.13 369.53,-257.29"/>
+<polygon fill="black" stroke="black" points="369.94,-260.79 378.9,-255.14 368.38,-253.96 369.94,-260.79"/>
+<text xml:space="preserve" text-anchor="middle" x="306" y="-275.4" font-family="Arial" font-size="8.00">No</text>
+</g>
+<!-- FDISResolution -->
+<g id="node28" class="node">
+<title>FDISResolution</title>
+<polygon fill="none" stroke="black" points="910.38,-1908.4 804.85,-1908.4 804.85,-1872.4 910.38,-1872.4 910.38,-1908.4"/>
+<text xml:space="preserve" text-anchor="middle" x="857.61" y="-1887.7" font-family="Arial" font-size="9.00">TC resolution for FDIS</text>
+</g>
+<!-- FDISBallot -->
+<g id="node29" class="node">
+<title>FDISBallot</title>
+<polygon fill="none" stroke="black" points="1026.64,-1908.4 928.59,-1908.4 928.59,-1872.4 1026.64,-1872.4 1026.64,-1908.4"/>
+<text xml:space="preserve" text-anchor="middle" x="977.61" y="-1893.1" font-family="Arial" font-size="9.00">FDIS (if needed)</text>
+<text xml:space="preserve" text-anchor="middle" x="977.61" y="-1882.3" font-family="Arial" font-size="9.00">8-week yes/no ballot</text>
+</g>
+<!-- FDISPasses&#45;&gt;ResolveEditorialComments -->
+<g id="edge32" class="edge">
+<title>FDISPasses-&gt;ResolveEditorialComments</title>
+<path fill="none" stroke="black" d="M453.61,-381.95C453.61,-354.32 453.61,-299.85 453.61,-266.41"/>
+<polygon fill="black" stroke="black" points="457.12,-266.64 453.61,-256.64 450.12,-266.64 457.12,-266.64"/>
+<text xml:space="preserve" text-anchor="middle" x="460.51" y="-316.2" font-family="Arial" font-size="8.00">Yes</text>
+</g>
+<!-- RevisionNeeded -->
+<g id="node32" class="node">
+<title>RevisionNeeded</title>
+<polygon fill="none" stroke="black" points="655.61,-36 582.61,-18 655.61,0 728.62,-18 655.61,-36"/>
+<text xml:space="preserve" text-anchor="middle" x="655.61" y="-15.3" font-family="Arial" font-size="9.00">Revision needed?</text>
+</g>
+<!-- Publish&#45;&gt;RevisionNeeded -->
+<g id="edge39" class="edge">
+<title>Publish-&gt;RevisionNeeded</title>
+<path fill="none" stroke="black" d="M604.88,-145.63C616.12,-136.04 628.83,-123.2 636.61,-109 647,-90.04 651.72,-65.97 653.85,-47.5"/>
+<polygon fill="black" stroke="black" points="657.32,-48.07 654.78,-37.78 650.35,-47.4 657.32,-48.07"/>
+</g>
+<!-- Review -->
+<g id="node34" class="node">
+<title>Review</title>
+<polygon fill="none" stroke="black" points="627.63,-109 535.6,-109 535.6,-73 627.63,-73 627.63,-109"/>
+<text xml:space="preserve" text-anchor="middle" x="581.61" y="-93.7" font-family="Arial" font-size="9.00">Systematic Review</text>
+<text xml:space="preserve" text-anchor="middle" x="581.61" y="-82.9" font-family="Arial" font-size="9.00">(3-5 years)</text>
+</g>
+<!-- Publish&#45;&gt;Review -->
+<g id="edge41" class="edge">
+<title>Publish-&gt;Review</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M581.61,-145.81C581.61,-138.23 581.61,-129.1 581.61,-120.54"/>
+<polygon fill="black" stroke="black" points="585.12,-120.54 581.61,-110.54 578.12,-120.54 585.12,-120.54"/>
+</g>
+<!-- RevisionNeeded&#45;&gt;WGDevelop -->
+<g id="edge40" class="edge">
+<title>RevisionNeeded-&gt;WGDevelop</title>
+<path fill="none" stroke="black" d="M682.7,-29.78C705.91,-41 735.61,-61.03 735.61,-90 735.61,-1109.8 735.61,-1109.8 735.61,-1109.8 735.61,-1126.79 725.99,-1142.67 715.27,-1155.08"/>
+<polygon fill="black" stroke="black" points="712.72,-1152.68 708.43,-1162.37 717.83,-1157.47 712.72,-1152.68"/>
+<text xml:space="preserve" text-anchor="middle" x="742.51" y="-593.2" font-family="Arial" font-size="8.00">Yes</text>
+</g>
+<!-- RevisionResolution -->
+<g id="node33" class="node">
+<title>RevisionResolution</title>
+<polygon fill="none" stroke="black" points="1160.64,-1908.4 1044.59,-1908.4 1044.59,-1872.4 1160.64,-1872.4 1160.64,-1908.4"/>
+<text xml:space="preserve" text-anchor="middle" x="1102.61" y="-1887.7" font-family="Arial" font-size="9.00">TC approves new project</text>
+</g>
+<!-- Review&#45;&gt;RevisionNeeded -->
+<g id="edge42" class="edge">
+<title>Review-&gt;RevisionNeeded</title>
+<path fill="none" stroke="black" d="M599.53,-72.81C609.65,-63.1 622.41,-50.86 633.19,-40.52"/>
+<polygon fill="black" stroke="black" points="635.45,-43.2 640.24,-33.75 630.6,-38.15 635.45,-43.2"/>
+</g>
+<!-- Leg1 -->
+<g id="node35" class="node">
+<title>Leg1</title>
+<text xml:space="preserve" text-anchor="middle" x="1221.61" y="-1888" font-family="Arial" font-size="8.00">PL = Project Leader</text>
+</g>
+<!-- Leg2 -->
+<g id="node36" class="node">
+<title>Leg2</title>
+<text xml:space="preserve" text-anchor="middle" x="1337.61" y="-1888" font-family="Arial" font-size="8.00">CM = Committee Manager</text>
+</g>
+<!-- Leg3 -->
+<g id="node37" class="node">
+<title>Leg3</title>
+<text xml:space="preserve" text-anchor="middle" x="1489.61" y="-1888" font-family="Arial" font-size="8.00">TC = Technical Committee (resolutions)</text>
+</g>
+<!-- Leg4 -->
+<g id="node38" class="node">
+<title>Leg4</title>
+<text xml:space="preserve" text-anchor="middle" x="1632.61" y="-1888" font-family="Arial" font-size="8.00">WG = Working Group</text>
+</g>
+</g>
+</svg>
