@@ -1,0 +1,193 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="548pt" height="785pt" viewBox="0.00 0.00 548.00 785.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 781.25)">
+<title>GitHub_Group_PR_Review_Flow</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-781.25 543.91,-781.25 543.91,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_group</title>
+<polygon fill="none" stroke="#455a64" stroke-dasharray="5,2" points="62.36,-245.2 62.36,-427.8 302.36,-427.8 302.36,-245.2 62.36,-245.2"/>
+<text xml:space="preserve" text-anchor="middle" x="182.36" y="-411.2" font-family="Times,serif" font-size="14.00">Group / Team Review</text>
+</g>
+<!-- Start -->
+<g id="node1" class="node">
+<title>Start</title>
+<ellipse fill="#e3f2fd" stroke="black" cx="122.36" cy="-752.92" rx="83.08" ry="24.32"/>
+<text xml:space="preserve" text-anchor="middle" x="122.36" y="-756.22" font-family="Arial" font-size="11.00">Start: Developer</text>
+<text xml:space="preserve" text-anchor="middle" x="122.36" y="-743.02" font-family="Arial" font-size="11.00">creates Pull Request</text>
+</g>
+<!-- CreatePR -->
+<g id="node2" class="node">
+<title>CreatePR</title>
+<polygon fill="#e8f5e9" stroke="black" points="202.82,-691.6 41.91,-691.6 41.91,-655.6 202.82,-655.6 202.82,-691.6"/>
+<text xml:space="preserve" text-anchor="middle" x="122.36" y="-670.3" font-family="Arial" font-size="11.00">1. Submit PR to target branch</text>
+</g>
+<!-- Start&#45;&gt;CreatePR -->
+<g id="edge1" class="edge">
+<title>Start-&gt;CreatePR</title>
+<path fill="none" stroke="black" d="M122.36,-728.3C122.36,-720.43 122.36,-711.56 122.36,-703.34"/>
+<polygon fill="black" stroke="black" points="125.86,-703.45 122.36,-693.45 118.86,-703.45 125.86,-703.45"/>
+</g>
+<!-- Notify -->
+<g id="node3" class="node">
+<title>Notify</title>
+<polygon fill="#e8f5e9" stroke="black" points="197.61,-618.6 47.11,-618.6 47.11,-582.6 197.61,-582.6 197.61,-618.6"/>
+<text xml:space="preserve" text-anchor="middle" x="122.36" y="-603.9" font-family="Arial" font-size="11.00">2. GitHub notifies reviewers</text>
+<text xml:space="preserve" text-anchor="middle" x="122.36" y="-590.7" font-family="Arial" font-size="11.00">(individual or team/group)</text>
+</g>
+<!-- CreatePR&#45;&gt;Notify -->
+<g id="edge2" class="edge">
+<title>CreatePR-&gt;Notify</title>
+<path fill="none" stroke="black" d="M122.36,-655.41C122.36,-647.83 122.36,-638.7 122.36,-630.14"/>
+<polygon fill="black" stroke="black" points="125.86,-630.14 122.36,-620.14 118.86,-630.14 125.86,-630.14"/>
+</g>
+<!-- ReviewPhase -->
+<g id="node4" class="node">
+<title>ReviewPhase</title>
+<polygon fill="#fff3e0" stroke="black" points="233.45,-395 79.28,-395 79.28,-359 233.45,-359 233.45,-395"/>
+<text xml:space="preserve" text-anchor="middle" x="156.36" y="-380.3" font-family="Arial" font-size="11.00">3. Reviewers examine code,</text>
+<text xml:space="preserve" text-anchor="middle" x="156.36" y="-367.1" font-family="Arial" font-size="11.00">comments, and changes</text>
+</g>
+<!-- Notify&#45;&gt;ReviewPhase -->
+<g id="edge5" class="edge">
+<title>Notify-&gt;ReviewPhase</title>
+<path fill="none" stroke="black" d="M121.01,-582.1C119.41,-556.38 117.84,-506.94 125.36,-465.8 129.16,-445.06 137.13,-422.66 144.04,-405.68"/>
+<polygon fill="black" stroke="black" points="147.14,-407.34 147.79,-396.77 140.69,-404.63 147.14,-407.34"/>
+</g>
+<!-- Draft -->
+<g id="node12" class="node">
+<title>Draft</title>
+<polygon fill="#f3e5f5" stroke="black" points="410.02,-534.6 191.04,-534.6 134.71,-465.8 353.69,-465.8 410.02,-534.6"/>
+<text xml:space="preserve" text-anchor="middle" x="272.36" y="-503.5" font-family="Arial" font-size="11.00">PR can be in Draft state</text>
+<text xml:space="preserve" text-anchor="middle" x="272.36" y="-490.3" font-family="Arial" font-size="11.00">until ready for review</text>
+</g>
+<!-- Notify&#45;&gt;Draft -->
+<g id="edge3" class="edge">
+<title>Notify-&gt;Draft</title>
+<path fill="none" stroke="black" d="M148.84,-582.23C166.2,-570.84 189.64,-555.46 211.44,-541.16"/>
+<polygon fill="black" stroke="black" points="213.28,-544.14 219.72,-535.73 209.44,-538.29 213.28,-544.14"/>
+<text xml:space="preserve" text-anchor="middle" x="211.49" y="-555.6" font-family="Arial" font-size="10.00">Optional</text>
+</g>
+<!-- Decision1 -->
+<g id="node5" class="node">
+<title>Decision1</title>
+<polygon fill="#fff9c4" stroke="black" points="182.36,-322 70.37,-287.6 182.36,-253.2 294.36,-287.6 182.36,-322"/>
+<text xml:space="preserve" text-anchor="middle" x="182.36" y="-290.9" font-family="Arial" font-size="11.00">Do all required</text>
+<text xml:space="preserve" text-anchor="middle" x="182.36" y="-277.7" font-family="Arial" font-size="11.00">reviewers approve?</text>
+</g>
+<!-- ReviewPhase&#45;&gt;Decision1 -->
+<g id="edge6" class="edge">
+<title>ReviewPhase-&gt;Decision1</title>
+<path fill="none" stroke="black" d="M161.5,-358.73C163.94,-350.55 166.96,-340.38 169.94,-330.36"/>
+<polygon fill="black" stroke="black" points="173.2,-331.66 172.7,-321.08 166.5,-329.67 173.2,-331.66"/>
+</g>
+<!-- Approved -->
+<g id="node6" class="node">
+<title>Approved</title>
+<polygon fill="#c8e6c9" stroke="black" points="397.83,-205.2 244.9,-205.2 244.9,-157.6 397.83,-157.6 397.83,-205.2"/>
+<text xml:space="preserve" text-anchor="middle" x="321.36" y="-191.3" font-family="Arial" font-size="11.00">Yes: PR meets approval</text>
+<text xml:space="preserve" text-anchor="middle" x="321.36" y="-178.1" font-family="Arial" font-size="11.00">requirements (e.g. minimum</text>
+<text xml:space="preserve" text-anchor="middle" x="321.36" y="-164.9" font-family="Arial" font-size="11.00"># of approvals)</text>
+</g>
+<!-- Decision1&#45;&gt;Approved -->
+<g id="edge7" class="edge">
+<title>Decision1-&gt;Approved</title>
+<path fill="none" stroke="black" d="M214.25,-262.69C234.22,-247.73 260.12,-228.31 281.44,-212.33"/>
+<polygon fill="black" stroke="black" points="283.47,-215.18 289.37,-206.39 279.27,-209.58 283.47,-215.18"/>
+<text xml:space="preserve" text-anchor="middle" x="272.93" y="-226.2" font-family="Arial" font-size="10.00">Yes</text>
+</g>
+<!-- ChangesRequested -->
+<g id="node9" class="node">
+<title>ChangesRequested</title>
+<polygon fill="#ffcdd2" stroke="black" points="224.46,-199.4 92.27,-199.4 92.27,-163.4 224.46,-163.4 224.46,-199.4"/>
+<text xml:space="preserve" text-anchor="middle" x="158.36" y="-184.7" font-family="Arial" font-size="11.00">No: Changes requested</text>
+<text xml:space="preserve" text-anchor="middle" x="158.36" y="-171.5" font-family="Arial" font-size="11.00">or comments left</text>
+</g>
+<!-- Decision1&#45;&gt;ChangesRequested -->
+<g id="edge8" class="edge">
+<title>Decision1-&gt;ChangesRequested</title>
+<path fill="none" stroke="black" d="M175.1,-255.05C171.85,-240.97 168.06,-224.5 164.91,-210.8"/>
+<polygon fill="black" stroke="black" points="168.32,-210.05 162.67,-201.09 161.5,-211.62 168.32,-210.05"/>
+<text xml:space="preserve" text-anchor="middle" x="176.76" y="-226.2" font-family="Arial" font-size="10.00">No</text>
+</g>
+<!-- Merge -->
+<g id="node7" class="node">
+<title>Merge</title>
+<polygon fill="#e8f5e9" stroke="black" points="388.14,-120.6 256.58,-120.6 256.58,-73 388.14,-73 388.14,-120.6"/>
+<text xml:space="preserve" text-anchor="middle" x="322.36" y="-106.7" font-family="Arial" font-size="11.00">4. Merge PR</text>
+<text xml:space="preserve" text-anchor="middle" x="322.36" y="-93.5" font-family="Arial" font-size="11.00">(manually or via</text>
+<text xml:space="preserve" text-anchor="middle" x="322.36" y="-80.3" font-family="Arial" font-size="11.00">branch protection rules)</text>
+</g>
+<!-- Approved&#45;&gt;Merge -->
+<g id="edge9" class="edge">
+<title>Approved-&gt;Merge</title>
+<path fill="none" stroke="black" d="M321.64,-157.39C321.74,-149.67 321.84,-140.88 321.94,-132.46"/>
+<polygon fill="black" stroke="black" points="325.44,-132.53 322.06,-122.49 318.44,-132.44 325.44,-132.53"/>
+</g>
+<!-- End -->
+<g id="node8" class="node">
+<title>End</title>
+<ellipse fill="#e3f2fd" stroke="black" cx="322.36" cy="-18" rx="60.21" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="322.36" y="-14.7" font-family="Arial" font-size="11.00">End: PR Merged</text>
+</g>
+<!-- Merge&#45;&gt;End -->
+<g id="edge10" class="edge">
+<title>Merge-&gt;End</title>
+<path fill="none" stroke="black" d="M322.36,-72.76C322.36,-64.92 322.36,-56.06 322.36,-47.83"/>
+<polygon fill="black" stroke="black" points="325.86,-47.92 322.36,-37.92 318.86,-47.92 325.86,-47.92"/>
+</g>
+<!-- UpdateCode -->
+<g id="node10" class="node">
+<title>UpdateCode</title>
+<polygon fill="#e8f5e9" stroke="black" points="238.19,-114.8 70.54,-114.8 70.54,-78.8 238.19,-78.8 238.19,-114.8"/>
+<text xml:space="preserve" text-anchor="middle" x="154.36" y="-100.1" font-family="Arial" font-size="11.00">Developer addresses feedback</text>
+<text xml:space="preserve" text-anchor="middle" x="154.36" y="-86.9" font-family="Arial" font-size="11.00">and pushes new commits</text>
+</g>
+<!-- ChangesRequested&#45;&gt;UpdateCode -->
+<g id="edge11" class="edge">
+<title>ChangesRequested-&gt;UpdateCode</title>
+<path fill="none" stroke="black" d="M157.53,-163.29C157.02,-152.61 156.34,-138.62 155.74,-126.3"/>
+<polygon fill="black" stroke="black" points="159.26,-126.51 155.28,-116.69 152.27,-126.85 159.26,-126.51"/>
+</g>
+<!-- ReReview -->
+<g id="node11" class="node">
+<title>ReReview</title>
+<polygon fill="#e8f5e9" stroke="black" points="140.73,-36 0,-36 0,0 140.73,0 140.73,-36"/>
+<text xml:space="preserve" text-anchor="middle" x="70.36" y="-21.3" font-family="Arial" font-size="11.00">PR updated → Reviewers</text>
+<text xml:space="preserve" text-anchor="middle" x="70.36" y="-8.1" font-family="Arial" font-size="11.00">re-notified for new review</text>
+</g>
+<!-- UpdateCode&#45;&gt;ReReview -->
+<g id="edge12" class="edge">
+<title>UpdateCode-&gt;ReReview</title>
+<path fill="none" stroke="black" d="M135.3,-78.37C124.13,-68.16 109.84,-55.09 97.51,-43.82"/>
+<polygon fill="black" stroke="black" points="100.21,-41.54 90.47,-37.38 95.48,-46.71 100.21,-41.54"/>
+</g>
+<!-- ReReview&#45;&gt;ReviewPhase -->
+<g id="edge13" class="edge">
+<title>ReReview-&gt;ReviewPhase</title>
+<path fill="none" stroke="black" d="M60.1,-36.35C52.11,-51.5 42.36,-74.37 42.36,-95.8 42.36,-288.6 42.36,-288.6 42.36,-288.6 42.36,-318.56 67.48,-339.65 94.13,-353.6"/>
+<polygon fill="black" stroke="black" points="92.49,-356.69 103.01,-357.93 95.56,-350.4 92.49,-356.69"/>
+<text xml:space="preserve" text-anchor="middle" x="53.49" y="-178.4" font-family="Arial" font-size="10.00">Loop</text>
+</g>
+<!-- Draft&#45;&gt;ReviewPhase -->
+<g id="edge4" class="edge">
+<title>Draft-&gt;ReviewPhase</title>
+<path fill="none" stroke="black" d="M240.05,-465.44C221.27,-445.82 197.99,-421.49 180.75,-403.48"/>
+<polygon fill="black" stroke="black" points="183.31,-401.09 173.87,-396.29 178.25,-405.93 183.31,-401.09"/>
+<text xml:space="preserve" text-anchor="middle" x="258.82" y="-438.8" font-family="Arial" font-size="10.00">Ready for review</text>
+</g>
+<!-- Note -->
+<g id="node13" class="node">
+<title>Note</title>
+<polygon fill="none" stroke="black" points="533.91,-395 310.82,-395 310.82,-359 539.91,-359 539.91,-389 533.91,-395"/>
+<polyline fill="none" stroke="black" points="533.91,-395 533.91,-389"/>
+<polyline fill="none" stroke="black" points="539.91,-389 533.91,-389"/>
+<text xml:space="preserve" text-anchor="middle" x="425.36" y="-379.7" font-family="Arial" font-size="9.00">Note: Branch protection rules can enforce</text>
+<text xml:space="preserve" text-anchor="middle" x="425.36" y="-368.9" font-family="Arial" font-size="9.00">minimum approvals, code owners, or required checks</text>
+</g>
+<!-- Note&#45;&gt;Decision1 -->
+<g id="edge14" class="edge">
+<title>Note-&gt;Decision1</title>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M376.77,-358.52C338.5,-344.76 284.92,-325.49 243.7,-310.66"/>
+<polygon fill="black" stroke="black" points="244.98,-307.4 234.39,-307.31 242.61,-313.99 244.98,-307.4"/>
+</g>
+</g>
+</svg>
